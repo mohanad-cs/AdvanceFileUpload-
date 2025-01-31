@@ -1,0 +1,841 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Core.EntityBase
+  commentId: T:AdvanceFileUpload.Domain.Core.EntityBase
+  id: EntityBase
+  parent: AdvanceFileUpload.Domain.Core
+  children:
+  - AdvanceFileUpload.Domain.Core.EntityBase.#ctor
+  - AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  - AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  - AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  - AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  - AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  - AdvanceFileUpload.Domain.Core.EntityBase.Id
+  - AdvanceFileUpload.Domain.Core.EntityBase.op_Equality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  - AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  langs:
+  - csharp
+  - vb
+  name: EntityBase
+  nameWithType: EntityBase
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: EntityBase
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 11
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Represents the base class for all entities in the domain.
+  example: []
+  syntax:
+    content: public abstract class EntityBase
+    content.vb: Public MustInherit Class EntityBase
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - AdvanceFileUpload.Domain.ChunkFile
+  - AdvanceFileUpload.Domain.FileUploadSession
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Id
+  commentId: P:AdvanceFileUpload.Domain.Core.EntityBase.Id
+  id: Id
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: EntityBase.Id
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Id
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Id
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 16
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Gets the unique identifier for the entity.
+  example: []
+  syntax:
+    content: public Guid Id { get; protected set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property Id As Guid
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.Id*
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.#ctor
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.#ctor
+  id: '#ctor'
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: EntityBase()
+  nameWithType: EntityBase.EntityBase()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.EntityBase()
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 23
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Domain.Core.EntityBase" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: protected EntityBase()
+    content.vb: Protected Sub New()
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.#ctor*
+  nameWithType.vb: EntityBase.New()
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.New()
+  name.vb: New()
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  commentId: P:AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  id: DomainEvents
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: DomainEvents
+  nameWithType: EntityBase.DomainEvents
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: DomainEvents
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 31
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Gets the domain events associated with the entity.
+  example: []
+  syntax:
+    content: public IReadOnlyCollection<IDomainEvent> DomainEvents { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{AdvanceFileUpload.Domain.Core.IDomainEvent}
+    content.vb: Public ReadOnly Property DomainEvents As IReadOnlyCollection(Of IDomainEvent)
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents*
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  id: AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: AddDomainEvent(IDomainEvent)
+  nameWithType: EntityBase.AddDomainEvent(IDomainEvent)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AddDomainEvent
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 37
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Adds a domain event to the entity.
+  example: []
+  syntax:
+    content: protected void AddDomainEvent(IDomainEvent domainEvent)
+    parameters:
+    - id: domainEvent
+      type: AdvanceFileUpload.Domain.Core.IDomainEvent
+      description: The domain event to add.
+    content.vb: Protected Sub AddDomainEvent(domainEvent As IDomainEvent)
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent*
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  id: ClearDomainEvents
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: ClearDomainEvents()
+  nameWithType: EntityBase.ClearDomainEvents()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ClearDomainEvents
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 45
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Clears all domain events from the entity.
+  example: []
+  syntax:
+    content: public void ClearDomainEvents()
+    content.vb: Public Sub ClearDomainEvents()
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents*
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: Equals(object?)
+  nameWithType: EntityBase.Equals(object?)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Equals(object?)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Equals
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 51
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Determines whether the specified object is equal to the current object.
+  example: []
+  syntax:
+    content: public override bool Equals(object? obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with the current object.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified object  is equal to the current object; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.Equals*
+  nameWithType.vb: EntityBase.Equals(Object)
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.Equals(Object)
+  name.vb: Equals(Object)
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  id: GetHashCode
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: EntityBase.GetHashCode()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: GetHashCode
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 63
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Serves as the default hash function.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for the current object.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode*
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.op_Equality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.op_Equality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  id: op_Equality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: operator ==(EntityBase, EntityBase)
+  nameWithType: EntityBase.operator ==(EntityBase, EntityBase)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.operator ==(AdvanceFileUpload.Domain.Core.EntityBase, AdvanceFileUpload.Domain.Core.EntityBase)
+  type: Operator
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: op_Equality
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 74
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Determines whether two instances of <xref href="AdvanceFileUpload.Domain.Core.EntityBase" data-throw-if-not-resolved="false"></xref> are equal.
+  example: []
+  syntax:
+    content: public static bool operator ==(EntityBase left, EntityBase right)
+    parameters:
+    - id: left
+      type: AdvanceFileUpload.Domain.Core.EntityBase
+      description: The left instance to compare.
+    - id: right
+      type: AdvanceFileUpload.Domain.Core.EntityBase
+      description: The right instance to compare.
+    return:
+      type: System.Boolean
+      description: True if the instances are equal; otherwise, false.
+    content.vb: Public Shared Operator =(left As EntityBase, right As EntityBase) As Boolean
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.op_Equality*
+  nameWithType.vb: EntityBase.=(EntityBase, EntityBase)
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.=(AdvanceFileUpload.Domain.Core.EntityBase, AdvanceFileUpload.Domain.Core.EntityBase)
+  name.vb: =(EntityBase, EntityBase)
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  id: op_Inequality(AdvanceFileUpload.Domain.Core.EntityBase,AdvanceFileUpload.Domain.Core.EntityBase)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  langs:
+  - csharp
+  - vb
+  name: operator !=(EntityBase, EntityBase)
+  nameWithType: EntityBase.operator !=(EntityBase, EntityBase)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.operator !=(AdvanceFileUpload.Domain.Core.EntityBase, AdvanceFileUpload.Domain.Core.EntityBase)
+  type: Operator
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: op_Inequality
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
+    startLine: 91
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Determines whether two instances of <xref href="AdvanceFileUpload.Domain.Core.EntityBase" data-throw-if-not-resolved="false"></xref> are not equal.
+  example: []
+  syntax:
+    content: public static bool operator !=(EntityBase left, EntityBase right)
+    parameters:
+    - id: left
+      type: AdvanceFileUpload.Domain.Core.EntityBase
+      description: The left instance to compare.
+    - id: right
+      type: AdvanceFileUpload.Domain.Core.EntityBase
+      description: The right instance to compare.
+    return:
+      type: System.Boolean
+      description: True if the instances are not equal; otherwise, false.
+    content.vb: Public Shared Operator <>(left As EntityBase, right As EntityBase) As Boolean
+  overload: AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality*
+  nameWithType.vb: EntityBase.<>(EntityBase, EntityBase)
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.<>(AdvanceFileUpload.Domain.Core.EntityBase, AdvanceFileUpload.Domain.Core.EntityBase)
+  name.vb: <>(EntityBase, EntityBase)
+references:
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Id*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.Id
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Id
+  name: Id
+  nameWithType: EntityBase.Id
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: AdvanceFileUpload.Domain.Core.EntityBase
+  commentId: T:AdvanceFileUpload.Domain.Core.EntityBase
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html
+  name: EntityBase
+  nameWithType: EntityBase
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.#ctor*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.#ctor
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase__ctor
+  name: EntityBase
+  nameWithType: EntityBase.EntityBase
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.EntityBase
+  nameWithType.vb: EntityBase.New
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.New
+  name.vb: New
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_DomainEvents
+  name: DomainEvents
+  nameWithType: EntityBase.DomainEvents
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+- uid: System.Collections.Generic.IReadOnlyCollection{AdvanceFileUpload.Domain.Core.IDomainEvent}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{AdvanceFileUpload.Domain.Core.IDomainEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<IDomainEvent>
+  nameWithType: IReadOnlyCollection<IDomainEvent>
+  fullName: System.Collections.Generic.IReadOnlyCollection<AdvanceFileUpload.Domain.Core.IDomainEvent>
+  nameWithType.vb: IReadOnlyCollection(Of IDomainEvent)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of AdvanceFileUpload.Domain.Core.IDomainEvent)
+  name.vb: IReadOnlyCollection(Of IDomainEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_AddDomainEvent_AdvanceFileUpload_Domain_Core_IDomainEvent_
+  name: AddDomainEvent
+  nameWithType: EntityBase.AddDomainEvent
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+  commentId: T:AdvanceFileUpload.Domain.Core.IDomainEvent
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  name: IDomainEvent
+  nameWithType: IDomainEvent
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  name: ClearDomainEvents
+  nameWithType: EntityBase.ClearDomainEvents
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.Equals
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  name: Equals
+  nameWithType: EntityBase.Equals
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Equals
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  name: GetHashCode
+  nameWithType: EntityBase.GetHashCode
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.op_Equality*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.op_Equality
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_op_Equality_AdvanceFileUpload_Domain_Core_EntityBase_AdvanceFileUpload_Domain_Core_EntityBase_
+  name: operator ==
+  nameWithType: EntityBase.operator ==
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.operator ==
+  nameWithType.vb: EntityBase.=
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.=
+  name.vb: =
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.op_Equality*
+    name: ==
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_op_Equality_AdvanceFileUpload_Domain_Core_EntityBase_AdvanceFileUpload_Domain_Core_EntityBase_
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_op_Inequality_AdvanceFileUpload_Domain_Core_EntityBase_AdvanceFileUpload_Domain_Core_EntityBase_
+  name: operator !=
+  nameWithType: EntityBase.operator !=
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.operator !=
+  nameWithType.vb: EntityBase.<>
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.<>
+  name.vb: <>
+  spec.csharp:
+  - name: operator
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.op_Inequality*
+    name: '!='
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_op_Inequality_AdvanceFileUpload_Domain_Core_EntityBase_AdvanceFileUpload_Domain_Core_EntityBase_

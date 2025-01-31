@@ -1,0 +1,388 @@
+{
+  "source_base_path": "D:/mohan/Documents/Projects/AdvanceFileUpload/AdvanceFileUpload-/doc",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Core.ICommand-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Core.ICommand-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Core.IQuery-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Core.IQuery-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.ChunkFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.ChunkFile.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.DomainEventBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.DomainEventBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.DomainException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.DomainException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.EntityBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.EntityBase.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.IAggregateRoot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.IAggregateRoot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.IDomainEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.IDomainEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.IDomainEventPublisher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.IDomainEventPublisher.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.IRepository-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.IRepository-1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Core.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.ChunkUploadedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.ChunkUploadedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.CancelationFileUploadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Exception.CancelationFileUploadException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.ChunkUploadingException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Exception.ChunkUploadingException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.CompletingFileUploadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Exception.CompletingFileUploadException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.PauseFileUploadException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Exception.PauseFileUploadException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Exception.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Extensions.DateTmeExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Extensions.DateTmeExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Extensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.FileUploadSession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.FileUploadSession.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.FileUploadSessionStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.FileUploadSessionStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.FileUploadSessionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Test.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

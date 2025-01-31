@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Core
+  commentId: N:AdvanceFileUpload.Application.Core
+  id: AdvanceFileUpload.Application.Core
+  children:
+  - AdvanceFileUpload.Application.Core.ICommand`1
+  - AdvanceFileUpload.Application.Core.IQuery`1
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Core
+  nameWithType: AdvanceFileUpload.Application.Core
+  fullName: AdvanceFileUpload.Application.Core
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application
+references:
+- uid: AdvanceFileUpload.Application.Core.ICommand`1
+  commentId: T:AdvanceFileUpload.Application.Core.ICommand`1
+  href: AdvanceFileUpload.Application.Core.ICommand-1.html
+  name: ICommand<TResult>
+  nameWithType: ICommand<TResult>
+  fullName: AdvanceFileUpload.Application.Core.ICommand<TResult>
+  nameWithType.vb: ICommand(Of TResult)
+  fullName.vb: AdvanceFileUpload.Application.Core.ICommand(Of TResult)
+  name.vb: ICommand(Of TResult)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.Core.ICommand`1
+    name: ICommand
+    href: AdvanceFileUpload.Application.Core.ICommand-1.html
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.Core.ICommand`1
+    name: ICommand
+    href: AdvanceFileUpload.Application.Core.ICommand-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: AdvanceFileUpload.Application.Core.IQuery`1
+  commentId: T:AdvanceFileUpload.Application.Core.IQuery`1
+  href: AdvanceFileUpload.Application.Core.IQuery-1.html
+  name: IQuery<TResult>
+  nameWithType: IQuery<TResult>
+  fullName: AdvanceFileUpload.Application.Core.IQuery<TResult>
+  nameWithType.vb: IQuery(Of TResult)
+  fullName.vb: AdvanceFileUpload.Application.Core.IQuery(Of TResult)
+  name.vb: IQuery(Of TResult)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.Core.IQuery`1
+    name: IQuery
+    href: AdvanceFileUpload.Application.Core.IQuery-1.html
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.Core.IQuery`1
+    name: IQuery
+    href: AdvanceFileUpload.Application.Core.IQuery-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )

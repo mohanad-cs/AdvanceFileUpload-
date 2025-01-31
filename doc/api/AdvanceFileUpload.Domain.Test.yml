@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Test
+  commentId: N:AdvanceFileUpload.Domain.Test
+  id: AdvanceFileUpload.Domain.Test
+  children:
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Domain.Test
+  nameWithType: AdvanceFileUpload.Domain.Test
+  fullName: AdvanceFileUpload.Domain.Test
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Domain.Test
+references:
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
+  commentId: T:AdvanceFileUpload.Domain.Test.FileUploadSessionTests
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html
+  name: FileUploadSessionTests
+  nameWithType: FileUploadSessionTests
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests

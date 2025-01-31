@@ -1,0 +1,1642 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.FileUploadSession
+  commentId: T:AdvanceFileUpload.Domain.FileUploadSession
+  id: FileUploadSession
+  parent: AdvanceFileUpload.Domain
+  children:
+  - AdvanceFileUpload.Domain.FileUploadSession.#ctor(System.String,System.String,System.Int64,System.Int64)
+  - AdvanceFileUpload.Domain.FileUploadSession.AddChunk(System.Int32,System.String)
+  - AdvanceFileUpload.Domain.FileUploadSession.CancelSession
+  - AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles
+  - AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
+  - AdvanceFileUpload.Domain.FileUploadSession.FileExtension
+  - AdvanceFileUpload.Domain.FileUploadSession.FileName
+  - AdvanceFileUpload.Domain.FileUploadSession.FileSize
+  - AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks
+  - AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded
+  - AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
+  - AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
+  - AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
+  - AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
+  - AdvanceFileUpload.Domain.FileUploadSession.PauseSession
+  - AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
+  - AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory
+  - AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  - AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate
+  - AdvanceFileUpload.Domain.FileUploadSession.Status
+  - AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload
+  - AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks
+  - AdvanceFileUpload.Domain.FileUploadSession.UploadDate
+  langs:
+  - csharp
+  - vb
+  name: FileUploadSession
+  nameWithType: FileUploadSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileUploadSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 15
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Represents a file upload session.
+  example: []
+  syntax:
+    content: 'public class FileUploadSession : EntityBase, IAggregateRoot'
+    content.vb: Public Class FileUploadSession Inherits EntityBase Implements IAggregateRoot
+  inheritance:
+  - System.Object
+  - AdvanceFileUpload.Domain.Core.EntityBase
+  implements:
+  - AdvanceFileUpload.Domain.Core.IAggregateRoot
+  inheritedMembers:
+  - AdvanceFileUpload.Domain.Core.EntityBase.Id
+  - AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  - AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  - AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  - AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  - AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Domain.FileUploadSession.FileName
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.FileName
+  id: FileName
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: FileName
+  nameWithType: FileUploadSession.FileName
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileName
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileName
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 20
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the name of the file being uploaded.
+  example: []
+  syntax:
+    content: public string FileName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileName As String
+  overload: AdvanceFileUpload.Domain.FileUploadSession.FileName*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.FileExtension
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.FileExtension
+  id: FileExtension
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: FileExtension
+  nameWithType: FileUploadSession.FileExtension
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileExtension
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileExtension
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 25
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the file extension of the file being uploaded.
+  example: []
+  syntax:
+    content: public string FileExtension { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property FileExtension As String
+  overload: AdvanceFileUpload.Domain.FileUploadSession.FileExtension*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory
+  id: SavingDirectory
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: SavingDirectory
+  nameWithType: FileUploadSession.SavingDirectory
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SavingDirectory
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 30
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the directory where the file is being saved.
+  example: []
+  syntax:
+    content: public string SavingDirectory { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SavingDirectory As String
+  overload: AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.FileSize
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.FileSize
+  id: FileSize
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: FileSize
+  nameWithType: FileUploadSession.FileSize
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 35
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the size of the file being uploaded.
+  example: []
+  syntax:
+    content: public long FileSize { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property FileSize As Long
+  overload: AdvanceFileUpload.Domain.FileUploadSession.FileSize*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.Status
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.Status
+  id: Status
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: FileUploadSession.Status
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.Status
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Status
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 40
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets or sets the status of the file upload session.
+  example: []
+  syntax:
+    content: public FileUploadSessionStatus Status { get; set; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.Domain.FileUploadSessionStatus
+    content.vb: Public Property Status As FileUploadSessionStatus
+  overload: AdvanceFileUpload.Domain.FileUploadSession.Status*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.UploadDate
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.UploadDate
+  id: UploadDate
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: UploadDate
+  nameWithType: FileUploadSession.UploadDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.UploadDate
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadDate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 45
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the upload date of the file.
+  example: []
+  syntax:
+    content: public DateOnly UploadDate { get; }
+    parameters: []
+    return:
+      type: System.DateOnly
+    content.vb: Public ReadOnly Property UploadDate As DateOnly
+  overload: AdvanceFileUpload.Domain.FileUploadSession.UploadDate*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate
+  id: SessionStartDate
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: SessionStartDate
+  nameWithType: FileUploadSession.SessionStartDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionStartDate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 50
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the start date of the session.
+  example: []
+  syntax:
+    content: public DateTime SessionStartDate { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property SessionStartDate As Date
+  overload: AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  id: SessionEndDate
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: SessionEndDate
+  nameWithType: FileUploadSession.SessionEndDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionEndDate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 55
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets or sets the end date of the session.
+  example: []
+  syntax:
+    content: public DateTime? SessionEndDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property SessionEndDate As Date?
+  overload: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
+  id: MaxChunkSize
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: MaxChunkSize
+  nameWithType: FileUploadSession.MaxChunkSize
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxChunkSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 60
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the maximum size of each chunk.
+  example: []
+  syntax:
+    content: public long MaxChunkSize { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property MaxChunkSize As Long
+  overload: AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload
+  id: TotalChunksToUpload
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: TotalChunksToUpload
+  nameWithType: FileUploadSession.TotalChunksToUpload
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: TotalChunksToUpload
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 65
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the total number of chunks to be uploaded.
+  example: []
+  syntax:
+    content: public int TotalChunksToUpload { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalChunksToUpload As Integer
+  overload: AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks
+  id: TotalUploadedChunks
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: TotalUploadedChunks
+  nameWithType: FileUploadSession.TotalUploadedChunks
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: TotalUploadedChunks
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 70
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the total number of chunks that have been uploaded.
+  example: []
+  syntax:
+    content: public int TotalUploadedChunks { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property TotalUploadedChunks As Integer
+  overload: AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
+  id: ProgressPercentage
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: ProgressPercentage
+  nameWithType: FileUploadSession.ProgressPercentage
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ProgressPercentage
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 75
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the progress percentage of the file upload.
+  example: []
+  syntax:
+    content: public double ProgressPercentage { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ProgressPercentage As Double
+  overload: AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles
+  id: ChunkFiles
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: ChunkFiles
+  nameWithType: FileUploadSession.ChunkFiles
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkFiles
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 91
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the collection of chunk files.
+  example: []
+  syntax:
+    content: public IReadOnlyCollection<ChunkFile> ChunkFiles { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{AdvanceFileUpload.Domain.ChunkFile}
+    content.vb: Public ReadOnly Property ChunkFiles As IReadOnlyCollection(Of ChunkFile)
+  overload: AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.#ctor(System.String,System.String,System.Int64,System.Int64)
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.#ctor(System.String,System.String,System.Int64,System.Int64)
+  id: '#ctor(System.String,System.String,System.Int64,System.Int64)'
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: FileUploadSession(string, string, long, long)
+  nameWithType: FileUploadSession.FileUploadSession(string, string, long, long)
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileUploadSession(string, string, long, long)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 101
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Domain.FileUploadSession" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public FileUploadSession(string fileName, string savingDirectory, long fileSize, long maxChunkSize)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The name of the file being uploaded.
+    - id: savingDirectory
+      type: System.String
+      description: The directory where the file is being saved.
+    - id: fileSize
+      type: System.Int64
+      description: The size of the file being uploaded.
+    - id: maxChunkSize
+      type: System.Int64
+      description: The maximum size of each chunk.
+    content.vb: Public Sub New(fileName As String, savingDirectory As String, fileSize As Long, maxChunkSize As Long)
+  overload: AdvanceFileUpload.Domain.FileUploadSession.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when any of the parameters are invalid.
+  nameWithType.vb: FileUploadSession.New(String, String, Long, Long)
+  fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.New(String, String, Long, Long)
+  name.vb: New(String, String, Long, Long)
+- uid: AdvanceFileUpload.Domain.FileUploadSession.AddChunk(System.Int32,System.String)
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.AddChunk(System.Int32,System.String)
+  id: AddChunk(System.Int32,System.String)
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: AddChunk(int, string)
+  nameWithType: FileUploadSession.AddChunk(int, string)
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.AddChunk(int, string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AddChunk
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 138
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Adds a chunk to the file upload session.
+  example: []
+  syntax:
+    content: public void AddChunk(int chunkIndex, string chunkPath)
+    parameters:
+    - id: chunkIndex
+      type: System.Int32
+      description: The index of the chunk.
+    - id: chunkPath
+      type: System.String
+      description: The path of the chunk.
+    content.vb: Public Sub AddChunk(chunkIndex As Integer, chunkPath As String)
+  overload: AdvanceFileUpload.Domain.FileUploadSession.AddChunk*
+  exceptions:
+  - type: AdvanceFileUpload.Domain.Exception.ChunkUploadingException
+    commentId: T:AdvanceFileUpload.Domain.Exception.ChunkUploadingException
+    description: Thrown when the chunk cannot be added.
+  nameWithType.vb: FileUploadSession.AddChunk(Integer, String)
+  fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.AddChunk(Integer, String)
+  name.vb: AddChunk(Integer, String)
+- uid: AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks
+  id: GetRemainChunks
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: GetRemainChunks()
+  nameWithType: FileUploadSession.GetRemainChunks()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: GetRemainChunks
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 168
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the remaining chunks to be uploaded.
+  example: []
+  syntax:
+    content: public List<int> GetRemainChunks()
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+      description: List&lt;int&gt; of the remaining chunks to be uploaded.
+    content.vb: Public Function GetRemainChunks() As List(Of Integer)
+  overload: AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded
+  id: IsAllChunkUploaded
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: IsAllChunkUploaded()
+  nameWithType: FileUploadSession.IsAllChunkUploaded()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsAllChunkUploaded
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 185
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Determines whether all chunks have been uploaded.
+  example: []
+  syntax:
+    content: public bool IsAllChunkUploaded()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if all chunks have been uploaded; otherwise, <code>false</code>.
+    content.vb: Public Function IsAllChunkUploaded() As Boolean
+  overload: AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
+  id: IsChunkUploaded(System.Int32)
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: IsChunkUploaded(int)
+  nameWithType: FileUploadSession.IsChunkUploaded(int)
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(int)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsChunkUploaded
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 195
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Determines whether a specific chunk has been uploaded.
+  example: []
+  syntax:
+    content: public bool IsChunkUploaded(int chunkIndex)
+    parameters:
+    - id: chunkIndex
+      type: System.Int32
+      description: The index of the chunk.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the chunk has been uploaded; otherwise, <code>false</code>.
+    content.vb: Public Function IsChunkUploaded(chunkIndex As Integer) As Boolean
+  overload: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded*
+  nameWithType.vb: FileUploadSession.IsChunkUploaded(Integer)
+  fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(Integer)
+  name.vb: IsChunkUploaded(Integer)
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
+  id: IsCompleted
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: IsCompleted()
+  nameWithType: FileUploadSession.IsCompleted()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsCompleted()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsCompleted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 204
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Determines whether the file upload session is completed.
+  example: []
+  syntax:
+    content: public bool IsCompleted()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the session is completed; otherwise, <code>false</code>.
+    content.vb: Public Function IsCompleted() As Boolean
+  overload: AdvanceFileUpload.Domain.FileUploadSession.IsCompleted*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
+  id: IsCanceled
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: IsCanceled()
+  nameWithType: FileUploadSession.IsCanceled()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsCanceled
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 213
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Determines whether the file upload session is canceled.
+  example: []
+  syntax:
+    content: public bool IsCanceled()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the session is canceled; otherwise, <code>false</code>.
+    content.vb: Public Function IsCanceled() As Boolean
+  overload: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.CancelSession
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.CancelSession
+  id: CancelSession
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: CancelSession()
+  nameWithType: FileUploadSession.CancelSession()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.CancelSession()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CancelSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 224
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Cancels the file upload session.
+  example: []
+  syntax:
+    content: public void CancelSession()
+    content.vb: Public Sub CancelSession()
+  overload: AdvanceFileUpload.Domain.FileUploadSession.CancelSession*
+  exceptions:
+  - type: AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+    commentId: T:AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+    description: Thrown when the session cannot be canceled.
+- uid: AdvanceFileUpload.Domain.FileUploadSession.PauseSession
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.PauseSession
+  id: PauseSession
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: PauseSession()
+  nameWithType: FileUploadSession.PauseSession()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.PauseSession()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PauseSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 239
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Pauses the file upload session.
+  example: []
+  syntax:
+    content: public void PauseSession()
+    content.vb: Public Sub PauseSession()
+  overload: AdvanceFileUpload.Domain.FileUploadSession.PauseSession*
+  exceptions:
+  - type: AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+    commentId: T:AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+    description: Thrown when the session cannot be paused.
+- uid: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
+  id: CompleteSession
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: CompleteSession()
+  nameWithType: FileUploadSession.CompleteSession()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompleteSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 258
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Completes the file upload session.
+  example: []
+  syntax:
+    content: public void CompleteSession()
+    content.vb: Public Sub CompleteSession()
+  overload: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession*
+  exceptions:
+  - type: AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
+    commentId: T:AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
+    description: Thrown when the session cannot be completed.
+references:
+- uid: AdvanceFileUpload.Domain
+  commentId: N:AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain
+  nameWithType: AdvanceFileUpload.Domain
+  fullName: AdvanceFileUpload.Domain
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Domain.Core.EntityBase
+  commentId: T:AdvanceFileUpload.Domain.Core.EntityBase
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html
+  name: EntityBase
+  nameWithType: EntityBase
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase
+- uid: AdvanceFileUpload.Domain.Core.IAggregateRoot
+  commentId: T:AdvanceFileUpload.Domain.Core.IAggregateRoot
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.IAggregateRoot.html
+  name: IAggregateRoot
+  nameWithType: IAggregateRoot
+  fullName: AdvanceFileUpload.Domain.Core.IAggregateRoot
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Id
+  commentId: P:AdvanceFileUpload.Domain.Core.EntityBase.Id
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Id
+  name: Id
+  nameWithType: EntityBase.Id
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Id
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  commentId: P:AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_DomainEvents
+  name: DomainEvents
+  nameWithType: EntityBase.DomainEvents
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_AddDomainEvent_AdvanceFileUpload_Domain_Core_IDomainEvent_
+  name: AddDomainEvent(IDomainEvent)
+  nameWithType: EntityBase.AddDomainEvent(IDomainEvent)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+    name: AddDomainEvent
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_AddDomainEvent_AdvanceFileUpload_Domain_Core_IDomainEvent_
+  - name: (
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.AddDomainEvent(AdvanceFileUpload.Domain.Core.IDomainEvent)
+    name: AddDomainEvent
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_AddDomainEvent_AdvanceFileUpload_Domain_Core_IDomainEvent_
+  - name: (
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  name: ClearDomainEvents()
+  nameWithType: EntityBase.ClearDomainEvents()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+    name: ClearDomainEvents
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+    name: ClearDomainEvents
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  isExternal: true
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: EntityBase.Equals(object)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Equals(object)
+  nameWithType.vb: EntityBase.Equals(Object)
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+    name: Equals
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+    name: Equals
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  name: GetHashCode()
+  nameWithType: EntityBase.GetHashCode()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+    name: GetHashCode
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+    name: GetHashCode
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+- uid: AdvanceFileUpload.Domain.FileUploadSession.FileName*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.FileName
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_FileName
+  name: FileName
+  nameWithType: FileUploadSession.FileName
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Domain.FileUploadSession.FileExtension*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.FileExtension
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_FileExtension
+  name: FileExtension
+  nameWithType: FileUploadSession.FileExtension
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileExtension
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_SavingDirectory
+  name: SavingDirectory
+  nameWithType: FileUploadSession.SavingDirectory
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SavingDirectory
+- uid: AdvanceFileUpload.Domain.FileUploadSession.FileSize*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.FileSize
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_FileSize
+  name: FileSize
+  nameWithType: FileUploadSession.FileSize
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: AdvanceFileUpload.Domain.FileUploadSession.Status*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.Status
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_Status
+  name: Status
+  nameWithType: FileUploadSession.Status
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.Status
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus
+  commentId: T:AdvanceFileUpload.Domain.FileUploadSessionStatus
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html
+  name: FileUploadSessionStatus
+  nameWithType: FileUploadSessionStatus
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus
+- uid: AdvanceFileUpload.Domain.FileUploadSession.UploadDate*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.UploadDate
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_UploadDate
+  name: UploadDate
+  nameWithType: FileUploadSession.UploadDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.UploadDate
+- uid: System.DateOnly
+  commentId: T:System.DateOnly
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.dateonly
+  name: DateOnly
+  nameWithType: DateOnly
+  fullName: System.DateOnly
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_SessionStartDate
+  name: SessionStartDate
+  nameWithType: FileUploadSession.SessionStartDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SessionStartDate
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_SessionEndDate
+  name: SessionEndDate
+  nameWithType: FileUploadSession.SessionEndDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_MaxChunkSize
+  name: MaxChunkSize
+  nameWithType: FileUploadSession.MaxChunkSize
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
+- uid: AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_TotalChunksToUpload
+  name: TotalChunksToUpload
+  nameWithType: FileUploadSession.TotalChunksToUpload
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_TotalUploadedChunks
+  name: TotalUploadedChunks
+  nameWithType: FileUploadSession.TotalUploadedChunks
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.TotalUploadedChunks
+- uid: AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_ProgressPercentage
+  name: ProgressPercentage
+  nameWithType: FileUploadSession.ProgressPercentage
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_ChunkFiles
+  name: ChunkFiles
+  nameWithType: FileUploadSession.ChunkFiles
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.ChunkFiles
+- uid: System.Collections.Generic.IReadOnlyCollection{AdvanceFileUpload.Domain.ChunkFile}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{AdvanceFileUpload.Domain.ChunkFile}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<ChunkFile>
+  nameWithType: IReadOnlyCollection<ChunkFile>
+  fullName: System.Collections.Generic.IReadOnlyCollection<AdvanceFileUpload.Domain.ChunkFile>
+  nameWithType.vb: IReadOnlyCollection(Of ChunkFile)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of AdvanceFileUpload.Domain.ChunkFile)
+  name.vb: IReadOnlyCollection(Of ChunkFile)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: AdvanceFileUpload.Domain.ChunkFile
+    name: ChunkFile
+    href: AdvanceFileUpload.Domain.ChunkFile.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.ChunkFile
+    name: ChunkFile
+    href: AdvanceFileUpload.Domain.ChunkFile.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AdvanceFileUpload.Domain.FileUploadSession
+  commentId: T:AdvanceFileUpload.Domain.FileUploadSession
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.FileUploadSession.html
+  name: FileUploadSession
+  nameWithType: FileUploadSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: AdvanceFileUpload.Domain.FileUploadSession.#ctor*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.#ctor
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession__ctor_System_String_System_String_System_Int64_System_Int64_
+  name: FileUploadSession
+  nameWithType: FileUploadSession.FileUploadSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.FileUploadSession
+  nameWithType.vb: FileUploadSession.New
+  fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.New
+  name.vb: New
+- uid: AdvanceFileUpload.Domain.Exception.ChunkUploadingException
+  commentId: T:AdvanceFileUpload.Domain.Exception.ChunkUploadingException
+  href: AdvanceFileUpload.Domain.Exception.ChunkUploadingException.html
+  name: ChunkUploadingException
+  nameWithType: ChunkUploadingException
+  fullName: AdvanceFileUpload.Domain.Exception.ChunkUploadingException
+- uid: AdvanceFileUpload.Domain.FileUploadSession.AddChunk*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.AddChunk
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_AddChunk_System_Int32_System_String_
+  name: AddChunk
+  nameWithType: FileUploadSession.AddChunk
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.AddChunk
+- uid: AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_GetRemainChunks
+  name: GetRemainChunks
+  nameWithType: FileUploadSession.GetRemainChunks
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsAllChunkUploaded
+  name: IsAllChunkUploaded
+  nameWithType: FileUploadSession.IsAllChunkUploaded
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsChunkUploaded_System_Int32_
+  name: IsChunkUploaded
+  nameWithType: FileUploadSession.IsChunkUploaded
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsCompleted*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsCompleted
+  name: IsCompleted
+  nameWithType: FileUploadSession.IsCompleted
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsCanceled
+  name: IsCanceled
+  nameWithType: FileUploadSession.IsCanceled
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
+- uid: AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+  commentId: T:AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+  href: AdvanceFileUpload.Domain.Exception.CancelationFileUploadException.html
+  name: CancelationFileUploadException
+  nameWithType: CancelationFileUploadException
+  fullName: AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+- uid: AdvanceFileUpload.Domain.FileUploadSession.CancelSession*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.CancelSession
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_CancelSession
+  name: CancelSession
+  nameWithType: FileUploadSession.CancelSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.CancelSession
+- uid: AdvanceFileUpload.Domain.FileUploadSession.PauseSession*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.PauseSession
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_PauseSession
+  name: PauseSession
+  nameWithType: FileUploadSession.PauseSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.PauseSession
+- uid: AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
+  commentId: T:AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
+  href: AdvanceFileUpload.Domain.Exception.CompletingFileUploadException.html
+  name: CompletingFileUploadException
+  nameWithType: CompletingFileUploadException
+  fullName: AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
+- uid: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_CompleteSession
+  name: CompleteSession
+  nameWithType: FileUploadSession.CompleteSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession

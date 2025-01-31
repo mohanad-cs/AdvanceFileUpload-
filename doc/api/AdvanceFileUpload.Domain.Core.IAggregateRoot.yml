@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Core.IAggregateRoot
+  commentId: T:AdvanceFileUpload.Domain.Core.IAggregateRoot
+  id: IAggregateRoot
+  parent: AdvanceFileUpload.Domain.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IAggregateRoot
+  nameWithType: IAggregateRoot
+  fullName: AdvanceFileUpload.Domain.Core.IAggregateRoot
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IAggregateRoot.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IAggregateRoot
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IAggregateRoot.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Marker interface to indicate that an entity is an aggregate root.
+  example: []
+  syntax:
+    content: public interface IAggregateRoot
+    content.vb: Public Interface IAggregateRoot
+references:
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html

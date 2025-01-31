@@ -1,0 +1,119 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  id: AdvanceFileUpload.Domain.Core
+  children:
+  - AdvanceFileUpload.Domain.Core.DomainEventBase
+  - AdvanceFileUpload.Domain.Core.DomainException
+  - AdvanceFileUpload.Domain.Core.EntityBase
+  - AdvanceFileUpload.Domain.Core.IAggregateRoot
+  - AdvanceFileUpload.Domain.Core.IDomainEvent
+  - AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  - AdvanceFileUpload.Domain.Core.IRepository`1
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Domain
+references:
+- uid: AdvanceFileUpload.Domain.Core.DomainEventBase
+  commentId: T:AdvanceFileUpload.Domain.Core.DomainEventBase
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.DomainEventBase.html
+  name: DomainEventBase
+  nameWithType: DomainEventBase
+  fullName: AdvanceFileUpload.Domain.Core.DomainEventBase
+- uid: AdvanceFileUpload.Domain.Core.DomainException
+  commentId: T:AdvanceFileUpload.Domain.Core.DomainException
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.DomainException.html
+  name: DomainException
+  nameWithType: DomainException
+  fullName: AdvanceFileUpload.Domain.Core.DomainException
+- uid: AdvanceFileUpload.Domain.Core.EntityBase
+  commentId: T:AdvanceFileUpload.Domain.Core.EntityBase
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html
+  name: EntityBase
+  nameWithType: EntityBase
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase
+- uid: AdvanceFileUpload.Domain.Core.IAggregateRoot
+  commentId: T:AdvanceFileUpload.Domain.Core.IAggregateRoot
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.IAggregateRoot.html
+  name: IAggregateRoot
+  nameWithType: IAggregateRoot
+  fullName: AdvanceFileUpload.Domain.Core.IAggregateRoot
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+  commentId: T:AdvanceFileUpload.Domain.Core.IDomainEvent
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  name: IDomainEvent
+  nameWithType: IDomainEvent
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent
+- uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  commentId: T:AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  href: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.html
+  name: IDomainEventPublisher
+  nameWithType: IDomainEventPublisher
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+- uid: AdvanceFileUpload.Domain.Core.IRepository`1
+  commentId: T:AdvanceFileUpload.Domain.Core.IRepository`1
+  href: AdvanceFileUpload.Domain.Core.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository
+    href: AdvanceFileUpload.Domain.Core.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository
+    href: AdvanceFileUpload.Domain.Core.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html

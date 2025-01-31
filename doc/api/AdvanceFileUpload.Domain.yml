@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain
+  commentId: N:AdvanceFileUpload.Domain
+  id: AdvanceFileUpload.Domain
+  children:
+  - AdvanceFileUpload.Domain.ChunkFile
+  - AdvanceFileUpload.Domain.FileUploadSession
+  - AdvanceFileUpload.Domain.FileUploadSessionStatus
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Domain
+  nameWithType: AdvanceFileUpload.Domain
+  fullName: AdvanceFileUpload.Domain
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Domain
+references:
+- uid: AdvanceFileUpload.Domain.ChunkFile
+  commentId: T:AdvanceFileUpload.Domain.ChunkFile
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.ChunkFile.html
+  name: ChunkFile
+  nameWithType: ChunkFile
+  fullName: AdvanceFileUpload.Domain.ChunkFile
+- uid: AdvanceFileUpload.Domain.FileUploadSession
+  commentId: T:AdvanceFileUpload.Domain.FileUploadSession
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.FileUploadSession.html
+  name: FileUploadSession
+  nameWithType: FileUploadSession
+  fullName: AdvanceFileUpload.Domain.FileUploadSession
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus
+  commentId: T:AdvanceFileUpload.Domain.FileUploadSessionStatus
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html
+  name: FileUploadSessionStatus
+  nameWithType: FileUploadSessionStatus
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus
+- uid: AdvanceFileUpload.Domain
+  commentId: N:AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain
+  nameWithType: AdvanceFileUpload.Domain
+  fullName: AdvanceFileUpload.Domain
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html

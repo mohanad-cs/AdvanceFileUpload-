@@ -1,0 +1,161 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+  commentId: T:AdvanceFileUpload.Domain.Core.IDomainEvent
+  id: IDomainEvent
+  parent: AdvanceFileUpload.Domain.Core
+  children:
+  - AdvanceFileUpload.Domain.Core.IDomainEvent.Id
+  - AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn
+  langs:
+  - csharp
+  - vb
+  name: IDomainEvent
+  nameWithType: IDomainEvent
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IDomainEvent
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEvent.cs
+    startLine: 8
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  syntax:
+    content: 'public interface IDomainEvent : INotification'
+    content.vb: Public Interface IDomainEvent Inherits INotification
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent.Id
+  commentId: P:AdvanceFileUpload.Domain.Core.IDomainEvent.Id
+  id: Id
+  parent: AdvanceFileUpload.Domain.Core.IDomainEvent
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: IDomainEvent.Id
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent.Id
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Id
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEvent.cs
+    startLine: 13
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Gets the unique identifier of the domain event.
+  example: []
+  syntax:
+    content: Guid Id { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: ReadOnly Property Id As Guid
+  overload: AdvanceFileUpload.Domain.Core.IDomainEvent.Id*
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn
+  commentId: P:AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn
+  id: OccurredOn
+  parent: AdvanceFileUpload.Domain.Core.IDomainEvent
+  langs:
+  - csharp
+  - vb
+  name: OccurredOn
+  nameWithType: IDomainEvent.OccurredOn
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: OccurredOn
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEvent.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  summary: Gets the date and time when the event occurred.
+  example: []
+  syntax:
+    content: DateTime OccurredOn { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: ReadOnly Property OccurredOn As Date
+  overload: AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn*
+references:
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent.Id*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.IDomainEvent.Id
+  href: AdvanceFileUpload.Domain.Core.IDomainEvent.html#AdvanceFileUpload_Domain_Core_IDomainEvent_Id
+  name: Id
+  nameWithType: IDomainEvent.Id
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent.Id
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn
+  href: AdvanceFileUpload.Domain.Core.IDomainEvent.html#AdvanceFileUpload_Domain_Core_IDomainEvent_OccurredOn
+  name: OccurredOn
+  nameWithType: IDomainEvent.OccurredOn
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent.OccurredOn
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date

@@ -1,0 +1,100 @@
+### YamlMime:TableOfContent
+items:
+- uid: AdvanceFileUpload.Application.Core
+  name: AdvanceFileUpload.Application.Core
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Application.Core.ICommand`1
+    name: ICommand<TResult>
+    type: Interface
+  - uid: AdvanceFileUpload.Application.Core.IQuery`1
+    name: IQuery<TResult>
+    type: Interface
+- uid: AdvanceFileUpload.Domain
+  name: AdvanceFileUpload.Domain
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Domain.ChunkFile
+    name: ChunkFile
+    type: Class
+  - uid: AdvanceFileUpload.Domain.FileUploadSession
+    name: FileUploadSession
+    type: Class
+  - uid: AdvanceFileUpload.Domain.FileUploadSessionStatus
+    name: FileUploadSessionStatus
+    type: Enum
+- uid: AdvanceFileUpload.Domain.Core
+  name: AdvanceFileUpload.Domain.Core
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Domain.Core.DomainEventBase
+    name: DomainEventBase
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Core.DomainException
+    name: DomainException
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase
+    name: EntityBase
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Core.IAggregateRoot
+    name: IAggregateRoot
+    type: Interface
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    type: Interface
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+    name: IDomainEventPublisher
+    type: Interface
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository<TEntity>
+    type: Interface
+- uid: AdvanceFileUpload.Domain.Events
+  name: AdvanceFileUpload.Domain.Events
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+    name: ChunkUploadedEvent
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+    name: FileUploadSessionCanceledEvent
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+    name: FileUploadSessionCompletedEvent
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+    name: FileUploadSessionCreatedEvent
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
+    name: FileUploadSessionPausedEvent
+    type: Class
+- uid: AdvanceFileUpload.Domain.Exception
+  name: AdvanceFileUpload.Domain.Exception
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
+    name: CancelationFileUploadException
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Exception.ChunkUploadingException
+    name: ChunkUploadingException
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
+    name: CompletingFileUploadException
+    type: Class
+  - uid: AdvanceFileUpload.Domain.Exception.PauseFileUploadException
+    name: PauseFileUploadException
+    type: Class
+- uid: AdvanceFileUpload.Domain.Extensions
+  name: AdvanceFileUpload.Domain.Extensions
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Domain.Extensions.DateTmeExtensions
+    name: DateTmeExtensions
+    type: Class
+- uid: AdvanceFileUpload.Domain.Test
+  name: AdvanceFileUpload.Domain.Test
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
+    name: FileUploadSessionTests
+    type: Class
+memberLayout: SamePage

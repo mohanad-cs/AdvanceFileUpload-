@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Events
+  commentId: N:AdvanceFileUpload.Domain.Events
+  id: AdvanceFileUpload.Domain.Events
+  children:
+  - AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+  - AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+  - AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+  - AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+  - AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Domain.Events
+  nameWithType: AdvanceFileUpload.Domain.Events
+  fullName: AdvanceFileUpload.Domain.Events
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Domain
+references:
+- uid: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+  href: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent.html
+  name: ChunkUploadedEvent
+  nameWithType: ChunkUploadedEvent
+  fullName: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent.html
+  name: FileUploadSessionCanceledEvent
+  nameWithType: FileUploadSessionCanceledEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent.html
+  name: FileUploadSessionCompletedEvent
+  nameWithType: FileUploadSessionCompletedEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent.html
+  name: FileUploadSessionPausedEvent
+  nameWithType: FileUploadSessionPausedEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent.html
+  name: FileUploadSessionCreatedEvent
+  nameWithType: FileUploadSessionCreatedEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent

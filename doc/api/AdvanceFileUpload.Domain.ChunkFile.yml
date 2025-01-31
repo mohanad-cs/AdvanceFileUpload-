@@ -1,0 +1,535 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.ChunkFile
+  commentId: T:AdvanceFileUpload.Domain.ChunkFile
+  id: ChunkFile
+  parent: AdvanceFileUpload.Domain
+  children:
+  - AdvanceFileUpload.Domain.ChunkFile.ChunkIndex
+  - AdvanceFileUpload.Domain.ChunkFile.ChunkPath
+  - AdvanceFileUpload.Domain.ChunkFile.ChunkSize
+  - AdvanceFileUpload.Domain.ChunkFile.SessionId
+  langs:
+  - csharp
+  - vb
+  name: ChunkFile
+  nameWithType: ChunkFile
+  fullName: AdvanceFileUpload.Domain.ChunkFile
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkFile
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+    startLine: 7
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Represents a chunk file in a file upload session.
+  example: []
+  syntax:
+    content: 'public sealed class ChunkFile : EntityBase'
+    content.vb: Public NotInheritable Class ChunkFile Inherits EntityBase
+  inheritance:
+  - System.Object
+  - AdvanceFileUpload.Domain.Core.EntityBase
+  inheritedMembers:
+  - AdvanceFileUpload.Domain.Core.EntityBase.Id
+  - AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  - AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  - AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  - AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Domain.ChunkFile.SessionId
+  commentId: P:AdvanceFileUpload.Domain.ChunkFile.SessionId
+  id: SessionId
+  parent: AdvanceFileUpload.Domain.ChunkFile
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: ChunkFile.SessionId
+  fullName: AdvanceFileUpload.Domain.ChunkFile.SessionId
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionId
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the session identifier to which this chunk belongs.
+  example: []
+  syntax:
+    content: public Guid SessionId { get; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property SessionId As Guid
+  overload: AdvanceFileUpload.Domain.ChunkFile.SessionId*
+- uid: AdvanceFileUpload.Domain.ChunkFile.ChunkIndex
+  commentId: P:AdvanceFileUpload.Domain.ChunkFile.ChunkIndex
+  id: ChunkIndex
+  parent: AdvanceFileUpload.Domain.ChunkFile
+  langs:
+  - csharp
+  - vb
+  name: ChunkIndex
+  nameWithType: ChunkFile.ChunkIndex
+  fullName: AdvanceFileUpload.Domain.ChunkFile.ChunkIndex
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkIndex
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the index of the chunk.
+  example: []
+  syntax:
+    content: public int ChunkIndex { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ChunkIndex As Integer
+  overload: AdvanceFileUpload.Domain.ChunkFile.ChunkIndex*
+- uid: AdvanceFileUpload.Domain.ChunkFile.ChunkPath
+  commentId: P:AdvanceFileUpload.Domain.ChunkFile.ChunkPath
+  id: ChunkPath
+  parent: AdvanceFileUpload.Domain.ChunkFile
+  langs:
+  - csharp
+  - vb
+  name: ChunkPath
+  nameWithType: ChunkFile.ChunkPath
+  fullName: AdvanceFileUpload.Domain.ChunkFile.ChunkPath
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkPath
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+    startLine: 22
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the path of the chunk file.
+  example: []
+  syntax:
+    content: public string ChunkPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ChunkPath As String
+  overload: AdvanceFileUpload.Domain.ChunkFile.ChunkPath*
+- uid: AdvanceFileUpload.Domain.ChunkFile.ChunkSize
+  commentId: P:AdvanceFileUpload.Domain.ChunkFile.ChunkSize
+  id: ChunkSize
+  parent: AdvanceFileUpload.Domain.ChunkFile
+  langs:
+  - csharp
+  - vb
+  name: ChunkSize
+  nameWithType: ChunkFile.ChunkSize
+  fullName: AdvanceFileUpload.Domain.ChunkFile.ChunkSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/ChunkFile.cs
+    startLine: 27
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Gets the size of the chunk file.
+  example: []
+  syntax:
+    content: public long ChunkSize { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property ChunkSize As Long
+  overload: AdvanceFileUpload.Domain.ChunkFile.ChunkSize*
+references:
+- uid: AdvanceFileUpload.Domain
+  commentId: N:AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain
+  nameWithType: AdvanceFileUpload.Domain
+  fullName: AdvanceFileUpload.Domain
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Domain.Core.EntityBase
+  commentId: T:AdvanceFileUpload.Domain.Core.EntityBase
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html
+  name: EntityBase
+  nameWithType: EntityBase
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Id
+  commentId: P:AdvanceFileUpload.Domain.Core.EntityBase.Id
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Id
+  name: Id
+  nameWithType: EntityBase.Id
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Id
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  commentId: P:AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_DomainEvents
+  name: DomainEvents
+  nameWithType: EntityBase.DomainEvents
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.DomainEvents
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  name: ClearDomainEvents()
+  nameWithType: EntityBase.ClearDomainEvents()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+    name: ClearDomainEvents
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.ClearDomainEvents
+    name: ClearDomainEvents
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_ClearDomainEvents
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  isExternal: true
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: EntityBase.Equals(object)
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.Equals(object)
+  nameWithType.vb: EntityBase.Equals(Object)
+  fullName.vb: AdvanceFileUpload.Domain.Core.EntityBase.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+    name: Equals
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.Equals(System.Object)
+    name: Equals
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  commentId: M:AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+  parent: AdvanceFileUpload.Domain.Core.EntityBase
+  href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  name: GetHashCode()
+  nameWithType: EntityBase.GetHashCode()
+  fullName: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+    name: GetHashCode
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.EntityBase.GetHashCode
+    name: GetHashCode
+    href: AdvanceFileUpload.Domain.Core.EntityBase.html#AdvanceFileUpload_Domain_Core_EntityBase_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+- uid: AdvanceFileUpload.Domain.ChunkFile.SessionId*
+  commentId: Overload:AdvanceFileUpload.Domain.ChunkFile.SessionId
+  href: AdvanceFileUpload.Domain.ChunkFile.html#AdvanceFileUpload_Domain_ChunkFile_SessionId
+  name: SessionId
+  nameWithType: ChunkFile.SessionId
+  fullName: AdvanceFileUpload.Domain.ChunkFile.SessionId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: AdvanceFileUpload.Domain.ChunkFile.ChunkIndex*
+  commentId: Overload:AdvanceFileUpload.Domain.ChunkFile.ChunkIndex
+  href: AdvanceFileUpload.Domain.ChunkFile.html#AdvanceFileUpload_Domain_ChunkFile_ChunkIndex
+  name: ChunkIndex
+  nameWithType: ChunkFile.ChunkIndex
+  fullName: AdvanceFileUpload.Domain.ChunkFile.ChunkIndex
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.Domain.ChunkFile.ChunkPath*
+  commentId: Overload:AdvanceFileUpload.Domain.ChunkFile.ChunkPath
+  href: AdvanceFileUpload.Domain.ChunkFile.html#AdvanceFileUpload_Domain_ChunkFile_ChunkPath
+  name: ChunkPath
+  nameWithType: ChunkFile.ChunkPath
+  fullName: AdvanceFileUpload.Domain.ChunkFile.ChunkPath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Domain.ChunkFile.ChunkSize*
+  commentId: Overload:AdvanceFileUpload.Domain.ChunkFile.ChunkSize
+  href: AdvanceFileUpload.Domain.ChunkFile.html#AdvanceFileUpload_Domain_ChunkFile_ChunkSize
+  name: ChunkSize
+  nameWithType: ChunkFile.ChunkSize
+  fullName: AdvanceFileUpload.Domain.ChunkFile.ChunkSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long

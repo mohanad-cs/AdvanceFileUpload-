@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Extensions
+  commentId: N:AdvanceFileUpload.Domain.Extensions
+  id: AdvanceFileUpload.Domain.Extensions
+  children:
+  - AdvanceFileUpload.Domain.Extensions.DateTmeExtensions
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Domain.Extensions
+  nameWithType: AdvanceFileUpload.Domain.Extensions
+  fullName: AdvanceFileUpload.Domain.Extensions
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Domain
+references:
+- uid: AdvanceFileUpload.Domain.Extensions.DateTmeExtensions
+  commentId: T:AdvanceFileUpload.Domain.Extensions.DateTmeExtensions
+  href: AdvanceFileUpload.Domain.Extensions.DateTmeExtensions.html
+  name: DateTmeExtensions
+  nameWithType: DateTmeExtensions
+  fullName: AdvanceFileUpload.Domain.Extensions.DateTmeExtensions

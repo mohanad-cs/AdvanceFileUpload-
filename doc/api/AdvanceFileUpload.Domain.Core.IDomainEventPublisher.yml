@@ -1,0 +1,321 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  commentId: T:AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  id: IDomainEventPublisher
+  parent: AdvanceFileUpload.Domain.Core
+  children:
+  - AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(AdvanceFileUpload.Domain.Core.IDomainEvent,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent},System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IDomainEventPublisher
+  nameWithType: IDomainEventPublisher
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IDomainEventPublisher
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
+    startLine: 2
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  syntax:
+    content: public interface IDomainEventPublisher
+    content.vb: Public Interface IDomainEventPublisher
+- uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(AdvanceFileUpload.Domain.Core.IDomainEvent,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(AdvanceFileUpload.Domain.Core.IDomainEvent,System.Threading.CancellationToken)
+  id: PublishAsync(AdvanceFileUpload.Domain.Core.IDomainEvent,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  langs:
+  - csharp
+  - vb
+  name: PublishAsync(IDomainEvent, CancellationToken)
+  nameWithType: IDomainEventPublisher.PublishAsync(IDomainEvent, CancellationToken)
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(AdvanceFileUpload.Domain.Core.IDomainEvent, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PublishAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
+    startLine: 4
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  syntax:
+    content: Task PublishAsync(IDomainEvent domainEvent, CancellationToken cancellationToken = default)
+    parameters:
+    - id: domainEvent
+      type: AdvanceFileUpload.Domain.Core.IDomainEvent
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function PublishAsync(domainEvent As IDomainEvent, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync*
+- uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent},System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent},System.Threading.CancellationToken)
+  id: PublishAsync(System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent},System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  langs:
+  - csharp
+  - vb
+  name: PublishAsync(IEnumerable<IDomainEvent>, CancellationToken)
+  nameWithType: IDomainEventPublisher.PublishAsync(IEnumerable<IDomainEvent>, CancellationToken)
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(System.Collections.Generic.IEnumerable<AdvanceFileUpload.Domain.Core.IDomainEvent>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PublishAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain.Core
+  syntax:
+    content: Task PublishAsync(IEnumerable<IDomainEvent> domainEvents, CancellationToken cancellationToken = default)
+    parameters:
+    - id: domainEvents
+      type: System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent}
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function PublishAsync(domainEvents As IEnumerable(Of IDomainEvent), cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync*
+  nameWithType.vb: IDomainEventPublisher.PublishAsync(IEnumerable(Of IDomainEvent), CancellationToken)
+  fullName.vb: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(System.Collections.Generic.IEnumerable(Of AdvanceFileUpload.Domain.Core.IDomainEvent), System.Threading.CancellationToken)
+  name.vb: PublishAsync(IEnumerable(Of IDomainEvent), CancellationToken)
+references:
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+- uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync*
+  commentId: Overload:AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync
+  href: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.html#AdvanceFileUpload_Domain_Core_IDomainEventPublisher_PublishAsync_AdvanceFileUpload_Domain_Core_IDomainEvent_System_Threading_CancellationToken_
+  name: PublishAsync
+  nameWithType: IDomainEventPublisher.PublishAsync
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync
+- uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+  commentId: T:AdvanceFileUpload.Domain.Core.IDomainEvent
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  name: IDomainEvent
+  nameWithType: IDomainEvent
+  fullName: AdvanceFileUpload.Domain.Core.IDomainEvent
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent}
+  commentId: T:System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<IDomainEvent>
+  nameWithType: IEnumerable<IDomainEvent>
+  fullName: System.Collections.Generic.IEnumerable<AdvanceFileUpload.Domain.Core.IDomainEvent>
+  nameWithType.vb: IEnumerable(Of IDomainEvent)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of AdvanceFileUpload.Domain.Core.IDomainEvent)
+  name.vb: IEnumerable(Of IDomainEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.Core.IDomainEvent
+    name: IDomainEvent
+    href: AdvanceFileUpload.Domain.Core.IDomainEvent.html
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
