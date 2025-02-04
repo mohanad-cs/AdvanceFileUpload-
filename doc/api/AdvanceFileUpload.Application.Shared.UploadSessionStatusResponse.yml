@@ -1,0 +1,873 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  commentId: T:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  id: UploadSessionStatusResponse
+  parent: AdvanceFileUpload.Application.Shared
+  children:
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionStatusResponse
+  nameWithType: UploadSessionStatusResponse
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadSessionStatusResponse
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 70
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Represents the status response of an upload session.
+  example: []
+  syntax:
+    content: public sealed class UploadSessionStatusResponse
+    content.vb: Public NotInheritable Class UploadSessionStatusResponse
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  id: SessionId
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: UploadSessionStatusResponse.SessionId
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionId
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 75
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the unique identifier of the upload session.
+  example: []
+  syntax:
+    content: public Guid SessionId { get; init; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property SessionId As Guid
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  id: FileSize
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: FileSize
+  nameWithType: UploadSessionStatusResponse.FileSize
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 80
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the size of the file to be uploaded.
+  example: []
+  syntax:
+    content: public long FileSize { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property FileSize As Long
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  id: MaxMaxChunkSize
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: MaxMaxChunkSize
+  nameWithType: UploadSessionStatusResponse.MaxMaxChunkSize
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxMaxChunkSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 85
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the maximum size of each chunk.
+  example: []
+  syntax:
+    content: public long MaxMaxChunkSize { get; init; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property MaxMaxChunkSize As Long
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  id: TotalChunksToUpload
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: TotalChunksToUpload
+  nameWithType: UploadSessionStatusResponse.TotalChunksToUpload
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: TotalChunksToUpload
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 90
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the total number of chunks to be uploaded.
+  example: []
+  syntax:
+    content: public int TotalChunksToUpload { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalChunksToUpload As Integer
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  id: UploadStatus
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: UploadStatus
+  nameWithType: UploadSessionStatusResponse.UploadStatus
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadStatus
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 95
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the current status of the upload session.
+  example: []
+  syntax:
+    content: public UploadStatus UploadStatus { get; init; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.Application.Shared.UploadStatus
+    content.vb: Public Property UploadStatus As UploadStatus
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  id: SessionStartDate
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: SessionStartDate
+  nameWithType: UploadSessionStatusResponse.SessionStartDate
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionStartDate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 100
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the start date and time of the upload session.
+  example: []
+  syntax:
+    content: public DateTime SessionStartDate { get; init; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property SessionStartDate As Date
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  id: TotalUploadedChunks
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: TotalUploadedChunks
+  nameWithType: UploadSessionStatusResponse.TotalUploadedChunks
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: TotalUploadedChunks
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 105
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the total number of chunks that have been uploaded.
+  example: []
+  syntax:
+    content: public int TotalUploadedChunks { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property TotalUploadedChunks As Integer
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  id: ProgressPercentage
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: ProgressPercentage
+  nameWithType: UploadSessionStatusResponse.ProgressPercentage
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ProgressPercentage
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 110
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the progress percentage of the file upload.
+  example: []
+  syntax:
+    content: public double ProgressPercentage { get; init; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property ProgressPercentage As Double
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  id: SessionEndDate
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: SessionEndDate
+  nameWithType: UploadSessionStatusResponse.SessionEndDate
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionEndDate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 115
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the end date and time of the upload session, if it has ended.
+  example: []
+  syntax:
+    content: public DateTime? SessionEndDate { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property SessionEndDate As Date?
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate*
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  id: RemainChunks
+  parent: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  langs:
+  - csharp
+  - vb
+  name: RemainChunks
+  nameWithType: UploadSessionStatusResponse.RemainChunks
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: RemainChunks
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/CreateUploadSession.cs
+    startLine: 120
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Shared
+  summary: Gets the list of remaining chunks to be uploaded.
+  example: []
+  syntax:
+    content: public List<int>? RemainChunks { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Public Property RemainChunks As List(Of Integer)
+  overload: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks*
+references:
+- uid: AdvanceFileUpload.Application.Shared
+  commentId: N:AdvanceFileUpload.Application.Shared
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Shared
+  nameWithType: AdvanceFileUpload.Application.Shared
+  fullName: AdvanceFileUpload.Application.Shared
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Shared
+    name: Shared
+    href: AdvanceFileUpload.Application.Shared.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Shared
+    name: Shared
+    href: AdvanceFileUpload.Application.Shared.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionId
+  name: SessionId
+  nameWithType: UploadSessionStatusResponse.SessionId
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_FileSize
+  name: FileSize
+  nameWithType: UploadSessionStatusResponse.FileSize
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_MaxMaxChunkSize
+  name: MaxMaxChunkSize
+  nameWithType: UploadSessionStatusResponse.MaxMaxChunkSize
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_TotalChunksToUpload
+  name: TotalChunksToUpload
+  nameWithType: UploadSessionStatusResponse.TotalChunksToUpload
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_UploadStatus
+  name: UploadStatus
+  nameWithType: UploadSessionStatusResponse.UploadStatus
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.UploadStatus
+  commentId: T:AdvanceFileUpload.Application.Shared.UploadStatus
+  parent: AdvanceFileUpload.Application.Shared
+  href: AdvanceFileUpload.Application.Shared.UploadStatus.html
+  name: UploadStatus
+  nameWithType: UploadStatus
+  fullName: AdvanceFileUpload.Application.Shared.UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionStartDate
+  name: SessionStartDate
+  nameWithType: UploadSessionStatusResponse.SessionStartDate
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_TotalUploadedChunks
+  name: TotalUploadedChunks
+  nameWithType: UploadSessionStatusResponse.TotalUploadedChunks
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_ProgressPercentage
+  name: ProgressPercentage
+  nameWithType: UploadSessionStatusResponse.ProgressPercentage
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionEndDate
+  name: SessionEndDate
+  nameWithType: UploadSessionStatusResponse.SessionEndDate
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks*
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_RemainChunks
+  name: RemainChunks
+  nameWithType: UploadSessionStatusResponse.RemainChunks
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

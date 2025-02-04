@@ -42,6 +42,206 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Exception.ApplicationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Exception.ApplicationException.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Exception.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Exception.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.IUploadManger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.IUploadManger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Settings.IUploadSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Settings.IUploadSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Settings.UploadSetting.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Settings.UploadSetting.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.ChunkValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.ChunkValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.FileOperationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.FileOperationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.FileValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.FileValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.IChunkValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.IChunkValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.IFileOperationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.IFileOperationService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.IFileValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.IFileValidator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.UploadStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.UploadStatus.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.Shared.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.UploadManger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.UploadManger.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Domain.ChunkFile.yml",
       "output": {
         ".html": {

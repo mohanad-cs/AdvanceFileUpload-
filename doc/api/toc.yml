@@ -1,15 +1,69 @@
 ### YamlMime:TableOfContent
 items:
-- uid: AdvanceFileUpload.Application.Core
-  name: AdvanceFileUpload.Application.Core
+- uid: AdvanceFileUpload.Application
+  name: AdvanceFileUpload.Application
   type: Namespace
   items:
-  - uid: AdvanceFileUpload.Application.Core.ICommand`1
-    name: ICommand<TResult>
+  - uid: AdvanceFileUpload.Application.IUploadManger
+    name: IUploadManger
     type: Interface
-  - uid: AdvanceFileUpload.Application.Core.IQuery`1
-    name: IQuery<TResult>
+  - uid: AdvanceFileUpload.Application.UploadManger
+    name: UploadManger
+    type: Class
+- uid: AdvanceFileUpload.Application.Exception
+  name: AdvanceFileUpload.Application.Exception
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Application.Exception.ApplicationException
+    name: ApplicationException
+    type: Class
+- uid: AdvanceFileUpload.Application.Settings
+  name: AdvanceFileUpload.Application.Settings
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Application.Settings.IUploadSetting
+    name: IUploadSetting
     type: Interface
+  - uid: AdvanceFileUpload.Application.Settings.UploadSetting
+    name: UploadSetting
+    type: Class
+- uid: AdvanceFileUpload.Application.Shared
+  name: AdvanceFileUpload.Application.Shared
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.Application.Shared.ChunkValidator
+    name: ChunkValidator
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
+    name: CreateUploadSessionRequest
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
+    name: CreateUploadSessionResponse
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.FileOperationService
+    name: FileOperationService
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.FileValidator
+    name: FileValidator
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.IChunkValidator
+    name: IChunkValidator
+    type: Interface
+  - uid: AdvanceFileUpload.Application.Shared.IFileOperationService
+    name: IFileOperationService
+    type: Interface
+  - uid: AdvanceFileUpload.Application.Shared.IFileValidator
+    name: IFileValidator
+    type: Interface
+  - uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest
+    name: UploadChunkRequest
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+    name: UploadSessionStatusResponse
+    type: Class
+  - uid: AdvanceFileUpload.Application.Shared.UploadStatus
+    name: UploadStatus
+    type: Enum
 - uid: AdvanceFileUpload.Domain
   name: AdvanceFileUpload.Domain
   type: Namespace

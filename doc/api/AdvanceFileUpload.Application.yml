@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application
+  commentId: N:AdvanceFileUpload.Application
+  id: AdvanceFileUpload.Application
+  children:
+  - AdvanceFileUpload.Application.IUploadManger
+  - AdvanceFileUpload.Application.UploadManger
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application
+  nameWithType: AdvanceFileUpload.Application
+  fullName: AdvanceFileUpload.Application
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application
+references:
+- uid: AdvanceFileUpload.Application.IUploadManger
+  commentId: T:AdvanceFileUpload.Application.IUploadManger
+  parent: AdvanceFileUpload.Application
+  href: AdvanceFileUpload.Application.IUploadManger.html
+  name: IUploadManger
+  nameWithType: IUploadManger
+  fullName: AdvanceFileUpload.Application.IUploadManger
+- uid: AdvanceFileUpload.Application.UploadManger
+  commentId: T:AdvanceFileUpload.Application.UploadManger
+  href: AdvanceFileUpload.Application.UploadManger.html
+  name: UploadManger
+  nameWithType: UploadManger
+  fullName: AdvanceFileUpload.Application.UploadManger
+- uid: AdvanceFileUpload.Application
+  commentId: N:AdvanceFileUpload.Application
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application
+  nameWithType: AdvanceFileUpload.Application
+  fullName: AdvanceFileUpload.Application
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html

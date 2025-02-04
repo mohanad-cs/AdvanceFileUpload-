@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Exception
+  commentId: N:AdvanceFileUpload.Application.Exception
+  id: AdvanceFileUpload.Application.Exception
+  children:
+  - AdvanceFileUpload.Application.Exception.ApplicationException
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Exception
+  nameWithType: AdvanceFileUpload.Application.Exception
+  fullName: AdvanceFileUpload.Application.Exception
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application
+references:
+- uid: AdvanceFileUpload.Application.Exception.ApplicationException
+  commentId: T:AdvanceFileUpload.Application.Exception.ApplicationException
+  href: AdvanceFileUpload.Application.Exception.ApplicationException.html
+  name: ApplicationException
+  nameWithType: ApplicationException
+  fullName: AdvanceFileUpload.Application.Exception.ApplicationException

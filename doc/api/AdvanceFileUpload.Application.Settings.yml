@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Settings
+  commentId: N:AdvanceFileUpload.Application.Settings
+  id: AdvanceFileUpload.Application.Settings
+  children:
+  - AdvanceFileUpload.Application.Settings.IUploadSetting
+  - AdvanceFileUpload.Application.Settings.UploadSetting
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Settings
+  nameWithType: AdvanceFileUpload.Application.Settings
+  fullName: AdvanceFileUpload.Application.Settings
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application
+references:
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting
+  commentId: T:AdvanceFileUpload.Application.Settings.IUploadSetting
+  parent: AdvanceFileUpload.Application.Settings
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html
+  name: IUploadSetting
+  nameWithType: IUploadSetting
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting
+  commentId: T:AdvanceFileUpload.Application.Settings.UploadSetting
+  href: AdvanceFileUpload.Application.Settings.UploadSetting.html
+  name: UploadSetting
+  nameWithType: UploadSetting
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting
+- uid: AdvanceFileUpload.Application.Settings
+  commentId: N:AdvanceFileUpload.Application.Settings
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Settings
+  nameWithType: AdvanceFileUpload.Application.Settings
+  fullName: AdvanceFileUpload.Application.Settings
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Settings
+    name: Settings
+    href: AdvanceFileUpload.Application.Settings.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Settings
+    name: Settings
+    href: AdvanceFileUpload.Application.Settings.html

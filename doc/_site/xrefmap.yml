@@ -1,6 +1,12 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: AdvanceFileUpload.Application
+  name: AdvanceFileUpload.Application
+  href: api/AdvanceFileUpload.Application.html
+  commentId: N:AdvanceFileUpload.Application
+  fullName: AdvanceFileUpload.Application
+  nameWithType: AdvanceFileUpload.Application
 - uid: AdvanceFileUpload.Application.Core
   name: AdvanceFileUpload.Application.Core
   href: api/AdvanceFileUpload.Application.Core.html
@@ -25,6 +31,1072 @@ references:
   fullName.vb: AdvanceFileUpload.Application.Core.IQuery(Of TResult)
   nameWithType: IQuery<TResult>
   nameWithType.vb: IQuery(Of TResult)
+- uid: AdvanceFileUpload.Application.Exception
+  name: AdvanceFileUpload.Application.Exception
+  href: api/AdvanceFileUpload.Application.Exception.html
+  commentId: N:AdvanceFileUpload.Application.Exception
+  fullName: AdvanceFileUpload.Application.Exception
+  nameWithType: AdvanceFileUpload.Application.Exception
+- uid: AdvanceFileUpload.Application.Exception.ApplicationException
+  name: ApplicationException
+  href: api/AdvanceFileUpload.Application.Exception.ApplicationException.html
+  commentId: T:AdvanceFileUpload.Application.Exception.ApplicationException
+  fullName: AdvanceFileUpload.Application.Exception.ApplicationException
+  nameWithType: ApplicationException
+- uid: AdvanceFileUpload.Application.Exception.ApplicationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name: ApplicationException(SerializationInfo, StreamingContext)
+  href: api/AdvanceFileUpload.Application.Exception.ApplicationException.html#AdvanceFileUpload_Application_Exception_ApplicationException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
+  commentId: M:AdvanceFileUpload.Application.Exception.ApplicationException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
+  name.vb: New(SerializationInfo, StreamingContext)
+  fullName: AdvanceFileUpload.Application.Exception.ApplicationException.ApplicationException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  fullName.vb: AdvanceFileUpload.Application.Exception.ApplicationException.New(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
+  nameWithType: ApplicationException.ApplicationException(SerializationInfo, StreamingContext)
+  nameWithType.vb: ApplicationException.New(SerializationInfo, StreamingContext)
+- uid: AdvanceFileUpload.Application.Exception.ApplicationException.#ctor(System.String)
+  name: ApplicationException(string?)
+  href: api/AdvanceFileUpload.Application.Exception.ApplicationException.html#AdvanceFileUpload_Application_Exception_ApplicationException__ctor_System_String_
+  commentId: M:AdvanceFileUpload.Application.Exception.ApplicationException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: AdvanceFileUpload.Application.Exception.ApplicationException.ApplicationException(string?)
+  fullName.vb: AdvanceFileUpload.Application.Exception.ApplicationException.New(String)
+  nameWithType: ApplicationException.ApplicationException(string?)
+  nameWithType.vb: ApplicationException.New(String)
+- uid: AdvanceFileUpload.Application.Exception.ApplicationException.#ctor(System.String,System.Exception)
+  name: ApplicationException(string?, Exception?)
+  href: api/AdvanceFileUpload.Application.Exception.ApplicationException.html#AdvanceFileUpload_Application_Exception_ApplicationException__ctor_System_String_System_Exception_
+  commentId: M:AdvanceFileUpload.Application.Exception.ApplicationException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: AdvanceFileUpload.Application.Exception.ApplicationException.ApplicationException(string?, System.Exception?)
+  fullName.vb: AdvanceFileUpload.Application.Exception.ApplicationException.New(String, System.Exception)
+  nameWithType: ApplicationException.ApplicationException(string?, Exception?)
+  nameWithType.vb: ApplicationException.New(String, Exception)
+- uid: AdvanceFileUpload.Application.Exception.ApplicationException.#ctor*
+  name: ApplicationException
+  href: api/AdvanceFileUpload.Application.Exception.ApplicationException.html#AdvanceFileUpload_Application_Exception_ApplicationException__ctor_
+  commentId: Overload:AdvanceFileUpload.Application.Exception.ApplicationException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AdvanceFileUpload.Application.Exception.ApplicationException.ApplicationException
+  fullName.vb: AdvanceFileUpload.Application.Exception.ApplicationException.New
+  nameWithType: ApplicationException.ApplicationException
+  nameWithType.vb: ApplicationException.New
+- uid: AdvanceFileUpload.Application.IUploadManger
+  name: IUploadManger
+  href: api/AdvanceFileUpload.Application.IUploadManger.html
+  commentId: T:AdvanceFileUpload.Application.IUploadManger
+  fullName: AdvanceFileUpload.Application.IUploadManger
+  nameWithType: IUploadManger
+- uid: AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  name: CancelUploadSessionAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CancelUploadSessionAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: IUploadManger.CancelUploadSessionAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync*
+  name: CancelUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CancelUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync
+  nameWithType: IUploadManger.CancelUploadSessionAsync
+- uid: AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  name: CompleteUploadSessionAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CompleteUploadSessionAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: IUploadManger.CompleteUploadSessionAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync*
+  name: CompleteUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CompleteUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync
+  nameWithType: IUploadManger.CompleteUploadSessionAsync
+- uid: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  name: CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CreateUploadSessionAsync_AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest, System.Threading.CancellationToken)
+  nameWithType: IUploadManger.CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync*
+  name: CreateUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CreateUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync
+  nameWithType: IUploadManger.CreateUploadSessionAsync
+- uid: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
+  name: GetUploadSessionStatusAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_GetUploadSessionStatusAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: IUploadManger.GetUploadSessionStatusAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync*
+  name: GetUploadSessionStatusAsync
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_GetUploadSessionStatusAsync_
+  commentId: Overload:AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync
+  nameWithType: IUploadManger.GetUploadSessionStatusAsync
+- uid: AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  name: PauseUploadSessionAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_PauseUploadSessionAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: IUploadManger.PauseUploadSessionAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync*
+  name: PauseUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_PauseUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync
+  nameWithType: IUploadManger.PauseUploadSessionAsync
+- uid: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
+  name: UploadChunkAsync(UploadChunkRequest, CancellationToken)
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_UploadChunkAsync_AdvanceFileUpload_Application_Shared_UploadChunkRequest_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest, System.Threading.CancellationToken)
+  nameWithType: IUploadManger.UploadChunkAsync(UploadChunkRequest, CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync*
+  name: UploadChunkAsync
+  href: api/AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_UploadChunkAsync_
+  commentId: Overload:AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync
+  nameWithType: IUploadManger.UploadChunkAsync
+- uid: AdvanceFileUpload.Application.Settings
+  name: AdvanceFileUpload.Application.Settings
+  href: api/AdvanceFileUpload.Application.Settings.html
+  commentId: N:AdvanceFileUpload.Application.Settings
+  fullName: AdvanceFileUpload.Application.Settings
+  nameWithType: AdvanceFileUpload.Application.Settings
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting
+  name: IUploadSetting
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html
+  commentId: T:AdvanceFileUpload.Application.Settings.IUploadSetting
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting
+  nameWithType: IUploadSetting
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  name: AllowedExtensions
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_AllowedExtensions
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  nameWithType: IUploadSetting.AllowedExtensions
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions*
+  name: AllowedExtensions
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_AllowedExtensions_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  nameWithType: IUploadSetting.AllowedExtensions
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  name: MaxChunkSize
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_MaxChunkSize
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  nameWithType: IUploadSetting.MaxChunkSize
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize*
+  name: MaxChunkSize
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_MaxChunkSize_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  nameWithType: IUploadSetting.MaxChunkSize
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  name: MaxFileSize
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_MaxFileSize
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  nameWithType: IUploadSetting.MaxFileSize
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize*
+  name: MaxFileSize
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_MaxFileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  nameWithType: IUploadSetting.MaxFileSize
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  name: SavingDirectory
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_SavingDirectory
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  nameWithType: IUploadSetting.SavingDirectory
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory*
+  name: SavingDirectory
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_SavingDirectory_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  nameWithType: IUploadSetting.SavingDirectory
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  name: TempDirectory
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_TempDirectory
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  nameWithType: IUploadSetting.TempDirectory
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory*
+  name: TempDirectory
+  href: api/AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_TempDirectory_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  nameWithType: IUploadSetting.TempDirectory
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting
+  name: UploadSetting
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html
+  commentId: T:AdvanceFileUpload.Application.Settings.UploadSetting
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting
+  nameWithType: UploadSetting
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.AllowedExtensions
+  name: AllowedExtensions
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_AllowedExtensions
+  commentId: P:AdvanceFileUpload.Application.Settings.UploadSetting.AllowedExtensions
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.AllowedExtensions
+  nameWithType: UploadSetting.AllowedExtensions
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.AllowedExtensions*
+  name: AllowedExtensions
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_AllowedExtensions_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.UploadSetting.AllowedExtensions
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.AllowedExtensions
+  nameWithType: UploadSetting.AllowedExtensions
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.DefaultMaxChunkSize
+  name: DefaultMaxChunkSize
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_DefaultMaxChunkSize
+  commentId: F:AdvanceFileUpload.Application.Settings.UploadSetting.DefaultMaxChunkSize
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.DefaultMaxChunkSize
+  nameWithType: UploadSetting.DefaultMaxChunkSize
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.MaxChunkSize
+  name: MaxChunkSize
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_MaxChunkSize
+  commentId: P:AdvanceFileUpload.Application.Settings.UploadSetting.MaxChunkSize
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.MaxChunkSize
+  nameWithType: UploadSetting.MaxChunkSize
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.MaxChunkSize*
+  name: MaxChunkSize
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_MaxChunkSize_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.UploadSetting.MaxChunkSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.MaxChunkSize
+  nameWithType: UploadSetting.MaxChunkSize
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.MaxFileSize
+  name: MaxFileSize
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_MaxFileSize
+  commentId: P:AdvanceFileUpload.Application.Settings.UploadSetting.MaxFileSize
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.MaxFileSize
+  nameWithType: UploadSetting.MaxFileSize
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.MaxFileSize*
+  name: MaxFileSize
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_MaxFileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.UploadSetting.MaxFileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.MaxFileSize
+  nameWithType: UploadSetting.MaxFileSize
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.SavingDirectory
+  name: SavingDirectory
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_SavingDirectory
+  commentId: P:AdvanceFileUpload.Application.Settings.UploadSetting.SavingDirectory
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.SavingDirectory
+  nameWithType: UploadSetting.SavingDirectory
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.SavingDirectory*
+  name: SavingDirectory
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_SavingDirectory_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.UploadSetting.SavingDirectory
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.SavingDirectory
+  nameWithType: UploadSetting.SavingDirectory
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.SectionName
+  name: SectionName
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_SectionName
+  commentId: F:AdvanceFileUpload.Application.Settings.UploadSetting.SectionName
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.SectionName
+  nameWithType: UploadSetting.SectionName
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.TempDirectory
+  name: TempDirectory
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_TempDirectory
+  commentId: P:AdvanceFileUpload.Application.Settings.UploadSetting.TempDirectory
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.TempDirectory
+  nameWithType: UploadSetting.TempDirectory
+- uid: AdvanceFileUpload.Application.Settings.UploadSetting.TempDirectory*
+  name: TempDirectory
+  href: api/AdvanceFileUpload.Application.Settings.UploadSetting.html#AdvanceFileUpload_Application_Settings_UploadSetting_TempDirectory_
+  commentId: Overload:AdvanceFileUpload.Application.Settings.UploadSetting.TempDirectory
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Settings.UploadSetting.TempDirectory
+  nameWithType: UploadSetting.TempDirectory
+- uid: AdvanceFileUpload.Application.Shared
+  name: AdvanceFileUpload.Application.Shared
+  href: api/AdvanceFileUpload.Application.Shared.html
+  commentId: N:AdvanceFileUpload.Application.Shared
+  fullName: AdvanceFileUpload.Application.Shared
+  nameWithType: AdvanceFileUpload.Application.Shared
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator
+  name: ChunkValidator
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html
+  commentId: T:AdvanceFileUpload.Application.Shared.ChunkValidator
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator
+  nameWithType: ChunkValidator
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData(System.Byte[],System.Int64)
+  name: ValidateChunkData(byte[], long)
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html#AdvanceFileUpload_Application_Shared_ChunkValidator_ValidateChunkData_System_Byte___System_Int64_
+  commentId: M:AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData(System.Byte[],System.Int64)
+  name.vb: ValidateChunkData(Byte(), Long)
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData(byte[], long)
+  fullName.vb: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData(Byte(), Long)
+  nameWithType: ChunkValidator.ValidateChunkData(byte[], long)
+  nameWithType.vb: ChunkValidator.ValidateChunkData(Byte(), Long)
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData*
+  name: ValidateChunkData
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html#AdvanceFileUpload_Application_Shared_ChunkValidator_ValidateChunkData_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkData
+  nameWithType: ChunkValidator.ValidateChunkData
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex(System.Int32)
+  name: ValidateChunkIndex(int)
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html#AdvanceFileUpload_Application_Shared_ChunkValidator_ValidateChunkIndex_System_Int32_
+  commentId: M:AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex(System.Int32)
+  name.vb: ValidateChunkIndex(Integer)
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex(int)
+  fullName.vb: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex(Integer)
+  nameWithType: ChunkValidator.ValidateChunkIndex(int)
+  nameWithType.vb: ChunkValidator.ValidateChunkIndex(Integer)
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex*
+  name: ValidateChunkIndex
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html#AdvanceFileUpload_Application_Shared_ChunkValidator_ValidateChunkIndex_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkIndex
+  nameWithType: ChunkValidator.ValidateChunkIndex
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize(System.Int64,System.Int64)
+  name: ValidateChunkSize(long, long)
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html#AdvanceFileUpload_Application_Shared_ChunkValidator_ValidateChunkSize_System_Int64_System_Int64_
+  commentId: M:AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize(System.Int64,System.Int64)
+  name.vb: ValidateChunkSize(Long, Long)
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize(long, long)
+  fullName.vb: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize(Long, Long)
+  nameWithType: ChunkValidator.ValidateChunkSize(long, long)
+  nameWithType.vb: ChunkValidator.ValidateChunkSize(Long, Long)
+- uid: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize*
+  name: ValidateChunkSize
+  href: api/AdvanceFileUpload.Application.Shared.ChunkValidator.html#AdvanceFileUpload_Application_Shared_ChunkValidator_ValidateChunkSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator.ValidateChunkSize
+  nameWithType: ChunkValidator.ValidateChunkSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
+  name: CreateUploadSessionRequest
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html
+  commentId: T:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
+  nameWithType: CreateUploadSessionRequest
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileExtension
+  name: FileExtension
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_FileExtension
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileExtension
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileExtension
+  nameWithType: CreateUploadSessionRequest.FileExtension
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileExtension*
+  name: FileExtension
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_FileExtension_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileExtension
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileExtension
+  nameWithType: CreateUploadSessionRequest.FileExtension
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileName
+  name: FileName
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_FileName
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileName
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileName
+  nameWithType: CreateUploadSessionRequest.FileName
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileName*
+  name: FileName
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_FileName_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileName
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileName
+  nameWithType: CreateUploadSessionRequest.FileName
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileSize
+  name: FileSize
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_FileSize
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileSize
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileSize
+  nameWithType: CreateUploadSessionRequest.FileSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileSize*
+  name: FileSize
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_FileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.FileSize
+  nameWithType: CreateUploadSessionRequest.FileSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
+  name: CreateUploadSessionResponse
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html
+  commentId: T:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
+  nameWithType: CreateUploadSessionResponse
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.FileSize
+  name: FileSize
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_FileSize
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.FileSize
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.FileSize
+  nameWithType: CreateUploadSessionResponse.FileSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.FileSize*
+  name: FileSize
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_FileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.FileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.FileSize
+  nameWithType: CreateUploadSessionResponse.FileSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.MaxMaxChunkSize
+  name: MaxMaxChunkSize
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_MaxMaxChunkSize
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.MaxMaxChunkSize
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.MaxMaxChunkSize
+  nameWithType: CreateUploadSessionResponse.MaxMaxChunkSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.MaxMaxChunkSize*
+  name: MaxMaxChunkSize
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_MaxMaxChunkSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.MaxMaxChunkSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.MaxMaxChunkSize
+  nameWithType: CreateUploadSessionResponse.MaxMaxChunkSize
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionId
+  name: SessionId
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_SessionId
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionId
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionId
+  nameWithType: CreateUploadSessionResponse.SessionId
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionId*
+  name: SessionId
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_SessionId_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionId
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionId
+  nameWithType: CreateUploadSessionResponse.SessionId
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionStartDate
+  name: SessionStartDate
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_SessionStartDate
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionStartDate
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionStartDate
+  nameWithType: CreateUploadSessionResponse.SessionStartDate
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionStartDate*
+  name: SessionStartDate
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_SessionStartDate_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionStartDate
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.SessionStartDate
+  nameWithType: CreateUploadSessionResponse.SessionStartDate
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.TotalChunksToUpload
+  name: TotalChunksToUpload
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_TotalChunksToUpload
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.TotalChunksToUpload
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.TotalChunksToUpload
+  nameWithType: CreateUploadSessionResponse.TotalChunksToUpload
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.TotalChunksToUpload*
+  name: TotalChunksToUpload
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_TotalChunksToUpload_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.TotalChunksToUpload
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.TotalChunksToUpload
+  nameWithType: CreateUploadSessionResponse.TotalChunksToUpload
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.UploadStatus
+  name: UploadStatus
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_UploadStatus
+  commentId: P:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.UploadStatus
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.UploadStatus
+  nameWithType: CreateUploadSessionResponse.UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.UploadStatus*
+  name: UploadStatus
+  href: api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html#AdvanceFileUpload_Application_Shared_CreateUploadSessionResponse_UploadStatus_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.UploadStatus
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.UploadStatus
+  nameWithType: CreateUploadSessionResponse.UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService
+  name: FileOperationService
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html
+  commentId: T:AdvanceFileUpload.Application.Shared.FileOperationService
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService
+  nameWithType: FileOperationService
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  name: ConcatenateChunksAsync(List<string>, string, CancellationToken)
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html#AdvanceFileUpload_Application_Shared_FileOperationService_ConcatenateChunksAsync_System_Collections_Generic_List_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: ConcatenateChunksAsync(List(Of String), String, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List<string>, string, System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List(Of String), String, System.Threading.CancellationToken)
+  nameWithType: FileOperationService.ConcatenateChunksAsync(List<string>, string, CancellationToken)
+  nameWithType.vb: FileOperationService.ConcatenateChunksAsync(List(Of String), String, CancellationToken)
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync*
+  name: ConcatenateChunksAsync
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html#AdvanceFileUpload_Application_Shared_FileOperationService_ConcatenateChunksAsync_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService.ConcatenateChunksAsync
+  nameWithType: FileOperationService.ConcatenateChunksAsync
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  name: SaveFileAsync(string, byte[], string, CancellationToken)
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html#AdvanceFileUpload_Application_Shared_FileOperationService_SaveFileAsync_System_String_System_Byte___System_String_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  name.vb: SaveFileAsync(String, Byte(), String, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync(string, byte[], string, System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync(String, Byte(), String, System.Threading.CancellationToken)
+  nameWithType: FileOperationService.SaveFileAsync(string, byte[], string, CancellationToken)
+  nameWithType.vb: FileOperationService.SaveFileAsync(String, Byte(), String, CancellationToken)
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync*
+  name: SaveFileAsync
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html#AdvanceFileUpload_Application_Shared_FileOperationService_SaveFileAsync_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService.SaveFileAsync
+  nameWithType: FileOperationService.SaveFileAsync
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  name: SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html#AdvanceFileUpload_Application_Shared_FileOperationService_SplitFileIntoChunksAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  name.vb: SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync(string, long, string, System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync(String, Long, String, System.Threading.CancellationToken)
+  nameWithType: FileOperationService.SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  nameWithType.vb: FileOperationService.SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+- uid: AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync*
+  name: SplitFileIntoChunksAsync
+  href: api/AdvanceFileUpload.Application.Shared.FileOperationService.html#AdvanceFileUpload_Application_Shared_FileOperationService_SplitFileIntoChunksAsync_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.FileOperationService.SplitFileIntoChunksAsync
+  nameWithType: FileOperationService.SplitFileIntoChunksAsync
+- uid: AdvanceFileUpload.Application.Shared.FileValidator
+  name: FileValidator
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html
+  commentId: T:AdvanceFileUpload.Application.Shared.FileValidator
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator
+  nameWithType: FileValidator
+- uid: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension(System.String,System.String[])
+  name: ValidateFileExtension(string, string[])
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html#AdvanceFileUpload_Application_Shared_FileValidator_ValidateFileExtension_System_String_System_String___
+  commentId: M:AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension(System.String,System.String[])
+  name.vb: ValidateFileExtension(String, String())
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension(string, string[])
+  fullName.vb: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension(String, String())
+  nameWithType: FileValidator.ValidateFileExtension(string, string[])
+  nameWithType.vb: FileValidator.ValidateFileExtension(String, String())
+- uid: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension*
+  name: ValidateFileExtension
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html#AdvanceFileUpload_Application_Shared_FileValidator_ValidateFileExtension_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileExtension
+  nameWithType: FileValidator.ValidateFileExtension
+- uid: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName(System.String)
+  name: ValidateFileName(string)
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html#AdvanceFileUpload_Application_Shared_FileValidator_ValidateFileName_System_String_
+  commentId: M:AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName(System.String)
+  name.vb: ValidateFileName(String)
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName(string)
+  fullName.vb: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName(String)
+  nameWithType: FileValidator.ValidateFileName(string)
+  nameWithType.vb: FileValidator.ValidateFileName(String)
+- uid: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName*
+  name: ValidateFileName
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html#AdvanceFileUpload_Application_Shared_FileValidator_ValidateFileName_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileName
+  nameWithType: FileValidator.ValidateFileName
+- uid: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize(System.Int64,System.Int64)
+  name: ValidateFileSize(long, long)
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html#AdvanceFileUpload_Application_Shared_FileValidator_ValidateFileSize_System_Int64_System_Int64_
+  commentId: M:AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize(System.Int64,System.Int64)
+  name.vb: ValidateFileSize(Long, Long)
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize(long, long)
+  fullName.vb: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize(Long, Long)
+  nameWithType: FileValidator.ValidateFileSize(long, long)
+  nameWithType.vb: FileValidator.ValidateFileSize(Long, Long)
+- uid: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize*
+  name: ValidateFileSize
+  href: api/AdvanceFileUpload.Application.Shared.FileValidator.html#AdvanceFileUpload_Application_Shared_FileValidator_ValidateFileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.FileValidator.ValidateFileSize
+  nameWithType: FileValidator.ValidateFileSize
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator
+  name: IChunkValidator
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html
+  commentId: T:AdvanceFileUpload.Application.Shared.IChunkValidator
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator
+  nameWithType: IChunkValidator
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData(System.Byte[],System.Int64)
+  name: ValidateChunkData(byte[], long)
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html#AdvanceFileUpload_Application_Shared_IChunkValidator_ValidateChunkData_System_Byte___System_Int64_
+  commentId: M:AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData(System.Byte[],System.Int64)
+  name.vb: ValidateChunkData(Byte(), Long)
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData(byte[], long)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData(Byte(), Long)
+  nameWithType: IChunkValidator.ValidateChunkData(byte[], long)
+  nameWithType.vb: IChunkValidator.ValidateChunkData(Byte(), Long)
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData*
+  name: ValidateChunkData
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html#AdvanceFileUpload_Application_Shared_IChunkValidator_ValidateChunkData_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkData
+  nameWithType: IChunkValidator.ValidateChunkData
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex(System.Int32)
+  name: ValidateChunkIndex(int)
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html#AdvanceFileUpload_Application_Shared_IChunkValidator_ValidateChunkIndex_System_Int32_
+  commentId: M:AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex(System.Int32)
+  name.vb: ValidateChunkIndex(Integer)
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex(int)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex(Integer)
+  nameWithType: IChunkValidator.ValidateChunkIndex(int)
+  nameWithType.vb: IChunkValidator.ValidateChunkIndex(Integer)
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex*
+  name: ValidateChunkIndex
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html#AdvanceFileUpload_Application_Shared_IChunkValidator_ValidateChunkIndex_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkIndex
+  nameWithType: IChunkValidator.ValidateChunkIndex
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize(System.Int64,System.Int64)
+  name: ValidateChunkSize(long, long)
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html#AdvanceFileUpload_Application_Shared_IChunkValidator_ValidateChunkSize_System_Int64_System_Int64_
+  commentId: M:AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize(System.Int64,System.Int64)
+  name.vb: ValidateChunkSize(Long, Long)
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize(long, long)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize(Long, Long)
+  nameWithType: IChunkValidator.ValidateChunkSize(long, long)
+  nameWithType.vb: IChunkValidator.ValidateChunkSize(Long, Long)
+- uid: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize*
+  name: ValidateChunkSize
+  href: api/AdvanceFileUpload.Application.Shared.IChunkValidator.html#AdvanceFileUpload_Application_Shared_IChunkValidator_ValidateChunkSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator.ValidateChunkSize
+  nameWithType: IChunkValidator.ValidateChunkSize
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService
+  name: IFileOperationService
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html
+  commentId: T:AdvanceFileUpload.Application.Shared.IFileOperationService
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService
+  nameWithType: IFileOperationService
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  name: ConcatenateChunksAsync(List<string>, string, CancellationToken)
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html#AdvanceFileUpload_Application_Shared_IFileOperationService_ConcatenateChunksAsync_System_Collections_Generic_List_System_String__System_String_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  name.vb: ConcatenateChunksAsync(List(Of String), String, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List<string>, string, System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync(System.Collections.Generic.List(Of String), String, System.Threading.CancellationToken)
+  nameWithType: IFileOperationService.ConcatenateChunksAsync(List<string>, string, CancellationToken)
+  nameWithType.vb: IFileOperationService.ConcatenateChunksAsync(List(Of String), String, CancellationToken)
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync*
+  name: ConcatenateChunksAsync
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html#AdvanceFileUpload_Application_Shared_IFileOperationService_ConcatenateChunksAsync_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService.ConcatenateChunksAsync
+  nameWithType: IFileOperationService.ConcatenateChunksAsync
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  name: SaveFileAsync(string, byte[], string, CancellationToken)
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html#AdvanceFileUpload_Application_Shared_IFileOperationService_SaveFileAsync_System_String_System_Byte___System_String_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  name.vb: SaveFileAsync(String, Byte(), String, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync(string, byte[], string, System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync(String, Byte(), String, System.Threading.CancellationToken)
+  nameWithType: IFileOperationService.SaveFileAsync(string, byte[], string, CancellationToken)
+  nameWithType.vb: IFileOperationService.SaveFileAsync(String, Byte(), String, CancellationToken)
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync*
+  name: SaveFileAsync
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html#AdvanceFileUpload_Application_Shared_IFileOperationService_SaveFileAsync_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService.SaveFileAsync
+  nameWithType: IFileOperationService.SaveFileAsync
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  name: SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html#AdvanceFileUpload_Application_Shared_IFileOperationService_SplitFileIntoChunksAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  name.vb: SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync(string, long, string, System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync(String, Long, String, System.Threading.CancellationToken)
+  nameWithType: IFileOperationService.SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  nameWithType.vb: IFileOperationService.SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+- uid: AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync*
+  name: SplitFileIntoChunksAsync
+  href: api/AdvanceFileUpload.Application.Shared.IFileOperationService.html#AdvanceFileUpload_Application_Shared_IFileOperationService_SplitFileIntoChunksAsync_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService.SplitFileIntoChunksAsync
+  nameWithType: IFileOperationService.SplitFileIntoChunksAsync
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator
+  name: IFileValidator
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html
+  commentId: T:AdvanceFileUpload.Application.Shared.IFileValidator
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator
+  nameWithType: IFileValidator
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension(System.String,System.String[])
+  name: ValidateFileExtension(string, string[])
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html#AdvanceFileUpload_Application_Shared_IFileValidator_ValidateFileExtension_System_String_System_String___
+  commentId: M:AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension(System.String,System.String[])
+  name.vb: ValidateFileExtension(String, String())
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension(string, string[])
+  fullName.vb: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension(String, String())
+  nameWithType: IFileValidator.ValidateFileExtension(string, string[])
+  nameWithType.vb: IFileValidator.ValidateFileExtension(String, String())
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension*
+  name: ValidateFileExtension
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html#AdvanceFileUpload_Application_Shared_IFileValidator_ValidateFileExtension_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileExtension
+  nameWithType: IFileValidator.ValidateFileExtension
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName(System.String)
+  name: ValidateFileName(string)
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html#AdvanceFileUpload_Application_Shared_IFileValidator_ValidateFileName_System_String_
+  commentId: M:AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName(System.String)
+  name.vb: ValidateFileName(String)
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName(string)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName(String)
+  nameWithType: IFileValidator.ValidateFileName(string)
+  nameWithType.vb: IFileValidator.ValidateFileName(String)
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName*
+  name: ValidateFileName
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html#AdvanceFileUpload_Application_Shared_IFileValidator_ValidateFileName_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileName
+  nameWithType: IFileValidator.ValidateFileName
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize(System.Int64,System.Int64)
+  name: ValidateFileSize(long, long)
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html#AdvanceFileUpload_Application_Shared_IFileValidator_ValidateFileSize_System_Int64_System_Int64_
+  commentId: M:AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize(System.Int64,System.Int64)
+  name.vb: ValidateFileSize(Long, Long)
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize(long, long)
+  fullName.vb: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize(Long, Long)
+  nameWithType: IFileValidator.ValidateFileSize(long, long)
+  nameWithType.vb: IFileValidator.ValidateFileSize(Long, Long)
+- uid: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize*
+  name: ValidateFileSize
+  href: api/AdvanceFileUpload.Application.Shared.IFileValidator.html#AdvanceFileUpload_Application_Shared_IFileValidator_ValidateFileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.IFileValidator.ValidateFileSize
+  nameWithType: IFileValidator.ValidateFileSize
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest
+  name: UploadChunkRequest
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html
+  commentId: T:AdvanceFileUpload.Application.Shared.UploadChunkRequest
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest
+  nameWithType: UploadChunkRequest
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkData
+  name: ChunkData
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html#AdvanceFileUpload_Application_Shared_UploadChunkRequest_ChunkData
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkData
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkData
+  nameWithType: UploadChunkRequest.ChunkData
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkData*
+  name: ChunkData
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html#AdvanceFileUpload_Application_Shared_UploadChunkRequest_ChunkData_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkData
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkData
+  nameWithType: UploadChunkRequest.ChunkData
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkIndex
+  name: ChunkIndex
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html#AdvanceFileUpload_Application_Shared_UploadChunkRequest_ChunkIndex
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkIndex
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkIndex
+  nameWithType: UploadChunkRequest.ChunkIndex
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkIndex*
+  name: ChunkIndex
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html#AdvanceFileUpload_Application_Shared_UploadChunkRequest_ChunkIndex_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkIndex
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest.ChunkIndex
+  nameWithType: UploadChunkRequest.ChunkIndex
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest.SessionId
+  name: SessionId
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html#AdvanceFileUpload_Application_Shared_UploadChunkRequest_SessionId
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadChunkRequest.SessionId
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest.SessionId
+  nameWithType: UploadChunkRequest.SessionId
+- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest.SessionId*
+  name: SessionId
+  href: api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html#AdvanceFileUpload_Application_Shared_UploadChunkRequest_SessionId_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadChunkRequest.SessionId
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest.SessionId
+  nameWithType: UploadChunkRequest.SessionId
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  name: UploadSessionStatusResponse
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html
+  commentId: T:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  nameWithType: UploadSessionStatusResponse
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  name: FileSize
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_FileSize
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  nameWithType: UploadSessionStatusResponse.FileSize
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize*
+  name: FileSize
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_FileSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.FileSize
+  nameWithType: UploadSessionStatusResponse.FileSize
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  name: MaxMaxChunkSize
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_MaxMaxChunkSize
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  nameWithType: UploadSessionStatusResponse.MaxMaxChunkSize
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize*
+  name: MaxMaxChunkSize
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_MaxMaxChunkSize_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.MaxMaxChunkSize
+  nameWithType: UploadSessionStatusResponse.MaxMaxChunkSize
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  name: ProgressPercentage
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_ProgressPercentage
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  nameWithType: UploadSessionStatusResponse.ProgressPercentage
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage*
+  name: ProgressPercentage
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_ProgressPercentage_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.ProgressPercentage
+  nameWithType: UploadSessionStatusResponse.ProgressPercentage
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  name: RemainChunks
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_RemainChunks
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  nameWithType: UploadSessionStatusResponse.RemainChunks
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks*
+  name: RemainChunks
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_RemainChunks_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.RemainChunks
+  nameWithType: UploadSessionStatusResponse.RemainChunks
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  name: SessionEndDate
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionEndDate
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  nameWithType: UploadSessionStatusResponse.SessionEndDate
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate*
+  name: SessionEndDate
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionEndDate_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionEndDate
+  nameWithType: UploadSessionStatusResponse.SessionEndDate
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  name: SessionId
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionId
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  nameWithType: UploadSessionStatusResponse.SessionId
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId*
+  name: SessionId
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionId_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionId
+  nameWithType: UploadSessionStatusResponse.SessionId
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  name: SessionStartDate
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionStartDate
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  nameWithType: UploadSessionStatusResponse.SessionStartDate
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate*
+  name: SessionStartDate
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_SessionStartDate_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.SessionStartDate
+  nameWithType: UploadSessionStatusResponse.SessionStartDate
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  name: TotalChunksToUpload
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_TotalChunksToUpload
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  nameWithType: UploadSessionStatusResponse.TotalChunksToUpload
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload*
+  name: TotalChunksToUpload
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_TotalChunksToUpload_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalChunksToUpload
+  nameWithType: UploadSessionStatusResponse.TotalChunksToUpload
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  name: TotalUploadedChunks
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_TotalUploadedChunks
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  nameWithType: UploadSessionStatusResponse.TotalUploadedChunks
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks*
+  name: TotalUploadedChunks
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_TotalUploadedChunks_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.TotalUploadedChunks
+  nameWithType: UploadSessionStatusResponse.TotalUploadedChunks
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  name: UploadStatus
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_UploadStatus
+  commentId: P:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  nameWithType: UploadSessionStatusResponse.UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus*
+  name: UploadStatus
+  href: api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html#AdvanceFileUpload_Application_Shared_UploadSessionStatusResponse_UploadStatus_
+  commentId: Overload:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.UploadStatus
+  nameWithType: UploadSessionStatusResponse.UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.UploadStatus
+  name: UploadStatus
+  href: api/AdvanceFileUpload.Application.Shared.UploadStatus.html
+  commentId: T:AdvanceFileUpload.Application.Shared.UploadStatus
+  fullName: AdvanceFileUpload.Application.Shared.UploadStatus
+  nameWithType: UploadStatus
+- uid: AdvanceFileUpload.Application.Shared.UploadStatus.Completed
+  name: Completed
+  href: api/AdvanceFileUpload.Application.Shared.UploadStatus.html#AdvanceFileUpload_Application_Shared_UploadStatus_Completed
+  commentId: F:AdvanceFileUpload.Application.Shared.UploadStatus.Completed
+  fullName: AdvanceFileUpload.Application.Shared.UploadStatus.Completed
+  nameWithType: UploadStatus.Completed
+- uid: AdvanceFileUpload.Application.Shared.UploadStatus.Failed
+  name: Failed
+  href: api/AdvanceFileUpload.Application.Shared.UploadStatus.html#AdvanceFileUpload_Application_Shared_UploadStatus_Failed
+  commentId: F:AdvanceFileUpload.Application.Shared.UploadStatus.Failed
+  fullName: AdvanceFileUpload.Application.Shared.UploadStatus.Failed
+  nameWithType: UploadStatus.Failed
+- uid: AdvanceFileUpload.Application.Shared.UploadStatus.InProgress
+  name: InProgress
+  href: api/AdvanceFileUpload.Application.Shared.UploadStatus.html#AdvanceFileUpload_Application_Shared_UploadStatus_InProgress
+  commentId: F:AdvanceFileUpload.Application.Shared.UploadStatus.InProgress
+  fullName: AdvanceFileUpload.Application.Shared.UploadStatus.InProgress
+  nameWithType: UploadStatus.InProgress
+- uid: AdvanceFileUpload.Application.Shared.UploadStatus.Pending
+  name: Pending
+  href: api/AdvanceFileUpload.Application.Shared.UploadStatus.html#AdvanceFileUpload_Application_Shared_UploadStatus_Pending
+  commentId: F:AdvanceFileUpload.Application.Shared.UploadStatus.Pending
+  fullName: AdvanceFileUpload.Application.Shared.UploadStatus.Pending
+  nameWithType: UploadStatus.Pending
+- uid: AdvanceFileUpload.Application.UploadManger
+  name: UploadManger
+  href: api/AdvanceFileUpload.Application.UploadManger.html
+  commentId: T:AdvanceFileUpload.Application.UploadManger
+  fullName: AdvanceFileUpload.Application.UploadManger
+  nameWithType: UploadManger
+- uid: AdvanceFileUpload.Application.UploadManger.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Domain.Core.IDomainEventPublisher,AdvanceFileUpload.Application.Shared.IFileValidator,AdvanceFileUpload.Application.Shared.IChunkValidator,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Application.Shared.IFileOperationService,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.UploadManger})
+  name: UploadManger(IRepository<FileUploadSession>, IDomainEventPublisher, IFileValidator, IChunkValidator, IOptions<UploadSetting>, IFileOperationService, ILogger<UploadManger>)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger__ctor_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__AdvanceFileUpload_Domain_Core_IDomainEventPublisher_AdvanceFileUpload_Application_Shared_IFileValidator_AdvanceFileUpload_Application_Shared_IChunkValidator_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__AdvanceFileUpload_Application_Shared_IFileOperationService_Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_UploadManger__
+  commentId: M:AdvanceFileUpload.Application.UploadManger.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Domain.Core.IDomainEventPublisher,AdvanceFileUpload.Application.Shared.IFileValidator,AdvanceFileUpload.Application.Shared.IChunkValidator,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Application.Shared.IFileOperationService,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.UploadManger})
+  name.vb: New(IRepository(Of FileUploadSession), IDomainEventPublisher, IFileValidator, IChunkValidator, IOptions(Of UploadSetting), IFileOperationService, ILogger(Of UploadManger))
+  fullName: AdvanceFileUpload.Application.UploadManger.UploadManger(AdvanceFileUpload.Domain.Core.IRepository<AdvanceFileUpload.Domain.FileUploadSession>, AdvanceFileUpload.Domain.Core.IDomainEventPublisher, AdvanceFileUpload.Application.Shared.IFileValidator, AdvanceFileUpload.Application.Shared.IChunkValidator, Microsoft.Extensions.Options.IOptions<AdvanceFileUpload.Application.Settings.UploadSetting>, AdvanceFileUpload.Application.Shared.IFileOperationService, Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.UploadManger>)
+  fullName.vb: AdvanceFileUpload.Application.UploadManger.New(AdvanceFileUpload.Domain.Core.IRepository(Of AdvanceFileUpload.Domain.FileUploadSession), AdvanceFileUpload.Domain.Core.IDomainEventPublisher, AdvanceFileUpload.Application.Shared.IFileValidator, AdvanceFileUpload.Application.Shared.IChunkValidator, Microsoft.Extensions.Options.IOptions(Of AdvanceFileUpload.Application.Settings.UploadSetting), AdvanceFileUpload.Application.Shared.IFileOperationService, Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.UploadManger))
+  nameWithType: UploadManger.UploadManger(IRepository<FileUploadSession>, IDomainEventPublisher, IFileValidator, IChunkValidator, IOptions<UploadSetting>, IFileOperationService, ILogger<UploadManger>)
+  nameWithType.vb: UploadManger.New(IRepository(Of FileUploadSession), IDomainEventPublisher, IFileValidator, IChunkValidator, IOptions(Of UploadSetting), IFileOperationService, ILogger(Of UploadManger))
+- uid: AdvanceFileUpload.Application.UploadManger.#ctor*
+  name: UploadManger
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger__ctor_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AdvanceFileUpload.Application.UploadManger.UploadManger
+  fullName.vb: AdvanceFileUpload.Application.UploadManger.New
+  nameWithType: UploadManger.UploadManger
+  nameWithType.vb: UploadManger.New
+- uid: AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  name: CancelUploadSessionAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_CancelUploadSessionAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: UploadManger.CancelUploadSessionAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync*
+  name: CancelUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_CancelUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync
+  nameWithType: UploadManger.CancelUploadSessionAsync
+- uid: AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  name: CompleteUploadSessionAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_CompleteUploadSessionAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: UploadManger.CompleteUploadSessionAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync*
+  name: CompleteUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_CompleteUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync
+  nameWithType: UploadManger.CompleteUploadSessionAsync
+- uid: AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  name: CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_CreateUploadSessionAsync_AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest, System.Threading.CancellationToken)
+  nameWithType: UploadManger.CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
+- uid: AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync*
+  name: CreateUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_CreateUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync
+  nameWithType: UploadManger.CreateUploadSessionAsync
+- uid: AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
+  name: GetUploadSessionStatusAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_GetUploadSessionStatusAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: UploadManger.GetUploadSessionStatusAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync*
+  name: GetUploadSessionStatusAsync
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_GetUploadSessionStatusAsync_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync
+  nameWithType: UploadManger.GetUploadSessionStatusAsync
+- uid: AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  name: PauseUploadSessionAsync(Guid, CancellationToken)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_PauseUploadSessionAsync_System_Guid_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync(System.Guid, System.Threading.CancellationToken)
+  nameWithType: UploadManger.PauseUploadSessionAsync(Guid, CancellationToken)
+- uid: AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync*
+  name: PauseUploadSessionAsync
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_PauseUploadSessionAsync_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync
+  nameWithType: UploadManger.PauseUploadSessionAsync
+- uid: AdvanceFileUpload.Application.UploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
+  name: UploadChunkAsync(UploadChunkRequest, CancellationToken)
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_UploadChunkAsync_AdvanceFileUpload_Application_Shared_UploadChunkRequest_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Application.UploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.UploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest, System.Threading.CancellationToken)
+  nameWithType: UploadManger.UploadChunkAsync(UploadChunkRequest, CancellationToken)
+- uid: AdvanceFileUpload.Application.UploadManger.UploadChunkAsync*
+  name: UploadChunkAsync
+  href: api/AdvanceFileUpload.Application.UploadManger.html#AdvanceFileUpload_Application_UploadManger_UploadChunkAsync_
+  commentId: Overload:AdvanceFileUpload.Application.UploadManger.UploadChunkAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Application.UploadManger.UploadChunkAsync
+  nameWithType: UploadManger.UploadChunkAsync
 - uid: AdvanceFileUpload.Domain
   name: AdvanceFileUpload.Domain
   href: api/AdvanceFileUpload.Domain.html
@@ -537,6 +1609,23 @@ references:
   fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).RemoveAsync
   nameWithType: IRepository<TEntity>.RemoveAsync
   nameWithType.vb: IRepository(Of TEntity).RemoveAsync
+- uid: AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync(System.Threading.CancellationToken)
+  name: SaveChangesAsync(CancellationToken)
+  href: api/AdvanceFileUpload.Domain.Core.IRepository-1.html#AdvanceFileUpload_Domain_Core_IRepository_1_SaveChangesAsync_System_Threading_CancellationToken_
+  commentId: M:AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync(System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>.SaveChangesAsync(System.Threading.CancellationToken)
+  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).SaveChangesAsync(System.Threading.CancellationToken)
+  nameWithType: IRepository<TEntity>.SaveChangesAsync(CancellationToken)
+  nameWithType.vb: IRepository(Of TEntity).SaveChangesAsync(CancellationToken)
+- uid: AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync*
+  name: SaveChangesAsync
+  href: api/AdvanceFileUpload.Domain.Core.IRepository-1.html#AdvanceFileUpload_Domain_Core_IRepository_1_SaveChangesAsync_
+  commentId: Overload:AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>.SaveChangesAsync
+  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).SaveChangesAsync
+  nameWithType: IRepository<TEntity>.SaveChangesAsync
+  nameWithType.vb: IRepository(Of TEntity).SaveChangesAsync
 - uid: AdvanceFileUpload.Domain.Core.IRepository`1.UpdateAsync(`0,System.Threading.CancellationToken)
   name: UpdateAsync(TEntity, CancellationToken)
   href: api/AdvanceFileUpload.Domain.Core.IRepository-1.html#AdvanceFileUpload_Domain_Core_IRepository_1_UpdateAsync__0_System_Threading_CancellationToken_

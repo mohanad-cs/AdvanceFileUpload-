@@ -1,0 +1,304 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting
+  commentId: T:AdvanceFileUpload.Application.Settings.IUploadSetting
+  id: IUploadSetting
+  parent: AdvanceFileUpload.Application.Settings
+  children:
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  langs:
+  - csharp
+  - vb
+  name: IUploadSetting
+  nameWithType: IUploadSetting
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IUploadSetting
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Interface for upload settings.
+  example: []
+  syntax:
+    content: public interface IUploadSetting
+    content.vb: Public Interface IUploadSetting
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  id: AllowedExtensions
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: AllowedExtensions
+  nameWithType: IUploadSetting.AllowedExtensions
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AllowedExtensions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 13
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets the allowed file extensions.
+  example:
+  - 'For example: new string[] { ".jpg", ".png", ".pdf" }'
+  syntax:
+    content: string[] AllowedExtensions { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: Property AllowedExtensions As String()
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions*
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  id: MaxChunkSize
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: MaxChunkSize
+  nameWithType: IUploadSetting.MaxChunkSize
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxChunkSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets the maximum chunk size for file uploads.
+  example: []
+  syntax:
+    content: long MaxChunkSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Property MaxChunkSize As Long
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize*
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  id: MaxFileSize
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: MaxFileSize
+  nameWithType: IUploadSetting.MaxFileSize
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxFileSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 23
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets the maximum file size for uploads.
+  example: []
+  syntax:
+    content: long MaxFileSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Property MaxFileSize As Long
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize*
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  id: SavingDirectory
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: SavingDirectory
+  nameWithType: IUploadSetting.SavingDirectory
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SavingDirectory
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 28
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets the directory where files will be saved.
+  example: []
+  syntax:
+    content: string SavingDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property SavingDirectory As String
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory*
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  id: TempDirectory
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: TempDirectory
+  nameWithType: IUploadSetting.TempDirectory
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: TempDirectory
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 32
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets the directory where temporary files will be saved.
+  example: []
+  syntax:
+    content: string TempDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Property TempDirectory As String
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory*
+references:
+- uid: AdvanceFileUpload.Application.Settings
+  commentId: N:AdvanceFileUpload.Application.Settings
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Settings
+  nameWithType: AdvanceFileUpload.Application.Settings
+  fullName: AdvanceFileUpload.Application.Settings
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Settings
+    name: Settings
+    href: AdvanceFileUpload.Application.Settings.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Settings
+    name: Settings
+    href: AdvanceFileUpload.Application.Settings.html
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_AllowedExtensions
+  name: AllowedExtensions
+  nameWithType: IUploadSetting.AllowedExtensions
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_MaxChunkSize
+  name: MaxChunkSize
+  nameWithType: IUploadSetting.MaxChunkSize
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_MaxFileSize
+  name: MaxFileSize
+  nameWithType: IUploadSetting.MaxFileSize
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_SavingDirectory
+  name: SavingDirectory
+  nameWithType: IUploadSetting.SavingDirectory
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_TempDirectory
+  name: TempDirectory
+  nameWithType: IUploadSetting.TempDirectory
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory

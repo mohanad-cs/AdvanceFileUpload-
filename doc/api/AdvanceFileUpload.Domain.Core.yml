@@ -58,6 +58,7 @@ references:
   fullName: AdvanceFileUpload.Domain.Core.IDomainEvent
 - uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher
   commentId: T:AdvanceFileUpload.Domain.Core.IDomainEventPublisher
+  parent: AdvanceFileUpload.Domain.Core
   href: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.html
   name: IDomainEventPublisher
   nameWithType: IDomainEventPublisher
