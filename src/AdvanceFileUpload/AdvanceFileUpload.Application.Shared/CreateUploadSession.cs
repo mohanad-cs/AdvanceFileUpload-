@@ -138,7 +138,7 @@ namespace AdvanceFileUpload.Application.Shared
         /// <summary>
         /// Gets the data of the chunk being uploaded.
         /// </summary>
-        public byte[] ChunkData { get; init; }
+        public required byte[] ChunkData { get; init; }
     }
 
 

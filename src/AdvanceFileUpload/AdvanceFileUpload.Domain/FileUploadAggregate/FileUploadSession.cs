@@ -262,6 +262,10 @@ namespace AdvanceFileUpload.Domain
             {
                 throw new CompletingFileUploadException("The Upload Session already completed");
             }
+            if (IsCanceled())
+            {
+                throw new CompletingFileUploadException("The Upload Session is been Canceled");
+            }
             if (!IsAllChunkUploaded())
             {
                 throw new CompletingFileUploadException("All chunks must be uploaded before completing the session.");
