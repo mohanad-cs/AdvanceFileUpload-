@@ -1,10 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AdvanceFileUpload.Application.Shared;
-using AdvanceFileUpload.Application.Exception;
-
+﻿using AdvanceFileUpload.Application.Request;
+using AdvanceFileUpload.Application.Response;
 namespace AdvanceFileUpload.Application
 {
     /// <summary>

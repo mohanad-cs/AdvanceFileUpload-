@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Application.Shared
+﻿namespace AdvanceFileUpload.Application.Validators
 {
     /// <summary>
     /// Represents a chunk validator.

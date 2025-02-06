@@ -1,12 +1,7 @@
 ﻿using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Domain.Events;
-using AdvanceFileUpload.Domain.Exception;
+using AdvanceFileUpload.Domain.Exceptions;
 using AdvanceFileUpload.Domain.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdvanceFileUpload.Domain
 {
@@ -164,7 +159,7 @@ namespace AdvanceFileUpload.Domain
         /// Gets the remaining chunks to be uploaded.
         /// </summary>
         /// <returns>
-        ///  <see cref="List{int}"/> of the remaining chunks to be uploaded.
+        ///  <see cref="List{T}"/> of the remaining chunks to be uploaded.
         /// </returns>
         public List<int> GetRemainChunks()
         {

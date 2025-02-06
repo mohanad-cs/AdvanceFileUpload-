@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Application.Shared
+﻿namespace AdvanceFileUpload.Application.Validators
 {
     /// <summary>
     /// Represents a file validator.
@@ -17,14 +17,14 @@
         ///<inheritdoc/>
         public bool ValidateFileSize(long fileSize, long maxFileSize)
         {
-            if (fileSize <= 0 || fileSize>maxFileSize)
+            if (fileSize <= 0 || fileSize > maxFileSize)
             {
                 return false;
             }
             return true;
         }
         ///<inheritdoc/>
-        public bool ValidateFileExtension(string fileExtension , string[] allowedExtensions)
+        public bool ValidateFileExtension(string fileExtension, string[] allowedExtensions)
         {
             if (string.IsNullOrWhiteSpace(fileExtension))
             {

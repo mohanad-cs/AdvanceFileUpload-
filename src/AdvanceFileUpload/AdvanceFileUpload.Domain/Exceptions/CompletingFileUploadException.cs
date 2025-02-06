@@ -1,11 +1,6 @@
 ﻿using AdvanceFileUpload.Domain.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AdvanceFileUpload.Domain.Exception
+namespace AdvanceFileUpload.Domain.Exceptions
 {
     /// <summary>
     /// Represents errors that occur during the completion of a file upload.

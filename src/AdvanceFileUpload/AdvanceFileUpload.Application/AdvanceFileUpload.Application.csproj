@@ -8,9 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\" />
-    <Folder Include="Behaviors\" />
-    <Folder Include="EventsHandler\" />
+    <Compile Remove="Behaviors\**" />
+    <Compile Remove="Commands\**" />
+    <Compile Remove="EventsHandler\**" />
+    <EmbeddedResource Remove="Behaviors\**" />
+    <EmbeddedResource Remove="Commands\**" />
+    <EmbeddedResource Remove="EventsHandler\**" />
+    <None Remove="Behaviors\**" />
+    <None Remove="Commands\**" />
+    <None Remove="EventsHandler\**" />
   </ItemGroup>
 
   <ItemGroup>

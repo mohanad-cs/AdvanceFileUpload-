@@ -2,8 +2,8 @@
 
 namespace AdvanceFileUpload.Domain.Core
 {
-    
-    //<summary>
+
+    /// <summary>
     /// Represents a domain event within the system.
     /// </summary>
     public interface IDomainEvent : INotification

@@ -1,23 +1,23 @@
-﻿namespace AdvanceFileUpload.Application.Shared
+﻿namespace AdvanceFileUpload.Application.FileProcessing
 {
     /// <summary>
     /// Provides methods for file operations such as concatenating file chunks, saving files, and splitting files into chunks.
     /// </summary>
-    public class FileOperationService : IFileOperationService
+    public class FileProcessor : IFileProcessor
     {
         /// <inheritdoc/>
-        public async Task SaveFileAsync(string fileName, byte[] fileData, string directory, CancellationToken cancellationToken = default)
+        public async Task SaveFileAsync(string fileName, byte[] fileData, string outputDirectory, CancellationToken cancellationToken = default)
         {
-            if (!Directory.Exists(directory))
+            if (!Directory.Exists(outputDirectory))
             {
-                Directory.CreateDirectory(directory);
+                Directory.CreateDirectory(outputDirectory);
             }
 
-            string filePath = Path.Combine(directory, fileName);
-            await File.WriteAllBytesAsync(filePath, fileData);
+            string filePath = Path.Combine(outputDirectory, fileName);
+            await File.WriteAllBytesAsync(filePath, fileData, cancellationToken);
         }
         /// <inheritdoc/>
-        public async Task<List<string>> SplitFileIntoChunksAsync(string filePath, long chunkSize, string outputDirectory , CancellationToken cancellationToken = default)
+        public async Task<List<string>> SplitFileIntoChunksAsync(string filePath, long chunkSize, string outputDirectory, CancellationToken cancellationToken = default)
         {
             if (!File.Exists(filePath))
             {
@@ -34,9 +34,9 @@
             {
                 while (sourceStream.Position < sourceStream.Length)
                 {
-                    int bytesRead = await sourceStream.ReadAsync(buffer.AsMemory(0, buffer.Length),cancellationToken);
+                    int bytesRead = await sourceStream.ReadAsync(buffer.AsMemory(0, buffer.Length), cancellationToken);
                     string chunkPath = Path.Combine(outputDirectory, $"{Path.GetFileNameWithoutExtension(filePath)}_chunk{chunkIndex}{Path.GetExtension(filePath)}");
-                    await File.WriteAllBytesAsync(chunkPath, buffer.AsMemory(0, bytesRead).ToArray(),cancellationToken);
+                    await File.WriteAllBytesAsync(chunkPath, buffer.AsMemory(0, bytesRead).ToArray(), cancellationToken);
                     chunkPaths.Add(chunkPath);
                     chunkIndex++;
                 }

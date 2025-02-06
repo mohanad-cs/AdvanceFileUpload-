@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using AdvanceFileUpload.Domain.Exception;
-using Xunit;
+using AdvanceFileUpload.Domain.Exceptions;
 
 namespace AdvanceFileUpload.Domain.Test
 {

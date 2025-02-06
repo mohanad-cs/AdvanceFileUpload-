@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdvanceFileUpload.Domain.Core
+﻿namespace AdvanceFileUpload.Domain.Core
 {
     /// <summary>
     /// Represents the base class for all entities in the domain.

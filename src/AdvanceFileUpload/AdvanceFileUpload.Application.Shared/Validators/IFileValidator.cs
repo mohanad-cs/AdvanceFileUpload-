@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Application.Shared
+﻿namespace AdvanceFileUpload.Application.Validators
 {
 
     /// <summary>
@@ -27,6 +27,6 @@
         /// <param name="fileExtension">The extension of the file to validate.</param>
         /// <param name="allowedExtensions">The allowed extensions of the file to validate.</param>
         /// <returns>True if the file extension is valid; otherwise, false.</returns>
-        bool ValidateFileExtension(string fileExtension , string[] allowedExtensions);
+        bool ValidateFileExtension(string fileExtension, string[] allowedExtensions);
     }
 }

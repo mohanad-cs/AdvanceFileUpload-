@@ -1,6 +1,6 @@
 ﻿using AdvanceFileUpload.Domain.Core;
 
-namespace AdvanceFileUpload.Domain.Exception
+namespace AdvanceFileUpload.Domain.Exceptions
 {
     /// <summary>
     /// Represents errors that occur during the uploading of file chunks.
