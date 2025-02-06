@@ -163,7 +163,7 @@ namespace AdvanceFileUpload.Domain
             ChunkFile chunkFile = new ChunkFile(this.Id, chunkIndex, chunkPath);
             _chunkFiles.Add(chunkFile);
             Status = FileUploadSessionStatus.InProgress;
-            this.AddDomainEvent(new ChunkUploadedEvent(chunkFile));
+            AddDomainEvent(new ChunkUploadedEvent(chunkFile));
         }
 
         /// <summary>
@@ -230,7 +230,7 @@ namespace AdvanceFileUpload.Domain
         /// <exception cref="CancelationFileUploadException">Thrown when the session cannot be canceled.</exception>
         public void CancelSession()
         {
-            if (Status == FileUploadSessionStatus.Completed)
+            if (IsCompleted())
             {
                 throw new CancelationFileUploadException("The Upload Session already Completed");
             }
@@ -245,11 +245,11 @@ namespace AdvanceFileUpload.Domain
         /// <exception cref="CancelationFileUploadException">Thrown when the session cannot be paused.</exception>
         public void PauseSession()
         {
-            if (Status == FileUploadSessionStatus.Completed)
+            if (IsCompleted())
             {
                 throw new CancelationFileUploadException("The Upload Session already Completed");
             }
-            if (Status == FileUploadSessionStatus.Canceled)
+            if (IsCanceled())
             {
                 throw new CancelationFileUploadException("The Upload Session already Canceled");
             }
