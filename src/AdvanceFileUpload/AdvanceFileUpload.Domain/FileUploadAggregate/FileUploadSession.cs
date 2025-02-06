@@ -76,7 +76,7 @@ namespace AdvanceFileUpload.Domain
                 {
                     return 0;
                 }
-                return (double)(TotalUploadedChunks / TotalChunksToUpload) * 100;
+                return ((double)TotalUploadedChunks / TotalChunksToUpload) * 100;
             }
         }
 
@@ -95,6 +95,13 @@ namespace AdvanceFileUpload.Domain
         /// <param name="maxChunkSize">The maximum size of each chunk.</param>
         /// <exception cref="ArgumentException">Thrown when any of the parameters are invalid.</exception>
         public FileUploadSession(string fileName, string savingDirectory, long fileSize, long maxChunkSize) : base()
+        {
+            ValidateParameters(fileName, savingDirectory, fileSize, maxChunkSize);
+            InitializeProperties(fileName, savingDirectory, fileSize, maxChunkSize);
+            AddDomainEvent(new FileUploadSessionCreatedEvent(this));
+        }
+
+        private void ValidateParameters(string fileName, string savingDirectory, long fileSize, long maxChunkSize)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
@@ -116,13 +123,17 @@ namespace AdvanceFileUpload.Domain
             {
                 throw new ArgumentException("The max chunk size must be >0.", nameof(maxChunkSize));
             }
+
+        }
+
+        private void InitializeProperties(string fileName, string savingDirectory, long fileSize, long maxChunkSize)
+        {
             FileName = fileName;
             SavingDirectory = savingDirectory;
             FileSize = fileSize;
             MaxChunkSize = maxChunkSize;
             Status = FileUploadSessionStatus.InProgress;
             SessionStartDate = DateTime.Now;
-            this.AddDomainEvent(new FileUploadSessionCreatedEvent(this));
         }
 
         /// <summary>
