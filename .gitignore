@@ -16,6 +16,10 @@
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
+# docFx
+_site
+_site_pdf
+docs/api
 
 # Build results
 [Dd]ebug/
