@@ -106,7 +106,7 @@ namespace AdvanceFileUpload.Application
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
-                throw new ApplicationException("the session Id is Not Valid");
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             if (session.Status != FileUploadSessionStatus.Completed)
             {
@@ -137,7 +137,7 @@ namespace AdvanceFileUpload.Application
             }
             if (_chunkValidator.ValidateChunkIndex(request.ChunkIndex))
             {
-                throw new ApplicationException("The Chunk Index is Not Valid");
+                throw new ApplicationException($"The Chunk Index {request.ChunkIndex} is Not Valid");
             }
             if (_chunkValidator.ValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
             {
@@ -148,7 +148,7 @@ namespace AdvanceFileUpload.Application
             var session = await _repository.GetByIdAsync(request.SessionId, cancellationToken);
             if (session is null)
             {
-                throw new ApplicationException("The Session Id is Not Valid");
+                throw new ApplicationException($"The session with the given Id {request.SessionId} is not found");
             }
             string outPutDir = Path.Combine(_uploadSetting.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk");
             await _fileProcessor.SaveFileAsync(Path.GetFileName(outPutDir), request.ChunkData, outPutDir, cancellationToken);
@@ -201,7 +201,7 @@ namespace AdvanceFileUpload.Application
         ///<inheritdoc/>
         public async Task<bool> CancelUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Canceling the file upload session");
+            _logger.LogInformation($"Canceling the file upload session id {sessionId}");
             if (sessionId == Guid.Empty)
             {
                 throw new ApplicationException("the session Id is Not Valid");
@@ -209,7 +209,7 @@ namespace AdvanceFileUpload.Application
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
-                throw new ApplicationException("The Session Id is Not Valid");
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             session.CancelSession();
             await _repository.UpdateAsync(session, cancellationToken);
@@ -224,7 +224,7 @@ namespace AdvanceFileUpload.Application
         ///<inheritdoc/>
         public async Task<bool> PauseUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Pausing the file upload session");
+            _logger.LogInformation($"Pausing the file upload session id {sessionId} ");
             if (sessionId == Guid.Empty)
             {
                 throw new ApplicationException("the session Id is Not Valid");
@@ -232,7 +232,7 @@ namespace AdvanceFileUpload.Application
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
-                throw new ApplicationException("The Session Id is Not Valid");
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             session.PauseSession();
             await _repository.UpdateAsync(session, cancellationToken);
