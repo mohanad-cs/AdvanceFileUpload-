@@ -62,15 +62,15 @@ namespace AdvanceFileUpload.Application
                 _logger.LogWarning("The SavingDirectory have not been Configured ");
                 throw new ApplicationException("The SavingDirectory have not been Configured ");
             }
-            if (_fileValidator.ValidateFileName(request.FileName))
+            if (!_fileValidator.IsValidateFileName(request.FileName))
             {
                 throw new ApplicationException("The File Name is not valid");
             }
-            if (_fileValidator.ValidateFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions))
+            if (!_fileValidator.IsValidateFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions))
             {
                 throw new ApplicationException("The File Extension is not allowed");
             }
-            if (_fileValidator.ValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize))
+            if (!_fileValidator.IsValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize))
             {
                 throw new ApplicationException("The File Size is greater than the Maximum File Size");
             }
@@ -108,10 +108,7 @@ namespace AdvanceFileUpload.Application
             {
                 throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
-            if (session.Status != FileUploadSessionStatus.Completed)
-            {
-                throw new ApplicationException("The Session is Not Completed");
-            }
+            
             session.CompleteSession();
             await _repository.UpdateAsync(session);
             await _repository.SaveChangesAsync(cancellationToken);
@@ -135,11 +132,11 @@ namespace AdvanceFileUpload.Application
             {
                 throw new ApplicationException("The Session Id is Not Valid");
             }
-            if (_chunkValidator.ValidateChunkIndex(request.ChunkIndex))
+            if (!_chunkValidator.IsValidateChunkIndex(request.ChunkIndex))
             {
                 throw new ApplicationException($"The Chunk Index {request.ChunkIndex} is Not Valid");
             }
-            if (_chunkValidator.ValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
+            if (!_chunkValidator.IsValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
             {
                 throw new ApplicationException("The Chunk Size is greater than the Maximum Chunk Size");
             }
@@ -150,9 +147,8 @@ namespace AdvanceFileUpload.Application
             {
                 throw new ApplicationException($"The session with the given Id {request.SessionId} is not found");
             }
-            string outPutDir = Path.Combine(_uploadSetting.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk");
-            await _fileProcessor.SaveFileAsync(Path.GetFileName(outPutDir), request.ChunkData, outPutDir, cancellationToken);
-            session.AddChunk(request.ChunkIndex, outPutDir);
+            await _fileProcessor.SaveFileAsync($"{session.Id}_{request.ChunkIndex}.chunk", request.ChunkData, _uploadSetting.TempDirectory, cancellationToken);
+            session.AddChunk(request.ChunkIndex, Path.Combine(_uploadSetting.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"));
             await _repository.UpdateAsync(session, cancellationToken);
             await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)

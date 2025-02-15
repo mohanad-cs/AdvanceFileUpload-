@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents the response after creating a new file upload session.
     /// </summary>
-    public sealed class CreateUploadSessionResponse
+    public sealed record CreateUploadSessionResponse
     {
         /// <summary>
         /// Gets the unique identifier of the upload session.

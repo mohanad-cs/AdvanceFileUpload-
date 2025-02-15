@@ -15,7 +15,7 @@ namespace AdvanceFileUpload.Domain.Core
         /// <param name="id">The unique identifier of the entity.</param>
         /// <param name="cancellationToken">Token to monitor for cancellation requests.</param>
         /// <returns>A task that represents the asynchronous operation. The task result contains the entity if found.</returns>
-        Task<TEntity> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+        Task<TEntity?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Asynchronously adds a new entity to the repository.
@@ -39,7 +39,7 @@ namespace AdvanceFileUpload.Domain.Core
         /// <param name="entity">The entity to remove.</param>
         /// <param name="cancellationToken">Token to monitor for cancellation requests.</param>
         /// <returns>A task that represents the asynchronous operation.</returns>
-        Task RemoveAsync(TEntity entity, CancellationToken cancellationToken = default);
+        Task<bool> RemoveAsync(TEntity entity, CancellationToken cancellationToken = default);
 
         /// <summary>
         /// Asynchronously retrieves all entities from the repository.

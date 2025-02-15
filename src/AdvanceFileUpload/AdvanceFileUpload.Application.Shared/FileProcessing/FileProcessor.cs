@@ -8,10 +8,8 @@
         /// <inheritdoc/>
         public async Task SaveFileAsync(string fileName, byte[] fileData, string outputDirectory, CancellationToken cancellationToken = default)
         {
-            if (!Directory.Exists(outputDirectory))
-            {
-                Directory.CreateDirectory(outputDirectory);
-            }
+
+            Directory.CreateDirectory(outputDirectory);
 
             string filePath = Path.Combine(outputDirectory, fileName);
             await File.WriteAllBytesAsync(filePath, fileData, cancellationToken);

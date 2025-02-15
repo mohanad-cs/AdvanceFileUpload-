@@ -4,25 +4,25 @@ namespace AdvanceFileUpload.Domain.Test
 {
     public class FileUploadSessionTests
     {
-        private const string TestFilePath = @"D:\University\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Domain.Test\TestFiles\testFile.Pdf";
-        private const string TempDirectory = @"D:\University\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Domain.Test\Temp\";
+        private const  string _testFilePath = @"..\TestFiles\testFile.Pdf";
+        private  const string _tempDirectory = @"..\Temp\";
+        private  string _fileName = Path.GetFileName(_testFilePath);
+        private long _fileSize = new FileInfo(_testFilePath).Length;
+        private long _maxChunkSize =256*1024; // 256 KB
 
         [Fact]
         public void Constructor_ShouldInitializeProperties()
         {
             // Arrange
-            string fileName = "testFile.Pdf";
-            long fileSize = new FileInfo(TestFilePath).Length;
-            long maxChunkSize = 256 * 1024; // 256 KB
-
             // Act
-            var session = new FileUploadSession(fileName, TempDirectory, fileSize, maxChunkSize);
+            var session = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
+           
 
             // Assert
-            Assert.Equal(fileName, session.FileName);
-            Assert.Equal(TempDirectory, session.SavingDirectory);
-            Assert.Equal(fileSize, session.FileSize);
-            Assert.Equal(maxChunkSize, session.MaxChunkSize);
+            Assert.Equal(_fileName, session.FileName);
+            Assert.Equal(_tempDirectory, session.SavingDirectory);
+            Assert.Equal(_fileSize, session.FileSize);
+            Assert.Equal(_maxChunkSize, session.MaxChunkSize);
             Assert.Equal(FileUploadSessionStatus.InProgress, session.Status);
             Assert.NotNull(session.SessionStartDate);
         }
@@ -31,9 +31,9 @@ namespace AdvanceFileUpload.Domain.Test
         public void AddChunk_ShouldAddChunk()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length,_maxChunkSize);
             int chunkIndex = 0;
-            string chunkPath = Path.Combine(TempDirectory, "chunk0.Pdf");
+            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
 
             // Act
             session.AddChunk(chunkIndex, chunkPath);
@@ -48,8 +48,8 @@ namespace AdvanceFileUpload.Domain.Test
         public void AddChunk_ShouldThrowException_WhenSessionIsCompleted()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
-            string chunkPath = Path.Combine(TempDirectory, "chunk0.Pdf");
+            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length,_maxChunkSize);
+            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
             for (int i = 0; i < session.TotalChunksToUpload; i++)
             {
                 session.AddChunk(i, chunkPath);
@@ -57,18 +57,18 @@ namespace AdvanceFileUpload.Domain.Test
             session.CompleteSession();
 
             // Act & Assert
-            Assert.Throws<ChunkUploadingException>(() => session.AddChunk(0, Path.Combine(TempDirectory, chunkPath)));
+            Assert.Throws<ChunkUploadingException>(() => session.AddChunk(0, Path.Combine(_tempDirectory, chunkPath)));
         }
 
         [Fact]
         public void GetRemainChunks_ShouldReturnRemainingChunks()
         {
             // Arrange
-            long chunkSize = 256 * 1024; // 256 KB
-            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(TestFilePath).Length / chunkSize);
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, chunkSize);
-            string chunkPath = Path.Combine(TempDirectory, "chunk0.Pdf");
-            session.AddChunk(0, Path.Combine(TempDirectory, chunkPath));
+            long chunkSize =_maxChunkSize; // 256 KB
+            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(_testFilePath).Length / chunkSize);
+            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, chunkSize);
+            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
+            session.AddChunk(0, Path.Combine(_tempDirectory, chunkPath));
             int expectedRemainingChunks = expectedChunks - 1;
             // Act
             var remainChunks = session.GetRemainChunks();
@@ -86,7 +86,7 @@ namespace AdvanceFileUpload.Domain.Test
         public void CancelSession_ShouldUpdateStatus()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length,_maxChunkSize);
 
             // Act
             session.CancelSession();
@@ -100,7 +100,7 @@ namespace AdvanceFileUpload.Domain.Test
         public void PauseSession_ShouldUpdateStatus()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length,_maxChunkSize);
 
             // Act
             session.PauseSession();
@@ -114,13 +114,13 @@ namespace AdvanceFileUpload.Domain.Test
         public void CompleteSession_ShouldUpdateStatus()
         {
             // Arrange
-            string chunkPath = Path.Combine(TempDirectory, "chunk0.Pdf");
-            long chunkSize = 256 * 1024; // 256 KB
-            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(TestFilePath).Length / chunkSize);
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length,chunkSize);
+            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
+            long chunkSize =_maxChunkSize; // 256 KB
+            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(_testFilePath).Length / chunkSize);
+            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length,chunkSize);
             for (int i = 0; i < expectedChunks; i++)
             {
-                session.AddChunk(i, Path.Combine(TempDirectory, chunkPath));
+                session.AddChunk(i, Path.Combine(_tempDirectory, chunkPath));
 
             }
             // Act

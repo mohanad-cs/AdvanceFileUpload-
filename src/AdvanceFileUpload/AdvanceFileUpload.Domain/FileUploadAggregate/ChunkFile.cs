@@ -5,7 +5,7 @@ namespace AdvanceFileUpload.Domain
     /// <summary>
     /// Represents a chunk file in a file upload session.
     /// </summary>
-    public sealed class ChunkFile : EntityBase
+    public sealed class ChunkFile
     {
         /// <summary>
         /// Gets the session identifier to which this chunk belongs.
@@ -34,7 +34,7 @@ namespace AdvanceFileUpload.Domain
         /// <param name="chunkIndex">The index of the chunk.</param>
         /// <param name="chunkPath">The path of the chunk file.</param>
         /// <exception cref="ArgumentException">Thrown when any of the parameters are invalid.</exception>
-        internal ChunkFile(Guid sessionId, int chunkIndex, string chunkPath) : base()
+        internal ChunkFile(Guid sessionId, int chunkIndex, string chunkPath)
         {
             if (sessionId == Guid.Empty)
             {
@@ -55,6 +55,7 @@ namespace AdvanceFileUpload.Domain
             SessionId = sessionId;
             ChunkIndex = chunkIndex;
             ChunkPath = chunkPath;
+            ChunkSize= new FileInfo(chunkPath).Length;
         }
     }
 }

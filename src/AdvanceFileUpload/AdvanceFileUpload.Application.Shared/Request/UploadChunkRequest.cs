@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a request to upload a chunk of a file.
     /// </summary>
-    public sealed class UploadChunkRequest
+    public sealed record UploadChunkRequest
     {
         /// <summary>
         /// Gets the unique identifier of the upload session.
@@ -11,7 +11,7 @@
         public Guid SessionId { get; init; }
 
         /// <summary>
-        /// Gets the index of the chunk being uploaded.
+        /// Gets the index of the chunk being uploaded,(Zero based index).
         /// </summary>
         public int ChunkIndex { get; init; }
 

@@ -13,14 +13,17 @@ namespace AdvanceFileUpload.Domain.Test
 {
     public class UploadMangerTests
     {
-        private const string TestFilePath = @"D:\University\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Domain.Test\TestFiles\testFile.Pdf";
-        private const string TempDirectory = @"D:\University\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Domain.Test\Temp\";
+        private const string _testFilePath = @"..\TestFiles\testFile.Pdf";
+        private const string _tempDirectory = "..\\Temp\\";
+        private string _fileName = Path.GetFileName(_testFilePath);
+        private long _fileSize = new FileInfo(_testFilePath).Length;
+        private long _maxChunkSize = 256 * 1024; // 256 KB
 
         private readonly Mock<IRepository<FileUploadSession>> _repositoryMock;
         private readonly Mock<IDomainEventPublisher> _domainEventPublisherMock;
-        private readonly Mock<IFileValidator> _fileValidatorMock;
-        private readonly Mock<IChunkValidator> _chunkValidatorMock;
-        private readonly Mock<IFileProcessor> _fileProcessorMock;
+        private readonly Mock<FileValidator> _fileValidatorMock;
+        private readonly Mock<ChunkValidator> _chunkValidatorMock;
+        private readonly Mock<FileProcessor> _fileProcessorMock;
         private readonly Mock<ILogger<UploadManger>> _loggerMock;
         private readonly IOptions<UploadSetting> _uploadSetting;
 
@@ -28,17 +31,17 @@ namespace AdvanceFileUpload.Domain.Test
         {
             _repositoryMock = new Mock<IRepository<FileUploadSession>>();
             _domainEventPublisherMock = new Mock<IDomainEventPublisher>();
-            _fileValidatorMock = new Mock<IFileValidator>();
-            _chunkValidatorMock = new Mock<IChunkValidator>();
-            _fileProcessorMock = new Mock<IFileProcessor>();
+            _fileValidatorMock = new Mock<FileValidator>();
+            _chunkValidatorMock = new Mock<ChunkValidator>();
+            _fileProcessorMock = new Mock<FileProcessor>();
             _loggerMock = new Mock<ILogger<UploadManger>>();
             _uploadSetting = Options.Create(new UploadSetting
             {
-                SavingDirectory = TempDirectory,
+                SavingDirectory = _tempDirectory,
                 MaxFileSize = 1024 * 1024 * 10,
                 AllowedExtensions = new[] { ".pdf" },
                 MaxChunkSize = 1024 * 1024,
-                TempDirectory = TempDirectory
+                TempDirectory = _tempDirectory
             });
         }
 
@@ -57,8 +60,8 @@ namespace AdvanceFileUpload.Domain.Test
 
             var request = new CreateUploadSessionRequest
             {
-                FileName = "testFile.Pdf",
-                FileSize = new FileInfo(TestFilePath).Length,
+                FileName = _fileName,
+                FileSize = _fileSize,
                 FileExtension = ".pdf"
             };
 
@@ -76,10 +79,9 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CompleteUploadSessionAsync_ShouldCompleteSession()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = GetValidAllChunkUploadedNotCompletedFileUploadSession();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
-
             var uploadManager = new UploadManger(
                 _repositoryMock.Object,
                 _domainEventPublisherMock.Object,
@@ -101,9 +103,18 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task UploadChunkAsync_ShouldUploadChunk()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = new FileUploadSession(_fileName, _tempDirectory, _fileSize, 256 * 1024);
+            var request = new UploadChunkRequest
+            {
+                SessionId = session.Id,
+                ChunkIndex = 0,
+                ChunkData = new byte[256 * 1024]
+
+            };
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
+
+           // await File.WriteAllBytesAsync(Path.Combine(_uploadSetting.Value.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"), request.ChunkData);
 
             var uploadManager = new UploadManger(
                 _repositoryMock.Object,
@@ -114,12 +125,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileProcessorMock.Object,
                 _loggerMock.Object);
 
-            var request = new UploadChunkRequest
-            {
-                SessionId = session.Id,
-                ChunkIndex = 0,
-                ChunkData = new byte[256 * 1024]
-            };
+
 
             // Act
             var result = await uploadManager.UploadChunkAsync(request);
@@ -134,7 +140,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task GetUploadSessionStatusAsync_ShouldReturnStatus()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = GetValidAllChunkUploadedNotCompletedFileUploadSession();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
@@ -163,7 +169,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CancelUploadSessionAsync_ShouldCancelSession()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = GetFileUploadSessionWithRemainingChunks();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
@@ -188,7 +194,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task PauseUploadSessionAsync_ShouldPauseSession()
         {
             // Arrange
-            var session = new FileUploadSession("testFile.Pdf", TempDirectory, new FileInfo(TestFilePath).Length, 256 * 1024);
+            var session = GetFileUploadSessionWithRemainingChunks();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
@@ -207,6 +213,26 @@ namespace AdvanceFileUpload.Domain.Test
             // Assert
             Assert.True(result);
             Assert.Equal(FileUploadSessionStatus.Paused, session.Status);
+        }
+
+
+        private FileUploadSession GetValidAllChunkUploadedNotCompletedFileUploadSession()
+        {
+            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
+            for (int i = 0; i < fileUploadSession.TotalChunksToUpload; i++)
+            {
+                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.Pdf"));
+            }
+            return fileUploadSession;
+        }
+        private FileUploadSession GetFileUploadSessionWithRemainingChunks()
+        {
+            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
+            for (int i = 0; i < fileUploadSession.TotalChunksToUpload - 1; i++)
+            {
+                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.Pdf"));
+            }
+            return fileUploadSession;
         }
     }
 

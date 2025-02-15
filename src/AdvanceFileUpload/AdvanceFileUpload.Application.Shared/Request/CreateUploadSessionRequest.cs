@@ -6,7 +6,7 @@
     /// <summary>
     ///  Represents a request to create a new file upload session.
     /// </summary>
-    public sealed class CreateUploadSessionRequest
+    public sealed record CreateUploadSessionRequest
     {
         /// <summary>
         /// Gets the name of the file to be uploaded.

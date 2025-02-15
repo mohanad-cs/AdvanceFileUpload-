@@ -18,7 +18,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Gets the file extension of the file being uploaded.
         /// </summary>
-        public string FileExtension { get { return Path.GetExtension(FileName); } }
+        public string FileExtension { get; private set; }
 
         /// <summary>
         /// Gets the directory where the file is being saved.
@@ -33,12 +33,12 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Gets or sets the status of the file upload session.
         /// </summary>
-        public FileUploadSessionStatus Status { get; set; }
+        public FileUploadSessionStatus Status { get; private set; }
 
         /// <summary>
         /// Gets the upload date of the file.
         /// </summary>
-        public DateOnly UploadDate { get => SessionStartDate.ToDateOnly(); }
+        public DateOnly UploadDate { get; private set; }
 
         /// <summary>
         /// Gets the start date of the session.
@@ -48,7 +48,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Gets or sets the end date of the session.
         /// </summary>
-        public DateTime? SessionEndDate { get; set; }
+        public DateTime? SessionEndDate { get; private set; }
 
         /// <summary>
         /// Gets the maximum size of each chunk.
@@ -134,6 +134,8 @@ namespace AdvanceFileUpload.Domain
             MaxChunkSize = maxChunkSize;
             Status = FileUploadSessionStatus.InProgress;
             SessionStartDate = DateTime.Now;
+            FileExtension= Path.GetExtension(FileName);
+            UploadDate= SessionStartDate.ToDateOnly();
         }
 
         /// <summary>
@@ -162,7 +164,15 @@ namespace AdvanceFileUpload.Domain
             }
             ChunkFile chunkFile = new ChunkFile(this.Id, chunkIndex, chunkPath);
             _chunkFiles.Add(chunkFile);
-            Status = FileUploadSessionStatus.InProgress;
+            if (IsAllChunkUploaded())
+            {
+                Status = FileUploadSessionStatus.PendingToComplete;
+            }
+            else
+            {
+                Status = FileUploadSessionStatus.InProgress;
+            }
+
             AddDomainEvent(new ChunkUploadedEvent(chunkFile));
         }
 

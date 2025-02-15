@@ -3,10 +3,10 @@
     /// <summary>
     /// Represents a chunk validator.
     /// </summary>
-    public sealed class ChunkValidator : IChunkValidator
+    public  class ChunkValidator : IChunkValidator
     {
         ///<inheritdoc/>
-        public bool ValidateChunkIndex(int chunkIndex)
+        public bool IsValidateChunkIndex(int chunkIndex)
         {
             if (chunkIndex < 0)
             {
@@ -15,7 +15,7 @@
             return true;
         }
         ///<inheritdoc/>
-        public bool ValidateChunkData(byte[] chunkData, long MaxChunkSize)
+        public bool IsValidateChunkData(byte[] chunkData, long MaxChunkSize)
         {
             if (chunkData == null || chunkData.Length == 0 || chunkData.Length > MaxChunkSize)
             {
@@ -25,9 +25,9 @@
         }
         ///<inheritdoc/>
 
-        public bool ValidateChunkSize(long chunkSize, long maxChunkSize)
+        public bool IsValidateChunkSize(long chunkSize, long maxChunkSize)
         {
-            return chunkSize <= 0 || chunkSize > maxChunkSize;
+            return  chunkSize > 0 || chunkSize <= maxChunkSize;
 
         }
     }

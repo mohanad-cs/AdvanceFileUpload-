@@ -6,23 +6,30 @@
     public enum UploadStatus
     {
         /// <summary>
-        /// The upload session is pending.
+        /// The file upload session is in progress.
         /// </summary>
-        Pending,
-
+        InProgress=1,
         /// <summary>
-        /// The upload session is in progress.
+        /// The file upload session is paused.
         /// </summary>
-        InProgress,
-
+        Paused,
         /// <summary>
-        /// The upload session is completed.
+        ///  The file upload session is Watling to be Completed.
+        /// </summary>
+        PendingToComplete,
+        /// <summary>
+        /// The file upload session is completed.
         /// </summary>
         Completed,
 
         /// <summary>
-        /// The upload session has failed.
+        /// The file upload session is canceled.
         /// </summary>
-        Failed
+        Canceled,
+
+        /// <summary>
+        /// The file upload session has failed.
+        /// </summary>
+        Failed,
     }
 }

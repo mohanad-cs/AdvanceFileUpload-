@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents the status response of an upload session.
     /// </summary>
-    public sealed class UploadSessionStatusResponse
+    public sealed record UploadSessionStatusResponse
     {
         /// <summary>
         /// Gets the unique identifier of the upload session.

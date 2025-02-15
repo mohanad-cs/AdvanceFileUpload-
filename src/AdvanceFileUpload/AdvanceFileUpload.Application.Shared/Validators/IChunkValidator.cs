@@ -11,7 +11,7 @@
         /// </summary>
         /// <param name="chunkIndex">The index of the chunk to validate.</param>
         /// <returns>True if the chunk index is valid; otherwise, false.</returns>
-        bool ValidateChunkIndex(int chunkIndex);
+        bool IsValidateChunkIndex(int chunkIndex);
 
         /// <summary>
         /// Validates the chunk data.
@@ -19,7 +19,7 @@
         /// <param name="chunkData">The data of the chunk to validate.</param>
         /// <param name="MaxChunkSize">The maximum size of the chunk.</param>
         /// <returns>True if the chunk data is valid; otherwise, false.</returns>
-        bool ValidateChunkData(byte[] chunkData, long MaxChunkSize);
+        bool IsValidateChunkData(byte[] chunkData, long MaxChunkSize);
 
 
 
@@ -30,6 +30,6 @@
         /// <param name="chunkSize">The size of the chunk to validate.</param>
         /// <param name="maxChunkSize">The maximum allowed size of the chunk.</param>
         /// <returns>True if the chunk size is valid; otherwise, false.</returns>
-        bool ValidateChunkSize(long chunkSize, long maxChunkSize);
+        bool IsValidateChunkSize(long chunkSize, long maxChunkSize);
     }
 }

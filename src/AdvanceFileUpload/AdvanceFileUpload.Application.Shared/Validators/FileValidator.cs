@@ -3,10 +3,10 @@
     /// <summary>
     /// Represents a file validator.
     /// </summary>
-    public sealed class FileValidator : IFileValidator
+    public  class FileValidator : IFileValidator
     {
         ///<inheritdoc/>
-        public bool ValidateFileName(string fileName)
+        public bool IsValidateFileName(string fileName)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
@@ -15,7 +15,7 @@
             return true;
         }
         ///<inheritdoc/>
-        public bool ValidateFileSize(long fileSize, long maxFileSize)
+        public bool IsValidateFileSize(long fileSize, long maxFileSize)
         {
             if (fileSize <= 0 || fileSize > maxFileSize)
             {
@@ -24,7 +24,7 @@
             return true;
         }
         ///<inheritdoc/>
-        public bool ValidateFileExtension(string fileExtension, string[] allowedExtensions)
+        public bool IsValidateFileExtension(string fileExtension, string[] allowedExtensions)
         {
             if (string.IsNullOrWhiteSpace(fileExtension))
             {
