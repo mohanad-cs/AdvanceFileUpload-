@@ -19,16 +19,17 @@ namespace AdvanceFileUpload.Data
         /// </summary>
         /// <param name="services">The service collection to add the services to.</param>
         /// <param name="connectionString">The connection string for the database.</param>
-        public static void ConfigureDataServices(IServiceCollection services, string connectionString)
+        public static void ConfigureDataServices(this IServiceCollection services, string? connectionString)
         {
-            if (string.IsNullOrWhiteSpace(connectionString))
+            if ( string.IsNullOrWhiteSpace(connectionString))
             {
                 throw new ArgumentException($"'{nameof(connectionString)}' cannot be null or whitespace.", nameof(connectionString));
             }
-
             services.AddDbContext<ApploicationDbContext>(options =>
             {
-                options.UseInMemoryDatabase(connectionString);
+                options.UseInMemoryDatabase("AppMemoryDb");
+                options.LogTo(Console.WriteLine);
+
             });
             services.AddScoped<IRepository<FileUploadSession>, FileUploadSessionRepository>();
         }

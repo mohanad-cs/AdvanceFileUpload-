@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EE0953CE-E6D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Domain.Test", "AdvanceFileUpload.Domain.Test\AdvanceFileUpload.Domain.Test.csproj", "{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.API", "AdvanceFileUpload.API\AdvanceFileUpload.API.csproj", "{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,5 +57,6 @@ Global
 		{425382CC-B5D4-4942-9119-DC50477E7C02} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 		{80BC1A62-7687-461D-8300-89371B4091A7} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 		{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
+		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 	EndGlobalSection
 EndGlobal
