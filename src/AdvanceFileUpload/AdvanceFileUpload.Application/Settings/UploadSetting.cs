@@ -15,7 +15,7 @@
         /// </summary>
         public const long DefaultMaxChunkSize = 1024 * 1024 * 2;
         /// <inheritdoc />
-        public required string SavingDirectory { get; set; } = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+        public required string SavingDirectory { get; set; }
 
         /// <inheritdoc />
         public long MaxFileSize { get; set; }
@@ -25,7 +25,8 @@
 
         /// <inheritdoc />
         public long MaxChunkSize { get; set; } = DefaultMaxChunkSize;
+
         /// <inheritdoc />
-        public required string TempDirectory { get; set; }= Path.GetTempPath();
+        public required string TempDirectory { get; set; }
     }
 }

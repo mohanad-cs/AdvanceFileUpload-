@@ -1,7 +1,11 @@
 ﻿using AdvanceFileUpload.Application;
+using AdvanceFileUpload.Application.EventHandling;
+using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
+using AdvanceFileUpload.Domain.Core;
+using MediatR;
 
 namespace AdvanceFileUpload.API.ServiceConfiguration
 {
@@ -10,10 +14,16 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
         public static void ConfigureApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             services.ConfigureDataServices(configuration.GetConnectionString("DefaultConnection"));
-            services.Configure<IUploadSetting>(configuration.GetSection(UploadSetting.SectionName));
+            services.Configure<UploadSetting>(configuration.GetSection(UploadSetting.SectionName));
             services.AddSingleton<IChunkValidator, ChunkValidator>();
             services.AddSingleton<IFileValidator, FileValidator>();
+            services.AddScoped<IFileProcessor, FileProcessor>();
             services.AddScoped<IUploadManger, UploadManger>();
+            services.AddMediatR((op) =>
+            {
+                op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
+            });
+            services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
 
         }
     }

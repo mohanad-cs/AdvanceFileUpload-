@@ -72,7 +72,7 @@ namespace AdvanceFileUpload.Application
             }
             if (!_fileValidator.IsValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize))
             {
-                throw new ApplicationException("The File Size is greater than the Maximum File Size");
+                throw new ApplicationException("The File Size is Not int the allowed  rang of File Size");
             }
 
             cancellationToken.ThrowIfCancellationRequested();
@@ -84,6 +84,7 @@ namespace AdvanceFileUpload.Application
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
+            session.ClearDomainEvents();
             _logger.LogInformation($"The file upload session has been created successfully With Session Id [{session.Id}]");
             return new CreateUploadSessionResponse()
             {
@@ -116,6 +117,7 @@ namespace AdvanceFileUpload.Application
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
+            session.ClearDomainEvents();
             _logger.LogInformation($"The file upload session  With Session Id [{session.Id}], has been completed successfully");
             return true;
 
@@ -155,6 +157,7 @@ namespace AdvanceFileUpload.Application
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
+            session.ClearDomainEvents();
             _logger.LogInformation($"The chunk [{request.ChunkIndex}] of the file With Session Id [{session.Id}],  has been uploaded successfully");
             return true;
         }
@@ -214,6 +217,7 @@ namespace AdvanceFileUpload.Application
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
+            session.ClearDomainEvents();
             _logger.LogInformation($"The file upload session  With Session Id [{session.Id}], has been canceled successfully");
             return true;
         }
@@ -237,6 +241,7 @@ namespace AdvanceFileUpload.Application
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
+            session.ClearDomainEvents();
             _logger.LogInformation($"The file upload session  With Session Id [{session.Id}], has been paused successfully");
             return true;
 

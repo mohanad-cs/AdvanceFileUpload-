@@ -36,10 +36,11 @@ namespace AdvanceFileUpload.Data
             fileUploadSessionBuilder.Property(f => f.Status).IsRequired();
             fileUploadSessionBuilder.Property(f => f.SessionStartDate).IsRequired();
             fileUploadSessionBuilder.Property(f => f.SessionEndDate).IsRequired(false);
-            fileUploadSessionBuilder.Property(f => f.TotalChunksToUpload).IsRequired();
-            fileUploadSessionBuilder.Property(f => f.TotalUploadedChunks).IsRequired();
-            fileUploadSessionBuilder.Property(f=>f.ProgressPercentage).IsRequired();
+            fileUploadSessionBuilder.Ignore(f => f.TotalChunksToUpload);
+            fileUploadSessionBuilder.Ignore(f => f.TotalUploadedChunks);
+            fileUploadSessionBuilder.Ignore(f => f.ProgressPercentage);
             fileUploadSessionBuilder.Ignore(f => f.DomainEvents);
+
 
             // chunk file entity builder
             var chunkFileBuilder = modelBuilder.Entity<ChunkFile>();
