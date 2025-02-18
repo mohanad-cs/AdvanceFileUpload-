@@ -248,3 +248,111 @@ namespace AdvanceFileUpload.Application
         }
     }
 }
+
+/*
+
+@startuml
+
+actor User
+participant "UploadManager" as UM
+participant "Repository" as Repo
+participant "DomainEventPublisher" as DEP
+participant "FileValidator" as FV
+participant "ChunkValidator" as CV
+participant "FileProcessor" as FP
+participant "Logger" as Log
+
+User -> UM : CreateUploadSessionAsync(request)
+activate UM
+UM -> Log : LogInformation("Creating a new file upload session")
+UM -> FV : IsValidateFileName(request.FileName)
+alt FileName is invalid
+    UM -> User : ApplicationException("The File Name is not valid")
+end
+UM -> FV : IsValidateFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions)
+alt FileExtension is invalid
+    UM -> User : ApplicationException("The File Extension is not allowed")
+end
+UM -> FV : IsValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize)
+alt FileSize is invalid
+    UM -> User : ApplicationException("The File Size is Not in the allowed range")
+end
+UM -> Repo : AddAsync(session)
+UM -> Repo : SaveChangesAsync()
+UM -> DEP : PublishAsync(domainEvent)
+UM -> Log : LogInformation("The file upload session has been created successfully")
+UM -> User : CreateUploadSessionResponse()
+
+User -> UM : CompleteUploadSessionAsync(sessionId)
+activate UM
+UM -> Log : LogInformation("Completing the file upload session")
+UM -> Repo : GetByIdAsync(sessionId)
+alt Session not found
+    UM -> User : ApplicationException("The session with the given Id is not found")
+end
+UM -> Repo : UpdateAsync(session)
+UM -> Repo : SaveChangesAsync()
+UM -> DEP : PublishAsync(domainEvent)
+UM -> Log : LogInformation("The file upload session has been completed successfully")
+UM -> User : true
+
+User -> UM : UploadChunkAsync(request)
+activate UM
+UM -> Log : LogInformation("Uploading a chunk of the file")
+UM -> CV : IsValidateChunkIndex(request.ChunkIndex)
+alt ChunkIndex is invalid
+    UM -> User : ApplicationException("The Chunk Index is Not Valid")
+end
+UM -> CV : IsValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize)
+alt ChunkSize is invalid
+    UM -> User : ApplicationException("The Chunk Size is greater than the Maximum Chunk Size")
+end
+UM -> Repo : GetByIdAsync(request.SessionId)
+alt Session not found
+    UM -> User : ApplicationException("The session with the given Id is not found")
+end
+UM -> FP : SaveFileAsync()
+UM -> Repo : UpdateAsync(session)
+UM -> Repo : SaveChangesAsync()
+UM -> DEP : PublishAsync(domainEvent)
+UM -> Log : LogInformation("The chunk has been uploaded successfully")
+UM -> User : true
+
+User -> UM : GetUploadSessionStatusAsync(sessionId)
+activate UM
+UM -> Repo : GetByIdAsync(sessionId)
+alt Session not found
+    UM -> User : null
+else Session found
+    UM -> User : UploadSessionStatusResponse()
+end
+
+User -> UM : CancelUploadSessionAsync(sessionId)
+activate UM
+UM -> Log : LogInformation("Canceling the file upload session")
+UM -> Repo : GetByIdAsync(sessionId)
+alt Session not found
+    UM -> User : ApplicationException("The session with the given Id is not found")
+end
+UM -> Repo : UpdateAsync(session)
+UM -> Repo : SaveChangesAsync()
+UM -> DEP : PublishAsync(domainEvent)
+UM -> Log : LogInformation("The file upload session has been canceled successfully")
+UM -> User : true
+
+User -> UM : PauseUploadSessionAsync(sessionId)
+activate UM
+UM -> Log : LogInformation("Pausing the file upload session")
+UM -> Repo : GetByIdAsync(sessionId)
+alt Session not found
+    UM -> User : ApplicationException("The session with the given Id is not found")
+end
+UM -> Repo : UpdateAsync(session)
+UM -> Repo : SaveChangesAsync()
+UM -> DEP : PublishAsync(domainEvent)
+UM -> Log : LogInformation("The file upload session has been paused successfully")
+UM -> User : true
+
+@enduml
+
+*/
