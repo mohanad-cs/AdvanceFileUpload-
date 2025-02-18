@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="AdvanceFileUpload.Domain.FileUploadSession">
+    <Position X="1.25" Y="4.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAEEAAAEABQgAIBACCAAAAAIAAKQAFAIAAEQCIJACQA=</HashCode>
+      <FileName>FileUploadAggregate\FileUploadSession.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AdvanceFileUpload.Domain.Core.EntityBase">
+    <Position X="3.5" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgAAAAAAAAAgAAAAAAAAAAAAIEEAAAAAAACAiA=</HashCode>
+      <FileName>Core\EntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AdvanceFileUpload.Domain.ChunkFile">
+    <Position X="8.5" Y="5.25" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAE=</HashCode>
+      <FileName>FileUploadAggregate\ChunkFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AdvanceFileUpload.Domain.Core.IAggregateRoot">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\IAggregateRoot.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

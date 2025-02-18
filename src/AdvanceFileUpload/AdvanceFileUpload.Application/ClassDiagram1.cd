@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="AdvanceFileUpload.Application.UploadManger">
+    <Position X="6.5" Y="2.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwAAQADAAACACAAAAAAAKAAAAAQEBAAIAAAAAAA=</HashCode>
+      <FileName>UploadManger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="AdvanceFileUpload.Application.IUploadManger">
+    <Position X="1.5" Y="2.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAACAAACAAAAAAAAACAAAAAAEAAAIAAAAAAA=</HashCode>
+      <FileName>IUploadManger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
