@@ -5,6 +5,7 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
+using MediatR;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
@@ -60,19 +61,19 @@ namespace AdvanceFileUpload.Application
             if (string.IsNullOrWhiteSpace(_uploadSetting.SavingDirectory))
             {
                 _logger.LogWarning("The SavingDirectory have not been Configured ");
-                throw new BadRequest("The SavingDirectory have not been Configured ");
+                throw new ApplicationException("The SavingDirectory have not been Configured ");
             }
             if (!_fileValidator.IsValidateFileName(request.FileName))
             {
-                throw new BadRequest("The File Name is not valid");
+                throw new ApplicationException("The File Name is not valid");
             }
             if (!_fileValidator.IsValidateFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions))
             {
-                throw new BadRequest("The File Extension is not allowed");
+                throw new ApplicationException("The File Extension is not allowed");
             }
             if (!_fileValidator.IsValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize))
             {
-                throw new BadRequest("The File Size is Not int the allowed  rang of File Size");
+                throw new ApplicationException("The File Size is Not int the allowed  rang of File Size");
             }
 
             cancellationToken.ThrowIfCancellationRequested();
@@ -102,12 +103,12 @@ namespace AdvanceFileUpload.Application
             _logger.LogInformation("Completing the file upload session");
             if (sessionId == Guid.Empty)
             {
-                throw new BadRequest("the session Id is Not Valid");
+                throw new ApplicationException("the session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
-                throw new BadRequest($"The session with the given Id {sessionId} is not found");
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             
             session.CompleteSession();
@@ -132,22 +133,22 @@ namespace AdvanceFileUpload.Application
             }
             if (request.SessionId == Guid.Empty)
             {
-                throw new BadRequest("The Session Id is Not Valid");
+                throw new ApplicationException("The Session Id is Not Valid");
             }
             if (!_chunkValidator.IsValidateChunkIndex(request.ChunkIndex))
             {
-                throw new BadRequest($"The Chunk Index {request.ChunkIndex} is Not Valid");
+                throw new ApplicationException($"The Chunk Index {request.ChunkIndex} is Not Valid");
             }
             if (!_chunkValidator.IsValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
             {
-                throw new BadRequest("The Chunk Size is greater than the Maximum Chunk Size");
+                throw new ApplicationException("The Chunk Size is greater than the Maximum Chunk Size");
             }
             cancellationToken.ThrowIfCancellationRequested();
 
             var session = await _repository.GetByIdAsync(request.SessionId, cancellationToken);
             if (session is null)
             {
-                throw new BadRequest($"The session with the given Id {request.SessionId} is not found");
+                throw new ApplicationException($"The session with the given Id {request.SessionId} is not found");
             }
             await _fileProcessor.SaveFileAsync($"{session.Id}_{request.ChunkIndex}.chunk", request.ChunkData, _uploadSetting.TempDirectory, cancellationToken);
             session.AddChunk(request.ChunkIndex, Path.Combine(_uploadSetting.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"));
@@ -170,13 +171,13 @@ namespace AdvanceFileUpload.Application
         {
             if (sessionId == Guid.Empty)
             {
-                throw new BadRequest("the session Id is Not Valid");
+                throw new ApplicationException("the session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
 
             if (session is null)
             {
-                return null;
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             else
             {
@@ -203,12 +204,12 @@ namespace AdvanceFileUpload.Application
             _logger.LogInformation($"Canceling the file upload session id {sessionId}");
             if (sessionId == Guid.Empty)
             {
-                throw new BadRequest("the session Id is Not Valid");
+                throw new ApplicationException("the session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
-                throw new BadRequest($"The session with the given Id {sessionId} is not found");
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             session.CancelSession();
             await _repository.UpdateAsync(session, cancellationToken);
@@ -227,12 +228,12 @@ namespace AdvanceFileUpload.Application
             _logger.LogInformation($"Pausing the file upload session id {sessionId} ");
             if (sessionId == Guid.Empty)
             {
-                throw new BadRequest("the session Id is Not Valid");
+                throw new ApplicationException("the session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
-                throw new BadRequest($"The session with the given Id {sessionId} is not found");
+                throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             session.PauseSession();
             await _repository.UpdateAsync(session, cancellationToken);
@@ -264,15 +265,15 @@ activate UM
 UM -> Log : LogInformation("Creating a new file upload session")
 UM -> FV : IsValidateFileName(request.FileName)
 alt FileName is invalid
-    UM -> Client : BadRequest("The File Name is not valid")
+    UM -> Client : ApplicationException("The File Name is not valid")
 end
 UM -> FV : IsValidateFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions)
 alt FileExtension is invalid
-    UM -> Client : BadRequest("The File Extension is not allowed")
+    UM -> Client : ApplicationException("The File Extension is not allowed")
 end
 UM -> FV : IsValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize)
 alt FileSize is invalid
-    UM -> Client : BadRequest("The File Size is Not in the allowed range")
+    UM -> Client : ApplicationException("The File Size is Not in the allowed range")
 end
 UM -> Repo : AddAsync(session)
 UM -> Repo : SaveChangesAsync()
@@ -295,7 +296,7 @@ Client -> UM : CompleteUploadSessionAsync(sessionId)
 activate UM
 UM -> Repo : GetByIdAsync(sessionId)
 alt Session not found
-    UM -> Client : BadRequest("The session with the given Id is not found")
+    UM -> Client : ApplicationException("The session with the given Id is not found")
 end
 UM -> Repo : UpdateAsync(session)
 UM -> Repo : SaveChangesAsync()
@@ -322,15 +323,15 @@ activate UM
 UM -> Log : LogInformation("Uploading a chunk of the file")
 UM -> CV : IsValidateChunkIndex(request.ChunkIndex)
 alt ChunkIndex is invalid
-    UM -> Client : BadRequest("The Chunk Index is Not Valid")
+    UM -> Client : ApplicationException("The Chunk Index is Not Valid")
 end
 UM -> CV : IsValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize)
 alt ChunkSize is invalid
-    UM -> Client : BadRequest("The Chunk Size is greater than the Maximum Chunk Size")
+    UM -> Client : ApplicationException("The Chunk Size is greater than the Maximum Chunk Size")
 end
 UM -> Repo : GetByIdAsync(request.SessionId)
 alt Session not found
-    UM -> Client : BadRequest("The session with the given Id is not found")
+    UM -> Client : ApplicationException("The session with the given Id is not found")
 end
 UM -> FP : SaveFileAsync()
 UM -> Repo : UpdateAsync(session)
@@ -351,6 +352,7 @@ participant "Repository" as Repo
 Client -> UM : GetUploadSessionStatusAsync(sessionId)
 activate UM
 UM -> Repo : GetByIdAsync(sessionId)
+Repo -> UM : session?
 alt Session not found
     UM -> Client : null
 else Session found
@@ -368,20 +370,18 @@ actor Client
 participant "UploadManager" as UM
 participant "Repository" as Repo
 participant "DomainEventPublisher" as DEP
-participant "Logger" as Log
 
-Client -> UM : CancelUploadSessionAsync(sessionId)
+Client > UM : CancelUploadSessionAsync(sessionId)
 activate UM
-UM -> Log : LogInformation("Canceling the file upload session")
-UM -> Repo : GetByIdAsync(sessionId)
+UM > Repo : GetByIdAsync(sessionId)
+Repo --> UM : session?
 alt Session not found
-    UM -> Client : BadRequest("The session with the given Id is not found")
+    UM -> Client : ApplicationException("The session with the given Id is not found")
 end
-UM -> Repo : UpdateAsync(session)
-UM -> Repo : SaveChangesAsync()
-UM -> DEP : PublishAsync(domainEvent)
-UM -> Log : LogInformation("The file upload session has been canceled successfully")
-UM -> Client : true
+UM > Repo : UpdateAsync(session)
+UM > Repo : SaveChangesAsync()
+UM > DEP : PublishAsync(domainEvent)
+UM --> Client : Success()
 
 
 @enduml
@@ -395,20 +395,18 @@ actor Client
 participant "UploadManager" as UM
 participant "Repository" as Repo
 participant "DomainEventPublisher" as DEP
-participant "Logger" as Log
 
-Client -> UM : PauseUploadSessionAsync(sessionId)
+Client > UM : PauseUploadSessionAsync(sessionId)
 activate UM
-UM -> Log : LogInformation("Pausing the file upload session")
-UM -> Repo : GetByIdAsync(sessionId)
+UM > Repo : GetByIdAsync(sessionId)
+Repo --> UM : session?
 alt Session not found
-    UM -> Client : BadRequest("The session with the given Id is not found")
+    UM --> Client : ApplicationException("The session with the given Id is not found")
 end
-UM -> Repo : UpdateAsync(session)
-UM -> Repo : SaveChangesAsync()
-UM -> DEP : PublishAsync(domainEvent)
-UM -> Log : LogInformation("The file upload session has been paused successfully")
-UM -> Client : Success()
+UM > Repo : UpdateAsync(session)
+UM > Repo : SaveChangesAsync()
+UM > DEP : PublishAsync(domainEvent)
+UM --> Client : Success()
 
 @enduml
 
