@@ -8,36 +8,30 @@ namespace AdvanceFileUpload.Application.Compression
     /// </summary>
     public sealed class FileCompressor : IFileCompressor
     {
-        private readonly CompressionAlgorithm _compressionAlgorithm;
-        private readonly CompressionLevel _compressionLevel;
         private readonly ILogger<FileCompressor> _logger;
         ///<summary>
         /// Initializes a new instance of the <see cref="FileCompressor"/> class.
         /// </summary>
-        /// <param name="compressionAlgorithm">The compression algorithm to use.</param>
-        /// <param name="compressionLevel">The compression level to use.</param>
         /// <param name="logger">The logger instance to use for logging.</param>
         /// <exception cref="ArgumentNullException">Thrown when the logger is null.</exception>
-        public FileCompressor(CompressionAlgorithm compressionAlgorithm, CompressionLevel compressionLevel, ILogger<FileCompressor> logger)
+        public FileCompressor(ILogger<FileCompressor> logger)
         {
-            _compressionAlgorithm = compressionAlgorithm;
-            _compressionLevel = compressionLevel;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
         /// <inheritdoc/>
-        public async Task CompressFileAsync(string inputFilePath, string outputDirectory, CancellationToken cancellationToken = default)
+        public async Task CompressFileAsync(string inputFilePath, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
         {
             string outputFilePath = Path.Combine(outputDirectory, Path.GetFileName(inputFilePath) + ".gz");
-            await CompressFile(inputFilePath, outputFilePath, cancellationToken);
+            await CompressFile(inputFilePath, outputFilePath,compressionAlgorithmOption ,compressionLevelOption , cancellationToken);
         }
         /// <inheritdoc/>
-        public async Task DecompressFileAsync(string inputFilePath, string outputDirectory, CancellationToken cancellationToken = default)
+        public async Task DecompressFileAsync(string inputFilePath, string outputDirectory,CompressionAlgorithmOption compressionAlgorithmOption , CancellationToken cancellationToken = default)
         {
             string outputFilePath = Path.Combine(outputDirectory, Path.GetFileNameWithoutExtension(inputFilePath));
-            await DecompressFile(inputFilePath, outputFilePath, cancellationToken);
+            await DecompressFile(inputFilePath, outputFilePath, compressionAlgorithmOption, cancellationToken);
         }
         /// <inheritdoc/>
-        public async Task CompressFilesAsync(string[] inputFilePaths, string outputDirectory, CancellationToken cancellationToken = default)
+        public async Task CompressFilesAsync(string[] inputFilePaths, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
         {
             if (inputFilePaths == null || inputFilePaths.Length == 0)
             {
@@ -51,12 +45,12 @@ namespace AdvanceFileUpload.Application.Compression
             for (int i = 0; i < inputFilePaths.Length; i++)
             {
                 int index = i;
-                tasks[index] = CompressFileAsync(inputFilePaths[index], outputDirectory, cancellationToken);
+                tasks[index] = CompressFileAsync(inputFilePaths[index], outputDirectory, compressionAlgorithmOption, compressionLevelOption, cancellationToken);
             }
             await Task.WhenAll(tasks);
         }
         /// <inheritdoc/>
-        public async Task DecompressFilesAsync(string[] inputFilePaths, string outputDirectory, CancellationToken cancellationToken = default)
+        public async Task DecompressFilesAsync(string[] inputFilePaths, string outputDirectory,CompressionAlgorithmOption compressionAlgorithmOption , CancellationToken cancellationToken = default)
         {
             if (inputFilePaths == null || inputFilePaths.Length == 0)
             {
@@ -73,46 +67,46 @@ namespace AdvanceFileUpload.Application.Compression
             for (int i = 0; i < inputFilePaths.Length; i++)
             {
                 int index = i;
-                tasks[index] = DecompressFile(inputFilePaths[index], outputDirectory, cancellationToken);
+                tasks[index] = DecompressFile(inputFilePaths[index], outputDirectory,compressionAlgorithmOption, cancellationToken);
             }
 
             await Task.WhenAll(tasks);
         }
-        private Stream GetCompressionStream(Stream outputStream)
+        private Stream GetCompressionStream(Stream outputStream, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption)
         {
-            switch (_compressionAlgorithm)
+            switch (compressionAlgorithmOption)
             {
-                case CompressionAlgorithm.GZip:
-                    return new GZipStream(outputStream, (System.IO.Compression.CompressionLevel)_compressionLevel);
-                case CompressionAlgorithm.Deflate:
-                    return new DeflateStream(outputStream, (System.IO.Compression.CompressionLevel)_compressionLevel);
-                case CompressionAlgorithm.Brotli:
-                    return new BrotliStream(outputStream, (System.IO.Compression.CompressionLevel)_compressionLevel);
+                case CompressionAlgorithmOption.GZip:
+                    return new GZipStream(outputStream, (CompressionLevel)compressionLevelOption, false);
+                case CompressionAlgorithmOption.Deflate:
+                    return new DeflateStream(outputStream, (CompressionLevel)compressionLevelOption, false);
+                case CompressionAlgorithmOption.Brotli:
+                    return new BrotliStream(outputStream, (CompressionLevel)compressionLevelOption, false);
                 default:
                     throw new InvalidOperationException("Unsupported compression algorithm.");
             }
         }
-        private Stream GetDecompressionStream(Stream inputStream)
+        private Stream GetDecompressionStream(Stream inputStream, CompressionAlgorithmOption compressionAlgorithmOption)
         {
-            switch (_compressionAlgorithm)
+            switch (compressionAlgorithmOption)
             {
-                case CompressionAlgorithm.GZip:
+                case CompressionAlgorithmOption.GZip:
                     return new GZipStream(inputStream, CompressionMode.Decompress);
-                case CompressionAlgorithm.Deflate:
+                case CompressionAlgorithmOption.Deflate:
                     return new DeflateStream(inputStream, CompressionMode.Decompress);
-                case CompressionAlgorithm.Brotli:
+                case CompressionAlgorithmOption.Brotli:
                     return new BrotliStream(inputStream, CompressionMode.Decompress);
                 default:
                     throw new InvalidOperationException("Unsupported compression algorithm.");
             }
         }
-        private async Task CompressFile(string inputFilePath, string outputFilePath, CancellationToken cancellationToken = default)
+        private async Task CompressFile(string inputFilePath, string outputFilePath, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
         {
             try
             {
                 using (FileStream inputFileStream = new FileStream(inputFilePath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true))
                 using (FileStream outputFileStream = new FileStream(outputFilePath, FileMode.Create, FileAccess.Write, FileShare.None, 4096, useAsync: true))
-                using (Stream compressionStream = GetCompressionStream(outputFileStream))
+                using (Stream compressionStream = GetCompressionStream(outputFileStream, compressionAlgorithmOption, compressionLevelOption))
                 {
                     await inputFileStream.CopyToAsync(compressionStream, cancellationToken);
                 }
@@ -124,13 +118,13 @@ namespace AdvanceFileUpload.Application.Compression
                 _logger.LogError($"An error occurred while compressing the file: {ex.Message}");
             }
         }
-        private async Task DecompressFile(string inputFilePath, string outputFilePath, CancellationToken cancellationToken = default)
+        private async Task DecompressFile(string inputFilePath, string outputFilePath, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default)
         {
             try
             {
                 using (FileStream inputFileStream = new FileStream(inputFilePath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true))
                 using (FileStream outputFileStream = new FileStream(outputFilePath, FileMode.Create, FileAccess.Write, FileShare.None, 4096, useAsync: true))
-                using (Stream decompressionStream = GetDecompressionStream(inputFileStream))
+                using (Stream decompressionStream = GetDecompressionStream(inputFileStream, compressionAlgorithmOption))
                 {
                     await decompressionStream.CopyToAsync(outputFileStream, cancellationToken);
                 }

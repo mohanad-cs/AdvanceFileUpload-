@@ -8,7 +8,7 @@
         // a list of invalid file names characters
         private static readonly char[] _invalidFileNameChars = ['<', '>', ':', '"', '/', '\\', '|', '?', '*'];
         ///<inheritdoc/>
-        public bool IsValidateFileName(string fileName)
+        public bool IsValidFileName(string fileName)
         {
             if (string.IsNullOrWhiteSpace(fileName))
             {
@@ -21,12 +21,12 @@
             return true;
         }
         ///<inheritdoc/>
-        public bool IsValidateFileSize(long fileSize, long maxFileSize)
+        public bool IsValidFileSize(long fileSize, long maxFileSize)
         {
            return fileSize>0 && fileSize <= maxFileSize;
         }
         ///<inheritdoc/>
-        public bool IsValidateFileExtension(string fileExtension, string[] allowedExtensions)
+        public bool IsValidFileExtension(string fileExtension, string[] allowedExtensions)
         {
             if (string.IsNullOrWhiteSpace(fileExtension) || allowedExtensions == null || allowedExtensions.Length == 0)
             {

@@ -1,10 +1,11 @@
-﻿namespace AdvanceFileUpload.Application.Compression
+﻿namespace AdvanceFileUpload.Domain
 {
     /// <summary>
-    /// Specifies the compression algorithms available.
+    /// Specifies the compression algorithms.
     /// </summary>
     public enum CompressionAlgorithm
     {
+
         /// <summary>
         /// GZip compression algorithm.
         /// Benefits: Good compression ratio and speed, widely supported.

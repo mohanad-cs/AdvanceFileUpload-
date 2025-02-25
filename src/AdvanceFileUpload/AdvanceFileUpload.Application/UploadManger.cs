@@ -1,4 +1,5 @@
-﻿using AdvanceFileUpload.Application.FileProcessing;
+﻿using AdvanceFileUpload.Application.Compression;
+using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Request;
 using AdvanceFileUpload.Application.Response;
 using AdvanceFileUpload.Application.Settings;
@@ -21,6 +22,7 @@ namespace AdvanceFileUpload.Application
         private readonly IFileValidator _fileValidator;
         private readonly IChunkValidator _chunkValidator;
         private readonly IFileProcessor _fileProcessor;
+        private readonly IFileCompressor _fileCompressor;
         private readonly UploadSetting _uploadSetting;
         private readonly ILogger<UploadManger> _logger;
 
@@ -34,17 +36,19 @@ namespace AdvanceFileUpload.Application
         /// <param name="chunkValidator">The validator for file chunks.</param>
         /// <param name="uploadSetting">The settings for file uploads.</param>
         /// <param name="fileProcessor">The service for file operations.</param>
+        /// <param name="fileCompressor">The service for file compressor</param>
         /// <param name="logger">The logger for logging information.</param>
         /// <exception cref="ArgumentNullException">
         /// Thrown when any of the parameters are null.
         /// </exception>
-        public UploadManger(IRepository<FileUploadSession> repository, IDomainEventPublisher domainEventPublisher, IFileValidator fileValidator, IChunkValidator chunkValidator, IOptions<UploadSetting> uploadSetting, IFileProcessor fileProcessor, ILogger<UploadManger> logger)
+        public UploadManger(IRepository<FileUploadSession> repository, IDomainEventPublisher domainEventPublisher, IFileValidator fileValidator, IChunkValidator chunkValidator, IOptions<UploadSetting> uploadSetting, IFileProcessor fileProcessor , IFileCompressor fileCompressor, ILogger<UploadManger> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _domainEventPublisher = domainEventPublisher ?? throw new ArgumentNullException(nameof(domainEventPublisher));
             _fileValidator = fileValidator ?? throw new ArgumentNullException(nameof(fileValidator));
             _chunkValidator = chunkValidator ?? throw new ArgumentNullException(nameof(chunkValidator));
             _fileProcessor = fileProcessor ?? throw new ArgumentNullException(nameof(fileProcessor));
+            _fileCompressor = fileCompressor ?? throw new ArgumentNullException(nameof(fileCompressor));
             _uploadSetting = uploadSetting.Value ?? throw new ArgumentNullException(nameof(uploadSetting));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
@@ -63,19 +67,22 @@ namespace AdvanceFileUpload.Application
                 _logger.LogWarning("The SavingDirectory have not been Configured ");
                 throw new ApplicationException("The SavingDirectory have not been Configured ");
             }
-            if (!_fileValidator.IsValidateFileName(request.FileName))
+            if (!_fileValidator.IsValidFileName(request.FileName))
             {
                 throw new ApplicationException("The File Name is not valid");
             }
-            if (!_fileValidator.IsValidateFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions))
+            if (!_fileValidator.IsValidFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions))
             {
                 throw new ApplicationException("The File Extension is not allowed");
             }
-            if (!_fileValidator.IsValidateFileSize(request.FileSize, _uploadSetting.MaxFileSize))
+            if (!_fileValidator.IsValidFileSize(request.FileSize, _uploadSetting.MaxFileSize))
             {
                 throw new ApplicationException("The File Size is Not int the allowed  rang of File Size");
             }
-
+            if (request.UseCompression && !_uploadSetting.EnableCompression)
+            {
+                throw new ApplicationException("The Compression is not enabled on the server");
+            }
             cancellationToken.ThrowIfCancellationRequested();
             Directory.CreateDirectory(_uploadSetting.SavingDirectory);
             var session = new FileUploadSession(request.FileName, _uploadSetting.SavingDirectory, request.FileSize, _uploadSetting.MaxChunkSize);
@@ -135,11 +142,11 @@ namespace AdvanceFileUpload.Application
             {
                 throw new ApplicationException("The Session Id is Not Valid");
             }
-            if (!_chunkValidator.IsValidateChunkIndex(request.ChunkIndex))
+            if (!_chunkValidator.IsValidChunkIndex(request.ChunkIndex))
             {
                 throw new ApplicationException($"The Chunk Index {request.ChunkIndex} is Not Valid");
             }
-            if (!_chunkValidator.IsValidateChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
+            if (!_chunkValidator.IsValidChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
             {
                 throw new ApplicationException("The Chunk Size is greater than the Maximum Chunk Size");
             }

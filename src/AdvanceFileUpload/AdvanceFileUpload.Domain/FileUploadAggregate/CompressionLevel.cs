@@ -1,11 +1,12 @@
-﻿namespace AdvanceFileUpload.Application.Compression
+﻿namespace AdvanceFileUpload.Domain
 {
     /// <summary>
     ///   Specifies values that indicate whether a compression operation emphasizes speed
     ///     or compression size.
     /// </summary>
-    public enum CompressionLevelOption
+    public enum CompressionLevel
     {
+
         /// <summary>
         ///  The compression operation should optimally balance compression speed and output size.
         /// </summary>

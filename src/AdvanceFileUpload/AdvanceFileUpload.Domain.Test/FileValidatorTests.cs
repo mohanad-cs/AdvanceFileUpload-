@@ -20,7 +20,7 @@ namespace AdvanceFileUpload.Domain.Test
         [InlineData("fi\\le.pdf")]
         public void IsValidateFileName_InvalidFileName_ReturnsFalse(string fileName)
         {
-            var result = _fileValidator.IsValidateFileName(fileName);
+            var result = _fileValidator.IsValidFileName(fileName);
             Assert.False(result);
         }
 
@@ -29,7 +29,7 @@ namespace AdvanceFileUpload.Domain.Test
         [InlineData("validFileName.pdf")]
         public void IsValidateFileName_ValidFileName_ReturnsTrue(string fileName)
         {
-            var result = _fileValidator.IsValidateFileName(fileName);
+            var result = _fileValidator.IsValidFileName(fileName);
             Assert.True(result);
         }
 
@@ -41,7 +41,7 @@ namespace AdvanceFileUpload.Domain.Test
         [InlineData(101, 100)]
         public void IsValidateFileSize_InvalidFileSize_ReturnsFalse(long fileSize, long maxFileSize)
         {
-            var result = _fileValidator.IsValidateFileSize(fileSize, maxFileSize);
+            var result = _fileValidator.IsValidFileSize(fileSize, maxFileSize);
             Assert.False(result);
         }
 
@@ -50,7 +50,7 @@ namespace AdvanceFileUpload.Domain.Test
         [InlineData(100, 100)]
         public void IsValidateFileSize_ValidFileSize_ReturnsTrue(long fileSize, long maxFileSize)
         {
-            var result = _fileValidator.IsValidateFileSize(fileSize, maxFileSize);
+            var result = _fileValidator.IsValidFileSize(fileSize, maxFileSize);
             Assert.True(result);
         }
 
@@ -63,7 +63,7 @@ namespace AdvanceFileUpload.Domain.Test
         [InlineData(".txt", new string[] { })]
         public void IsValidateFileExtension_InvalidFileExtension_ReturnsFalse(string fileExtension, string[] allowedExtensions)
         {
-            var result = _fileValidator.IsValidateFileExtension(fileExtension, allowedExtensions);
+            var result = _fileValidator.IsValidFileExtension(fileExtension, allowedExtensions);
             Assert.False(result);
         }
 
@@ -71,7 +71,7 @@ namespace AdvanceFileUpload.Domain.Test
         [InlineData(".txt", new string[] { ".txt", ".pdf" })]
         public void IsValidateFileExtension_ValidFileExtension_ReturnsTrue(string fileExtension, string[] allowedExtensions)
         {
-            var result = _fileValidator.IsValidateFileExtension(fileExtension, allowedExtensions);
+            var result = _fileValidator.IsValidFileExtension(fileExtension, allowedExtensions);
             Assert.True(result);
         }
     }

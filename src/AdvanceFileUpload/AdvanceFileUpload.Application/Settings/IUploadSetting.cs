@@ -31,5 +31,9 @@
         /// Gets or sets the directory where temporary files will be saved.
         /// </summary>
         string TempDirectory { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether to enable compression.
+        /// </summary>
+        bool EnableCompression { get; set; }
     }
 }

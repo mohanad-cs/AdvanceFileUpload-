@@ -23,7 +23,7 @@ namespace AdvanceFileUpload.Domain.Test
             int validIndex = 1;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkIndex(validIndex);
+            bool result = _chunkValidator.IsValidChunkIndex(validIndex);
 
             // Assert
             Assert.True(result);
@@ -35,7 +35,7 @@ namespace AdvanceFileUpload.Domain.Test
             // Arrange
             int invalidIndex = -1;
             // Act
-            bool result = _chunkValidator.IsValidateChunkIndex(invalidIndex);
+            bool result = _chunkValidator.IsValidChunkIndex(invalidIndex);
 
             // Assert
             Assert.False(result);
@@ -49,7 +49,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkData(validData, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkData(validData, maxChunkSize);
 
             // Assert
             Assert.True(result);
@@ -63,7 +63,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkData(nullData, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkData(nullData, maxChunkSize);
 
             // Assert
             Assert.False(result);
@@ -77,7 +77,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkData(emptyData, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkData(emptyData, maxChunkSize);
 
             // Assert
             Assert.False(result);
@@ -91,7 +91,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkData(largeData, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkData(largeData, maxChunkSize);
 
             // Assert
             Assert.False(result);
@@ -105,7 +105,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkSize(validSize, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkSize(validSize, maxChunkSize);
 
             // Assert
             Assert.True(result);
@@ -119,7 +119,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkSize(zeroSize, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkSize(zeroSize, maxChunkSize);
 
             // Assert
             Assert.False(result);
@@ -133,7 +133,7 @@ namespace AdvanceFileUpload.Domain.Test
             long maxChunkSize = 10;
 
             // Act
-            bool result = _chunkValidator.IsValidateChunkSize(largeSize, maxChunkSize);
+            bool result = _chunkValidator.IsValidChunkSize(largeSize, maxChunkSize);
 
             // Assert
             Assert.False(result);

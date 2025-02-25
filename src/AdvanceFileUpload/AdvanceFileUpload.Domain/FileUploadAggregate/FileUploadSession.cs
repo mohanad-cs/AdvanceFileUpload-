@@ -10,15 +10,26 @@ namespace AdvanceFileUpload.Domain
     /// </summary>
     public class FileUploadSession : EntityBase, IAggregateRoot
     {
+        private readonly List<ChunkFile> _chunkFiles = new();
+
         /// <summary>
         /// Gets the name of the file being uploaded.
         /// </summary>
-        public string FileName { get; private set; }
+        public  string FileName { get; private set; }
 
         /// <summary>
         /// Gets the file extension of the file being uploaded.
         /// </summary>
         public string FileExtension { get; private set; }
+
+        /// <summary>
+        /// Gets the compression Algorithm for the file being uploaded.
+        /// </summary>
+        public CompressionAlgorithm? CompressionAlgorithm { get; private set; }
+        /// <summary>
+        /// Gets the compression Level for the file being uploaded.
+        /// </summary>
+        public CompressionLevel? CompressionLevel { get; private set; }
 
         /// <summary>
         /// Gets the directory where the file is being saved.
@@ -79,8 +90,11 @@ namespace AdvanceFileUpload.Domain
                 return ((double)TotalUploadedChunks / TotalChunksToUpload) * 100;
             }
         }
+        /// <summary>
+        /// Gets a value indicating whether compression is used.
+        /// </summary>
+        public bool UseCompression => CompressionAlgorithm != null;
 
-        private readonly List<ChunkFile> _chunkFiles = new();
         /// <summary>
         /// Gets the collection of chunk files.
         /// </summary>
@@ -93,14 +107,23 @@ namespace AdvanceFileUpload.Domain
         /// <param name="savingDirectory">The directory where the file is being saved.</param>
         /// <param name="fileSize">The size of the file being uploaded.</param>
         /// <param name="maxChunkSize">The maximum size of each chunk.</param>
-        /// <exception cref="ArgumentException">Thrown when any of the parameters are invalid.</exception>
-        public FileUploadSession(string fileName, string savingDirectory, long fileSize, long maxChunkSize) : base()
+        /// <param name="compressionAlgorithm">The compression Algorithm for the file being uploaded.</param>
+        /// <param name="compressionLevel">The compression level for the file being uploaded.</param>
+        public FileUploadSession(string fileName, string savingDirectory, long fileSize, long maxChunkSize, CompressionAlgorithm? compressionAlgorithm =null , CompressionLevel? compressionLevel =null) : base()
         {
             ValidateParameters(fileName, savingDirectory, fileSize, maxChunkSize);
-            InitializeProperties(fileName, savingDirectory, fileSize, maxChunkSize);
+            InitializeProperties(fileName, savingDirectory, fileSize, maxChunkSize, compressionAlgorithm,compressionLevel);
             AddDomainEvent(new FileUploadSessionCreatedEvent(this));
         }
 
+        /// <summary>
+        /// Validates the parameters for the file upload session.
+        /// </summary>
+        /// <param name="fileName">The name of the file being uploaded.</param>
+        /// <param name="savingDirectory">The directory where the file is being saved.</param>
+        /// <param name="fileSize">The size of the file being uploaded.</param>
+        /// <param name="maxChunkSize">The maximum size of each chunk.</param>
+        /// <exception cref="ArgumentException">Thrown when any of the parameters are invalid.</exception>
         private void ValidateParameters(string fileName, string savingDirectory, long fileSize, long maxChunkSize)
         {
             if (string.IsNullOrWhiteSpace(fileName))
@@ -123,10 +146,18 @@ namespace AdvanceFileUpload.Domain
             {
                 throw new ArgumentException("The max chunk size must be >0.", nameof(maxChunkSize));
             }
-
         }
 
-        private void InitializeProperties(string fileName, string savingDirectory, long fileSize, long maxChunkSize)
+        /// <summary>
+        /// Initializes the properties for the file upload session.
+        /// </summary>
+        /// <param name="fileName">The name of the file being uploaded.</param>
+        /// <param name="savingDirectory">The directory where the file is being saved.</param>
+        /// <param name="fileSize">The size of the file being uploaded.</param>
+        /// <param name="maxChunkSize">The maximum size of each chunk.</param>
+        /// <param name="compressionAlgorithm">The compression Algorithm for the file being uploaded.</param>
+        /// <param name="compressionLevel">The compression level for the file being uploaded.</param>
+        private void InitializeProperties(string fileName, string savingDirectory, long fileSize, long maxChunkSize, CompressionAlgorithm? compressionAlgorithm, CompressionLevel? compressionLevel)
         {
             FileName = fileName;
             SavingDirectory = savingDirectory;
@@ -134,8 +165,10 @@ namespace AdvanceFileUpload.Domain
             MaxChunkSize = maxChunkSize;
             Status = FileUploadSessionStatus.InProgress;
             SessionStartDate = DateTime.Now;
-            FileExtension= Path.GetExtension(FileName);
-            UploadDate= SessionStartDate.ToDateOnly();
+            FileExtension = Path.GetExtension(FileName);
+            UploadDate = SessionStartDate.ToDateOnly();
+            CompressionAlgorithm = compressionAlgorithm;
+            CompressionLevel = compressionLevel;
         }
 
         /// <summary>
