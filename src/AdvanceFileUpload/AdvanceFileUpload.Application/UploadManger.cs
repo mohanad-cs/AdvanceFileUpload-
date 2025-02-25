@@ -225,7 +225,7 @@ namespace AdvanceFileUpload.Application
         ///<inheritdoc/>
         public async Task<bool> PauseUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation($"Pausing the file upload session id {sessionId} ");
+            _logger.LogInformation("Pausing the file upload session id {sessionId} ",sessionId);
             if (sessionId == Guid.Empty)
             {
                 throw new ApplicationException("the session Id is Not Valid");
@@ -243,7 +243,7 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation($"The file upload session  With Session Id [{session.Id}], has been paused successfully");
+            _logger.LogInformation("The file upload session  With Session Id [{sessionId}], has been paused successfully",session.Id);
             return true;
 
         }
