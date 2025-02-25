@@ -17,6 +17,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Domain.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.API", "AdvanceFileUpload.API\AdvanceFileUpload.API.csproj", "{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionItems", "solutionItems", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		SequenceDigramUML.txt = SequenceDigramUML.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +63,8 @@ Global
 		{80BC1A62-7687-461D-8300-89371B4091A7} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 		{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BB3F95F-401F-47D1-BB2B-96920C0B2BB5}
 	EndGlobalSection
 EndGlobal
