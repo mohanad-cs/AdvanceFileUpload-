@@ -221,7 +221,7 @@ namespace AdvanceFileUpload.Domain.Test
             FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
             for (int i = 0; i < fileUploadSession.TotalChunksToUpload; i++)
             {
-                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.Pdf"));
+                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.chunk"));
             }
             return fileUploadSession;
         }
@@ -230,7 +230,7 @@ namespace AdvanceFileUpload.Domain.Test
             FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
             for (int i = 0; i < fileUploadSession.TotalChunksToUpload - 1; i++)
             {
-                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.Pdf"));
+                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.chunk"));
             }
             return fileUploadSession;
         }

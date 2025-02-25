@@ -21,9 +21,6 @@
         /// <returns>True if the chunk data is valid; otherwise, false.</returns>
         bool IsValidateChunkData(byte[] chunkData, long MaxChunkSize);
 
-
-
-
         ///<summary>
         /// Validates the size of the chunk.
         /// </summary>
