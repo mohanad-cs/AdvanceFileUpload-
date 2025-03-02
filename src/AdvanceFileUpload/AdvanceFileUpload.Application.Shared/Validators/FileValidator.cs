@@ -34,5 +34,7 @@
             }
             return Array.Exists(allowedExtensions, extension => extension.Equals(fileExtension, StringComparison.OrdinalIgnoreCase));
         }
+
+
     }
 }

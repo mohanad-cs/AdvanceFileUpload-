@@ -1,4 +1,5 @@
 ﻿using AdvanceFileUpload.Application;
+using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Request;
 using AdvanceFileUpload.Application.Response;
@@ -24,6 +25,7 @@ namespace AdvanceFileUpload.Domain.Test
         private readonly Mock<FileValidator> _fileValidatorMock;
         private readonly Mock<ChunkValidator> _chunkValidatorMock;
         private readonly Mock<FileProcessor> _fileProcessorMock;
+        private readonly Mock<FileCompressor> _fileCompressorMock;
         private readonly Mock<ILogger<UploadManger>> _loggerMock;
         private readonly IOptions<UploadSetting> _uploadSetting;
 
@@ -35,6 +37,7 @@ namespace AdvanceFileUpload.Domain.Test
             _chunkValidatorMock = new Mock<ChunkValidator>();
             _fileProcessorMock = new Mock<FileProcessor>();
             _loggerMock = new Mock<ILogger<UploadManger>>();
+            _fileCompressorMock = new Mock<FileCompressor>();
             _uploadSetting = Options.Create(new UploadSetting
             {
                 SavingDirectory = _tempDirectory,
@@ -56,6 +59,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _chunkValidatorMock.Object,
                 _uploadSetting,
                 _fileProcessorMock.Object,
+                _fileCompressorMock.Object,
                 _loggerMock.Object);
 
             var request = new CreateUploadSessionRequest
@@ -89,6 +93,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _chunkValidatorMock.Object,
                 _uploadSetting,
                 _fileProcessorMock.Object,
+                _fileCompressorMock.Object,
                 _loggerMock.Object);
 
             // Act
@@ -123,6 +128,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _chunkValidatorMock.Object,
                 _uploadSetting,
                 _fileProcessorMock.Object,
+                _fileCompressorMock.Object,
                 _loggerMock.Object);
 
 
@@ -151,6 +157,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _chunkValidatorMock.Object,
                 _uploadSetting,
                 _fileProcessorMock.Object,
+                _fileCompressorMock.Object,
                 _loggerMock.Object);
 
             // Act
@@ -180,6 +187,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _chunkValidatorMock.Object,
                 _uploadSetting,
                 _fileProcessorMock.Object,
+                _fileCompressorMock.Object,
                 _loggerMock.Object);
 
             // Act
@@ -205,6 +213,7 @@ namespace AdvanceFileUpload.Domain.Test
                 _chunkValidatorMock.Object,
                 _uploadSetting,
                 _fileProcessorMock.Object,
+                _fileCompressorMock.Object,
                 _loggerMock.Object);
 
             // Act

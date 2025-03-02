@@ -61,13 +61,12 @@ namespace AdvanceFileUpload.Application.Compression
             {
                 throw new ArgumentException("Output directory cannot be null or empty.", nameof(outputDirectory));
             }
-
             var tasks = new Task[inputFilePaths.Length];
 
             for (int i = 0; i < inputFilePaths.Length; i++)
             {
                 int index = i;
-                tasks[index] = DecompressFile(inputFilePaths[index], outputDirectory,compressionAlgorithmOption, cancellationToken);
+                tasks[index] = DecompressFileAsync(inputFilePaths[index], outputDirectory,compressionAlgorithmOption, cancellationToken);
             }
 
             await Task.WhenAll(tasks);
