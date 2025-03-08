@@ -98,7 +98,7 @@ namespace AdvanceFileUpload.Application
             {
                 SessionId = session.Id,
                 FileSize = session.FileSize,
-                MaxMaxChunkSize = session.MaxChunkSize,
+                MaxChunkSize = session.MaxChunkSize,
                 SessionStartDate = session.SessionStartDate,
                 TotalChunksToUpload = session.TotalChunksToUpload,
                 UploadStatus = (UploadStatus)session.Status,

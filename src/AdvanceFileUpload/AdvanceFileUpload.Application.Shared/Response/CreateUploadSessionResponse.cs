@@ -18,7 +18,7 @@
         /// <summary>
         /// Gets the maximum size of each chunk.
         /// </summary>
-        public long MaxMaxChunkSize { get; init; }
+        public long MaxChunkSize { get; init; }
 
         /// <summary>
         /// Gets the total number of chunks to be uploaded.

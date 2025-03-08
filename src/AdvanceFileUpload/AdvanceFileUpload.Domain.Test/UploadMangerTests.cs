@@ -75,7 +75,7 @@ namespace AdvanceFileUpload.Domain.Test
             // Assert
             Assert.NotNull(response);
             Assert.Equal(request.FileSize, response.FileSize);
-            Assert.Equal(_uploadSetting.Value.MaxChunkSize, response.MaxMaxChunkSize);
+            Assert.Equal(_uploadSetting.Value.MaxChunkSize, response.MaxChunkSize);
             Assert.Equal(UploadStatus.InProgress, response.UploadStatus);
         }
 

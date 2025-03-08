@@ -60,7 +60,14 @@ namespace AdvanceFileUpload.Application.EventHandling
             }
             else
             {
-
+               
+                await _fileProcessor.ConcatenateChunksAsync(notification.FileUploadSession.ChunkFiles.Select(x=>x.ChunkPath).ToList(),
+                                                            Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName),
+                                                            cancellationToken);
+                foreach (var chunk in notification.FileUploadSession.ChunkFiles)
+                {
+                    File.Delete(chunk.ChunkPath);
+                }
             }
         }
     }
