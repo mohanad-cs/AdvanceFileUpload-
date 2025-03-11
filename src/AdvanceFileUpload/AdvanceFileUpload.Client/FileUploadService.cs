@@ -13,18 +13,43 @@ using System.Threading.Tasks;
 
 namespace AdvanceFileUpload.Client
 {
-    public class FileUploadService
+    public class FileUploadService : IFileUploadService , IDisposable
     {
         private readonly HttpClient _httpClient;
         private readonly IFileProcessor _fileProcessor;
         private readonly IFileCompressor _fileCompressor;
-        private readonly CancellationTokenSource _cancellationTokenSource;
+        private CancellationTokenSource _cancellationTokenSource;
         private readonly UploadOptions _uploadOptions;
         private List<string> _chunksToUpload = [];
         private Guid _sessionId;
         private long _chunkSize;
         private int _totalChunksToUpload;
-        private long _originalFileSize;
+        private string? _originalFilePath;
+        private long _originalFileSize
+        {
+            get
+            {
+                if (_originalFilePath is null)
+                {
+                    return 0;
+                }
+                return new FileInfo(_originalFilePath).Length;
+            }
+        }
+        private string? _compressedFilePath;
+        private bool disposedValue;
+
+        private long _compressedFileSize
+        {
+            get
+            {
+                if (_compressedFilePath is null)
+                {
+                    return 0;
+                }
+                return new FileInfo(_compressedFilePath).Length;
+            }
+        }
 
         public event EventHandler<SessionCreatedEventArgs> SessionCreated;
         public event EventHandler<ChunkUploadedEventArgs> ChunkUploaded;
@@ -35,16 +60,23 @@ namespace AdvanceFileUpload.Client
         public event EventHandler<UploadProgressChangedEventArgs> UploadProgressChanged;
 
 
-        public FileUploadService(HttpClient httpClient,IFileProcessor fileProcessor , IFileCompressor fileCompressor, UploadOptions uploadOptions, CancellationToken cancellationToken)
+        public FileUploadService(Uri apiBaseAddress, UploadOptions uploadOptions)
         {
-            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
-            this._fileProcessor = fileProcessor;
-            this._fileCompressor = fileCompressor;
-            _uploadOptions = uploadOptions ?? throw new ArgumentNullException(nameof(uploadOptions));
-            _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+            if (apiBaseAddress is null)
+            {
+                throw new ArgumentNullException(nameof(apiBaseAddress));
+            }
+
+            if (uploadOptions is null)
+            {
+                throw new ArgumentNullException(nameof(uploadOptions));
+            }
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = apiBaseAddress;
+            _uploadOptions = uploadOptions;
         }
 
-        public async Task UploadFile(string filePath)
+        public async Task UploadFileAsync(string filePath, CancellationToken cancellationToken)
         {
             if (string.IsNullOrWhiteSpace(filePath))
             {
@@ -52,82 +84,107 @@ namespace AdvanceFileUpload.Client
             }
             if (!File.Exists(filePath))
             {
-                throw new ApplicationException("the file do not exist");
+                throw new ApplicationException("The file does not exist");
             }
-            var fileInfo = new FileInfo(filePath);
-            CreateUploadSessionRequest requestBody = new() { FileName = fileInfo.Name, FileExtension = fileInfo.Extension, FileSize = fileInfo.Length, Compression = _uploadOptions.CompressionOption };
 
-            var createUploadSessionHttpResponse = await _httpClient.PostAsJsonAsync<CreateUploadSessionRequest>(RouteTemplates.CreateSession, requestBody, _cancellationTokenSource.Token);
-            if (createUploadSessionHttpResponse != null)
+            _cancellationTokenSource = CancellationTokenSource.CreateLinkedTokenSource(cancellationToken);
+
+            // Compress the file if compression is enabled
+            if (_uploadOptions.CompressionOption != null)
             {
-                createUploadSessionHttpResponse.EnsureSuccessStatusCode();
-                var createUploadSessionResponse = await createUploadSessionHttpResponse.Content.ReadFromJsonAsync<CreateUploadSessionResponse>();
-                OnSessionCreated(SessionCreatedEventArgs.Create(createUploadSessionResponse));
-
-                // start Upload Chunks
-                var chunkSize = createUploadSessionResponse.MaxChunkSize;
-                var totalChunks = createUploadSessionResponse.TotalChunksToUpload;
-                if (_uploadOptions.CompressionOption!=null)
-                {
-                    await _fileCompressor.CompressFileAsync(filePath, _uploadOptions.TempDirectory, _uploadOptions.CompressionOption.Algorithm, _uploadOptions.CompressionOption.Level, _cancellationTokenSource.Token);
-                    string compressedFilePath = Path.Combine(_uploadOptions.TempDirectory, $"{fileInfo.Name}.gz");
-                  List<string> chunks=  await _fileProcessor.SplitFileIntoChunksAsync(compressedFilePath, chunkSize, _uploadOptions.TempDirectory, _cancellationTokenSource.Token);
-                    foreach (var chunk in chunks)
-                    {
-                        var chunkIndex = chunks.IndexOf(chunk);
-                        byte[] chunkData = await File.ReadAllBytesAsync(chunk, _cancellationTokenSource.Token);
-                        var uploadChunkRequest = new UploadChunkRequest() { SessionId = createUploadSessionResponse.SessionId,ChunkIndex = chunkIndex,ChunkData=chunkData};
-                        var uploadChunkHttpResponse = await _httpClient.PostAsJsonAsync<UploadChunkRequest>(RouteTemplates.UploadChunk,uploadChunkRequest, _cancellationTokenSource.Token);
-                        if (uploadChunkHttpResponse != null)
-                        {
-                            uploadChunkHttpResponse.EnsureSuccessStatusCode();
-                            OnChunkUploaded(new ChunkUploadedEventArgs(createUploadSessionResponse.SessionId, chunkIndex, chunkSize));
-                        }
-                    }
-                  var completeSessionHttpResponse= await _httpClient.PostAsJsonAsync(RouteTemplates.CompleteSession,createUploadSessionResponse.SessionId, _cancellationTokenSource.Token);
-                    if (completeSessionHttpResponse != null)
-                    {
-                        completeSessionHttpResponse.EnsureSuccessStatusCode();
-                        OnSessionCompleted(new SessionCompletedEventArgs(createUploadSessionResponse.SessionId,fileInfo.Name, createUploadSessionResponse.FileSize));
-
-                    }
-                }
-                else
-                {
-                    List<string> chunks = await _fileProcessor.SplitFileIntoChunksAsync(filePath, chunkSize, _uploadOptions.TempDirectory, _cancellationTokenSource.Token);
-                    foreach (var chunk in chunks)
-                    {
-                        var chunkIndex = chunks.IndexOf(chunk);
-                        byte[] chunkData = await File.ReadAllBytesAsync(chunk, _cancellationTokenSource.Token);
-                        var uploadChunkRequest = new UploadChunkRequest() { SessionId = createUploadSessionResponse.SessionId, ChunkIndex = chunkIndex, ChunkData = chunkData };
-                        var uploadChunkHttpResponse = await _httpClient.PostAsJsonAsync<UploadChunkRequest>(RouteTemplates.UploadChunk, uploadChunkRequest, _cancellationTokenSource.Token);
-                        if (uploadChunkHttpResponse != null)
-                        {
-                            uploadChunkHttpResponse.EnsureSuccessStatusCode();
-                            OnChunkUploaded(new ChunkUploadedEventArgs(createUploadSessionResponse.SessionId, chunkIndex, chunkSize));
-                        }
-                    }
-                    var completeSessionHttpResponse = await _httpClient.PostAsJsonAsync(RouteTemplates.CompleteSession, createUploadSessionResponse.SessionId, _cancellationTokenSource.Token);
-                    if (completeSessionHttpResponse != null)
-                    {
-                        completeSessionHttpResponse.EnsureSuccessStatusCode();
-                        OnSessionCompleted(new SessionCompletedEventArgs(createUploadSessionResponse.SessionId, fileInfo.Name, createUploadSessionResponse.FileSize));
-
-                    }
-                }
+                _compressedFilePath = Path.Combine(_uploadOptions.TempDirectory, $"{Path.GetFileNameWithoutExtension(filePath)}.compressed");
+                await _fileCompressor.CompressFileAsync(filePath, _uploadOptions.TempDirectory, _uploadOptions.CompressionOption.Algorithm, _uploadOptions.CompressionOption.Level, _cancellationTokenSource.Token);
+                filePath = _compressedFilePath;
             }
 
+            // Create upload session
+            var createSessionRequest = new CreateUploadSessionRequest
+            {
+                FileName = Path.GetFileName(filePath),
+                FileSize = new FileInfo(filePath).Length,
+                FileExtension = Path.GetExtension(filePath),
+                Compression = _uploadOptions.CompressionOption
+            };
+
+            var createSessionResponse = await _httpClient.PostAsJsonAsync(RouteTemplates.CreateSession, createSessionRequest, _cancellationTokenSource.Token);
+            createSessionResponse.EnsureSuccessStatusCode();
+            var sessionResponse = await createSessionResponse.Content.ReadFromJsonAsync<CreateUploadSessionResponse>();
+
+            if (sessionResponse == null)
+            {
+                throw new ApplicationException("Failed to create upload session");
+            }
+
+            _sessionId = sessionResponse.SessionId;
+            _chunkSize = sessionResponse.MaxChunkSize;
+            _totalChunksToUpload = sessionResponse.TotalChunksToUpload;
+            _originalFilePath = filePath;
+
+            OnSessionCreated(SessionCreatedEventArgs.Create(sessionResponse));
+
+            // Split file into chunks
+            var chunkPaths = await _fileProcessor.SplitFileIntoChunksAsync(filePath, _chunkSize, _uploadOptions.TempDirectory, _cancellationTokenSource.Token);
+
+            // Upload chunks in parallel
+            var uploadTasks = chunkPaths.Select((chunkPath, index) => UploadChunkAsync(chunkPath, index, _cancellationTokenSource.Token)).ToArray();
+            await Task.WhenAll(uploadTasks);
+
+            // Complete upload session
+            var completeResponse = await _httpClient.PostAsync($"api/fileupload/complete-session/{_sessionId}", null, _cancellationTokenSource.Token);
+            completeResponse.EnsureSuccessStatusCode();
+
+            OnSessionCompleted(new SessionCompletedEventArgs(_sessionId, Path.GetFileName(filePath), new FileInfo(filePath).Length));
         }
 
-        public async Task PauseUpload()
+        private async Task UploadChunkAsync(string chunkPath, int chunkIndex, CancellationToken cancellationToken)
         {
-            await _cancellationTokenSource.CancelAsync();
-        }
-        public async Task ResumeUpload()
-        {
-            throw new NotImplementedException();
+            var chunkData = await File.ReadAllBytesAsync(chunkPath, cancellationToken);
+            var uploadChunkRequest = new UploadChunkRequest
+            {
+                SessionId = _sessionId,
+                ChunkIndex = chunkIndex,
+                ChunkData = chunkData
+            };
+
+            var response = await _httpClient.PostAsJsonAsync(RouteTemplates.UploadChunk, uploadChunkRequest, cancellationToken);
+            response.EnsureSuccessStatusCode();
+
+            OnChunkUploaded(new ChunkUploadedEventArgs(_sessionId, chunkIndex, chunkData.Length));
         }
 
+        public async Task PauseUploadAsync()
+        {
+             await _cancellationTokenSource.CancelAsync();
+            OnSessionPaused(new SessionPausedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), _originalFileSize));
+        }
+
+        public async Task ResumeUploadAsync(CancellationToken cancellationToken)
+        {
+            _cancellationTokenSource = new CancellationTokenSource();
+            OnSessionResumed(new SessionResumedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), _originalFileSize));
+
+            // Get the status of the upload session
+            var statusResponse = await _httpClient.GetFromJsonAsync<UploadSessionStatusResponse>($"{RouteTemplates.SessionStatus}{_sessionId}", _cancellationTokenSource.Token);
+            if (statusResponse == null || statusResponse.RemainChunks == null || !statusResponse.RemainChunks.Any())
+            {
+                throw new ApplicationException("Failed to get upload session status or no remaining chunks to upload");
+            }
+
+            // Upload remaining chunks in parallel
+            var remainingChunkPaths = statusResponse.RemainChunks.Select(index => _chunksToUpload[index]).ToList();
+            var uploadTasks = remainingChunkPaths.Select((chunkPath, index) => UploadChunkAsync(chunkPath, statusResponse.RemainChunks[index], _cancellationTokenSource.Token)).ToArray();
+            await Task.WhenAll(uploadTasks);
+
+            // Complete upload session
+            await  CompleteUpload();
+        }
+
+        private async Task CompleteUpload()
+        {
+            var completeResponse = await _httpClient.PostAsync($"{RouteTemplates.CompleteSession}{_sessionId}", null, _cancellationTokenSource.Token);
+            completeResponse.EnsureSuccessStatusCode();
+            OnSessionCompleted(new SessionCompletedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), new FileInfo(_originalFilePath).Length));
+        }
         protected virtual void OnSessionCreated(SessionCreatedEventArgs e)
         {
             SessionCreated?.Invoke(this, e);
@@ -157,12 +214,33 @@ namespace AdvanceFileUpload.Client
             UploadProgressChanged?.Invoke(this, e);
         }
 
-    }
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!disposedValue)
+            {
+                if (disposing)
+                {
+                    // TODO: dispose managed state (managed objects)
+                }
 
-    public class UploadOptions
-    {
-        public CompressionOption? CompressionOption { get; set; }
-        public string TempDirectory { get; set; }
+                // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+                // TODO: set large fields to null
+                disposedValue = true;
+            }
+        }
 
+        // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+        // ~FileUploadService()
+        // {
+        //     // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        //     Dispose(disposing: false);
+        // }
+
+        public void Dispose()
+        {
+            // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+            Dispose(disposing: true);
+            GC.SuppressFinalize(this);
+        }
     }
 }

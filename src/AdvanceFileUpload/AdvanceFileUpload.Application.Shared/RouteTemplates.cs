@@ -29,7 +29,7 @@ namespace AdvanceFileUpload.Application.Shared
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string CompleteSession ="complete-session/{sessionId}";
+        public const string CompleteSession ="complete-session/";
 
         /// <summary>
         /// The route for uploading a chunk of a file.
@@ -42,7 +42,7 @@ namespace AdvanceFileUpload.Application.Shared
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string SessionStatus = "session-status/{sessionId}";
+        public const string SessionStatus = "session-status/";
 
         /// <summary>
         /// The route for canceling an upload session.
@@ -50,7 +50,7 @@ namespace AdvanceFileUpload.Application.Shared
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string CancelSession = "cancel-session/{sessionId}";
+        public const string CancelSession = "cancel-session/";
 
         /// <summary>
         /// The route for pausing an upload session.
@@ -58,7 +58,7 @@ namespace AdvanceFileUpload.Application.Shared
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string PauseSession = "pause-session/{sessionId}";
+        public const string PauseSession = "pause-session/";
     }
     
 
