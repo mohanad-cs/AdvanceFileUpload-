@@ -1,9 +1,9 @@
 ﻿namespace AdvanceFileUpload.Application.Response
 {
     /// <summary>
-    /// Represents the status response of an upload session.
+    ///  Represent the status of the upload session Notification.
     /// </summary>
-    public sealed record UploadSessionStatusResponse
+    public sealed record UploadSessionStatusNotification
     {
         /// <summary>
         /// Gets the unique identifier of the upload session.

@@ -9,8 +9,9 @@ namespace AdvanceFileUpload.Client
     public interface IFileUploadService
     {
 
-        Task UploadFileAsync(string filePath, CancellationToken cancellationToken);
+        Task UploadFileAsync(string filePath);
         Task PauseUploadAsync();
-        Task ResumeUploadAsync(CancellationToken cancellationToken);
+        Task ResumeUploadAsync();
+        Task CancelUploadAsync();
     }
 }

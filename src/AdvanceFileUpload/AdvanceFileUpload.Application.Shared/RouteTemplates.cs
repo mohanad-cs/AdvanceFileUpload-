@@ -59,6 +59,7 @@ namespace AdvanceFileUpload.Application.Shared
         /// Requires a session ID.
         /// </remarks>
         public const string PauseSession = "pause-session/";
+        public const string UploadProcessHub = "api/UploadProcessHub/";
     }
     
 

@@ -167,7 +167,7 @@ namespace AdvanceFileUpload.Domain.Test
             Assert.NotNull(response);
             Assert.Equal(session.Id, response.SessionId);
             Assert.Equal(session.FileSize, response.FileSize);
-            Assert.Equal(session.MaxChunkSize, response.MaxMaxChunkSize);
+            Assert.Equal(session.MaxChunkSize, response.MaxChunkSize);
             Assert.Equal(session.TotalChunksToUpload, response.TotalChunksToUpload);
             Assert.Equal(session.Status, (FileUploadSessionStatus)response.UploadStatus);
         }

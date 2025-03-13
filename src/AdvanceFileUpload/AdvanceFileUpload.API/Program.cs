@@ -1,5 +1,8 @@
+using AdvanceFileUpload.API.Hubs;
 using AdvanceFileUpload.API.Middleware;
 using AdvanceFileUpload.API.ServiceConfiguration;
+using AdvanceFileUpload.Application.Hubs;
+using AdvanceFileUpload.Application.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSignalR();
+
+   
+
+
 
 var app = builder.Build();
 
@@ -26,5 +34,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHub<UploadProcessHub>(RouteTemplates.UploadProcessHub);
 
 app.Run();
