@@ -1,4 +1,3 @@
-using AdvanceFileUpload.API.Hubs;
 using AdvanceFileUpload.API.Middleware;
 using AdvanceFileUpload.API.ServiceConfiguration;
 using AdvanceFileUpload.Application.Hubs;

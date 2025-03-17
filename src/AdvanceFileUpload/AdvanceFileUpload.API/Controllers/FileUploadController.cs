@@ -1,5 +1,4 @@
-﻿using AdvanceFileUpload.API.Hubs;
-using AdvanceFileUpload.Application;
+﻿using AdvanceFileUpload.Application;
 using AdvanceFileUpload.Application.Request;
 using AdvanceFileUpload.Application.Response;
 using AdvanceFileUpload.Application.Shared;
@@ -15,7 +14,7 @@ namespace AdvanceFileUpload.API.Controllers
     {
         private readonly IUploadManger _uploadManager;
 
-        public FileUploadController(IUploadManger uploadManager , IHubCallerClients<UploadProcessHub> hubContext)
+        public FileUploadController(IUploadManger uploadManager)
         {
             _uploadManager = uploadManager ?? throw new ArgumentNullException(nameof(uploadManager));
         }

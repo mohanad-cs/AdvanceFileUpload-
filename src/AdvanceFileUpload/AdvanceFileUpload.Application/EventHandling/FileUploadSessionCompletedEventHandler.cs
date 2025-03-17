@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 
 namespace AdvanceFileUpload.Application.EventHandling
 {
+    //TODO: Implement the functionality of publishing to RabbitMQ
     public sealed class FileUploadSessionCompletedEventHandler : INotificationHandler<FileUploadSessionCompletedEvent>
     {
 
@@ -39,35 +40,22 @@ namespace AdvanceFileUpload.Application.EventHandling
             {
                 throw new ArgumentNullException(nameof(notification));
             }
+
+            var chunkPaths = notification.FileUploadSession.ChunkFiles.OrderBy(x => x.ChunkIndex).Select(x => x.ChunkPath).ToList();
+            var outputFilePath = Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName);
+
+            await _fileProcessor.ConcatenateChunksAsync(chunkPaths, outputFilePath, cancellationToken);
+
+            foreach (var chunk in notification.FileUploadSession.ChunkFiles)
+            {
+                File.Delete(chunk.ChunkPath);
+            }
+
             if (notification.FileUploadSession.UseCompression)
             {
-               await _fileCompressor.DecompressFilesAsync(notification.FileUploadSession.ChunkFiles.OrderBy(x => x.ChunkIndex).Select(x => x.ChunkPath).ToArray(),
-                                                          _uploadSetting.TempDirectory,
-                                                          (CompressionAlgorithmOption)notification.FileUploadSession.CompressionAlgorithm,
-                                                          cancellationToken);
-                List<string> decompressedchunkFiles = new List<string>();
-                foreach (var chunk in notification.FileUploadSession.ChunkFiles)
-                {
-                    decompressedchunkFiles.Add(Path.Combine(_uploadSetting.TempDirectory, Path.GetFileName(chunk.ChunkPath.Replace(".gz",string.Empty))));
-                }
-               await _fileProcessor.ConcatenateChunksAsync(decompressedchunkFiles,
-                                                           Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName),
-                                                           cancellationToken);
-                foreach (var chunk in notification.FileUploadSession.ChunkFiles)
-                {
-                    File.Delete(chunk.ChunkPath);
-                }
-            }
-            else
-            {
-               
-                await _fileProcessor.ConcatenateChunksAsync(notification.FileUploadSession.ChunkFiles.Select(x=>x.ChunkPath).ToList(),
-                                                            Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName),
-                                                            cancellationToken);
-                foreach (var chunk in notification.FileUploadSession.ChunkFiles)
-                {
-                    File.Delete(chunk.ChunkPath);
-                }
+                await _fileCompressor.DecompressFileAsync(outputFilePath, _uploadSetting.TempDirectory, (CompressionAlgorithmOption)notification.FileUploadSession.CompressionAlgorithm, cancellationToken);
+                var decompressedFilePath = Path.Combine(_uploadSetting.TempDirectory, Path.GetFileName(outputFilePath.Replace(".gz", string.Empty)));
+                File.Move(decompressedFilePath, outputFilePath, true);
             }
         }
     }

@@ -94,6 +94,10 @@ namespace AdvanceFileUpload.Domain
         /// Gets a value indicating whether compression is used.
         /// </summary>
         public bool UseCompression => CompressionAlgorithm != null;
+        /// <summary>
+        /// Gets the current hub connection id.
+        /// </summary>
+        public string? CurrentHubConnectionId { get; set; }
 
         /// <summary>
         /// Gets the collection of chunk files.

@@ -19,5 +19,9 @@
         /// Gets the data of the chunk being uploaded.
         /// </summary>
         public required byte[] ChunkData { get; init; }
+        /// <summary>
+        /// Gets the unique identifier of the hub connection.
+        /// </summary>
+        public  string? HubConnectionId { get; init; }
     }
 }

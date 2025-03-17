@@ -33,5 +33,9 @@
         /// Gets a value indicating whether compression is used.
         /// </summary>
         public bool UseCompression => Compression != null;
+        /// <summary>
+        /// Gets the unique identifier of the hub connection.
+        /// </summary>
+        public  string? HubConnectionId { get; init; }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using AdvanceFileUpload.Application;
+using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.EventHandling;
 using AdvanceFileUpload.Application.FileProcessing;
+using AdvanceFileUpload.Application.Hubs;
 using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
@@ -19,6 +21,9 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
             services.AddSingleton<IFileValidator, FileValidator>();
             services.AddScoped<IFileProcessor, FileProcessor>();
             services.AddScoped<IUploadManger, UploadManger>();
+            services.AddScoped<IFileCompressor, FileCompressor>();
+            services.AddScoped<IUploadProcessNotifier, UploadProcessNotifier>();
+            services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
             services.AddMediatR((op) =>
             {
                 op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
