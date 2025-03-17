@@ -15,7 +15,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Gets the name of the file being uploaded.
         /// </summary>
-        public  string FileName { get; private set; }
+        public string FileName { get; private set; }
 
         /// <summary>
         /// Gets the file extension of the file being uploaded.
@@ -113,10 +113,10 @@ namespace AdvanceFileUpload.Domain
         /// <param name="maxChunkSize">The maximum size of each chunk.</param>
         /// <param name="compressionAlgorithm">The compression Algorithm for the file being uploaded.</param>
         /// <param name="compressionLevel">The compression level for the file being uploaded.</param>
-        public FileUploadSession(string fileName, string savingDirectory, long fileSize, long maxChunkSize, CompressionAlgorithm? compressionAlgorithm =null , CompressionLevel? compressionLevel =null) : base()
+        public FileUploadSession(string fileName, string savingDirectory, long fileSize, long maxChunkSize, CompressionAlgorithm? compressionAlgorithm = null, CompressionLevel? compressionLevel = null) : base()
         {
             ValidateParameters(fileName, savingDirectory, fileSize, maxChunkSize);
-            InitializeProperties(fileName, savingDirectory, fileSize, maxChunkSize, compressionAlgorithm,compressionLevel);
+            InitializeProperties(fileName, savingDirectory, fileSize, maxChunkSize, compressionAlgorithm, compressionLevel);
             AddDomainEvent(new FileUploadSessionCreatedEvent(this));
         }
 

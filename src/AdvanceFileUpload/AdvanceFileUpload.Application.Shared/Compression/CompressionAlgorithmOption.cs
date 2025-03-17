@@ -5,7 +5,7 @@
     /// </summary>
     public enum CompressionAlgorithmOption
     {
-       
+
         /// <summary>
         /// GZip compression algorithm.
         /// Benefits: Good compression ratio and speed, widely supported.

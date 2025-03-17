@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
-using AdvanceFileUpload.Domain;
+﻿using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using System.Linq.Expressions;
 
 namespace AdvanceFileUpload.Data
 {
@@ -25,7 +20,7 @@ namespace AdvanceFileUpload.Data
         /// <param name="context">The Application Db Context</param>
         /// <param name="logger"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public FileUploadSessionRepository(ApploicationDbContext context , ILogger<FileUploadSessionRepository> logger)
+        public FileUploadSessionRepository(ApploicationDbContext context, ILogger<FileUploadSessionRepository> logger)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -133,7 +128,7 @@ namespace AdvanceFileUpload.Data
                 throw new InvalidOperationException($"Entity with id {entity.Id} not found.");
             }
 
-           _dbSet.Entry(existingEntity).CurrentValues.SetValues(entity);
+            _dbSet.Entry(existingEntity).CurrentValues.SetValues(entity);
             return existingEntity;
         }
     }

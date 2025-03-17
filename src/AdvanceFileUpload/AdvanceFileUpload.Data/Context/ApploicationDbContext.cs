@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-using AdvanceFileUpload.Domain;
+﻿using AdvanceFileUpload.Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace AdvanceFileUpload.Data
@@ -21,11 +15,11 @@ namespace AdvanceFileUpload.Data
             // file upload session entity builder
             var fileUploadSessionBuilder = modelBuilder.Entity<FileUploadSession>();
             fileUploadSessionBuilder.ToTable("FileUploadSessions").HasKey(f => f.Id).HasName("PK_FileUploadSession");
-                fileUploadSessionBuilder
-                .HasMany(f => f.ChunkFiles)
-                .WithOne()
-                .HasForeignKey(c => c.SessionId).HasConstraintName("FK_FileUploadSession_ChunkFiles")
-                .OnDelete(DeleteBehavior.Cascade).IsRequired();
+            fileUploadSessionBuilder
+            .HasMany(f => f.ChunkFiles)
+            .WithOne()
+            .HasForeignKey(c => c.SessionId).HasConstraintName("FK_FileUploadSession_ChunkFiles")
+            .OnDelete(DeleteBehavior.Cascade).IsRequired();
 
             fileUploadSessionBuilder.Property(f => f.FileName).IsRequired().HasMaxLength(200);
             // Windows max path length as per https://docs.microsoft.com/en-us/windows/win32/fileio/naming-a-file
@@ -44,7 +38,7 @@ namespace AdvanceFileUpload.Data
 
             // chunk file entity builder
             var chunkFileBuilder = modelBuilder.Entity<ChunkFile>();
-            chunkFileBuilder.ToTable("ChunkFiles").HasKey(c=>new { c.SessionId,c.ChunkIndex }).HasName("PK_ChunkFile");
+            chunkFileBuilder.ToTable("ChunkFiles").HasKey(c => new { c.SessionId, c.ChunkIndex }).HasName("PK_ChunkFile");
             chunkFileBuilder.Property(c => c.SessionId).IsRequired();
             chunkFileBuilder.Property(c => c.ChunkIndex).IsRequired();
             chunkFileBuilder.Property(c => c.ChunkPath).IsRequired().HasMaxLength(256);

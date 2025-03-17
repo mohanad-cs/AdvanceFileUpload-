@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography;
-
-namespace AdvanceFileUpload.Application.Validators
+﻿namespace AdvanceFileUpload.Application.Validators
 {
     /// <summary>
     /// Represents a chunk validator.
@@ -23,6 +21,6 @@ namespace AdvanceFileUpload.Application.Validators
             return chunkSize > 0 && chunkSize <= maxChunkSize;
         }
 
-      
+
     }
 }

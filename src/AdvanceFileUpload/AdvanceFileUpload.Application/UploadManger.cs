@@ -6,7 +6,6 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
-using MediatR;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
@@ -41,7 +40,7 @@ namespace AdvanceFileUpload.Application
         /// <exception cref="ArgumentNullException">
         /// Thrown when any of the parameters are null.
         /// </exception>
-        public UploadManger(IRepository<FileUploadSession> repository, IDomainEventPublisher domainEventPublisher, IFileValidator fileValidator, IChunkValidator chunkValidator, IOptions<UploadSetting> uploadSetting, IFileProcessor fileProcessor , IFileCompressor fileCompressor, ILogger<UploadManger> logger)
+        public UploadManger(IRepository<FileUploadSession> repository, IDomainEventPublisher domainEventPublisher, IFileValidator fileValidator, IChunkValidator chunkValidator, IOptions<UploadSetting> uploadSetting, IFileProcessor fileProcessor, IFileCompressor fileCompressor, ILogger<UploadManger> logger)
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _domainEventPublisher = domainEventPublisher ?? throw new ArgumentNullException(nameof(domainEventPublisher));
@@ -117,7 +116,7 @@ namespace AdvanceFileUpload.Application
             {
                 throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
-            
+
             session.CompleteSession();
             await _repository.UpdateAsync(session);
             await _repository.SaveChangesAsync(cancellationToken);
@@ -232,7 +231,7 @@ namespace AdvanceFileUpload.Application
         ///<inheritdoc/>
         public async Task<bool> PauseUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Pausing the file upload session id {sessionId} ",sessionId);
+            _logger.LogInformation("Pausing the file upload session id {sessionId} ", sessionId);
             if (sessionId == Guid.Empty)
             {
                 throw new ApplicationException("the session Id is Not Valid");
@@ -250,7 +249,7 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation("The file upload session  With Session Id [{sessionId}], has been paused successfully",session.Id);
+            _logger.LogInformation("The file upload session  With Session Id [{sessionId}], has been paused successfully", session.Id);
             return true;
 
         }

@@ -1,5 +1,4 @@
 ﻿using AdvanceFileUpload.Application.Request;
-using System.Reflection;
 
 namespace AdvanceFileUpload.Client
 {

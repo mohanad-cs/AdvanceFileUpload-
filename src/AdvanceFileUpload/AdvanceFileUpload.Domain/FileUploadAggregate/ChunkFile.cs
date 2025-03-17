@@ -1,6 +1,4 @@
-﻿using AdvanceFileUpload.Domain.Core;
-
-namespace AdvanceFileUpload.Domain
+﻿namespace AdvanceFileUpload.Domain
 {
     /// <summary>
     /// Represents a chunk file in a file upload session.
@@ -55,7 +53,7 @@ namespace AdvanceFileUpload.Domain
             SessionId = sessionId;
             ChunkIndex = chunkIndex;
             ChunkPath = chunkPath;
-            ChunkSize= new FileInfo(chunkPath).Length;
+            ChunkSize = new FileInfo(chunkPath).Length;
         }
     }
 }

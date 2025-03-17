@@ -22,6 +22,6 @@
         /// <summary>
         /// Gets the unique identifier of the hub connection.
         /// </summary>
-        public  string? HubConnectionId { get; init; }
+        public string? HubConnectionId { get; init; }
     }
 }

@@ -3,7 +3,7 @@
     /// <summary>
     /// Represents a file validator.
     /// </summary>
-    public  class FileValidator : IFileValidator
+    public class FileValidator : IFileValidator
     {
         // a list of invalid file names characters
         private static readonly char[] _invalidFileNameChars = ['<', '>', ':', '"', '/', '\\', '|', '?', '*'];
@@ -23,7 +23,7 @@
         ///<inheritdoc/>
         public bool IsValidFileSize(long fileSize, long maxFileSize)
         {
-           return fileSize>0 && fileSize <= maxFileSize;
+            return fileSize > 0 && fileSize <= maxFileSize;
         }
         ///<inheritdoc/>
         public bool IsValidFileExtension(string fileExtension, string[] allowedExtensions)

@@ -1,10 +1,4 @@
-﻿using AdvanceFileUpload.Application.Request;
-using AdvanceFileUpload.Application.Response;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AdvanceFileUpload.Application.Response;
 
 namespace AdvanceFileUpload.Client
 {
@@ -40,7 +34,7 @@ namespace AdvanceFileUpload.Client
         /// </summary>
         public DateTime SessionStartDate { get; init; }
 
-      
+
 
         public static SessionCreatedEventArgs Create(CreateUploadSessionResponse createUploadSessionResponse)
         {

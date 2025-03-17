@@ -1,5 +1,5 @@
-﻿using System.Net;
-using AdvanceFileUpload.Domain.Core;
+﻿using AdvanceFileUpload.Domain.Core;
+using System.Net;
 
 namespace AdvanceFileUpload.API.Middleware
 {

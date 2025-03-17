@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AdvanceFileUpload.Domain;
+﻿using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +16,7 @@ namespace AdvanceFileUpload.Data
         /// <param name="connectionString">The connection string for the database.</param>
         public static void ConfigureDataServices(this IServiceCollection services, string? connectionString)
         {
-            if ( string.IsNullOrWhiteSpace(connectionString))
+            if (string.IsNullOrWhiteSpace(connectionString))
             {
                 throw new ArgumentException($"'{nameof(connectionString)}' cannot be null or whitespace.", nameof(connectionString));
             }

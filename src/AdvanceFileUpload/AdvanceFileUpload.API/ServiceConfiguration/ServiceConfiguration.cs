@@ -7,7 +7,6 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
 using AdvanceFileUpload.Domain.Core;
-using MediatR;
 
 namespace AdvanceFileUpload.API.ServiceConfiguration
 {

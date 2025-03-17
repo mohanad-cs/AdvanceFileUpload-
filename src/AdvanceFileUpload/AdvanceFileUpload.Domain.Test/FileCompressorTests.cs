@@ -1,9 +1,7 @@
 ﻿using AdvanceFileUpload.Application.Compression;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System.IO.Compression;
 using System.Text;
-using Xunit;
 
 namespace AdvanceFileUpload.Domain.Test
 {
@@ -23,13 +21,13 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CompressFileAsync_ShouldCompressFile()
         {
             // Arrange
-            string inputFilePath = Path.Combine(_tempDirectory,"test.txt");
+            string inputFilePath = Path.Combine(_tempDirectory, "test.txt");
             string outputDirectory = _tempDirectory;
             var compressionAlgorithm = CompressionAlgorithmOption.Brotli;
             var compressionLevel = CompressionLevelOption.Optimal;
 
             // Create a test file
-            await File.WriteAllTextAsync(inputFilePath, GenerateRandomText(1024*1024*2));
+            await File.WriteAllTextAsync(inputFilePath, GenerateRandomText(1024 * 1024 * 2));
 
             // Act
             await _fileCompressor.CompressFileAsync(inputFilePath, outputDirectory, compressionAlgorithm, compressionLevel);
@@ -74,7 +72,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CompressFilesAsync_ShouldCompressMultipleFiles()
         {
             // Arrange
-            string[] inputFilePaths = {Path.Combine(_tempDirectory,"test1.txt"), Path.Combine(_tempDirectory, "test2.txt") };
+            string[] inputFilePaths = { Path.Combine(_tempDirectory, "test1.txt"), Path.Combine(_tempDirectory, "test2.txt") };
             string outputDirectory = _tempDirectory;
             var compressionAlgorithm = CompressionAlgorithmOption.GZip;
             var compressionLevel = CompressionLevelOption.Optimal;

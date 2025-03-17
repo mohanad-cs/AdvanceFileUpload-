@@ -1,6 +1,4 @@
-﻿using AdvanceFileUpload.Application.Compression;
-
-namespace AdvanceFileUpload.Application.Validators
+﻿namespace AdvanceFileUpload.Application.Validators
 {
 
     ///<summary>

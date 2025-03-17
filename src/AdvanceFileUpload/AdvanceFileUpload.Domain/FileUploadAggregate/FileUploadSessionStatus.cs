@@ -8,7 +8,7 @@
         /// <summary>
         /// The file upload session is in progress.
         /// </summary>
-        InProgress=1,
+        InProgress = 1,
         /// <summary>
         /// The file upload session is paused.
         /// </summary>

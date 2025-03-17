@@ -3,17 +3,8 @@ using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Request;
 using AdvanceFileUpload.Application.Response;
 using AdvanceFileUpload.Application.Shared;
-using AdvanceFileUpload.Client.HttpExtensions;
 using Microsoft.AspNetCore.SignalR.Client;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http.Json;
-using System.Text;
-using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AdvanceFileUpload.Client
 {
@@ -94,8 +85,8 @@ namespace AdvanceFileUpload.Client
                 FileSize = new FileInfo(filePath).Length,
                 FileExtension = Path.GetExtension(filePath),
                 Compression = _uploadOptions.CompressionOption,
-                HubConnectionId=_hubConnectionsId,
-                
+                HubConnectionId = _hubConnectionsId,
+
             };
 
             var createSessionResponse = await _httpClient.PostAsJsonAsync(RouteTemplates.CreateSession, createSessionRequest, _cancellationTokenSource.Token).ConfigureAwait(false);

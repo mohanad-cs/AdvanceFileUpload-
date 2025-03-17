@@ -1,5 +1,4 @@
-﻿using AdvanceFileUpload.Domain;
-using AdvanceFileUpload.Domain.Events;
+﻿using AdvanceFileUpload.Domain.Events;
 using MediatR;
 
 namespace AdvanceFileUpload.Application.EventHandling

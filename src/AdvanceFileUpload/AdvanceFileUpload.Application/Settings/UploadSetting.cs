@@ -29,6 +29,6 @@
         /// <inheritdoc />
         public required string TempDirectory { get; set; }
         ///<inheritdoc/>
-        public bool EnableCompression { get ; set ; }
+        public bool EnableCompression { get; set; }
     }
 }

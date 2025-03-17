@@ -119,7 +119,7 @@ namespace AdvanceFileUpload.Domain.Test
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
-           // await File.WriteAllBytesAsync(Path.Combine(_uploadSetting.Value.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"), request.ChunkData);
+            // await File.WriteAllBytesAsync(Path.Combine(_uploadSetting.Value.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"), request.ChunkData);
 
             var uploadManager = new UploadManger(
                 _repositoryMock.Object,

@@ -8,7 +8,7 @@
     /// </summary>
     public sealed record CreateUploadSessionRequest
     {
-       
+
         /// <summary>
         /// Gets the name of the file to be uploaded.
         /// </summary>
@@ -36,6 +36,6 @@
         /// <summary>
         /// Gets the unique identifier of the hub connection.
         /// </summary>
-        public  string? HubConnectionId { get; init; }
+        public string? HubConnectionId { get; init; }
     }
 }

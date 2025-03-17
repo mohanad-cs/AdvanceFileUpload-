@@ -14,7 +14,7 @@ namespace AdvanceFileUpload.Application.EventHandling
         private readonly IRepository<FileUploadSession> _fileUploadSessionRepository;
         private readonly IUploadProcessNotifier _uploadProcessNotifier;
         private readonly ILogger<ChunkUploadedEventHandler> _logger;
-        public ChunkUploadedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository,  IUploadProcessNotifier uploadProcessNotifier ,ILogger<ChunkUploadedEventHandler> logger)
+        public ChunkUploadedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IUploadProcessNotifier uploadProcessNotifier, ILogger<ChunkUploadedEventHandler> logger)
         {
             _fileUploadSessionRepository = fileUploadSessionRepository ?? throw new ArgumentNullException(nameof(fileUploadSessionRepository));
             _uploadProcessNotifier = uploadProcessNotifier ?? throw new ArgumentNullException(nameof(uploadProcessNotifier));
@@ -45,7 +45,7 @@ namespace AdvanceFileUpload.Application.EventHandling
                 TotalUploadedChunks = fileUploadSession.TotalUploadedChunks,
                 UploadStatus = (UploadStatus)fileUploadSession.Status,
             };
-          await  _uploadProcessNotifier.NotifyUploadProgressAsync(fileUploadSession.CurrentHubConnectionId, uploadSessionStatusNotification);
+            await _uploadProcessNotifier.NotifyUploadProgressAsync(fileUploadSession.CurrentHubConnectionId, uploadSessionStatusNotification);
 
         }
     }

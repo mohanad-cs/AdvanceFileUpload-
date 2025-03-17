@@ -22,10 +22,10 @@ namespace AdvanceFileUpload.Application.Compression
         public async Task CompressFileAsync(string inputFilePath, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
         {
             string outputFilePath = Path.Combine(outputDirectory, Path.GetFileName(inputFilePath) + ".gz");
-            await CompressFile(inputFilePath, outputFilePath,compressionAlgorithmOption ,compressionLevelOption , cancellationToken);
+            await CompressFile(inputFilePath, outputFilePath, compressionAlgorithmOption, compressionLevelOption, cancellationToken);
         }
         /// <inheritdoc/>
-        public async Task DecompressFileAsync(string inputFilePath, string outputDirectory,CompressionAlgorithmOption compressionAlgorithmOption , CancellationToken cancellationToken = default)
+        public async Task DecompressFileAsync(string inputFilePath, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default)
         {
             string outputFilePath = Path.Combine(outputDirectory, Path.GetFileNameWithoutExtension(inputFilePath));
             await DecompressFile(inputFilePath, outputFilePath, compressionAlgorithmOption, cancellationToken);
@@ -50,7 +50,7 @@ namespace AdvanceFileUpload.Application.Compression
             await Task.WhenAll(tasks);
         }
         /// <inheritdoc/>
-        public async Task DecompressFilesAsync(string[] inputFilePaths, string outputDirectory,CompressionAlgorithmOption compressionAlgorithmOption , CancellationToken cancellationToken = default)
+        public async Task DecompressFilesAsync(string[] inputFilePaths, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default)
         {
             if (inputFilePaths == null || inputFilePaths.Length == 0)
             {
@@ -66,7 +66,7 @@ namespace AdvanceFileUpload.Application.Compression
             for (int i = 0; i < inputFilePaths.Length; i++)
             {
                 int index = i;
-                tasks[index] = DecompressFileAsync(inputFilePaths[index], outputDirectory,compressionAlgorithmOption, cancellationToken);
+                tasks[index] = DecompressFileAsync(inputFilePaths[index], outputDirectory, compressionAlgorithmOption, cancellationToken);
             }
 
             await Task.WhenAll(tasks);
