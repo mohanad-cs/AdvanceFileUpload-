@@ -6,9 +6,9 @@ namespace AdvanceFileUpload.Application.Hubs
 {
     public class UploadProcessNotifier : IUploadProcessNotifier
     {
-        private readonly IHubActivator<UploadProcessHub> _hubContext;
+        private readonly IHubContext<UploadProcessHub> _hubContext;
         private readonly ILogger<UploadProcessNotifier> _logger;
-        public UploadProcessNotifier(IHubActivator<UploadProcessHub> hubContext, ILogger<UploadProcessNotifier> logger)
+        public UploadProcessNotifier(IHubContext<UploadProcessHub> hubContext, ILogger<UploadProcessNotifier> logger)
         {
             _hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -23,7 +23,7 @@ namespace AdvanceFileUpload.Application.Hubs
             else
             {
                 _logger.LogInformation("Sending upload process notification to connection id {ConnectionId}.", connectionId);
-                await _hubContext.Create().SendUploadProcessNotificationAsync(connectionId, uploadSessionStatusNotification, cancellationToken);
+                await _hubContext.Clients.Client(connectionId).SendAsync(UploadProcessHub.MethodName ,uploadSessionStatusNotification, cancellationToken);
             }
         }
     }

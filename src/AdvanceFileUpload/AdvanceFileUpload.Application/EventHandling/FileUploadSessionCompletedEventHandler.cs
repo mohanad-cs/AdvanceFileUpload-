@@ -41,22 +41,32 @@ namespace AdvanceFileUpload.Application.EventHandling
                 throw new ArgumentNullException(nameof(notification));
             }
 
-            var chunkPaths = notification.FileUploadSession.ChunkFiles.OrderBy(x => x.ChunkIndex).Select(x => x.ChunkPath).ToList();
-            var outputFilePath = Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName);
+            _logger.LogInformation("Handling FileUploadSessionCompletedEvent for session {SessionId}", notification.FileUploadSession.Id);
 
+            var chunkPaths = notification.FileUploadSession.ChunkFiles.OrderBy(x => x.ChunkIndex).Select(x => x.ChunkPath).ToList();
+            string fileNamePostFix = notification.FileUploadSession.UseCompression ? ".gz" : string.Empty;
+            var outputFilePath = Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName + fileNamePostFix);
+
+            _logger.LogInformation("Concatenating chunks for session {SessionId}", notification.FileUploadSession.Id);
             await _fileProcessor.ConcatenateChunksAsync(chunkPaths, outputFilePath, cancellationToken);
 
             foreach (var chunk in notification.FileUploadSession.ChunkFiles)
             {
+                _logger.LogInformation("Deleting chunk file {ChunkPath} for session {SessionId}", chunk.ChunkPath, notification.FileUploadSession.Id);
                 File.Delete(chunk.ChunkPath);
             }
 
             if (notification.FileUploadSession.UseCompression)
             {
+                _logger.LogInformation("Decompressing file for session {SessionId}", notification.FileUploadSession.Id);
+                var tempDecompressedFilePath = Path.Combine(_uploadSetting.TempDirectory, Path.GetFileNameWithoutExtension(outputFilePath));
                 await _fileCompressor.DecompressFileAsync(outputFilePath, _uploadSetting.TempDirectory, (CompressionAlgorithmOption)notification.FileUploadSession.CompressionAlgorithm, cancellationToken);
-                var decompressedFilePath = Path.Combine(_uploadSetting.TempDirectory, Path.GetFileName(outputFilePath.Replace(".gz", string.Empty)));
-                File.Move(decompressedFilePath, outputFilePath, true);
+                File.Move(tempDecompressedFilePath, outputFilePath.Replace(".gz", string.Empty), true);
+                File.Delete(outputFilePath);
             }
+
+            _logger.LogInformation("FileUploadSessionCompletedEvent handled successfully for session {SessionId}", notification.FileUploadSession.Id);
         }
+
     }
 }

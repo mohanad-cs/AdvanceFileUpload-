@@ -66,7 +66,9 @@ namespace AdvanceFileUpload.Domain.Test
             {
                 FileName = _fileName,
                 FileSize = _fileSize,
-                FileExtension = ".pdf"
+                FileExtension = ".pdf",
+                CompressedFileSize=null,
+                
             };
 
             // Act
@@ -108,7 +110,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task UploadChunkAsync_ShouldUploadChunk()
         {
             // Arrange
-            var session = new FileUploadSession(_fileName, _tempDirectory, _fileSize, 256 * 1024);
+            var session = new FileUploadSession(_fileName, _tempDirectory, _fileSize,null, 256 * 1024);
             var request = new UploadChunkRequest
             {
                 SessionId = session.Id,
@@ -227,7 +229,7 @@ namespace AdvanceFileUpload.Domain.Test
 
         private FileUploadSession GetValidAllChunkUploadedNotCompletedFileUploadSession()
         {
-            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
+            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize,null, _maxChunkSize);
             for (int i = 0; i < fileUploadSession.TotalChunksToUpload; i++)
             {
                 fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.chunk"));
@@ -236,7 +238,7 @@ namespace AdvanceFileUpload.Domain.Test
         }
         private FileUploadSession GetFileUploadSessionWithRemainingChunks()
         {
-            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, _maxChunkSize);
+            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize,null, _maxChunkSize);
             for (int i = 0; i < fileUploadSession.TotalChunksToUpload - 1; i++)
             {
                 fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.chunk"));

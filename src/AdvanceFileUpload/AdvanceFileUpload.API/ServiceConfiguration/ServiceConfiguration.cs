@@ -18,16 +18,16 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
             services.Configure<UploadSetting>(configuration.GetSection(UploadSetting.SectionName));
             services.AddSingleton<IChunkValidator, ChunkValidator>();
             services.AddSingleton<IFileValidator, FileValidator>();
-            services.AddScoped<IFileProcessor, FileProcessor>();
+            services.AddSingleton<IFileProcessor, FileProcessor>();
+            services.AddSingleton<IFileCompressor, FileCompressor>();
             services.AddScoped<IUploadManger, UploadManger>();
-            services.AddScoped<IFileCompressor, FileCompressor>();
             services.AddScoped<IUploadProcessNotifier, UploadProcessNotifier>();
             services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
             services.AddMediatR((op) =>
             {
                 op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
+                
             });
-            services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
 
         }
     }

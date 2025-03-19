@@ -26,6 +26,10 @@ namespace AdvanceFileUpload.Data
             fileUploadSessionBuilder.Property(f => f.SavingDirectory).IsRequired().HasMaxLength(256);
             fileUploadSessionBuilder.Property(f => f.FileExtension).IsRequired().HasMaxLength(10);
             fileUploadSessionBuilder.Property(f => f.FileSize).IsRequired();
+            fileUploadSessionBuilder.Property(f => f.CompressedFileSize).IsRequired(false);
+            fileUploadSessionBuilder.Property(f => f.CompressionAlgorithm).IsRequired(false);
+            fileUploadSessionBuilder.Property(f => f.CompressionLevel).IsRequired(false);
+            fileUploadSessionBuilder.Property(f => f.CurrentHubConnectionId).IsRequired(false);
             fileUploadSessionBuilder.Property(f => f.MaxChunkSize).IsRequired();
             fileUploadSessionBuilder.Property(f => f.Status).IsRequired();
             fileUploadSessionBuilder.Property(f => f.SessionStartDate).IsRequired();

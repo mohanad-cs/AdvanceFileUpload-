@@ -24,9 +24,10 @@ namespace AdvanceFileUpload.Data
             {
                 options.UseInMemoryDatabase("AppMemoryDb");
                 options.LogTo(Console.WriteLine);
+                
 
-            });
-            services.AddScoped<IRepository<FileUploadSession>, FileUploadSessionRepository>();
+            }, ServiceLifetime.Singleton);
+            services.AddSingleton<IRepository<FileUploadSession>, FileUploadSessionRepository>();
         }
     }
 }

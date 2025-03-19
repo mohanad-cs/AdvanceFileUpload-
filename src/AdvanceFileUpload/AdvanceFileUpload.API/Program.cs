@@ -33,6 +33,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
 app.MapHub<UploadProcessHub>(RouteTemplates.UploadProcessHub);
+
 
 app.Run();

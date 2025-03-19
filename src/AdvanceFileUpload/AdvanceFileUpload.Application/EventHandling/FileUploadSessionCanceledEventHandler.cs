@@ -6,9 +6,9 @@ namespace AdvanceFileUpload.Application.EventHandling
     //TODO: Implement the functionality of publishing to RabbitMQ
     public sealed class FileUploadSessionCanceledEventHandler : INotificationHandler<FileUploadSessionCanceledEvent>
     {
-        public Task Handle(FileUploadSessionCanceledEvent notification, CancellationToken cancellationToken)
+        public async Task Handle(FileUploadSessionCanceledEvent notification, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask.ConfigureAwait(false);
         }
     }
 }

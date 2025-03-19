@@ -15,7 +15,7 @@
         /// <summary>
         /// The route for creating a new upload session.
         /// </summary>
-        public const string CreateSession = "create-session";
+        public const string CreateSession = $"{Base}create-session";
 
         /// <summary>
         /// The route for completing an upload session.
@@ -23,12 +23,12 @@
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string CompleteSession = "complete-session/";
+        public const string CompleteSession = $"{Base}complete-session";
 
         /// <summary>
         /// The route for uploading a chunk of a file.
         /// </summary>
-        public const string UploadChunk = "upload-chunk";
+        public const string UploadChunk = $"{Base}upload-chunk";
 
         /// <summary>
         /// The route for checking the status of an upload session.
@@ -36,7 +36,7 @@
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string SessionStatus = "session-status/";
+        public const string SessionStatus = $"{Base}session-status";
 
         /// <summary>
         /// The route for canceling an upload session.
@@ -44,7 +44,7 @@
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string CancelSession = "cancel-session/";
+        public const string CancelSession = $"{Base}cancel-session";
 
         /// <summary>
         /// The route for pausing an upload session.
@@ -52,8 +52,12 @@
         /// <remarks>
         /// Requires a session ID.
         /// </remarks>
-        public const string PauseSession = "pause-session/";
-        public const string UploadProcessHub = "api/UploadProcessHub/";
+        public const string PauseSession = $"{Base}pause-session";
+
+        /// <summary>
+        /// The route for the upload process hub.
+        /// </summary>
+        public const string UploadProcessHub = "api/UploadProcessHub";
     }
 
 

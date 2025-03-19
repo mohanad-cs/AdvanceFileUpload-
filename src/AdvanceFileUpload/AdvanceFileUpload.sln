@@ -24,7 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionItems", "solutionIt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Client", "AdvanceFileUpload.Client\AdvanceFileUpload.Client.csproj", "{2D237DE8-9E2D-4D79-B4D1-A38E2926790F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Client.Test", "AdvanceFileUpload.Client.Test\AdvanceFileUpload.Client.Test.csproj", "{23D61501-569C-4DBF-8A6E-892F8502A90C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Client.Test", "AdvanceFileUpload.Client.Test\AdvanceFileUpload.Client.Test.csproj", "{976BF437-D70A-4F87-9D70-DB9C9486BC9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,10 +60,10 @@ Global
 		{2D237DE8-9E2D-4D79-B4D1-A38E2926790F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D237DE8-9E2D-4D79-B4D1-A38E2926790F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D237DE8-9E2D-4D79-B4D1-A38E2926790F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23D61501-569C-4DBF-8A6E-892F8502A90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23D61501-569C-4DBF-8A6E-892F8502A90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23D61501-569C-4DBF-8A6E-892F8502A90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23D61501-569C-4DBF-8A6E-892F8502A90C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{976BF437-D70A-4F87-9D70-DB9C9486BC9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{976BF437-D70A-4F87-9D70-DB9C9486BC9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{976BF437-D70A-4F87-9D70-DB9C9486BC9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{976BF437-D70A-4F87-9D70-DB9C9486BC9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,7 +76,7 @@ Global
 		{B27B7B26-1E60-4F95-8DF1-DE050D9F3C78} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 		{37FAFAE6-19D6-4E2A-9885-DC8BF904F77B} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 		{2D237DE8-9E2D-4D79-B4D1-A38E2926790F} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
-		{23D61501-569C-4DBF-8A6E-892F8502A90C} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
+		{976BF437-D70A-4F87-9D70-DB9C9486BC9D} = {EE0953CE-E6DB-406F-8DB9-666575FCB4BC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4BB3F95F-401F-47D1-BB2B-96920C0B2BB5}

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdvanceFileUpload.API.Controllers
 {
-    [Route(RouteTemplates.Base)]
+   
     [ApiController]
     public class FileUploadController : ControllerBase
     {
@@ -35,15 +35,19 @@ namespace AdvanceFileUpload.API.Controllers
         /// <summary>
         /// Completes the file upload session.
         /// </summary>
-        /// <param name="sessionId">The unique identifier of the upload session.</param>
+        /// <param name="request">The unique identifier of the upload session.</param>
         /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
         /// <returns>Indicates whether the file upload was completed successfully.</returns>
-        [HttpPost("complete-session/{sessionId}")]
+        [HttpPost(RouteTemplates.CompleteSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<bool>> CompleteUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken)
+        public async Task<ActionResult<bool>> CompleteUploadSessionAsync([FromBody] CompleteUploadSessionRequest request, CancellationToken cancellationToken)
         {
-            var result = await _uploadManager.CompleteUploadSessionAsync(sessionId, cancellationToken);
+            if (request is null)
+            {
+                return BadRequest("CompleteUploadSessionRequest is null ");
+            }
+            var result = await _uploadManager.CompleteUploadSessionAsync(request.SessionId, cancellationToken);
             return Ok(result);
         }
 
@@ -71,12 +75,13 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpGet(RouteTemplates.SessionStatus)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<UploadSessionStatusResponse?>> GetUploadSessionStatusAsync(Guid sessionId, CancellationToken cancellationToken)
+        public async Task<ActionResult<UploadSessionStatusResponse?>> GetUploadSessionStatusAsync([FromQuery] Guid sessionId, CancellationToken cancellationToken)
         {
+          
             var response = await _uploadManager.GetUploadSessionStatusAsync(sessionId, cancellationToken);
             if (response == null)
             {
-                return NotFound();
+                return NotFound("The Session do not found");
             }
             return Ok(response);
         }
@@ -84,15 +89,19 @@ namespace AdvanceFileUpload.API.Controllers
         /// <summary>
         /// Cancels the file upload session.
         /// </summary>
-        /// <param name="sessionId">The unique identifier of the upload session.</param>
+        /// <param name="request"></param>
         /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
         /// <returns>Indicates whether the session was canceled successfully.</returns>
         [HttpPost(RouteTemplates.CancelSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<bool>> CancelUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken)
+        public async Task<ActionResult<bool>> CancelUploadSessionAsync([FromBody] CancelUploadSessionRequest request, CancellationToken cancellationToken)
         {
-            var result = await _uploadManager.CancelUploadSessionAsync(sessionId, cancellationToken);
+            if (request is null)
+            {
+                return BadRequest("CancelUploadSessionRequest is null ");
+            }
+            var result = await _uploadManager.CancelUploadSessionAsync(request.SessionId, cancellationToken);
             return Ok(result);
         }
         /// <summary>
@@ -104,9 +113,13 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpPost(RouteTemplates.PauseSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<bool>> PauseUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken)
+        public async Task<ActionResult<bool>> PauseUploadSessionAsync([FromBody] PauseUploadSessionRequest request, CancellationToken cancellationToken)
         {
-            var result = await _uploadManager.PauseUploadSessionAsync(sessionId, cancellationToken);
+            if (request is null)
+            {
+                return BadRequest("PauseUploadSessionRequest is null ");
+            }
+            var result = await _uploadManager.PauseUploadSessionAsync(request.SessionId, cancellationToken);
             return Ok(result);
         }
     }

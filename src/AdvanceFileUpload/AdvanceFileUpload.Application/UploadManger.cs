@@ -25,7 +25,6 @@ namespace AdvanceFileUpload.Application
         private readonly UploadSetting _uploadSetting;
         private readonly ILogger<UploadManger> _logger;
 
-
         ///<summary>
         /// Initializes a new instance of the <see cref="UploadManger"/> class.
         /// </summary>
@@ -55,36 +54,48 @@ namespace AdvanceFileUpload.Application
         /// <inheritdoc/>
         public async Task<CreateUploadSessionResponse> CreateUploadSessionAsync(CreateUploadSessionRequest request, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Creating a new file upload session");
+            _logger.LogInformation("Creating a new file upload session with file name: {FileName}, file size: {FileSize}, and file extension: {FileExtension}", request.FileName, request.FileSize, request.FileExtension);
             if (request is null)
             {
+                _logger.LogError("CreateUploadSessionAsync: Request is null");
                 throw new ArgumentNullException(nameof(request));
             }
 
             if (string.IsNullOrWhiteSpace(_uploadSetting.SavingDirectory))
             {
-                _logger.LogWarning("The SavingDirectory have not been Configured ");
-                throw new ApplicationException("The SavingDirectory have not been Configured ");
+                _logger.LogWarning("CreateUploadSessionAsync: The SavingDirectory has not been configured");
+                throw new ApplicationException("CreateUploadSessionAsync: The SavingDirectory has not been configured");
             }
             if (!_fileValidator.IsValidFileName(request.FileName))
             {
-                throw new ApplicationException("The File Name is not valid");
+                _logger.LogWarning("CreateUploadSessionAsync: The file name {FileName} is not valid", request.FileName);
+                throw new ApplicationException($"CreateUploadSessionAsync: The file name ({request.FileName}) is not valid");
             }
             if (!_fileValidator.IsValidFileExtension(request.FileExtension, _uploadSetting.AllowedExtensions))
             {
-                throw new ApplicationException("The File Extension is not allowed");
+                _logger.LogWarning("CreateUploadSessionAsync: The file extension {FileExtension} is not allowed", request.FileExtension);
+                throw new ApplicationException($"CreateUploadSessionAsync: The file extension {request.FileExtension} is not allowed");
             }
             if (!_fileValidator.IsValidFileSize(request.FileSize, _uploadSetting.MaxFileSize))
             {
-                throw new ApplicationException("The File Size is Not int the allowed  rang of File Size");
+                _logger.LogWarning("CreateUploadSessionAsync: The file size {FileSize} is not in the allowed range", request.FileSize);
+                throw new ApplicationException("The File Size is Not in the allowed range of File Size");
             }
             if (request.UseCompression && !_uploadSetting.EnableCompression)
             {
+                _logger.LogWarning("CreateUploadSessionAsync: Compression is not enabled on the server");
                 throw new ApplicationException("The Compression is not enabled on the server");
             }
             cancellationToken.ThrowIfCancellationRequested();
             Directory.CreateDirectory(_uploadSetting.SavingDirectory);
-            var session = new FileUploadSession(request.FileName, _uploadSetting.SavingDirectory, request.FileSize, _uploadSetting.MaxChunkSize);
+            var session = new FileUploadSession(request.FileName,
+                                                _uploadSetting.SavingDirectory,
+                                                request.FileSize,
+                                                request.CompressedFileSize,
+                                                _uploadSetting.MaxChunkSize,
+                                                (CompressionAlgorithm?)request.Compression!.Algorithm,
+                                                (CompressionLevel?)request.Compression.Level);
+            session.CurrentHubConnectionId = request.HubConnectionId;
             await _repository.AddAsync(session, cancellationToken);
             await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
@@ -92,7 +103,7 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation($"The file upload session has been created successfully With Session Id [{session.Id}]");
+            _logger.LogInformation("The file upload session has been created successfully with Session Id [{SessionId}]", session.Id);
             return new CreateUploadSessionResponse()
             {
                 SessionId = session.Id,
@@ -103,17 +114,20 @@ namespace AdvanceFileUpload.Application
                 UploadStatus = (UploadStatus)session.Status,
             };
         }
+
         ///<inheritdoc/>
         public async Task<bool> CompleteUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Completing the file upload session");
+            _logger.LogInformation("Completing the file upload session with Session Id: {SessionId}", sessionId);
             if (sessionId == Guid.Empty)
             {
-                throw new ApplicationException("the session Id is Not Valid");
+                _logger.LogError("CompleteUploadSessionAsync: The session Id is not valid");
+                throw new ApplicationException("The session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
+                _logger.LogError("CompleteUploadSessionAsync: The session with the given Id {SessionId} is not found", sessionId);
                 throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
 
@@ -125,28 +139,32 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation($"The file upload session  With Session Id [{session.Id}], has been completed successfully");
+            _logger.LogInformation("The file upload session with Session Id [{SessionId}] has been completed successfully", session.Id);
             return true;
-
         }
+
         ///<inheritdoc/>
         public async Task<bool> UploadChunkAsync(UploadChunkRequest request, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Uploading a chunk of the file");
+            _logger.LogInformation("Uploading a chunk of the file for Session Id: {SessionId}, Chunk Index: {ChunkIndex}", request.SessionId, request.ChunkIndex);
             if (request is null)
             {
+                _logger.LogError("UploadChunkAsync: Request is null");
                 throw new ArgumentNullException(nameof(request));
             }
             if (request.SessionId == Guid.Empty)
             {
+                _logger.LogError("UploadChunkAsync: The session Id is not valid");
                 throw new ApplicationException("The Session Id is Not Valid");
             }
             if (!_chunkValidator.IsValidChunkIndex(request.ChunkIndex))
             {
+                _logger.LogWarning("UploadChunkAsync: The chunk index {ChunkIndex} is not valid", request.ChunkIndex);
                 throw new ApplicationException($"The Chunk Index {request.ChunkIndex} is Not Valid");
             }
             if (!_chunkValidator.IsValidChunkSize(request.ChunkData.LongLength, _uploadSetting.MaxChunkSize))
             {
+                _logger.LogWarning("UploadChunkAsync: The chunk size is greater than the maximum chunk size");
                 throw new ApplicationException("The Chunk Size is greater than the Maximum Chunk Size");
             }
             cancellationToken.ThrowIfCancellationRequested();
@@ -154,10 +172,12 @@ namespace AdvanceFileUpload.Application
             var session = await _repository.GetByIdAsync(request.SessionId, cancellationToken);
             if (session is null)
             {
+                _logger.LogError("UploadChunkAsync: The session with the given Id {SessionId} is not found", request.SessionId);
                 throw new ApplicationException($"The session with the given Id {request.SessionId} is not found");
             }
             await _fileProcessor.SaveFileAsync($"{session.Id}_{request.ChunkIndex}.chunk", request.ChunkData, _uploadSetting.TempDirectory, cancellationToken);
             session.AddChunk(request.ChunkIndex, Path.Combine(_uploadSetting.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"));
+            session.CurrentHubConnectionId = request.HubConnectionId;
             await _repository.UpdateAsync(session, cancellationToken);
             await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
@@ -165,28 +185,29 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation($"The chunk [{request.ChunkIndex}] of the file With Session Id [{session.Id}],  has been uploaded successfully");
+            _logger.LogInformation("The chunk [{ChunkIndex}] of the file with Session Id [{SessionId}] has been uploaded successfully", request.ChunkIndex, session.Id);
             return true;
         }
-
-
-
 
         ///<inheritdoc/>
         public async Task<UploadSessionStatusResponse?> GetUploadSessionStatusAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
+            _logger.LogInformation("Getting the status of the upload session with Session Id: {SessionId}", sessionId);
             if (sessionId == Guid.Empty)
             {
-                throw new ApplicationException("the session Id is Not Valid");
+                _logger.LogError("GetUploadSessionStatusAsync: The session Id is not valid");
+                throw new ApplicationException("The session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
 
             if (session is null)
             {
+                _logger.LogError("GetUploadSessionStatusAsync: The session with the given Id {SessionId} is not found", sessionId);
                 throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             else
             {
+                _logger.LogInformation("The status of the upload session with Session Id [{SessionId}] has been retrieved successfully", session.Id);
                 return new UploadSessionStatusResponse()
                 {
                     SessionId = session.Id,
@@ -199,22 +220,23 @@ namespace AdvanceFileUpload.Application
                     RemainChunks = session.GetRemainChunks(),
                     SessionEndDate = session.SessionEndDate,
                     TotalUploadedChunks = session.TotalUploadedChunks,
-
                 };
-
             }
         }
+
         ///<inheritdoc/>
         public async Task<bool> CancelUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation($"Canceling the file upload session id {sessionId}");
+            _logger.LogInformation("Canceling the file upload session with Session Id: {SessionId}", sessionId);
             if (sessionId == Guid.Empty)
             {
-                throw new ApplicationException("the session Id is Not Valid");
+                _logger.LogError("CancelUploadSessionAsync: The session Id is not valid");
+                throw new ApplicationException("The session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
+                _logger.LogError("CancelUploadSessionAsync: The session with the given Id {SessionId} is not found", sessionId);
                 throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             session.CancelSession();
@@ -225,20 +247,23 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation($"The file upload session  With Session Id [{session.Id}], has been canceled successfully");
+            _logger.LogInformation("The file upload session with Session Id [{SessionId}] has been canceled successfully", session.Id);
             return true;
         }
+
         ///<inheritdoc/>
         public async Task<bool> PauseUploadSessionAsync(Guid sessionId, CancellationToken cancellationToken = default)
         {
-            _logger.LogInformation("Pausing the file upload session id {sessionId} ", sessionId);
+            _logger.LogInformation("Pausing the file upload session with Session Id: {SessionId}", sessionId);
             if (sessionId == Guid.Empty)
             {
-                throw new ApplicationException("the session Id is Not Valid");
+                _logger.LogError("PauseUploadSessionAsync: The session Id is not valid");
+                throw new ApplicationException("The session Id is Not Valid");
             }
             var session = await _repository.GetByIdAsync(sessionId, cancellationToken);
             if (session is null)
             {
+                _logger.LogError("PauseUploadSessionAsync: The session with the given Id {SessionId} is not found", sessionId);
                 throw new ApplicationException($"The session with the given Id {sessionId} is not found");
             }
             session.PauseSession();
@@ -249,9 +274,8 @@ namespace AdvanceFileUpload.Application
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
             }
             session.ClearDomainEvents();
-            _logger.LogInformation("The file upload session  With Session Id [{sessionId}], has been paused successfully", session.Id);
+            _logger.LogInformation("The file upload session with Session Id [{SessionId}] has been paused successfully", session.Id);
             return true;
-
         }
     }
 }

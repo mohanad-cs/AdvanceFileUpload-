@@ -18,6 +18,10 @@
         /// Gets the size of the file to be uploaded.
         /// </summary>
         public required long FileSize { get; init; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public required long? CompressedFileSize { get; init; }
 
         /// <summary>
         /// Gets the file extension of the file to be uploaded.
