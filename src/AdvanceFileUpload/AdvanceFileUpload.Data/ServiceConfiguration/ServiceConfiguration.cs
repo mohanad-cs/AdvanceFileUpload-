@@ -22,12 +22,12 @@ namespace AdvanceFileUpload.Data
             }
             services.AddDbContext<ApploicationDbContext>(options =>
             {
-                options.UseInMemoryDatabase("AppMemoryDb");
-                options.LogTo(Console.WriteLine);
+                options.UseSqlServer(connectionString);
+               // options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
                 
 
-            }, ServiceLifetime.Singleton);
-            services.AddSingleton<IRepository<FileUploadSession>, FileUploadSessionRepository>();
+            });
+            services.AddScoped<IRepository<FileUploadSession>, FileUploadSessionRepository>();
         }
     }
 }

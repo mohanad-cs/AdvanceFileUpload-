@@ -47,5 +47,12 @@ namespace AdvanceFileUpload.Application.Compression
         /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
         /// <returns>A task that represents the asynchronous operation.</returns>
         Task DecompressFilesAsync(string[] inputFilePaths, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Determines whether a file is applicable for compression.
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <returns></returns>
+        bool IsFileApplicableForCompression(string filePath);
     }
 }

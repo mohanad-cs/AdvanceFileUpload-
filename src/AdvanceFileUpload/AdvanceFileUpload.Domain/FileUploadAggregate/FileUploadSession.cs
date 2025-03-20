@@ -106,6 +106,10 @@ namespace AdvanceFileUpload.Domain
         /// Gets the current hub connection id.
         /// </summary>
         public string? CurrentHubConnectionId { get; set; }
+        /// <summary>
+        ///  The Row Version.
+        /// </summary>
+        public byte[] Version { get; set; }
 
         /// <summary>
         /// Gets the collection of chunk files.

@@ -34,9 +34,13 @@ namespace AdvanceFileUpload.Data
             {
                 throw new ArgumentNullException(nameof(entity));
             }
-
+            using var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
             var result = await _dbSet.AddAsync(entity, cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
             return result.Entity;
+
+
         }
         /// <inheritdoc />
 
@@ -77,18 +81,18 @@ namespace AdvanceFileUpload.Data
             {
                 throw new ArgumentNullException(nameof(predicate));
             }
-            return await _dbSet.AsNoTracking().Where(predicate).ToListAsync(cancellationToken);
+            return await _dbSet.Include(x => x.ChunkFiles).AsNoTracking().Where(predicate).ToListAsync(cancellationToken);
         }
         /// <inheritdoc />
 
         public async Task<IEnumerable<FileUploadSession>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            return await _dbSet.AsNoTracking().ToListAsync(cancellationToken);
+            return await _dbSet.Include(x => x.ChunkFiles).AsNoTracking().ToListAsync(cancellationToken);
         }
         /// <inheritdoc />
         public async Task<FileUploadSession?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
         {
-            return await _dbSet.FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
+            return await _dbSet.Include(x => x.ChunkFiles).FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
         }
         /// <inheritdoc />
         public async Task<bool> RemoveAsync(FileUploadSession entity, CancellationToken cancellationToken = default)
@@ -97,7 +101,7 @@ namespace AdvanceFileUpload.Data
             {
                 throw new ArgumentNullException(nameof(entity));
             }
-
+            using var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
             var existingEntity = await _dbSet.FirstOrDefaultAsync(e => e.Id == entity.Id, cancellationToken);
             if (existingEntity is null)
             {
@@ -105,14 +109,16 @@ namespace AdvanceFileUpload.Data
             }
 
             _dbSet.Remove(existingEntity);
+            await _context.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
             return true;
         }
-        /// <inheritdoc />
+        ///// <inheritdoc />
 
-        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            return await _context.SaveChangesAsync(cancellationToken);
-        }
+        //public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        //{
+        //    return await _context.SaveChangesAsync(cancellationToken);
+        //}
         /// <inheritdoc />
 
         public async Task<FileUploadSession> UpdateAsync(FileUploadSession entity, CancellationToken cancellationToken = default)
@@ -121,15 +127,13 @@ namespace AdvanceFileUpload.Data
             {
                 throw new ArgumentNullException(nameof(entity));
             }
+            using var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
+           
 
-            var existingEntity = await _dbSet.FirstOrDefaultAsync(e => e.Id == entity.Id, cancellationToken);
-            if (existingEntity is null)
-            {
-                throw new InvalidOperationException($"Entity with id {entity.Id} not found.");
-            }
-
-            _dbSet.Entry(existingEntity).CurrentValues.SetValues(entity);
-            return existingEntity;
+            _dbSet.Entry(entity).CurrentValues.SetValues(entity);
+            await _context.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
+            return entity;
         }
     }
 }

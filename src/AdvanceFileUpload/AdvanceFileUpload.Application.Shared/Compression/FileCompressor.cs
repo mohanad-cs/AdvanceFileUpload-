@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using System.IO.Compression;
 
 namespace AdvanceFileUpload.Application.Compression
@@ -8,6 +9,54 @@ namespace AdvanceFileUpload.Application.Compression
     /// </summary>
     public sealed class FileCompressor : IFileCompressor
     {
+        // a static list of applicable files extensions that can be compressed
+        private static readonly List<string> CompressedExtensions = new List<string>
+    {
+        // ===== Compressed/Archive Formats =====
+        ".zip",      // ZIP archive
+        ".rar",      // RAR archive
+        ".7z",       // 7-Zip archive
+        ".tar",      // TAR archive (often compressed with other tools)
+        ".gz",       // GZIP compressed file
+        ".bz2",      // BZIP2 compressed file
+        ".xz",       // XZ compressed file
+        ".lz",       // LZIP compressed file
+        ".lzma",     // LZMA compressed file
+        ".cab",      // Microsoft Cabinet file
+        ".arj",      // ARJ archive
+        ".z",        // Unix compress file
+        ".tgz",     // TAR + GZIP
+        ".tbz2",    // TAR + BZIP2
+        ".iso",      // Disk image
+        ".dmg",     // macOS disk image
+        ".jar",     // Java Archive
+        ".war",     // Web Application Archive
+        ".ear",     // Enterprise Application Archive
+        ".pak",     // Game/App package file
+        ".rpm",     // Red Hat Package
+        ".deb",     // Debian Package
+        ".lzh",     // LHA/LZH archive
+        ".szip",    // Snappy compression
+        
+        // ===== Already Compressed Formats =====
+        // Images
+        ".jpg", ".jpeg", ".png", ".gif", ".webp", ".heic", ".heif", ".bmp", ".tiff", ".svgz",
+        
+        // Video
+        ".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".m4v", ".mpg", ".mpeg", ".webm", ".h264",
+        
+        // Audio
+        ".mp3", ".aac", ".ogg", ".wav", ".flac", ".wma", ".m4a", ".opus",
+        
+        // Documents
+        ".pdf", ".docx", ".xlsx", ".pptx", ".odt", ".ods", ".odp",
+        
+        // Other Compressed Formats
+        ".epub",      // eBook format (ZIP-based)
+        ".mobi",      // eBook format
+        ".woff", ".woff2",  // Web fonts
+        ".gz", ".br", ".zst"  // Web compression formats
+    };
         private readonly ILogger<FileCompressor> _logger;
         ///<summary>
         /// Initializes a new instance of the <see cref="FileCompressor"/> class.
@@ -101,6 +150,7 @@ namespace AdvanceFileUpload.Application.Compression
         }
         private async Task CompressFile(string inputFilePath, string outputFilePath, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
             try
             {
                 using (FileStream inputFileStream = new FileStream(inputFilePath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true))
@@ -110,7 +160,10 @@ namespace AdvanceFileUpload.Application.Compression
                     await inputFileStream.CopyToAsync(compressionStream, cancellationToken);
                 }
 
-                _logger.LogDebug($"File compressed successfully: {outputFilePath}");
+                stopwatch.Stop();
+                FileInfo inputFile = new FileInfo(inputFilePath);
+                FileInfo outputFile = new FileInfo(outputFilePath);
+                _logger.LogInformation($"File compressed successfully: {outputFilePath}. Original Size: {inputFile.Length} bytes, Compressed Size: {outputFile.Length} bytes, Time Taken: {stopwatch.ElapsedMilliseconds} ms");
             }
             catch (Exception ex)
             {
@@ -119,6 +172,7 @@ namespace AdvanceFileUpload.Application.Compression
         }
         private async Task DecompressFile(string inputFilePath, string outputFilePath, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
             try
             {
                 using (FileStream inputFileStream = new FileStream(inputFilePath, FileMode.Open, FileAccess.Read, FileShare.Read, 4096, useAsync: true))
@@ -128,13 +182,21 @@ namespace AdvanceFileUpload.Application.Compression
                     await decompressionStream.CopyToAsync(outputFileStream, cancellationToken);
                 }
 
-                _logger.LogDebug($"File decompressed successfully: {outputFilePath}");
+                stopwatch.Stop();
+                FileInfo inputFile = new FileInfo(inputFilePath);
+                FileInfo outputFile = new FileInfo(outputFilePath);
+                _logger.LogInformation($"File decompressed successfully: {outputFilePath}. Compressed Size: {inputFile.Length} bytes, Decompressed Size: {outputFile.Length} bytes, Time Taken: {stopwatch.ElapsedMilliseconds} ms");
             }
             catch (Exception ex)
             {
                 _logger.LogError($"An error occurred while decompressing the file: {ex.Message}");
                 throw;
             }
+        }
+        ///<inheritdoc/>
+        public bool IsFileApplicableForCompression(string filePath)
+        {
+           return Path.GetExtension(filePath) is string extension && !CompressedExtensions.Contains(extension);
         }
     }
 }

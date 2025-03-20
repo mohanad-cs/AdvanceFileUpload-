@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace AdvanceFileUpload.Client.Helper
 {
-   public static class LoggerFactoryHelper
+    public static class LoggerFactoryHelper
     {
         public static ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
         {
+            builder.SetMinimumLevel(LogLevel.Information);
         });
+
         public static ILogger<T> CreateLogger<T>()
         {
-
-            return  loggerFactory.CreateLogger<T>();
+            loggerFactory.AddFile("D:\\Temp\\log\\log.txt");
+            return loggerFactory.CreateLogger<T>();
         }
     }
 }

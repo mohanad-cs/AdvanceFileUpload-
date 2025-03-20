@@ -14,7 +14,8 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
     {
         public static void ConfigureApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.ConfigureDataServices(configuration.GetConnectionString("DefaultConnection"));
+            string? c = configuration.GetConnectionString("SessionStorage");
+            services.ConfigureDataServices(c);
             services.Configure<UploadSetting>(configuration.GetSection(UploadSetting.SectionName));
             services.AddSingleton<IChunkValidator, ChunkValidator>();
             services.AddSingleton<IFileValidator, FileValidator>();
