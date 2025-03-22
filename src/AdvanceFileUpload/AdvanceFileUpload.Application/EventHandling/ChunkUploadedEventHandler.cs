@@ -1,10 +1,13 @@
 ﻿using AdvanceFileUpload.Application.Hubs;
 using AdvanceFileUpload.Application.Response;
+using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Domain.Events;
+using AdvanceFileUpload.Integration.Contracts;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace AdvanceFileUpload.Application.EventHandling
 {
@@ -14,10 +17,14 @@ namespace AdvanceFileUpload.Application.EventHandling
         private readonly IRepository<FileUploadSession> _fileUploadSessionRepository;
         private readonly IUploadProcessNotifier _uploadProcessNotifier;
         private readonly ILogger<ChunkUploadedEventHandler> _logger;
-        public ChunkUploadedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IUploadProcessNotifier uploadProcessNotifier, ILogger<ChunkUploadedEventHandler> logger)
+        private readonly IIntegrationEventPublisher _integrationEventPublisher;
+        private readonly UploadSetting _uploadSetting;
+        public ChunkUploadedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IUploadProcessNotifier uploadProcessNotifier, IIntegrationEventPublisher integrationEventPublisher, IOptions<UploadSetting> uploadSetting, ILogger<ChunkUploadedEventHandler> logger)
         {
             _fileUploadSessionRepository = fileUploadSessionRepository ?? throw new ArgumentNullException(nameof(fileUploadSessionRepository));
             _uploadProcessNotifier = uploadProcessNotifier ?? throw new ArgumentNullException(nameof(uploadProcessNotifier));
+            _integrationEventPublisher = integrationEventPublisher ?? throw new ArgumentNullException(nameof(integrationEventPublisher));
+            _uploadSetting = uploadSetting?.Value ?? throw new ArgumentNullException(nameof(uploadSetting));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
         public async Task Handle(ChunkUploadedEvent notification, CancellationToken cancellationToken)
@@ -46,7 +53,16 @@ namespace AdvanceFileUpload.Application.EventHandling
                 UploadStatus = (UploadStatus)fileUploadSession.Status,
             };
             await _uploadProcessNotifier.NotifyUploadProgressAsync(fileUploadSession.CurrentHubConnectionId, uploadSessionStatusNotification);
-
+            if (_uploadSetting.EnableIntegrationEventPublishing)
+            {
+                ChunkUploadedIntegrationEvent chunkUploadedIntegrationEvent = new ChunkUploadedIntegrationEvent
+                {
+                    SessionId = notification.ChunkFile.SessionId,
+                    ChunkIndex = notification.ChunkFile.ChunkIndex,
+                };
+                _logger.LogInformation("Publishing ChunkUploadedIntegrationEvent for session {SessionId} and chunk index {ChunkIndex}.", chunkUploadedIntegrationEvent.SessionId, chunkUploadedIntegrationEvent.ChunkIndex);
+                await _integrationEventPublisher.PublishAsync(chunkUploadedIntegrationEvent, cancellationToken);
+            }
         }
     }
 }

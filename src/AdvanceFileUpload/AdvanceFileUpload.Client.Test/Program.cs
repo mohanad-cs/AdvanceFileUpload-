@@ -41,8 +41,8 @@ namespace AdvanceFileUpload.Client.Test
 
             ConfigureServiceEvents();
 
-            var uploadTask = _service.UploadFileAsync("D:\\Temp\\testfile.txt");
-          //  var uploadTask = _service.UploadFileAsync(@"D:\Temp\D09_20230518080711.mp4");
+           // var uploadTask = _service.UploadFileAsync("D:\\Temp\\testfile.txt");
+           var uploadTask = _service.UploadFileAsync(@"D:\Temp\D09_20230518080711.mp4");
             _isUploading = true;
 
             _ = Task.Run(HandleUserInput);

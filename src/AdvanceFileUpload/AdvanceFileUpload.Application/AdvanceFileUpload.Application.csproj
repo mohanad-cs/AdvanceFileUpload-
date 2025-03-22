@@ -31,6 +31,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AdvanceFileUpload.Application.Shared\AdvanceFileUpload.Application.Shared.csproj" />
     <ProjectReference Include="..\AdvanceFileUpload.Domain\AdvanceFileUpload.Domain.csproj" />
+    <ProjectReference Include="..\AdvanceFileUpload.Integration.Contracts\AdvanceFileUpload.Integration.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

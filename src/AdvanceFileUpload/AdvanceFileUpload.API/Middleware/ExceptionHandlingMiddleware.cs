@@ -1,5 +1,6 @@
 ﻿using AdvanceFileUpload.Domain.Core;
 using Azure.Core;
+using Microsoft.AspNetCore.Connections;
 using System.Net;
 
 namespace AdvanceFileUpload.API.Middleware
@@ -55,6 +56,7 @@ namespace AdvanceFileUpload.API.Middleware
             ExceptionResponse response = exception switch
             {
                 OperationCanceledException _ => new ExceptionResponse(HttpStatusCode.NoContent, "Operation was canceled."),
+                ConnectionResetException _ => new ExceptionResponse(HttpStatusCode.NoContent, " An existing connection was forcibly closed by the remote host."),
                 ApplicationException _ => new ExceptionResponse(HttpStatusCode.BadRequest, $"Application exception occurred.{exception.Message}"),
                 DomainException _ => new ExceptionResponse(HttpStatusCode.BadRequest, $"Domain exception occurred.{exception.Message}"),
                 _ => new ExceptionResponse(HttpStatusCode.InternalServerError, "Internal server error. Please retry later.")

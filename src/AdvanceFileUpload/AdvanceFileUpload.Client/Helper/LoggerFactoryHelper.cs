@@ -9,7 +9,7 @@ namespace AdvanceFileUpload.Client.Helper
 {
     public static class LoggerFactoryHelper
     {
-        public static ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
+        private static ILoggerFactory loggerFactory = LoggerFactory.Create(builder =>
         {
             builder.SetMinimumLevel(LogLevel.Information);
         });

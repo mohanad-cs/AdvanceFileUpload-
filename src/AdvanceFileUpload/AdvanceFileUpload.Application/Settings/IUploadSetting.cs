@@ -35,5 +35,9 @@
         /// Gets or sets a value indicating whether to enable compression.
         /// </summary>
         bool EnableCompression { get; set; }
+        /// <summary>
+        /// Gets or sets a value indicating whether to enable integration event publishing.
+        /// </summary>
+        bool EnableIntegrationEventPublishing { get; set; }
     }
 }

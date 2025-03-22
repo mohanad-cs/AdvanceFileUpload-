@@ -124,7 +124,7 @@ namespace AdvanceFileUpload.Client
             };
             _uploadOptions = uploadOptions ?? throw new ArgumentNullException(nameof(uploadOptions));
             _semaphore = new SemaphoreSlim(_uploadOptions.MaxConcurrentUploads, _uploadOptions.MaxConcurrentUploads);
-            _fileProcessor = new FileProcessor(_logger);
+            _fileProcessor = new FileProcessor(LoggerFactoryHelper.CreateLogger<FileProcessor>());
             _fileCompressor = new FileCompressor(LoggerFactoryHelper.CreateLogger<FileCompressor>());
             _cancellationTokenSource = new CancellationTokenSource();
             var hubUri = new Uri($"{apiBaseAddress.AbsoluteUri}{RouteTemplates.UploadProcessHub}");

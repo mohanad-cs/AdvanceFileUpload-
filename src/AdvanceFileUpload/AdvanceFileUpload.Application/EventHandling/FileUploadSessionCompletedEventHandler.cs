@@ -4,6 +4,7 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Domain.Events;
+using AdvanceFileUpload.Integration.Contracts;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -19,8 +20,9 @@ namespace AdvanceFileUpload.Application.EventHandling
         private readonly IFileCompressor _fileCompressor;
         private readonly IFileProcessor _fileProcessor;
         private readonly UploadSetting _uploadSetting;
+        private readonly IIntegrationEventPublisher _integrationEventPublisher;
 
-        public FileUploadSessionCompletedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IFileProcessor fileProcessor, IFileCompressor fileCompressor, IOptions<UploadSetting> uploadSetting, ILogger<FileUploadSessionCompletedEventHandler> logger)
+        public FileUploadSessionCompletedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IFileProcessor fileProcessor, IFileCompressor fileCompressor, IOptions<UploadSetting> uploadSetting, IIntegrationEventPublisher integrationEventPublisher, ILogger<FileUploadSessionCompletedEventHandler> logger)
         {
             if (uploadSetting is null)
             {
@@ -31,6 +33,7 @@ namespace AdvanceFileUpload.Application.EventHandling
             _fileCompressor = fileCompressor ?? throw new ArgumentNullException(nameof(fileCompressor));
             _uploadSetting = uploadSetting.Value;
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
+            _integrationEventPublisher = integrationEventPublisher;
         }
 
 
@@ -42,13 +45,12 @@ namespace AdvanceFileUpload.Application.EventHandling
             }
 
             _logger.LogInformation("Handling FileUploadSessionCompletedEvent for session {SessionId}", notification.FileUploadSession.Id);
-
             var chunkPaths = notification.FileUploadSession.ChunkFiles.OrderBy(x => x.ChunkIndex).Select(x => x.ChunkPath).ToList();
             string fileNamePostFix = notification.FileUploadSession.UseCompression ? ".gz" : string.Empty;
             var outputFilePath = Path.Combine(notification.FileUploadSession.SavingDirectory, notification.FileUploadSession.FileName + fileNamePostFix);
 
             _logger.LogInformation("Concatenating chunks for session {SessionId}", notification.FileUploadSession.Id);
-            await _fileProcessor.ConcatenateChunksAsync(chunkPaths, outputFilePath, cancellationToken);
+            await _fileProcessor.MergeChunksAsync(chunkPaths, outputFilePath, cancellationToken);
 
             foreach (var chunk in notification.FileUploadSession.ChunkFiles)
             {
@@ -64,8 +66,23 @@ namespace AdvanceFileUpload.Application.EventHandling
                 File.Move(tempDecompressedFilePath, outputFilePath.Replace(".gz", string.Empty), true);
                 File.Delete(outputFilePath);
             }
+            _logger.LogInformation("File Upload successfully Compleated for session {SessionId}", notification.FileUploadSession.Id);
+            if (_uploadSetting.EnableIntegrationEventPublishing)
+            {
+                SessionCompletedIntegrationEvent sessionCompletedIntegrationEvent = new SessionCompletedIntegrationEvent()
+                {
+                    SessionId= notification.FileUploadSession.Id,
+                    FileName = notification.FileUploadSession.FileName,
+                    FileSize = notification.FileUploadSession.FileSize,
+                    FileExtension = notification.FileUploadSession.FileExtension,
+                    FilePath = notification.FileUploadSession.SavingDirectory,
+                    SessionStartDateTime = notification.FileUploadSession.SessionStartDate,
+                    SessionEndDateTime = (DateTime)notification.FileUploadSession.SessionEndDate,
 
-            _logger.LogInformation("FileUploadSessionCompletedEvent handled successfully for session {SessionId}", notification.FileUploadSession.Id);
+                };
+                _logger.LogInformation("Publishing SessionCompletedIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
+                await _integrationEventPublisher.PublishAsync(sessionCompletedIntegrationEvent, cancellationToken);
+            }
         }
 
     }

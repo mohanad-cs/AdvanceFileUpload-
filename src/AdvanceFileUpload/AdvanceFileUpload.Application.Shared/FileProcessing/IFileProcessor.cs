@@ -7,13 +7,13 @@
     {
 
         /// <summary>
-        /// Concatenates multiple file chunks into a single file.
+        /// Merge multiple file chunks into a single file.
         /// </summary>
         /// <param name="chunkPaths">The list of paths to the file chunks.</param>
-        /// <param name="outputFilePath">The path where the concatenated file will be saved.</param>
+        /// <param name="outputFilePath">The path where the Merged file will be saved.</param>
         /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
         /// <returns>A task that represents the asynchronous operation.</returns>
-        Task ConcatenateChunksAsync(List<string> chunkPaths, string outputFilePath, CancellationToken cancellationToken = default);
+        Task MergeChunksAsync(List<string> chunkPaths, string outputFilePath, CancellationToken cancellationToken = default);
         /// <summary>
         /// Saves a file to the specified directory.
         /// </summary>

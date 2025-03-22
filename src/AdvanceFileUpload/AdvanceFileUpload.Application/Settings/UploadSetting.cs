@@ -30,5 +30,7 @@
         public required string TempDirectory { get; set; }
         ///<inheritdoc/>
         public bool EnableCompression { get; set; }
+        ///<inheritdoc/>
+        public bool EnableIntegrationEventPublishing { get; set; }
     }
 }

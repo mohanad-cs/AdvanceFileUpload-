@@ -1,4 +1,6 @@
 ﻿using AdvanceFileUpload.Application.FileProcessing;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace AdvanceFileUpload.Domain.Test
 {
@@ -14,7 +16,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task SaveFileAsync_ShouldSaveFile()
         {
             // Arrange
-            var fileProcessor = new FileProcessor();
+            var fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
             byte[] fileData = await File.ReadAllBytesAsync(_testFilePath);
             string filePath = Path.Combine(_tempDirectory, _fileName);
 
@@ -34,7 +36,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task SplitFileIntoChunksAsync_ShouldSplitFile()
         {
             // Arrange
-            var fileProcessor = new FileProcessor();
+            var fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
             string filePath = _testFilePath;
             int expectedChunks = (int)Math.Ceiling((double)_fileSize / _maxChunkSize);
             // Act
@@ -55,11 +57,11 @@ namespace AdvanceFileUpload.Domain.Test
         }
 
         [Fact]
-        public async Task ConcatenateChunksAsync_ShouldConcatenateChunks()
+        public async Task MergeChunksAsync_ShouldMergeChunks()
         {
             // Arrange
-            var fileProcessor = new FileProcessor();
-            string outputFilePath = Path.Combine(_tempDirectory, "concatenated.Pdf");
+            var fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
+            string outputFilePath = Path.Combine(_tempDirectory, "Merged.Pdf");
             string chunk1Path = Path.Combine(_tempDirectory, "chunk1.Pdf");
             string chunk2Path = Path.Combine(_tempDirectory, "chunk2.Pdf");
             await File.WriteAllBytesAsync(chunk1Path, new byte[] { 1, 2 });
@@ -67,12 +69,12 @@ namespace AdvanceFileUpload.Domain.Test
             var chunkPaths = new List<string> { chunk1Path, chunk2Path };
 
             // Act
-            await fileProcessor.ConcatenateChunksAsync(chunkPaths, outputFilePath);
+            await fileProcessor.MergeChunksAsync(chunkPaths, outputFilePath);
 
             // Assert
             Assert.True(File.Exists(outputFilePath));
-            var concatenatedData = await File.ReadAllBytesAsync(outputFilePath);
-            Assert.Equal(new byte[] { 1, 2, 3, 4 }, concatenatedData);
+            var MergedData = await File.ReadAllBytesAsync(outputFilePath);
+            Assert.Equal(new byte[] { 1, 2, 3, 4 }, MergedData);
 
             // Cleanup
             File.Delete(outputFilePath);
