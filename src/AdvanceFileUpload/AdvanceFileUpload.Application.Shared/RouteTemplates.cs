@@ -58,6 +58,10 @@
         /// The route for the upload process hub.
         /// </summary>
         public const string UploadProcessHub = "api/UploadProcessHub";
+        /// <summary>
+        /// The route for the health check endpoint.
+        /// </summary>
+        public const string APIHealthEndPoint = "/health";
     }
 
 

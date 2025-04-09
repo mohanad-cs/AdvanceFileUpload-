@@ -80,8 +80,19 @@ namespace AdvanceFileUpload.Application.EventHandling
                     SessionEndDateTime = (DateTime)notification.FileUploadSession.SessionEndDate,
 
                 };
+                PublishMessage<SessionCompletedIntegrationEvent> publishMessage = new PublishMessage<SessionCompletedIntegrationEvent>()
+                {
+                    Message = sessionCompletedIntegrationEvent,
+                    Queue = IntegrationConstants.SessionCompletedConstants.Queue,
+                    RoutingKey = IntegrationConstants.SessionCompletedConstants.RoutingKey,
+                    Exchange = IntegrationConstants.SessionCompletedConstants.Exchange,
+                    ExchangeType = IntegrationConstants.SessionCompletedConstants.ExchangeType,
+                    Durable = IntegrationConstants.SessionCompletedConstants.Durable,
+                    Exclusive = IntegrationConstants.SessionCompletedConstants.Exclusive,
+                    AutoDelete = IntegrationConstants.SessionCompletedConstants.AutoDelete
+                };
                 _logger.LogInformation("Publishing SessionCompletedIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
-                await _integrationEventPublisher.PublishAsync(sessionCompletedIntegrationEvent, cancellationToken);
+                await _integrationEventPublisher.PublishAsync(publishMessage, cancellationToken);
             }
         }
 

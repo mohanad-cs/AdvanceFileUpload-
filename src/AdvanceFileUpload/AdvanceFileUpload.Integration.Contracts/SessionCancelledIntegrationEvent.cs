@@ -34,5 +34,14 @@
         /// Gets or sets the session end date and time.
         /// </summary>
         public DateTime SessionEndDateTime { get; set; }
+
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
+        public override string ToString()
+        {
+            return $"SessionCancelledIntegrationEvent\n {{ SessionId: {SessionId}, FileName: {FileName}, FileExtension: {FileExtension}, FileSize: {FileSize}, SessionStartDateTime: {SessionStartDateTime}, SessionEndDateTime: {SessionEndDateTime}}}";
+        }
     }
 }

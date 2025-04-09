@@ -9,8 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AdvanceFileUpload.Client" Version="1.0.3" />
+    <PackageReference Include="AdvanceFileUpload.Integration" Version="1.0.5" />
     <PackageReference Include="DevExpress.Win.Design" Version="24.1.7" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.4.0" />
   </ItemGroup>
 
   <ItemGroup>

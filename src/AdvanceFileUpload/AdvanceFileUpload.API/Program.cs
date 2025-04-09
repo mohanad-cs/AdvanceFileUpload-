@@ -35,6 +35,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.MapHub<UploadProcessHub>(RouteTemplates.UploadProcessHub);
-
+app.MapHealthChecks("/health");
 
 app.Run();

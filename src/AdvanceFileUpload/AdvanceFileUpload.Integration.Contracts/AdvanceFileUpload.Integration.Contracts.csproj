@@ -4,10 +4,22 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+	  <!-- Enable NuGet package creation on build for this project -->
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <!-- Define metadata for your NuGet package -->
+	  <PackageId>AdvanceFileUpload.Integration</PackageId>
+	  <Version>1.0.5</Version>
+	  <Authors>Mohanad Shamsan;Ahmed Kamel; Emad Qasem</Authors>
+	  <Description>Library for advanced file uploads. Integration</Description>
+	  <PackageTags>file-upload;net8</PackageTags>
+	  <PackageOutputPath>D:\University\AdvanceFileUpload-\NuGetPackage</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MassTransit" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.1" />
+    <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
   </ItemGroup>
 
 </Project>

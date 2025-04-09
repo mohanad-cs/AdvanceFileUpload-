@@ -14,5 +14,13 @@
         /// Gets or sets the chunk index.
         /// </summary>
         public int ChunkIndex { get; set; }
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
+        public override string ToString()
+        {
+            return $"ChunkUploadedIntegrationEvent {{ SessionId: {SessionId}, ChunkIndex:{ChunkIndex}}}";
+        }
     }
 }

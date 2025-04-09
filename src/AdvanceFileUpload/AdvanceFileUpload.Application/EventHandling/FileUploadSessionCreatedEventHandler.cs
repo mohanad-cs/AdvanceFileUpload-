@@ -30,16 +30,29 @@ namespace AdvanceFileUpload.Application.EventHandling
             }
             if (_uploadSetting.EnableIntegrationEventPublishing)
             {
-                _logger.LogInformation("Publishing FileUploadSessionCreatedIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
-                await _integrationEventPublisher.PublishAsync(new SessionCreatedIntegrationEvent
+                var sessionCreatedIntegrationEvent = new SessionCreatedIntegrationEvent()
                 {
                     SessionId = notification.FileUploadSession.Id,
                     FileName = notification.FileUploadSession.FileName,
                     FileSize = notification.FileUploadSession.FileSize,
                     FileExtension = notification.FileUploadSession.FileExtension,
                     SessionStartDateTime = notification.FileUploadSession.SessionStartDate,
-                   
-                }, cancellationToken);
+
+                };
+                PublishMessage<SessionCreatedIntegrationEvent> publishMessage = new PublishMessage<SessionCreatedIntegrationEvent>()
+                {
+                    Message = sessionCreatedIntegrationEvent,
+                    Queue = IntegrationConstants.SessionCreatedConstants.Queue,
+                    RoutingKey = IntegrationConstants.SessionCreatedConstants.RoutingKey,
+                    Exchange = IntegrationConstants.SessionCreatedConstants.Exchange,
+                    ExchangeType = IntegrationConstants.SessionCreatedConstants.ExchangeType,
+                    Durable = IntegrationConstants.SessionCreatedConstants.Durable,
+                    Exclusive = IntegrationConstants.SessionCreatedConstants.Exclusive,
+                    AutoDelete = IntegrationConstants.SessionCreatedConstants.AutoDelete
+
+                };
+                _logger.LogInformation("Publishing FileUploadSessionCreatedIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
+                await _integrationEventPublisher.PublishAsync(publishMessage, cancellationToken);
             }
         }
     }

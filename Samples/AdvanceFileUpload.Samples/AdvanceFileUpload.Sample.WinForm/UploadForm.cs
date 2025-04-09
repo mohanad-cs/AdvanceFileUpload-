@@ -86,9 +86,31 @@ namespace AdvanceFileUpload.Sample.WinForm
                 _fileUploadService.SessionCanceled += _fileUploadService_SessionCanceled;
                 _fileUploadService.SessionCompleting += _fileUploadService_SessionCompleting;
                 _fileUploadService.SessionCompleted += _fileUploadService_SessionCompleted;
+                _fileUploadService.UploadError += _fileUploadService_UploadError;
+                _fileUploadService.NetworkError += _fileUploadService_NetworkError;
             }
 
 
+        }
+
+        private void _fileUploadService_NetworkError(object? sender, string e)
+        {
+            memoEdit.Invoke(() =>
+            memoEdit.AppendLine(e + "\n"));
+            if (_fileUploadService.CanResumeSession)
+            {
+                btnPause_Resume.Caption = ResumeCaption;
+                btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
+                btnCancel.Enabled = true;
+                btnUpload.Enabled = false;
+                btnCancel.Enabled = true;
+            }
+        }
+
+        private void _fileUploadService_UploadError(object? sender, string e)
+        {
+            memoEdit.Invoke(() =>
+            memoEdit.AppendLine(e+"\n"));
         }
 
         private void _fileUploadService_SessionCompleting(object? sender, EventArgs e)

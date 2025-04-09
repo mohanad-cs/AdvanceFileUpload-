@@ -18,7 +18,7 @@ namespace AdvanceFileUpload.Application.EventHandling
         private readonly IRepository<FileUploadSession> _fileUploadSessionRepository;
         public FileUploadSessionCanceledEventHandler(IOptions<UploadSetting> uploadSetting, IIntegrationEventPublisher integrationEventPublisher, IRepository<FileUploadSession> fileUploadSessionRepository, ILogger<FileUploadSessionCreatedEventHandler> logger)
         {
-          
+
             _uploadSetting = uploadSetting?.Value ?? throw new ArgumentNullException(nameof(uploadSetting));
             _integrationEventPublisher = integrationEventPublisher ?? throw new ArgumentNullException(nameof(integrationEventPublisher));
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
@@ -28,7 +28,7 @@ namespace AdvanceFileUpload.Application.EventHandling
 
         public async Task Handle(FileUploadSessionCanceledEvent notification, CancellationToken cancellationToken)
         {
-           _logger.LogInformation("Handling FileUploadSessionCanceledEvent for session {SessionId}", notification.FileUploadSession.Id);
+            _logger.LogInformation("Handling FileUploadSessionCanceledEvent for session {SessionId}", notification.FileUploadSession.Id);
             FileUploadSession? canceledSession = await _fileUploadSessionRepository.GetByIdAsync(notification.FileUploadSession.Id, cancellationToken);
             if (canceledSession is null)
             {
@@ -44,7 +44,7 @@ namespace AdvanceFileUpload.Application.EventHandling
             if (_uploadSetting.EnableIntegrationEventPublishing)
             {
                 _logger.LogInformation("Publishing FileUploadSessionCanceledIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
-                await _integrationEventPublisher.PublishAsync(new SessionCancelledIntegrationEvent
+                var SessionCancelledIntegrationEvent = new SessionCancelledIntegrationEvent()
                 {
                     SessionId = notification.FileUploadSession.Id,
                     FileName = notification.FileUploadSession.FileName,
@@ -52,9 +52,23 @@ namespace AdvanceFileUpload.Application.EventHandling
                     FileExtension = notification.FileUploadSession.FileExtension,
                     SessionStartDateTime = notification.FileUploadSession.SessionStartDate,
                     SessionEndDateTime = (DateTime)notification.FileUploadSession.SessionEndDate,
-            
-                }, cancellationToken);
+                };
+                PublishMessage<SessionCancelledIntegrationEvent> publishMessage = new PublishMessage<SessionCancelledIntegrationEvent>()
+                {
+                    Message = SessionCancelledIntegrationEvent,
+                    Queue = IntegrationConstants.SessionCanceledConstants.Queue,
+                    RoutingKey = IntegrationConstants.SessionCanceledConstants.RoutingKey,
+                    Exchange = IntegrationConstants.SessionCanceledConstants.Exchange,
+                    ExchangeType = IntegrationConstants.SessionCanceledConstants.ExchangeType,
+                    Durable = IntegrationConstants.SessionCanceledConstants.Durable,
+                    Exclusive = IntegrationConstants.SessionCanceledConstants.Exclusive,
+                    AutoDelete = IntegrationConstants.SessionCanceledConstants.AutoDelete
+                };
+                await _integrationEventPublisher.PublishAsync(publishMessage, cancellationToken);
+
             }
+
         }
+
     }
 }

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Sample.WinForm", "AdvanceFileUpload.Sample.WinForm\AdvanceFileUpload.Sample.WinForm.csproj", "{7B3FC237-CE20-491C-A2EB-D04DFF04741D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Samples.WinIntegrationSample", "AdvanceFileUpload.Samples.WinIntegrationSample\AdvanceFileUpload.Samples.WinIntegrationSample.csproj", "{DCAFF022-E3EA-4AE7-988C-B731362B5F59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7B3FC237-CE20-491C-A2EB-D04DFF04741D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B3FC237-CE20-491C-A2EB-D04DFF04741D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B3FC237-CE20-491C-A2EB-D04DFF04741D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAFF022-E3EA-4AE7-988C-B731362B5F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAFF022-E3EA-4AE7-988C-B731362B5F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAFF022-E3EA-4AE7-988C-B731362B5F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAFF022-E3EA-4AE7-988C-B731362B5F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

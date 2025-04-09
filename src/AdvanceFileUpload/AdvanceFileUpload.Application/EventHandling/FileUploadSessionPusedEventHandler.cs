@@ -1,7 +1,6 @@
 ﻿using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Domain.Events;
 using AdvanceFileUpload.Integration.Contracts;
-using MassTransit.Configuration;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -25,8 +24,7 @@ namespace AdvanceFileUpload.Application.EventHandling
             _logger.LogInformation("Handling FileUploadSessionPausedEvent for session {SessionId}", notification.FileUploadSession.Id);
             if (_uploadSetting.EnableIntegrationEventPublishing)
             {
-                _logger.LogInformation("Publishing FileUploadSessionPausedIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
-                await _integrationEventPublisher.PublishAsync(new SessionPausedIntegrationEvent
+               var sessionPausedIntegrationEvent= new SessionPausedIntegrationEvent()
                 {
                     SessionId = notification.FileUploadSession.Id,
                     FileName = notification.FileUploadSession.FileName,
@@ -34,7 +32,20 @@ namespace AdvanceFileUpload.Application.EventHandling
                     FileExtension = notification.FileUploadSession.FileExtension,
                     SessionStartDateTime = notification.FileUploadSession.SessionStartDate,
                     SessionEndDateTime = (DateTime)notification.FileUploadSession.SessionEndDate,
-                }, cancellationToken);
+                };
+                PublishMessage<SessionPausedIntegrationEvent> publishMessage = new PublishMessage<SessionPausedIntegrationEvent>()
+                {
+                    Message = sessionPausedIntegrationEvent,
+                    Queue = IntegrationConstants.SessionPausedConstants.Queue,
+                    RoutingKey = IntegrationConstants.SessionPausedConstants.RoutingKey,
+                    Exchange = IntegrationConstants.SessionPausedConstants.Exchange,
+                    ExchangeType = IntegrationConstants.SessionPausedConstants.ExchangeType,
+                    Durable = IntegrationConstants.SessionPausedConstants.Durable,
+                    Exclusive = IntegrationConstants.SessionPausedConstants.Exclusive,
+                    AutoDelete = IntegrationConstants.SessionPausedConstants.AutoDelete
+                };
+                _logger.LogInformation("Publishing FileUploadSessionPausedIntegrationEvent for session {SessionId}", notification.FileUploadSession.Id);
+                await _integrationEventPublisher.PublishAsync(publishMessage, cancellationToken);
             }
             await Task.CompletedTask.ConfigureAwait(false);
         }

@@ -7,6 +7,9 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
 using AdvanceFileUpload.Domain.Core;
+using AdvanceFileUpload.Integration.Contracts;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using RabbitMQ.Client;
 
 namespace AdvanceFileUpload.API.ServiceConfiguration
 {
@@ -17,6 +20,7 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
             string? c = configuration.GetConnectionString("SessionStorage");
             services.ConfigureDataServices(c);
             services.Configure<UploadSetting>(configuration.GetSection(UploadSetting.SectionName));
+            services.Configure<RabbitMQOptions>(configuration.GetSection(RabbitMQOptions.SectionName));
             services.AddSingleton<IChunkValidator, ChunkValidator>();
             services.AddSingleton<IFileValidator, FileValidator>();
             services.AddSingleton<IFileProcessor, FileProcessor>();
@@ -27,8 +31,13 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
             services.AddMediatR((op) =>
             {
                 op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
-                
+
             });
+
+           
+            services.AddScoped<IIntegrationEventPublisher, AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher>();
+            services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Unhealthy("A healthy result."));
+            
 
         }
     }

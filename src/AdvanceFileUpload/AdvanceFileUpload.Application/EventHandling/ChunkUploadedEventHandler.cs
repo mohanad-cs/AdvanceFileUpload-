@@ -60,8 +60,19 @@ namespace AdvanceFileUpload.Application.EventHandling
                     SessionId = notification.ChunkFile.SessionId,
                     ChunkIndex = notification.ChunkFile.ChunkIndex,
                 };
+                PublishMessage<ChunkUploadedIntegrationEvent> publishMessage = new PublishMessage<ChunkUploadedIntegrationEvent>
+                {
+                    Message = chunkUploadedIntegrationEvent,
+                    Queue = IntegrationConstants.ChunkUploadedConstants.Queue,
+                    RoutingKey = IntegrationConstants.ChunkUploadedConstants.RoutingKey,
+                    Exchange = IntegrationConstants.ChunkUploadedConstants.Exchange,
+                    ExchangeType = IntegrationConstants.ChunkUploadedConstants.ExchangeType,
+                    Durable = IntegrationConstants.ChunkUploadedConstants.Durable,
+                    Exclusive = IntegrationConstants.ChunkUploadedConstants.Exclusive,
+                    AutoDelete = IntegrationConstants.ChunkUploadedConstants.AutoDelete
+                };
                 _logger.LogInformation("Publishing ChunkUploadedIntegrationEvent for session {SessionId} and chunk index {ChunkIndex}.", chunkUploadedIntegrationEvent.SessionId, chunkUploadedIntegrationEvent.ChunkIndex);
-                await _integrationEventPublisher.PublishAsync(chunkUploadedIntegrationEvent, cancellationToken);
+                await _integrationEventPublisher.PublishAsync(publishMessage, cancellationToken);
             }
         }
     }
