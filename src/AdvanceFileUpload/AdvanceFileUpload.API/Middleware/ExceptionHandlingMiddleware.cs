@@ -1,6 +1,7 @@
 ﻿using AdvanceFileUpload.Domain.Core;
 using Azure.Core;
 using Microsoft.AspNetCore.Connections;
+using System;
 using System.Net;
 
 namespace AdvanceFileUpload.API.Middleware
@@ -35,8 +36,29 @@ namespace AdvanceFileUpload.API.Middleware
             {
                 await _next(context);
             }
+            catch (OperationCanceledException ex)
+            {
+                _logger.LogWarning(ex, "Operation was canceled.");
+                await HandleExceptionAsync(context, ex);
+            }
+            catch (ConnectionResetException ex)
+            {
+                _logger.LogWarning(ex, "An existing connection was forcibly closed by the remote host.");
+                await HandleExceptionAsync(context, ex);
+            }
+            catch (DomainException ex)
+            {
+                _logger.LogWarning(ex, "Domain exception occurred.");
+                await HandleExceptionAsync(context, ex);
+            }
+            catch (ApplicationException ex)
+            {
+                _logger.LogWarning(ex, "Application exception occurred.");
+                await HandleExceptionAsync(context, ex);
+            }
             catch (Exception ex)
             {
+                _logger.LogError(ex, "An unexpected error occurred.");
                 await HandleExceptionAsync(context, ex);
             }
         }
@@ -49,7 +71,6 @@ namespace AdvanceFileUpload.API.Middleware
         /// <returns>A task that represents the completion of exception handling.</returns>
         private async Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            _logger.LogError(exception, "An unexpected error occurred.");
 
             // More log stuff        
 

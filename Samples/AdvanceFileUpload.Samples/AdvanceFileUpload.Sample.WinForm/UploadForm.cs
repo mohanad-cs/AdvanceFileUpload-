@@ -32,6 +32,7 @@ namespace AdvanceFileUpload.Sample.WinForm
             InitializeComponent();
             btnPause_Resume.Enabled = false;
             btnCancel.Enabled = false;
+            btnCancel.Caption= CancelCaption;
             btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.CaretRightSolid8;
             btnPause_Resume.Caption = StartCaption;
             btnUpload.ItemClick += BtnUpload_ItemClick;
@@ -101,7 +102,7 @@ namespace AdvanceFileUpload.Sample.WinForm
             {
                 btnPause_Resume.Caption = ResumeCaption;
                 btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
-                btnCancel.Enabled = true;
+                btnCancel.Enabled = _fileUploadService.CanCancelSession;
                 btnUpload.Enabled = false;
             }
         }
@@ -114,7 +115,7 @@ namespace AdvanceFileUpload.Sample.WinForm
             {
                 btnPause_Resume.Caption = ResumeCaption;
                 btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
-                btnCancel.Enabled = true;
+                btnCancel.Enabled = _fileUploadService.CanCancelSession;
                 btnUpload.Enabled = false;
             }
         }
@@ -344,13 +345,14 @@ namespace AdvanceFileUpload.Sample.WinForm
                     {
                         e.Item.Caption = ResumeCaption;
                         e.Item.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
+                        btnCancel.Enabled = true;
                         await _fileUploadService.PauseUploadAsync();
                     }
                     else
                     {
                         if (_fileUploadService.IsSessionCompleted || _fileUploadService.IsSessionCanceled)
                         {
-
+                            
                         }
                     }
                    
@@ -361,6 +363,7 @@ namespace AdvanceFileUpload.Sample.WinForm
                     {
                         e.Item.Caption = PauseCaption;
                         e.Item.ImageOptions.SvgImage = Properties.Resources.PauseBold;
+                        btnCancel.Enabled = true;
                         await _fileUploadService.ResumeUploadAsync();
                     }
                     else

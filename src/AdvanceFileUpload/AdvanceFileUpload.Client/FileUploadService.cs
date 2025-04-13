@@ -59,7 +59,7 @@ namespace AdvanceFileUpload.Client
         /// <inheritdoc />
         public bool CanPauseSession => _sessionStatus == SessionStatus.Uploading || _sessionStatus == SessionStatus.None;
         /// <inheritdoc />
-        public bool CanCancelSession => _sessionStatus != SessionStatus.Completed && _sessionStatus != SessionStatus.Canceled;
+        public bool CanCancelSession => _sessionStatus != SessionStatus.Completed && _sessionStatus != SessionStatus.Canceled && _sessionId!=Guid.Empty;
         /// <inheritdoc />
         public bool CanResumeSession => _sessionStatus == SessionStatus.Paused || _sessionStatus == SessionStatus.None;
         /// <inheritdoc />
@@ -504,7 +504,9 @@ namespace AdvanceFileUpload.Client
             var response = await _retryPolicy.ExecuteAsync(action, _cancellationTokenSource.Token).ConfigureAwait(false);
             if (!response.IsSuccessStatusCode)
             {
+                // TODO: Handle specific status codes if needed such as ToManyRequests. 
                 var errorMessage = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                _logger.LogError("Error occurred during the upload process. Status code: {StatusCode}, Error message: {ErrorMessage}", response.StatusCode, errorMessage);
                 OnUploadError(errorMessage, null);
             }
             return response;
@@ -522,7 +524,7 @@ namespace AdvanceFileUpload.Client
                     {
                         _cachedConnectionStatus = ConnectionStatus.Healthy;// handling ToManyRequest scenario.
                     }
-                    if (_cachedConnectionStatus != ConnectionStatus.Healthy)
+                    if (_cachedConnectionStatus == ConnectionStatus.Unhealthy)
                     {
                         _cancellationTokenSource.Cancel();
                         CreateNewCancellationTokenSource();
@@ -533,6 +535,17 @@ namespace AdvanceFileUpload.Client
                         }
                         OnNetworkError("The Upload Server is in UnHealthy Sate", null);
 
+                    }
+                    if (_cachedConnectionStatus== ConnectionStatus.Timeout)
+                    {
+                        _cancellationTokenSource.Cancel();
+                        CreateNewCancellationTokenSource();
+                        if (CanPauseSession)
+                        {
+                            OnSessionPausing();
+                            OnSessionPaused(new SessionPausedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), _originalFileSize));
+                        }
+                        OnNetworkError("Request Time out for Checking Server health", null);
                     }
                 }
             }
