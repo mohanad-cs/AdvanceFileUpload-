@@ -54,5 +54,10 @@ namespace AdvanceFileUpload.Application.Compression
         /// <param name="filePath"></param>
         /// <returns></returns>
         bool IsFileApplicableForCompression(string filePath);
+        /// <summary>
+        /// Adds an excluded file extension to the list of extensions that should not be compressed.
+        /// </summary>
+        /// <param name="extension"></param>
+        void AddExcludedExtension(string extension);
     }
 }

@@ -103,7 +103,6 @@ namespace AdvanceFileUpload.Sample.WinForm
                 btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
                 btnCancel.Enabled = true;
                 btnUpload.Enabled = false;
-                btnCancel.Enabled = true;
             }
         }
 
@@ -111,6 +110,13 @@ namespace AdvanceFileUpload.Sample.WinForm
         {
             memoEdit.Invoke(() =>
             memoEdit.AppendLine(e+"\n"));
+            if (_fileUploadService.CanResumeSession)
+            {
+                btnPause_Resume.Caption = ResumeCaption;
+                btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
+                btnCancel.Enabled = true;
+                btnUpload.Enabled = false;
+            }
         }
 
         private void _fileUploadService_SessionCompleting(object? sender, EventArgs e)
@@ -272,15 +278,21 @@ namespace AdvanceFileUpload.Sample.WinForm
 
         private async void BtnCancel_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (_fileUploadService.CanCancelSession)
+            try
             {
-                await _fileUploadService.CancelUploadAsync();
-                btnPause_Resume.Caption = StartCaption;
-                btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.CaretRightSolid8;
-                btnCancel.Enabled = false;
-                btnUpload.Enabled = true;
-                btnPause_Resume.Enabled = false;
+                if (_fileUploadService.CanCancelSession)
+                {
+                    await _fileUploadService.CancelUploadAsync();
+                    btnPause_Resume.Caption = StartCaption;
+                    btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.CaretRightSolid8;
+                    btnCancel.Enabled = false;
+                    btnUpload.Enabled = true;
+                    btnPause_Resume.Enabled = false;
 
+                }
+            }
+            catch (UploadException)
+            {
             }
         }
 
@@ -366,6 +378,10 @@ namespace AdvanceFileUpload.Sample.WinForm
             }
             catch (OperationCanceledException)
             {
+            }
+            catch (UploadException)
+            {
+
             }
         }
 

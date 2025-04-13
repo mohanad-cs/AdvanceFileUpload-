@@ -36,7 +36,7 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
 
            
             services.AddScoped<IIntegrationEventPublisher, AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher>();
-            services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Unhealthy("A healthy result."));
+            services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
             
 
         }

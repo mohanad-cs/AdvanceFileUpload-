@@ -21,5 +21,10 @@ namespace AdvanceFileUpload.Application.Request
         /// </summary>
         public CompressionLevelOption Level { get; init; }
 
+        /// <summary>
+        /// sets the excluded file extensions that should not be compressed.
+        /// </summary>
+        public List<string> ExcludedCompressionExtensions { get; init; } = new List<string>();
+
     }
 }

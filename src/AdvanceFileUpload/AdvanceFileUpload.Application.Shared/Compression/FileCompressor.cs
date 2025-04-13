@@ -9,54 +9,105 @@ namespace AdvanceFileUpload.Application.Compression
     /// </summary>
     public sealed class FileCompressor : IFileCompressor
     {
-        // a static list of applicable files extensions that can be compressed
+        // a static list of applicable files extensions that can not be compressed because they are already compressed
         private static readonly List<string> CompressedExtensions = new List<string>
-    {
-        // ===== Compressed/Archive Formats =====
-        ".zip",      // ZIP archive
-        ".rar",      // RAR archive
-        ".7z",       // 7-Zip archive
-        ".tar",      // TAR archive (often compressed with other tools)
-        ".gz",       // GZIP compressed file
-        ".bz2",      // BZIP2 compressed file
-        ".xz",       // XZ compressed file
-        ".lz",       // LZIP compressed file
-        ".lzma",     // LZMA compressed file
-        ".cab",      // Microsoft Cabinet file
-        ".arj",      // ARJ archive
-        ".z",        // Unix compress file
-        ".tgz",     // TAR + GZIP
-        ".tbz2",    // TAR + BZIP2
-        ".iso",      // Disk image
-        ".dmg",     // macOS disk image
-        ".jar",     // Java Archive
-        ".war",     // Web Application Archive
-        ".ear",     // Enterprise Application Archive
-        ".pak",     // Game/App package file
-        ".rpm",     // Red Hat Package
-        ".deb",     // Debian Package
-        ".lzh",     // LHA/LZH archive
-        ".szip",    // Snappy compression
-        
-        // ===== Already Compressed Formats =====
-        // Images
-        ".jpg", ".jpeg", ".png", ".gif", ".webp", ".heic", ".heif", ".bmp", ".tiff", ".svgz",
-        
-        // Video
-        ".mp4", ".avi", ".mkv", ".mov", ".wmv", ".flv", ".m4v", ".mpg", ".mpeg", ".webm", ".h264",
-        
-        // Audio
-        ".mp3", ".aac", ".ogg", ".wav", ".flac", ".wma", ".m4a", ".opus",
-        
-        // Documents
-        ".pdf", ".docx", ".xlsx", ".pptx", ".odt", ".ods", ".odp",
-        
-        // Other Compressed Formats
-        ".epub",      // eBook format (ZIP-based)
-        ".mobi",      // eBook format
-        ".woff", ".woff2",  // Web fonts
-        ".gz", ".br", ".zst"  // Web compression formats
-    };
+{
+    // ===== Archive/Compressed Formats =====
+    ".zip",      // ZIP Archive (standard compression)
+    ".rar",      // RAR Archive (proprietary format)
+    ".7z",       // 7-Zip Archive (high compression ratio)
+    ".tar",      // Tape Archive (uncompressed bundle, often combined with compression)
+    ".gz",       // Gzip Compressed File (common in Unix/Linux)
+    ".bz2",      // Bzip2 Compressed File (better compression than gzip)
+    ".xz",       // XZ Compressed File (LZMA2 algorithm)
+    ".lz",       // Lzip Compressed File
+    ".lzma",     // LZMA Compressed File
+    ".cab",      // Microsoft Cabinet File (Windows installers)
+    ".z",        // Unix Compress File (legacy format)
+    ".tgz",      // TAR + Gzip Combined Archive
+    ".tbz2",     // TAR + Bzip2 Combined Archive
+    ".iso",      // Disk Image File (optical media format)
+    ".dmg",      // Apple Disk Image (macOS installers)
+    ".jar",      // Java Archive (executable Java package)
+    ".war",      // Web Application Archive (Java web apps)
+    ".ear",      // Enterprise Application Archive (Java EE)
+    ".pak",      // Game Resource Archive (common in gaming)
+    ".rpm",      // Red Hat Package Manager (Linux distros)
+    ".deb",      // Debian Package (Debian/Ubuntu Linux)
+    ".szip",     // SZIP Compressed Data (NASA format)
+    ".lz4",      // LZ4 Compressed File (high-speed compression)
+    ".msi",      // Windows Installer Package (uses CAB internally)
+    ".apk",      // Android Application Package (ZIP-based)
+    ".ipa",      // iOS Application Package (Apple ecosystem)
+    ".lzh",      // LHA/LZH Archive (Japanese legacy format)
+
+    // ===== Pre-Compressed Formats =====
+    // Images
+    ".jpg",      // JPEG Image (lossy compression)
+    ".jpeg",     // JPEG Image (alternate extension)
+    ".png",      // Portable Network Graphics (lossless compression)
+    ".gif",      // Graphics Interchange Format (LZW compression)
+    ".webp",     // WebP Image (Google's modern format)
+    ".heic",     // HEIF Image (High Efficiency Image Format)
+    ".heif",     // High Efficiency Image File Format
+    ".tiff",     // Tagged Image File Format (often compressed)
+    ".svgz",     // Compressed SVG (gzipped vector graphics)
+    ".avif",     // AV1 Image File (next-gen royalty-free format)
+    ".jp2",      // JPEG 2000 Image (wavelet compression)
+    ".jxr",      // JPEG XR Image (HD Photo format)
+
+    // Video
+    ".mp4",      // MPEG-4 Video (H.264/265 compression)
+    ".avi",      // Audio Video Interleave (container format)
+    ".mkv",      // Matroska Video (open container format)
+    ".mov",      // QuickTime Movie (Apple format)
+    ".wmv",      // Windows Media Video (Microsoft format)
+    ".flv",      // Flash Video (legacy web format)
+    ".m4v",      // iTunes Video Format (MPEG-4 variant)
+    ".mpg",      // MPEG Video (legacy compression)
+    ".mpeg",     // MPEG Video (alternate extension)
+    ".webm",     // WebM Video (VP8/VP9 compression)
+    ".h264",     // H.264 Video Stream (AVC codec)
+    ".h265",     // H.265 Video Stream (HEVC codec)
+    ".hevc",     // High Efficiency Video Coding
+    ".ogv",      // Ogg Video (open format)
+
+    // Audio
+    ".mp3",      // MPEG Audio Layer III
+    ".aac",      // Advanced Audio Coding
+    ".ogg",      // Ogg Vorbis Audio (open format)
+    ".wav",      // WAVE Audio (sometimes compressed)
+    ".flac",     // Free Lossless Audio Codec
+    ".wma",      // Windows Media Audio
+    ".m4a",      // MPEG-4 Audio (AAC codec)
+    ".opus",     // Opus Audio (low-latency codec)
+    ".ape",      // Monkey's Audio (lossless compression)
+    ".alac",     // Apple Lossless Audio Codec
+
+    // Documents
+    ".pdf",      // Portable Document Format (often compressed)
+    ".docx",     // Microsoft Word Document (ZIP-based)
+    ".xlsx",     // Microsoft Excel Spreadsheet (ZIP-based)
+    ".pptx",     // Microsoft PowerPoint Presentation (ZIP-based)
+    ".odt",      // OpenDocument Text (ZIP-based)
+    ".ods",      // OpenDocument Spreadsheet (ZIP-based)
+    ".odp",      // OpenDocument Presentation (ZIP-based)
+    ".xps",      // XML Paper Specification (Microsoft format)
+    ".oxps",     // OpenXPS Document Format
+    ".docm",     // Macro-Enabled Word Document
+    ".xlsm",     // Macro-Enabled Excel Spreadsheet
+    ".pptm",     // Macro-Enabled PowerPoint Presentation
+
+    // Other
+    ".epub",     // E-Book Format (ZIP-based)
+    ".mobi",     // Mobipocket E-Book (Amazon Kindle)
+    ".woff",     // Web Open Font Format
+    ".woff2",    // Web Open Font Format v2 (brotli compression)
+    ".br",       // Brotli Compressed Data (web optimization)
+    ".zst",      // Zstandard Compressed Data
+    ".cbz",      // Comic Book Archive (ZIP-based)
+    ".cbr"       // Comic Book Archive (RAR-based)
+};
         private readonly ILogger<FileCompressor> _logger;
         ///<summary>
         /// Initializes a new instance of the <see cref="FileCompressor"/> class.
@@ -196,7 +247,38 @@ namespace AdvanceFileUpload.Application.Compression
         ///<inheritdoc/>
         public bool IsFileApplicableForCompression(string filePath)
         {
-           return Path.GetExtension(filePath) is string extension && !CompressedExtensions.Contains(extension);
+            if (string.IsNullOrWhiteSpace(filePath))
+            {
+                throw new ArgumentException("File path cannot be null or empty.", nameof(filePath));
+            }
+            string fileExtension = Path.GetExtension(filePath).ToLowerInvariant();
+            if (CompressedExtensions.Contains(fileExtension))
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+
+        ///<inheritdoc/>
+        public void AddExcludedExtension(string extension)
+        {
+            if (!string.IsNullOrWhiteSpace(extension))
+            {
+                extension = extension.Trim().ToLowerInvariant();
+                if (!extension.StartsWith("."))
+                {
+                    extension = "." + extension;
+                }
+                if (CompressedExtensions.Contains(extension))
+                {
+                    _logger.LogWarning($"The extension '{extension}' is already in the excluded list.");
+                    return;
+                }
+                CompressedExtensions.Add(extension);
+            }
+           
         }
     }
 }
