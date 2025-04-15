@@ -56,17 +56,21 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ConfigureApplicationServices
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
-    startLine: 16
+    startLine: 21
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.ServiceConfiguration
+  summary: Configures the application services.
+  example: []
   syntax:
     content: public static void ConfigureApplicationServices(this IServiceCollection services, IConfiguration configuration)
     parameters:
     - id: services
       type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The service collection to add services to.
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The application configuration.
     content.vb: Public Shared Sub ConfigureApplicationServices(services As IServiceCollection, configuration As IConfiguration)
   overload: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration.ConfigureApplicationServices*
 references:

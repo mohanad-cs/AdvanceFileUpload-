@@ -14,6 +14,11 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
 {
     public static class ServiceConfiguration
     {
+        /// <summary>
+        /// Configures the application services.
+        /// </summary>
+        /// <param name="services">The service collection to add services to.</param>
+        /// <param name="configuration">The application configuration.</param>
         public static void ConfigureApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             string? c = configuration.GetConnectionString("SessionStorage");
@@ -36,8 +41,6 @@ namespace AdvanceFileUpload.API.ServiceConfiguration
 
             services.AddScoped<IIntegrationEventPublisher, AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher>();
             services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
-
-
         }
     }
 }
