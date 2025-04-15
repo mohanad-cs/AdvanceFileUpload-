@@ -50,7 +50,7 @@ namespace AdvanceFileUpload.Domain
         public long? CompressedFileSize { get; private set; }
 
         /// <summary>
-        /// Gets or sets the status of the file upload session.
+        /// Gets the status of the file upload session.
         /// </summary>
         public FileUploadSessionStatus Status { get; private set; }
 
@@ -65,7 +65,7 @@ namespace AdvanceFileUpload.Domain
         public DateTime SessionStartDate { get; private set; }
 
         /// <summary>
-        /// Gets or sets the end date of the session.
+        /// Gets the end date of the session.
         /// </summary>
         public DateTime? SessionEndDate { get; private set; }
 
@@ -103,7 +103,7 @@ namespace AdvanceFileUpload.Domain
         /// </summary>
         public bool UseCompression => CompressionAlgorithm != null;
         /// <summary>
-        /// Gets the current hub connection id.
+        /// Gets or set the current hub connection id.
         /// </summary>
         public string? CurrentHubConnectionId { get; set; }
         /// <summary>
@@ -122,7 +122,7 @@ namespace AdvanceFileUpload.Domain
         /// <param name="fileName">The name of the file being uploaded.</param>
         /// <param name="savingDirectory">The directory where the file is being saved.</param>
         /// <param name="fileSize">The size of the file being uploaded.</param>
-        /// <param name="compressedSize">The size of the file being uploaded.</param>
+        /// <param name="compressedSize">The size of the compressed file being uploaded.</param>
         /// <param name="maxChunkSize">The maximum size of each chunk.</param>
         /// <param name="compressionAlgorithm">The compression Algorithm for the file being uploaded.</param>
         /// <param name="compressionLevel">The compression level for the file being uploaded.</param>
@@ -182,6 +182,11 @@ namespace AdvanceFileUpload.Domain
         /// <param name="compressionLevel">The compression level for the file being uploaded.</param>
         private void InitializeProperties(string fileName, string savingDirectory, long fileSize, long? compressedSize, long maxChunkSize, CompressionAlgorithm? compressionAlgorithm, CompressionLevel? compressionLevel)
         {
+            if ((compressedSize == null || compressedSize == 0) && compressionAlgorithm != null)
+            {
+                throw new DomainException("The Compressed file size should not be null or equal to 0 when using compression");
+
+            }
             FileName = fileName;
             SavingDirectory = savingDirectory;
             FileSize = fileSize;
@@ -190,9 +195,10 @@ namespace AdvanceFileUpload.Domain
             SessionStartDate = DateTime.Now;
             FileExtension = Path.GetExtension(FileName);
             UploadDate = SessionStartDate.ToDateOnly();
+
             CompressionAlgorithm = compressionAlgorithm;
             CompressionLevel = compressionLevel;
-            CompressedFileSize = compressedSize;
+            CompressedFileSize = CompressionAlgorithm.HasValue ? compressedSize : null;
         }
 
         /// <summary>
@@ -200,7 +206,15 @@ namespace AdvanceFileUpload.Domain
         /// </summary>
         /// <param name="chunkIndex">The index of the chunk.</param>
         /// <param name="chunkPath">The path of the chunk.</param>
-        /// <exception cref="ChunkUploadingException">Thrown when the chunk cannot be added.</exception>
+        /// <exception cref="ChunkUploadingException">
+        /// Thrown when the chunk cannot be added due to one of the following reasons:
+        /// <list type="bullet">
+        /// <item><description>The upload session is already completed.</description></item>
+        /// <item><description>The upload session is already canceled.</description></item>
+        /// <item><description>All chunks are already uploaded.</description></item>
+        /// <item><description>The chunk with the specified index is already uploaded.</description></item>
+        /// </list>
+        /// </exception>
         public void AddChunk(int chunkIndex, string chunkPath)
         {
             if (IsCompleted())
@@ -289,12 +303,12 @@ namespace AdvanceFileUpload.Domain
             return Status == FileUploadSessionStatus.Canceled;
         }
 
-        #region Manage Status
-
         /// <summary>
         /// Cancels the file upload session.
         /// </summary>
-        /// <exception cref="CancelationFileUploadException">Thrown when the session cannot be canceled.</exception>
+        /// <exception cref="CancelationFileUploadException">
+        /// Thrown when the session cannot be canceled because it is already completed.
+        /// </exception>
         public void CancelSession()
         {
             if (IsCompleted())
@@ -309,7 +323,9 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Pauses the file upload session.
         /// </summary>
-        /// <exception cref="CancelationFileUploadException">Thrown when the session cannot be paused.</exception>
+        /// <exception cref="CancelationFileUploadException">
+        /// Thrown when the session cannot be paused because it is already completed or canceled.
+        /// </exception>
         public void PauseSession()
         {
             if (IsCompleted())
@@ -328,7 +344,14 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Completes the file upload session.
         /// </summary>
-        /// <exception cref="CompletingFileUploadException">Thrown when the session cannot be completed.</exception>
+        /// <exception cref="CompletingFileUploadException">
+        /// Thrown when the session cannot be completed due to one of the following reasons:
+        /// <list type="bullet">
+        /// <item><description>The session is already completed.</description></item>
+        /// <item><description>The session is canceled.</description></item>
+        /// <item><description>Not all chunks have been uploaded.</description></item>
+        /// </list>
+        /// </exception>
         public void CompleteSession()
         {
             if (IsCompleted())
@@ -348,6 +371,5 @@ namespace AdvanceFileUpload.Domain
             this.AddDomainEvent(new FileUploadSessionCompletedEvent(this));
         }
 
-        #endregion Manage Status
     }
 }
