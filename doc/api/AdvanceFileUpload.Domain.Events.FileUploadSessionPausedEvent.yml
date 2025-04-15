@@ -467,6 +467,7 @@ references:
     href: AdvanceFileUpload.Domain.html
 - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
   commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
+  parent: AdvanceFileUpload.Domain.Events
   href: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent.html
   name: FileUploadSessionPausedEvent
   nameWithType: FileUploadSessionPausedEvent

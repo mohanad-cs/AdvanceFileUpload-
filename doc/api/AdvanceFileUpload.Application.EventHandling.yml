@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.EventHandling
+  commentId: N:AdvanceFileUpload.Application.EventHandling
+  id: AdvanceFileUpload.Application.EventHandling
+  children:
+  - AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+  - AdvanceFileUpload.Application.EventHandling.DomainEventPublisher
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.EventHandling
+  nameWithType: AdvanceFileUpload.Application.EventHandling
+  fullName: AdvanceFileUpload.Application.EventHandling
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application
+references:
+- uid: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.html
+  name: ChunkUploadedEventHandler
+  nameWithType: ChunkUploadedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+- uid: AdvanceFileUpload.Application.EventHandling.DomainEventPublisher
+  commentId: T:AdvanceFileUpload.Application.EventHandling.DomainEventPublisher
+  href: AdvanceFileUpload.Application.EventHandling.DomainEventPublisher.html
+  name: DomainEventPublisher
+  nameWithType: DomainEventPublisher
+  fullName: AdvanceFileUpload.Application.EventHandling.DomainEventPublisher
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.html
+  name: FileUploadSessionCanceledEventHandler
+  nameWithType: FileUploadSessionCanceledEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.html
+  name: FileUploadSessionCompletedEventHandler
+  nameWithType: FileUploadSessionCompletedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler.html
+  name: FileUploadSessionCreatedEventHandler
+  nameWithType: FileUploadSessionCreatedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler.html
+  name: FileUploadSessionPusedEventHandler
+  nameWithType: FileUploadSessionPusedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler

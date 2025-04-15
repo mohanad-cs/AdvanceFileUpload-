@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.FileProcessing
+  commentId: N:AdvanceFileUpload.Application.FileProcessing
+  id: AdvanceFileUpload.Application.FileProcessing
+  children:
+  - AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  - AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.FileProcessing
+  nameWithType: AdvanceFileUpload.Application.FileProcessing
+  fullName: AdvanceFileUpload.Application.FileProcessing
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+references:
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  commentId: T:AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html
+  name: FileProcessor
+  nameWithType: FileProcessor
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+- uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  commentId: T:AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  parent: AdvanceFileUpload.Application.FileProcessing
+  href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html
+  name: IFileProcessor
+  nameWithType: IFileProcessor
+  fullName: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+- uid: AdvanceFileUpload.Application.FileProcessing
+  commentId: N:AdvanceFileUpload.Application.FileProcessing
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.FileProcessing
+  nameWithType: AdvanceFileUpload.Application.FileProcessing
+  fullName: AdvanceFileUpload.Application.FileProcessing
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.FileProcessing
+    name: FileProcessing
+    href: AdvanceFileUpload.Application.FileProcessing.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.FileProcessing
+    name: FileProcessing
+    href: AdvanceFileUpload.Application.FileProcessing.html

@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client
+  commentId: N:AdvanceFileUpload.Client
+  id: AdvanceFileUpload.Client
+  children:
+  - AdvanceFileUpload.Client.ChunkUploadedEventArgs
+  - AdvanceFileUpload.Client.ConnectionStatus
+  - AdvanceFileUpload.Client.FileUploadService
+  - AdvanceFileUpload.Client.IFileUploadService
+  - AdvanceFileUpload.Client.INetworkConnectionChecker
+  - AdvanceFileUpload.Client.NetworkCheckOptions
+  - AdvanceFileUpload.Client.NetworkConnectionChecker
+  - AdvanceFileUpload.Client.SessionCanceledEventArgs
+  - AdvanceFileUpload.Client.SessionCompletedEventArgs
+  - AdvanceFileUpload.Client.SessionCreatedEventArgs
+  - AdvanceFileUpload.Client.SessionPausedEventArgs
+  - AdvanceFileUpload.Client.SessionResumedEventArgs
+  - AdvanceFileUpload.Client.UploadException
+  - AdvanceFileUpload.Client.UploadOptions
+  - AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Client
+  nameWithType: AdvanceFileUpload.Client
+  fullName: AdvanceFileUpload.Client
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Client
+references:
+- uid: AdvanceFileUpload.Client.ConnectionStatus
+  commentId: T:AdvanceFileUpload.Client.ConnectionStatus
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.ConnectionStatus.html
+  name: ConnectionStatus
+  nameWithType: ConnectionStatus
+  fullName: AdvanceFileUpload.Client.ConnectionStatus
+- uid: AdvanceFileUpload.Client.ChunkUploadedEventArgs
+  commentId: T:AdvanceFileUpload.Client.ChunkUploadedEventArgs
+  href: AdvanceFileUpload.Client.ChunkUploadedEventArgs.html
+  name: ChunkUploadedEventArgs
+  nameWithType: ChunkUploadedEventArgs
+  fullName: AdvanceFileUpload.Client.ChunkUploadedEventArgs
+- uid: AdvanceFileUpload.Client.SessionCanceledEventArgs
+  commentId: T:AdvanceFileUpload.Client.SessionCanceledEventArgs
+  href: AdvanceFileUpload.Client.SessionCanceledEventArgs.html
+  name: SessionCanceledEventArgs
+  nameWithType: SessionCanceledEventArgs
+  fullName: AdvanceFileUpload.Client.SessionCanceledEventArgs
+- uid: AdvanceFileUpload.Client.SessionCompletedEventArgs
+  commentId: T:AdvanceFileUpload.Client.SessionCompletedEventArgs
+  href: AdvanceFileUpload.Client.SessionCompletedEventArgs.html
+  name: SessionCompletedEventArgs
+  nameWithType: SessionCompletedEventArgs
+  fullName: AdvanceFileUpload.Client.SessionCompletedEventArgs
+- uid: AdvanceFileUpload.Client.SessionCreatedEventArgs
+  commentId: T:AdvanceFileUpload.Client.SessionCreatedEventArgs
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.SessionCreatedEventArgs.html
+  name: SessionCreatedEventArgs
+  nameWithType: SessionCreatedEventArgs
+  fullName: AdvanceFileUpload.Client.SessionCreatedEventArgs
+- uid: AdvanceFileUpload.Client.SessionPausedEventArgs
+  commentId: T:AdvanceFileUpload.Client.SessionPausedEventArgs
+  href: AdvanceFileUpload.Client.SessionPausedEventArgs.html
+  name: SessionPausedEventArgs
+  nameWithType: SessionPausedEventArgs
+  fullName: AdvanceFileUpload.Client.SessionPausedEventArgs
+- uid: AdvanceFileUpload.Client.SessionResumedEventArgs
+  commentId: T:AdvanceFileUpload.Client.SessionResumedEventArgs
+  href: AdvanceFileUpload.Client.SessionResumedEventArgs.html
+  name: SessionResumedEventArgs
+  nameWithType: SessionResumedEventArgs
+  fullName: AdvanceFileUpload.Client.SessionResumedEventArgs
+- uid: AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+  commentId: T:AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.UploadProgressChangedEventArgs.html
+  name: UploadProgressChangedEventArgs
+  nameWithType: UploadProgressChangedEventArgs
+  fullName: AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+- uid: AdvanceFileUpload.Client.FileUploadService
+  commentId: T:AdvanceFileUpload.Client.FileUploadService
+  href: AdvanceFileUpload.Client.FileUploadService.html
+  name: FileUploadService
+  nameWithType: FileUploadService
+  fullName: AdvanceFileUpload.Client.FileUploadService
+- uid: AdvanceFileUpload.Client.IFileUploadService
+  commentId: T:AdvanceFileUpload.Client.IFileUploadService
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.IFileUploadService.html
+  name: IFileUploadService
+  nameWithType: IFileUploadService
+  fullName: AdvanceFileUpload.Client.IFileUploadService
+- uid: AdvanceFileUpload.Client.INetworkConnectionChecker
+  commentId: T:AdvanceFileUpload.Client.INetworkConnectionChecker
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.INetworkConnectionChecker.html
+  name: INetworkConnectionChecker
+  nameWithType: INetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.INetworkConnectionChecker
+- uid: AdvanceFileUpload.Client.NetworkCheckOptions
+  commentId: T:AdvanceFileUpload.Client.NetworkCheckOptions
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.NetworkCheckOptions.html
+  name: NetworkCheckOptions
+  nameWithType: NetworkCheckOptions
+  fullName: AdvanceFileUpload.Client.NetworkCheckOptions
+- uid: AdvanceFileUpload.Client.NetworkConnectionChecker
+  commentId: T:AdvanceFileUpload.Client.NetworkConnectionChecker
+  href: AdvanceFileUpload.Client.NetworkConnectionChecker.html
+  name: NetworkConnectionChecker
+  nameWithType: NetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.NetworkConnectionChecker
+- uid: AdvanceFileUpload.Client.UploadException
+  commentId: T:AdvanceFileUpload.Client.UploadException
+  href: AdvanceFileUpload.Client.UploadException.html
+  name: UploadException
+  nameWithType: UploadException
+  fullName: AdvanceFileUpload.Client.UploadException
+- uid: AdvanceFileUpload.Client.UploadOptions
+  commentId: T:AdvanceFileUpload.Client.UploadOptions
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.UploadOptions.html
+  name: UploadOptions
+  nameWithType: UploadOptions
+  fullName: AdvanceFileUpload.Client.UploadOptions
+- uid: AdvanceFileUpload.Client
+  commentId: N:AdvanceFileUpload.Client
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client
+  nameWithType: AdvanceFileUpload.Client
+  fullName: AdvanceFileUpload.Client
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  id: IFileCompressionValidator
+  parent: AdvanceFileUpload.Application.Validators
+  children:
+  - AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData(System.Byte[],AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption)
+  langs:
+  - csharp
+  - vb
+  name: IFileCompressionValidator
+  nameWithType: IFileCompressionValidator
+  fullName: AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/IFileCompressionValidator.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IFileCompressionValidator
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/IFileCompressionValidator.cs
+    startLine: 7
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Validators
+  summary: Interface for validating compressed file data.
+  example: []
+  syntax:
+    content: public interface IFileCompressionValidator
+    content.vb: Public Interface IFileCompressionValidator
+- uid: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData(System.Byte[],AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption)
+  commentId: M:AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData(System.Byte[],AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption)
+  id: IsValidCompressedData(System.Byte[],AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption)
+  parent: AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  langs:
+  - csharp
+  - vb
+  name: IsValidCompressedData(byte[], CompressionAlgorithmOption)
+  nameWithType: IFileCompressionValidator.IsValidCompressedData(byte[], CompressionAlgorithmOption)
+  fullName: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData(byte[], AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/IFileCompressionValidator.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsValidCompressedData
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/IFileCompressionValidator.cs
+    startLine: 15
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Validators
+  summary: Validates if the provided file data is correctly compressed using the specified compression algorithm.
+  example: []
+  syntax:
+    content: bool IsValidCompressedData(byte[] data, CompressionAlgorithmOption compressionAlgorithmOption)
+    parameters:
+    - id: data
+      type: System.Byte[]
+      description: The file data to validate.
+    - id: compressionAlgorithmOption
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+      description: The compression algorithm used to compress the data.
+    return:
+      type: System.Boolean
+      description: True if the data is valid compressed data; otherwise, false.
+    content.vb: Function IsValidCompressedData(data As Byte(), compressionAlgorithmOption As CompressionAlgorithmOption) As Boolean
+  overload: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData*
+  nameWithType.vb: IFileCompressionValidator.IsValidCompressedData(Byte(), CompressionAlgorithmOption)
+  fullName.vb: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData(Byte(), AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption)
+  name.vb: IsValidCompressedData(Byte(), CompressionAlgorithmOption)
+references:
+- uid: AdvanceFileUpload.Application.Validators
+  commentId: N:AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Validators
+  nameWithType: AdvanceFileUpload.Application.Validators
+  fullName: AdvanceFileUpload.Application.Validators
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Validators
+    name: Validators
+    href: AdvanceFileUpload.Application.Validators.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Validators
+    name: Validators
+    href: AdvanceFileUpload.Application.Validators.html
+- uid: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData*
+  commentId: Overload:AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData
+  href: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.html#AdvanceFileUpload_Application_Validators_IFileCompressionValidator_IsValidCompressedData_System_Byte___AdvanceFileUpload_Application_Compression_CompressionAlgorithmOption_
+  name: IsValidCompressedData
+  nameWithType: IFileCompressionValidator.IsValidCompressedData
+  fullName: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.IsValidCompressedData
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.html
+  name: CompressionAlgorithmOption
+  nameWithType: CompressionAlgorithmOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

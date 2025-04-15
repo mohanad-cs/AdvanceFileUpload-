@@ -1,0 +1,652 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.UploadOptions
+  commentId: T:AdvanceFileUpload.Client.UploadOptions
+  id: UploadOptions
+  parent: AdvanceFileUpload.Client
+  children:
+  - AdvanceFileUpload.Client.UploadOptions.CompressionOption
+  - AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  - AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
+  - AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+  - AdvanceFileUpload.Client.UploadOptions.TempDirectory
+  langs:
+  - csharp
+  - vb
+  name: UploadOptions
+  nameWithType: UploadOptions
+  fullName: AdvanceFileUpload.Client.UploadOptions
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadOptions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 8
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: >-
+    Represents the options for uploading files, including compression settings, excluded file extensions, 
+
+    temporary directory, maximum concurrent uploads, and maximum retry count.
+  example: []
+  syntax:
+    content: public class UploadOptions
+    content.vb: Public Class UploadOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Client.UploadOptions.CompressionOption
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.CompressionOption
+  id: CompressionOption
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: CompressionOption
+  nameWithType: UploadOptions.CompressionOption
+  fullName: AdvanceFileUpload.Client.UploadOptions.CompressionOption
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionOption
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 13
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets or sets the compression option for the file upload.
+  example: []
+  syntax:
+    content: public CompressionOption? CompressionOption { get; set; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.Application.Request.CompressionOption
+    content.vb: Public Property CompressionOption As CompressionOption
+  overload: AdvanceFileUpload.Client.UploadOptions.CompressionOption*
+- uid: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  id: ExcludedCompressionExtensions
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: ExcludedCompressionExtensions
+  nameWithType: UploadOptions.ExcludedCompressionExtensions
+  fullName: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ExcludedCompressionExtensions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets the list of file extensions that should not be compressed.
+  example: []
+  syntax:
+    content: public List<string> ExcludedCompressionExtensions { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property ExcludedCompressionExtensions As List(Of String)
+  overload: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions*
+- uid: AdvanceFileUpload.Client.UploadOptions.TempDirectory
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.TempDirectory
+  id: TempDirectory
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: TempDirectory
+  nameWithType: UploadOptions.TempDirectory
+  fullName: AdvanceFileUpload.Client.UploadOptions.TempDirectory
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: TempDirectory
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 23
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets or sets the temporary directory used for file uploads.
+  example: []
+  syntax:
+    content: public string TempDirectory { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TempDirectory As String
+  overload: AdvanceFileUpload.Client.UploadOptions.TempDirectory*
+- uid: AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
+  id: MaxConcurrentUploads
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: MaxConcurrentUploads
+  nameWithType: UploadOptions.MaxConcurrentUploads
+  fullName: AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxConcurrentUploads
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 28
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets or sets the maximum number of concurrent uploads. Default is 4.
+  example: []
+  syntax:
+    content: public int MaxConcurrentUploads { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxConcurrentUploads As Integer
+  overload: AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads*
+- uid: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+  id: MaxRetriesCount
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: MaxRetriesCount
+  nameWithType: UploadOptions.MaxRetriesCount
+  fullName: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxRetriesCount
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 33
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets or sets the maximum number of retry attempts for failed uploads. Default is 3.
+  example: []
+  syntax:
+    content: public int MaxRetriesCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxRetriesCount As Integer
+  overload: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount*
+references:
+- uid: AdvanceFileUpload.Client
+  commentId: N:AdvanceFileUpload.Client
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client
+  nameWithType: AdvanceFileUpload.Client
+  fullName: AdvanceFileUpload.Client
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Client.UploadOptions.CompressionOption*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.CompressionOption
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_CompressionOption
+  name: CompressionOption
+  nameWithType: UploadOptions.CompressionOption
+  fullName: AdvanceFileUpload.Client.UploadOptions.CompressionOption
+- uid: AdvanceFileUpload.Application.Request.CompressionOption
+  commentId: T:AdvanceFileUpload.Application.Request.CompressionOption
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CompressionOption.html
+  name: CompressionOption
+  nameWithType: CompressionOption
+  fullName: AdvanceFileUpload.Application.Request.CompressionOption
+- uid: AdvanceFileUpload.Application.Request
+  commentId: N:AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Request
+  nameWithType: AdvanceFileUpload.Application.Request
+  fullName: AdvanceFileUpload.Application.Request
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
+- uid: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_ExcludedCompressionExtensions
+  name: ExcludedCompressionExtensions
+  nameWithType: UploadOptions.ExcludedCompressionExtensions
+  fullName: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AdvanceFileUpload.Client.UploadOptions.TempDirectory*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.TempDirectory
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_TempDirectory
+  name: TempDirectory
+  nameWithType: UploadOptions.TempDirectory
+  fullName: AdvanceFileUpload.Client.UploadOptions.TempDirectory
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_MaxConcurrentUploads
+  name: MaxConcurrentUploads
+  nameWithType: UploadOptions.MaxConcurrentUploads
+  fullName: AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_MaxRetriesCount
+  name: MaxRetriesCount
+  nameWithType: UploadOptions.MaxRetriesCount
+  fullName: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount

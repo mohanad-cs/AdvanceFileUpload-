@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Request
+  commentId: N:AdvanceFileUpload.Application.Request
+  id: AdvanceFileUpload.Application.Request
+  children:
+  - AdvanceFileUpload.Application.Request.CancelUploadSessionRequest
+  - AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest
+  - AdvanceFileUpload.Application.Request.CompressionOption
+  - AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
+  - AdvanceFileUpload.Application.Request.GetUploadSessionStatusRequest
+  - AdvanceFileUpload.Application.Request.PauseUploadSessionRequest
+  - AdvanceFileUpload.Application.Request.UploadChunkRequest
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Request
+  nameWithType: AdvanceFileUpload.Application.Request
+  fullName: AdvanceFileUpload.Application.Request
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+references:
+- uid: AdvanceFileUpload.Application.Request.CancelUploadSessionRequest
+  commentId: T:AdvanceFileUpload.Application.Request.CancelUploadSessionRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CancelUploadSessionRequest.html
+  name: CancelUploadSessionRequest
+  nameWithType: CancelUploadSessionRequest
+  fullName: AdvanceFileUpload.Application.Request.CancelUploadSessionRequest
+- uid: AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest
+  commentId: T:AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest.html
+  name: CompleteUploadSessionRequest
+  nameWithType: CompleteUploadSessionRequest
+  fullName: AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest
+- uid: AdvanceFileUpload.Application.Request.CompressionOption
+  commentId: T:AdvanceFileUpload.Application.Request.CompressionOption
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CompressionOption.html
+  name: CompressionOption
+  nameWithType: CompressionOption
+  fullName: AdvanceFileUpload.Application.Request.CompressionOption
+- uid: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
+  commentId: T:AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest.html
+  name: CreateUploadSessionRequest
+  nameWithType: CreateUploadSessionRequest
+  fullName: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
+- uid: AdvanceFileUpload.Application.Request.GetUploadSessionStatusRequest
+  commentId: T:AdvanceFileUpload.Application.Request.GetUploadSessionStatusRequest
+  href: AdvanceFileUpload.Application.Request.GetUploadSessionStatusRequest.html
+  name: GetUploadSessionStatusRequest
+  nameWithType: GetUploadSessionStatusRequest
+  fullName: AdvanceFileUpload.Application.Request.GetUploadSessionStatusRequest
+- uid: AdvanceFileUpload.Application.Request.PauseUploadSessionRequest
+  commentId: T:AdvanceFileUpload.Application.Request.PauseUploadSessionRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.PauseUploadSessionRequest.html
+  name: PauseUploadSessionRequest
+  nameWithType: PauseUploadSessionRequest
+  fullName: AdvanceFileUpload.Application.Request.PauseUploadSessionRequest
+- uid: AdvanceFileUpload.Application.Request.UploadChunkRequest
+  commentId: T:AdvanceFileUpload.Application.Request.UploadChunkRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.UploadChunkRequest.html
+  name: UploadChunkRequest
+  nameWithType: UploadChunkRequest
+  fullName: AdvanceFileUpload.Application.Request.UploadChunkRequest
+- uid: AdvanceFileUpload.Application.Request
+  commentId: N:AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Request
+  nameWithType: AdvanceFileUpload.Application.Request
+  fullName: AdvanceFileUpload.Application.Request
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html

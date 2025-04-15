@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Data
+  commentId: N:AdvanceFileUpload.Data
+  id: AdvanceFileUpload.Data
+  children:
+  - AdvanceFileUpload.Data.ApploicationDbContext
+  - AdvanceFileUpload.Data.DesignTimeDbContextFactory
+  - AdvanceFileUpload.Data.FileUploadSessionRepository
+  - AdvanceFileUpload.Data.ServiceConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Data
+  nameWithType: AdvanceFileUpload.Data
+  fullName: AdvanceFileUpload.Data
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Data
+references:
+- uid: AdvanceFileUpload.Data.ApploicationDbContext
+  commentId: T:AdvanceFileUpload.Data.ApploicationDbContext
+  parent: AdvanceFileUpload.Data
+  href: AdvanceFileUpload.Data.ApploicationDbContext.html
+  name: ApploicationDbContext
+  nameWithType: ApploicationDbContext
+  fullName: AdvanceFileUpload.Data.ApploicationDbContext
+- uid: AdvanceFileUpload.Data.FileUploadSessionRepository
+  commentId: T:AdvanceFileUpload.Data.FileUploadSessionRepository
+  href: AdvanceFileUpload.Data.FileUploadSessionRepository.html
+  name: FileUploadSessionRepository
+  nameWithType: FileUploadSessionRepository
+  fullName: AdvanceFileUpload.Data.FileUploadSessionRepository
+- uid: AdvanceFileUpload.Data.DesignTimeDbContextFactory
+  commentId: T:AdvanceFileUpload.Data.DesignTimeDbContextFactory
+  href: AdvanceFileUpload.Data.DesignTimeDbContextFactory.html
+  name: DesignTimeDbContextFactory
+  nameWithType: DesignTimeDbContextFactory
+  fullName: AdvanceFileUpload.Data.DesignTimeDbContextFactory
+- uid: AdvanceFileUpload.Data.ServiceConfiguration
+  commentId: T:AdvanceFileUpload.Data.ServiceConfiguration
+  href: AdvanceFileUpload.Data.ServiceConfiguration.html
+  name: ServiceConfiguration
+  nameWithType: ServiceConfiguration
+  fullName: AdvanceFileUpload.Data.ServiceConfiguration
+- uid: AdvanceFileUpload.Data
+  commentId: N:AdvanceFileUpload.Data
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Data
+  nameWithType: AdvanceFileUpload.Data
+  fullName: AdvanceFileUpload.Data
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Data
+    name: Data
+    href: AdvanceFileUpload.Data.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Data
+    name: Data
+    href: AdvanceFileUpload.Data.html

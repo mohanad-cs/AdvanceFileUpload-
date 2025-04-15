@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Data.Migrations
+  commentId: N:AdvanceFileUpload.Data.Migrations
+  id: AdvanceFileUpload.Data.Migrations
+  children:
+  - AdvanceFileUpload.Data.Migrations.AddConcurrencyToken
+  - AdvanceFileUpload.Data.Migrations.AddRowVersion
+  - AdvanceFileUpload.Data.Migrations.InitialCreate
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Data.Migrations
+  nameWithType: AdvanceFileUpload.Data.Migrations
+  fullName: AdvanceFileUpload.Data.Migrations
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Data
+references:
+- uid: AdvanceFileUpload.Data.Migrations.InitialCreate
+  commentId: T:AdvanceFileUpload.Data.Migrations.InitialCreate
+  href: AdvanceFileUpload.Data.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: AdvanceFileUpload.Data.Migrations.InitialCreate
+- uid: AdvanceFileUpload.Data.Migrations.AddConcurrencyToken
+  commentId: T:AdvanceFileUpload.Data.Migrations.AddConcurrencyToken
+  href: AdvanceFileUpload.Data.Migrations.AddConcurrencyToken.html
+  name: AddConcurrencyToken
+  nameWithType: AddConcurrencyToken
+  fullName: AdvanceFileUpload.Data.Migrations.AddConcurrencyToken
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion
+  commentId: T:AdvanceFileUpload.Data.Migrations.AddRowVersion
+  href: AdvanceFileUpload.Data.Migrations.AddRowVersion.html
+  name: AddRowVersion
+  nameWithType: AddRowVersion
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion

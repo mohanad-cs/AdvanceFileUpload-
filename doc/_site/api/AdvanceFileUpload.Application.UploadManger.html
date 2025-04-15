@@ -89,7 +89,7 @@
 
 
   <h1 id="AdvanceFileUpload_Application_UploadManger" data-uid="AdvanceFileUpload.Application.UploadManger" class="text-break">
-Class UploadManger  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L16"><i class="bi bi-code-slash"></i></a>
+Class UploadManger  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -161,9 +161,9 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <a id="AdvanceFileUpload_Application_UploadManger__ctor_" data-uid="AdvanceFileUpload.Application.UploadManger.#ctor*"></a>
 
-  <h3 id="AdvanceFileUpload_Application_UploadManger__ctor_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__AdvanceFileUpload_Domain_Core_IDomainEventPublisher_AdvanceFileUpload_Application_Shared_IFileValidator_AdvanceFileUpload_Application_Shared_IChunkValidator_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__AdvanceFileUpload_Application_Shared_IFileOperationService_Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_UploadManger__" data-uid="AdvanceFileUpload.Application.UploadManger.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Domain.Core.IDomainEventPublisher,AdvanceFileUpload.Application.Shared.IFileValidator,AdvanceFileUpload.Application.Shared.IChunkValidator,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Application.Shared.IFileOperationService,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.UploadManger})">
-  UploadManger(IRepository&lt;FileUploadSession&gt;, IDomainEventPublisher, IFileValidator, IChunkValidator, IOptions&lt;UploadSetting&gt;, IFileOperationService, ILogger&lt;UploadManger&gt;)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Application_UploadManger__ctor_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__AdvanceFileUpload_Domain_Core_IDomainEventPublisher_AdvanceFileUpload_Application_Validators_IFileValidator_AdvanceFileUpload_Application_Validators_IChunkValidator_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__AdvanceFileUpload_Application_FileProcessing_IFileProcessor_AdvanceFileUpload_Application_Compression_IFileCompressor_Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_UploadManger__" data-uid="AdvanceFileUpload.Application.UploadManger.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Domain.Core.IDomainEventPublisher,AdvanceFileUpload.Application.Validators.IFileValidator,AdvanceFileUpload.Application.Validators.IChunkValidator,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Application.FileProcessing.IFileProcessor,AdvanceFileUpload.Application.Compression.IFileCompressor,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.UploadManger})">
+  UploadManger(IRepository&lt;FileUploadSession&gt;, IDomainEventPublisher, IFileValidator, IChunkValidator, IOptions&lt;UploadSetting&gt;, IFileProcessor, IFileCompressor, ILogger&lt;UploadManger&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L42"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="AdvanceFileUpload.Application.UploadManger.html">UploadManger</a> class.</p>
@@ -171,7 +171,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UploadManger(IRepository&lt;FileUploadSession&gt; repository, IDomainEventPublisher domainEventPublisher, IFileValidator fileValidator, IChunkValidator chunkValidator, IOptions&lt;UploadSetting&gt; uploadSetting, IFileOperationService fileOperationService, ILogger&lt;UploadManger&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public UploadManger(IRepository&lt;FileUploadSession&gt; repository, IDomainEventPublisher domainEventPublisher, IFileValidator fileValidator, IChunkValidator chunkValidator, IOptions&lt;UploadSetting&gt; uploadSetting, IFileProcessor fileProcessor, IFileCompressor fileCompressor, ILogger&lt;UploadManger&gt; logger)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -182,17 +182,20 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
     <dt><code>domainEventPublisher</code> <a class="xref" href="AdvanceFileUpload.Domain.Core.IDomainEventPublisher.html">IDomainEventPublisher</a></dt>
     <dd><p>The publisher for domain events.</p>
 </dd>
-    <dt><code>fileValidator</code> <a class="xref" href="AdvanceFileUpload.Application.Shared.IFileValidator.html">IFileValidator</a></dt>
+    <dt><code>fileValidator</code> <a class="xref" href="AdvanceFileUpload.Application.Validators.IFileValidator.html">IFileValidator</a></dt>
     <dd><p>The validator for file properties.</p>
 </dd>
-    <dt><code>chunkValidator</code> <a class="xref" href="AdvanceFileUpload.Application.Shared.IChunkValidator.html">IChunkValidator</a></dt>
+    <dt><code>chunkValidator</code> <a class="xref" href="AdvanceFileUpload.Application.Validators.IChunkValidator.html">IChunkValidator</a></dt>
     <dd><p>The validator for file chunks.</p>
 </dd>
     <dt><code>uploadSetting</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1">IOptions</a>&lt;<a class="xref" href="AdvanceFileUpload.Application.Settings.UploadSetting.html">UploadSetting</a>&gt;</dt>
     <dd><p>The settings for file uploads.</p>
 </dd>
-    <dt><code>fileOperationService</code> <a class="xref" href="AdvanceFileUpload.Application.Shared.IFileOperationService.html">IFileOperationService</a></dt>
+    <dt><code>fileProcessor</code> <a class="xref" href="AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html">IFileProcessor</a></dt>
     <dd><p>The service for file operations.</p>
+</dd>
+    <dt><code>fileCompressor</code> <a class="xref" href="AdvanceFileUpload.Application.Compression.IFileCompressor.html">IFileCompressor</a></dt>
+    <dd><p>The service for file compressor</p>
 </dd>
     <dt><code>logger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="AdvanceFileUpload.Application.UploadManger.html">UploadManger</a>&gt;</dt>
     <dd><p>The logger for logging information.</p>
@@ -224,7 +227,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="AdvanceFileUpload_Application_UploadManger_CancelUploadSessionAsync_System_Guid_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.CancelUploadSessionAsync(System.Guid,System.Threading.CancellationToken)">
   CancelUploadSessionAsync(Guid, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L228"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Cancels the file upload session asynchronously.</p>
@@ -266,7 +269,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="AdvanceFileUpload_Application_UploadManger_CompleteUploadSessionAsync_System_Guid_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.CompleteUploadSessionAsync(System.Guid,System.Threading.CancellationToken)">
   CompleteUploadSessionAsync(Guid, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L119"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Completes the file upload session asynchronously.</p>
@@ -306,9 +309,9 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <a id="AdvanceFileUpload_Application_UploadManger_CreateUploadSessionAsync_" data-uid="AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync*"></a>
 
-  <h3 id="AdvanceFileUpload_Application_UploadManger_CreateUploadSessionAsync_AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)">
+  <h3 id="AdvanceFileUpload_Application_UploadManger_CreateUploadSessionAsync_AdvanceFileUpload_Application_Request_CreateUploadSessionRequest_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)">
   CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L55"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a new file upload session asynchronously.</p>
@@ -321,7 +324,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>request</code> <a class="xref" href="AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html">CreateUploadSessionRequest</a></dt>
+    <dt><code>request</code> <a class="xref" href="AdvanceFileUpload.Application.Request.CreateUploadSessionRequest.html">CreateUploadSessionRequest</a></dt>
     <dd><p>The request containing the details of the file to be uploaded.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
@@ -331,7 +334,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html">CreateUploadSessionResponse</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="AdvanceFileUpload.Application.Response.CreateUploadSessionResponse.html">CreateUploadSessionResponse</a>&gt;</dt>
     <dd><p>A task that represents the asynchronous operation. The task result contains the response with the details of the created upload session.</p>
 </dd>
   </dl>
@@ -350,7 +353,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="AdvanceFileUpload_Application_UploadManger_GetUploadSessionStatusAsync_System_Guid_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)">
   GetUploadSessionStatusAsync(Guid, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Gets the status of the upload session asynchronously.</p>
@@ -373,7 +376,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html">UploadSessionStatusResponse</a>&gt;</dt>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="AdvanceFileUpload.Application.Response.UploadSessionStatusResponse.html">UploadSessionStatusResponse</a>&gt;</dt>
     <dd><p>A task that represents the asynchronous operation. The task result contains the response with the status of the upload session.</p>
 </dd>
   </dl>
@@ -392,7 +395,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h3 id="AdvanceFileUpload_Application_UploadManger_PauseUploadSessionAsync_System_Guid_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.PauseUploadSessionAsync(System.Guid,System.Threading.CancellationToken)">
   PauseUploadSessionAsync(Guid, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L255"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>pause the file upload session asynchronously.</p>
@@ -432,9 +435,9 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <a id="AdvanceFileUpload_Application_UploadManger_UploadChunkAsync_" data-uid="AdvanceFileUpload.Application.UploadManger.UploadChunkAsync*"></a>
 
-  <h3 id="AdvanceFileUpload_Application_UploadManger_UploadChunkAsync_AdvanceFileUpload_Application_Shared_UploadChunkRequest_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)">
+  <h3 id="AdvanceFileUpload_Application_UploadManger_UploadChunkAsync_AdvanceFileUpload_Application_Request_UploadChunkRequest_System_Threading_CancellationToken_" data-uid="AdvanceFileUpload.Application.UploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)">
   UploadChunkAsync(UploadChunkRequest, CancellationToken)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L147"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Uploads a chunk of the file asynchronously.</p>
@@ -447,7 +450,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>request</code> <a class="xref" href="AdvanceFileUpload.Application.Shared.UploadChunkRequest.html">UploadChunkRequest</a></dt>
+    <dt><code>request</code> <a class="xref" href="AdvanceFileUpload.Application.Request.UploadChunkRequest.html">UploadChunkRequest</a></dt>
     <dd><p>The request containing the details of the chunk to be uploaded.</p>
 </dd>
     <dt><code>cancellationToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></dt>
@@ -476,7 +479,7 @@ Class UploadManger  <a class="header-action link-secondary" title="View source" 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L16" class="edit-link">Edit this page</a>
+          <a href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Application/UploadManger.cs/#L17" class="edit-link">Edit this page</a>
         </div>
 
 

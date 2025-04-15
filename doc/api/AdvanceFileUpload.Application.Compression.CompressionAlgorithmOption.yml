@@ -1,0 +1,164 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  id: CompressionAlgorithmOption
+  parent: AdvanceFileUpload.Application.Compression
+  children:
+  - AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Brotli
+  - AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Deflate
+  - AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.GZip
+  langs:
+  - csharp
+  - vb
+  name: CompressionAlgorithmOption
+  nameWithType: CompressionAlgorithmOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  type: Enum
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionAlgorithmOption
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Specifies the compression algorithms available.
+  example: []
+  syntax:
+    content: public enum CompressionAlgorithmOption
+    content.vb: Public Enum CompressionAlgorithmOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.GZip
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.GZip
+  id: GZip
+  parent: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  langs:
+  - csharp
+  - vb
+  name: GZip
+  nameWithType: CompressionAlgorithmOption.GZip
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.GZip
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: GZip
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: >-
+    GZip compression algorithm.
+
+    Benefits: Good compression ratio and speed, widely supported.
+  example: []
+  syntax:
+    content: GZip = 0
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Deflate
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Deflate
+  id: Deflate
+  parent: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  langs:
+  - csharp
+  - vb
+  name: Deflate
+  nameWithType: CompressionAlgorithmOption.Deflate
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Deflate
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Deflate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: >-
+    Deflate compression algorithm.
+
+    Benefits: Fast compression and decompression, good for real-time applications.
+  example: []
+  syntax:
+    content: Deflate = 1
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Brotli
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Brotli
+  id: Brotli
+  parent: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  langs:
+  - csharp
+  - vb
+  name: Brotli
+  nameWithType: CompressionAlgorithmOption.Brotli
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.Brotli
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Brotli
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionAlgorithmOption.cs
+    startLine: 24
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: >-
+    Brotli compression algorithm.
+
+    Benefits: High compression ratio, especially for web content, better than GZip in many cases.
+  example: []
+  syntax:
+    content: Brotli = 2
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+references:
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.html
+  name: CompressionAlgorithmOption
+  nameWithType: CompressionAlgorithmOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption

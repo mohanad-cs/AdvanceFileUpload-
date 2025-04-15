@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Response.UploadStatus
+  commentId: T:AdvanceFileUpload.Application.Response.UploadStatus
+  id: UploadStatus
+  parent: AdvanceFileUpload.Application.Response
+  children:
+  - AdvanceFileUpload.Application.Response.UploadStatus.Canceled
+  - AdvanceFileUpload.Application.Response.UploadStatus.Completed
+  - AdvanceFileUpload.Application.Response.UploadStatus.Failed
+  - AdvanceFileUpload.Application.Response.UploadStatus.InProgress
+  - AdvanceFileUpload.Application.Response.UploadStatus.Paused
+  - AdvanceFileUpload.Application.Response.UploadStatus.PendingToComplete
+  langs:
+  - csharp
+  - vb
+  name: UploadStatus
+  nameWithType: UploadStatus
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus
+  type: Enum
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadStatus
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: Represents the status of an upload session.
+  example: []
+  syntax:
+    content: public enum UploadStatus
+    content.vb: Public Enum UploadStatus
+- uid: AdvanceFileUpload.Application.Response.UploadStatus.InProgress
+  commentId: F:AdvanceFileUpload.Application.Response.UploadStatus.InProgress
+  id: InProgress
+  parent: AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: InProgress
+  nameWithType: UploadStatus.InProgress
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus.InProgress
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: InProgress
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 10
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: The file upload session is in progress.
+  example: []
+  syntax:
+    content: InProgress = 1
+    return:
+      type: AdvanceFileUpload.Application.Response.UploadStatus
+- uid: AdvanceFileUpload.Application.Response.UploadStatus.Paused
+  commentId: F:AdvanceFileUpload.Application.Response.UploadStatus.Paused
+  id: Paused
+  parent: AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: Paused
+  nameWithType: UploadStatus.Paused
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus.Paused
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Paused
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 14
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: The file upload session is paused.
+  example: []
+  syntax:
+    content: Paused = 2
+    return:
+      type: AdvanceFileUpload.Application.Response.UploadStatus
+- uid: AdvanceFileUpload.Application.Response.UploadStatus.PendingToComplete
+  commentId: F:AdvanceFileUpload.Application.Response.UploadStatus.PendingToComplete
+  id: PendingToComplete
+  parent: AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: PendingToComplete
+  nameWithType: UploadStatus.PendingToComplete
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus.PendingToComplete
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PendingToComplete
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: The file upload session is Watling to be Completed.
+  example: []
+  syntax:
+    content: PendingToComplete = 3
+    return:
+      type: AdvanceFileUpload.Application.Response.UploadStatus
+- uid: AdvanceFileUpload.Application.Response.UploadStatus.Completed
+  commentId: F:AdvanceFileUpload.Application.Response.UploadStatus.Completed
+  id: Completed
+  parent: AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: UploadStatus.Completed
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus.Completed
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Completed
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 22
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: The file upload session is completed.
+  example: []
+  syntax:
+    content: Completed = 4
+    return:
+      type: AdvanceFileUpload.Application.Response.UploadStatus
+- uid: AdvanceFileUpload.Application.Response.UploadStatus.Canceled
+  commentId: F:AdvanceFileUpload.Application.Response.UploadStatus.Canceled
+  id: Canceled
+  parent: AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: Canceled
+  nameWithType: UploadStatus.Canceled
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus.Canceled
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Canceled
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 27
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: The file upload session is canceled.
+  example: []
+  syntax:
+    content: Canceled = 5
+    return:
+      type: AdvanceFileUpload.Application.Response.UploadStatus
+- uid: AdvanceFileUpload.Application.Response.UploadStatus.Failed
+  commentId: F:AdvanceFileUpload.Application.Response.UploadStatus.Failed
+  id: Failed
+  parent: AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: UploadStatus.Failed
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus.Failed
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Failed
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Response/UploadStatus.cs
+    startLine: 32
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Response
+  summary: The file upload session has failed.
+  example: []
+  syntax:
+    content: Failed = 6
+    return:
+      type: AdvanceFileUpload.Application.Response.UploadStatus
+references:
+- uid: AdvanceFileUpload.Application.Response
+  commentId: N:AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Response
+  nameWithType: AdvanceFileUpload.Application.Response
+  fullName: AdvanceFileUpload.Application.Response
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+- uid: AdvanceFileUpload.Application.Response.UploadStatus
+  commentId: T:AdvanceFileUpload.Application.Response.UploadStatus
+  parent: AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.Application.Response.UploadStatus.html
+  name: UploadStatus
+  nameWithType: UploadStatus
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus

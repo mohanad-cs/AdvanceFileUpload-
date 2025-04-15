@@ -28,7 +28,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: EntityBase
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 11
+    startLine: 5
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -40,7 +40,6 @@ items:
   inheritance:
   - System.Object
   derivedClasses:
-  - AdvanceFileUpload.Domain.ChunkFile
   - AdvanceFileUpload.Domain.FileUploadSession
   inheritedMembers:
   - System.Object.Equals(System.Object,System.Object)
@@ -66,7 +65,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Id
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 16
+    startLine: 10
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -97,7 +96,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 23
+    startLine: 17
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -128,7 +127,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: DomainEvents
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 31
+    startLine: 25
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -159,7 +158,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: AddDomainEvent
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 37
+    startLine: 31
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -191,7 +190,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ClearDomainEvents
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 45
+    startLine: 39
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -219,7 +218,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Equals
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 51
+    startLine: 45
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -258,7 +257,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: GetHashCode
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 63
+    startLine: 57
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -290,7 +289,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: op_Equality
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 74
+    startLine: 68
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -331,7 +330,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: op_Inequality
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/EntityBase.cs
-    startLine: 91
+    startLine: 85
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core

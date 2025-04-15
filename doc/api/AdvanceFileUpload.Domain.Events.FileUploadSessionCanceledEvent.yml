@@ -467,6 +467,7 @@ references:
     href: AdvanceFileUpload.Domain.html
 - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
   commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+  parent: AdvanceFileUpload.Domain.Events
   href: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent.html
   name: FileUploadSessionCanceledEvent
   nameWithType: FileUploadSessionCanceledEvent

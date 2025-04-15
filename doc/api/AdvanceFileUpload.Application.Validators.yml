@@ -1,0 +1,91 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Validators
+  commentId: N:AdvanceFileUpload.Application.Validators
+  id: AdvanceFileUpload.Application.Validators
+  children:
+  - AdvanceFileUpload.Application.Validators.ChunkValidator
+  - AdvanceFileUpload.Application.Validators.FileCompressionValidator
+  - AdvanceFileUpload.Application.Validators.FileValidator
+  - AdvanceFileUpload.Application.Validators.IChunkValidator
+  - AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  - AdvanceFileUpload.Application.Validators.IFileValidator
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Validators
+  nameWithType: AdvanceFileUpload.Application.Validators
+  fullName: AdvanceFileUpload.Application.Validators
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+references:
+- uid: AdvanceFileUpload.Application.Validators.ChunkValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.ChunkValidator
+  href: AdvanceFileUpload.Application.Validators.ChunkValidator.html
+  name: ChunkValidator
+  nameWithType: ChunkValidator
+  fullName: AdvanceFileUpload.Application.Validators.ChunkValidator
+- uid: AdvanceFileUpload.Application.Validators.FileCompressionValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.FileCompressionValidator
+  href: AdvanceFileUpload.Application.Validators.FileCompressionValidator.html
+  name: FileCompressionValidator
+  nameWithType: FileCompressionValidator
+  fullName: AdvanceFileUpload.Application.Validators.FileCompressionValidator
+- uid: AdvanceFileUpload.Application.Validators.FileValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.FileValidator
+  href: AdvanceFileUpload.Application.Validators.FileValidator.html
+  name: FileValidator
+  nameWithType: FileValidator
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator
+- uid: AdvanceFileUpload.Application.Validators.IChunkValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.IChunkValidator
+  parent: AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.Application.Validators.IChunkValidator.html
+  name: IChunkValidator
+  nameWithType: IChunkValidator
+  fullName: AdvanceFileUpload.Application.Validators.IChunkValidator
+- uid: AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+  parent: AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.Application.Validators.IFileCompressionValidator.html
+  name: IFileCompressionValidator
+  nameWithType: IFileCompressionValidator
+  fullName: AdvanceFileUpload.Application.Validators.IFileCompressionValidator
+- uid: AdvanceFileUpload.Application.Validators.IFileValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.IFileValidator
+  parent: AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.Application.Validators.IFileValidator.html
+  name: IFileValidator
+  nameWithType: IFileValidator
+  fullName: AdvanceFileUpload.Application.Validators.IFileValidator
+- uid: AdvanceFileUpload.Application.Validators
+  commentId: N:AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Validators
+  nameWithType: AdvanceFileUpload.Application.Validators
+  fullName: AdvanceFileUpload.Application.Validators
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Validators
+    name: Validators
+    href: AdvanceFileUpload.Application.Validators.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Validators
+    name: Validators
+    href: AdvanceFileUpload.Application.Validators.html

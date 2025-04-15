@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Response
+  commentId: N:AdvanceFileUpload.Application.Response
+  id: AdvanceFileUpload.Application.Response
+  children:
+  - AdvanceFileUpload.Application.Response.CreateUploadSessionResponse
+  - AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  - AdvanceFileUpload.Application.Response.UploadSessionStatusResponse
+  - AdvanceFileUpload.Application.Response.UploadStatus
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Response
+  nameWithType: AdvanceFileUpload.Application.Response
+  fullName: AdvanceFileUpload.Application.Response
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+references:
+- uid: AdvanceFileUpload.Application.Response.CreateUploadSessionResponse
+  commentId: T:AdvanceFileUpload.Application.Response.CreateUploadSessionResponse
+  parent: AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.Application.Response.CreateUploadSessionResponse.html
+  name: CreateUploadSessionResponse
+  nameWithType: CreateUploadSessionResponse
+  fullName: AdvanceFileUpload.Application.Response.CreateUploadSessionResponse
+- uid: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  commentId: T:AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  parent: AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification.html
+  name: UploadSessionStatusNotification
+  nameWithType: UploadSessionStatusNotification
+  fullName: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+- uid: AdvanceFileUpload.Application.Response.UploadSessionStatusResponse
+  commentId: T:AdvanceFileUpload.Application.Response.UploadSessionStatusResponse
+  href: AdvanceFileUpload.Application.Response.UploadSessionStatusResponse.html
+  name: UploadSessionStatusResponse
+  nameWithType: UploadSessionStatusResponse
+  fullName: AdvanceFileUpload.Application.Response.UploadSessionStatusResponse
+- uid: AdvanceFileUpload.Application.Response.UploadStatus
+  commentId: T:AdvanceFileUpload.Application.Response.UploadStatus
+  parent: AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.Application.Response.UploadStatus.html
+  name: UploadStatus
+  nameWithType: UploadStatus
+  fullName: AdvanceFileUpload.Application.Response.UploadStatus
+- uid: AdvanceFileUpload.Application.Response
+  commentId: N:AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Response
+  nameWithType: AdvanceFileUpload.Application.Response
+  fullName: AdvanceFileUpload.Application.Response
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html

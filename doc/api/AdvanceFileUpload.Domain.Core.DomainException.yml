@@ -34,10 +34,10 @@ items:
   - System.Object
   - System.Exception
   derivedClasses:
-  - AdvanceFileUpload.Domain.Exception.CancelationFileUploadException
-  - AdvanceFileUpload.Domain.Exception.ChunkUploadingException
-  - AdvanceFileUpload.Domain.Exception.CompletingFileUploadException
-  - AdvanceFileUpload.Domain.Exception.PauseFileUploadException
+  - AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
+  - AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
+  - AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
+  - AdvanceFileUpload.Domain.Exceptions.PauseFileUploadException
   implements:
   - System.Runtime.Serialization.ISerializable
   inheritedMembers:

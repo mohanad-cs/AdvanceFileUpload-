@@ -22,10 +22,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: DomainEventBase
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/DomainEventBase.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
+  summary: Represents the base class for all domain events.
+  example: []
   syntax:
     content: 'public abstract class DomainEventBase : IDomainEvent, INotification'
     content.vb: Public MustInherit Class DomainEventBase Implements IDomainEvent, INotification
@@ -66,7 +68,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Id
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/DomainEventBase.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -99,7 +101,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: OccurredOn
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/DomainEventBase.cs
-    startLine: 5
+    startLine: 11
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
@@ -132,10 +134,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/DomainEventBase.cs
-    startLine: 7
+    startLine: 16
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Domain.Core.DomainEventBase" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: protected DomainEventBase()
     content.vb: Protected Sub New()
@@ -476,6 +480,13 @@ references:
   nameWithType.vb: Date
   fullName.vb: Date
   name.vb: Date
+- uid: AdvanceFileUpload.Domain.Core.DomainEventBase
+  commentId: T:AdvanceFileUpload.Domain.Core.DomainEventBase
+  parent: AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.Domain.Core.DomainEventBase.html
+  name: DomainEventBase
+  nameWithType: DomainEventBase
+  fullName: AdvanceFileUpload.Domain.Core.DomainEventBase
 - uid: AdvanceFileUpload.Domain.Core.DomainEventBase.#ctor*
   commentId: Overload:AdvanceFileUpload.Domain.Core.DomainEventBase.#ctor
   href: AdvanceFileUpload.Domain.Core.DomainEventBase.html#AdvanceFileUpload_Domain_Core_DomainEventBase__ctor

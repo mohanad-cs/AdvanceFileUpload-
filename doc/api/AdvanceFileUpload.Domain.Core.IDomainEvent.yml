@@ -25,6 +25,8 @@ items:
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
+  summary: Represents a domain event within the system.
+  example: []
   syntax:
     content: 'public interface IDomainEvent : INotification'
     content.vb: Public Interface IDomainEvent Inherits INotification

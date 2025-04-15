@@ -1,0 +1,192 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  id: CompressionLevelOption
+  parent: AdvanceFileUpload.Application.Compression
+  children:
+  - AdvanceFileUpload.Application.Compression.CompressionLevelOption.Fastest
+  - AdvanceFileUpload.Application.Compression.CompressionLevelOption.NoCompression
+  - AdvanceFileUpload.Application.Compression.CompressionLevelOption.Optimal
+  - AdvanceFileUpload.Application.Compression.CompressionLevelOption.SmallestSize
+  langs:
+  - csharp
+  - vb
+  name: CompressionLevelOption
+  nameWithType: CompressionLevelOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  type: Enum
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionLevelOption
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: >-
+    Specifies values that indicate whether a compression operation emphasizes speed
+      or compression size.
+  example: []
+  syntax:
+    content: public enum CompressionLevelOption
+    content.vb: Public Enum CompressionLevelOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption.Optimal
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionLevelOption.Optimal
+  id: Optimal
+  parent: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  langs:
+  - csharp
+  - vb
+  name: Optimal
+  nameWithType: CompressionLevelOption.Optimal
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption.Optimal
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Optimal
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+    startLine: 11
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: The compression operation should optimally balance compression speed and output size.
+  example: []
+  syntax:
+    content: Optimal = 0
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption.Fastest
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionLevelOption.Fastest
+  id: Fastest
+  parent: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  langs:
+  - csharp
+  - vb
+  name: Fastest
+  nameWithType: CompressionLevelOption.Fastest
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption.Fastest
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Fastest
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+    startLine: 16
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: >-
+    The compression operation should complete as quickly as possible, even if the
+
+    resulting file is not optimally compressed.
+  example: []
+  syntax:
+    content: Fastest = 1
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption.NoCompression
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionLevelOption.NoCompression
+  id: NoCompression
+  parent: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  langs:
+  - csharp
+  - vb
+  name: NoCompression
+  nameWithType: CompressionLevelOption.NoCompression
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption.NoCompression
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: NoCompression
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+    startLine: 20
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: No compression should be performed on the file.
+  example: []
+  syntax:
+    content: NoCompression = 2
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption.SmallestSize
+  commentId: F:AdvanceFileUpload.Application.Compression.CompressionLevelOption.SmallestSize
+  id: SmallestSize
+  parent: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  langs:
+  - csharp
+  - vb
+  name: SmallestSize
+  nameWithType: CompressionLevelOption.SmallestSize
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption.SmallestSize
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SmallestSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/CompressionLevel.cs
+    startLine: 25
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: >-
+    The compression operation should create output as small as possible, even if
+
+    the operation takes a longer time to complete.
+  example: []
+  syntax:
+    content: SmallestSize = 3
+    return:
+      type: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+references:
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionLevelOption.html
+  name: CompressionLevelOption
+  nameWithType: CompressionLevelOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption

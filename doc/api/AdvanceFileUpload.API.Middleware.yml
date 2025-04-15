@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.Middleware
+  commentId: N:AdvanceFileUpload.API.Middleware
+  id: AdvanceFileUpload.API.Middleware
+  children:
+  - AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
+  - AdvanceFileUpload.API.Middleware.ExceptionResponse
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.API.Middleware
+  nameWithType: AdvanceFileUpload.API.Middleware
+  fullName: AdvanceFileUpload.API.Middleware
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.API
+references:
+- uid: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
+  commentId: T:AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
+  href: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware.html
+  name: ExceptionHandlingMiddleware
+  nameWithType: ExceptionHandlingMiddleware
+  fullName: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
+- uid: AdvanceFileUpload.API.Middleware.ExceptionResponse
+  commentId: T:AdvanceFileUpload.API.Middleware.ExceptionResponse
+  href: AdvanceFileUpload.API.Middleware.ExceptionResponse.html
+  name: ExceptionResponse
+  nameWithType: ExceptionResponse
+  fullName: AdvanceFileUpload.API.Middleware.ExceptionResponse

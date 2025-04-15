@@ -1,0 +1,516 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor
+  commentId: T:AdvanceFileUpload.Application.Compression.IFileCompressor
+  id: IFileCompressor
+  parent: AdvanceFileUpload.Application.Compression
+  children:
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension(System.String)
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IFileCompressor
+  nameWithType: IFileCompressor
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IFileCompressor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Interface for file compression and decompression operations.
+  example: []
+  syntax:
+    content: public interface IFileCompressor
+    content.vb: Public Interface IFileCompressor
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  id: CompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: CompressFileAsync(string, string, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+  nameWithType: IFileCompressor.CompressFileAsync(string, string, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync(string, string, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, AdvanceFileUpload.Application.Compression.CompressionLevelOption, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressFileAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Compresses a single file asynchronously.
+  example: []
+  syntax:
+    content: Task CompressFileAsync(string inputFilePath, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
+    parameters:
+    - id: inputFilePath
+      type: System.String
+      description: The path of the file to compress.
+    - id: outputDirectory
+      type: System.String
+      description: The directory where the compressed file will be saved.
+    - id: compressionAlgorithmOption
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+      description: The compression algorithm to use.
+    - id: compressionLevelOption
+      type: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+      description: The level of compression to apply.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function CompressFileAsync(inputFilePath As String, outputDirectory As String, compressionAlgorithmOption As CompressionAlgorithmOption, compressionLevelOption As CompressionLevelOption, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync*
+  nameWithType.vb: IFileCompressor.CompressFileAsync(String, String, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync(String, String, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, AdvanceFileUpload.Application.Compression.CompressionLevelOption, System.Threading.CancellationToken)
+  name.vb: CompressFileAsync(String, String, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  id: CompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: CompressFilesAsync(string[], string, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+  nameWithType: IFileCompressor.CompressFilesAsync(string[], string, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync(string[], string, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, AdvanceFileUpload.Application.Compression.CompressionLevelOption, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressFilesAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 28
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Compresses multiple files asynchronously.
+  example: []
+  syntax:
+    content: Task CompressFilesAsync(string[] inputFilePaths, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CompressionLevelOption compressionLevelOption, CancellationToken cancellationToken = default)
+    parameters:
+    - id: inputFilePaths
+      type: System.String[]
+      description: An array of file paths to compress.
+    - id: outputDirectory
+      type: System.String
+      description: The directory where the compressed files will be saved.
+    - id: compressionAlgorithmOption
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+      description: The compression algorithm to use.
+    - id: compressionLevelOption
+      type: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+      description: The level of compression to apply.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function CompressFilesAsync(inputFilePaths As String(), outputDirectory As String, compressionAlgorithmOption As CompressionAlgorithmOption, compressionLevelOption As CompressionLevelOption, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync*
+  nameWithType.vb: IFileCompressor.CompressFilesAsync(String(), String, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync(String(), String, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, AdvanceFileUpload.Application.Compression.CompressionLevelOption, System.Threading.CancellationToken)
+  name.vb: CompressFilesAsync(String(), String, CompressionAlgorithmOption, CompressionLevelOption, CancellationToken)
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  id: DecompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: DecompressFileAsync(string, string, CompressionAlgorithmOption, CancellationToken)
+  nameWithType: IFileCompressor.DecompressFileAsync(string, string, CompressionAlgorithmOption, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync(string, string, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: DecompressFileAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 38
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Decompresses a single file asynchronously.
+  example: []
+  syntax:
+    content: Task DecompressFileAsync(string inputFilePath, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default)
+    parameters:
+    - id: inputFilePath
+      type: System.String
+      description: The path of the file to decompress.
+    - id: outputDirectory
+      type: System.String
+      description: The directory where the decompressed file will be saved.
+    - id: compressionAlgorithmOption
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+      description: The compression algorithm to use.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function DecompressFileAsync(inputFilePath As String, outputDirectory As String, compressionAlgorithmOption As CompressionAlgorithmOption, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync*
+  nameWithType.vb: IFileCompressor.DecompressFileAsync(String, String, CompressionAlgorithmOption, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync(String, String, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, System.Threading.CancellationToken)
+  name.vb: DecompressFileAsync(String, String, CompressionAlgorithmOption, CancellationToken)
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  id: DecompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: DecompressFilesAsync(string[], string, CompressionAlgorithmOption, CancellationToken)
+  nameWithType: IFileCompressor.DecompressFilesAsync(string[], string, CompressionAlgorithmOption, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync(string[], string, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: DecompressFilesAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 48
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Decompresses multiple files asynchronously.
+  example: []
+  syntax:
+    content: Task DecompressFilesAsync(string[] inputFilePaths, string outputDirectory, CompressionAlgorithmOption compressionAlgorithmOption, CancellationToken cancellationToken = default)
+    parameters:
+    - id: inputFilePaths
+      type: System.String[]
+      description: An array of file paths to decompress.
+    - id: outputDirectory
+      type: System.String
+      description: The directory where the decompressed files will be saved.
+    - id: compressionAlgorithmOption
+      type: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+      description: The compression algorithm to use.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function DecompressFilesAsync(inputFilePaths As String(), outputDirectory As String, compressionAlgorithmOption As CompressionAlgorithmOption, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync*
+  nameWithType.vb: IFileCompressor.DecompressFilesAsync(String(), String, CompressionAlgorithmOption, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync(String(), String, AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption, System.Threading.CancellationToken)
+  name.vb: DecompressFilesAsync(String(), String, CompressionAlgorithmOption, CancellationToken)
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression(System.String)
+  commentId: M:AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression(System.String)
+  id: IsFileApplicableForCompression(System.String)
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: IsFileApplicableForCompression(string)
+  nameWithType: IFileCompressor.IsFileApplicableForCompression(string)
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsFileApplicableForCompression
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 55
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Determines whether a file is applicable for compression.
+  example: []
+  syntax:
+    content: bool IsFileApplicableForCompression(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Function IsFileApplicableForCompression(filePath As String) As Boolean
+  overload: AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression*
+  nameWithType.vb: IFileCompressor.IsFileApplicableForCompression(String)
+  fullName.vb: AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression(String)
+  name.vb: IsFileApplicableForCompression(String)
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension(System.String)
+  commentId: M:AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension(System.String)
+  id: AddExcludedExtension(System.String)
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: AddExcludedExtension(string)
+  nameWithType: IFileCompressor.AddExcludedExtension(string)
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AddExcludedExtension
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/IFileCompressor.cs
+    startLine: 60
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Adds an excluded file extension to the list of extensions that should not be compressed.
+  example: []
+  syntax:
+    content: void AddExcludedExtension(string extension)
+    parameters:
+    - id: extension
+      type: System.String
+      description: ''
+    content.vb: Sub AddExcludedExtension(extension As String)
+  overload: AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension*
+  nameWithType.vb: IFileCompressor.AddExcludedExtension(String)
+  fullName.vb: AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension(String)
+  name.vb: AddExcludedExtension(String)
+references:
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_CompressFileAsync_System_String_System_String_AdvanceFileUpload_Application_Compression_CompressionAlgorithmOption_AdvanceFileUpload_Application_Compression_CompressionLevelOption_System_Threading_CancellationToken_
+  name: CompressFileAsync
+  nameWithType: IFileCompressor.CompressFileAsync
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFileAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.html
+  name: CompressionAlgorithmOption
+  nameWithType: CompressionAlgorithmOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionLevelOption.html
+  name: CompressionLevelOption
+  nameWithType: CompressionLevelOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_CompressFilesAsync_System_String___System_String_AdvanceFileUpload_Application_Compression_CompressionAlgorithmOption_AdvanceFileUpload_Application_Compression_CompressionLevelOption_System_Threading_CancellationToken_
+  name: CompressFilesAsync
+  nameWithType: IFileCompressor.CompressFilesAsync
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.CompressFilesAsync
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_DecompressFileAsync_System_String_System_String_AdvanceFileUpload_Application_Compression_CompressionAlgorithmOption_System_Threading_CancellationToken_
+  name: DecompressFileAsync
+  nameWithType: IFileCompressor.DecompressFileAsync
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFileAsync
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_DecompressFilesAsync_System_String___System_String_AdvanceFileUpload_Application_Compression_CompressionAlgorithmOption_System_Threading_CancellationToken_
+  name: DecompressFilesAsync
+  nameWithType: IFileCompressor.DecompressFilesAsync
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.DecompressFilesAsync
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_IsFileApplicableForCompression_System_String_
+  name: IsFileApplicableForCompression
+  nameWithType: IFileCompressor.IsFileApplicableForCompression
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.IsFileApplicableForCompression
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_AddExcludedExtension_System_String_
+  name: AddExcludedExtension
+  nameWithType: IFileCompressor.AddExcludedExtension
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.AddExcludedExtension

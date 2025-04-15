@@ -1,0 +1,782 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  commentId: T:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  id: UploadProcessNotifier
+  parent: AdvanceFileUpload.Application.Hubs
+  children:
+  - AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier})
+  - AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: UploadProcessNotifier
+  nameWithType: UploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadProcessNotifier
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Hubs
+  syntax:
+    content: 'public class UploadProcessNotifier : IUploadProcessNotifier'
+    content.vb: Public Class UploadProcessNotifier Implements IUploadProcessNotifier
+  inheritance:
+  - System.Object
+  implements:
+  - AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier})
+  commentId: M:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier})
+  id: '#ctor(Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier})'
+  parent: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  langs:
+  - csharp
+  - vb
+  name: UploadProcessNotifier(IHubContext<UploadProcessHub>, ILogger<UploadProcessNotifier>)
+  nameWithType: UploadProcessNotifier.UploadProcessNotifier(IHubContext<UploadProcessHub>, ILogger<UploadProcessNotifier>)
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.UploadProcessNotifier(Microsoft.AspNetCore.SignalR.IHubContext<AdvanceFileUpload.Application.Hubs.UploadProcessHub>, Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.Hubs.UploadProcessNotifier>)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
+    startLine: 10
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Hubs
+  syntax:
+    content: public UploadProcessNotifier(IHubContext<UploadProcessHub> hubContext, ILogger<UploadProcessNotifier> logger)
+    parameters:
+    - id: hubContext
+      type: Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub}
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier}
+    content.vb: Public Sub New(hubContext As IHubContext(Of UploadProcessHub), logger As ILogger(Of UploadProcessNotifier))
+  overload: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor*
+  nameWithType.vb: UploadProcessNotifier.New(IHubContext(Of UploadProcessHub), ILogger(Of UploadProcessNotifier))
+  fullName.vb: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.New(Microsoft.AspNetCore.SignalR.IHubContext(Of AdvanceFileUpload.Application.Hubs.UploadProcessHub), Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.Hubs.UploadProcessNotifier))
+  name.vb: New(IHubContext(Of UploadProcessHub), ILogger(Of UploadProcessNotifier))
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  id: NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  langs:
+  - csharp
+  - vb
+  name: NotifyUploadProgressAsync(string?, UploadSessionStatusNotification, CancellationToken)
+  nameWithType: UploadProcessNotifier.NotifyUploadProgressAsync(string?, UploadSessionStatusNotification, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync(string?, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: NotifyUploadProgressAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
+    startLine: 15
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Hubs
+  example: []
+  syntax:
+    content: public Task NotifyUploadProgressAsync(string? connectionId, UploadSessionStatusNotification uploadSessionStatusNotification, CancellationToken cancellationToken = default)
+    parameters:
+    - id: connectionId
+      type: System.String
+    - id: uploadSessionStatusNotification
+      type: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function NotifyUploadProgressAsync(connectionId As String, uploadSessionStatusNotification As UploadSessionStatusNotification, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync*
+  implements:
+  - AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  nameWithType.vb: UploadProcessNotifier.NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync(String, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)
+  name.vb: NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)
+references:
+- uid: AdvanceFileUpload.Application.Hubs
+  commentId: N:AdvanceFileUpload.Application.Hubs
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Hubs
+  nameWithType: AdvanceFileUpload.Application.Hubs
+  fullName: AdvanceFileUpload.Application.Hubs
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Hubs
+    name: Hubs
+    href: AdvanceFileUpload.Application.Hubs.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Hubs
+    name: Hubs
+    href: AdvanceFileUpload.Application.Hubs.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  commentId: T:AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  parent: AdvanceFileUpload.Application.Hubs
+  href: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.html
+  name: IUploadProcessNotifier
+  nameWithType: IUploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor*
+  commentId: Overload:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor
+  href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_UploadProcessNotifier__ctor_Microsoft_AspNetCore_SignalR_IHubContext_AdvanceFileUpload_Application_Hubs_UploadProcessHub__Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_Hubs_UploadProcessNotifier__
+  name: UploadProcessNotifier
+  nameWithType: UploadProcessNotifier.UploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.UploadProcessNotifier
+  nameWithType.vb: UploadProcessNotifier.New
+  fullName.vb: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub}
+  commentId: T:Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub}
+  parent: Microsoft.AspNetCore.SignalR
+  definition: Microsoft.AspNetCore.SignalR.IHubContext`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr.ihubcontext-1
+  name: IHubContext<UploadProcessHub>
+  nameWithType: IHubContext<UploadProcessHub>
+  fullName: Microsoft.AspNetCore.SignalR.IHubContext<AdvanceFileUpload.Application.Hubs.UploadProcessHub>
+  nameWithType.vb: IHubContext(Of UploadProcessHub)
+  fullName.vb: Microsoft.AspNetCore.SignalR.IHubContext(Of AdvanceFileUpload.Application.Hubs.UploadProcessHub)
+  name.vb: IHubContext(Of UploadProcessHub)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.IHubContext`1
+    name: IHubContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr.ihubcontext-1
+  - name: <
+  - uid: AdvanceFileUpload.Application.Hubs.UploadProcessHub
+    name: UploadProcessHub
+    href: AdvanceFileUpload.Application.Hubs.UploadProcessHub.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.IHubContext`1
+    name: IHubContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr.ihubcontext-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Application.Hubs.UploadProcessHub
+    name: UploadProcessHub
+    href: AdvanceFileUpload.Application.Hubs.UploadProcessHub.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<UploadProcessNotifier>
+  nameWithType: ILogger<UploadProcessNotifier>
+  fullName: Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.Hubs.UploadProcessNotifier>
+  nameWithType.vb: ILogger(Of UploadProcessNotifier)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.Hubs.UploadProcessNotifier)
+  name.vb: ILogger(Of UploadProcessNotifier)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+    name: UploadProcessNotifier
+    href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+    name: UploadProcessNotifier
+    href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html
+  - name: )
+- uid: Microsoft.AspNetCore.SignalR.IHubContext`1
+  commentId: T:Microsoft.AspNetCore.SignalR.IHubContext`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr.ihubcontext-1
+  name: IHubContext<THub>
+  nameWithType: IHubContext<THub>
+  fullName: Microsoft.AspNetCore.SignalR.IHubContext<THub>
+  nameWithType.vb: IHubContext(Of THub)
+  fullName.vb: Microsoft.AspNetCore.SignalR.IHubContext(Of THub)
+  name.vb: IHubContext(Of THub)
+  spec.csharp:
+  - uid: Microsoft.AspNetCore.SignalR.IHubContext`1
+    name: IHubContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr.ihubcontext-1
+  - name: <
+  - name: THub
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.AspNetCore.SignalR.IHubContext`1
+    name: IHubContext
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr.ihubcontext-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: THub
+  - name: )
+- uid: Microsoft.AspNetCore.SignalR
+  commentId: N:Microsoft.AspNetCore.SignalR
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.SignalR
+  nameWithType: Microsoft.AspNetCore.SignalR
+  fullName: Microsoft.AspNetCore.SignalR
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.SignalR
+    name: SignalR
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.SignalR
+    name: SignalR
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.signalr
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync*
+  commentId: Overload:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync
+  href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_UploadProcessNotifier_NotifyUploadProgressAsync_System_String_AdvanceFileUpload_Application_Response_UploadSessionStatusNotification_System_Threading_CancellationToken_
+  name: NotifyUploadProgressAsync
+  nameWithType: UploadProcessNotifier.NotifyUploadProgressAsync
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync
+- uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  isExternal: true
+  href: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_IUploadProcessNotifier_NotifyUploadProgressAsync_System_String_AdvanceFileUpload_Application_Response_UploadSessionStatusNotification_System_Threading_CancellationToken_
+  name: NotifyUploadProgressAsync(string, UploadSessionStatusNotification, CancellationToken)
+  nameWithType: IUploadProcessNotifier.NotifyUploadProgressAsync(string, UploadSessionStatusNotification, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(string, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)
+  nameWithType.vb: IUploadProcessNotifier.NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(String, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)
+  name.vb: NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+    name: NotifyUploadProgressAsync
+    href: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_IUploadProcessNotifier_NotifyUploadProgressAsync_System_String_AdvanceFileUpload_Application_Response_UploadSessionStatusNotification_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+    name: UploadSessionStatusNotification
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+    name: NotifyUploadProgressAsync
+    href: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_IUploadProcessNotifier_NotifyUploadProgressAsync_System_String_AdvanceFileUpload_Application_Response_UploadSessionStatusNotification_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+    name: UploadSessionStatusNotification
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  commentId: T:AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  parent: AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification.html
+  name: UploadSessionStatusNotification
+  nameWithType: UploadSessionStatusNotification
+  fullName: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: AdvanceFileUpload.Application.Response
+  commentId: N:AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Response
+  nameWithType: AdvanceFileUpload.Application.Response
+  fullName: AdvanceFileUpload.Application.Response
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.ServiceConfiguration
+  commentId: N:AdvanceFileUpload.API.ServiceConfiguration
+  id: AdvanceFileUpload.API.ServiceConfiguration
+  children:
+  - AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.API.ServiceConfiguration
+  nameWithType: AdvanceFileUpload.API.ServiceConfiguration
+  fullName: AdvanceFileUpload.API.ServiceConfiguration
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.API
+references:
+- uid: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
+  commentId: T:AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
+  href: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration.html
+  name: ServiceConfiguration
+  nameWithType: ServiceConfiguration
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration

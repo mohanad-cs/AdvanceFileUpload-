@@ -7,10 +7,10 @@ items:
   children:
   - AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
   - AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
-  - AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
   - AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
   - AdvanceFileUpload.Application.IUploadManger.PauseUploadSessionAsync(System.Guid,System.Threading.CancellationToken)
-  - AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
   langs:
   - csharp
   - vb
@@ -25,7 +25,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IUploadManger
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 12
+    startLine: 7
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -34,16 +34,16 @@ items:
   syntax:
     content: public interface IUploadManger
     content.vb: Public Interface IUploadManger
-- uid: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
-  commentId: M:AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
-  id: CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest,System.Threading.CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
+  id: CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
   parent: AdvanceFileUpload.Application.IUploadManger
   langs:
   - csharp
   - vb
   name: CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
   nameWithType: IUploadManger.CreateUploadSessionAsync(CreateUploadSessionRequest, CancellationToken)
-  fullName: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest, System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
@@ -52,7 +52,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CreateUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 20
+    startLine: 15
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -62,13 +62,13 @@ items:
     content: Task<CreateUploadSessionResponse> CreateUploadSessionAsync(CreateUploadSessionRequest request, CancellationToken cancellationToken = default)
     parameters:
     - id: request
-      type: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
+      type: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
       description: The request containing the details of the file to be uploaded.
     - id: cancellationToken
       type: System.Threading.CancellationToken
       description: The cancellation token to cancel the operation.
     return:
-      type: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse}
+      type: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Response.CreateUploadSessionResponse}
       description: A task that represents the asynchronous operation. The task result contains the response with the details of the created upload session.
     content.vb: Function CreateUploadSessionAsync(request As CreateUploadSessionRequest, cancellationToken As CancellationToken = Nothing) As Task(Of CreateUploadSessionResponse)
   overload: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync*
@@ -90,7 +90,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompleteUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 28
+    startLine: 23
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -110,16 +110,16 @@ items:
       description: A task that represents the asynchronous operation. The task result indicates whether the File was Uploading Completed successfully.
     content.vb: Function CompleteUploadSessionAsync(sessionId As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
   overload: AdvanceFileUpload.Application.IUploadManger.CompleteUploadSessionAsync*
-- uid: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
-  commentId: M:AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
-  id: UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest,System.Threading.CancellationToken)
+- uid: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
+  id: UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
   parent: AdvanceFileUpload.Application.IUploadManger
   langs:
   - csharp
   - vb
   name: UploadChunkAsync(UploadChunkRequest, CancellationToken)
   nameWithType: IUploadManger.UploadChunkAsync(UploadChunkRequest, CancellationToken)
-  fullName: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Shared.UploadChunkRequest, System.Threading.CancellationToken)
+  fullName: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest, System.Threading.CancellationToken)
   type: Method
   source:
     remote:
@@ -128,7 +128,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadChunkAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 36
+    startLine: 31
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -138,7 +138,7 @@ items:
     content: Task<bool> UploadChunkAsync(UploadChunkRequest request, CancellationToken cancellationToken = default)
     parameters:
     - id: request
-      type: AdvanceFileUpload.Application.Shared.UploadChunkRequest
+      type: AdvanceFileUpload.Application.Request.UploadChunkRequest
       description: The request containing the details of the chunk to be uploaded.
     - id: cancellationToken
       type: System.Threading.CancellationToken
@@ -166,7 +166,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: GetUploadSessionStatusAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 44
+    startLine: 39
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -182,7 +182,7 @@ items:
       type: System.Threading.CancellationToken
       description: The cancellation token to cancel the operation.
     return:
-      type: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse}
+      type: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Response.UploadSessionStatusResponse}
       description: A task that represents the asynchronous operation. The task result contains the response with the status of the upload session.
     content.vb: Function GetUploadSessionStatusAsync(sessionId As Guid, cancellationToken As CancellationToken = Nothing) As Task(Of UploadSessionStatusResponse)
   overload: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync*
@@ -204,7 +204,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 52
+    startLine: 47
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -242,7 +242,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/IUploadManger.cs
-    startLine: 60
+    startLine: 55
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application
@@ -287,17 +287,17 @@ references:
     href: AdvanceFileUpload.Application.html
 - uid: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync*
   commentId: Overload:AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync
-  href: AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CreateUploadSessionAsync_AdvanceFileUpload_Application_Shared_CreateUploadSessionRequest_System_Threading_CancellationToken_
+  href: AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_CreateUploadSessionAsync_AdvanceFileUpload_Application_Request_CreateUploadSessionRequest_System_Threading_CancellationToken_
   name: CreateUploadSessionAsync
   nameWithType: IUploadManger.CreateUploadSessionAsync
   fullName: AdvanceFileUpload.Application.IUploadManger.CreateUploadSessionAsync
-- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
-  commentId: T:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html
+- uid: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
+  commentId: T:AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest.html
   name: CreateUploadSessionRequest
   nameWithType: CreateUploadSessionRequest
-  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
+  fullName: AdvanceFileUpload.Application.Request.CreateUploadSessionRequest
 - uid: System.Threading.CancellationToken
   commentId: T:System.Threading.CancellationToken
   parent: System.Threading
@@ -306,16 +306,16 @@ references:
   name: CancellationToken
   nameWithType: CancellationToken
   fullName: System.Threading.CancellationToken
-- uid: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse}
-  commentId: T:System.Threading.Tasks.Task{AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse}
+- uid: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Response.CreateUploadSessionResponse}
+  commentId: T:System.Threading.Tasks.Task{AdvanceFileUpload.Application.Response.CreateUploadSessionResponse}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   name: Task<CreateUploadSessionResponse>
   nameWithType: Task<CreateUploadSessionResponse>
-  fullName: System.Threading.Tasks.Task<AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse>
+  fullName: System.Threading.Tasks.Task<AdvanceFileUpload.Application.Response.CreateUploadSessionResponse>
   nameWithType.vb: Task(Of CreateUploadSessionResponse)
-  fullName.vb: System.Threading.Tasks.Task(Of AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of AdvanceFileUpload.Application.Response.CreateUploadSessionResponse)
   name.vb: Task(Of CreateUploadSessionResponse)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
@@ -323,7 +323,7 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
+  - uid: AdvanceFileUpload.Application.Response.CreateUploadSessionResponse
     name: CreateUploadSessionResponse
   - name: '>'
   spec.vb:
@@ -334,15 +334,15 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
+  - uid: AdvanceFileUpload.Application.Response.CreateUploadSessionResponse
     name: CreateUploadSessionResponse
   - name: )
-- uid: AdvanceFileUpload.Application.Shared
-  commentId: N:AdvanceFileUpload.Application.Shared
+- uid: AdvanceFileUpload.Application.Request
+  commentId: N:AdvanceFileUpload.Application.Request
   href: AdvanceFileUpload.html
-  name: AdvanceFileUpload.Application.Shared
-  nameWithType: AdvanceFileUpload.Application.Shared
-  fullName: AdvanceFileUpload.Application.Shared
+  name: AdvanceFileUpload.Application.Request
+  nameWithType: AdvanceFileUpload.Application.Request
+  fullName: AdvanceFileUpload.Application.Request
   spec.csharp:
   - uid: AdvanceFileUpload
     name: AdvanceFileUpload
@@ -352,9 +352,9 @@ references:
     name: Application
     href: AdvanceFileUpload.Application.html
   - name: .
-  - uid: AdvanceFileUpload.Application.Shared
-    name: Shared
-    href: AdvanceFileUpload.Application.Shared.html
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
   spec.vb:
   - uid: AdvanceFileUpload
     name: AdvanceFileUpload
@@ -364,9 +364,9 @@ references:
     name: Application
     href: AdvanceFileUpload.Application.html
   - name: .
-  - uid: AdvanceFileUpload.Application.Shared
-    name: Shared
-    href: AdvanceFileUpload.Application.Shared.html
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
 - uid: System.Threading
   commentId: N:System.Threading
   isExternal: true
@@ -517,33 +517,33 @@ references:
   fullName: System
 - uid: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync*
   commentId: Overload:AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync
-  href: AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_UploadChunkAsync_AdvanceFileUpload_Application_Shared_UploadChunkRequest_System_Threading_CancellationToken_
+  href: AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_UploadChunkAsync_AdvanceFileUpload_Application_Request_UploadChunkRequest_System_Threading_CancellationToken_
   name: UploadChunkAsync
   nameWithType: IUploadManger.UploadChunkAsync
   fullName: AdvanceFileUpload.Application.IUploadManger.UploadChunkAsync
-- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest
-  commentId: T:AdvanceFileUpload.Application.Shared.UploadChunkRequest
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.UploadChunkRequest.html
+- uid: AdvanceFileUpload.Application.Request.UploadChunkRequest
+  commentId: T:AdvanceFileUpload.Application.Request.UploadChunkRequest
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.UploadChunkRequest.html
   name: UploadChunkRequest
   nameWithType: UploadChunkRequest
-  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest
+  fullName: AdvanceFileUpload.Application.Request.UploadChunkRequest
 - uid: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync*
   commentId: Overload:AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync
   href: AdvanceFileUpload.Application.IUploadManger.html#AdvanceFileUpload_Application_IUploadManger_GetUploadSessionStatusAsync_System_Guid_System_Threading_CancellationToken_
   name: GetUploadSessionStatusAsync
   nameWithType: IUploadManger.GetUploadSessionStatusAsync
   fullName: AdvanceFileUpload.Application.IUploadManger.GetUploadSessionStatusAsync
-- uid: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse}
-  commentId: T:System.Threading.Tasks.Task{AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse}
+- uid: System.Threading.Tasks.Task{AdvanceFileUpload.Application.Response.UploadSessionStatusResponse}
+  commentId: T:System.Threading.Tasks.Task{AdvanceFileUpload.Application.Response.UploadSessionStatusResponse}
   parent: System.Threading.Tasks
   definition: System.Threading.Tasks.Task`1
   href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   name: Task<UploadSessionStatusResponse>
   nameWithType: Task<UploadSessionStatusResponse>
-  fullName: System.Threading.Tasks.Task<AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse>
+  fullName: System.Threading.Tasks.Task<AdvanceFileUpload.Application.Response.UploadSessionStatusResponse>
   nameWithType.vb: Task(Of UploadSessionStatusResponse)
-  fullName.vb: System.Threading.Tasks.Task(Of AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of AdvanceFileUpload.Application.Response.UploadSessionStatusResponse)
   name.vb: Task(Of UploadSessionStatusResponse)
   spec.csharp:
   - uid: System.Threading.Tasks.Task`1
@@ -551,7 +551,7 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
   - name: <
-  - uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  - uid: AdvanceFileUpload.Application.Response.UploadSessionStatusResponse
     name: UploadSessionStatusResponse
   - name: '>'
   spec.vb:
@@ -562,7 +562,7 @@ references:
   - name: (
   - name: Of
   - name: " "
-  - uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
+  - uid: AdvanceFileUpload.Application.Response.UploadSessionStatusResponse
     name: UploadSessionStatusResponse
   - name: )
 - uid: AdvanceFileUpload.Application.IUploadManger.CancelUploadSessionAsync*

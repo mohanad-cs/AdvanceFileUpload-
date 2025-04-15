@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  commentId: T:AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  id: IUploadProcessNotifier
+  parent: AdvanceFileUpload.Application.Hubs
+  children:
+  - AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IUploadProcessNotifier
+  nameWithType: IUploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/IUploadProsecssNotifier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IUploadProcessNotifier
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/IUploadProsecssNotifier.cs
+    startLine: 4
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Hubs
+  syntax:
+    content: public interface IUploadProcessNotifier
+    content.vb: Public Interface IUploadProcessNotifier
+- uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  id: NotifyUploadProgressAsync(System.String,AdvanceFileUpload.Application.Response.UploadSessionStatusNotification,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  langs:
+  - csharp
+  - vb
+  name: NotifyUploadProgressAsync(string?, UploadSessionStatusNotification, CancellationToken)
+  nameWithType: IUploadProcessNotifier.NotifyUploadProgressAsync(string?, UploadSessionStatusNotification, CancellationToken)
+  fullName: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(string?, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/IUploadProsecssNotifier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: NotifyUploadProgressAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/IUploadProsecssNotifier.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Hubs
+  syntax:
+    content: Task NotifyUploadProgressAsync(string? connectionId, UploadSessionStatusNotification uploadSessionStatusNotification, CancellationToken cancellationToken = default)
+    parameters:
+    - id: connectionId
+      type: System.String
+    - id: uploadSessionStatusNotification
+      type: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function NotifyUploadProgressAsync(connectionId As String, uploadSessionStatusNotification As UploadSessionStatusNotification, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync*
+  nameWithType.vb: IUploadProcessNotifier.NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync(String, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)
+  name.vb: NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)
+references:
+- uid: AdvanceFileUpload.Application.Hubs
+  commentId: N:AdvanceFileUpload.Application.Hubs
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Hubs
+  nameWithType: AdvanceFileUpload.Application.Hubs
+  fullName: AdvanceFileUpload.Application.Hubs
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Hubs
+    name: Hubs
+    href: AdvanceFileUpload.Application.Hubs.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Hubs
+    name: Hubs
+    href: AdvanceFileUpload.Application.Hubs.html
+- uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync*
+  commentId: Overload:AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync
+  href: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_IUploadProcessNotifier_NotifyUploadProgressAsync_System_String_AdvanceFileUpload_Application_Response_UploadSessionStatusNotification_System_Threading_CancellationToken_
+  name: NotifyUploadProgressAsync
+  nameWithType: IUploadProcessNotifier.NotifyUploadProgressAsync
+  fullName: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  commentId: T:AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+  parent: AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification.html
+  name: UploadSessionStatusNotification
+  nameWithType: UploadSessionStatusNotification
+  fullName: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Application.Response
+  commentId: N:AdvanceFileUpload.Application.Response
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Response
+  nameWithType: AdvanceFileUpload.Application.Response
+  fullName: AdvanceFileUpload.Application.Response
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Response
+    name: Response
+    href: AdvanceFileUpload.Application.Response.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

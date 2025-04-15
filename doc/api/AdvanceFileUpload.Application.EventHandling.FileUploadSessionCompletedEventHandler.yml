@@ -1,0 +1,1018 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  id: FileUploadSessionCompletedEventHandler
+  parent: AdvanceFileUpload.Application.EventHandling
+  children:
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Application.FileProcessing.IFileProcessor,AdvanceFileUpload.Application.Compression.IFileCompressor,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler})
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: FileUploadSessionCompletedEventHandler
+  nameWithType: FileUploadSessionCompletedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCompletedEventHandler.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileUploadSessionCompletedEventHandler
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCompletedEventHandler.cs
+    startLine: 14
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.EventHandling
+  syntax:
+    content: 'public sealed class FileUploadSessionCompletedEventHandler : INotificationHandler<FileUploadSessionCompletedEvent>'
+    content.vb: Public NotInheritable Class FileUploadSessionCompletedEventHandler Implements INotificationHandler(Of FileUploadSessionCompletedEvent)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Application.FileProcessing.IFileProcessor,AdvanceFileUpload.Application.Compression.IFileCompressor,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler})
+  commentId: M:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Application.FileProcessing.IFileProcessor,AdvanceFileUpload.Application.Compression.IFileCompressor,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler})
+  id: '#ctor(AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},AdvanceFileUpload.Application.FileProcessing.IFileProcessor,AdvanceFileUpload.Application.Compression.IFileCompressor,Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler})'
+  parent: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: FileUploadSessionCompletedEventHandler(IRepository<FileUploadSession>, IFileProcessor, IFileCompressor, IOptions<UploadSetting>, IIntegrationEventPublisher, ILogger<FileUploadSessionCompletedEventHandler>)
+  nameWithType: FileUploadSessionCompletedEventHandler.FileUploadSessionCompletedEventHandler(IRepository<FileUploadSession>, IFileProcessor, IFileCompressor, IOptions<UploadSetting>, IIntegrationEventPublisher, ILogger<FileUploadSessionCompletedEventHandler>)
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.FileUploadSessionCompletedEventHandler(AdvanceFileUpload.Domain.Core.IRepository<AdvanceFileUpload.Domain.FileUploadSession>, AdvanceFileUpload.Application.FileProcessing.IFileProcessor, AdvanceFileUpload.Application.Compression.IFileCompressor, Microsoft.Extensions.Options.IOptions<AdvanceFileUpload.Application.Settings.UploadSetting>, AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher, Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler>)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCompletedEventHandler.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCompletedEventHandler.cs
+    startLine: 24
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.EventHandling
+  syntax:
+    content: public FileUploadSessionCompletedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IFileProcessor fileProcessor, IFileCompressor fileCompressor, IOptions<UploadSetting> uploadSetting, IIntegrationEventPublisher integrationEventPublisher, ILogger<FileUploadSessionCompletedEventHandler> logger)
+    parameters:
+    - id: fileUploadSessionRepository
+      type: AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
+    - id: fileProcessor
+      type: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+    - id: fileCompressor
+      type: AdvanceFileUpload.Application.Compression.IFileCompressor
+    - id: uploadSetting
+      type: Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting}
+    - id: integrationEventPublisher
+      type: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler}
+    content.vb: Public Sub New(fileUploadSessionRepository As IRepository(Of FileUploadSession), fileProcessor As IFileProcessor, fileCompressor As IFileCompressor, uploadSetting As IOptions(Of UploadSetting), integrationEventPublisher As IIntegrationEventPublisher, logger As ILogger(Of FileUploadSessionCompletedEventHandler))
+  overload: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.#ctor*
+  nameWithType.vb: FileUploadSessionCompletedEventHandler.New(IRepository(Of FileUploadSession), IFileProcessor, IFileCompressor, IOptions(Of UploadSetting), IIntegrationEventPublisher, ILogger(Of FileUploadSessionCompletedEventHandler))
+  fullName.vb: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.New(AdvanceFileUpload.Domain.Core.IRepository(Of AdvanceFileUpload.Domain.FileUploadSession), AdvanceFileUpload.Application.FileProcessing.IFileProcessor, AdvanceFileUpload.Application.Compression.IFileCompressor, Microsoft.Extensions.Options.IOptions(Of AdvanceFileUpload.Application.Settings.UploadSetting), AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher, Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler))
+  name.vb: New(IRepository(Of FileUploadSession), IFileProcessor, IFileCompressor, IOptions(Of UploadSetting), IIntegrationEventPublisher, ILogger(Of FileUploadSessionCompletedEventHandler))
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+  id: Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+  langs:
+  - csharp
+  - vb
+  name: Handle(FileUploadSessionCompletedEvent, CancellationToken)
+  nameWithType: FileUploadSessionCompletedEventHandler.Handle(FileUploadSessionCompletedEvent, CancellationToken)
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCompletedEventHandler.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Handle
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCompletedEventHandler.cs
+    startLine: 39
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.EventHandling
+  summary: Handles a notification
+  example: []
+  syntax:
+    content: public Task Handle(FileUploadSessionCompletedEvent notification, CancellationToken cancellationToken)
+    parameters:
+    - id: notification
+      type: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+      description: The notification
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: Cancellation token
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Public Function Handle(notification As FileUploadSessionCompletedEvent, cancellationToken As CancellationToken) As Task
+  overload: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle*
+  implements:
+  - MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+references:
+- uid: AdvanceFileUpload.Application.EventHandling
+  commentId: N:AdvanceFileUpload.Application.EventHandling
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.EventHandling
+  nameWithType: AdvanceFileUpload.Application.EventHandling
+  fullName: AdvanceFileUpload.Application.EventHandling
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.EventHandling
+    name: EventHandling
+    href: AdvanceFileUpload.Application.EventHandling.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.EventHandling
+    name: EventHandling
+    href: AdvanceFileUpload.Application.EventHandling.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}
+  commentId: T:MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}
+  parent: MediatR
+  definition: MediatR.INotificationHandler`1
+  name: INotificationHandler<FileUploadSessionCompletedEvent>
+  nameWithType: INotificationHandler<FileUploadSessionCompletedEvent>
+  fullName: MediatR.INotificationHandler<AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent>
+  nameWithType.vb: INotificationHandler(Of FileUploadSessionCompletedEvent)
+  fullName.vb: MediatR.INotificationHandler(Of AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent)
+  name.vb: INotificationHandler(Of FileUploadSessionCompletedEvent)
+  spec.csharp:
+  - uid: MediatR.INotificationHandler`1
+    name: INotificationHandler
+    isExternal: true
+  - name: <
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+    name: FileUploadSessionCompletedEvent
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.INotificationHandler`1
+    name: INotificationHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+    name: FileUploadSessionCompletedEvent
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatR.INotificationHandler`1
+  commentId: T:MediatR.INotificationHandler`1
+  isExternal: true
+  name: INotificationHandler<TNotification>
+  nameWithType: INotificationHandler<TNotification>
+  fullName: MediatR.INotificationHandler<TNotification>
+  nameWithType.vb: INotificationHandler(Of TNotification)
+  fullName.vb: MediatR.INotificationHandler(Of TNotification)
+  name.vb: INotificationHandler(Of TNotification)
+  spec.csharp:
+  - uid: MediatR.INotificationHandler`1
+    name: INotificationHandler
+    isExternal: true
+  - name: <
+  - name: TNotification
+  - name: '>'
+  spec.vb:
+  - uid: MediatR.INotificationHandler`1
+    name: INotificationHandler
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TNotification
+  - name: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.#ctor*
+  commentId: Overload:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.#ctor
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.html#AdvanceFileUpload_Application_EventHandling_FileUploadSessionCompletedEventHandler__ctor_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__AdvanceFileUpload_Application_FileProcessing_IFileProcessor_AdvanceFileUpload_Application_Compression_IFileCompressor_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__AdvanceFileUpload_Integration_Contracts_IIntegrationEventPublisher_Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_EventHandling_FileUploadSessionCompletedEventHandler__
+  name: FileUploadSessionCompletedEventHandler
+  nameWithType: FileUploadSessionCompletedEventHandler.FileUploadSessionCompletedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.FileUploadSessionCompletedEventHandler
+  nameWithType.vb: FileUploadSessionCompletedEventHandler.New
+  fullName.vb: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.New
+  name.vb: New
+- uid: AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
+  commentId: T:AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
+  parent: AdvanceFileUpload.Domain.Core
+  definition: AdvanceFileUpload.Domain.Core.IRepository`1
+  name: IRepository<FileUploadSession>
+  nameWithType: IRepository<FileUploadSession>
+  fullName: AdvanceFileUpload.Domain.Core.IRepository<AdvanceFileUpload.Domain.FileUploadSession>
+  nameWithType.vb: IRepository(Of FileUploadSession)
+  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of AdvanceFileUpload.Domain.FileUploadSession)
+  name.vb: IRepository(Of FileUploadSession)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository
+  - name: <
+  - uid: AdvanceFileUpload.Domain.FileUploadSession
+    name: FileUploadSession
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Domain.FileUploadSession
+    name: FileUploadSession
+  - name: )
+- uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  commentId: T:AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  parent: AdvanceFileUpload.Application.FileProcessing
+  href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html
+  name: IFileProcessor
+  nameWithType: IFileProcessor
+  fullName: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor
+  commentId: T:AdvanceFileUpload.Application.Compression.IFileCompressor
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html
+  name: IFileCompressor
+  nameWithType: IFileCompressor
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor
+- uid: Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting}
+  commentId: T:Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<UploadSetting>
+  nameWithType: IOptions<UploadSetting>
+  fullName: Microsoft.Extensions.Options.IOptions<AdvanceFileUpload.Application.Settings.UploadSetting>
+  nameWithType.vb: IOptions(Of UploadSetting)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of AdvanceFileUpload.Application.Settings.UploadSetting)
+  name.vb: IOptions(Of UploadSetting)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - uid: AdvanceFileUpload.Application.Settings.UploadSetting
+    name: UploadSetting
+    href: AdvanceFileUpload.Application.Settings.UploadSetting.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Application.Settings.UploadSetting
+    name: UploadSetting
+    href: AdvanceFileUpload.Application.Settings.UploadSetting.html
+  - name: )
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  parent: AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher.html
+  name: IIntegrationEventPublisher
+  nameWithType: IIntegrationEventPublisher
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+- uid: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<FileUploadSessionCompletedEventHandler>
+  nameWithType: ILogger<FileUploadSessionCompletedEventHandler>
+  fullName: Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler>
+  nameWithType.vb: ILogger(Of FileUploadSessionCompletedEventHandler)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler)
+  name.vb: ILogger(Of FileUploadSessionCompletedEventHandler)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+    name: FileUploadSessionCompletedEventHandler
+    href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
+    name: FileUploadSessionCompletedEventHandler
+    href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.html
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core.IRepository`1
+  commentId: T:AdvanceFileUpload.Domain.Core.IRepository`1
+  href: AdvanceFileUpload.Domain.Core.IRepository-1.html
+  name: IRepository<TEntity>
+  nameWithType: IRepository<TEntity>
+  fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>
+  nameWithType.vb: IRepository(Of TEntity)
+  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity)
+  name.vb: IRepository(Of TEntity)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository
+    href: AdvanceFileUpload.Domain.Core.IRepository-1.html
+  - name: <
+  - name: TEntity
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Domain.Core.IRepository`1
+    name: IRepository
+    href: AdvanceFileUpload.Domain.Core.IRepository-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEntity
+  - name: )
+- uid: AdvanceFileUpload.Domain.Core
+  commentId: N:AdvanceFileUpload.Domain.Core
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Core
+  nameWithType: AdvanceFileUpload.Domain.Core
+  fullName: AdvanceFileUpload.Domain.Core
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Core
+    name: Core
+    href: AdvanceFileUpload.Domain.Core.html
+- uid: AdvanceFileUpload.Application.FileProcessing
+  commentId: N:AdvanceFileUpload.Application.FileProcessing
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.FileProcessing
+  nameWithType: AdvanceFileUpload.Application.FileProcessing
+  fullName: AdvanceFileUpload.Application.FileProcessing
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.FileProcessing
+    name: FileProcessing
+    href: AdvanceFileUpload.Application.FileProcessing.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.FileProcessing
+    name: FileProcessing
+    href: AdvanceFileUpload.Application.FileProcessing.html
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptions-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: AdvanceFileUpload.Integration.Contracts
+  commentId: N:AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration.Contracts
+  nameWithType: AdvanceFileUpload.Integration.Contracts
+  fullName: AdvanceFileUpload.Integration.Contracts
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle*
+  commentId: Overload:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.html#AdvanceFileUpload_Application_EventHandling_FileUploadSessionCompletedEventHandler_Handle_AdvanceFileUpload_Domain_Events_FileUploadSessionCompletedEvent_System_Threading_CancellationToken_
+  name: Handle
+  nameWithType: FileUploadSessionCompletedEventHandler.Handle
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler.Handle
+- uid: MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+  commentId: M:MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+  parent: MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}
+  definition: MediatR.INotificationHandler`1.Handle(`0,System.Threading.CancellationToken)
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(FileUploadSessionCompletedEvent, CancellationToken)
+  nameWithType: INotificationHandler<FileUploadSessionCompletedEvent>.Handle(FileUploadSessionCompletedEvent, CancellationToken)
+  fullName: MediatR.INotificationHandler<AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent>.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent, System.Threading.CancellationToken)
+  nameWithType.vb: INotificationHandler(Of FileUploadSessionCompletedEvent).Handle(FileUploadSessionCompletedEvent, CancellationToken)
+  fullName.vb: MediatR.INotificationHandler(Of AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent).Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+    name: FileUploadSessionCompletedEvent
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent}.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+    name: FileUploadSessionCompletedEvent
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+  parent: AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent.html
+  name: FileUploadSessionCompletedEvent
+  nameWithType: FileUploadSessionCompletedEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: MediatR.INotificationHandler`1.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.INotificationHandler`1.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Handle(TNotification, CancellationToken)
+  nameWithType: INotificationHandler<TNotification>.Handle(TNotification, CancellationToken)
+  fullName: MediatR.INotificationHandler<TNotification>.Handle(TNotification, System.Threading.CancellationToken)
+  nameWithType.vb: INotificationHandler(Of TNotification).Handle(TNotification, CancellationToken)
+  fullName.vb: MediatR.INotificationHandler(Of TNotification).Handle(TNotification, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.INotificationHandler`1.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TNotification
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: MediatR.INotificationHandler`1.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    isExternal: true
+  - name: (
+  - name: TNotification
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: AdvanceFileUpload.Domain.Events
+  commentId: N:AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Events
+  nameWithType: AdvanceFileUpload.Domain.Events
+  fullName: AdvanceFileUpload.Domain.Events
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

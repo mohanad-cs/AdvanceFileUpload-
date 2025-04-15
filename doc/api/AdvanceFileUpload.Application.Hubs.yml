@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Hubs
+  commentId: N:AdvanceFileUpload.Application.Hubs
+  id: AdvanceFileUpload.Application.Hubs
+  children:
+  - AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  - AdvanceFileUpload.Application.Hubs.UploadProcessHub
+  - AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Hubs
+  nameWithType: AdvanceFileUpload.Application.Hubs
+  fullName: AdvanceFileUpload.Application.Hubs
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application
+references:
+- uid: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  commentId: T:AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+  parent: AdvanceFileUpload.Application.Hubs
+  href: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.html
+  name: IUploadProcessNotifier
+  nameWithType: IUploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessHub
+  commentId: T:AdvanceFileUpload.Application.Hubs.UploadProcessHub
+  href: AdvanceFileUpload.Application.Hubs.UploadProcessHub.html
+  name: UploadProcessHub
+  nameWithType: UploadProcessHub
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessHub
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  commentId: T:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html
+  name: UploadProcessNotifier
+  nameWithType: UploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+- uid: AdvanceFileUpload.Application.Hubs
+  commentId: N:AdvanceFileUpload.Application.Hubs
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Hubs
+  nameWithType: AdvanceFileUpload.Application.Hubs
+  fullName: AdvanceFileUpload.Application.Hubs
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Hubs
+    name: Hubs
+    href: AdvanceFileUpload.Application.Hubs.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Hubs
+    name: Hubs
+    href: AdvanceFileUpload.Application.Hubs.html

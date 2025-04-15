@@ -1,0 +1,224 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  id: IIntegrationEventConsumer
+  parent: AdvanceFileUpload.Integration.Contracts
+  children:
+  - AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume``1(AdvanceFileUpload.Integration.Contracts.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task})
+  - AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose
+  langs:
+  - csharp
+  - vb
+  name: IIntegrationEventConsumer
+  nameWithType: IIntegrationEventConsumer
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IIntegrationEventConsumer
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  syntax:
+    content: public interface IIntegrationEventConsumer
+    content.vb: Public Interface IIntegrationEventConsumer
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume``1(AdvanceFileUpload.Integration.Contracts.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task})
+  commentId: M:AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume``1(AdvanceFileUpload.Integration.Contracts.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task})
+  id: Consume``1(AdvanceFileUpload.Integration.Contracts.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task})
+  parent: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  langs:
+  - csharp
+  - vb
+  name: Consume<T>(ConsumingArgs, Func<T, Task>)
+  nameWithType: IIntegrationEventConsumer.Consume<T>(ConsumingArgs, Func<T, Task>)
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume<T>(AdvanceFileUpload.Integration.Contracts.ConsumingArgs, System.Func<T, System.Threading.Tasks.Task>)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Consume
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+    startLine: 8
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  syntax:
+    content: 'void Consume<T>(ConsumingArgs args, Func<T, Task> onMessageReceived) where T : class'
+    parameters:
+    - id: args
+      type: AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+    - id: onMessageReceived
+      type: System.Func{{T},System.Threading.Tasks.Task}
+    typeParameters:
+    - id: T
+    content.vb: Sub Consume(Of T As Class)(args As ConsumingArgs, onMessageReceived As Func(Of T, Task))
+  overload: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume*
+  nameWithType.vb: IIntegrationEventConsumer.Consume(Of T)(ConsumingArgs, Func(Of T, Task))
+  fullName.vb: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume(Of T)(AdvanceFileUpload.Integration.Contracts.ConsumingArgs, System.Func(Of T, System.Threading.Tasks.Task))
+  name.vb: Consume(Of T)(ConsumingArgs, Func(Of T, Task))
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose
+  commentId: M:AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose
+  id: Dispose
+  parent: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: IIntegrationEventConsumer.Dispose()
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Dispose
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+    startLine: 9
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  syntax:
+    content: void Dispose()
+    content.vb: Sub Dispose()
+  overload: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose*
+references:
+- uid: AdvanceFileUpload.Integration.Contracts
+  commentId: N:AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration.Contracts
+  nameWithType: AdvanceFileUpload.Integration.Contracts
+  fullName: AdvanceFileUpload.Integration.Contracts
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume
+  href: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.html#AdvanceFileUpload_Integration_Contracts_IIntegrationEventConsumer_Consume__1_AdvanceFileUpload_Integration_Contracts_ConsumingArgs_System_Func___0_System_Threading_Tasks_Task__
+  name: Consume
+  nameWithType: IIntegrationEventConsumer.Consume
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Consume
+- uid: AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+  commentId: T:AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+  parent: AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.Integration.Contracts.ConsumingArgs.html
+  name: ConsumingArgs
+  nameWithType: ConsumingArgs
+  fullName: AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+- uid: System.Func{{T},System.Threading.Tasks.Task}
+  commentId: T:System.Func{``0,System.Threading.Tasks.Task}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, Task>
+  nameWithType: Func<T, Task>
+  fullName: System.Func<T, System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of T, Task)
+  fullName.vb: System.Func(Of T, System.Threading.Tasks.Task)
+  name.vb: Func(Of T, Task)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose
+  href: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.html#AdvanceFileUpload_Integration_Contracts_IIntegrationEventConsumer_Dispose
+  name: Dispose
+  nameWithType: IIntegrationEventConsumer.Dispose
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.Dispose
