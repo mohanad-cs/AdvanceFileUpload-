@@ -1,8 +1,8 @@
-﻿using AdvanceFileUpload.Domain;
+﻿using System.Linq.Expressions;
+using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using System.Linq.Expressions;
 
 namespace AdvanceFileUpload.Data
 {
@@ -128,7 +128,7 @@ namespace AdvanceFileUpload.Data
                 throw new ArgumentNullException(nameof(entity));
             }
             using var transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
-           
+
 
             _dbSet.Entry(entity).CurrentValues.SetValues(entity);
             await _context.SaveChangesAsync(cancellationToken);

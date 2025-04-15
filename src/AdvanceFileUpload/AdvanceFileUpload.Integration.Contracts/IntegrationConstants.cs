@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdvanceFileUpload.Integration.Contracts
+﻿namespace AdvanceFileUpload.Integration.Contracts
 {
-  
+
     /// <summary>
     /// Contains constants used for integration purposes.
     /// </summary>

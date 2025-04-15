@@ -1,11 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System.Text;
+using System.Text.Json;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Exceptions;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Channels;
-using System.Threading.Tasks;
 
 namespace AdvanceFileUpload.Integration.Contracts
 {
@@ -17,7 +15,7 @@ namespace AdvanceFileUpload.Integration.Contracts
         private IConnection? _connection;
         private IChannel? _channel;
 
-        public RabbitMQIntegrationEventPublisher(IOptions<RabbitMQOptions> rabbitMQOptions , ILogger<RabbitMQIntegrationEventPublisher> logger)
+        public RabbitMQIntegrationEventPublisher(IOptions<RabbitMQOptions> rabbitMQOptions, ILogger<RabbitMQIntegrationEventPublisher> logger)
         {
             if (rabbitMQOptions is null)
             {
@@ -65,7 +63,7 @@ namespace AdvanceFileUpload.Integration.Contracts
 
 
 
-              await  _channel.BasicPublishAsync(exchange: message.Exchange, routingKey: message.RoutingKey, body: body);
+                await _channel.BasicPublishAsync(exchange: message.Exchange, routingKey: message.RoutingKey, body: body);
             }
             catch (BrokerUnreachableException ex)
             {
@@ -84,7 +82,7 @@ namespace AdvanceFileUpload.Integration.Contracts
                 // Optionally dispose of the channel and connection if not reusing
                 _channel?.CloseAsync();
                 _connection?.CloseAsync();
-              
+
             }
         }
     }

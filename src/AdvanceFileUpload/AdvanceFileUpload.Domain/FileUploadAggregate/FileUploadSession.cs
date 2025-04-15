@@ -134,7 +134,7 @@ namespace AdvanceFileUpload.Domain
         }
         private FileUploadSession()
         {
-            
+
         }
 
         /// <summary>

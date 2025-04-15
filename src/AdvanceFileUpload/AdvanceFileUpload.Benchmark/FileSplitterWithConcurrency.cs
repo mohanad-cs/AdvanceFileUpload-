@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Buffers;
+﻿using System.Buffers;
 using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 namespace AdvanceFileUpload.Benchmark;
 
 public class FileSplitterWithConcurrency
@@ -73,5 +73,5 @@ public class FileSplitterWithConcurrency
         _logger?.LogInformation("File split into {ChunkCount} chunks in {ElapsedMs} ms", chunkPaths.Count, stopwatch.ElapsedMilliseconds);
         return chunkPaths;
     }
-   
+
 }

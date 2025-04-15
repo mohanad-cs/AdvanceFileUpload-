@@ -1,11 +1,5 @@
-﻿using System;
-using System.Buffers;
-using System.Collections.Generic;
+﻿using System.Buffers;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 namespace AdvanceFileUpload.Benchmark;
 public class FileSplitter
 {
@@ -80,7 +74,7 @@ public class FileSplitter
     /// <summary>
     /// Concatenates chunk files back into the original file using buffered async I/O
     /// </summary>
-    public  async Task ConcatenateAsync(IEnumerable<string> chunkPaths, string outputFilePath, CancellationToken cancellationToken = default)
+    public async Task ConcatenateAsync(IEnumerable<string> chunkPaths, string outputFilePath, CancellationToken cancellationToken = default)
     {
         var sortedChunks = chunkPaths;
 
@@ -181,7 +175,7 @@ public class FileSplitter
 
         stopwatch.Stop();
         FileInfo fileInfo = new FileInfo(outputFilePath);
-      // _logger?.LogInformation("Chunks concatenated into file at {Time} with size {Size} bytes in {ElapsedMilliseconds} ms", DateTime.Now, fileInfo.Length, stopwatch.ElapsedMilliseconds);
+        // _logger?.LogInformation("Chunks concatenated into file at {Time} with size {Size} bytes in {ElapsedMilliseconds} ms", DateTime.Now, fileInfo.Length, stopwatch.ElapsedMilliseconds);
     }
 }
 

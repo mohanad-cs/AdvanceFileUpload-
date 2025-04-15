@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Buffers;
+﻿using System.Buffers;
 using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 namespace AdvanceFileUpload.Benchmark;
 
 public class FileSplitterOptimized

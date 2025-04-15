@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO.Compression;
+using Microsoft.Extensions.Logging;
 
 namespace AdvanceFileUpload.Application.Compression
 {
@@ -278,7 +278,7 @@ namespace AdvanceFileUpload.Application.Compression
                 }
                 CompressedExtensions.Add(extension);
             }
-           
+
         }
     }
 }

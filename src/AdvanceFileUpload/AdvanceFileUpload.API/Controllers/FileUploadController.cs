@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdvanceFileUpload.API.Controllers
 {
-   
+
     [ApiController]
     public class FileUploadController : ControllerBase
     {
@@ -77,7 +77,7 @@ namespace AdvanceFileUpload.API.Controllers
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<UploadSessionStatusResponse?>> GetUploadSessionStatusAsync([FromQuery] Guid sessionId, CancellationToken cancellationToken)
         {
-          
+
             var response = await _uploadManager.GetUploadSessionStatusAsync(sessionId, cancellationToken);
             if (response == null)
             {

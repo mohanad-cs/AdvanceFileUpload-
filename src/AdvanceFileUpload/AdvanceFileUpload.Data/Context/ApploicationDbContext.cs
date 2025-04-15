@@ -38,8 +38,8 @@ namespace AdvanceFileUpload.Data
             fileUploadSessionBuilder.Ignore(f => f.TotalUploadedChunks);
             fileUploadSessionBuilder.Ignore(f => f.ProgressPercentage);
             fileUploadSessionBuilder.Ignore(f => f.DomainEvents);
-            fileUploadSessionBuilder.Property(x=>x.Version).IsRowVersion();
-        
+            fileUploadSessionBuilder.Property(x => x.Version).IsRowVersion();
+
 
 
             // chunk file entity builder
