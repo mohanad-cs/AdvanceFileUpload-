@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Client;
+﻿namespace AdvanceFileUpload.Client.Helper;
 
 /// <summary>
 /// Configuration options for the <see cref="NetworkConnectionChecker"/>.

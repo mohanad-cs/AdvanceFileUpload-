@@ -12,14 +12,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Advance File Upload API", Version = "v1" });
+
     // Define the API Key security scheme
     options.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
     {
-        Description = "API Key authentication using the X-APIKEY header.",
+        Description = "API Key Authentication",
         Type = SecuritySchemeType.ApiKey,
         Name = "X-APIKEY",
         In = ParameterLocation.Header,
         Scheme = "ApiKey"
+       
     });
 
     // Require the API key for all endpoints
@@ -48,7 +51,7 @@ builder.Services.AddSignalR();
 
 
 var app = builder.Build();
-
+app.UseRateLimiter();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

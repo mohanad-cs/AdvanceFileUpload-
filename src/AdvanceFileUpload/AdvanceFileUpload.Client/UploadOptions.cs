@@ -32,5 +32,14 @@ namespace AdvanceFileUpload.Client
         /// Gets or sets the maximum number of retry attempts for failed uploads. Default is 3.
         /// </summary>
         public int MaxRetriesCount { get; set; } = 3; // Default to 3 retries
+        /// <summary>
+        /// Gets the delay between retries in seconds. Default is 5 seconds.
+        /// </summary>
+        public int DefaultRetryDelayInSeconds { get;} = 5; // Default to 5 second
+        /// <summary>
+        /// Gets or sets the API key for authentication.
+        /// </summary>
+        public required string APIKey { get; set; }
+
     }
 }

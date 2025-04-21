@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Client;
+﻿namespace AdvanceFileUpload.Client.Helper;
 
 /// <summary>
 /// Represents the status of a connection.

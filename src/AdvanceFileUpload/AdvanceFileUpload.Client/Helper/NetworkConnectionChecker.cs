@@ -1,7 +1,9 @@
 ﻿using System.Net;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Polly;
 using Polly.Timeout;
-namespace AdvanceFileUpload.Client;
+namespace AdvanceFileUpload.Client.Helper;
 
 /// <summary>
 /// Checks the health of a network connection by sending HTTP requests to a specified endpoint.
@@ -25,7 +27,7 @@ public sealed class NetworkConnectionChecker : INetworkConnectionChecker
         _timeoutPolicy = Policy.TimeoutAsync(_options.Timeout, TimeoutStrategy.Optimistic);
     }
 
-    ///<inheritdoc/>
+   ///<inheritdoc/>
     public async Task<ConnectionStatus> CheckApiHealthAsync(CancellationToken ct = default)
     {
         try

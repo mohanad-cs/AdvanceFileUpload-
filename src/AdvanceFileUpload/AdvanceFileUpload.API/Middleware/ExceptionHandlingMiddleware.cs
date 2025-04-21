@@ -7,7 +7,7 @@ namespace AdvanceFileUpload.API.Middleware
     /// <summary>
     /// Middleware to handle exceptions globally.
     /// </summary>
-    public class ExceptionHandlingMiddleware
+    public sealed class ExceptionHandlingMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<ExceptionHandlingMiddleware> _logger;

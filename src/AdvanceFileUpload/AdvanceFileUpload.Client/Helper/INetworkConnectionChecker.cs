@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Client;
+﻿namespace AdvanceFileUpload.Client.Helper;
 
 /// <summary>
 /// Defines methods to check the health of a network connection.

@@ -55,5 +55,10 @@
             ChunkPath = chunkPath;
             ChunkSize = new FileInfo(chunkPath).Length;
         }
+
+        private ChunkFile()
+        {
+
+        }
     }
 }

@@ -30,7 +30,9 @@ namespace AdvanceFileUpload.Client.Test
                 {
                     Algorithm = CompressionAlgorithmOption.GZip,
                     Level = CompressionLevelOption.Optimal
-                }
+                },
+                APIKey="secret"
+                
             };
 
             _service = new FileUploadService(new Uri("http://localhost:5021"), uploadOptions);

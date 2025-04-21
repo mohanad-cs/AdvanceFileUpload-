@@ -1,4 +1,6 @@
-﻿using System.Net.Http.Json;
+﻿using System;
+using System.Net;
+using System.Net.Http.Json;
 using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Request;
@@ -7,6 +9,7 @@ using AdvanceFileUpload.Application.Shared;
 using AdvanceFileUpload.Client.Helper;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Polly;
 using Polly.Retry;
 
@@ -218,7 +221,12 @@ namespace AdvanceFileUpload.Client
         /// Occurs when the upload session is completing.
         /// </summary>
         public event EventHandler? SessionCompleting;
-        #endregion
+        /// <summary>
+        /// Occurs when an authentication error happens.
+        /// </summary>
+        public event EventHandler? AuthenticationError;
+
+        #endregion Events
 
         #region Constructor
         /// <summary>
@@ -233,19 +241,19 @@ namespace AdvanceFileUpload.Client
         {
             try
             {
+                _uploadOptions = uploadOptions ?? throw new ArgumentNullException(nameof(uploadOptions));
                 _sessionStatus = SessionStatus.None;
-                _logger = LoggerFactoryHelper.CreateLogger<FileUploadService>();
+                _logger = NullLogger<FileUploadService>.Instance;
                 _httpClient = new HttpClient()
                 {
                     BaseAddress = apiBaseAddress ?? throw new ArgumentNullException(nameof(apiBaseAddress)),
-                    Timeout = TimeSpan.FromMinutes(10)
-
+                    Timeout = TimeSpan.FromMinutes(10),
 
                 };
-                _uploadOptions = uploadOptions ?? throw new ArgumentNullException(nameof(uploadOptions));
+                _httpClient.DefaultRequestHeaders.Add("X-APIKEY", uploadOptions.APIKey);
                 _semaphore = new SemaphoreSlim(_uploadOptions.MaxConcurrentUploads, _uploadOptions.MaxConcurrentUploads);
-                _fileProcessor = new FileProcessor(LoggerFactoryHelper.CreateLogger<FileProcessor>());
-                _fileCompressor = new FileCompressor(LoggerFactoryHelper.CreateLogger<FileCompressor>());
+                _fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
+                _fileCompressor = new FileCompressor(NullLogger<FileCompressor>.Instance);
                 _cancellationTokenSource = new CancellationTokenSource();
                 _networkConnectionChecker = new NetworkConnectionChecker(new NetworkCheckOptions
                 {
@@ -267,14 +275,43 @@ namespace AdvanceFileUpload.Client
                 _hubConnection.Reconnected += _hubConnection_Reconnected;
                 _hubConnection.Closed += _hubConnection_Closed;
 
-                _retryPolicy = Policy.Handle<HttpRequestException>()
-                    .OrResult<HttpResponseMessage>(r => !r.IsSuccessStatusCode)
+                _retryPolicy = Policy
+                    .Handle<HttpRequestException>()
+                    .OrResult<HttpResponseMessage>(response =>
+                        !response.IsSuccessStatusCode)
                     .WaitAndRetryAsync(
-                        _uploadOptions.MaxRetriesCount,
-                        retryAttempt => TimeSpan.FromMilliseconds(2000 * retryAttempt),
-                        (outcome, timespan, retryAttempt, context) =>
+                        retryCount: _uploadOptions.MaxRetriesCount,
+                        sleepDurationProvider: (retryAttempt, result, _) =>
+                        {
+                            // Check if the response indicates TooManyRequests (429)
+                            if (result.Result?.StatusCode == HttpStatusCode.TooManyRequests)
+                            {
+                                // Use the Retry-After header if available
+                                var retryAfter = result.Result.Headers.RetryAfter;
+                                if (retryAfter != null)
+                                {
+                                    if (retryAfter.Delta.HasValue && retryAfter.Delta.Value > TimeSpan.Zero)
+                                        return retryAfter.Delta.Value;
+
+                                    if (retryAfter.Date.HasValue)
+                                    {
+                                        var delay = retryAfter.Date.Value - DateTime.UtcNow;
+                                        return delay > TimeSpan.Zero ? delay : TimeSpan.FromSeconds(_uploadOptions.DefaultRetryDelayInSeconds);
+                                    }
+                                }
+                            }
+
+                            // Default backoff for other errors
+                            var backoffDelay = TimeSpan.FromSeconds(Math.Pow(2, retryAttempt));
+                            return backoffDelay > TimeSpan.Zero && backoffDelay < TimeSpan.FromSeconds(10) ? backoffDelay : TimeSpan.FromSeconds(_uploadOptions.DefaultRetryDelayInSeconds);
+                        },
+                        onRetryAsync: (outcome, delay, retryAttempt, _) =>
                         {
 
+                            _logger.LogWarning(
+                "Retrying due to {StatusCode}. Attempt {RetryAttempt}. Waiting {Timespan} before retrying.",
+                outcome.Result?.StatusCode, retryAttempt, delay);
+                            return Task.CompletedTask;
                         });
 
                 foreach (string extension in _uploadOptions.ExcludedCompressionExtensions)
@@ -356,12 +393,6 @@ namespace AdvanceFileUpload.Client
             {
                 HandleException(ex);
             }
-
-            //else
-            //{
-            //    _logger.LogWarning("Cannot pause session {SessionId}", _sessionId);
-            //    throw new UploadException("The session cannot be paused");
-            //}
         }
         /// <inheritdoc />
         public async Task ResumeUploadAsync()
@@ -456,6 +487,7 @@ namespace AdvanceFileUpload.Client
         /// <returns>A task that represents the asynchronous operation.</returns>
         /// <exception cref="InvalidOperationException">Thrown if the hub connection is null.</exception>
         private async Task RunHubConnection()
+
         {
             if (_hubConnection != null && _hubConnection.State == HubConnectionState.Disconnected)
             {
@@ -552,6 +584,7 @@ namespace AdvanceFileUpload.Client
         /// </summary>
         /// <param name="chunkPath">The path of the chunk to be uploaded.</param>
         /// <param name="chunkIndex">The index of the chunk.</param>
+
         private async Task UploadChunkWithLimitAsync(string chunkPath, int chunkIndex)
         {
             await _semaphore.WaitAsync(_cancellationTokenSource.Token).ConfigureAwait(false);
@@ -615,10 +648,25 @@ namespace AdvanceFileUpload.Client
             var response = await _retryPolicy.ExecuteAsync(action, _cancellationTokenSource.Token).ConfigureAwait(false);
             if (!response.IsSuccessStatusCode)
             {
-                // TODO: Handle specific status codes if needed such as ToManyRequests. 
-                var errorMessage = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-                _logger.LogError("Error occurred during the upload process. Status code: {StatusCode}, Error message: {ErrorMessage}", response.StatusCode, errorMessage);
-                OnUploadError(errorMessage, null);
+                // handle Authentication  errors
+                if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                {
+                    OnAuthenticationError();
+
+                }
+                else if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+                {
+                    // TODO: Handle ToManyRequests response. 
+                    // Maybe we can delay the upload for a while and then retry execute action.
+                    // or we can further enhance the retry policy to handle this case.
+                }
+                else
+                {
+                    var errorMessage = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    _logger.LogError("Error occurred during the upload process. Status code: {StatusCode}, Error message: {ErrorMessage}", response.StatusCode, errorMessage);
+                    OnUploadError(errorMessage, null);
+                }
+
             }
             return response;
         }
@@ -939,6 +987,11 @@ namespace AdvanceFileUpload.Client
         {
             NetworkError?.Invoke(this, message);
             throw new UploadException(message, exception);
+        }
+        private void OnAuthenticationError()
+        {
+            AuthenticationError?.Invoke(this, EventArgs.Empty);
+            throw new UploadException("Authentication error occurred.");
         }
         #endregion
 
