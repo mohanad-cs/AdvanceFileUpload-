@@ -1,4 +1,5 @@
-﻿using AdvanceFileUpload.Application.Shared;
+﻿using AdvanceFileUpload.API.Security;
+using AdvanceFileUpload.Application.Shared;
 using Microsoft.Extensions.Options;
 
 namespace AdvanceFileUpload.API.Middleware

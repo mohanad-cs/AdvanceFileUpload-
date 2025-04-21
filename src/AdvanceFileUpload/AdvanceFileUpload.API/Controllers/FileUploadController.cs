@@ -26,6 +26,7 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpPost(RouteTemplates.CreateSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<CreateUploadSessionResponse>> CreateUploadSessionAsync([FromBody] CreateUploadSessionRequest request, CancellationToken cancellationToken)
         {
             var response = await _uploadManager.CreateUploadSessionAsync(request, cancellationToken);
@@ -41,6 +42,7 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpPost(RouteTemplates.CompleteSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<bool>> CompleteUploadSessionAsync([FromBody] CompleteUploadSessionRequest request, CancellationToken cancellationToken)
         {
             if (request is null)
@@ -60,6 +62,7 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpPost(RouteTemplates.UploadChunk)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<bool>> UploadChunkAsync([FromBody] UploadChunkRequest request, CancellationToken cancellationToken)
         {
             var result = await _uploadManager.UploadChunkAsync(request, cancellationToken);
@@ -75,6 +78,7 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpGet(RouteTemplates.SessionStatus)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<UploadSessionStatusResponse?>> GetUploadSessionStatusAsync([FromQuery] Guid sessionId, CancellationToken cancellationToken)
         {
 
@@ -95,6 +99,7 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpPost(RouteTemplates.CancelSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<bool>> CancelUploadSessionAsync([FromBody] CancelUploadSessionRequest request, CancellationToken cancellationToken)
         {
             if (request is null)
@@ -113,6 +118,7 @@ namespace AdvanceFileUpload.API.Controllers
         [HttpPost(RouteTemplates.PauseSession)]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<bool>> PauseUploadSessionAsync([FromBody] PauseUploadSessionRequest request, CancellationToken cancellationToken)
         {
             if (request is null)

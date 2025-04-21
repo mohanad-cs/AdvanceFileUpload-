@@ -1,4 +1,5 @@
-﻿using AdvanceFileUpload.Application;
+﻿using AdvanceFileUpload.API.Security;
+using AdvanceFileUpload.Application;
 using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.EventHandling;
 using AdvanceFileUpload.Application.FileProcessing;
