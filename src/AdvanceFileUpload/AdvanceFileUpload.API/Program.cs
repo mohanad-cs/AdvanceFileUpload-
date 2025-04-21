@@ -1,8 +1,8 @@
 using AdvanceFileUpload.API.Middleware;
-using AdvanceFileUpload.API.ServiceConfiguration;
 using AdvanceFileUpload.Application.Hubs;
 using AdvanceFileUpload.Application.Shared;
-
+using AdvanceFileUpload.API;
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -10,7 +10,37 @@ builder.Services.ConfigureApplicationServices(builder.Configuration);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    // Define the API Key security scheme
+    options.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
+    {
+        Description = "API Key authentication using the X-APIKEY header.",
+        Type = SecuritySchemeType.ApiKey,
+        Name = "X-APIKEY",
+        In = ParameterLocation.Header,
+        Scheme = "ApiKey"
+    });
+
+    // Require the API key for all endpoints
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "ApiKey"
+                },
+                Scheme = "ApiKey",
+                Name = "X-APIKEY",
+                In = ParameterLocation.Header
+            },
+            new List<string>()
+        }
+    });
+});
 builder.Services.AddSignalR();
 
 
@@ -26,6 +56,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 
 }
+app.UseMiddleware<APIKeyMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
