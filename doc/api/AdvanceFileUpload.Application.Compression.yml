@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  id: AdvanceFileUpload.Application.Compression
+  children:
+  - AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  - AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  - AdvanceFileUpload.Application.Compression.FileCompressor
+  - AdvanceFileUpload.Application.Compression.IFileCompressor
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+references:
+- uid: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption.html
+  name: CompressionAlgorithmOption
+  nameWithType: CompressionAlgorithmOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption
+- uid: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  commentId: T:AdvanceFileUpload.Application.Compression.CompressionLevelOption
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.CompressionLevelOption.html
+  name: CompressionLevelOption
+  nameWithType: CompressionLevelOption
+  fullName: AdvanceFileUpload.Application.Compression.CompressionLevelOption
+- uid: AdvanceFileUpload.Application.Compression.FileCompressor
+  commentId: T:AdvanceFileUpload.Application.Compression.FileCompressor
+  href: AdvanceFileUpload.Application.Compression.FileCompressor.html
+  name: FileCompressor
+  nameWithType: FileCompressor
+  fullName: AdvanceFileUpload.Application.Compression.FileCompressor
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor
+  commentId: T:AdvanceFileUpload.Application.Compression.IFileCompressor
+  parent: AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html
+  name: IFileCompressor
+  nameWithType: IFileCompressor
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor
+- uid: AdvanceFileUpload.Application.Compression
+  commentId: N:AdvanceFileUpload.Application.Compression
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Compression
+  nameWithType: AdvanceFileUpload.Application.Compression
+  fullName: AdvanceFileUpload.Application.Compression
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Compression
+    name: Compression
+    href: AdvanceFileUpload.Application.Compression.html

@@ -5,6 +5,8 @@ items:
   id: AdvanceFileUpload.Domain
   children:
   - AdvanceFileUpload.Domain.ChunkFile
+  - AdvanceFileUpload.Domain.CompressionAlgorithm
+  - AdvanceFileUpload.Domain.CompressionLevel
   - AdvanceFileUpload.Domain.FileUploadSession
   - AdvanceFileUpload.Domain.FileUploadSessionStatus
   langs:
@@ -24,6 +26,20 @@ references:
   name: ChunkFile
   nameWithType: ChunkFile
   fullName: AdvanceFileUpload.Domain.ChunkFile
+- uid: AdvanceFileUpload.Domain.CompressionAlgorithm
+  commentId: T:AdvanceFileUpload.Domain.CompressionAlgorithm
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.CompressionAlgorithm.html
+  name: CompressionAlgorithm
+  nameWithType: CompressionAlgorithm
+  fullName: AdvanceFileUpload.Domain.CompressionAlgorithm
+- uid: AdvanceFileUpload.Domain.CompressionLevel
+  commentId: T:AdvanceFileUpload.Domain.CompressionLevel
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.CompressionLevel.html
+  name: CompressionLevel
+  nameWithType: CompressionLevel
+  fullName: AdvanceFileUpload.Domain.CompressionLevel
 - uid: AdvanceFileUpload.Domain.FileUploadSession
   commentId: T:AdvanceFileUpload.Domain.FileUploadSession
   parent: AdvanceFileUpload.Domain

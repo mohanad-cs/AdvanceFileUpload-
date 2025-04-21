@@ -16,12 +16,12 @@ items:
   type: Class
   source:
     remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionStarted.cs
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionCreatedEvent.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileUploadSessionCreatedEvent
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionStarted.cs
-    startLine: 12
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionCreatedEvent.cs
+    startLine: 7
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Events
@@ -58,12 +58,12 @@ items:
   type: Property
   source:
     remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionStarted.cs
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionCreatedEvent.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileUploadSession
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionStarted.cs
-    startLine: 17
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionCreatedEvent.cs
+    startLine: 12
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Events
@@ -89,12 +89,12 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionStarted.cs
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionCreatedEvent.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionStarted.cs
-    startLine: 24
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Events/FileUploadSessionCreatedEvent.cs
+    startLine: 19
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Events
@@ -467,6 +467,7 @@ references:
     href: AdvanceFileUpload.Domain.html
 - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
   commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+  parent: AdvanceFileUpload.Domain.Events
   href: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent.html
   name: FileUploadSessionCreatedEvent
   nameWithType: FileUploadSessionCreatedEvent

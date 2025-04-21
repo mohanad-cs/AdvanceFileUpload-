@@ -86,7 +86,5 @@ namespace AdvanceFileUpload.Domain.Core
         /// <returns>A task that represents the asynchronous operation. The task result contains the count of matching entities.</returns>
         Task<int> CountAsync(Expression<Func<TEntity, bool>> predicate, CancellationToken cancellationToken = default);
 
-        //Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
-        ////TODO: Consider Adding Transaction Management
     }
 }

@@ -4,7 +4,13 @@ items:
   commentId: N:AdvanceFileUpload.Domain.Test
   id: AdvanceFileUpload.Domain.Test
   children:
+  - AdvanceFileUpload.Domain.Test.ChunkValidatorTests
+  - AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests
+  - AdvanceFileUpload.Domain.Test.FileCompressorTests
+  - AdvanceFileUpload.Domain.Test.FileProcessorTests
   - AdvanceFileUpload.Domain.Test.FileUploadSessionTests
+  - AdvanceFileUpload.Domain.Test.FileValidatorTests
+  - AdvanceFileUpload.Domain.Test.UploadMangerTests
   langs:
   - csharp
   - vb
@@ -15,9 +21,45 @@ items:
   assemblies:
   - AdvanceFileUpload.Domain.Test
 references:
+- uid: AdvanceFileUpload.Domain.Test.ChunkValidatorTests
+  commentId: T:AdvanceFileUpload.Domain.Test.ChunkValidatorTests
+  href: AdvanceFileUpload.Domain.Test.ChunkValidatorTests.html
+  name: ChunkValidatorTests
+  nameWithType: ChunkValidatorTests
+  fullName: AdvanceFileUpload.Domain.Test.ChunkValidatorTests
+- uid: AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests
+  commentId: T:AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests
+  href: AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests.html
+  name: FileCompressionValidatorTests
+  nameWithType: FileCompressionValidatorTests
+  fullName: AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests
+- uid: AdvanceFileUpload.Domain.Test.FileCompressorTests
+  commentId: T:AdvanceFileUpload.Domain.Test.FileCompressorTests
+  href: AdvanceFileUpload.Domain.Test.FileCompressorTests.html
+  name: FileCompressorTests
+  nameWithType: FileCompressorTests
+  fullName: AdvanceFileUpload.Domain.Test.FileCompressorTests
+- uid: AdvanceFileUpload.Domain.Test.FileProcessorTests
+  commentId: T:AdvanceFileUpload.Domain.Test.FileProcessorTests
+  href: AdvanceFileUpload.Domain.Test.FileProcessorTests.html
+  name: FileProcessorTests
+  nameWithType: FileProcessorTests
+  fullName: AdvanceFileUpload.Domain.Test.FileProcessorTests
 - uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   commentId: T:AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html
   name: FileUploadSessionTests
   nameWithType: FileUploadSessionTests
   fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
+- uid: AdvanceFileUpload.Domain.Test.FileValidatorTests
+  commentId: T:AdvanceFileUpload.Domain.Test.FileValidatorTests
+  href: AdvanceFileUpload.Domain.Test.FileValidatorTests.html
+  name: FileValidatorTests
+  nameWithType: FileValidatorTests
+  fullName: AdvanceFileUpload.Domain.Test.FileValidatorTests
+- uid: AdvanceFileUpload.Domain.Test.UploadMangerTests
+  commentId: T:AdvanceFileUpload.Domain.Test.UploadMangerTests
+  href: AdvanceFileUpload.Domain.Test.UploadMangerTests.html
+  name: UploadMangerTests
+  nameWithType: UploadMangerTests
+  fullName: AdvanceFileUpload.Domain.Test.UploadMangerTests

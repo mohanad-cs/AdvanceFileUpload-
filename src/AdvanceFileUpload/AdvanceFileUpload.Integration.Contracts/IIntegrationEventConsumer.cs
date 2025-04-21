@@ -1,9 +1,7 @@
-﻿using RabbitMQ.Client;
-using RabbitMQ.Client.Events;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 namespace AdvanceFileUpload.Integration.Contracts
 {
     public interface IIntegrationEventConsumer
@@ -80,11 +78,11 @@ namespace AdvanceFileUpload.Integration.Contracts
 
         public void Dispose()
         {
-            if (_channel!=null)
+            if (_channel != null)
             {
                 _channel.Dispose();
             }
-            if (_connection!=null)
+            if (_connection != null)
             {
                 _connection.Dispose();
             }

@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Logging;
-using System.Buffers;
+﻿using System.Buffers;
 using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace AdvanceFileUpload.Application.FileProcessing
 {
@@ -35,7 +35,7 @@ namespace AdvanceFileUpload.Application.FileProcessing
     CancellationToken cancellationToken = default)
         {
             const int BufferSize = 81920; // 80 KB buffer (optimal for most storage devices)
-            int LargeFileThreshold = Environment.Is64BitProcess? 1024 * 1024 * 10 : 1024 * 1024 * 1; // 1 MB threshold for chunked writing
+            int LargeFileThreshold = Environment.Is64BitProcess ? 1024 * 1024 * 10 : 1024 * 1024 * 1; // 1 MB threshold for chunked writing
 
             var stopwatch = Stopwatch.StartNew();
             string filePath = Path.Combine(outputDirectory, fileName);

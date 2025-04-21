@@ -1,7 +1,7 @@
-﻿using AdvanceFileUpload.Application.Compression;
+﻿using System.Text;
+using AdvanceFileUpload.Application.Compression;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System.Text;
 
 namespace AdvanceFileUpload.Domain.Test
 {

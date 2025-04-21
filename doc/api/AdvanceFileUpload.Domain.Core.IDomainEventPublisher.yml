@@ -21,10 +21,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IDomainEventPublisher
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
+  summary: Defines a contract for publishing domain events.
+  example: []
   syntax:
     content: public interface IDomainEventPublisher
     content.vb: Public Interface IDomainEventPublisher
@@ -46,19 +48,24 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PublishAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
-    startLine: 4
+    startLine: 13
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
+  summary: Publishes a single domain event asynchronously.
+  example: []
   syntax:
     content: Task PublishAsync(IDomainEvent domainEvent, CancellationToken cancellationToken = default)
     parameters:
     - id: domainEvent
       type: AdvanceFileUpload.Domain.Core.IDomainEvent
+      description: The domain event to be published.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A token to cancel the operation.
     return:
       type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
     content.vb: Function PublishAsync(domainEvent As IDomainEvent, cancellationToken As CancellationToken = Nothing) As Task
   overload: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync*
 - uid: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync(System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent},System.Threading.CancellationToken)
@@ -79,19 +86,24 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PublishAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IDomainEventPublisher.cs
-    startLine: 5
+    startLine: 21
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Core
+  summary: Publishes multiple domain events asynchronously.
+  example: []
   syntax:
     content: Task PublishAsync(IEnumerable<IDomainEvent> domainEvents, CancellationToken cancellationToken = default)
     parameters:
     - id: domainEvents
       type: System.Collections.Generic.IEnumerable{AdvanceFileUpload.Domain.Core.IDomainEvent}
+      description: The collection of domain events to be published.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A token to cancel the operation.
     return:
       type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
     content.vb: Function PublishAsync(domainEvents As IEnumerable(Of IDomainEvent), cancellationToken As CancellationToken = Nothing) As Task
   overload: AdvanceFileUpload.Domain.Core.IDomainEventPublisher.PublishAsync*
   nameWithType.vb: IDomainEventPublisher.PublishAsync(IEnumerable(Of IDomainEvent), CancellationToken)

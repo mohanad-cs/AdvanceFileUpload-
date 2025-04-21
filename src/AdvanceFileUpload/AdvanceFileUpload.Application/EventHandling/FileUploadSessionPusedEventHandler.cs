@@ -24,7 +24,7 @@ namespace AdvanceFileUpload.Application.EventHandling
             _logger.LogInformation("Handling FileUploadSessionPausedEvent for session {SessionId}", notification.FileUploadSession.Id);
             if (_uploadSetting.EnableIntegrationEventPublishing)
             {
-               var sessionPausedIntegrationEvent= new SessionPausedIntegrationEvent()
+                var sessionPausedIntegrationEvent = new SessionPausedIntegrationEvent()
                 {
                     SessionId = notification.FileUploadSession.Id,
                     FileName = notification.FileUploadSession.FileName,

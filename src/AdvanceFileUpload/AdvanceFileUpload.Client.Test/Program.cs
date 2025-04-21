@@ -1,8 +1,6 @@
-﻿using AdvanceFileUpload.Application.Compression;
+﻿using System.Text;
+using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.Request;
-using System;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AdvanceFileUpload.Client.Test
 {
@@ -41,8 +39,8 @@ namespace AdvanceFileUpload.Client.Test
 
             ConfigureServiceEvents();
 
-           // var uploadTask = _service.UploadFileAsync("D:\\Temp\\testfile.txt");
-           var uploadTask = _service.UploadFileAsync(@"D:\Temp\D09_20230518080711.mp4");
+            // var uploadTask = _service.UploadFileAsync("D:\\Temp\\testfile.txt");
+            var uploadTask = _service.UploadFileAsync(@"D:\Temp\D09_20230518080711.mp4");
             _isUploading = true;
 
             _ = Task.Run(HandleUserInput);
@@ -57,11 +55,11 @@ namespace AdvanceFileUpload.Client.Test
             }
             finally
             {
-               // _isUploading = false;
-               //// _service.Dispose();
-               // Console.CursorVisible = true;
-               // Console.SetCursorPosition(0, InputLine);
-               // Console.WriteLine("Press any key to exit...");
+                // _isUploading = false;
+                //// _service.Dispose();
+                // Console.CursorVisible = true;
+                // Console.SetCursorPosition(0, InputLine);
+                // Console.WriteLine("Press any key to exit...");
                 Console.ReadKey();
             }
         }

@@ -1,0 +1,1862 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.FileUploadService
+  commentId: T:AdvanceFileUpload.Client.FileUploadService
+  id: FileUploadService
+  parent: AdvanceFileUpload.Client
+  children:
+  - AdvanceFileUpload.Client.FileUploadService.#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)
+  - AdvanceFileUpload.Client.FileUploadService.CanCancelSession
+  - AdvanceFileUpload.Client.FileUploadService.CanPauseSession
+  - AdvanceFileUpload.Client.FileUploadService.CanResumeSession
+  - AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync
+  - AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  - AdvanceFileUpload.Client.FileUploadService.Dispose
+  - AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+  - AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+  - AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+  - AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+  - AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled
+  - AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted
+  - AdvanceFileUpload.Client.FileUploadService.IsSessionPaused
+  - AdvanceFileUpload.Client.FileUploadService.NetworkError
+  - AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync
+  - AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync
+  - AdvanceFileUpload.Client.FileUploadService.SessionCanceled
+  - AdvanceFileUpload.Client.FileUploadService.SessionCanceling
+  - AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+  - AdvanceFileUpload.Client.FileUploadService.SessionCompleting
+  - AdvanceFileUpload.Client.FileUploadService.SessionCreated
+  - AdvanceFileUpload.Client.FileUploadService.SessionPaused
+  - AdvanceFileUpload.Client.FileUploadService.SessionPausing
+  - AdvanceFileUpload.Client.FileUploadService.SessionResumed
+  - AdvanceFileUpload.Client.FileUploadService.SessionResuming
+  - AdvanceFileUpload.Client.FileUploadService.UploadError
+  - AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+  - AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  langs:
+  - csharp
+  - vb
+  name: FileUploadService
+  nameWithType: FileUploadService
+  fullName: AdvanceFileUpload.Client.FileUploadService
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileUploadService
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 19
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Provides functionality to upload files with support for compression, chunking, and session management.
+  remarks: >-
+    Note that the <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> have been build to process a single upload request.<br />
+        if you want to upload multiple files at the same time, you need to create a new instance of the <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> for each file.
+  example: []
+  syntax:
+    content: 'public sealed class FileUploadService : IFileUploadService, IDisposable'
+    content.vb: Public NotInheritable Class FileUploadService Implements IFileUploadService, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Client.FileUploadService.CanPauseSession
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.CanPauseSession
+  id: CanPauseSession
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CanPauseSession
+  nameWithType: FileUploadService.CanPauseSession
+  fullName: AdvanceFileUpload.Client.FileUploadService.CanPauseSession
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CanPauseSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 138
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session can be paused.
+  example: []
+  syntax:
+    content: public bool CanPauseSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanPauseSession As Boolean
+  overload: AdvanceFileUpload.Client.FileUploadService.CanPauseSession*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+- uid: AdvanceFileUpload.Client.FileUploadService.CanCancelSession
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.CanCancelSession
+  id: CanCancelSession
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CanCancelSession
+  nameWithType: FileUploadService.CanCancelSession
+  fullName: AdvanceFileUpload.Client.FileUploadService.CanCancelSession
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CanCancelSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 140
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session can be canceled.
+  example: []
+  syntax:
+    content: public bool CanCancelSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanCancelSession As Boolean
+  overload: AdvanceFileUpload.Client.FileUploadService.CanCancelSession*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+- uid: AdvanceFileUpload.Client.FileUploadService.CanResumeSession
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.CanResumeSession
+  id: CanResumeSession
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CanResumeSession
+  nameWithType: FileUploadService.CanResumeSession
+  fullName: AdvanceFileUpload.Client.FileUploadService.CanResumeSession
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CanResumeSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 142
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session can be resumed.
+  example: []
+  syntax:
+    content: public bool CanResumeSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanResumeSession As Boolean
+  overload: AdvanceFileUpload.Client.FileUploadService.CanResumeSession*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+- uid: AdvanceFileUpload.Client.FileUploadService.IsSessionPaused
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.IsSessionPaused
+  id: IsSessionPaused
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: IsSessionPaused
+  nameWithType: FileUploadService.IsSessionPaused
+  fullName: AdvanceFileUpload.Client.FileUploadService.IsSessionPaused
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsSessionPaused
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 144
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session is paused.
+  example: []
+  syntax:
+    content: public bool IsSessionPaused { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSessionPaused As Boolean
+  overload: AdvanceFileUpload.Client.FileUploadService.IsSessionPaused*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+- uid: AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled
+  id: IsSessionCanceled
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: IsSessionCanceled
+  nameWithType: FileUploadService.IsSessionCanceled
+  fullName: AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsSessionCanceled
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 146
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session is canceled.
+  example: []
+  syntax:
+    content: public bool IsSessionCanceled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSessionCanceled As Boolean
+  overload: AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+- uid: AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted
+  id: IsSessionCompleted
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: IsSessionCompleted
+  nameWithType: FileUploadService.IsSessionCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsSessionCompleted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 148
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session is completed.
+  example: []
+  syntax:
+    content: public bool IsSessionCompleted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSessionCompleted As Boolean
+  overload: AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCreated
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCreated
+  id: SessionCreated
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionCreated
+  nameWithType: FileUploadService.SessionCreated
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCreated
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionCreated
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 155
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when a new upload session is created.
+  example: []
+  syntax:
+    content: public event EventHandler<SessionCreatedEventArgs>? SessionCreated
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.SessionCreatedEventArgs}
+    content.vb: Public Event SessionCreated As EventHandler(Of SessionCreatedEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  id: ChunkUploaded
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: ChunkUploaded
+  nameWithType: FileUploadService.ChunkUploaded
+  fullName: AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkUploaded
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 159
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when a chunk is uploaded.
+  example: []
+  syntax:
+    content: public event EventHandler<ChunkUploadedEventArgs>? ChunkUploaded
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.ChunkUploadedEventArgs}
+    content.vb: Public Event ChunkUploaded As EventHandler(Of ChunkUploadedEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+  id: SessionCompleted
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionCompleted
+  nameWithType: FileUploadService.SessionCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionCompleted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 163
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is completed.
+  example: []
+  syntax:
+    content: public event EventHandler<SessionCompletedEventArgs>? SessionCompleted
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.SessionCompletedEventArgs}
+    content.vb: Public Event SessionCompleted As EventHandler(Of SessionCompletedEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCanceled
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCanceled
+  id: SessionCanceled
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionCanceled
+  nameWithType: FileUploadService.SessionCanceled
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCanceled
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionCanceled
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 167
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is canceled.
+  example: []
+  syntax:
+    content: public event EventHandler<SessionCanceledEventArgs>? SessionCanceled
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.SessionCanceledEventArgs}
+    content.vb: Public Event SessionCanceled As EventHandler(Of SessionCanceledEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionPaused
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionPaused
+  id: SessionPaused
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionPaused
+  nameWithType: FileUploadService.SessionPaused
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionPaused
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionPaused
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 171
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is paused.
+  example: []
+  syntax:
+    content: public event EventHandler<SessionPausedEventArgs>? SessionPaused
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.SessionPausedEventArgs}
+    content.vb: Public Event SessionPaused As EventHandler(Of SessionPausedEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionResumed
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionResumed
+  id: SessionResumed
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionResumed
+  nameWithType: FileUploadService.SessionResumed
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionResumed
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionResumed
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 175
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is resumed.
+  example: []
+  syntax:
+    content: public event EventHandler<SessionResumedEventArgs>? SessionResumed
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.SessionResumedEventArgs}
+    content.vb: Public Event SessionResumed As EventHandler(Of SessionResumedEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  id: UploadProgressChanged
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: UploadProgressChanged
+  nameWithType: FileUploadService.UploadProgressChanged
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadProgressChanged
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 179
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload progress changes.
+  example: []
+  syntax:
+    content: public event EventHandler<UploadProgressChangedEventArgs>? UploadProgressChanged
+    return:
+      type: System.EventHandler{AdvanceFileUpload.Client.UploadProgressChangedEventArgs}
+    content.vb: Public Event UploadProgressChanged As EventHandler(Of UploadProgressChangedEventArgs)
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadError
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.UploadError
+  id: UploadError
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: UploadError
+  nameWithType: FileUploadService.UploadError
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadError
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadError
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 183
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when an upload error happens.
+  example: []
+  syntax:
+    content: public event EventHandler<string>? UploadError
+    return:
+      type: System.EventHandler{System.String}
+    content.vb: Public Event UploadError As EventHandler(Of String)
+- uid: AdvanceFileUpload.Client.FileUploadService.NetworkError
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.NetworkError
+  id: NetworkError
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: NetworkError
+  nameWithType: FileUploadService.NetworkError
+  fullName: AdvanceFileUpload.Client.FileUploadService.NetworkError
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: NetworkError
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 187
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when a network error happens.
+  example: []
+  syntax:
+    content: public event EventHandler<string>? NetworkError
+    return:
+      type: System.EventHandler{System.String}
+    content.vb: Public Event NetworkError As EventHandler(Of String)
+- uid: AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+  id: FileSplittingStarted
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: FileSplittingStarted
+  nameWithType: FileUploadService.FileSplittingStarted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSplittingStarted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 191
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the file splitting process starts.
+  example: []
+  syntax:
+    content: public event EventHandler? FileSplittingStarted
+    return:
+      type: System.EventHandler
+    content.vb: Public Event FileSplittingStarted As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+  id: FileSplittingCompleted
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: FileSplittingCompleted
+  nameWithType: FileUploadService.FileSplittingCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSplittingCompleted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 195
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the file splitting process completes.
+  example: []
+  syntax:
+    content: public event EventHandler? FileSplittingCompleted
+    return:
+      type: System.EventHandler
+    content.vb: Public Event FileSplittingCompleted As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+  id: FileCompressionStarted
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: FileCompressionStarted
+  nameWithType: FileUploadService.FileCompressionStarted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileCompressionStarted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 199
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the file compression process starts.
+  example: []
+  syntax:
+    content: public event EventHandler? FileCompressionStarted
+    return:
+      type: System.EventHandler
+    content.vb: Public Event FileCompressionStarted As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+  id: FileCompressionCompleted
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: FileCompressionCompleted
+  nameWithType: FileUploadService.FileCompressionCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileCompressionCompleted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 203
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the file compression process completes.
+  example: []
+  syntax:
+    content: public event EventHandler? FileCompressionCompleted
+    return:
+      type: System.EventHandler
+    content.vb: Public Event FileCompressionCompleted As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionPausing
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionPausing
+  id: SessionPausing
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionPausing
+  nameWithType: FileUploadService.SessionPausing
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionPausing
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionPausing
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 207
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is pausing.
+  example: []
+  syntax:
+    content: public event EventHandler? SessionPausing
+    return:
+      type: System.EventHandler
+    content.vb: Public Event SessionPausing As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionResuming
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionResuming
+  id: SessionResuming
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionResuming
+  nameWithType: FileUploadService.SessionResuming
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionResuming
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionResuming
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 211
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is resuming.
+  example: []
+  syntax:
+    content: public event EventHandler? SessionResuming
+    return:
+      type: System.EventHandler
+    content.vb: Public Event SessionResuming As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCanceling
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCanceling
+  id: SessionCanceling
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionCanceling
+  nameWithType: FileUploadService.SessionCanceling
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCanceling
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionCanceling
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 215
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is canceling.
+  example: []
+  syntax:
+    content: public event EventHandler? SessionCanceling
+    return:
+      type: System.EventHandler
+    content.vb: Public Event SessionCanceling As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCompleting
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCompleting
+  id: SessionCompleting
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: SessionCompleting
+  nameWithType: FileUploadService.SessionCompleting
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCompleting
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionCompleting
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 219
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when the upload session is completing.
+  example: []
+  syntax:
+    content: public event EventHandler? SessionCompleting
+    return:
+      type: System.EventHandler
+    content.vb: Public Event SessionCompleting As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)
+  id: '#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)'
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: FileUploadService(Uri, UploadOptions)
+  nameWithType: FileUploadService.FileUploadService(Uri, UploadOptions)
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileUploadService(System.Uri, AdvanceFileUpload.Client.UploadOptions)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 231
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public FileUploadService(Uri apiBaseAddress, UploadOptions uploadOptions)
+    parameters:
+    - id: apiBaseAddress
+      type: System.Uri
+      description: The base address of the API.
+    - id: uploadOptions
+      type: AdvanceFileUpload.Client.UploadOptions
+      description: The options for uploading files.
+    content.vb: Public Sub New(apiBaseAddress As Uri, uploadOptions As UploadOptions)
+  overload: AdvanceFileUpload.Client.FileUploadService.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">apiBaseAddress</code> or <code class="paramref">uploadOptions</code> is null.
+  nameWithType.vb: FileUploadService.New(Uri, UploadOptions)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadService.New(System.Uri, AdvanceFileUpload.Client.UploadOptions)
+  name.vb: New(Uri, UploadOptions)
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+  id: UploadFileAsync(System.String)
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: UploadFileAsync(string)
+  nameWithType: FileUploadService.UploadFileAsync(string)
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadFileAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 296
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Uploads a file asynchronously.
+  remarks: Throws an <xref href="AdvanceFileUpload.Client.UploadException" data-throw-if-not-resolved="false"></xref> if the service is already processing an upload request.
+  example: []
+  syntax:
+    content: public Task UploadFileAsync(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path of the file to be uploaded.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function UploadFileAsync(filePath As String) As Task
+  overload: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync*
+  exceptions:
+  - type: AdvanceFileUpload.Client.UploadException
+    commentId: T:AdvanceFileUpload.Client.UploadException
+    description: ''
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+  nameWithType.vb: FileUploadService.UploadFileAsync(String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(String)
+  name.vb: UploadFileAsync(String)
+- uid: AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync
+  id: PauseUploadAsync
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: PauseUploadAsync()
+  nameWithType: FileUploadService.PauseUploadAsync()
+  fullName: AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PauseUploadAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 336
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Pauses the ongoing file upload asynchronously.
+  example: []
+  syntax:
+    content: public Task PauseUploadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function PauseUploadAsync() As Task
+  overload: AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+- uid: AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync
+  id: ResumeUploadAsync
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: ResumeUploadAsync()
+  nameWithType: FileUploadService.ResumeUploadAsync()
+  fullName: AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ResumeUploadAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 366
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Resumes the paused file upload asynchronously.
+  example: []
+  syntax:
+    content: public Task ResumeUploadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function ResumeUploadAsync() As Task
+  overload: AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+- uid: AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync
+  id: CancelUploadAsync
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CancelUploadAsync()
+  nameWithType: FileUploadService.CancelUploadAsync()
+  fullName: AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CancelUploadAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 414
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Cancels the ongoing file upload asynchronously.
+  example: []
+  syntax:
+    content: public Task CancelUploadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function CancelUploadAsync() As Task
+  overload: AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+- uid: AdvanceFileUpload.Client.FileUploadService.Dispose
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.Dispose
+  id: Dispose
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: FileUploadService.Dispose()
+  fullName: AdvanceFileUpload.Client.FileUploadService.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Dispose
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 965
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: AdvanceFileUpload.Client.FileUploadService.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: AdvanceFileUpload.Client.FileUploadService
+  commentId: T:AdvanceFileUpload.Client.FileUploadService
+  href: AdvanceFileUpload.Client.FileUploadService.html
+  name: FileUploadService
+  nameWithType: FileUploadService
+  fullName: AdvanceFileUpload.Client.FileUploadService
+- uid: AdvanceFileUpload.Client
+  commentId: N:AdvanceFileUpload.Client
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client
+  nameWithType: AdvanceFileUpload.Client
+  fullName: AdvanceFileUpload.Client
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Client.IFileUploadService
+  commentId: T:AdvanceFileUpload.Client.IFileUploadService
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.IFileUploadService.html
+  name: IFileUploadService
+  nameWithType: IFileUploadService
+  fullName: AdvanceFileUpload.Client.IFileUploadService
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Client.FileUploadService.CanPauseSession*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.CanPauseSession
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_CanPauseSession
+  name: CanPauseSession
+  nameWithType: FileUploadService.CanPauseSession
+  fullName: AdvanceFileUpload.Client.FileUploadService.CanPauseSession
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CanPauseSession
+  name: CanPauseSession
+  nameWithType: IFileUploadService.CanPauseSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Client.FileUploadService.CanCancelSession*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.CanCancelSession
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_CanCancelSession
+  name: CanCancelSession
+  nameWithType: FileUploadService.CanCancelSession
+  fullName: AdvanceFileUpload.Client.FileUploadService.CanCancelSession
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CanCancelSession
+  name: CanCancelSession
+  nameWithType: IFileUploadService.CanCancelSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+- uid: AdvanceFileUpload.Client.FileUploadService.CanResumeSession*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.CanResumeSession
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_CanResumeSession
+  name: CanResumeSession
+  nameWithType: FileUploadService.CanResumeSession
+  fullName: AdvanceFileUpload.Client.FileUploadService.CanResumeSession
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CanResumeSession
+  name: CanResumeSession
+  nameWithType: IFileUploadService.CanResumeSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+- uid: AdvanceFileUpload.Client.FileUploadService.IsSessionPaused*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.IsSessionPaused
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_IsSessionPaused
+  name: IsSessionPaused
+  nameWithType: FileUploadService.IsSessionPaused
+  fullName: AdvanceFileUpload.Client.FileUploadService.IsSessionPaused
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_IsSessionPaused
+  name: IsSessionPaused
+  nameWithType: IFileUploadService.IsSessionPaused
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+- uid: AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_IsSessionCanceled
+  name: IsSessionCanceled
+  nameWithType: FileUploadService.IsSessionCanceled
+  fullName: AdvanceFileUpload.Client.FileUploadService.IsSessionCanceled
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_IsSessionCanceled
+  name: IsSessionCanceled
+  nameWithType: IFileUploadService.IsSessionCanceled
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+- uid: AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_IsSessionCompleted
+  name: IsSessionCompleted
+  nameWithType: FileUploadService.IsSessionCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_IsSessionCompleted
+  name: IsSessionCompleted
+  nameWithType: IFileUploadService.IsSessionCompleted
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+- uid: System.EventHandler{AdvanceFileUpload.Client.SessionCreatedEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.SessionCreatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SessionCreatedEventArgs>
+  nameWithType: EventHandler<SessionCreatedEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.SessionCreatedEventArgs>
+  nameWithType.vb: EventHandler(Of SessionCreatedEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.SessionCreatedEventArgs)
+  name.vb: EventHandler(Of SessionCreatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.SessionCreatedEventArgs
+    name: SessionCreatedEventArgs
+    href: AdvanceFileUpload.Client.SessionCreatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.SessionCreatedEventArgs
+    name: SessionCreatedEventArgs
+    href: AdvanceFileUpload.Client.SessionCreatedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{AdvanceFileUpload.Client.ChunkUploadedEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.ChunkUploadedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<ChunkUploadedEventArgs>
+  nameWithType: EventHandler<ChunkUploadedEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.ChunkUploadedEventArgs>
+  nameWithType.vb: EventHandler(Of ChunkUploadedEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.ChunkUploadedEventArgs)
+  name.vb: EventHandler(Of ChunkUploadedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.ChunkUploadedEventArgs
+    name: ChunkUploadedEventArgs
+    href: AdvanceFileUpload.Client.ChunkUploadedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.ChunkUploadedEventArgs
+    name: ChunkUploadedEventArgs
+    href: AdvanceFileUpload.Client.ChunkUploadedEventArgs.html
+  - name: )
+- uid: System.EventHandler{AdvanceFileUpload.Client.SessionCompletedEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.SessionCompletedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SessionCompletedEventArgs>
+  nameWithType: EventHandler<SessionCompletedEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.SessionCompletedEventArgs>
+  nameWithType.vb: EventHandler(Of SessionCompletedEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.SessionCompletedEventArgs)
+  name.vb: EventHandler(Of SessionCompletedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.SessionCompletedEventArgs
+    name: SessionCompletedEventArgs
+    href: AdvanceFileUpload.Client.SessionCompletedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.SessionCompletedEventArgs
+    name: SessionCompletedEventArgs
+    href: AdvanceFileUpload.Client.SessionCompletedEventArgs.html
+  - name: )
+- uid: System.EventHandler{AdvanceFileUpload.Client.SessionCanceledEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.SessionCanceledEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SessionCanceledEventArgs>
+  nameWithType: EventHandler<SessionCanceledEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.SessionCanceledEventArgs>
+  nameWithType.vb: EventHandler(Of SessionCanceledEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.SessionCanceledEventArgs)
+  name.vb: EventHandler(Of SessionCanceledEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.SessionCanceledEventArgs
+    name: SessionCanceledEventArgs
+    href: AdvanceFileUpload.Client.SessionCanceledEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.SessionCanceledEventArgs
+    name: SessionCanceledEventArgs
+    href: AdvanceFileUpload.Client.SessionCanceledEventArgs.html
+  - name: )
+- uid: System.EventHandler{AdvanceFileUpload.Client.SessionPausedEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.SessionPausedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SessionPausedEventArgs>
+  nameWithType: EventHandler<SessionPausedEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.SessionPausedEventArgs>
+  nameWithType.vb: EventHandler(Of SessionPausedEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.SessionPausedEventArgs)
+  name.vb: EventHandler(Of SessionPausedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.SessionPausedEventArgs
+    name: SessionPausedEventArgs
+    href: AdvanceFileUpload.Client.SessionPausedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.SessionPausedEventArgs
+    name: SessionPausedEventArgs
+    href: AdvanceFileUpload.Client.SessionPausedEventArgs.html
+  - name: )
+- uid: System.EventHandler{AdvanceFileUpload.Client.SessionResumedEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.SessionResumedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SessionResumedEventArgs>
+  nameWithType: EventHandler<SessionResumedEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.SessionResumedEventArgs>
+  nameWithType.vb: EventHandler(Of SessionResumedEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.SessionResumedEventArgs)
+  name.vb: EventHandler(Of SessionResumedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.SessionResumedEventArgs
+    name: SessionResumedEventArgs
+    href: AdvanceFileUpload.Client.SessionResumedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.SessionResumedEventArgs
+    name: SessionResumedEventArgs
+    href: AdvanceFileUpload.Client.SessionResumedEventArgs.html
+  - name: )
+- uid: System.EventHandler{AdvanceFileUpload.Client.UploadProgressChangedEventArgs}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.UploadProgressChangedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<UploadProgressChangedEventArgs>
+  nameWithType: EventHandler<UploadProgressChangedEventArgs>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.UploadProgressChangedEventArgs>
+  nameWithType.vb: EventHandler(Of UploadProgressChangedEventArgs)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.UploadProgressChangedEventArgs)
+  name.vb: EventHandler(Of UploadProgressChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+    name: UploadProgressChangedEventArgs
+    href: AdvanceFileUpload.Client.UploadProgressChangedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+    name: UploadProgressChangedEventArgs
+    href: AdvanceFileUpload.Client.UploadProgressChangedEventArgs.html
+  - name: )
+- uid: System.EventHandler{System.String}
+  commentId: T:System.EventHandler{System.String}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<string>
+  nameWithType: EventHandler<string>
+  fullName: System.EventHandler<string>
+  nameWithType.vb: EventHandler(Of String)
+  fullName.vb: System.EventHandler(Of String)
+  name.vb: EventHandler(Of String)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: AdvanceFileUpload.Client.FileUploadService.#ctor*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.#ctor
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService__ctor_System_Uri_AdvanceFileUpload_Client_UploadOptions_
+  name: FileUploadService
+  nameWithType: FileUploadService.FileUploadService
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileUploadService
+  nameWithType.vb: FileUploadService.New
+  fullName.vb: AdvanceFileUpload.Client.FileUploadService.New
+  name.vb: New
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: AdvanceFileUpload.Client.UploadOptions
+  commentId: T:AdvanceFileUpload.Client.UploadOptions
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.UploadOptions.html
+  name: UploadOptions
+  nameWithType: UploadOptions
+  fullName: AdvanceFileUpload.Client.UploadOptions
+- uid: AdvanceFileUpload.Client.UploadException
+  commentId: T:AdvanceFileUpload.Client.UploadException
+  href: AdvanceFileUpload.Client.UploadException.html
+  name: UploadException
+  nameWithType: UploadException
+  fullName: AdvanceFileUpload.Client.UploadException
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.UploadFileAsync
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_UploadFileAsync_System_String_
+  name: UploadFileAsync
+  nameWithType: FileUploadService.UploadFileAsync
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  isExternal: true
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_UploadFileAsync_System_String_
+  name: UploadFileAsync(string)
+  nameWithType: IFileUploadService.UploadFileAsync(string)
+  fullName: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(string)
+  nameWithType.vb: IFileUploadService.UploadFileAsync(String)
+  fullName.vb: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(String)
+  name.vb: UploadFileAsync(String)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+    name: UploadFileAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_UploadFileAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+    name: UploadFileAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_UploadFileAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_PauseUploadAsync
+  name: PauseUploadAsync
+  nameWithType: FileUploadService.PauseUploadAsync
+  fullName: AdvanceFileUpload.Client.FileUploadService.PauseUploadAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_PauseUploadAsync
+  name: PauseUploadAsync()
+  nameWithType: IFileUploadService.PauseUploadAsync()
+  fullName: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+    name: PauseUploadAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_PauseUploadAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+    name: PauseUploadAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_PauseUploadAsync
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_ResumeUploadAsync
+  name: ResumeUploadAsync
+  nameWithType: FileUploadService.ResumeUploadAsync
+  fullName: AdvanceFileUpload.Client.FileUploadService.ResumeUploadAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_ResumeUploadAsync
+  name: ResumeUploadAsync()
+  nameWithType: IFileUploadService.ResumeUploadAsync()
+  fullName: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+    name: ResumeUploadAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_ResumeUploadAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+    name: ResumeUploadAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_ResumeUploadAsync
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_CancelUploadAsync
+  name: CancelUploadAsync
+  nameWithType: FileUploadService.CancelUploadAsync
+  fullName: AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CancelUploadAsync
+  name: CancelUploadAsync()
+  nameWithType: IFileUploadService.CancelUploadAsync()
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+    name: CancelUploadAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CancelUploadAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+    name: CancelUploadAsync
+    href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CancelUploadAsync
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Client.FileUploadService.Dispose*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.Dispose
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_Dispose
+  name: Dispose
+  nameWithType: FileUploadService.Dispose
+  fullName: AdvanceFileUpload.Client.FileUploadService.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

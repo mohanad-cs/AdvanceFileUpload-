@@ -1,15 +1,14 @@
-﻿using AdvanceFileUpload.Application.Compression;
+﻿using System.Net.Http.Json;
+using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Request;
 using AdvanceFileUpload.Application.Response;
 using AdvanceFileUpload.Application.Shared;
 using AdvanceFileUpload.Client.Helper;
 using Microsoft.AspNetCore.SignalR.Client;
-using Polly.Retry;
-using Polly;
-using System.Net.Http.Json;
 using Microsoft.Extensions.Logging;
-using System;
+using Polly;
+using Polly.Retry;
 
 namespace AdvanceFileUpload.Client
 {
@@ -21,45 +20,125 @@ namespace AdvanceFileUpload.Client
     public sealed class FileUploadService : IFileUploadService, IDisposable
     {
         #region Fields
+        /// <summary>
+        /// The HTTP client used for making API requests.
+        /// </summary>
         private readonly HttpClient _httpClient;
+        /// <summary>
+        /// The file processor used for splitting and merging files.
+        /// </summary>
         private readonly IFileProcessor _fileProcessor;
+        /// <summary>
+        /// The file compressor used for compressing and decompressing files.
+        /// </summary>
         private readonly IFileCompressor _fileCompressor;
+        /// <summary>
+        /// The cancellation token source used for canceling asynchronous operations.
+        /// </summary>
         private CancellationTokenSource _cancellationTokenSource;
+        /// <summary>
+        /// The options for uploading files.
+        /// </summary>
         private readonly UploadOptions _uploadOptions;
+        /// <summary>
+        /// The list of chunks to be uploaded.
+        /// </summary>
         private List<string> _chunksToUpload = new();
+        /// <summary>
+        /// The unique identifier for the upload session.
+        /// </summary>
         private Guid _sessionId;
+        /// <summary>
+        /// The size of each chunk in bytes.
+        /// </summary>
         private long _chunkSize;
+        /// <summary>
+        /// The total number of chunks to be uploaded.
+        /// </summary>
         private int _totalChunksToUpload;
+        /// <summary>
+        /// The original file path of the file to be uploaded.
+        /// </summary>
         private string? _originalFilePath;
+        /// <summary>
+        /// The semaphore used to limit the number of concurrent uploads.
+        /// </summary>
         private readonly SemaphoreSlim _semaphore;
+        /// <summary>
+        /// The SignalR hub connection used for real-time notifications.
+        /// </summary>
         private readonly HubConnection _hubConnection;
+        /// <summary>
+        /// The size of the original file in bytes.
+        /// </summary>
         private long _originalFileSize => _originalFilePath is null ? 0 : new FileInfo(_originalFilePath).Length;
+        /// <summary>
+        /// The path of the compressed file.
+        /// </summary>
         private string? _compressedFilePath;
+        /// <summary>
+        /// Indicates whether the object has been disposed.
+        /// </summary>
         private bool _disposed;
+        /// <summary>
+        /// The connection ID of the SignalR hub.
+        /// </summary>
         private string? _hubConnectionsId;
+        /// <summary>
+        /// The size of the compressed file in bytes.
+        /// </summary>
         private long? _compressedFileSize => _compressedFilePath is null ? null : new FileInfo(_compressedFilePath).Length;
+        /// <summary>
+        /// The retry policy for HTTP requests.
+        /// </summary>
         private readonly AsyncRetryPolicy<HttpResponseMessage> _retryPolicy;
+        /// <summary>
+        /// The logger used for logging information and errors.
+        /// </summary>
         private readonly ILogger<FileUploadService> _logger;
+        /// <summary>
+        /// The lock object used for synchronizing access to the session status.
+        /// </summary>
         private readonly object _statusLock = new();
-        private readonly object _chunkLock = new();
+        /// <summary>
+        /// The current status of the upload session.
+        /// </summary>
         private SessionStatus sessionStatus;
+        /// <summary>
+        /// The current status of the upload session with thread-safe access.
+        /// </summary>
         private SessionStatus _sessionStatus
         {
             get { lock (_statusLock) return sessionStatus; }
             set { lock (_statusLock) sessionStatus = value; }
         }
+        /// <summary>
+        /// The cached connection status of the network.
+        /// </summary>
         private ConnectionStatus _cachedConnectionStatus;
+        /// <summary>
+        /// The network connection checker used for checking the health of the API.
+        /// </summary>
         private readonly INetworkConnectionChecker _networkConnectionChecker;
+        /// <summary>
+        /// The time of the last health check.
+        /// </summary>
         private TimeSpan _lastHealthCheck;
+        /// <summary>
+        /// Indicates whether the file has been compressed.
+        /// </summary>
         private bool _fileHasBeenCompressed;
+        /// <summary>
+        /// Indicates whether the file has been split into chunks.
+        /// </summary>
         private bool _fileHasBeenSplit;
-        #endregion
+        #endregion Fields
 
         #region Properties
         /// <inheritdoc />
         public bool CanPauseSession => _sessionStatus == SessionStatus.Uploading || _sessionStatus == SessionStatus.None;
         /// <inheritdoc />
-        public bool CanCancelSession => _sessionStatus != SessionStatus.Completed && _sessionStatus != SessionStatus.Canceled && _sessionId!=Guid.Empty;
+        public bool CanCancelSession => _sessionStatus != SessionStatus.Completed && _sessionStatus != SessionStatus.Canceled && _sessionId != Guid.Empty;
         /// <inheritdoc />
         public bool CanResumeSession => _sessionStatus == SessionStatus.Paused || _sessionStatus == SessionStatus.None;
         /// <inheritdoc />
@@ -102,11 +181,11 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// Occurs when an upload error happens.
         /// </summary>
-        public event EventHandler<string> UploadError;
+        public event EventHandler<string>? UploadError;
         /// <summary>
         /// Occurs when a network error happens.
         /// </summary>
-        public event EventHandler<string> NetworkError;
+        public event EventHandler<string>? NetworkError;
         /// <summary>
         /// Occurs when the file splitting process starts.
         /// </summary>
@@ -146,7 +225,10 @@ namespace AdvanceFileUpload.Client
         /// Initializes a new instance of the <see cref="FileUploadService"/> class.
         /// </summary>
         /// <param name="apiBaseAddress">The base address of the API.</param>
-        /// <param name="uploadOptions">The upload options.</param>
+        /// <param name="uploadOptions">The options for uploading files.</param>
+        /// <exception cref="ArgumentNullException">
+        /// Thrown when <paramref name="apiBaseAddress"/> or <paramref name="uploadOptions"/> is null.
+        /// </exception>
         public FileUploadService(Uri apiBaseAddress, UploadOptions uploadOptions)
         {
             try
@@ -194,14 +276,13 @@ namespace AdvanceFileUpload.Client
                         {
 
                         });
-                if (_uploadOptions.CompressionOption!=null)
+
+                foreach (string extension in _uploadOptions.ExcludedCompressionExtensions)
                 {
-                    foreach (string extension in _uploadOptions.CompressionOption.ExcludedCompressionExtensions)
-                    {
-                        _fileCompressor.AddExcludedExtension(extension);
-                    }
+                    _fileCompressor.AddExcludedExtension(extension);
                 }
-               
+
+
             }
             catch (Exception ex)
             {
@@ -358,23 +439,42 @@ namespace AdvanceFileUpload.Client
         }
         #endregion Public Methods
         #region Private Methods
+        /// <summary>
+        /// Handles the event when the hub connection is closed.
+        /// </summary>
+        /// <param name="arg">The exception that caused the connection to close, if any.</param>
+        /// <returns>A task that represents the asynchronous operation.</returns>
         private async Task _hubConnection_Closed(Exception? arg)
         {
             _logger.LogWarning("Hub connection closed. Exception: {Exception}", arg);
             _hubConnectionsId = null;
             await Task.CompletedTask.ConfigureAwait(false);
         }
+        /// <summary>
+        /// Starts the SignalR hub connection if it is not already connected.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous operation.</returns>
+        /// <exception cref="InvalidOperationException">Thrown if the hub connection is null.</exception>
         private async Task RunHubConnection()
         {
             if (_hubConnection != null && _hubConnection.State == HubConnectionState.Disconnected)
             {
-
                 await _hubConnection.StartAsync().ConfigureAwait(false);
                 _hubConnectionsId = _hubConnection.ConnectionId;
-
-
             }
         }
+
+        /// <summary>
+        /// Uploads the remaining chunks of a file if the session has already been created, compressed, and split.
+        /// </summary>
+        /// <remarks>
+        /// This method checks if the file has been compressed and split. If so, it retrieves the upload session status
+        /// and uploads any remaining chunks.<br></br> If the upload status is pending completion, it completes the upload.
+        /// If the upload status is already completed, it raises the session completed event.
+        /// </remarks>
+        /// <exception cref="UploadException">Thrown when the upload session status cannot be retrieved or if an error occurs during the upload process.</exception>
+        /// <exception cref="HttpRequestException">Thrown if the HTTP request fails.</exception>
+
         private async Task UploadRemainChunks()
         {
             if (_fileHasBeenCompressed && _fileHasBeenSplit) // if session already been created  check if we have been  compressed and spited the file. if so we then just need to upload remain chunks
@@ -405,6 +505,7 @@ namespace AdvanceFileUpload.Client
                         _sessionStatus = SessionStatus.Completed;
                         OnSessionCompleted(new SessionCompletedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), new FileInfo(_originalFilePath).Length));
                     }
+                    statusResponse.Dispose();
                 }
                 else
                 {
@@ -413,12 +514,15 @@ namespace AdvanceFileUpload.Client
                 }
             }
         }
+
         /// <summary>
         /// Uploads a chunk of the file asynchronously.
         /// </summary>
         /// <param name="chunkPath">The path of the chunk to be uploaded.</param>
         /// <param name="chunkIndex">The index of the chunk.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
+        /// <returns>A task that represents the asynchronous operation.</returns>
+        /// <exception cref="OperationCanceledException">Thrown if the operation is canceled.</exception>
+        /// <exception cref="HttpRequestException">Thrown if the HTTP request fails.</exception>
         private async Task UploadChunkAsync(string chunkPath, int chunkIndex)
         {
 
@@ -440,16 +544,14 @@ namespace AdvanceFileUpload.Client
             response.EnsureSuccessStatusCode();
 
             OnChunkUploaded(new ChunkUploadedEventArgs(_sessionId, chunkIndex, chunkData.Length));
+            response.Dispose();
             //_chunksToUpload.RemoveAt(chunkIndex);
-
-
         }
         /// <summary>
         /// Uploads a chunk of the file with concurrency limit asynchronously.
         /// </summary>
         /// <param name="chunkPath">The path of the chunk to be uploaded.</param>
         /// <param name="chunkIndex">The index of the chunk.</param>
-        /// <param name="cancellationToken">The cancellation token to cancel the operation.</param>
         private async Task UploadChunkWithLimitAsync(string chunkPath, int chunkIndex)
         {
             await _semaphore.WaitAsync(_cancellationTokenSource.Token).ConfigureAwait(false);
@@ -470,33 +572,42 @@ namespace AdvanceFileUpload.Client
             //await UploadChunkAsync(chunkPath, chunkIndex).ConfigureAwait(false);
 
         }
+
         /// <summary>
-        /// Completes the upload session asynchronously.
+        /// Completes the upload session by sending a request to the server.
         /// </summary>
+        /// <remarks>
+        /// This method checks if the session status is neither completed nor canceled before attempting to complete the upload session.
+        /// If the session can be completed, it sends a request to the server to mark the session as complete.
+        /// If the session is already completed or canceled, it logs a warning and throws an <see cref="UploadException"/>.
+        /// </remarks>
+        /// <exception cref="UploadException">Thrown when the session cannot be completed.</exception>
+        /// <exception cref="HttpRequestException">Thrown if the HTTP request fails.</exception>
+
         private async Task CompleteUpload()
         {
             if (_sessionStatus != SessionStatus.Completed && _sessionStatus != SessionStatus.Canceled)
             {
-
                 _logger.LogInformation("Completing upload session {SessionId}", _sessionId);
                 OnSessionCompleting();
                 var completeResponse = await ExecuteWithRetryPolicy((ct) => _httpClient.PostAsJsonAsync($"{RouteTemplates.CompleteSession}", new CompleteUploadSessionRequest() { SessionId = _sessionId }, _cancellationTokenSource.Token));
                 completeResponse.EnsureSuccessStatusCode();
                 OnSessionCompleted(new SessionCompletedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), new FileInfo(_originalFilePath).Length));
+                completeResponse.Dispose();
             }
             else
             {
                 _logger.LogWarning("Cannot complete session {SessionId}", _sessionId);
                 throw new UploadException("The session cannot be completed");
             }
-
-
         }
+
         /// <summary>
-        /// Executes an HTTP request with a retry policy.
+        /// Executes the provided action with a retry policy.
         /// </summary>
-        /// <param name="action">The HTTP request action to execute.</param>
-        /// <returns>The HTTP response message.</returns>
+        /// <param name="action">The action to execute, which returns an <see cref="HttpResponseMessage"/>.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains the <see cref="HttpResponseMessage"/>.</returns>
+        /// <exception cref="UploadException">Thrown when an error occurs during the upload process.</exception>
         private async Task<HttpResponseMessage> ExecuteWithRetryPolicy(Func<CancellationToken, Task<HttpResponseMessage>> action)
         {
             await CheckAPIHealth();
@@ -511,9 +622,17 @@ namespace AdvanceFileUpload.Client
             }
             return response;
         }
+        /// <summary>
+        /// Checks the health of the API and updates the connection status.
+        /// </summary>
+        /// <remarks>
+        /// This method checks the health of the API at regular intervals (every 5 seconds). If the connection status is degraded,
+        /// it is treated as healthy. If the connection status is unhealthy or times out, the current upload session is paused,
+        /// and a network error is raised.
+        /// </remarks>
+        /// <returns>A task that represents the asynchronous operation.</returns>
         private async Task CheckAPIHealth()
         {
-
             if (_networkConnectionChecker != null)
             {
                 if ((DateTime.Now.TimeOfDay - _lastHealthCheck) > TimeSpan.FromSeconds(5))
@@ -522,7 +641,7 @@ namespace AdvanceFileUpload.Client
                     _cachedConnectionStatus = await _networkConnectionChecker.CheckApiHealthAsync(_cancellationTokenSource.Token).ConfigureAwait(false);
                     if (_cachedConnectionStatus == ConnectionStatus.Degraded)
                     {
-                        _cachedConnectionStatus = ConnectionStatus.Healthy;// handling ToManyRequest scenario.
+                        _cachedConnectionStatus = ConnectionStatus.Healthy; // handling ToManyRequest scenario.
                     }
                     if (_cachedConnectionStatus == ConnectionStatus.Unhealthy)
                     {
@@ -534,9 +653,8 @@ namespace AdvanceFileUpload.Client
                             OnSessionPaused(new SessionPausedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), _originalFileSize));
                         }
                         OnNetworkError("The Upload Server is in UnHealthy Sate", null);
-
                     }
-                    if (_cachedConnectionStatus== ConnectionStatus.Timeout)
+                    if (_cachedConnectionStatus == ConnectionStatus.Timeout)
                     {
                         _cancellationTokenSource.Cancel();
                         CreateNewCancellationTokenSource();
@@ -549,11 +667,19 @@ namespace AdvanceFileUpload.Client
                     }
                 }
             }
-
         }
+        /// <summary>
+        /// Compresses the file specified in the upload options.
+        /// </summary>
+        /// <remarks>
+        /// This method checks if the file is applicable for compression based on its extension.
+        /// If applicable, it compresses the file using the specified compression algorithm and level.
+        /// If the file is not applicable for compression, it  override the upload compression option to be null.
+        /// </remarks>
+        /// <returns>A task that represents the asynchronous operation.</returns>
+        /// <exception cref="OperationCanceledException">Thrown if the operation is canceled.</exception>
         private async Task CompressFile()
         {
-
             _cancellationTokenSource.Token.ThrowIfCancellationRequested();
             if (_uploadOptions.CompressionOption != null && _originalFilePath != null)
             {
@@ -575,10 +701,7 @@ namespace AdvanceFileUpload.Client
                     _uploadOptions.CompressionOption = null;
                     _logger.LogInformation("Compression is not applicable for file extension {extension} we have override the upload compression option to be null", Path.GetExtension(_originalFilePath));
                 }
-
             }
-
-
         }
         private async Task SplitFile()
         {
@@ -829,6 +952,7 @@ namespace AdvanceFileUpload.Client
         {
             if (!_disposed)
             {
+                _disposed = true;
                 if (disposing)
                 {
                     _httpClient.Dispose();
@@ -836,10 +960,9 @@ namespace AdvanceFileUpload.Client
                     _hubConnection.DisposeAsync().AsTask().ConfigureAwait(false).GetAwaiter().GetResult();
                     DeleteTempFiles();
                 }
-                _disposed = true;
             }
         }
-
+        /// <inheritdoc/>
         public void Dispose()
         {
             Dispose(disposing: true);

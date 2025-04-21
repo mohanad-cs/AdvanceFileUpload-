@@ -5,19 +5,13 @@ items:
   id: FileUploadSessionTests
   parent: AdvanceFileUpload.Domain.Test
   children:
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks
+  - AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus
   langs:
   - csharp
   - vb
@@ -32,7 +26,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileUploadSessionTests
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 8
+    startLine: 4
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -49,25 +43,25 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly
-  id: Constructor_ValidParameters_ShouldInitializeCorrectly
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties
+  id: Constructor_ShouldInitializeProperties
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: Constructor_ValidParameters_ShouldInitializeCorrectly()
-  nameWithType: FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly()
+  name: Constructor_ShouldInitializeProperties()
+  nameWithType: FileUploadSessionTests.Constructor_ShouldInitializeProperties()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: Constructor_ValidParameters_ShouldInitializeCorrectly
+    id: Constructor_ShouldInitializeProperties
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 10
+    startLine: 12
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -75,35 +69,35 @@ items:
     content: >-
       [Fact]
 
-      public void Constructor_ValidParameters_ShouldInitializeCorrectly()
+      public void Constructor_ShouldInitializeProperties()
     content.vb: >-
       <Fact>
 
-      Public Sub Constructor_ValidParameters_ShouldInitializeCorrectly()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly*
+      Public Sub Constructor_ShouldInitializeProperties()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
     arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException
-  id: Constructor_InvalidParameters_ShouldThrowArgumentException
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk
+  id: AddChunk_ShouldAddChunk
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: Constructor_InvalidParameters_ShouldThrowArgumentException()
-  nameWithType: FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException()
+  name: AddChunk_ShouldAddChunk()
+  nameWithType: FileUploadSessionTests.AddChunk_ShouldAddChunk()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: Constructor_InvalidParameters_ShouldThrowArgumentException
+    id: AddChunk_ShouldAddChunk
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 31
+    startLine: 29
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -111,35 +105,35 @@ items:
     content: >-
       [Fact]
 
-      public void Constructor_InvalidParameters_ShouldThrowArgumentException()
+      public void AddChunk_ShouldAddChunk()
     content.vb: >-
       <Fact>
 
-      Public Sub Constructor_InvalidParameters_ShouldThrowArgumentException()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException*
+      Public Sub AddChunk_ShouldAddChunk()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
     arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk
-  id: AddChunk_ValidChunk_ShouldAddChunk
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  id: AddChunk_ShouldThrowException_WhenSessionIsCompleted
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: AddChunk_ValidChunk_ShouldAddChunk()
-  nameWithType: FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk()
+  name: AddChunk_ShouldThrowException_WhenSessionIsCompleted()
+  nameWithType: FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: AddChunk_ValidChunk_ShouldAddChunk
+    id: AddChunk_ShouldThrowException_WhenSessionIsCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 44
+    startLine: 46
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -147,35 +141,35 @@ items:
     content: >-
       [Fact]
 
-      public void AddChunk_ValidChunk_ShouldAddChunk()
+      public void AddChunk_ShouldThrowException_WhenSessionIsCompleted()
     content.vb: >-
       <Fact>
 
-      Public Sub AddChunk_ValidChunk_ShouldAddChunk()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk*
+      Public Sub AddChunk_ShouldThrowException_WhenSessionIsCompleted()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
     arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  id: AddChunk_ChunkAlreadyUploaded_ShouldThrowException
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks
+  id: GetRemainChunks_ShouldReturnRemainingChunks
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: AddChunk_ChunkAlreadyUploaded_ShouldThrowException()
-  nameWithType: FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException()
+  name: GetRemainChunks_ShouldReturnRemainingChunks()
+  nameWithType: FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: AddChunk_ChunkAlreadyUploaded_ShouldThrowException
+    id: GetRemainChunks_ShouldReturnRemainingChunks
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 60
+    startLine: 62
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -183,35 +177,35 @@ items:
     content: >-
       [Fact]
 
-      public void AddChunk_ChunkAlreadyUploaded_ShouldThrowException()
+      public void GetRemainChunks_ShouldReturnRemainingChunks()
     content.vb: >-
       <Fact>
 
-      Public Sub AddChunk_ChunkAlreadyUploaded_ShouldThrowException()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException*
+      Public Sub GetRemainChunks_ShouldReturnRemainingChunks()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
     arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException
-  id: AddChunk_SessionCompleted_ShouldThrowException
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus
+  id: CancelSession_ShouldUpdateStatus
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: AddChunk_SessionCompleted_ShouldThrowException()
-  nameWithType: FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException()
+  name: CancelSession_ShouldUpdateStatus()
+  nameWithType: FileUploadSessionTests.CancelSession_ShouldUpdateStatus()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: AddChunk_SessionCompleted_ShouldThrowException
+    id: CancelSession_ShouldUpdateStatus
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 73
+    startLine: 84
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -219,35 +213,35 @@ items:
     content: >-
       [Fact]
 
-      public void AddChunk_SessionCompleted_ShouldThrowException()
+      public void CancelSession_ShouldUpdateStatus()
     content.vb: >-
       <Fact>
 
-      Public Sub AddChunk_SessionCompleted_ShouldThrowException()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException*
+      Public Sub CancelSession_ShouldUpdateStatus()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
     arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  id: GetRemainChunks_ShouldReturnCorrectRemainingChunks
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus
+  id: PauseSession_ShouldUpdateStatus
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: GetRemainChunks_ShouldReturnCorrectRemainingChunks()
-  nameWithType: FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks()
+  name: PauseSession_ShouldUpdateStatus()
+  nameWithType: FileUploadSessionTests.PauseSession_ShouldUpdateStatus()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: GetRemainChunks_ShouldReturnCorrectRemainingChunks
+    id: PauseSession_ShouldUpdateStatus
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 86
+    startLine: 98
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -255,35 +249,35 @@ items:
     content: >-
       [Fact]
 
-      public void GetRemainChunks_ShouldReturnCorrectRemainingChunks()
+      public void PauseSession_ShouldUpdateStatus()
     content.vb: >-
       <Fact>
 
-      Public Sub GetRemainChunks_ShouldReturnCorrectRemainingChunks()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks*
+      Public Sub PauseSession_ShouldUpdateStatus()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
     arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  id: IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus
+  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus
+  id: CompleteSession_ShouldUpdateStatus
   parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
   langs:
   - csharp
   - vb
-  name: IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()
-  nameWithType: FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()
+  name: CompleteSession_ShouldUpdateStatus()
+  nameWithType: FileUploadSessionTests.CompleteSession_ShouldUpdateStatus()
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus()
   type: Method
   source:
     remote:
       path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
       branch: main
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
+    id: CompleteSession_ShouldUpdateStatus
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 100
+    startLine: 112
   assemblies:
   - AdvanceFileUpload.Domain.Test
   namespace: AdvanceFileUpload.Domain.Test
@@ -291,228 +285,12 @@ items:
     content: >-
       [Fact]
 
-      public void IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()
+      public void CompleteSession_ShouldUpdateStatus()
     content.vb: >-
       <Fact>
 
-      Public Sub IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded*
-  attributes:
-  - type: Xunit.FactAttribute
-    ctor: Xunit.FactAttribute.#ctor
-    arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  id: IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-  langs:
-  - csharp
-  - vb
-  name: IsChunkUploaded_ShouldReturnTrueForUploadedChunk()
-  nameWithType: FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk()
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 117
-  assemblies:
-  - AdvanceFileUpload.Domain.Test
-  namespace: AdvanceFileUpload.Domain.Test
-  syntax:
-    content: >-
-      [Fact]
-
-      public void IsChunkUploaded_ShouldReturnTrueForUploadedChunk()
-    content.vb: >-
-      <Fact>
-
-      Public Sub IsChunkUploaded_ShouldReturnTrueForUploadedChunk()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk*
-  attributes:
-  - type: Xunit.FactAttribute
-    ctor: Xunit.FactAttribute.#ctor
-    arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  id: IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-  langs:
-  - csharp
-  - vb
-  name: IsCompleted_ShouldReturnTrueWhenSessionCompleted()
-  nameWithType: FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted()
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: IsCompleted_ShouldReturnTrueWhenSessionCompleted
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 131
-  assemblies:
-  - AdvanceFileUpload.Domain.Test
-  namespace: AdvanceFileUpload.Domain.Test
-  syntax:
-    content: >-
-      [Fact]
-
-      public void IsCompleted_ShouldReturnTrueWhenSessionCompleted()
-    content.vb: >-
-      <Fact>
-
-      Public Sub IsCompleted_ShouldReturnTrueWhenSessionCompleted()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted*
-  attributes:
-  - type: Xunit.FactAttribute
-    ctor: Xunit.FactAttribute.#ctor
-    arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  id: IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-  langs:
-  - csharp
-  - vb
-  name: IsCanceled_ShouldReturnTrueWhenSessionCanceled()
-  nameWithType: FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled()
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: IsCanceled_ShouldReturnTrueWhenSessionCanceled
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 149
-  assemblies:
-  - AdvanceFileUpload.Domain.Test
-  namespace: AdvanceFileUpload.Domain.Test
-  syntax:
-    content: >-
-      [Fact]
-
-      public void IsCanceled_ShouldReturnTrueWhenSessionCanceled()
-    content.vb: >-
-      <Fact>
-
-      Public Sub IsCanceled_ShouldReturnTrueWhenSessionCanceled()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled*
-  attributes:
-  - type: Xunit.FactAttribute
-    ctor: Xunit.FactAttribute.#ctor
-    arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession
-  id: CancelSession_ShouldCancelSession
-  parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-  langs:
-  - csharp
-  - vb
-  name: CancelSession_ShouldCancelSession()
-  nameWithType: FileUploadSessionTests.CancelSession_ShouldCancelSession()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession()
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: CancelSession_ShouldCancelSession
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 163
-  assemblies:
-  - AdvanceFileUpload.Domain.Test
-  namespace: AdvanceFileUpload.Domain.Test
-  syntax:
-    content: >-
-      [Fact]
-
-      public void CancelSession_ShouldCancelSession()
-    content.vb: >-
-      <Fact>
-
-      Public Sub CancelSession_ShouldCancelSession()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession*
-  attributes:
-  - type: Xunit.FactAttribute
-    ctor: Xunit.FactAttribute.#ctor
-    arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession
-  id: PauseSession_ShouldPauseSession
-  parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-  langs:
-  - csharp
-  - vb
-  name: PauseSession_ShouldPauseSession()
-  nameWithType: FileUploadSessionTests.PauseSession_ShouldPauseSession()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession()
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: PauseSession_ShouldPauseSession
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 177
-  assemblies:
-  - AdvanceFileUpload.Domain.Test
-  namespace: AdvanceFileUpload.Domain.Test
-  syntax:
-    content: >-
-      [Fact]
-
-      public void PauseSession_ShouldPauseSession()
-    content.vb: >-
-      <Fact>
-
-      Public Sub PauseSession_ShouldPauseSession()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession*
-  attributes:
-  - type: Xunit.FactAttribute
-    ctor: Xunit.FactAttribute.#ctor
-    arguments: []
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession
-  commentId: M:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession
-  id: CompleteSession_ShouldCompleteSession
-  parent: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-  langs:
-  - csharp
-  - vb
-  name: CompleteSession_ShouldCompleteSession()
-  nameWithType: FileUploadSessionTests.CompleteSession_ShouldCompleteSession()
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession()
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: CompleteSession_ShouldCompleteSession
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs
-    startLine: 191
-  assemblies:
-  - AdvanceFileUpload.Domain.Test
-  namespace: AdvanceFileUpload.Domain.Test
-  syntax:
-    content: >-
-      [Fact]
-
-      public void CompleteSession_ShouldCompleteSession()
-    content.vb: >-
-      <Fact>
-
-      Public Sub CompleteSession_ShouldCompleteSession()
-  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession*
+      Public Sub CompleteSession_ShouldUpdateStatus()
+  overload: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus*
   attributes:
   - type: Xunit.FactAttribute
     ctor: Xunit.FactAttribute.#ctor
@@ -785,81 +563,45 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_ValidParameters_ShouldInitializeCorrectly
-  name: Constructor_ValidParameters_ShouldInitializeCorrectly
-  nameWithType: FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_InvalidParameters_ShouldThrowArgumentException
-  name: Constructor_InvalidParameters_ShouldThrowArgumentException
-  nameWithType: FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ValidChunk_ShouldAddChunk
-  name: AddChunk_ValidChunk_ShouldAddChunk
-  nameWithType: FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  name: AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  nameWithType: FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_SessionCompleted_ShouldThrowException
-  name: AddChunk_SessionCompleted_ShouldThrowException
-  nameWithType: FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  name: GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  nameWithType: FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  name: IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  nameWithType: FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  name: IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  nameWithType: FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  name: IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  nameWithType: FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  name: IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  nameWithType: FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CancelSession_ShouldCancelSession
-  name: CancelSession_ShouldCancelSession
-  nameWithType: FileUploadSessionTests.CancelSession_ShouldCancelSession
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_PauseSession_ShouldPauseSession
-  name: PauseSession_ShouldPauseSession
-  nameWithType: FileUploadSessionTests.PauseSession_ShouldPauseSession
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession
-- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession*
-  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession
-  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CompleteSession_ShouldCompleteSession
-  name: CompleteSession_ShouldCompleteSession
-  nameWithType: FileUploadSessionTests.CompleteSession_ShouldCompleteSession
-  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_ShouldInitializeProperties
+  name: Constructor_ShouldInitializeProperties
+  nameWithType: FileUploadSessionTests.Constructor_ShouldInitializeProperties
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ShouldAddChunk
+  name: AddChunk_ShouldAddChunk
+  nameWithType: FileUploadSessionTests.AddChunk_ShouldAddChunk
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  name: AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  nameWithType: FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_GetRemainChunks_ShouldReturnRemainingChunks
+  name: GetRemainChunks_ShouldReturnRemainingChunks
+  nameWithType: FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CancelSession_ShouldUpdateStatus
+  name: CancelSession_ShouldUpdateStatus
+  nameWithType: FileUploadSessionTests.CancelSession_ShouldUpdateStatus
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_PauseSession_ShouldUpdateStatus
+  name: PauseSession_ShouldUpdateStatus
+  nameWithType: FileUploadSessionTests.PauseSession_ShouldUpdateStatus
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus
+- uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus*
+  commentId: Overload:AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus
+  href: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html#AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CompleteSession_ShouldUpdateStatus
+  name: CompleteSession_ShouldUpdateStatus
+  nameWithType: FileUploadSessionTests.CompleteSession_ShouldUpdateStatus
+  fullName: AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus

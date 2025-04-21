@@ -20,7 +20,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: DateTmeExtensions
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Extensions/DateTmeExtensions.cs
-    startLine: 11
+    startLine: 5
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Extensions
@@ -58,7 +58,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ToDateOnly
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Extensions/DateTmeExtensions.cs
-    startLine: 18
+    startLine: 12
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain.Extensions

@@ -467,6 +467,7 @@ references:
     href: AdvanceFileUpload.Domain.html
 - uid: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
   commentId: T:AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+  parent: AdvanceFileUpload.Domain.Events
   href: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent.html
   name: ChunkUploadedEvent
   nameWithType: ChunkUploadedEvent

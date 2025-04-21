@@ -23,7 +23,7 @@ namespace AdvanceFileUpload.Application.Hubs
             else
             {
                 _logger.LogInformation("Sending upload process notification to connection id {ConnectionId}.", connectionId);
-                await _hubContext.Clients.Client(connectionId).SendAsync(UploadProcessHub.MethodName ,uploadSessionStatusNotification, cancellationToken);
+                await _hubContext.Clients.Client(connectionId).SendAsync(UploadProcessHub.MethodName, uploadSessionStatusNotification, cancellationToken);
             }
         }
     }

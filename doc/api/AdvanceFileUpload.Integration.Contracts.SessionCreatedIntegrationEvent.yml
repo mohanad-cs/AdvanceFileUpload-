@@ -1,0 +1,577 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  id: SessionCreatedIntegrationEvent
+  parent: AdvanceFileUpload.Integration.Contracts
+  children:
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString
+  langs:
+  - csharp
+  - vb
+  name: SessionCreatedIntegrationEvent
+  nameWithType: SessionCreatedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionCreatedIntegrationEvent
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Event triggered when a session is created.
+  example: []
+  syntax:
+    content: public class SessionCreatedIntegrationEvent
+    content.vb: Public Class SessionCreatedIntegrationEvent
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId
+  commentId: P:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId
+  id: SessionId
+  parent: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: SessionCreatedIntegrationEvent.SessionId
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionId
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 10
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Gets or sets the session identifier.
+  example: []
+  syntax:
+    content: public Guid SessionId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property SessionId As Guid
+  overload: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId*
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName
+  commentId: P:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName
+  id: FileName
+  parent: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: FileName
+  nameWithType: SessionCreatedIntegrationEvent.FileName
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileName
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 15
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Gets or sets the file name.
+  example: []
+  syntax:
+    content: public string FileName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileName As String
+  overload: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName*
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension
+  commentId: P:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension
+  id: FileExtension
+  parent: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: FileExtension
+  nameWithType: SessionCreatedIntegrationEvent.FileExtension
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileExtension
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 20
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Gets or sets the file extension.
+  example: []
+  syntax:
+    content: public string FileExtension { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileExtension As String
+  overload: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension*
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize
+  commentId: P:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize
+  id: FileSize
+  parent: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: FileSize
+  nameWithType: SessionCreatedIntegrationEvent.FileSize
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 25
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Gets or sets the file size.
+  example: []
+  syntax:
+    content: public long FileSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property FileSize As Long
+  overload: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize*
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime
+  commentId: P:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime
+  id: SessionStartDateTime
+  parent: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: SessionStartDateTime
+  nameWithType: SessionCreatedIntegrationEvent.SessionStartDateTime
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionStartDateTime
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 30
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Gets or sets the session start date and time.
+  example: []
+  syntax:
+    content: public DateTime SessionStartDateTime { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property SessionStartDateTime As Date
+  overload: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime*
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString
+  commentId: M:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString
+  id: ToString
+  parent: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: SessionCreatedIntegrationEvent.ToString()
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ToString
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/SessionCreatedIntegrationEvent.cs
+    startLine: 36
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+  namespace: AdvanceFileUpload.Integration.Contracts
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString*
+references:
+- uid: AdvanceFileUpload.Integration.Contracts
+  commentId: N:AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration.Contracts
+  nameWithType: AdvanceFileUpload.Integration.Contracts
+  fullName: AdvanceFileUpload.Integration.Contracts
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html#AdvanceFileUpload_Integration_Contracts_SessionCreatedIntegrationEvent_SessionId
+  name: SessionId
+  nameWithType: SessionCreatedIntegrationEvent.SessionId
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html#AdvanceFileUpload_Integration_Contracts_SessionCreatedIntegrationEvent_FileName
+  name: FileName
+  nameWithType: SessionCreatedIntegrationEvent.FileName
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html#AdvanceFileUpload_Integration_Contracts_SessionCreatedIntegrationEvent_FileExtension
+  name: FileExtension
+  nameWithType: SessionCreatedIntegrationEvent.FileExtension
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileExtension
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html#AdvanceFileUpload_Integration_Contracts_SessionCreatedIntegrationEvent_FileSize
+  name: FileSize
+  nameWithType: SessionCreatedIntegrationEvent.FileSize
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.FileSize
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html#AdvanceFileUpload_Integration_Contracts_SessionCreatedIntegrationEvent_SessionStartDateTime
+  name: SessionStartDateTime
+  nameWithType: SessionCreatedIntegrationEvent.SessionStartDateTime
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.SessionStartDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString*
+  commentId: Overload:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html#AdvanceFileUpload_Integration_Contracts_SessionCreatedIntegrationEvent_ToString
+  name: ToString
+  nameWithType: SessionCreatedIntegrationEvent.ToString
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.ToString

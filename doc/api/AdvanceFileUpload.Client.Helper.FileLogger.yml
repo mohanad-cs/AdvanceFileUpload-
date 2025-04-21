@@ -1,0 +1,1033 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.Helper.FileLogger
+  commentId: T:AdvanceFileUpload.Client.Helper.FileLogger
+  id: FileLogger
+  parent: AdvanceFileUpload.Client.Helper
+  children:
+  - AdvanceFileUpload.Client.Helper.FileLogger.#ctor(System.String)
+  - AdvanceFileUpload.Client.Helper.FileLogger.BeginScope``1(``0)
+  - AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  - AdvanceFileUpload.Client.Helper.FileLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  langs:
+  - csharp
+  - vb
+  name: FileLogger
+  nameWithType: FileLogger
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileLogger
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+    startLine: 4
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  syntax:
+    content: 'public class FileLogger : ILogger'
+    content.vb: Public Class FileLogger Implements ILogger
+  inheritance:
+  - System.Object
+  implements:
+  - Microsoft.Extensions.Logging.ILogger
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.#ctor(System.String)
+  commentId: M:AdvanceFileUpload.Client.Helper.FileLogger.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: AdvanceFileUpload.Client.Helper.FileLogger
+  langs:
+  - csharp
+  - vb
+  name: FileLogger(string)
+  nameWithType: FileLogger.FileLogger(string)
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.FileLogger(string)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+    startLine: 8
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  syntax:
+    content: public FileLogger(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Sub New(path As String)
+  overload: AdvanceFileUpload.Client.Helper.FileLogger.#ctor*
+  nameWithType.vb: FileLogger.New(String)
+  fullName.vb: AdvanceFileUpload.Client.Helper.FileLogger.New(String)
+  name.vb: New(String)
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.BeginScope``1(``0)
+  commentId: M:AdvanceFileUpload.Client.Helper.FileLogger.BeginScope``1(``0)
+  id: BeginScope``1(``0)
+  parent: AdvanceFileUpload.Client.Helper.FileLogger
+  langs:
+  - csharp
+  - vb
+  name: BeginScope<TState>(TState)
+  nameWithType: FileLogger.BeginScope<TState>(TState)
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.BeginScope<TState>(TState)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: BeginScope
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Begins a logical operation scope.
+  example: []
+  syntax:
+    content: public IDisposable BeginScope<TState>(TState state)
+    parameters:
+    - id: state
+      type: '{TState}'
+      description: The identifier for the scope.
+    typeParameters:
+    - id: TState
+      description: The type of the state to begin scope for.
+    return:
+      type: System.IDisposable
+      description: An <xref href="System.IDisposable" data-throw-if-not-resolved="false"></xref> that ends the logical operation scope on dispose.
+    content.vb: Public Function BeginScope(Of TState)(state As TState) As IDisposable
+  overload: AdvanceFileUpload.Client.Helper.FileLogger.BeginScope*
+  implements:
+  - Microsoft.Extensions.Logging.ILogger.BeginScope``1({TState})
+  nameWithType.vb: FileLogger.BeginScope(Of TState)(TState)
+  fullName.vb: AdvanceFileUpload.Client.Helper.FileLogger.BeginScope(Of TState)(TState)
+  name.vb: BeginScope(Of TState)(TState)
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  commentId: M:AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  id: IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  parent: AdvanceFileUpload.Client.Helper.FileLogger
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled(LogLevel)
+  nameWithType: FileLogger.IsEnabled(LogLevel)
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsEnabled
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Checks if the given <code class="paramref">logLevel</code> is enabled.
+  example: []
+  syntax:
+    content: public bool IsEnabled(LogLevel logLevel)
+    parameters:
+    - id: logLevel
+      type: Microsoft.Extensions.Logging.LogLevel
+      description: Level to be checked.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if enabled.
+    content.vb: Public Function IsEnabled(logLevel As LogLevel) As Boolean
+  overload: AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled*
+  implements:
+  - Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  commentId: M:AdvanceFileUpload.Client.Helper.FileLogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  id: Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  parent: AdvanceFileUpload.Client.Helper.FileLogger
+  langs:
+  - csharp
+  - vb
+  name: Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, string>)
+  nameWithType: FileLogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, string>)
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.Log<TState>(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func<TState, System.Exception, string>)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Log
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/FileLogger.cs
+    startLine: 23
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Writes a log entry.
+  example: []
+  syntax:
+    content: public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
+    parameters:
+    - id: logLevel
+      type: Microsoft.Extensions.Logging.LogLevel
+      description: Entry will be written on this level.
+    - id: eventId
+      type: Microsoft.Extensions.Logging.EventId
+      description: Id of the event.
+    - id: state
+      type: '{TState}'
+      description: The entry to be written. Can be also an object.
+    - id: exception
+      type: System.Exception
+      description: The exception related to this entry.
+    - id: formatter
+      type: System.Func{{TState},System.Exception,System.String}
+      description: Function to create a <xref href="System.String" data-throw-if-not-resolved="false"></xref> message of the <code class="paramref">state</code> and <code class="paramref">exception</code>.
+    typeParameters:
+    - id: TState
+      description: The type of the object to be written.
+    content.vb: Public Sub Log(Of TState)(logLevel As LogLevel, eventId As EventId, state As TState, exception As Exception, formatter As Func(Of TState, Exception, String))
+  overload: AdvanceFileUpload.Client.Helper.FileLogger.Log*
+  implements:
+  - Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,{TState},System.Exception,System.Func{{TState},System.Exception,System.String})
+  nameWithType.vb: FileLogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+  fullName.vb: AdvanceFileUpload.Client.Helper.FileLogger.Log(Of TState)(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func(Of TState, System.Exception, String))
+  name.vb: Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+references:
+- uid: AdvanceFileUpload.Client.Helper
+  commentId: N:AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client.Helper
+  nameWithType: AdvanceFileUpload.Client.Helper
+  fullName: AdvanceFileUpload.Client.Helper
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.Extensions.Logging.ILogger
+  commentId: T:Microsoft.Extensions.Logging.ILogger
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Microsoft.Extensions.Logging.ILogger
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.#ctor*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.FileLogger.#ctor
+  href: AdvanceFileUpload.Client.Helper.FileLogger.html#AdvanceFileUpload_Client_Helper_FileLogger__ctor_System_String_
+  name: FileLogger
+  nameWithType: FileLogger.FileLogger
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.FileLogger
+  nameWithType.vb: FileLogger.New
+  fullName.vb: AdvanceFileUpload.Client.Helper.FileLogger.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.BeginScope*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.FileLogger.BeginScope
+  href: AdvanceFileUpload.Client.Helper.FileLogger.html#AdvanceFileUpload_Client_Helper_FileLogger_BeginScope__1___0_
+  name: BeginScope
+  nameWithType: FileLogger.BeginScope
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.BeginScope
+- uid: Microsoft.Extensions.Logging.ILogger.BeginScope``1({TState})
+  commentId: M:Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+  parent: Microsoft.Extensions.Logging.ILogger
+  definition: Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.beginscope
+  name: BeginScope<TState>(TState)
+  nameWithType: ILogger.BeginScope<TState>(TState)
+  fullName: Microsoft.Extensions.Logging.ILogger.BeginScope<TState>(TState)
+  nameWithType.vb: ILogger.BeginScope(Of TState)(TState)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger.BeginScope(Of TState)(TState)
+  name.vb: BeginScope(Of TState)(TState)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+    name: BeginScope
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.beginscope
+  - name: <
+  - name: TState
+  - name: '>'
+  - name: (
+  - name: TState
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+    name: BeginScope
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.beginscope
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: )
+  - name: (
+  - name: TState
+  - name: )
+- uid: '{TState}'
+  commentId: '!:TState'
+  definition: TState
+  name: TState
+  nameWithType: TState
+  fullName: TState
+- uid: Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+  commentId: M:Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.beginscope
+  name: BeginScope<TState>(TState)
+  nameWithType: ILogger.BeginScope<TState>(TState)
+  fullName: Microsoft.Extensions.Logging.ILogger.BeginScope<TState>(TState)
+  nameWithType.vb: ILogger.BeginScope(Of TState)(TState)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger.BeginScope(Of TState)(TState)
+  name.vb: BeginScope(Of TState)(TState)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+    name: BeginScope
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.beginscope
+  - name: <
+  - name: TState
+  - name: '>'
+  - name: (
+  - name: TState
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger.BeginScope``1(``0)
+    name: BeginScope
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.beginscope
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: )
+  - name: (
+  - name: TState
+  - name: )
+- uid: TState
+  name: TState
+  nameWithType: TState
+  fullName: TState
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled
+  href: AdvanceFileUpload.Client.Helper.FileLogger.html#AdvanceFileUpload_Client_Helper_FileLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_
+  name: IsEnabled
+  nameWithType: FileLogger.IsEnabled
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.IsEnabled
+- uid: Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  commentId: M:Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  parent: Microsoft.Extensions.Logging.ILogger
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.isenabled
+  name: IsEnabled(LogLevel)
+  nameWithType: ILogger.IsEnabled(LogLevel)
+  fullName: Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+    name: IsEnabled
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.isenabled
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger.IsEnabled(Microsoft.Extensions.Logging.LogLevel)
+    name: IsEnabled
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.isenabled
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: )
+- uid: Microsoft.Extensions.Logging.LogLevel
+  commentId: T:Microsoft.Extensions.Logging.LogLevel
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: Microsoft.Extensions.Logging.LogLevel
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Client.Helper.FileLogger.Log*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.FileLogger.Log
+  href: AdvanceFileUpload.Client.Helper.FileLogger.html#AdvanceFileUpload_Client_Helper_FileLogger_Log__1_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId___0_System_Exception_System_Func___0_System_Exception_System_String__
+  name: Log
+  nameWithType: FileLogger.Log
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger.Log
+- uid: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,{TState},System.Exception,System.Func{{TState},System.Exception,System.String})
+  commentId: M:Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  parent: Microsoft.Extensions.Logging.ILogger
+  definition: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.log
+  name: Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, string>)
+  nameWithType: ILogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, string>)
+  fullName: Microsoft.Extensions.Logging.ILogger.Log<TState>(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func<TState, System.Exception, string>)
+  nameWithType.vb: ILogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+  fullName.vb: Microsoft.Extensions.Logging.ILogger.Log(Of TState)(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func(Of TState, System.Exception, String))
+  name.vb: Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.log
+  - name: <
+  - name: TState
+  - name: '>'
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.EventId
+    name: EventId
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.eventid
+  - name: ','
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.log
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: )
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.EventId
+    name: EventId
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.eventid
+  - name: ','
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: Microsoft.Extensions.Logging.EventId
+  commentId: T:Microsoft.Extensions.Logging.EventId
+  parent: Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.eventid
+  name: EventId
+  nameWithType: EventId
+  fullName: Microsoft.Extensions.Logging.EventId
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Func{{TState},System.Exception,System.String}
+  commentId: T:System.Func{``0,System.Exception,System.String}
+  parent: System
+  definition: System.Func`3
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<TState, Exception, string>
+  nameWithType: Func<TState, Exception, string>
+  fullName: System.Func<TState, System.Exception, string>
+  nameWithType.vb: Func(Of TState, Exception, String)
+  fullName.vb: System.Func(Of TState, System.Exception, String)
+  name.vb: Func(Of TState, Exception, String)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  commentId: M:Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.log
+  name: Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, string>)
+  nameWithType: ILogger.Log<TState>(LogLevel, EventId, TState, Exception, Func<TState, Exception, string>)
+  fullName: Microsoft.Extensions.Logging.ILogger.Log<TState>(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func<TState, System.Exception, string>)
+  nameWithType.vb: ILogger.Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+  fullName.vb: Microsoft.Extensions.Logging.ILogger.Log(Of TState)(Microsoft.Extensions.Logging.LogLevel, Microsoft.Extensions.Logging.EventId, TState, System.Exception, System.Func(Of TState, System.Exception, String))
+  name.vb: Log(Of TState)(LogLevel, EventId, TState, Exception, Func(Of TState, Exception, String))
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.log
+  - name: <
+  - name: TState
+  - name: '>'
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.EventId
+    name: EventId
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.eventid
+  - name: ','
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger.Log``1(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,``0,System.Exception,System.Func{``0,System.Exception,System.String})
+    name: Log
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger.log
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: )
+  - name: (
+  - uid: Microsoft.Extensions.Logging.LogLevel
+    name: LogLevel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.loglevel
+  - name: ','
+  - name: " "
+  - uid: Microsoft.Extensions.Logging.EventId
+    name: EventId
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.eventid
+  - name: ','
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TState
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-3
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-3
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )

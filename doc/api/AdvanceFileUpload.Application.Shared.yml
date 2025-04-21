@@ -4,17 +4,7 @@ items:
   commentId: N:AdvanceFileUpload.Application.Shared
   id: AdvanceFileUpload.Application.Shared
   children:
-  - AdvanceFileUpload.Application.Shared.ChunkValidator
-  - AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
-  - AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
-  - AdvanceFileUpload.Application.Shared.FileOperationService
-  - AdvanceFileUpload.Application.Shared.FileValidator
-  - AdvanceFileUpload.Application.Shared.IChunkValidator
-  - AdvanceFileUpload.Application.Shared.IFileOperationService
-  - AdvanceFileUpload.Application.Shared.IFileValidator
-  - AdvanceFileUpload.Application.Shared.UploadChunkRequest
-  - AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
-  - AdvanceFileUpload.Application.Shared.UploadStatus
+  - AdvanceFileUpload.Application.Shared.RouteTemplates
   langs:
   - csharp
   - vb
@@ -25,105 +15,9 @@ items:
   assemblies:
   - AdvanceFileUpload.Application.Shared
 references:
-- uid: AdvanceFileUpload.Application.Shared.ChunkValidator
-  commentId: T:AdvanceFileUpload.Application.Shared.ChunkValidator
-  href: AdvanceFileUpload.Application.Shared.ChunkValidator.html
-  name: ChunkValidator
-  nameWithType: ChunkValidator
-  fullName: AdvanceFileUpload.Application.Shared.ChunkValidator
-- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
-  commentId: T:AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html
-  name: CreateUploadSessionRequest
-  nameWithType: CreateUploadSessionRequest
-  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest
-- uid: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
-  commentId: T:AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
-  href: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html
-  name: CreateUploadSessionResponse
-  nameWithType: CreateUploadSessionResponse
-  fullName: AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse
-- uid: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
-  commentId: T:AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
-  href: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html
-  name: UploadSessionStatusResponse
-  nameWithType: UploadSessionStatusResponse
-  fullName: AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse
-- uid: AdvanceFileUpload.Application.Shared.UploadChunkRequest
-  commentId: T:AdvanceFileUpload.Application.Shared.UploadChunkRequest
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.UploadChunkRequest.html
-  name: UploadChunkRequest
-  nameWithType: UploadChunkRequest
-  fullName: AdvanceFileUpload.Application.Shared.UploadChunkRequest
-- uid: AdvanceFileUpload.Application.Shared.UploadStatus
-  commentId: T:AdvanceFileUpload.Application.Shared.UploadStatus
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.UploadStatus.html
-  name: UploadStatus
-  nameWithType: UploadStatus
-  fullName: AdvanceFileUpload.Application.Shared.UploadStatus
-- uid: AdvanceFileUpload.Application.Shared.FileOperationService
-  commentId: T:AdvanceFileUpload.Application.Shared.FileOperationService
-  href: AdvanceFileUpload.Application.Shared.FileOperationService.html
-  name: FileOperationService
-  nameWithType: FileOperationService
-  fullName: AdvanceFileUpload.Application.Shared.FileOperationService
-- uid: AdvanceFileUpload.Application.Shared.FileValidator
-  commentId: T:AdvanceFileUpload.Application.Shared.FileValidator
-  href: AdvanceFileUpload.Application.Shared.FileValidator.html
-  name: FileValidator
-  nameWithType: FileValidator
-  fullName: AdvanceFileUpload.Application.Shared.FileValidator
-- uid: AdvanceFileUpload.Application.Shared.IChunkValidator
-  commentId: T:AdvanceFileUpload.Application.Shared.IChunkValidator
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.IChunkValidator.html
-  name: IChunkValidator
-  nameWithType: IChunkValidator
-  fullName: AdvanceFileUpload.Application.Shared.IChunkValidator
-- uid: AdvanceFileUpload.Application.Shared.IFileOperationService
-  commentId: T:AdvanceFileUpload.Application.Shared.IFileOperationService
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.IFileOperationService.html
-  name: IFileOperationService
-  nameWithType: IFileOperationService
-  fullName: AdvanceFileUpload.Application.Shared.IFileOperationService
-- uid: AdvanceFileUpload.Application.Shared.IFileValidator
-  commentId: T:AdvanceFileUpload.Application.Shared.IFileValidator
-  parent: AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.Application.Shared.IFileValidator.html
-  name: IFileValidator
-  nameWithType: IFileValidator
-  fullName: AdvanceFileUpload.Application.Shared.IFileValidator
-- uid: AdvanceFileUpload.Application.Shared
-  commentId: N:AdvanceFileUpload.Application.Shared
-  href: AdvanceFileUpload.html
-  name: AdvanceFileUpload.Application.Shared
-  nameWithType: AdvanceFileUpload.Application.Shared
-  fullName: AdvanceFileUpload.Application.Shared
-  spec.csharp:
-  - uid: AdvanceFileUpload
-    name: AdvanceFileUpload
-    href: AdvanceFileUpload.html
-  - name: .
-  - uid: AdvanceFileUpload.Application
-    name: Application
-    href: AdvanceFileUpload.Application.html
-  - name: .
-  - uid: AdvanceFileUpload.Application.Shared
-    name: Shared
-    href: AdvanceFileUpload.Application.Shared.html
-  spec.vb:
-  - uid: AdvanceFileUpload
-    name: AdvanceFileUpload
-    href: AdvanceFileUpload.html
-  - name: .
-  - uid: AdvanceFileUpload.Application
-    name: Application
-    href: AdvanceFileUpload.Application.html
-  - name: .
-  - uid: AdvanceFileUpload.Application.Shared
-    name: Shared
-    href: AdvanceFileUpload.Application.Shared.html
+- uid: AdvanceFileUpload.Application.Shared.RouteTemplates
+  commentId: T:AdvanceFileUpload.Application.Shared.RouteTemplates
+  href: AdvanceFileUpload.Application.Shared.RouteTemplates.html
+  name: RouteTemplates
+  nameWithType: RouteTemplates
+  fullName: AdvanceFileUpload.Application.Shared.RouteTemplates

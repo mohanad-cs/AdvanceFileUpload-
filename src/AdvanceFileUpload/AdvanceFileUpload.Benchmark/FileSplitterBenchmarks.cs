@@ -1,25 +1,20 @@
 ﻿using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Running;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-using System;
-using System.IO;
-using System.Threading.Tasks;
-using static AdvanceFileUpload.Benchmark.FileSplitter4;
 namespace AdvanceFileUpload.Benchmark;
 [MemoryDiagnoser]
 public class FileSplitterBenchmarks
 {
     private string _testFilePath;
     private string _outputDirectory;
-    private List<string> _chunkPaths;   
+    private List<string> _chunkPaths;
     private readonly ILogger _logger = NullLogger.Instance;
 
     // Parameters: File size (100MB) and chunk size (10MB)
-    [Params(1024*1024*300)]
+    [Params(1024 * 1024 * 300)]
     public long FileSize;
 
-    [Params(1024*1024*5)]
+    [Params(1024 * 1024 * 5)]
     public long ChunkSize;
 
     [GlobalSetup]
@@ -82,7 +77,7 @@ public class FileSplitterBenchmarks
     //[Benchmark]
     //public async Task StaticSplitterMethod2()
     //{
-       
+
     //    await FileSplitter2.SplitFileAsync(_testFilePath, ChunkSize,_outputDirectory);
     //}
     //[Benchmark]
@@ -107,7 +102,7 @@ public class FileSplitterBenchmarks
     public async Task FileMergin1()
     {
         var splitter = new FileSplitter();
-        await splitter.ConcatenateAsync(_chunkPaths,_outputDirectory);
+        await splitter.ConcatenateAsync(_chunkPaths, _outputDirectory);
     }
     [Benchmark]
     public async Task FileMergin2()

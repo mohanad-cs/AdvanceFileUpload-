@@ -10,6 +10,7 @@ items:
   - AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
   - AdvanceFileUpload.Domain.FileUploadSessionStatus.InProgress
   - AdvanceFileUpload.Domain.FileUploadSessionStatus.Paused
+  - AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete
   langs:
   - csharp
   - vb
@@ -58,7 +59,7 @@ items:
   summary: The file upload session is in progress.
   example: []
   syntax:
-    content: InProgress = 0
+    content: InProgress = 1
     return:
       type: AdvanceFileUpload.Domain.FileUploadSessionStatus
 - uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Paused
@@ -79,14 +80,42 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Paused
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSessionStatus.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
   summary: The file upload session is paused.
   example: []
   syntax:
-    content: Paused = 1
+    content: Paused = 2
+    return:
+      type: AdvanceFileUpload.Domain.FileUploadSessionStatus
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete
+  commentId: F:AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete
+  id: PendingToComplete
+  parent: AdvanceFileUpload.Domain.FileUploadSessionStatus
+  langs:
+  - csharp
+  - vb
+  name: PendingToComplete
+  nameWithType: FileUploadSessionStatus.PendingToComplete
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSessionStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PendingToComplete
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSessionStatus.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: The file upload session is Watling to be Completed.
+  example: []
+  syntax:
+    content: PendingToComplete = 3
     return:
       type: AdvanceFileUpload.Domain.FileUploadSessionStatus
 - uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Completed
@@ -107,14 +136,14 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Completed
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSessionStatus.cs
-    startLine: 20
+    startLine: 22
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
   summary: The file upload session is completed.
   example: []
   syntax:
-    content: Completed = 2
+    content: Completed = 4
     return:
       type: AdvanceFileUpload.Domain.FileUploadSessionStatus
 - uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Canceled
@@ -135,14 +164,14 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Canceled
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSessionStatus.cs
-    startLine: 25
+    startLine: 26
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
   summary: The file upload session is canceled.
   example: []
   syntax:
-    content: Canceled = 3
+    content: Canceled = 5
     return:
       type: AdvanceFileUpload.Domain.FileUploadSessionStatus
 - uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
@@ -170,7 +199,7 @@ items:
   summary: The file upload session has failed.
   example: []
   syntax:
-    content: Failed = 4
+    content: Failed = 6
     return:
       type: AdvanceFileUpload.Domain.FileUploadSessionStatus
 references:

@@ -1,0 +1,699 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion
+  commentId: T:AdvanceFileUpload.Data.Migrations.AddRowVersion
+  id: AddRowVersion
+  parent: AdvanceFileUpload.Data.Migrations
+  children:
+  - AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - AdvanceFileUpload.Data.Migrations.AddRowVersion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  - AdvanceFileUpload.Data.Migrations.AddRowVersion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  langs:
+  - csharp
+  - vb
+  name: AddRowVersion
+  nameWithType: AddRowVersion
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.Designer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AddRowVersion
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.Designer.cs
+    startLine: 13
+  assemblies:
+  - AdvanceFileUpload.Data
+  namespace: AdvanceFileUpload.Data.Migrations
+  summary: A base class inherited by each EF Core migration.
+  remarks: See <a href="https://aka.ms/efcore-docs-migrations">Database migrations</a> for more information and examples.
+  example: []
+  syntax:
+    content: >-
+      [DbContext(typeof(ApploicationDbContext))]
+
+      [Migration("20250320024432_AddRowVersion")]
+
+      public class AddRowVersion : Migration
+    content.vb: >-
+      <DbContext(GetType(ApploicationDbContext))>
+
+      <Migration("20250320024432_AddRowVersion")>
+
+      Public Class AddRowVersion Inherits Migration
+  inheritance:
+  - System.Object
+  - Microsoft.EntityFrameworkCore.Migrations.Migration
+  inheritedMembers:
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.EntityFrameworkCore.Infrastructure.DbContextAttribute
+    ctor: Microsoft.EntityFrameworkCore.Infrastructure.DbContextAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: AdvanceFileUpload.Data.ApploicationDbContext
+  - type: Microsoft.EntityFrameworkCore.Migrations.MigrationAttribute
+    ctor: Microsoft.EntityFrameworkCore.Migrations.MigrationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 20250320024432_AddRowVersion
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:AdvanceFileUpload.Data.Migrations.AddRowVersion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: AdvanceFileUpload.Data.Migrations.AddRowVersion
+  langs:
+  - csharp
+  - vb
+  name: Up(MigrationBuilder)
+  nameWithType: AddRowVersion.Up(MigrationBuilder)
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Up
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.cs
+    startLine: 10
+  assemblies:
+  - AdvanceFileUpload.Data
+  namespace: AdvanceFileUpload.Data.Migrations
+  summary: Builds the operations that will migrate the database 'up'.
+  remarks: >-
+    <p>
+                    That is, builds the operations that will take the database from the state left in by the
+                    previous migration so that it is up-to-date with regard to this migration.
+                </p>
+    <p>
+                    This method must be overridden in each class that inherits from <xref href="Microsoft.EntityFrameworkCore.Migrations.Migration" data-throw-if-not-resolved="false"></xref>.
+                </p>
+    <p>
+                    See <a href="https://aka.ms/efcore-docs-migrations">Database migrations</a> for more information and examples.
+                </p>
+  example: []
+  syntax:
+    content: protected override void Up(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+      description: The <xref href="Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" data-throw-if-not-resolved="false"></xref> that will build the operations.
+    content.vb: Protected Overrides Sub Up(migrationBuilder As MigrationBuilder)
+  overridden: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  overload: AdvanceFileUpload.Data.Migrations.AddRowVersion.Up*
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:AdvanceFileUpload.Data.Migrations.AddRowVersion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: AdvanceFileUpload.Data.Migrations.AddRowVersion
+  langs:
+  - csharp
+  - vb
+  name: Down(MigrationBuilder)
+  nameWithType: AddRowVersion.Down(MigrationBuilder)
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Down
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.cs
+    startLine: 26
+  assemblies:
+  - AdvanceFileUpload.Data
+  namespace: AdvanceFileUpload.Data.Migrations
+  summary: Builds the operations that will migrate the database 'down'.
+  remarks: >-
+    <p>
+                    That is, builds the operations that will take the database from the state left in by
+                    this migration so that it returns to the state that it was in before this migration was applied.
+                </p>
+    <p>
+                    This method must be overridden in each class that inherits from <xref href="Microsoft.EntityFrameworkCore.Migrations.Migration" data-throw-if-not-resolved="false"></xref> if
+                    both 'up' and 'down' migrations are to be supported. If it is not overridden, then calling it
+                    will throw and it will not be possible to migrate in the 'down' direction.
+                </p>
+    <p>
+                    See <a href="https://aka.ms/efcore-docs-migrations">Database migrations</a> for more information and examples.
+                </p>
+  example: []
+  syntax:
+    content: protected override void Down(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+      description: The <xref href="Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder" data-throw-if-not-resolved="false"></xref> that will build the operations.
+    content.vb: Protected Overrides Sub Down(migrationBuilder As MigrationBuilder)
+  overridden: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  overload: AdvanceFileUpload.Data.Migrations.AddRowVersion.Down*
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: AdvanceFileUpload.Data.Migrations.AddRowVersion
+  langs:
+  - csharp
+  - vb
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: AddRowVersion.BuildTargetModel(ModelBuilder)
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.Designer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: BuildTargetModel
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Data/Migrations/20250320024432_AddRowVersion.Designer.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Data
+  namespace: AdvanceFileUpload.Data.Migrations
+  summary: Implemented to build the <xref href="Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel" data-throw-if-not-resolved="false"></xref>.
+  remarks: See <a href="https://aka.ms/efcore-docs-migrations">Database migrations</a> for more information and examples.
+  example: []
+  syntax:
+    content: protected override void BuildTargetModel(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+      description: The <xref href="Microsoft.EntityFrameworkCore.ModelBuilder" data-throw-if-not-resolved="false"></xref> to use to build the model.
+    content.vb: Protected Overrides Sub BuildTargetModel(modelBuilder As ModelBuilder)
+  overridden: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  overload: AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel*
+references:
+- uid: AdvanceFileUpload.Data.Migrations
+  commentId: N:AdvanceFileUpload.Data.Migrations
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Data.Migrations
+  nameWithType: AdvanceFileUpload.Data.Migrations
+  fullName: AdvanceFileUpload.Data.Migrations
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Data
+    name: Data
+    href: AdvanceFileUpload.Data.html
+  - name: .
+  - uid: AdvanceFileUpload.Data.Migrations
+    name: Migrations
+    href: AdvanceFileUpload.Data.Migrations.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Data
+    name: Data
+    href: AdvanceFileUpload.Data.html
+  - name: .
+  - uid: AdvanceFileUpload.Data.Migrations
+    name: Migrations
+    href: AdvanceFileUpload.Data.Migrations.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration
+  commentId: T:Microsoft.EntityFrameworkCore.Migrations.Migration
+  parent: Microsoft.EntityFrameworkCore.Migrations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration
+  name: Migration
+  nameWithType: Migration
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+  commentId: F:Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.initialdatabase
+  name: InitialDatabase
+  nameWithType: Migration.InitialDatabase
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.targetmodel
+  name: TargetModel
+  nameWithType: Migration.TargetModel
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.upoperations
+  name: UpOperations
+  nameWithType: Migration.UpOperations
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.downoperations
+  name: DownOperations
+  nameWithType: Migration.DownOperations
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.activeprovider
+  name: ActiveProvider
+  nameWithType: Migration.ActiveProvider
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.EntityFrameworkCore.Migrations
+  commentId: N:Microsoft.EntityFrameworkCore.Migrations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore.Migrations
+  nameWithType: Microsoft.EntityFrameworkCore.Migrations
+  fullName: Microsoft.EntityFrameworkCore.Migrations
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Migrations
+    name: Migrations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Migrations
+    name: Migrations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations
+- uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  commentId: T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  parent: Microsoft.EntityFrameworkCore.Migrations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  name: MigrationBuilder
+  nameWithType: MigrationBuilder
+  fullName: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.up
+  name: Up(MigrationBuilder)
+  nameWithType: Migration.Up(MigrationBuilder)
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Up
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.up
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Up
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.up
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion.Up*
+  commentId: Overload:AdvanceFileUpload.Data.Migrations.AddRowVersion.Up
+  href: AdvanceFileUpload.Data.Migrations.AddRowVersion.html#AdvanceFileUpload_Data_Migrations_AddRowVersion_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  name: Up
+  nameWithType: AddRowVersion.Up
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion.Up
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.down
+  name: Down(MigrationBuilder)
+  nameWithType: Migration.Down(MigrationBuilder)
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Down
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.down
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Down
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.down
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion.Down*
+  commentId: Overload:AdvanceFileUpload.Data.Migrations.AddRowVersion.Down
+  href: AdvanceFileUpload.Data.Migrations.AddRowVersion.html#AdvanceFileUpload_Data_Migrations_AddRowVersion_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  name: Down
+  nameWithType: AddRowVersion.Down
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion.Down
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  commentId: T:Microsoft.EntityFrameworkCore.ModelBuilder
+  parent: Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.buildtargetmodel
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: Migration.BuildTargetModel(ModelBuilder)
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: BuildTargetModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.buildtargetmodel
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: BuildTargetModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.buildtargetmodel
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  - name: )
+- uid: AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel*
+  commentId: Overload:AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel
+  href: AdvanceFileUpload.Data.Migrations.AddRowVersion.html#AdvanceFileUpload_Data_Migrations_AddRowVersion_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  name: BuildTargetModel
+  nameWithType: AddRowVersion.BuildTargetModel
+  fullName: AdvanceFileUpload.Data.Migrations.AddRowVersion.BuildTargetModel
+- uid: Microsoft.EntityFrameworkCore
+  commentId: N:Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore
+  nameWithType: Microsoft.EntityFrameworkCore
+  fullName: Microsoft.EntityFrameworkCore
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore

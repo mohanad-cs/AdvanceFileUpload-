@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.CompressionLevel
+  commentId: T:AdvanceFileUpload.Domain.CompressionLevel
+  id: CompressionLevel
+  parent: AdvanceFileUpload.Domain
+  children:
+  - AdvanceFileUpload.Domain.CompressionLevel.Fastest
+  - AdvanceFileUpload.Domain.CompressionLevel.NoCompression
+  - AdvanceFileUpload.Domain.CompressionLevel.Optimal
+  - AdvanceFileUpload.Domain.CompressionLevel.SmallestSize
+  langs:
+  - csharp
+  - vb
+  name: CompressionLevel
+  nameWithType: CompressionLevel
+  fullName: AdvanceFileUpload.Domain.CompressionLevel
+  type: Enum
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionLevel
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: >-
+    Specifies values that indicate whether a compression operation emphasizes speed
+      or compression size.
+  example: []
+  syntax:
+    content: public enum CompressionLevel
+    content.vb: Public Enum CompressionLevel
+- uid: AdvanceFileUpload.Domain.CompressionLevel.Optimal
+  commentId: F:AdvanceFileUpload.Domain.CompressionLevel.Optimal
+  id: Optimal
+  parent: AdvanceFileUpload.Domain.CompressionLevel
+  langs:
+  - csharp
+  - vb
+  name: Optimal
+  nameWithType: CompressionLevel.Optimal
+  fullName: AdvanceFileUpload.Domain.CompressionLevel.Optimal
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Optimal
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: The compression operation should optimally balance compression speed and output size.
+  example: []
+  syntax:
+    content: Optimal = 0
+    return:
+      type: AdvanceFileUpload.Domain.CompressionLevel
+- uid: AdvanceFileUpload.Domain.CompressionLevel.Fastest
+  commentId: F:AdvanceFileUpload.Domain.CompressionLevel.Fastest
+  id: Fastest
+  parent: AdvanceFileUpload.Domain.CompressionLevel
+  langs:
+  - csharp
+  - vb
+  name: Fastest
+  nameWithType: CompressionLevel.Fastest
+  fullName: AdvanceFileUpload.Domain.CompressionLevel.Fastest
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Fastest
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: >-
+    The compression operation should complete as quickly as possible, even if the
+
+    resulting file is not optimally compressed.
+  example: []
+  syntax:
+    content: Fastest = 1
+    return:
+      type: AdvanceFileUpload.Domain.CompressionLevel
+- uid: AdvanceFileUpload.Domain.CompressionLevel.NoCompression
+  commentId: F:AdvanceFileUpload.Domain.CompressionLevel.NoCompression
+  id: NoCompression
+  parent: AdvanceFileUpload.Domain.CompressionLevel
+  langs:
+  - csharp
+  - vb
+  name: NoCompression
+  nameWithType: CompressionLevel.NoCompression
+  fullName: AdvanceFileUpload.Domain.CompressionLevel.NoCompression
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: NoCompression
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+    startLine: 21
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: No compression should be performed on the file.
+  example: []
+  syntax:
+    content: NoCompression = 2
+    return:
+      type: AdvanceFileUpload.Domain.CompressionLevel
+- uid: AdvanceFileUpload.Domain.CompressionLevel.SmallestSize
+  commentId: F:AdvanceFileUpload.Domain.CompressionLevel.SmallestSize
+  id: SmallestSize
+  parent: AdvanceFileUpload.Domain.CompressionLevel
+  langs:
+  - csharp
+  - vb
+  name: SmallestSize
+  nameWithType: CompressionLevel.SmallestSize
+  fullName: AdvanceFileUpload.Domain.CompressionLevel.SmallestSize
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SmallestSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionLevel.cs
+    startLine: 26
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: >-
+    The compression operation should create output as small as possible, even if
+
+    the operation takes a longer time to complete.
+  example: []
+  syntax:
+    content: SmallestSize = 3
+    return:
+      type: AdvanceFileUpload.Domain.CompressionLevel
+references:
+- uid: AdvanceFileUpload.Domain
+  commentId: N:AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain
+  nameWithType: AdvanceFileUpload.Domain
+  fullName: AdvanceFileUpload.Domain
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+- uid: AdvanceFileUpload.Domain.CompressionLevel
+  commentId: T:AdvanceFileUpload.Domain.CompressionLevel
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.CompressionLevel.html
+  name: CompressionLevel
+  nameWithType: CompressionLevel
+  fullName: AdvanceFileUpload.Domain.CompressionLevel

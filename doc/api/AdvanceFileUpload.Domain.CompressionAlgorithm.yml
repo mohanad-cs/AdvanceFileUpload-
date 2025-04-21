@@ -1,0 +1,156 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Domain.CompressionAlgorithm
+  commentId: T:AdvanceFileUpload.Domain.CompressionAlgorithm
+  id: CompressionAlgorithm
+  parent: AdvanceFileUpload.Domain
+  children:
+  - AdvanceFileUpload.Domain.CompressionAlgorithm.Brotli
+  - AdvanceFileUpload.Domain.CompressionAlgorithm.Deflate
+  - AdvanceFileUpload.Domain.CompressionAlgorithm.GZip
+  langs:
+  - csharp
+  - vb
+  name: CompressionAlgorithm
+  nameWithType: CompressionAlgorithm
+  fullName: AdvanceFileUpload.Domain.CompressionAlgorithm
+  type: Enum
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionAlgorithm
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Specifies the compression algorithms.
+  example: []
+  syntax:
+    content: public enum CompressionAlgorithm
+    content.vb: Public Enum CompressionAlgorithm
+- uid: AdvanceFileUpload.Domain.CompressionAlgorithm.GZip
+  commentId: F:AdvanceFileUpload.Domain.CompressionAlgorithm.GZip
+  id: GZip
+  parent: AdvanceFileUpload.Domain.CompressionAlgorithm
+  langs:
+  - csharp
+  - vb
+  name: GZip
+  nameWithType: CompressionAlgorithm.GZip
+  fullName: AdvanceFileUpload.Domain.CompressionAlgorithm.GZip
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: GZip
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: >-
+    GZip compression algorithm.
+
+    Benefits: Good compression ratio and speed, widely supported.
+  example: []
+  syntax:
+    content: GZip = 0
+    return:
+      type: AdvanceFileUpload.Domain.CompressionAlgorithm
+- uid: AdvanceFileUpload.Domain.CompressionAlgorithm.Deflate
+  commentId: F:AdvanceFileUpload.Domain.CompressionAlgorithm.Deflate
+  id: Deflate
+  parent: AdvanceFileUpload.Domain.CompressionAlgorithm
+  langs:
+  - csharp
+  - vb
+  name: Deflate
+  nameWithType: CompressionAlgorithm.Deflate
+  fullName: AdvanceFileUpload.Domain.CompressionAlgorithm.Deflate
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Deflate
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: >-
+    Deflate compression algorithm.
+
+    Benefits: Fast compression and decompression, good for real-time applications.
+  example: []
+  syntax:
+    content: Deflate = 1
+    return:
+      type: AdvanceFileUpload.Domain.CompressionAlgorithm
+- uid: AdvanceFileUpload.Domain.CompressionAlgorithm.Brotli
+  commentId: F:AdvanceFileUpload.Domain.CompressionAlgorithm.Brotli
+  id: Brotli
+  parent: AdvanceFileUpload.Domain.CompressionAlgorithm
+  langs:
+  - csharp
+  - vb
+  name: Brotli
+  nameWithType: CompressionAlgorithm.Brotli
+  fullName: AdvanceFileUpload.Domain.CompressionAlgorithm.Brotli
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Brotli
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/CompressionAlgorithm.cs
+    startLine: 24
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: >-
+    Brotli compression algorithm.
+
+    Benefits: High compression ratio, especially for web content, better than GZip in many cases.
+  example: []
+  syntax:
+    content: Brotli = 2
+    return:
+      type: AdvanceFileUpload.Domain.CompressionAlgorithm
+references:
+- uid: AdvanceFileUpload.Domain
+  commentId: N:AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain
+  nameWithType: AdvanceFileUpload.Domain
+  fullName: AdvanceFileUpload.Domain
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+- uid: AdvanceFileUpload.Domain.CompressionAlgorithm
+  commentId: T:AdvanceFileUpload.Domain.CompressionAlgorithm
+  parent: AdvanceFileUpload.Domain
+  href: AdvanceFileUpload.Domain.CompressionAlgorithm.html
+  name: CompressionAlgorithm
+  nameWithType: CompressionAlgorithm
+  fullName: AdvanceFileUpload.Domain.CompressionAlgorithm

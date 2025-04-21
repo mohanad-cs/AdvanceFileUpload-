@@ -1,0 +1,1134 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  commentId: T:AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  id: FileProcessor
+  parent: AdvanceFileUpload.Application.FileProcessing
+  children:
+  - AdvanceFileUpload.Application.FileProcessing.FileProcessor.#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor})
+  - AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: FileProcessor
+  nameWithType: FileProcessor
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileProcessor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+    startLine: 9
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.FileProcessing
+  summary: Provides methods for file operations such as concatenating file chunks, saving files, and splitting files into chunks.
+  example: []
+  syntax:
+    content: 'public class FileProcessor : IFileProcessor'
+    content.vb: Public Class FileProcessor Implements IFileProcessor
+  inheritance:
+  - System.Object
+  implements:
+  - AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor})
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.FileProcessor.#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor})
+  id: '#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor})'
+  parent: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  langs:
+  - csharp
+  - vb
+  name: FileProcessor(ILogger<FileProcessor>)
+  nameWithType: FileProcessor.FileProcessor(ILogger<FileProcessor>)
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.FileProcessor(Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.FileProcessing.FileProcessor>)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+    startLine: 16
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.FileProcessing
+  summary: ''
+  example: []
+  syntax:
+    content: public FileProcessor(ILogger<FileProcessor> logger)
+    parameters:
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor}
+      description: ''
+    content.vb: Public Sub New(logger As ILogger(Of FileProcessor))
+  overload: AdvanceFileUpload.Application.FileProcessing.FileProcessor.#ctor*
+  nameWithType.vb: FileProcessor.New(ILogger(Of FileProcessor))
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.FileProcessor.New(Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.FileProcessing.FileProcessor))
+  name.vb: New(ILogger(Of FileProcessor))
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  id: SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  langs:
+  - csharp
+  - vb
+  name: SaveFileAsync(string, byte[], string, CancellationToken)
+  nameWithType: FileProcessor.SaveFileAsync(string, byte[], string, CancellationToken)
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync(string, byte[], string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SaveFileAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+    startLine: 33
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.FileProcessing
+  summary: Saves a file to the specified directory.
+  example: []
+  syntax:
+    content: public Task SaveFileAsync(string fileName, byte[] fileData, string outputDirectory, CancellationToken cancellationToken = default)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The name of the file to save.
+    - id: fileData
+      type: System.Byte[]
+      description: The byte array containing the file data.
+    - id: outputDirectory
+      type: System.String
+      description: The directory where the file will be saved.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token to cancel the operation.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function SaveFileAsync(fileName As String, fileData As Byte(), outputDirectory As String, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync*
+  implements:
+  - AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  nameWithType.vb: FileProcessor.SaveFileAsync(String, Byte(), String, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync(String, Byte(), String, System.Threading.CancellationToken)
+  name.vb: SaveFileAsync(String, Byte(), String, CancellationToken)
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  id: SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  langs:
+  - csharp
+  - vb
+  name: SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  nameWithType: FileProcessor.SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync(string, long, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SplitFileIntoChunksAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+    startLine: 98
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.FileProcessing
+  summary: Splits a file into multiple chunks.
+  example: []
+  syntax:
+    content: public Task<List<string>> SplitFileIntoChunksAsync(string filePath, long chunkSize, string outputDirectory, CancellationToken cancellationToken = default)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path to the file to be split.
+    - id: chunkSize
+      type: System.Int64
+      description: The size of each chunk in bytes.
+    - id: outputDirectory
+      type: System.String
+      description: The directory where the chunks will be saved.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token to cancel the operation.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+      description: A task that represents the asynchronous operation. The task result contains a list of paths to the created chunks.
+    content.vb: Public Function SplitFileIntoChunksAsync(filePath As String, chunkSize As Long, outputDirectory As String, cancellationToken As CancellationToken = Nothing) As Task(Of List(Of String))
+  overload: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync*
+  implements:
+  - AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  nameWithType.vb: FileProcessor.SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync(String, Long, String, System.Threading.CancellationToken)
+  name.vb: SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  id: MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+  langs:
+  - csharp
+  - vb
+  name: MergeChunksAsync(List<string>, string, CancellationToken)
+  nameWithType: FileProcessor.MergeChunksAsync(List<string>, string, CancellationToken)
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync(System.Collections.Generic.List<string>, string, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MergeChunksAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/FileProcessing/FileProcessor.cs
+    startLine: 180
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.FileProcessing
+  summary: Merge multiple file chunks into a single file.
+  example: []
+  syntax:
+    content: public Task MergeChunksAsync(List<string> chunkPaths, string outputFilePath, CancellationToken cancellationToken = default)
+    parameters:
+    - id: chunkPaths
+      type: System.Collections.Generic.List{System.String}
+      description: The list of paths to the file chunks.
+    - id: outputFilePath
+      type: System.String
+      description: The path where the Merged file will be saved.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: The cancellation token to cancel the operation.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function MergeChunksAsync(chunkPaths As List(Of String), outputFilePath As String, cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync*
+  implements:
+  - AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  nameWithType.vb: FileProcessor.MergeChunksAsync(List(Of String), String, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync(System.Collections.Generic.List(Of String), String, System.Threading.CancellationToken)
+  name.vb: MergeChunksAsync(List(Of String), String, CancellationToken)
+references:
+- uid: AdvanceFileUpload.Application.FileProcessing
+  commentId: N:AdvanceFileUpload.Application.FileProcessing
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.FileProcessing
+  nameWithType: AdvanceFileUpload.Application.FileProcessing
+  fullName: AdvanceFileUpload.Application.FileProcessing
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.FileProcessing
+    name: FileProcessing
+    href: AdvanceFileUpload.Application.FileProcessing.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.FileProcessing
+    name: FileProcessing
+    href: AdvanceFileUpload.Application.FileProcessing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  commentId: T:AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  parent: AdvanceFileUpload.Application.FileProcessing
+  href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html
+  name: IFileProcessor
+  nameWithType: IFileProcessor
+  fullName: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.#ctor*
+  commentId: Overload:AdvanceFileUpload.Application.FileProcessing.FileProcessor.#ctor
+  href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html#AdvanceFileUpload_Application_FileProcessing_FileProcessor__ctor_Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_FileProcessing_FileProcessor__
+  name: FileProcessor
+  nameWithType: FileProcessor.FileProcessor
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.FileProcessor
+  nameWithType.vb: FileProcessor.New
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.FileProcessor.New
+  name.vb: New
+- uid: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.FileProcessing.FileProcessor}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<FileProcessor>
+  nameWithType: ILogger<FileProcessor>
+  fullName: Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.FileProcessing.FileProcessor>
+  nameWithType.vb: ILogger(Of FileProcessor)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.FileProcessing.FileProcessor)
+  name.vb: ILogger(Of FileProcessor)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+    name: FileProcessor
+    href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor
+    name: FileProcessor
+    href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html
+  - name: )
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync*
+  commentId: Overload:AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync
+  href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html#AdvanceFileUpload_Application_FileProcessing_FileProcessor_SaveFileAsync_System_String_System_Byte___System_String_System_Threading_CancellationToken_
+  name: SaveFileAsync
+  nameWithType: FileProcessor.SaveFileAsync
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SaveFileAsync
+- uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  isExternal: true
+  href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_SaveFileAsync_System_String_System_Byte___System_String_System_Threading_CancellationToken_
+  name: SaveFileAsync(string, byte[], string, CancellationToken)
+  nameWithType: IFileProcessor.SaveFileAsync(string, byte[], string, CancellationToken)
+  fullName: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(string, byte[], string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileProcessor.SaveFileAsync(String, Byte(), String, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(String, Byte(), String, System.Threading.CancellationToken)
+  name.vb: SaveFileAsync(String, Byte(), String, CancellationToken)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+    name: SaveFileAsync
+    href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_SaveFileAsync_System_String_System_Byte___System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SaveFileAsync(System.String,System.Byte[],System.String,System.Threading.CancellationToken)
+    name: SaveFileAsync
+    href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_SaveFileAsync_System_String_System_Byte___System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync*
+  commentId: Overload:AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync
+  href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html#AdvanceFileUpload_Application_FileProcessing_FileProcessor_SplitFileIntoChunksAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_
+  name: SplitFileIntoChunksAsync
+  nameWithType: FileProcessor.SplitFileIntoChunksAsync
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.SplitFileIntoChunksAsync
+- uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  isExternal: true
+  href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_SplitFileIntoChunksAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_
+  name: SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  nameWithType: IFileProcessor.SplitFileIntoChunksAsync(string, long, string, CancellationToken)
+  fullName: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(string, long, string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileProcessor.SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(String, Long, String, System.Threading.CancellationToken)
+  name.vb: SplitFileIntoChunksAsync(String, Long, String, CancellationToken)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+    name: SplitFileIntoChunksAsync
+    href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_SplitFileIntoChunksAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.SplitFileIntoChunksAsync(System.String,System.Int64,System.String,System.Threading.CancellationToken)
+    name: SplitFileIntoChunksAsync
+    href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_SplitFileIntoChunksAsync_System_String_System_Int64_System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.List{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<List<string>>
+  nameWithType: Task<List<string>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<string>>
+  nameWithType.vb: Task(Of List(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of String))
+  name.vb: Task(Of List(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync*
+  commentId: Overload:AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync
+  href: AdvanceFileUpload.Application.FileProcessing.FileProcessor.html#AdvanceFileUpload_Application_FileProcessing_FileProcessor_MergeChunksAsync_System_Collections_Generic_List_System_String__System_String_System_Threading_CancellationToken_
+  name: MergeChunksAsync
+  nameWithType: FileProcessor.MergeChunksAsync
+  fullName: AdvanceFileUpload.Application.FileProcessing.FileProcessor.MergeChunksAsync
+- uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Application.FileProcessing.IFileProcessor
+  isExternal: true
+  href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_MergeChunksAsync_System_Collections_Generic_List_System_String__System_String_System_Threading_CancellationToken_
+  name: MergeChunksAsync(List<string>, string, CancellationToken)
+  nameWithType: IFileProcessor.MergeChunksAsync(List<string>, string, CancellationToken)
+  fullName: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List<string>, string, System.Threading.CancellationToken)
+  nameWithType.vb: IFileProcessor.MergeChunksAsync(List(Of String), String, CancellationToken)
+  fullName.vb: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List(Of String), String, System.Threading.CancellationToken)
+  name.vb: MergeChunksAsync(List(Of String), String, CancellationToken)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+    name: MergeChunksAsync
+    href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_MergeChunksAsync_System_Collections_Generic_List_System_String__System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.MergeChunksAsync(System.Collections.Generic.List{System.String},System.String,System.Threading.CancellationToken)
+    name: MergeChunksAsync
+    href: AdvanceFileUpload.Application.FileProcessing.IFileProcessor.html#AdvanceFileUpload_Application_FileProcessing_IFileProcessor_MergeChunksAsync_System_Collections_Generic_List_System_String__System_String_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

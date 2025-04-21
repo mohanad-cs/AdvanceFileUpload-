@@ -89,7 +89,7 @@
 
 
   <h1 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests" class="text-break">
-Class FileUploadSessionTests  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L9"><i class="bi bi-code-slash"></i></a>
+Class FileUploadSessionTests  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L5"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -152,11 +152,11 @@ Class FileUploadSessionTests  <a class="header-action link-secondary" title="Vie
 </h2>
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ChunkAlreadyUploaded_ShouldThrowException_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ShouldAddChunk_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ChunkAlreadyUploaded_ShouldThrowException" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ChunkAlreadyUploaded_ShouldThrowException">
-  AddChunk_ChunkAlreadyUploaded_ShouldThrowException()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L61"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ShouldAddChunk" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldAddChunk">
+  AddChunk_ShouldAddChunk()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L30"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -164,7 +164,7 @@ Class FileUploadSessionTests  <a class="header-action link-secondary" title="Vie
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void AddChunk_ChunkAlreadyUploaded_ShouldThrowException()</code></pre>
+public void AddChunk_ShouldAddChunk()</code></pre>
   </div>
 
 
@@ -179,11 +179,11 @@ public void AddChunk_ChunkAlreadyUploaded_ShouldThrowException()</code></pre>
 
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_SessionCompleted_ShouldThrowException_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ShouldThrowException_WhenSessionIsCompleted_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_SessionCompleted_ShouldThrowException" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_SessionCompleted_ShouldThrowException">
-  AddChunk_SessionCompleted_ShouldThrowException()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ShouldThrowException_WhenSessionIsCompleted" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ShouldThrowException_WhenSessionIsCompleted">
+  AddChunk_ShouldThrowException_WhenSessionIsCompleted()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -191,7 +191,7 @@ public void AddChunk_ChunkAlreadyUploaded_ShouldThrowException()</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void AddChunk_SessionCompleted_ShouldThrowException()</code></pre>
+public void AddChunk_ShouldThrowException_WhenSessionIsCompleted()</code></pre>
   </div>
 
 
@@ -206,11 +206,11 @@ public void AddChunk_SessionCompleted_ShouldThrowException()</code></pre>
 
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ValidChunk_ShouldAddChunk_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CancelSession_ShouldUpdateStatus_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_AddChunk_ValidChunk_ShouldAddChunk" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.AddChunk_ValidChunk_ShouldAddChunk">
-  AddChunk_ValidChunk_ShouldAddChunk()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CancelSession_ShouldUpdateStatus" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldUpdateStatus">
+  CancelSession_ShouldUpdateStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L85"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -218,7 +218,7 @@ public void AddChunk_SessionCompleted_ShouldThrowException()</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void AddChunk_ValidChunk_ShouldAddChunk()</code></pre>
+public void CancelSession_ShouldUpdateStatus()</code></pre>
   </div>
 
 
@@ -233,11 +233,11 @@ public void AddChunk_ValidChunk_ShouldAddChunk()</code></pre>
 
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CancelSession_ShouldCancelSession_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CompleteSession_ShouldUpdateStatus_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CancelSession_ShouldCancelSession" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CancelSession_ShouldCancelSession">
-  CancelSession_ShouldCancelSession()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CompleteSession_ShouldUpdateStatus" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldUpdateStatus">
+  CompleteSession_ShouldUpdateStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L113"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -245,7 +245,7 @@ public void AddChunk_ValidChunk_ShouldAddChunk()</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void CancelSession_ShouldCancelSession()</code></pre>
+public void CompleteSession_ShouldUpdateStatus()</code></pre>
   </div>
 
 
@@ -260,11 +260,11 @@ public void CancelSession_ShouldCancelSession()</code></pre>
 
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CompleteSession_ShouldCompleteSession_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_ShouldInitializeProperties_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_CompleteSession_ShouldCompleteSession" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.CompleteSession_ShouldCompleteSession">
-  CompleteSession_ShouldCompleteSession()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_ShouldInitializeProperties" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ShouldInitializeProperties">
+  Constructor_ShouldInitializeProperties()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L13"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -272,7 +272,7 @@ public void CancelSession_ShouldCancelSession()</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void CompleteSession_ShouldCompleteSession()</code></pre>
+public void Constructor_ShouldInitializeProperties()</code></pre>
   </div>
 
 
@@ -287,11 +287,11 @@ public void CompleteSession_ShouldCompleteSession()</code></pre>
 
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_InvalidParameters_ShouldThrowArgumentException_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_GetRemainChunks_ShouldReturnRemainingChunks_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_InvalidParameters_ShouldThrowArgumentException" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_InvalidParameters_ShouldThrowArgumentException">
-  Constructor_InvalidParameters_ShouldThrowArgumentException()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_GetRemainChunks_ShouldReturnRemainingChunks" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnRemainingChunks">
+  GetRemainChunks_ShouldReturnRemainingChunks()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -299,7 +299,7 @@ public void CompleteSession_ShouldCompleteSession()</code></pre>
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void Constructor_InvalidParameters_ShouldThrowArgumentException()</code></pre>
+public void GetRemainChunks_ShouldReturnRemainingChunks()</code></pre>
   </div>
 
 
@@ -314,11 +314,11 @@ public void Constructor_InvalidParameters_ShouldThrowArgumentException()</code><
 
 
 
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_ValidParameters_ShouldInitializeCorrectly_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly*"></a>
+  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_PauseSession_ShouldUpdateStatus_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus*"></a>
 
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_Constructor_ValidParameters_ShouldInitializeCorrectly" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.Constructor_ValidParameters_ShouldInitializeCorrectly">
-  Constructor_ValidParameters_ShouldInitializeCorrectly()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_PauseSession_ShouldUpdateStatus" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldUpdateStatus">
+  PauseSession_ShouldUpdateStatus()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L99"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
@@ -326,169 +326,7 @@ public void Constructor_InvalidParameters_ShouldThrowArgumentException()</code><
 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Fact]
-public void Constructor_ValidParameters_ShouldInitializeCorrectly()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_GetRemainChunks_ShouldReturnCorrectRemainingChunks_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks*"></a>
-
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_GetRemainChunks_ShouldReturnCorrectRemainingChunks" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.GetRemainChunks_ShouldReturnCorrectRemainingChunks">
-  GetRemainChunks_ShouldReturnCorrectRemainingChunks()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L87"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Fact]
-public void GetRemainChunks_ShouldReturnCorrectRemainingChunks()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded*"></a>
-
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded">
-  IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L101"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Fact]
-public void IsAllChunkUploaded_ShouldReturnTrueWhenAllChunksUploaded()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsCanceled_ShouldReturnTrueWhenSessionCanceled_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled*"></a>
-
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsCanceled_ShouldReturnTrueWhenSessionCanceled" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCanceled_ShouldReturnTrueWhenSessionCanceled">
-  IsCanceled_ShouldReturnTrueWhenSessionCanceled()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L150"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Fact]
-public void IsCanceled_ShouldReturnTrueWhenSessionCanceled()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsChunkUploaded_ShouldReturnTrueForUploadedChunk_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk*"></a>
-
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsChunkUploaded_ShouldReturnTrueForUploadedChunk" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsChunkUploaded_ShouldReturnTrueForUploadedChunk">
-  IsChunkUploaded_ShouldReturnTrueForUploadedChunk()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L118"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Fact]
-public void IsChunkUploaded_ShouldReturnTrueForUploadedChunk()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsCompleted_ShouldReturnTrueWhenSessionCompleted_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted*"></a>
-
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_IsCompleted_ShouldReturnTrueWhenSessionCompleted" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.IsCompleted_ShouldReturnTrueWhenSessionCompleted">
-  IsCompleted_ShouldReturnTrueWhenSessionCompleted()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L132"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Fact]
-public void IsCompleted_ShouldReturnTrueWhenSessionCompleted()</code></pre>
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_PauseSession_ShouldPauseSession_" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession*"></a>
-
-  <h3 id="AdvanceFileUpload_Domain_Test_FileUploadSessionTests_PauseSession_ShouldPauseSession" data-uid="AdvanceFileUpload.Domain.Test.FileUploadSessionTests.PauseSession_ShouldPauseSession">
-  PauseSession_ShouldPauseSession()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L178"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Fact]
-public void PauseSession_ShouldPauseSession()</code></pre>
+public void PauseSession_ShouldUpdateStatus()</code></pre>
   </div>
 
 
@@ -507,7 +345,7 @@ public void PauseSession_ShouldPauseSession()</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L9" class="edit-link">Edit this page</a>
+          <a href="https://github.com/mohanad-cs/AdvanceFileUpload-/blob/main/src/AdvanceFileUpload/AdvanceFileUpload.Domain.Test/FileUploadSessionTests.cs/#L5" class="edit-link">Edit this page</a>
         </div>
 
 

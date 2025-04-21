@@ -1,0 +1,305 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration.Contracts
+  commentId: N:AdvanceFileUpload.Integration.Contracts
+  id: AdvanceFileUpload.Integration.Contracts
+  children:
+  - AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent
+  - AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+  - AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  - AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+  - AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+  - AdvanceFileUpload.Integration.Contracts.PublishMessage`1
+  - AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer
+  - AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher
+  - AdvanceFileUpload.Integration.Contracts.RabbitMQOptions
+  - AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent
+  - AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent
+  - AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  - AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent
+  - AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Integration.Contracts
+  nameWithType: AdvanceFileUpload.Integration.Contracts
+  fullName: AdvanceFileUpload.Integration.Contracts
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Integration.Contracts
+references:
+- uid: AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent
+  href: AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent.html
+  name: ChunkUploadedIntegrationEvent
+  nameWithType: ChunkUploadedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  parent: AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.html
+  name: IIntegrationEventConsumer
+  nameWithType: IIntegrationEventConsumer
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+- uid: AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+  commentId: T:AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+  parent: AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.Integration.Contracts.ConsumingArgs.html
+  name: ConsumingArgs
+  nameWithType: ConsumingArgs
+  fullName: AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+- uid: AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer
+  commentId: T:AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer
+  href: AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer.html
+  name: RabbitMQConsumer
+  nameWithType: RabbitMQConsumer
+  fullName: AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer
+- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  parent: AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher.html
+  name: IIntegrationEventPublisher
+  nameWithType: IIntegrationEventPublisher
+  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants
+  nameWithType: IntegrationConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants.SessionCreatedConstants
+  nameWithType: IntegrationConstants.SessionCreatedConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+    name: SessionCreatedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+    name: SessionCreatedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants.html
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants.SessionCanceledConstants
+  nameWithType: IntegrationConstants.SessionCanceledConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+    name: SessionCanceledConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+    name: SessionCanceledConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants.html
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants.SessionCompletedConstants
+  nameWithType: IntegrationConstants.SessionCompletedConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+    name: SessionCompletedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+    name: SessionCompletedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants.html
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants.ChunkUploadedConstants
+  nameWithType: IntegrationConstants.ChunkUploadedConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+    name: ChunkUploadedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+    name: ChunkUploadedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants.html
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants.SessionPausedConstants
+  nameWithType: IntegrationConstants.SessionPausedConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+    name: SessionPausedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+    name: SessionPausedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants.html
+- uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+  commentId: T:AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+  href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  name: IntegrationConstants.SessionResumedConstants
+  nameWithType: IntegrationConstants.SessionResumedConstants
+  fullName: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+    name: SessionResumedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+    name: SessionResumedConstants
+    href: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants.html
+- uid: AdvanceFileUpload.Integration.Contracts.PublishMessage`1
+  commentId: T:AdvanceFileUpload.Integration.Contracts.PublishMessage`1
+  href: AdvanceFileUpload.Integration.Contracts.PublishMessage-1.html
+  name: PublishMessage<T>
+  nameWithType: PublishMessage<T>
+  fullName: AdvanceFileUpload.Integration.Contracts.PublishMessage<T>
+  nameWithType.vb: PublishMessage(Of T)
+  fullName.vb: AdvanceFileUpload.Integration.Contracts.PublishMessage(Of T)
+  name.vb: PublishMessage(Of T)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.Contracts.PublishMessage`1
+    name: PublishMessage
+    href: AdvanceFileUpload.Integration.Contracts.PublishMessage-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.Contracts.PublishMessage`1
+    name: PublishMessage
+    href: AdvanceFileUpload.Integration.Contracts.PublishMessage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher
+  commentId: T:AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher
+  href: AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher.html
+  name: RabbitMQIntegrationEventPublisher
+  nameWithType: RabbitMQIntegrationEventPublisher
+  fullName: AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher
+- uid: AdvanceFileUpload.Integration.Contracts.RabbitMQOptions
+  commentId: T:AdvanceFileUpload.Integration.Contracts.RabbitMQOptions
+  parent: AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.Integration.Contracts.RabbitMQOptions.html
+  name: RabbitMQOptions
+  nameWithType: RabbitMQOptions
+  fullName: AdvanceFileUpload.Integration.Contracts.RabbitMQOptions
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent
+  href: AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent.html
+  name: SessionCancelledIntegrationEvent
+  nameWithType: SessionCancelledIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent
+  href: AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent.html
+  name: SessionCompletedIntegrationEvent
+  nameWithType: SessionCompletedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  href: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html
+  name: SessionCreatedIntegrationEvent
+  nameWithType: SessionCreatedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent
+  href: AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent.html
+  name: SessionPausedIntegrationEvent
+  nameWithType: SessionPausedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent
+  href: AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent.html
+  name: SessionResumedIntegrationEvent
+  nameWithType: SessionResumedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.Contracts
+  commentId: N:AdvanceFileUpload.Integration.Contracts
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration.Contracts
+  nameWithType: AdvanceFileUpload.Integration.Contracts
+  fullName: AdvanceFileUpload.Integration.Contracts
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.Contracts
+    name: Contracts
+    href: AdvanceFileUpload.Integration.Contracts.html

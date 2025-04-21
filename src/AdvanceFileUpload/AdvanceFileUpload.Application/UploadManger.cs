@@ -97,7 +97,7 @@ namespace AdvanceFileUpload.Application
                                                 (CompressionLevel?)request.Compression?.Level);
             session.CurrentHubConnectionId = request.HubConnectionId;
             await _repository.AddAsync(session, cancellationToken);
-           // await _repository.SaveChangesAsync(cancellationToken);
+            // await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
@@ -133,7 +133,7 @@ namespace AdvanceFileUpload.Application
 
             session.CompleteSession();
             await _repository.UpdateAsync(session);
-         //   await _repository.SaveChangesAsync(cancellationToken);
+            //   await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
@@ -179,7 +179,7 @@ namespace AdvanceFileUpload.Application
             session.AddChunk(request.ChunkIndex, Path.Combine(_uploadSetting.TempDirectory, $"{session.Id}_{request.ChunkIndex}.chunk"));
             session.CurrentHubConnectionId = request.HubConnectionId;
             await _repository.UpdateAsync(session, cancellationToken);
-           // await _repository.SaveChangesAsync(cancellationToken);
+            // await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
@@ -241,7 +241,7 @@ namespace AdvanceFileUpload.Application
             }
             session.CancelSession();
             await _repository.UpdateAsync(session, cancellationToken);
-          //  await _repository.SaveChangesAsync(cancellationToken);
+            //  await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);
@@ -268,7 +268,7 @@ namespace AdvanceFileUpload.Application
             }
             session.PauseSession();
             await _repository.UpdateAsync(session, cancellationToken);
-          //  await _repository.SaveChangesAsync(cancellationToken);
+            //  await _repository.SaveChangesAsync(cancellationToken);
             foreach (var domainEvent in session.DomainEvents)
             {
                 await _domainEventPublisher.PublishAsync(domainEvent, cancellationToken);

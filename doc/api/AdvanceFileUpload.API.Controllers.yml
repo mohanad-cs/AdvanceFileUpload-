@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.Controllers
+  commentId: N:AdvanceFileUpload.API.Controllers
+  id: AdvanceFileUpload.API.Controllers
+  children:
+  - AdvanceFileUpload.API.Controllers.FileUploadController
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.API.Controllers
+  nameWithType: AdvanceFileUpload.API.Controllers
+  fullName: AdvanceFileUpload.API.Controllers
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.API
+references:
+- uid: AdvanceFileUpload.API.Controllers.FileUploadController
+  commentId: T:AdvanceFileUpload.API.Controllers.FileUploadController
+  href: AdvanceFileUpload.API.Controllers.FileUploadController.html
+  name: FileUploadController
+  nameWithType: FileUploadController
+  fullName: AdvanceFileUpload.API.Controllers.FileUploadController

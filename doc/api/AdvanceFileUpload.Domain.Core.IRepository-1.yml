@@ -14,7 +14,6 @@ items:
   - AdvanceFileUpload.Domain.Core.IRepository`1.GetAllAsync(System.Threading.CancellationToken)
   - AdvanceFileUpload.Domain.Core.IRepository`1.GetByIdAsync(System.Guid,System.Threading.CancellationToken)
   - AdvanceFileUpload.Domain.Core.IRepository`1.RemoveAsync(`0,System.Threading.CancellationToken)
-  - AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync(System.Threading.CancellationToken)
   - AdvanceFileUpload.Domain.Core.IRepository`1.UpdateAsync(`0,System.Threading.CancellationToken)
   langs:
   - csharp
@@ -70,7 +69,7 @@ items:
   summary: Asynchronously retrieves an entity by its unique identifier.
   example: []
   syntax:
-    content: Task<TEntity> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
+    content: Task<TEntity?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default)
     parameters:
     - id: id
       type: System.Guid
@@ -190,7 +189,7 @@ items:
   summary: Asynchronously removes an entity from the repository.
   example: []
   syntax:
-    content: Task RemoveAsync(TEntity entity, CancellationToken cancellationToken = default)
+    content: Task<bool> RemoveAsync(TEntity entity, CancellationToken cancellationToken = default)
     parameters:
     - id: entity
       type: '{TEntity}'
@@ -199,9 +198,9 @@ items:
       type: System.Threading.CancellationToken
       description: Token to monitor for cancellation requests.
     return:
-      type: System.Threading.Tasks.Task
+      type: System.Threading.Tasks.Task{System.Boolean}
       description: A task that represents the asynchronous operation.
-    content.vb: Function RemoveAsync(entity As TEntity, cancellationToken As CancellationToken = Nothing) As Task
+    content.vb: Function RemoveAsync(entity As TEntity, cancellationToken As CancellationToken = Nothing) As Task(Of Boolean)
   overload: AdvanceFileUpload.Domain.Core.IRepository`1.RemoveAsync*
   nameWithType.vb: IRepository(Of TEntity).RemoveAsync(TEntity, CancellationToken)
   fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).RemoveAsync(TEntity, System.Threading.CancellationToken)
@@ -439,39 +438,6 @@ items:
   nameWithType.vb: IRepository(Of TEntity).CountAsync(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
   fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).CountAsync(System.Linq.Expressions.Expression(Of System.Func(Of TEntity, Boolean)), System.Threading.CancellationToken)
   name.vb: CountAsync(Expression(Of Func(Of TEntity, Boolean)), CancellationToken)
-- uid: AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync(System.Threading.CancellationToken)
-  commentId: M:AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync(System.Threading.CancellationToken)
-  id: SaveChangesAsync(System.Threading.CancellationToken)
-  parent: AdvanceFileUpload.Domain.Core.IRepository`1
-  langs:
-  - csharp
-  - vb
-  name: SaveChangesAsync(CancellationToken)
-  nameWithType: IRepository<TEntity>.SaveChangesAsync(CancellationToken)
-  fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>.SaveChangesAsync(System.Threading.CancellationToken)
-  type: Method
-  source:
-    remote:
-      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IRepository.cs
-      branch: main
-      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
-    id: SaveChangesAsync
-    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/Core/IRepository.cs
-    startLine: 88
-  assemblies:
-  - AdvanceFileUpload.Domain
-  namespace: AdvanceFileUpload.Domain.Core
-  syntax:
-    content: Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-    parameters:
-    - id: cancellationToken
-      type: System.Threading.CancellationToken
-    return:
-      type: System.Threading.Tasks.Task{System.Int32}
-    content.vb: Function SaveChangesAsync(cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
-  overload: AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync*
-  nameWithType.vb: IRepository(Of TEntity).SaveChangesAsync(CancellationToken)
-  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).SaveChangesAsync(System.Threading.CancellationToken)
 references:
 - uid: AdvanceFileUpload.Domain.Core
   commentId: N:AdvanceFileUpload.Domain.Core
@@ -689,14 +655,41 @@ references:
   fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>.RemoveAsync
   nameWithType.vb: IRepository(Of TEntity).RemoveAsync
   fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).RemoveAsync
-- uid: System.Threading.Tasks.Task
-  commentId: T:System.Threading.Tasks.Task
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
   parent: System.Threading.Tasks
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
-  name: Task
-  nameWithType: Task
-  fullName: System.Threading.Tasks.Task
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: AdvanceFileUpload.Domain.Core.IRepository`1.GetAllAsync*
   commentId: Overload:AdvanceFileUpload.Domain.Core.IRepository`1.GetAllAsync
   href: AdvanceFileUpload.Domain.Core.IRepository-1.html#AdvanceFileUpload_Domain_Core_IRepository_1_GetAllAsync_System_Threading_CancellationToken_
@@ -884,41 +877,6 @@ references:
   fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>.AnyAsync
   nameWithType.vb: IRepository(Of TEntity).AnyAsync
   fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).AnyAsync
-- uid: System.Threading.Tasks.Task{System.Boolean}
-  commentId: T:System.Threading.Tasks.Task{System.Boolean}
-  parent: System.Threading.Tasks
-  definition: System.Threading.Tasks.Task`1
-  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  name: Task<bool>
-  nameWithType: Task<bool>
-  fullName: System.Threading.Tasks.Task<bool>
-  nameWithType.vb: Task(Of Boolean)
-  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
-  name.vb: Task(Of Boolean)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: <
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
-  - name: (
-  - name: Of
-  - name: " "
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
 - uid: AdvanceFileUpload.Domain.Core.IRepository`1.CountAsync*
   commentId: Overload:AdvanceFileUpload.Domain.Core.IRepository`1.CountAsync
   href: AdvanceFileUpload.Domain.Core.IRepository-1.html#AdvanceFileUpload_Domain_Core_IRepository_1_CountAsync_System_Threading_CancellationToken_
@@ -962,11 +920,3 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync*
-  commentId: Overload:AdvanceFileUpload.Domain.Core.IRepository`1.SaveChangesAsync
-  href: AdvanceFileUpload.Domain.Core.IRepository-1.html#AdvanceFileUpload_Domain_Core_IRepository_1_SaveChangesAsync_System_Threading_CancellationToken_
-  name: SaveChangesAsync
-  nameWithType: IRepository<TEntity>.SaveChangesAsync
-  fullName: AdvanceFileUpload.Domain.Core.IRepository<TEntity>.SaveChangesAsync
-  nameWithType.vb: IRepository(Of TEntity).SaveChangesAsync
-  fullName.vb: AdvanceFileUpload.Domain.Core.IRepository(Of TEntity).SaveChangesAsync

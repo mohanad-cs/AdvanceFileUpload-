@@ -1,0 +1,704 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  commentId: T:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  id: FileSplitterBenchmarks
+  parent: AdvanceFileUpload.Benchmark
+  children:
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.ChunkSize
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileSize
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup
+  - AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup
+  langs:
+  - csharp
+  - vb
+  name: FileSplitterBenchmarks
+  nameWithType: FileSplitterBenchmarks
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSplitterBenchmarks
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 4
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [MemoryDiagnoser(true)]
+
+      public class FileSplitterBenchmarks
+    content.vb: >-
+      <MemoryDiagnoser(True)>
+
+      Public Class FileSplitterBenchmarks
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: BenchmarkDotNet.Attributes.MemoryDiagnoserAttribute
+    ctor: BenchmarkDotNet.Attributes.MemoryDiagnoserAttribute.#ctor(System.Boolean)
+    arguments:
+    - type: System.Boolean
+      value: true
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileSize
+  commentId: F:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileSize
+  id: FileSize
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: FileSize
+  nameWithType: FileSplitterBenchmarks.FileSize
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileSize
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 14
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [Params(new object?[] { 314572800 })]
+
+      public long FileSize
+    return:
+      type: System.Int64
+    content.vb: >-
+      <Params(New Object() { 314572800 })>
+
+      Public FileSize As Long
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.ChunkSize
+  commentId: F:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.ChunkSize
+  id: ChunkSize
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: ChunkSize
+  nameWithType: FileSplitterBenchmarks.ChunkSize
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.ChunkSize
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ChunkSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [Params(new object?[] { 5242880 })]
+
+      public long ChunkSize
+    return:
+      type: System.Int64
+    content.vb: >-
+      <Params(New Object() { 5242880 })>
+
+      Public ChunkSize As Long
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup
+  commentId: M:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup
+  id: GlobalSetup
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: GlobalSetup()
+  nameWithType: FileSplitterBenchmarks.GlobalSetup()
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: GlobalSetup
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 19
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [GlobalSetup]
+
+      public void GlobalSetup()
+    content.vb: >-
+      <GlobalSetup>
+
+      Public Sub GlobalSetup()
+  overload: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.GlobalSetupAttribute
+    ctor: BenchmarkDotNet.Attributes.GlobalSetupAttribute.#ctor
+    arguments: []
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup
+  commentId: M:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup
+  id: GlobalCleanup
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: GlobalCleanup()
+  nameWithType: FileSplitterBenchmarks.GlobalCleanup()
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: GlobalCleanup
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 29
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [GlobalCleanup]
+
+      public void GlobalCleanup()
+    content.vb: >-
+      <GlobalCleanup>
+
+      Public Sub GlobalCleanup()
+  overload: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.GlobalCleanupAttribute
+    ctor: BenchmarkDotNet.Attributes.GlobalCleanupAttribute.#ctor
+    arguments: []
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup
+  commentId: M:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup
+  id: IterationSetup
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: IterationSetup()
+  nameWithType: FileSplitterBenchmarks.IterationSetup()
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IterationSetup
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 36
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [IterationSetup]
+
+      public void IterationSetup()
+    content.vb: >-
+      <IterationSetup>
+
+      Public Sub IterationSetup()
+  overload: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.IterationSetupAttribute
+    ctor: BenchmarkDotNet.Attributes.IterationSetupAttribute.#ctor
+    arguments: []
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup
+  commentId: M:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup
+  id: IterationCleanup
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: IterationCleanup()
+  nameWithType: FileSplitterBenchmarks.IterationCleanup()
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IterationCleanup
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 43
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [IterationCleanup]
+
+      public void IterationCleanup()
+    content.vb: >-
+      <IterationCleanup>
+
+      Public Sub IterationCleanup()
+  overload: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.IterationCleanupAttribute
+    ctor: BenchmarkDotNet.Attributes.IterationCleanupAttribute.#ctor
+    arguments: []
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1
+  commentId: M:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1
+  id: FileMergin1
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: FileMergin1()
+  nameWithType: FileSplitterBenchmarks.FileMergin1()
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileMergin1
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 100
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [Benchmark(101, "D:\\mohan\\Documents\\Projects\\AdvanceFileUpload\\AdvanceFileUpload-\\src\\AdvanceFileUpload\\AdvanceFileUpload.Benchmark\\FileSplitterBenchmarks.cs")]
+
+      public Task FileMergin1()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Benchmark(101, "D:\mohan\Documents\Projects\AdvanceFileUpload\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Benchmark\FileSplitterBenchmarks.cs")>
+
+      Public Function FileMergin1() As Task
+  overload: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.BenchmarkAttribute
+    ctor: BenchmarkDotNet.Attributes.BenchmarkAttribute.#ctor(System.Int32,System.String)
+    arguments:
+    - type: System.Int32
+      value: 101
+    - type: System.String
+      value: D:\mohan\Documents\Projects\AdvanceFileUpload\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Benchmark\FileSplitterBenchmarks.cs
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2
+  commentId: M:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2
+  id: FileMergin2
+  parent: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
+  langs:
+  - csharp
+  - vb
+  name: FileMergin2()
+  nameWithType: FileSplitterBenchmarks.FileMergin2()
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileMergin2
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Benchmark/FileSplitterBenchmarks.cs
+    startLine: 106
+  assemblies:
+  - AdvanceFileUpload.Benchmark
+  namespace: AdvanceFileUpload.Benchmark
+  syntax:
+    content: >-
+      [Benchmark(107, "D:\\mohan\\Documents\\Projects\\AdvanceFileUpload\\AdvanceFileUpload-\\src\\AdvanceFileUpload\\AdvanceFileUpload.Benchmark\\FileSplitterBenchmarks.cs")]
+
+      public Task FileMergin2()
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: >-
+      <Benchmark(107, "D:\mohan\Documents\Projects\AdvanceFileUpload\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Benchmark\FileSplitterBenchmarks.cs")>
+
+      Public Function FileMergin2() As Task
+  overload: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2*
+  attributes:
+  - type: BenchmarkDotNet.Attributes.BenchmarkAttribute
+    ctor: BenchmarkDotNet.Attributes.BenchmarkAttribute.#ctor(System.Int32,System.String)
+    arguments:
+    - type: System.Int32
+      value: 107
+    - type: System.String
+      value: D:\mohan\Documents\Projects\AdvanceFileUpload\AdvanceFileUpload-\src\AdvanceFileUpload\AdvanceFileUpload.Benchmark\FileSplitterBenchmarks.cs
+references:
+- uid: AdvanceFileUpload.Benchmark
+  commentId: N:AdvanceFileUpload.Benchmark
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Benchmark
+  nameWithType: AdvanceFileUpload.Benchmark
+  fullName: AdvanceFileUpload.Benchmark
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Benchmark
+    name: Benchmark
+    href: AdvanceFileUpload.Benchmark.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Benchmark
+    name: Benchmark
+    href: AdvanceFileUpload.Benchmark.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup*
+  commentId: Overload:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup
+  href: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html#AdvanceFileUpload_Benchmark_FileSplitterBenchmarks_GlobalSetup
+  name: GlobalSetup
+  nameWithType: FileSplitterBenchmarks.GlobalSetup
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalSetup
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup*
+  commentId: Overload:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup
+  href: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html#AdvanceFileUpload_Benchmark_FileSplitterBenchmarks_GlobalCleanup
+  name: GlobalCleanup
+  nameWithType: FileSplitterBenchmarks.GlobalCleanup
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.GlobalCleanup
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup*
+  commentId: Overload:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup
+  href: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html#AdvanceFileUpload_Benchmark_FileSplitterBenchmarks_IterationSetup
+  name: IterationSetup
+  nameWithType: FileSplitterBenchmarks.IterationSetup
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationSetup
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup*
+  commentId: Overload:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup
+  href: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html#AdvanceFileUpload_Benchmark_FileSplitterBenchmarks_IterationCleanup
+  name: IterationCleanup
+  nameWithType: FileSplitterBenchmarks.IterationCleanup
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.IterationCleanup
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1*
+  commentId: Overload:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1
+  href: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html#AdvanceFileUpload_Benchmark_FileSplitterBenchmarks_FileMergin1
+  name: FileMergin1
+  nameWithType: FileSplitterBenchmarks.FileMergin1
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin1
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2*
+  commentId: Overload:AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2
+  href: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html#AdvanceFileUpload_Benchmark_FileSplitterBenchmarks_FileMergin2
+  name: FileMergin2
+  nameWithType: FileSplitterBenchmarks.FileMergin2
+  fullName: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.FileMergin2

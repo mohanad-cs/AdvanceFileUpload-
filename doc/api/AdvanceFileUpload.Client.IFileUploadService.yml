@@ -1,0 +1,514 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.IFileUploadService
+  commentId: T:AdvanceFileUpload.Client.IFileUploadService
+  id: IFileUploadService
+  parent: AdvanceFileUpload.Client
+  children:
+  - AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  - AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  - AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  - AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  - AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  - AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  - AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  - AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+  - AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+  - AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IFileUploadService
+  nameWithType: IFileUploadService
+  fullName: AdvanceFileUpload.Client.IFileUploadService
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IFileUploadService
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Defines the contract for a file upload service.
+  example: []
+  syntax:
+    content: public interface IFileUploadService
+    content.vb: Public Interface IFileUploadService
+- uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
+  id: UploadFileAsync(System.String)
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: UploadFileAsync(string)
+  nameWithType: IFileUploadService.UploadFileAsync(string)
+  fullName: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadFileAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Uploads a file asynchronously.
+  example: []
+  syntax:
+    content: Task UploadFileAsync(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path of the file to be uploaded.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function UploadFileAsync(filePath As String) As Task
+  overload: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync*
+  nameWithType.vb: IFileUploadService.UploadFileAsync(String)
+  fullName.vb: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(String)
+  name.vb: UploadFileAsync(String)
+- uid: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+  id: PauseUploadAsync
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: PauseUploadAsync()
+  nameWithType: IFileUploadService.PauseUploadAsync()
+  fullName: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PauseUploadAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Pauses the ongoing file upload asynchronously.
+  example: []
+  syntax:
+    content: Task PauseUploadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function PauseUploadAsync() As Task
+  overload: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync*
+- uid: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+  id: ResumeUploadAsync
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: ResumeUploadAsync()
+  nameWithType: IFileUploadService.ResumeUploadAsync()
+  fullName: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ResumeUploadAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 24
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Resumes the paused file upload asynchronously.
+  example: []
+  syntax:
+    content: Task ResumeUploadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function ResumeUploadAsync() As Task
+  overload: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync*
+- uid: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  commentId: M:AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  id: CancelUploadAsync
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CancelUploadAsync()
+  nameWithType: IFileUploadService.CancelUploadAsync()
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CancelUploadAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 30
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Cancels the ongoing file upload asynchronously.
+  example: []
+  syntax:
+    content: Task CancelUploadAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function CancelUploadAsync() As Task
+  overload: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync*
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  id: CanPauseSession
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CanPauseSession
+  nameWithType: IFileUploadService.CanPauseSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CanPauseSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 35
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session can be paused.
+  example: []
+  syntax:
+    content: bool CanPauseSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property CanPauseSession As Boolean
+  overload: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession*
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  id: CanCancelSession
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CanCancelSession
+  nameWithType: IFileUploadService.CanCancelSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CanCancelSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 40
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session can be canceled.
+  example: []
+  syntax:
+    content: bool CanCancelSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property CanCancelSession As Boolean
+  overload: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession*
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  id: CanResumeSession
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CanResumeSession
+  nameWithType: IFileUploadService.CanResumeSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CanResumeSession
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 45
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session can be resumed.
+  example: []
+  syntax:
+    content: bool CanResumeSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property CanResumeSession As Boolean
+  overload: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession*
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  id: IsSessionPaused
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: IsSessionPaused
+  nameWithType: IFileUploadService.IsSessionPaused
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsSessionPaused
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 50
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session is paused.
+  example: []
+  syntax:
+    content: bool IsSessionPaused { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsSessionPaused As Boolean
+  overload: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused*
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  id: IsSessionCanceled
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: IsSessionCanceled
+  nameWithType: IFileUploadService.IsSessionCanceled
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsSessionCanceled
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 55
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session is canceled.
+  example: []
+  syntax:
+    content: bool IsSessionCanceled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsSessionCanceled As Boolean
+  overload: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled*
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  id: IsSessionCompleted
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: IsSessionCompleted
+  nameWithType: IFileUploadService.IsSessionCompleted
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsSessionCompleted
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 60
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets a value indicating whether the session is completed.
+  example: []
+  syntax:
+    content: bool IsSessionCompleted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property IsSessionCompleted As Boolean
+  overload: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted*
+references:
+- uid: AdvanceFileUpload.Client
+  commentId: N:AdvanceFileUpload.Client
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client
+  nameWithType: AdvanceFileUpload.Client
+  fullName: AdvanceFileUpload.Client
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+- uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_UploadFileAsync_System_String_
+  name: UploadFileAsync
+  nameWithType: IFileUploadService.UploadFileAsync
+  fullName: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_PauseUploadAsync
+  name: PauseUploadAsync
+  nameWithType: IFileUploadService.PauseUploadAsync
+  fullName: AdvanceFileUpload.Client.IFileUploadService.PauseUploadAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_ResumeUploadAsync
+  name: ResumeUploadAsync
+  nameWithType: IFileUploadService.ResumeUploadAsync
+  fullName: AdvanceFileUpload.Client.IFileUploadService.ResumeUploadAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CancelUploadAsync
+  name: CancelUploadAsync
+  nameWithType: IFileUploadService.CancelUploadAsync
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CanPauseSession
+  name: CanPauseSession
+  nameWithType: IFileUploadService.CanPauseSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CanCancelSession
+  name: CanCancelSession
+  nameWithType: IFileUploadService.CanCancelSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanCancelSession
+- uid: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CanResumeSession
+  name: CanResumeSession
+  nameWithType: IFileUploadService.CanResumeSession
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_IsSessionPaused
+  name: IsSessionPaused
+  nameWithType: IFileUploadService.IsSessionPaused
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_IsSessionCanceled
+  name: IsSessionCanceled
+  nameWithType: IFileUploadService.IsSessionCanceled
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
+- uid: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_IsSessionCompleted
+  name: IsSessionCompleted
+  nameWithType: IFileUploadService.IsSessionCompleted
+  fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted

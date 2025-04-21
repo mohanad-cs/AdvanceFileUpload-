@@ -1,0 +1,641 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Application.Validators.FileValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.FileValidator
+  id: FileValidator
+  parent: AdvanceFileUpload.Application.Validators
+  children:
+  - AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension(System.String,System.String[])
+  - AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName(System.String)
+  - AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize(System.Int64,System.Int64)
+  langs:
+  - csharp
+  - vb
+  name: FileValidator
+  nameWithType: FileValidator
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileValidator
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Validators
+  summary: Represents a file validator.
+  example: []
+  syntax:
+    content: 'public class FileValidator : IFileValidator'
+    content.vb: Public Class FileValidator Implements IFileValidator
+  inheritance:
+  - System.Object
+  implements:
+  - AdvanceFileUpload.Application.Validators.IFileValidator
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName(System.String)
+  commentId: M:AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName(System.String)
+  id: IsValidFileName(System.String)
+  parent: AdvanceFileUpload.Application.Validators.FileValidator
+  langs:
+  - csharp
+  - vb
+  name: IsValidFileName(string)
+  nameWithType: FileValidator.IsValidFileName(string)
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsValidFileName
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+    startLine: 10
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Validators
+  summary: Validates the file name.
+  example: []
+  syntax:
+    content: public bool IsValidFileName(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The name of the file to validate.
+    return:
+      type: System.Boolean
+      description: True if the file name is valid; otherwise, false.
+    content.vb: Public Function IsValidFileName(fileName As String) As Boolean
+  overload: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName*
+  implements:
+  - AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(System.String)
+  nameWithType.vb: FileValidator.IsValidFileName(String)
+  fullName.vb: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName(String)
+  name.vb: IsValidFileName(String)
+- uid: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize(System.Int64,System.Int64)
+  commentId: M:AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize(System.Int64,System.Int64)
+  id: IsValidFileSize(System.Int64,System.Int64)
+  parent: AdvanceFileUpload.Application.Validators.FileValidator
+  langs:
+  - csharp
+  - vb
+  name: IsValidFileSize(long, long)
+  nameWithType: FileValidator.IsValidFileSize(long, long)
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize(long, long)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsValidFileSize
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+    startLine: 23
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Validators
+  summary: Validates the file size.
+  example: []
+  syntax:
+    content: public bool IsValidFileSize(long fileSize, long maxFileSize)
+    parameters:
+    - id: fileSize
+      type: System.Int64
+      description: The size of the file to validate.
+    - id: maxFileSize
+      type: System.Int64
+      description: The maximum allowed size of the file.
+    return:
+      type: System.Boolean
+      description: True if the file size is valid; otherwise, false.
+    content.vb: Public Function IsValidFileSize(fileSize As Long, maxFileSize As Long) As Boolean
+  overload: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize*
+  implements:
+  - AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(System.Int64,System.Int64)
+  nameWithType.vb: FileValidator.IsValidFileSize(Long, Long)
+  fullName.vb: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize(Long, Long)
+  name.vb: IsValidFileSize(Long, Long)
+- uid: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension(System.String,System.String[])
+  commentId: M:AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension(System.String,System.String[])
+  id: IsValidFileExtension(System.String,System.String[])
+  parent: AdvanceFileUpload.Application.Validators.FileValidator
+  langs:
+  - csharp
+  - vb
+  name: IsValidFileExtension(string, string[])
+  nameWithType: FileValidator.IsValidFileExtension(string, string[])
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension(string, string[])
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsValidFileExtension
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Validators/FileValidator.cs
+    startLine: 28
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Validators
+  summary: Validates the file extension.
+  example: []
+  syntax:
+    content: public bool IsValidFileExtension(string fileExtension, string[] allowedExtensions)
+    parameters:
+    - id: fileExtension
+      type: System.String
+      description: The extension of the file to validate.
+    - id: allowedExtensions
+      type: System.String[]
+      description: The allowed extensions of the file to validate.
+    return:
+      type: System.Boolean
+      description: True if the file extension is valid; otherwise, false.
+    content.vb: Public Function IsValidFileExtension(fileExtension As String, allowedExtensions As String()) As Boolean
+  overload: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension*
+  implements:
+  - AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(System.String,System.String[])
+  nameWithType.vb: FileValidator.IsValidFileExtension(String, String())
+  fullName.vb: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension(String, String())
+  name.vb: IsValidFileExtension(String, String())
+references:
+- uid: AdvanceFileUpload.Application.Validators
+  commentId: N:AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Validators
+  nameWithType: AdvanceFileUpload.Application.Validators
+  fullName: AdvanceFileUpload.Application.Validators
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Validators
+    name: Validators
+    href: AdvanceFileUpload.Application.Validators.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Validators
+    name: Validators
+    href: AdvanceFileUpload.Application.Validators.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Application.Validators.IFileValidator
+  commentId: T:AdvanceFileUpload.Application.Validators.IFileValidator
+  parent: AdvanceFileUpload.Application.Validators
+  href: AdvanceFileUpload.Application.Validators.IFileValidator.html
+  name: IFileValidator
+  nameWithType: IFileValidator
+  fullName: AdvanceFileUpload.Application.Validators.IFileValidator
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName*
+  commentId: Overload:AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName
+  href: AdvanceFileUpload.Application.Validators.FileValidator.html#AdvanceFileUpload_Application_Validators_FileValidator_IsValidFileName_System_String_
+  name: IsValidFileName
+  nameWithType: FileValidator.IsValidFileName
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileName
+- uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(System.String)
+  commentId: M:AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(System.String)
+  parent: AdvanceFileUpload.Application.Validators.IFileValidator
+  isExternal: true
+  href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileName_System_String_
+  name: IsValidFileName(string)
+  nameWithType: IFileValidator.IsValidFileName(string)
+  fullName: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(string)
+  nameWithType.vb: IFileValidator.IsValidFileName(String)
+  fullName.vb: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(String)
+  name.vb: IsValidFileName(String)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(System.String)
+    name: IsValidFileName
+    href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileName(System.String)
+    name: IsValidFileName
+    href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize*
+  commentId: Overload:AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize
+  href: AdvanceFileUpload.Application.Validators.FileValidator.html#AdvanceFileUpload_Application_Validators_FileValidator_IsValidFileSize_System_Int64_System_Int64_
+  name: IsValidFileSize
+  nameWithType: FileValidator.IsValidFileSize
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileSize
+- uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(System.Int64,System.Int64)
+  commentId: M:AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(System.Int64,System.Int64)
+  parent: AdvanceFileUpload.Application.Validators.IFileValidator
+  isExternal: true
+  href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileSize_System_Int64_System_Int64_
+  name: IsValidFileSize(long, long)
+  nameWithType: IFileValidator.IsValidFileSize(long, long)
+  fullName: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(long, long)
+  nameWithType.vb: IFileValidator.IsValidFileSize(Long, Long)
+  fullName.vb: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(Long, Long)
+  name.vb: IsValidFileSize(Long, Long)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(System.Int64,System.Int64)
+    name: IsValidFileSize
+    href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileSize_System_Int64_System_Int64_
+  - name: (
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileSize(System.Int64,System.Int64)
+    name: IsValidFileSize
+    href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileSize_System_Int64_System_Int64_
+  - name: (
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: ','
+  - name: " "
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: )
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension*
+  commentId: Overload:AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension
+  href: AdvanceFileUpload.Application.Validators.FileValidator.html#AdvanceFileUpload_Application_Validators_FileValidator_IsValidFileExtension_System_String_System_String___
+  name: IsValidFileExtension
+  nameWithType: FileValidator.IsValidFileExtension
+  fullName: AdvanceFileUpload.Application.Validators.FileValidator.IsValidFileExtension
+- uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(System.String,System.String[])
+  commentId: M:AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(System.String,System.String[])
+  parent: AdvanceFileUpload.Application.Validators.IFileValidator
+  isExternal: true
+  href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileExtension_System_String_System_String___
+  name: IsValidFileExtension(string, string[])
+  nameWithType: IFileValidator.IsValidFileExtension(string, string[])
+  fullName: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(string, string[])
+  nameWithType.vb: IFileValidator.IsValidFileExtension(String, String())
+  fullName.vb: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(String, String())
+  name.vb: IsValidFileExtension(String, String())
+  spec.csharp:
+  - uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(System.String,System.String[])
+    name: IsValidFileExtension
+    href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileExtension_System_String_System_String___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Application.Validators.IFileValidator.IsValidFileExtension(System.String,System.String[])
+    name: IsValidFileExtension
+    href: AdvanceFileUpload.Application.Validators.IFileValidator.html#AdvanceFileUpload_Application_Validators_IFileValidator_IsValidFileExtension_System_String_System_String___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )

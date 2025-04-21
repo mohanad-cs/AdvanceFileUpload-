@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.Helper
+  commentId: N:AdvanceFileUpload.Client.Helper
+  id: AdvanceFileUpload.Client.Helper
+  children:
+  - AdvanceFileUpload.Client.Helper.FileLogger
+  - AdvanceFileUpload.Client.Helper.FileLoggerExtensions
+  - AdvanceFileUpload.Client.Helper.FileLoggerProvider
+  - AdvanceFileUpload.Client.Helper.LoggerFactoryHelper
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Client.Helper
+  nameWithType: AdvanceFileUpload.Client.Helper
+  fullName: AdvanceFileUpload.Client.Helper
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Client
+references:
+- uid: AdvanceFileUpload.Client.Helper.FileLogger
+  commentId: T:AdvanceFileUpload.Client.Helper.FileLogger
+  href: AdvanceFileUpload.Client.Helper.FileLogger.html
+  name: FileLogger
+  nameWithType: FileLogger
+  fullName: AdvanceFileUpload.Client.Helper.FileLogger
+- uid: AdvanceFileUpload.Client.Helper.FileLoggerExtensions
+  commentId: T:AdvanceFileUpload.Client.Helper.FileLoggerExtensions
+  href: AdvanceFileUpload.Client.Helper.FileLoggerExtensions.html
+  name: FileLoggerExtensions
+  nameWithType: FileLoggerExtensions
+  fullName: AdvanceFileUpload.Client.Helper.FileLoggerExtensions
+- uid: AdvanceFileUpload.Client.Helper.FileLoggerProvider
+  commentId: T:AdvanceFileUpload.Client.Helper.FileLoggerProvider
+  href: AdvanceFileUpload.Client.Helper.FileLoggerProvider.html
+  name: FileLoggerProvider
+  nameWithType: FileLoggerProvider
+  fullName: AdvanceFileUpload.Client.Helper.FileLoggerProvider
+- uid: AdvanceFileUpload.Client.Helper.LoggerFactoryHelper
+  commentId: T:AdvanceFileUpload.Client.Helper.LoggerFactoryHelper
+  href: AdvanceFileUpload.Client.Helper.LoggerFactoryHelper.html
+  name: LoggerFactoryHelper
+  nameWithType: LoggerFactoryHelper
+  fullName: AdvanceFileUpload.Client.Helper.LoggerFactoryHelper

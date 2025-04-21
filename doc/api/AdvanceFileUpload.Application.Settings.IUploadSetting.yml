@@ -6,6 +6,8 @@ items:
   parent: AdvanceFileUpload.Application.Settings
   children:
   - AdvanceFileUpload.Application.Settings.IUploadSetting.AllowedExtensions
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression
+  - AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing
   - AdvanceFileUpload.Application.Settings.IUploadSetting.MaxChunkSize
   - AdvanceFileUpload.Application.Settings.IUploadSetting.MaxFileSize
   - AdvanceFileUpload.Application.Settings.IUploadSetting.SavingDirectory
@@ -189,6 +191,68 @@ items:
       type: System.String
     content.vb: Property TempDirectory As String
   overload: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory*
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression
+  id: EnableCompression
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: EnableCompression
+  nameWithType: IUploadSetting.EnableCompression
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: EnableCompression
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 36
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets a value indicating whether to enable compression.
+  example: []
+  syntax:
+    content: bool EnableCompression { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Property EnableCompression As Boolean
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression*
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing
+  commentId: P:AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing
+  id: EnableIntegrationEventPublishing
+  parent: AdvanceFileUpload.Application.Settings.IUploadSetting
+  langs:
+  - csharp
+  - vb
+  name: EnableIntegrationEventPublishing
+  nameWithType: IUploadSetting.EnableIntegrationEventPublishing
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: EnableIntegrationEventPublishing
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Settings/IUploadSetting.cs
+    startLine: 40
+  assemblies:
+  - AdvanceFileUpload.Application
+  namespace: AdvanceFileUpload.Application.Settings
+  summary: Gets or sets a value indicating whether to enable integration event publishing.
+  example: []
+  syntax:
+    content: bool EnableIntegrationEventPublishing { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Property EnableIntegrationEventPublishing As Boolean
+  overload: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing*
 references:
 - uid: AdvanceFileUpload.Application.Settings
   commentId: N:AdvanceFileUpload.Application.Settings
@@ -302,3 +366,26 @@ references:
   name: TempDirectory
   nameWithType: IUploadSetting.TempDirectory
   fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.TempDirectory
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_EnableCompression
+  name: EnableCompression
+  nameWithType: IUploadSetting.EnableCompression
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableCompression
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing*
+  commentId: Overload:AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing
+  href: AdvanceFileUpload.Application.Settings.IUploadSetting.html#AdvanceFileUpload_Application_Settings_IUploadSetting_EnableIntegrationEventPublishing
+  name: EnableIntegrationEventPublishing
+  nameWithType: IUploadSetting.EnableIntegrationEventPublishing
+  fullName: AdvanceFileUpload.Application.Settings.IUploadSetting.EnableIntegrationEventPublishing

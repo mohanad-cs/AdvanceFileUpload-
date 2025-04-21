@@ -71,7 +71,7 @@ namespace AdvanceFileUpload.Application.EventHandling
             {
                 SessionCompletedIntegrationEvent sessionCompletedIntegrationEvent = new SessionCompletedIntegrationEvent()
                 {
-                    SessionId= notification.FileUploadSession.Id,
+                    SessionId = notification.FileUploadSession.Id,
                     FileName = notification.FileUploadSession.FileName,
                     FileSize = notification.FileUploadSession.FileSize,
                     FileExtension = notification.FileUploadSession.FileExtension,

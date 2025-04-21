@@ -1,8 +1,6 @@
-﻿using AdvanceFileUpload.Domain.Core;
-using Azure.Core;
+﻿using System.Net;
+using AdvanceFileUpload.Domain.Core;
 using Microsoft.AspNetCore.Connections;
-using System;
-using System.Net;
 
 namespace AdvanceFileUpload.API.Middleware
 {
