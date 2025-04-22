@@ -66,6 +66,10 @@
             layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(components);
+            txtAPIBaseAdrees = new DevExpress.XtraEditors.TextEdit();
+            layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            txtAPIKey = new DevExpress.XtraEditors.TextEdit();
+            layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
@@ -95,6 +99,10 @@
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIBaseAdrees.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIKey.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem12).BeginInit();
             SuspendLayout();
             // 
             // barManager1
@@ -192,6 +200,8 @@
             layoutControl1.Controls.Add(spinMaxConcurrentUploads);
             layoutControl1.Controls.Add(spinMaxRetriesCount);
             layoutControl1.Controls.Add(checkEnableCompression);
+            layoutControl1.Controls.Add(txtAPIBaseAdrees);
+            layoutControl1.Controls.Add(txtAPIKey);
             layoutControl1.Dock = DockStyle.Fill;
             layoutControl1.Location = new Point(0, 30);
             layoutControl1.Margin = new Padding(5, 4, 5, 4);
@@ -203,7 +213,7 @@
             // 
             // comboBoxCompressionAlgorithm
             // 
-            comboBoxCompressionAlgorithm.Location = new Point(965, 82);
+            comboBoxCompressionAlgorithm.Location = new Point(965, 134);
             comboBoxCompressionAlgorithm.Margin = new Padding(5, 4, 5, 4);
             comboBoxCompressionAlgorithm.MenuManager = barManager1;
             comboBoxCompressionAlgorithm.Name = "comboBoxCompressionAlgorithm";
@@ -211,28 +221,28 @@
             comboBoxCompressionAlgorithm.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             comboBoxCompressionAlgorithm.Size = new Size(421, 22);
             comboBoxCompressionAlgorithm.StyleController = layoutControl1;
-            comboBoxCompressionAlgorithm.TabIndex = 4;
+            comboBoxCompressionAlgorithm.TabIndex = 5;
             // 
             // memoEdit
             // 
-            memoEdit.Location = new Point(24, 332);
+            memoEdit.Location = new Point(24, 384);
             memoEdit.Margin = new Padding(5, 4, 5, 4);
             memoEdit.MenuManager = barManager1;
             memoEdit.Name = "memoEdit";
             memoEdit.Properties.Appearance.Font = new Font("Tahoma", 9F);
             memoEdit.Properties.Appearance.Options.UseFont = true;
-            memoEdit.Size = new Size(1362, 290);
+            memoEdit.Size = new Size(1362, 238);
             memoEdit.StyleController = layoutControl1;
-            memoEdit.TabIndex = 9;
+            memoEdit.TabIndex = 10;
             // 
             // progressBarControl
             // 
-            progressBarControl.Location = new Point(196, 130);
+            progressBarControl.Location = new Point(196, 148);
             progressBarControl.Margin = new Padding(5, 4, 5, 4);
             progressBarControl.MenuManager = barManager1;
             progressBarControl.Name = "progressBarControl";
             progressBarControl.Properties.ShowTitle = true;
-            progressBarControl.Size = new Size(569, 37);
+            progressBarControl.Size = new Size(569, 47);
             progressBarControl.StyleController = layoutControl1;
             progressBarControl.TabIndex = 1;
             // 
@@ -248,7 +258,7 @@
             // 
             // txtFileSize
             // 
-            txtFileSize.Location = new Point(196, 90);
+            txtFileSize.Location = new Point(196, 98);
             txtFileSize.Margin = new Padding(5, 4, 5, 4);
             txtFileSize.MenuManager = barManager1;
             txtFileSize.Name = "txtFileSize";
@@ -258,7 +268,7 @@
             // 
             // comboBoxCompressionLevel
             // 
-            comboBoxCompressionLevel.Location = new Point(965, 122);
+            comboBoxCompressionLevel.Location = new Point(965, 174);
             comboBoxCompressionLevel.Margin = new Padding(5, 4, 5, 4);
             comboBoxCompressionLevel.MenuManager = barManager1;
             comboBoxCompressionLevel.Name = "comboBoxCompressionLevel";
@@ -266,24 +276,24 @@
             comboBoxCompressionLevel.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             comboBoxCompressionLevel.Size = new Size(421, 22);
             comboBoxCompressionLevel.StyleController = layoutControl1;
-            comboBoxCompressionLevel.TabIndex = 5;
+            comboBoxCompressionLevel.TabIndex = 6;
             // 
             // btnTempDir
             // 
             btnTempDir.EditValue = "";
-            btnTempDir.Location = new Point(965, 162);
+            btnTempDir.Location = new Point(965, 214);
             btnTempDir.Margin = new Padding(5, 4, 5, 4);
             btnTempDir.MenuManager = barManager1;
             btnTempDir.Name = "btnTempDir";
             btnTempDir.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton() });
             btnTempDir.Size = new Size(421, 22);
             btnTempDir.StyleController = layoutControl1;
-            btnTempDir.TabIndex = 6;
+            btnTempDir.TabIndex = 7;
             // 
             // spinMaxConcurrentUploads
             // 
             spinMaxConcurrentUploads.EditValue = new decimal(new int[] { 1, 0, 0, 0 });
-            spinMaxConcurrentUploads.Location = new Point(965, 202);
+            spinMaxConcurrentUploads.Location = new Point(965, 254);
             spinMaxConcurrentUploads.Margin = new Padding(5, 4, 5, 4);
             spinMaxConcurrentUploads.MenuManager = barManager1;
             spinMaxConcurrentUploads.Name = "spinMaxConcurrentUploads";
@@ -296,12 +306,12 @@
             spinMaxConcurrentUploads.Properties.MinValue = new decimal(new int[] { 1, 0, 0, 0 });
             spinMaxConcurrentUploads.Size = new Size(421, 24);
             spinMaxConcurrentUploads.StyleController = layoutControl1;
-            spinMaxConcurrentUploads.TabIndex = 7;
+            spinMaxConcurrentUploads.TabIndex = 8;
             // 
             // spinMaxRetriesCount
             // 
             spinMaxRetriesCount.EditValue = new decimal(new int[] { 1, 0, 0, 0 });
-            spinMaxRetriesCount.Location = new Point(965, 242);
+            spinMaxRetriesCount.Location = new Point(965, 294);
             spinMaxRetriesCount.Margin = new Padding(5, 4, 5, 4);
             spinMaxRetriesCount.MenuManager = barManager1;
             spinMaxRetriesCount.Name = "spinMaxRetriesCount";
@@ -314,11 +324,11 @@
             spinMaxRetriesCount.Properties.MinValue = new decimal(new int[] { 1, 0, 0, 0 });
             spinMaxRetriesCount.Size = new Size(421, 24);
             spinMaxRetriesCount.StyleController = layoutControl1;
-            spinMaxRetriesCount.TabIndex = 8;
+            spinMaxRetriesCount.TabIndex = 9;
             // 
             // checkEnableCompression
             // 
-            checkEnableCompression.Location = new Point(793, 50);
+            checkEnableCompression.Location = new Point(793, 102);
             checkEnableCompression.Margin = new Padding(5, 4, 5, 4);
             checkEnableCompression.MenuManager = barManager1;
             checkEnableCompression.Name = "checkEnableCompression";
@@ -326,7 +336,7 @@
             checkEnableCompression.Properties.GlyphAlignment = DevExpress.Utils.HorzAlignment.Far;
             checkEnableCompression.Size = new Size(179, 24);
             checkEnableCompression.StyleController = layoutControl1;
-            checkEnableCompression.TabIndex = 3;
+            checkEnableCompression.TabIndex = 4;
             // 
             // Root
             // 
@@ -346,7 +356,7 @@
             layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem2, layoutControlItem3, emptySpaceItem3 });
             layoutControlGroup1.Location = new Point(0, 0);
             layoutControlGroup1.Name = "layoutControlGroup1";
-            layoutControlGroup1.Size = new Size(769, 282);
+            layoutControlGroup1.Size = new Size(769, 334);
             layoutControlGroup1.Text = "Upload Info";
             // 
             // layoutControlItem1
@@ -355,7 +365,7 @@
             layoutControlItem1.Location = new Point(0, 0);
             layoutControlItem1.MinSize = new Size(244, 40);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(745, 40);
+            layoutControlItem1.Size = new Size(745, 48);
             layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem1.Text = "File To Upload";
             layoutControlItem1.TextSize = new Size(160, 18);
@@ -363,10 +373,10 @@
             // layoutControlItem2
             // 
             layoutControlItem2.Control = txtFileSize;
-            layoutControlItem2.Location = new Point(0, 40);
+            layoutControlItem2.Location = new Point(0, 48);
             layoutControlItem2.MinSize = new Size(244, 40);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new Size(745, 40);
+            layoutControlItem2.Size = new Size(745, 50);
             layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem2.Text = "File Size";
             layoutControlItem2.TextSize = new Size(160, 18);
@@ -374,10 +384,10 @@
             // layoutControlItem3
             // 
             layoutControlItem3.Control = progressBarControl;
-            layoutControlItem3.Location = new Point(0, 80);
+            layoutControlItem3.Location = new Point(0, 98);
             layoutControlItem3.MinSize = new Size(244, 30);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new Size(745, 41);
+            layoutControlItem3.Size = new Size(745, 51);
             layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem3.Text = "Progress";
             layoutControlItem3.TextSize = new Size(160, 18);
@@ -385,25 +395,25 @@
             // emptySpaceItem3
             // 
             emptySpaceItem3.AllowHotTrack = false;
-            emptySpaceItem3.Location = new Point(0, 121);
+            emptySpaceItem3.Location = new Point(0, 149);
             emptySpaceItem3.MinSize = new Size(106, 26);
             emptySpaceItem3.Name = "emptySpaceItem3";
-            emptySpaceItem3.Size = new Size(745, 111);
+            emptySpaceItem3.Size = new Size(745, 135);
             emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             emptySpaceItem3.TextSize = new Size(0, 0);
             // 
             // layoutControlGroup2
             // 
-            layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem8, layoutControlItem9, layoutControlItem10, emptySpaceItem1 });
+            layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem8, layoutControlItem9, layoutControlItem10, emptySpaceItem1, layoutControlItem11, layoutControlItem12 });
             layoutControlGroup2.Location = new Point(769, 0);
             layoutControlGroup2.Name = "layoutControlGroup2";
-            layoutControlGroup2.Size = new Size(621, 282);
+            layoutControlGroup2.Size = new Size(621, 334);
             layoutControlGroup2.Text = "Upload Options";
             // 
             // layoutControlItem5
             // 
             layoutControlItem5.Control = comboBoxCompressionAlgorithm;
-            layoutControlItem5.Location = new Point(0, 32);
+            layoutControlItem5.Location = new Point(0, 84);
             layoutControlItem5.MaxSize = new Size(0, 40);
             layoutControlItem5.MinSize = new Size(244, 40);
             layoutControlItem5.Name = "layoutControlItem5";
@@ -415,7 +425,7 @@
             // layoutControlItem6
             // 
             layoutControlItem6.Control = comboBoxCompressionLevel;
-            layoutControlItem6.Location = new Point(0, 72);
+            layoutControlItem6.Location = new Point(0, 124);
             layoutControlItem6.MaxSize = new Size(0, 40);
             layoutControlItem6.MinSize = new Size(244, 40);
             layoutControlItem6.Name = "layoutControlItem6";
@@ -427,7 +437,7 @@
             // layoutControlItem7
             // 
             layoutControlItem7.Control = btnTempDir;
-            layoutControlItem7.Location = new Point(0, 112);
+            layoutControlItem7.Location = new Point(0, 164);
             layoutControlItem7.MaxSize = new Size(0, 40);
             layoutControlItem7.MinSize = new Size(244, 40);
             layoutControlItem7.Name = "layoutControlItem7";
@@ -439,7 +449,7 @@
             // layoutControlItem8
             // 
             layoutControlItem8.Control = spinMaxConcurrentUploads;
-            layoutControlItem8.Location = new Point(0, 152);
+            layoutControlItem8.Location = new Point(0, 204);
             layoutControlItem8.MaxSize = new Size(0, 40);
             layoutControlItem8.MinSize = new Size(244, 40);
             layoutControlItem8.Name = "layoutControlItem8";
@@ -451,7 +461,7 @@
             // layoutControlItem9
             // 
             layoutControlItem9.Control = spinMaxRetriesCount;
-            layoutControlItem9.Location = new Point(0, 192);
+            layoutControlItem9.Location = new Point(0, 244);
             layoutControlItem9.MaxSize = new Size(0, 40);
             layoutControlItem9.MinSize = new Size(244, 40);
             layoutControlItem9.Name = "layoutControlItem9";
@@ -463,7 +473,7 @@
             // layoutControlItem10
             // 
             layoutControlItem10.Control = checkEnableCompression;
-            layoutControlItem10.Location = new Point(0, 0);
+            layoutControlItem10.Location = new Point(0, 52);
             layoutControlItem10.MaxSize = new Size(183, 32);
             layoutControlItem10.MinSize = new Size(183, 32);
             layoutControlItem10.Name = "layoutControlItem10";
@@ -475,7 +485,7 @@
             // emptySpaceItem1
             // 
             emptySpaceItem1.AllowHotTrack = false;
-            emptySpaceItem1.Location = new Point(183, 0);
+            emptySpaceItem1.Location = new Point(183, 52);
             emptySpaceItem1.MaxSize = new Size(0, 32);
             emptySpaceItem1.MinSize = new Size(106, 32);
             emptySpaceItem1.Name = "emptySpaceItem1";
@@ -486,9 +496,9 @@
             // layoutControlGroup3
             // 
             layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem4 });
-            layoutControlGroup3.Location = new Point(0, 282);
+            layoutControlGroup3.Location = new Point(0, 334);
             layoutControlGroup3.Name = "layoutControlGroup3";
-            layoutControlGroup3.Size = new Size(1390, 344);
+            layoutControlGroup3.Size = new Size(1390, 292);
             layoutControlGroup3.Text = "Progress Info";
             // 
             // layoutControlItem4
@@ -496,10 +506,46 @@
             layoutControlItem4.Control = memoEdit;
             layoutControlItem4.Location = new Point(0, 0);
             layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(1366, 294);
+            layoutControlItem4.Size = new Size(1366, 242);
             layoutControlItem4.Text = "Progress Info";
             layoutControlItem4.TextSize = new Size(0, 0);
             layoutControlItem4.TextVisible = false;
+            // 
+            // txtAPIBaseAdrees
+            // 
+            txtAPIBaseAdrees.Location = new Point(965, 50);
+            txtAPIBaseAdrees.MenuManager = barManager1;
+            txtAPIBaseAdrees.Name = "txtAPIBaseAdrees";
+            txtAPIBaseAdrees.Size = new Size(421, 22);
+            txtAPIBaseAdrees.StyleController = layoutControl1;
+            txtAPIBaseAdrees.TabIndex = 3;
+            // 
+            // layoutControlItem11
+            // 
+            layoutControlItem11.Control = txtAPIBaseAdrees;
+            layoutControlItem11.Location = new Point(0, 0);
+            layoutControlItem11.Name = "layoutControlItem11";
+            layoutControlItem11.Size = new Size(597, 26);
+            layoutControlItem11.Text = "API Base Address";
+            layoutControlItem11.TextSize = new Size(160, 18);
+            // 
+            // txtAPIKey
+            // 
+            txtAPIKey.Location = new Point(965, 76);
+            txtAPIKey.MenuManager = barManager1;
+            txtAPIKey.Name = "txtAPIKey";
+            txtAPIKey.Size = new Size(421, 22);
+            txtAPIKey.StyleController = layoutControl1;
+            txtAPIKey.TabIndex = 11;
+            // 
+            // layoutControlItem12
+            // 
+            layoutControlItem12.Control = txtAPIKey;
+            layoutControlItem12.Location = new Point(0, 26);
+            layoutControlItem12.Name = "layoutControlItem12";
+            layoutControlItem12.Size = new Size(597, 26);
+            layoutControlItem12.Text = "API Key";
+            layoutControlItem12.TextSize = new Size(160, 18);
             // 
             // UploadForm
             // 
@@ -546,6 +592,10 @@
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIBaseAdrees.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIKey.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem12).EndInit();
             ResumeLayout(false);
             PerformLayout();
 
@@ -590,5 +640,10 @@
         private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.TextEdit txtAPIBaseAdrees;
+        private DevExpress.XtraEditors.TextEdit txtAPIKey;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
     }
 }

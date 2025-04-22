@@ -23,16 +23,17 @@ namespace AdvanceFileUpload.Sample.WinForm
         const string CancelCaption = "Cancel Uploading";
         private readonly string _defaultTempDirectory = Path.GetTempPath();
 
-        private Uri apiAddress = new Uri("http://localhost:5021");
 
-        private UploadOptions _uploadOptions;
         private FileUploadService _fileUploadService;
+        private FileUploadBuilder _fileUploadBuilder;
         public UploadForm()
         {
             InitializeComponent();
+            txtAPIBaseAdrees.Text = "http://localhost:5021";
+            txtAPIKey.Text = "secret";
             btnPause_Resume.Enabled = false;
             btnCancel.Enabled = false;
-            btnCancel.Caption= CancelCaption;
+            btnCancel.Caption = CancelCaption;
             btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.CaretRightSolid8;
             btnPause_Resume.Caption = StartCaption;
             btnUpload.ItemClick += BtnUpload_ItemClick;
@@ -89,9 +90,29 @@ namespace AdvanceFileUpload.Sample.WinForm
                 _fileUploadService.SessionCompleted += _fileUploadService_SessionCompleted;
                 _fileUploadService.UploadError += _fileUploadService_UploadError;
                 _fileUploadService.NetworkError += _fileUploadService_NetworkError;
+                _fileUploadService.AuthenticationError += _fileUploadService_AuthenticationError;
             }
 
 
+        }
+
+        private void _fileUploadService_AuthenticationError(object? sender, string e)
+        {
+            memoEdit.Invoke(() =>
+            memoEdit.AppendLine(e + "\n"));
+
+            btnPause_Resume.Caption = StartCaption;
+            btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.CaretRightSolid8;
+            btnPause_Resume.Enabled = true;
+            btnUpload.Enabled = false;
+            btnCancel.Enabled = false;
+            Invoke(() =>
+            {
+                layoutControlGroup2.Enabled = true;
+            });
+            _fileUploadService?.Dispose();
+
+        
         }
 
         private void _fileUploadService_NetworkError(object? sender, string e)
@@ -110,7 +131,7 @@ namespace AdvanceFileUpload.Sample.WinForm
         private void _fileUploadService_UploadError(object? sender, string e)
         {
             memoEdit.Invoke(() =>
-            memoEdit.AppendLine(e+"\n"));
+            memoEdit.AppendLine(e + "\n"));
             if (_fileUploadService.CanResumeSession)
             {
                 btnPause_Resume.Caption = ResumeCaption;
@@ -173,7 +194,7 @@ namespace AdvanceFileUpload.Sample.WinForm
         private void _fileUploadService_SessionPaused(object? sender, SessionPausedEventArgs e)
         {
             memoEdit.Invoke(() =>
-            memoEdit. AppendLine($"Session [{e.SessionId}] Paused.\n"));
+            memoEdit.AppendLine($"Session [{e.SessionId}] Paused.\n"));
         }
 
         private void _fileUploadService_SessionPausing(object? sender, EventArgs e)
@@ -217,8 +238,8 @@ namespace AdvanceFileUpload.Sample.WinForm
 
         private void _fileUploadService_FileCompressionCompleted(object? sender, EventArgs e)
         {
-            
-           
+
+
             memoEdit.Invoke(() => memoEdit.AppendLine("File compression completed.\n"));
 
         }
@@ -248,6 +269,9 @@ namespace AdvanceFileUpload.Sample.WinForm
                 _fileUploadService.SessionCanceled -= _fileUploadService_SessionCanceled;
                 _fileUploadService.SessionCompleting -= _fileUploadService_SessionCompleting;
                 _fileUploadService.SessionCompleted -= _fileUploadService_SessionCompleted;
+                _fileUploadService.UploadError -= _fileUploadService_UploadError;
+                _fileUploadService.NetworkError -= _fileUploadService_NetworkError;
+                _fileUploadService.AuthenticationError -= _fileUploadService_AuthenticationError;
             }
         }
         private void CheckEnableCompression_EditValueChanged(object? sender, EventArgs e)
@@ -314,25 +338,47 @@ namespace AdvanceFileUpload.Sample.WinForm
                     e.Item.Caption = PauseCaption;
                     e.Item.ImageOptions.SvgImage = Properties.Resources.PauseBold;
                     btnCancel.Enabled = true;
-                    _uploadOptions = new UploadOptions()
-                    {
-                        CompressionOption = checkEnableCompression.Checked ? new
-                        CompressionOption()
-                        {
-                            Algorithm = (CompressionAlgorithmOption)comboBoxCompressionAlgorithm.EditValue,
-                            Level = (CompressionLevelOption)comboBoxCompressionLevel.EditValue
-                        } : null,
-                        TempDirectory = btnTempDir.Text,
-                        MaxConcurrentUploads = (int)spinMaxConcurrentUploads.Value,
-                        MaxRetriesCount = (int)spinMaxRetriesCount.Value
-                    };
+
                     layoutControlGroup2.Enabled = false;
-                    if (_fileUploadService!=null)
+                    if (_fileUploadService != null)
                     {
                         UnListenToUploadEvents();
                         _fileUploadService.Dispose();
+                        _fileUploadService = null;
                     }
-                    _fileUploadService = new FileUploadService(apiAddress, _uploadOptions);
+                    if (string.IsNullOrWhiteSpace(txtAPIBaseAdrees.Text))
+                    {
+
+                        txtAPIBaseAdrees.ErrorText = "The Api Base Address is required";
+                        return;
+                    }
+                    txtAPIBaseAdrees.ErrorText = string.Empty;
+                    if (string.IsNullOrWhiteSpace(txtAPIKey.Text))
+                    {
+
+                        txtAPIKey.ErrorText = "The Api Key is required";
+                        return;
+                    }
+                    txtAPIKey.ErrorText = string.Empty;
+                    _fileUploadBuilder = FileUploadBuilder.New(txtAPIBaseAdrees.Text.Trim())
+                        .WithAPIKey(txtAPIKey.Text)
+                        .WithCompressionOption(() =>
+                        {
+                            if (checkEnableCompression.Checked)
+                            {
+                                return new CompressionOption()
+                                {
+                                    Algorithm = (CompressionAlgorithmOption)comboBoxCompressionAlgorithm.EditValue,
+                                    Level = (CompressionLevelOption)comboBoxCompressionLevel.EditValue
+                                };
+                            }
+                            return null;
+                        })
+                        .WithTempDirectory(btnTempDir.Text)
+                        .WithMaxRetriesCount((int)spinMaxRetriesCount.Value)
+                        .WithMaxConcurrentUploads((int)spinMaxConcurrentUploads.Value);
+
+                    _fileUploadService = _fileUploadBuilder.Build();
 
                     ListenToUploadEvents();
                     await _fileUploadService.UploadFileAsync(txtFilePath.Text);
@@ -352,10 +398,10 @@ namespace AdvanceFileUpload.Sample.WinForm
                     {
                         if (_fileUploadService.IsSessionCompleted || _fileUploadService.IsSessionCanceled)
                         {
-                            
+
                         }
                     }
-                   
+
                 }
                 else if (e.Item.Caption == ResumeCaption)
                 {
@@ -373,9 +419,10 @@ namespace AdvanceFileUpload.Sample.WinForm
 
                         }
                     }
-                   
+
                 }
-                Invoke(() => {
+                Invoke(() =>
+                {
                     memoEdit.Focus();
                 });
             }
@@ -399,7 +446,7 @@ namespace AdvanceFileUpload.Sample.WinForm
                     txtFilePath.Text = filePath;
                     txtFileSize.Text = GetFileSize(new System.IO.FileInfo(filePath).Length);
                     btnPause_Resume.Caption = StartCaption;
-                    btnPause_Resume.ImageOptions.SvgImage= Properties.Resources.CaretRightSolid8;
+                    btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.CaretRightSolid8;
                     btnPause_Resume.Enabled = true;
                 }
                 layoutControlGroup2.Enabled = true;

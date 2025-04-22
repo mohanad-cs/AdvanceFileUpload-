@@ -16,7 +16,7 @@ namespace AdvanceFileUpload.Client
         private List<string> _excludedCompressionExtensions = new();
         private FileUploadBuilder(Uri baseUri)
         {
-
+            _baseUrl = baseUri;
         }
         /// <summary>
         /// Creates a new instance of <see cref="FileUploadBuilder"/> with the specified base URL.
@@ -94,7 +94,6 @@ namespace AdvanceFileUpload.Client
             Uri uri = new Uri(baseUrl);
             return new FileUploadBuilder(uri)
             {
-                _baseUrl = uri,
                 _apiKey = apiKey,
             };
         }

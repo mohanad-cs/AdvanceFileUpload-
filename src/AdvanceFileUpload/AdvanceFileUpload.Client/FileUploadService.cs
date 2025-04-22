@@ -224,7 +224,7 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// Occurs when an authentication error happens.
         /// </summary>
-        public event EventHandler? AuthenticationError;
+        public event EventHandler<string> AuthenticationError;
 
         #endregion Events
 
@@ -247,7 +247,7 @@ namespace AdvanceFileUpload.Client
                 _httpClient = new HttpClient()
                 {
                     BaseAddress = apiBaseAddress ?? throw new ArgumentNullException(nameof(apiBaseAddress)),
-                    Timeout = TimeSpan.FromMinutes(10),
+                    Timeout = TimeSpan.FromSeconds(15),
 
                 };
                 _httpClient.DefaultRequestHeaders.Add("X-APIKEY", uploadOptions.APIKey);
@@ -265,7 +265,7 @@ namespace AdvanceFileUpload.Client
                 });
                 var hubUri = new Uri($"{apiBaseAddress.AbsoluteUri}{RouteTemplates.UploadProcessHub}");
                 _hubConnection = new HubConnectionBuilder()
-                    .WithUrl(hubUri)
+                    .WithUrl(hubUri, (op) => { op.Headers.Add("X-APIKEY", _uploadOptions.APIKey); })
                     .WithAutomaticReconnect()
                     .Build();
                 _hubConnection.On<UploadSessionStatusNotification>("ReceiveUploadProcessNotification", status =>
@@ -379,8 +379,8 @@ namespace AdvanceFileUpload.Client
                 {
                     _logger.LogInformation("Pausing upload session {SessionId}", _sessionId);
                     OnSessionPausing();
-                    await _cancellationTokenSource.CancelAsync();
-                    await ExecuteWithRetryPolicy(ct =>
+                    _cancellationTokenSource.Cancel();
+                    await ExecuteWithRetryPolicy(() =>
                         _httpClient.PostAsJsonAsync(RouteTemplates.PauseSession,
                             new PauseUploadSessionRequest { SessionId = _sessionId },
                             CancellationToken.None
@@ -451,8 +451,8 @@ namespace AdvanceFileUpload.Client
                 {
                     _logger.LogInformation("Canceling upload session {SessionId}", _sessionId);
                     OnSessionCanceling();
-                    await _cancellationTokenSource.CancelAsync();
-                    var completeResponse = await ExecuteWithRetryPolicy(ct =>
+                    _cancellationTokenSource.Cancel();
+                    var completeResponse = await ExecuteWithRetryPolicy(() =>
                             _httpClient.PostAsJsonAsync(RouteTemplates.CancelSession,
                                 new CancelUploadSessionRequest { SessionId = _sessionId },
                                 CancellationToken.None
@@ -512,7 +512,7 @@ namespace AdvanceFileUpload.Client
             if (_fileHasBeenCompressed && _fileHasBeenSplit) // if session already been created  check if we have been  compressed and spited the file. if so we then just need to upload remain chunks
             {
                 _logger.LogInformation("Resuming upload session {SessionId}", _sessionId);
-                var statusResponse = await ExecuteWithRetryPolicy(ct => _httpClient.GetAsync($"{RouteTemplates.SessionStatus}?sessionId={_sessionId}", _cancellationTokenSource.Token));
+                var statusResponse = await ExecuteWithRetryPolicy(() => _httpClient.GetAsync($"{RouteTemplates.SessionStatus}?sessionId={_sessionId}", _cancellationTokenSource.Token));
                 statusResponse.EnsureSuccessStatusCode();
                 var uploadStatus = await statusResponse.Content.ReadFromJsonAsync<UploadSessionStatusResponse>().ConfigureAwait(false);
                 if (uploadStatus != null)
@@ -570,7 +570,7 @@ namespace AdvanceFileUpload.Client
                 HubConnectionId = _hubConnectionsId
             };
             _cancellationTokenSource.Token.ThrowIfCancellationRequested();
-            var response = await ExecuteWithRetryPolicy((ct) =>
+            var response = await ExecuteWithRetryPolicy(() =>
                 _httpClient.PostAsJsonAsync(RouteTemplates.UploadChunk, uploadChunkRequest, _cancellationTokenSource.Token)
             );
             response.EnsureSuccessStatusCode();
@@ -623,7 +623,7 @@ namespace AdvanceFileUpload.Client
             {
                 _logger.LogInformation("Completing upload session {SessionId}", _sessionId);
                 OnSessionCompleting();
-                var completeResponse = await ExecuteWithRetryPolicy((ct) => _httpClient.PostAsJsonAsync($"{RouteTemplates.CompleteSession}", new CompleteUploadSessionRequest() { SessionId = _sessionId }, _cancellationTokenSource.Token));
+                var completeResponse = await ExecuteWithRetryPolicy(() => _httpClient.PostAsJsonAsync($"{RouteTemplates.CompleteSession}", new CompleteUploadSessionRequest() { SessionId = _sessionId }, _cancellationTokenSource.Token));
                 completeResponse.EnsureSuccessStatusCode();
                 OnSessionCompleted(new SessionCompletedEventArgs(_sessionId, Path.GetFileName(_originalFilePath), new FileInfo(_originalFilePath).Length));
                 completeResponse.Dispose();
@@ -641,11 +641,11 @@ namespace AdvanceFileUpload.Client
         /// <param name="action">The action to execute, which returns an <see cref="HttpResponseMessage"/>.</param>
         /// <returns>A task that represents the asynchronous operation. The task result contains the <see cref="HttpResponseMessage"/>.</returns>
         /// <exception cref="UploadException">Thrown when an error occurs during the upload process.</exception>
-        private async Task<HttpResponseMessage> ExecuteWithRetryPolicy(Func<CancellationToken, Task<HttpResponseMessage>> action)
+        private async Task<HttpResponseMessage> ExecuteWithRetryPolicy(Func<Task<HttpResponseMessage>> action)
         {
             await CheckAPIHealth();
 
-            var response = await _retryPolicy.ExecuteAsync(action, _cancellationTokenSource.Token).ConfigureAwait(false);
+            var response = await _retryPolicy.ExecuteAsync(action).ConfigureAwait(false);
             if (!response.IsSuccessStatusCode)
             {
                 // handle Authentication  errors
@@ -653,12 +653,6 @@ namespace AdvanceFileUpload.Client
                 {
                     OnAuthenticationError();
 
-                }
-                else if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-                {
-                    // TODO: Handle ToManyRequests response. 
-                    // Maybe we can delay the upload for a while and then retry execute action.
-                    // or we can further enhance the retry policy to handle this case.
                 }
                 else
                 {
@@ -686,7 +680,7 @@ namespace AdvanceFileUpload.Client
                 if ((DateTime.Now.TimeOfDay - _lastHealthCheck) > TimeSpan.FromSeconds(5))
                 {
                     _lastHealthCheck = DateTime.Now.TimeOfDay;
-                    _cachedConnectionStatus = await _networkConnectionChecker.CheckApiHealthAsync(_cancellationTokenSource.Token).ConfigureAwait(false);
+                    _cachedConnectionStatus = await _networkConnectionChecker.CheckApiHealthAsync().ConfigureAwait(false);
                     if (_cachedConnectionStatus == ConnectionStatus.Degraded)
                     {
                         _cachedConnectionStatus = ConnectionStatus.Healthy; // handling ToManyRequest scenario.
@@ -792,7 +786,7 @@ namespace AdvanceFileUpload.Client
                     Compression = _uploadOptions.CompressionOption,
                     HubConnectionId = _hubConnectionsId,
                 };
-                var createSessionResponse = await ExecuteWithRetryPolicy((ct) => _httpClient.PostAsJsonAsync(RouteTemplates.CreateSession, createSessionRequest, _cancellationTokenSource.Token));
+                var createSessionResponse = await ExecuteWithRetryPolicy(() => _httpClient.PostAsJsonAsync(RouteTemplates.CreateSession, createSessionRequest, _cancellationTokenSource.Token));
                 createSessionResponse.EnsureSuccessStatusCode();
                 _cancellationTokenSource.Token.ThrowIfCancellationRequested();
                 var sessionResponse = await createSessionResponse.Content.ReadFromJsonAsync<CreateUploadSessionResponse>().ConfigureAwait(false);
@@ -826,17 +820,26 @@ namespace AdvanceFileUpload.Client
                     OnUploadError("An argument error occurred during the upload process. See the inner Exception for details.", argumentException);
                     break;
                 case HttpRequestException httpRequestException:
-                    if (httpRequestException.HttpRequestError == HttpRequestError.ConnectionError)
+                    if (httpRequestException.StatusCode == HttpStatusCode.Unauthorized)
+                    {
+                        OnAuthenticationError();
+                    }
+                    else if (httpRequestException.HttpRequestError == HttpRequestError.ConnectionError)
                     {
                         OnNetworkError("An Connection Error occurred during the upload process. See the inner Exception for details.", httpRequestException);
                     }
                     else
                     {
+                        if (httpRequestException.StatusCode == HttpStatusCode.TooManyRequests)
+                        {
+                            OnUploadError("To Many request please try again after a while", exception);
+                            break;
+                        }
                         OnUploadError("An HTTP request error occurred during the upload process.  See the inner Exception for details.", httpRequestException);
                     }
                     break;
                 case TaskCanceledException taskCanceledException:
-                    OnUploadError("The upload process was canceled.", taskCanceledException);
+                    //  OnUploadError("The upload process was canceled.", taskCanceledException);
                     break;
                 case IOException ioException:
                     OnUploadError("An I/O error occurred during the upload process. See the inner Exception for details.", ioException);
@@ -845,12 +848,17 @@ namespace AdvanceFileUpload.Client
                     OnUploadError("Access to a file or directory was denied during the upload process. See the inner Exception for details.", unauthorizedAccessException);
                     break;
                 case OperationCanceledException operationCanceledException:
-                    OnUploadError("The operation was canceled.", operationCanceledException);
+                    // OnUploadError("The operation was canceled.", operationCanceledException);
                     break;
                 case TimeoutException timeoutException:
                     OnUploadError("The operation timed out.", timeoutException);
                     break;
                 default:
+                    if (exception.HResult == -2146233088)
+                    {
+                        OnUploadError("To Many request please try again after a while", exception);
+                        break;
+                    }
                     OnUploadError("An error occurred during the upload process.", exception);
                     break;
             }
@@ -990,7 +998,7 @@ namespace AdvanceFileUpload.Client
         }
         private void OnAuthenticationError()
         {
-            AuthenticationError?.Invoke(this, EventArgs.Empty);
+            AuthenticationError?.Invoke(this, "Authentication is required");
             throw new UploadException("Authentication error occurred.");
         }
         #endregion

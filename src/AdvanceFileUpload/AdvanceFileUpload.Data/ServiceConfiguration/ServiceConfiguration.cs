@@ -23,7 +23,7 @@ namespace AdvanceFileUpload.Data
             services.AddDbContext<ApploicationDbContext>(options =>
             {
                 options.UseSqlServer(connectionString);
-                // options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
+                options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.None);
 
 
             });

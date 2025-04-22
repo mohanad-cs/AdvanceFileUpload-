@@ -22,7 +22,7 @@ builder.Services.AddSwaggerGen(options =>
         Name = "X-APIKEY",
         In = ParameterLocation.Header,
         Scheme = "ApiKey"
-       
+
     });
 
     // Require the API key for all endpoints
@@ -52,12 +52,14 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 app.UseRateLimiter();
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
+    app.UseSwagger(op =>
+    {
+        op.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
+       
+    });
     app.UseSwaggerUI();
-
 }
 app.UseMiddleware<APIKeyMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
