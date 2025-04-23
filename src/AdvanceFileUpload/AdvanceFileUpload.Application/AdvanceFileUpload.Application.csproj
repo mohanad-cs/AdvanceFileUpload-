@@ -22,14 +22,15 @@
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.1" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.4" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AdvanceFileUpload.Application.Shared\AdvanceFileUpload.Application.Shared.csproj" />
+    <ProjectReference Include="..\AdvanceFileUpload.Data\AdvanceFileUpload.Data.csproj" />
     <ProjectReference Include="..\AdvanceFileUpload.Domain\AdvanceFileUpload.Domain.csproj" />
     <ProjectReference Include="..\AdvanceFileUpload.Integration.Contracts\AdvanceFileUpload.Integration.Contracts.csproj" />
   </ItemGroup>

@@ -24,7 +24,7 @@ namespace AdvanceFileUpload.Data
             {
                 options.UseSqlServer(connectionString);
                 // options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
-
+              
 
             });
             services.AddScoped<IRepository<FileUploadSession>, FileUploadSessionRepository>();

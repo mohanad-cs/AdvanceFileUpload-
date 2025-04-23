@@ -389,6 +389,38 @@ namespace AdvanceFileUpload.Domain
             SessionEndDate = DateTime.Now;
             this.AddDomainEvent(new FileUploadSessionCompletedEvent(this));
         }
-
+       
+        ///<summary>
+        /// Marks the file upload session as failed.
+        /// </summary>
+        /// <remarks>
+        /// This method updates the status of the session to <see cref="FileUploadSessionStatus.Failed"/> and sets the <see cref="SessionEndDate"/> to the current date and time.
+        /// It also raises a <see cref="FileUploadSessionFailedEvent"/> to notify that the session has been failed.
+        /// </remarks>
+        /// <exception cref="DomainException">
+        /// Thrown when the session cannot be marked as failed due to one of the following reasons:
+        /// <list type="bullet">
+        /// <item><description>The session is already completed.</description></item>
+        /// <item><description>The session is canceled.</description></item>
+        /// </list>
+        /// </exception>
+        public void MarkAsFailed()
+        {
+            if (IsFailed())
+            {
+                return;
+            }
+            if (IsCompleted())
+            {
+                throw new DomainException("The Upload Session already completed");
+            }
+            if (IsCanceled())
+            {
+                throw new DomainException("The Upload Session is been Canceled");
+            }
+            Status = FileUploadSessionStatus.Failed;
+            SessionEndDate = DateTime.Now;
+            this.AddDomainEvent(new FileUploadSessionFailedEvent(this));
+        }
     }
 }
