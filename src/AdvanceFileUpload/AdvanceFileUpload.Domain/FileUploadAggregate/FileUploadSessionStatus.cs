@@ -28,6 +28,16 @@
         /// <summary>
         /// The file upload session has failed.
         /// </summary>
+        /// <remarks>Note that the session will be determinate as <see cref="Failed"/> if this conditions are met:
+        /// <list type="number">
+        /// <item>
+        /// if the session is not <see cref="Completed"/> or <see cref="Canceled"/> . After 48h the session will be determinate as <see cref="Failed"/>.
+        /// </item>
+        /// <item>
+        /// if the session status is <see cref="PendingToComplete"/> and the session has been waiting for 48h to be completed.
+        /// </item>
+        /// </list>
+        /// </remarks>
         Failed,
     }
 }

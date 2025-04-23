@@ -1,6 +1,5 @@
 ﻿using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Domain.Events;
-using AdvanceFileUpload.Domain.Exceptions;
 using AdvanceFileUpload.Domain.Extensions;
 
 namespace AdvanceFileUpload.Domain
@@ -206,7 +205,7 @@ namespace AdvanceFileUpload.Domain
         /// </summary>
         /// <param name="chunkIndex">The index of the chunk.</param>
         /// <param name="chunkPath">The path of the chunk.</param>
-        /// <exception cref="ChunkUploadingException">
+        /// <exception cref="DomainException">
         /// Thrown when the chunk cannot be added due to one of the following reasons:
         /// <list type="bullet">
         /// <item><description>The upload session is already completed.</description></item>
@@ -219,19 +218,19 @@ namespace AdvanceFileUpload.Domain
         {
             if (IsCompleted())
             {
-                throw new ChunkUploadingException("The Upload Session already Completed");
+                throw new DomainException("The Upload Session already Completed");
             }
             if (IsCanceled())
             {
-                throw new ChunkUploadingException("The Upload Session already been Canceled");
+                throw new DomainException("The Upload Session already been Canceled");
             }
             if (IsAllChunkUploaded())
             {
-                throw new ChunkUploadingException("All chunks already Uploaded");
+                throw new DomainException("All chunks already Uploaded");
             }
             if (IsChunkUploaded(chunkIndex))
             {
-                throw new ChunkUploadingException($"The chunk with index {chunkIndex} already uploaded.");
+                throw new DomainException($"The chunk with index {chunkIndex} already uploaded.");
             }
             ChunkFile chunkFile = new ChunkFile(this.Id, chunkIndex, chunkPath);
             _chunkFiles.Add(chunkFile);
@@ -302,18 +301,29 @@ namespace AdvanceFileUpload.Domain
         {
             return Status == FileUploadSessionStatus.Canceled;
         }
-
+        /// <summary>
+        ///  Determines whether the file upload session is failed.
+        /// </summary>
+        /// <returns><c>true</c> if the session status is Failed; otherwise, <c>false</c>.</returns>
+        public bool IsFailed()
+        {
+            return Status == FileUploadSessionStatus.Failed;
+        }
         /// <summary>
         /// Cancels the file upload session.
         /// </summary>
-        /// <exception cref="CancelationFileUploadException">
-        /// Thrown when the session cannot be canceled because it is already completed.
+        /// <exception cref="DomainException">
+        /// Thrown when the session cannot be canceled because it is already completed or failed.
         /// </exception>
         public void CancelSession()
         {
+            if (IsFailed())
+            {
+                throw new DomainException("The upload session can not be Canceled because it is in failed status");
+            }
             if (IsCompleted())
             {
-                throw new CancelationFileUploadException("The Upload Session already Completed");
+                throw new DomainException("The Upload Session already Completed");
             }
             Status = FileUploadSessionStatus.Canceled;
             SessionEndDate = DateTime.Now;
@@ -323,18 +333,22 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Pauses the file upload session.
         /// </summary>
-        /// <exception cref="CancelationFileUploadException">
-        /// Thrown when the session cannot be paused because it is already completed or canceled.
+        /// <exception cref="DomainException">
+        /// Thrown when the session cannot be paused because it is already completed, canceled  or failed.
         /// </exception>
         public void PauseSession()
         {
+            if (IsFailed())
+            {
+                throw new DomainException("The upload session can not be paused because it is in failed status");
+            }
             if (IsCompleted())
             {
-                throw new CancelationFileUploadException("The Upload Session already Completed");
+                throw new DomainException("The Upload Session already Completed");
             }
             if (IsCanceled())
             {
-                throw new CancelationFileUploadException("The Upload Session already Canceled");
+                throw new DomainException("The Upload Session already Canceled");
             }
             Status = FileUploadSessionStatus.Paused;
             SessionEndDate = DateTime.Now;
@@ -344,27 +358,32 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Completes the file upload session.
         /// </summary>
-        /// <exception cref="CompletingFileUploadException">
+        /// <exception cref="DomainException">
         /// Thrown when the session cannot be completed due to one of the following reasons:
         /// <list type="bullet">
         /// <item><description>The session is already completed.</description></item>
         /// <item><description>The session is canceled.</description></item>
+        ///  <item><description>The session is failed.</description></item>
         /// <item><description>Not all chunks have been uploaded.</description></item>
         /// </list>
         /// </exception>
         public void CompleteSession()
         {
+            if (IsFailed())
+            {
+                throw new DomainException("The upload session can not be completed because it is in failed status");
+            }
             if (IsCompleted())
             {
-                throw new CompletingFileUploadException("The Upload Session already completed");
+                throw new DomainException("The Upload Session already completed");
             }
             if (IsCanceled())
             {
-                throw new CompletingFileUploadException("The Upload Session is been Canceled");
+                throw new DomainException("The Upload Session is been Canceled");
             }
             if (!IsAllChunkUploaded())
             {
-                throw new CompletingFileUploadException($"All chunks must be uploaded before completing the session. Total Chunks To Upload:({TotalChunksToUpload}), Remaining Chunks Count:({GetRemainChunks().Count}) ");
+                throw new DomainException($"All chunks must be uploaded before completing the session. Total Chunks To Upload:({TotalChunksToUpload}), Remaining Chunks Count:({GetRemainChunks().Count}) ");
             }
             Status = FileUploadSessionStatus.Completed;
             SessionEndDate = DateTime.Now;
