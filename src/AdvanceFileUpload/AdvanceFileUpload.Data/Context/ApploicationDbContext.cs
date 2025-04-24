@@ -50,6 +50,9 @@ namespace AdvanceFileUpload.Data
             chunkFileBuilder.Property(c => c.ChunkPath).IsRequired().HasMaxLength(256);
             chunkFileBuilder.Property(c => c.ChunkSize).IsRequired();
 
+
+            //fileUploadSessionBuilder.HasData(new FileUploadSession("Test.pdf", "C:\\Temp", 1024 * 1024 * 3, null, 1024 * 1024 * 1));
+
         }
     }
 }

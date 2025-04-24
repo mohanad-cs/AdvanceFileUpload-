@@ -45,12 +45,16 @@ namespace AdvanceFileUpload.API
             services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
             services.AddScoped<IIntegrationEventPublisher, RabbitMQIntegrationEventPublisher>();
 
+            services.AddScoped<SessionsStatusCheckerService>();
+            services.AddHostedService<SessionStatusCheckerWorker>();
+
             services.AddMediatR(op =>
             {
                 op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
             });
 
             services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
+            
         }
 
         private static void ConfigureRateLimiting(IServiceCollection services, IConfiguration configuration)
