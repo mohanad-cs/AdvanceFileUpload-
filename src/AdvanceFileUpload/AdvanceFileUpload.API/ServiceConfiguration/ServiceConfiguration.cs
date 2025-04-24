@@ -9,7 +9,9 @@ using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
 using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Integration.Contracts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
+using System.Diagnostics.Metrics;
 using System.Globalization;
 using System.Threading.RateLimiting;
 
@@ -45,8 +47,8 @@ namespace AdvanceFileUpload.API
             services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
             services.AddScoped<IIntegrationEventPublisher, RabbitMQIntegrationEventPublisher>();
 
-            services.AddScoped<SessionsStatusCheckerService>();
-            services.AddHostedService<SessionStatusCheckerWorker>();
+            //services.AddScoped<SessionsStatusCheckerService>();
+            //services.AddHostedService<SessionStatusCheckerWorker>();
 
             services.AddMediatR(op =>
             {
@@ -56,7 +58,14 @@ namespace AdvanceFileUpload.API
             services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
             
         }
-
+        public static void EnsureDbMigration(this IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var context = serviceScope.ServiceProvider.GetService <ApploicationDbContext>();
+                context.Database.Migrate();
+            }
+        }
         private static void ConfigureRateLimiting(IServiceCollection services, IConfiguration configuration)
         {
             ApiKeyOptions? apiKeyOptions = configuration.GetSection(ApiKeyOptions.SectionName).Get<ApiKeyOptions>();

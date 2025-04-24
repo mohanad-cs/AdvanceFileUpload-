@@ -131,9 +131,10 @@ namespace AdvanceFileUpload.Domain
             InitializeProperties(fileName, savingDirectory, fileSize, compressedSize, maxChunkSize, compressionAlgorithm, compressionLevel);
             AddDomainEvent(new FileUploadSessionCreatedEvent(this));
         }
+        
         private FileUploadSession()
         {
-
+            // For EF Core    
         }
 
         /// <summary>

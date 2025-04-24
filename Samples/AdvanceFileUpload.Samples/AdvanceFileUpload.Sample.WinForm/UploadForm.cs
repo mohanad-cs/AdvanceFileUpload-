@@ -112,7 +112,7 @@ namespace AdvanceFileUpload.Sample.WinForm
             });
             _fileUploadService?.Dispose();
 
-        
+
         }
 
         private void _fileUploadService_NetworkError(object? sender, string e)
@@ -331,95 +331,94 @@ namespace AdvanceFileUpload.Sample.WinForm
 
             try
             {
-                if (e.Item.Caption == StartCaption)
+                switch (e.Item.Caption)
                 {
-                    btnUpload.Enabled = false;
-                    ClearProgress();
-                    e.Item.Caption = PauseCaption;
-                    e.Item.ImageOptions.SvgImage = Properties.Resources.PauseBold;
-                    btnCancel.Enabled = true;
-
-                    layoutControlGroup2.Enabled = false;
-                    if (_fileUploadService != null)
-                    {
-                        UnListenToUploadEvents();
-                        _fileUploadService.Dispose();
-                        _fileUploadService = null;
-                    }
-                    if (string.IsNullOrWhiteSpace(txtAPIBaseAdrees.Text))
-                    {
-
-                        txtAPIBaseAdrees.ErrorText = "The Api Base Address is required";
-                        return;
-                    }
-                    txtAPIBaseAdrees.ErrorText = string.Empty;
-                    if (string.IsNullOrWhiteSpace(txtAPIKey.Text))
-                    {
-
-                        txtAPIKey.ErrorText = "The Api Key is required";
-                        return;
-                    }
-                    txtAPIKey.ErrorText = string.Empty;
-                    _fileUploadBuilder = FileUploadBuilder.New(txtAPIBaseAdrees.Text.Trim())
-                        .WithAPIKey(txtAPIKey.Text)
-                        .WithCompressionOption(() =>
-                        {
-                            if (checkEnableCompression.Checked)
-                            {
-                                return new CompressionOption()
-                                {
-                                    Algorithm = (CompressionAlgorithmOption)comboBoxCompressionAlgorithm.EditValue,
-                                    Level = (CompressionLevelOption)comboBoxCompressionLevel.EditValue
-                                };
-                            }
-                            return null;
-                        })
-                        .WithTempDirectory(btnTempDir.Text)
-                        .WithMaxRetriesCount((int)spinMaxRetriesCount.Value)
-                        .WithMaxConcurrentUploads((int)spinMaxConcurrentUploads.Value);
-
-                    _fileUploadService = _fileUploadBuilder.Build();
-
-                    ListenToUploadEvents();
-                    await _fileUploadService.UploadFileAsync(txtFilePath.Text);
-
-
-                }
-                else if (e.Item.Caption == PauseCaption)
-                {
-                    if (_fileUploadService.CanPauseSession)
-                    {
-                        e.Item.Caption = ResumeCaption;
-                        e.Item.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
-                        btnCancel.Enabled = true;
-                        await _fileUploadService.PauseUploadAsync();
-                    }
-                    else
-                    {
-                        if (_fileUploadService.IsSessionCompleted || _fileUploadService.IsSessionCanceled)
-                        {
-
-                        }
-                    }
-
-                }
-                else if (e.Item.Caption == ResumeCaption)
-                {
-                    if (_fileUploadService.CanResumeSession)
-                    {
+                    case StartCaption:
+                        btnUpload.Enabled = false;
+                        ClearProgress();
                         e.Item.Caption = PauseCaption;
                         e.Item.ImageOptions.SvgImage = Properties.Resources.PauseBold;
                         btnCancel.Enabled = true;
-                        await _fileUploadService.ResumeUploadAsync();
-                    }
-                    else
-                    {
-                        if (_fileUploadService.IsSessionCompleted || _fileUploadService.IsSessionCanceled)
+
+                        layoutControlGroup2.Enabled = false;
+                        if (_fileUploadService != null)
+                        {
+                            UnListenToUploadEvents();
+                            _fileUploadService.Dispose();
+                            _fileUploadService = null;
+                        }
+                        if (string.IsNullOrWhiteSpace(txtAPIBaseAdrees.Text))
                         {
 
+                            txtAPIBaseAdrees.ErrorText = "The Api Base Address is required";
+                            return;
                         }
-                    }
+                        txtAPIBaseAdrees.ErrorText = string.Empty;
+                        if (string.IsNullOrWhiteSpace(txtAPIKey.Text))
+                        {
 
+                            txtAPIKey.ErrorText = "The Api Key is required";
+                            return;
+                        }
+                        txtAPIKey.ErrorText = string.Empty;
+                        _fileUploadBuilder = FileUploadBuilder.New(txtAPIBaseAdrees.Text.Trim())
+                            .WithAPIKey(txtAPIKey.Text)
+                            .WithCompressionOption(() =>
+                            {
+                                if (checkEnableCompression.Checked)
+                                {
+                                    return new CompressionOption()
+                                    {
+                                        Algorithm = (CompressionAlgorithmOption)comboBoxCompressionAlgorithm.EditValue,
+                                        Level = (CompressionLevelOption)comboBoxCompressionLevel.EditValue
+                                    };
+                                }
+                                return null;
+                            })
+                            .WithTempDirectory(btnTempDir.Text)
+                            .WithMaxRetriesCount((int)spinMaxRetriesCount.Value)
+                            .WithMaxConcurrentUploads((int)spinMaxConcurrentUploads.Value);
+
+                        _fileUploadService = _fileUploadBuilder.Build();
+
+                        ListenToUploadEvents();
+                        await _fileUploadService.UploadFileAsync(txtFilePath.Text);
+                        break;
+                    case PauseCaption:
+                        if (_fileUploadService.CanPauseSession)
+                        {
+                            e.Item.Caption = ResumeCaption;
+                            e.Item.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
+                            btnCancel.Enabled = true;
+                            await _fileUploadService.PauseUploadAsync();
+                        }
+                        else
+                        {
+                            if (_fileUploadService.IsSessionCompleted || _fileUploadService.IsSessionCanceled)
+                            {
+
+                            }
+                        }
+                        break;
+                    case ResumeCaption:
+                        if (_fileUploadService.CanResumeSession)
+                        {
+                            e.Item.Caption = PauseCaption;
+                            e.Item.ImageOptions.SvgImage = Properties.Resources.PauseBold;
+                            btnCancel.Enabled = true;
+                            await _fileUploadService.ResumeUploadAsync();
+                        }
+                        else
+                        {
+                            if (_fileUploadService.IsSessionCompleted || _fileUploadService.IsSessionCanceled)
+                            {
+
+                            }
+                        }
+
+                        break;
+                    default:
+                        break;
                 }
                 Invoke(() =>
                 {
@@ -439,6 +438,7 @@ namespace AdvanceFileUpload.Sample.WinForm
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
+                //openFileDialog.Filter = "PDF files (*.pdf)|*.pdf"; // Corrected filter syntax for PDF files  
                 openFileDialog.Multiselect = false;
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {

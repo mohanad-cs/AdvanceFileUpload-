@@ -51,6 +51,7 @@ builder.Services.AddSignalR();
 
 
 var app = builder.Build();
+app.EnsureDbMigration();
 app.UseRateLimiter();
 if (app.Environment.IsDevelopment())
 {

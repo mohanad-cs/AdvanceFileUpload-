@@ -1,4 +1,5 @@
-using AdvanceFileUpload.Domain.Exceptions;
+
+using AdvanceFileUpload.Domain.Core;
 
 namespace AdvanceFileUpload.Domain.Test
 {
@@ -57,7 +58,7 @@ namespace AdvanceFileUpload.Domain.Test
             session.CompleteSession();
 
             // Act & Assert
-            Assert.Throws<ChunkUploadingException>(() => session.AddChunk(0, Path.Combine(_tempDirectory, chunkPath)));
+            Assert.Throws<DomainException>(() => session.AddChunk(0, Path.Combine(_tempDirectory, chunkPath)));
         }
 
         [Fact]
