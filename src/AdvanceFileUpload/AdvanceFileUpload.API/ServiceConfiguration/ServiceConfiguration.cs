@@ -63,7 +63,7 @@ namespace AdvanceFileUpload.API
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService <ApploicationDbContext>();
-                context.Database.Migrate();
+               // context.Database.Migrate();
             }
         }
         private static void ConfigureRateLimiting(IServiceCollection services, IConfiguration configuration)

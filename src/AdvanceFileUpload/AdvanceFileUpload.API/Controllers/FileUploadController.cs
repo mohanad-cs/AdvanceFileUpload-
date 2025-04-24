@@ -16,7 +16,12 @@ namespace AdvanceFileUpload.API.Controllers
         {
             _uploadManager = uploadManager ?? throw new ArgumentNullException(nameof(uploadManager));
         }
-
+        [Route(""), HttpGet]
+        [ApiExplorerSettings(IgnoreApi = true)]
+        public RedirectResult RedirectToSwaggerUi()
+        {
+            return Redirect("/swagger/");
+        }
         /// <summary>
         /// Creates a new file upload session.
         /// </summary>

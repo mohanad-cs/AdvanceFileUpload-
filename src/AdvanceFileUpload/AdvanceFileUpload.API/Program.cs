@@ -13,7 +13,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo { Title = "Advance File Upload API", Version = "v1" });
-
+    options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
     // Define the API Key security scheme
     options.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
     {
@@ -50,19 +50,29 @@ builder.Services.AddSignalR();
 
 
 
+
 var app = builder.Build();
+app.UseDeveloperExceptionPage();
 app.EnsureDbMigration();
 app.UseRateLimiter();
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger(op =>
-    {
-        op.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger(op =>
+//    {
+//        op.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
        
-    });
-    app.UseSwaggerUI();
-}
-app.UseMiddleware<APIKeyMiddleware>();
+//    });
+//    app.UseSwaggerUI();
+//}
+app.UseSwagger(op =>
+{
+    op.OpenApiVersion = Microsoft.OpenApi.OpenApiSpecVersion.OpenApi2_0;
+
+});
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("../swagger/v1/swagger.json","Advance File Upload API");
+}); app.UseMiddleware<APIKeyMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.UseHttpsRedirection();
