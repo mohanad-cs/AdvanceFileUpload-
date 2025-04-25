@@ -64,7 +64,11 @@ namespace AdvanceFileUpload.API.Middleware
                 await context.Response.WriteAsync("API Key authentication is enabled but no API keys are configured.");
                 return;
             }
-
+            if (context.Request.Path.StartsWithSegments("/"+RouteTemplates.Base+"health"))
+            {
+                await _next(context);
+                return;
+            }
             if (context.Request.Path.StartsWithSegments(RouteTemplates.APIHealthEndPoint))
             {
                 _logger.LogInformation("Health check endpoint accessed.");

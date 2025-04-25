@@ -56,21 +56,21 @@ namespace AdvanceFileUpload.API
             });
 
             services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
-            
+
         }
         public static void EnsureDbMigration(this IApplicationBuilder app)
         {
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
-                var context = serviceScope.ServiceProvider.GetService <ApploicationDbContext>();
-               // context.Database.Migrate();
+                var context = serviceScope.ServiceProvider.GetService<ApploicationDbContext>();
+                context?.Database.Migrate();
             }
         }
         private static void ConfigureRateLimiting(IServiceCollection services, IConfiguration configuration)
         {
             ApiKeyOptions? apiKeyOptions = configuration.GetSection(ApiKeyOptions.SectionName).Get<ApiKeyOptions>();
             if (apiKeyOptions == null) return;
-          
+
             services.AddRateLimiter(options =>
             {
                 options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -97,9 +97,9 @@ namespace AdvanceFileUpload.API
                             : CreateRateLimiter("DefaultRateLimiting", apiKeyOptions.DefaultMaxRequestsPerMinute > 0 ? apiKeyOptions.DefaultMaxRequestsPerMinute : 1000);
                     });
                 }
-               
-               
-                
+
+
+
             });
         }
 
@@ -111,7 +111,7 @@ namespace AdvanceFileUpload.API
                 Window = TimeSpan.FromMinutes(1),
                 AutoReplenishment = true,
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit =4,
+                QueueLimit = 4,
                 SegmentsPerWindow = 4,
             });
         }

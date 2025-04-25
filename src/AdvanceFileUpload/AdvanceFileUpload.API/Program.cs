@@ -4,7 +4,18 @@ using AdvanceFileUpload.Application.Shared;
 using AdvanceFileUpload.API;
 using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
+    logging.AddEventLog(op =>
+    {
+        op.SourceName = "AdvanceFileUploadAPI";
+        op.LogName = "AdvanceFileUploadAPILog";
+    });
+    logging.AddConsole();
+   
+});
 // Add services to the container.
 builder.Services.ConfigureApplicationServices(builder.Configuration);
 builder.Services.AddControllers();
@@ -46,12 +57,8 @@ builder.Services.AddSwaggerGen(options =>
 });
 builder.Services.AddSignalR();
 
-
-
-
-
-
 var app = builder.Build();
+app.Logger.LogWarning("statritng");
 app.UseDeveloperExceptionPage();
 app.EnsureDbMigration();
 app.UseRateLimiter();
