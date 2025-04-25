@@ -60,7 +60,7 @@ builder.Services.AddSignalR();
 var app = builder.Build();
 app.Logger.LogWarning("statritng");
 app.UseDeveloperExceptionPage();
-app.EnsureDbMigration();
+//app.EnsureDbMigration();
 app.UseRateLimiter();
 //if (app.Environment.IsDevelopment())
 //{
