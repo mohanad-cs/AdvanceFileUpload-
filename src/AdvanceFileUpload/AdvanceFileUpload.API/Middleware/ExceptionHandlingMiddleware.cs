@@ -78,7 +78,7 @@ namespace AdvanceFileUpload.API.Middleware
                 ConnectionResetException _ => new ExceptionResponse(HttpStatusCode.NoContent, " An existing connection was forcibly closed by the remote host."),
                 ApplicationException _ => new ExceptionResponse(HttpStatusCode.BadRequest, $"Application exception occurred.{exception.Message}"),
                 DomainException _ => new ExceptionResponse(HttpStatusCode.BadRequest, $"Domain exception occurred.{exception.Message}"),
-                _ => new ExceptionResponse(HttpStatusCode.InternalServerError, "Internal server error. Please retry later.")
+                _ => new ExceptionResponse(HttpStatusCode.InternalServerError, $"Internal server error. Please retry later.\n{exception.Message}")
             };
 
             context.Response.ContentType = "application/json";
