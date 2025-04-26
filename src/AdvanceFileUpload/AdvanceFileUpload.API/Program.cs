@@ -3,18 +3,19 @@ using AdvanceFileUpload.Application.Hubs;
 using AdvanceFileUpload.Application.Shared;
 using AdvanceFileUpload.API;
 using Microsoft.OpenApi.Models;
+using Serilog;
 var builder = WebApplication.CreateBuilder(args);
+const string  logOutPutTempleate= "[{Timestamp:yyyy-MM-dd h:mm:ss tt} {Level:u12}] {Message:lj}{NewLine}{Exception}";
+Log.Logger = new LoggerConfiguration()
+     .MinimumLevel.Information()
+    .WriteTo.Console(outputTemplate: logOutPutTempleate)
+    .WriteTo.EventLog("AdvanceFileUploadAPI", "AdvanceFileUploadAPI", manageEventSource: true)
+    .CreateLogger();
+
 builder.Host.ConfigureLogging(logging =>
 {
     logging.ClearProviders();
-    logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
-    logging.AddEventLog(op =>
-    {
-        op.SourceName = "AdvanceFileUploadAPI";
-        op.LogName = "AdvanceFileUploadAPILog";
-    });
-    logging.AddConsole();
-   
+    logging.AddSerilog(Log.Logger);
 });
 // Add services to the container.
 builder.Services.ConfigureApplicationServices(builder.Configuration);
@@ -58,7 +59,6 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddSignalR();
 
 var app = builder.Build();
-app.Logger.LogWarning("statritng");
 app.UseDeveloperExceptionPage();
 //app.EnsureDbMigration();
 app.UseRateLimiter();
