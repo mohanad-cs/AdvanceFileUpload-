@@ -22,5 +22,5 @@ namespace AdvanceFileUpload.Domain.Events
             FileUploadSession = fileUploadSession ?? throw new ArgumentNullException(nameof(fileUploadSession));
         }
     }
-    
+
 }

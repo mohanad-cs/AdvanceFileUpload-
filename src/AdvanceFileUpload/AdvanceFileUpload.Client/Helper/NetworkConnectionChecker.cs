@@ -1,6 +1,4 @@
 ﻿using System.Net;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Polly;
 using Polly.Timeout;
 namespace AdvanceFileUpload.Client.Helper;
@@ -27,7 +25,7 @@ public sealed class NetworkConnectionChecker : INetworkConnectionChecker
         _timeoutPolicy = Policy.TimeoutAsync(_options.Timeout, TimeoutStrategy.Optimistic);
     }
 
-   ///<inheritdoc/>
+    ///<inheritdoc/>
     public async Task<ConnectionStatus> CheckApiHealthAsync(CancellationToken ct = default)
     {
         try

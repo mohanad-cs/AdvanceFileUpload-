@@ -131,7 +131,7 @@ namespace AdvanceFileUpload.Domain
             InitializeProperties(fileName, savingDirectory, fileSize, compressedSize, maxChunkSize, compressionAlgorithm, compressionLevel);
             AddDomainEvent(new FileUploadSessionCreatedEvent(this));
         }
-        
+
         private FileUploadSession()
         {
             // For EF Core    
@@ -390,7 +390,7 @@ namespace AdvanceFileUpload.Domain
             SessionEndDate = DateTime.Now;
             this.AddDomainEvent(new FileUploadSessionCompletedEvent(this));
         }
-       
+
         ///<summary>
         /// Marks the file upload session as failed.
         /// </summary>

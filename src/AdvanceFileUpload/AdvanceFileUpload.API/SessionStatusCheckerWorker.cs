@@ -15,9 +15,9 @@ namespace AdvanceFileUpload.API
         public async Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Stating Session status checker worker...");
-           var scope= _serviceProvider.CreateScope();
-           var sessionChecker= scope.ServiceProvider.GetRequiredService<SessionsStatusCheckerService>();
-           await sessionChecker.StartAsync(cancellationToken);
+            var scope = _serviceProvider.CreateScope();
+            var sessionChecker = scope.ServiceProvider.GetRequiredService<SessionsStatusCheckerService>();
+            await sessionChecker.StartAsync(cancellationToken);
 
         }
         public Task StopAsync(CancellationToken cancellationToken)

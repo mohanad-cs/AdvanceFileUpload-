@@ -1,5 +1,4 @@
-﻿using System;
-using System.Net;
+﻿using System.Net;
 using System.Net.Http.Json;
 using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.FileProcessing;

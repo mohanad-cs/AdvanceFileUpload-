@@ -35,7 +35,7 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// Gets the delay between retries in seconds. Default is 5 seconds.
         /// </summary>
-        public int DefaultRetryDelayInSeconds { get;} = 5; // Default to 5 second
+        public int DefaultRetryDelayInSeconds { get; } = 5; // Default to 5 second
         /// <summary>
         /// Gets or sets the API key for authentication.
         /// </summary>

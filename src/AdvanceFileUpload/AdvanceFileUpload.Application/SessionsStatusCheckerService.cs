@@ -44,7 +44,7 @@ namespace AdvanceFileUpload.Application
                         session.MarkAsFailed();
                         await _fileUploadSessionRepository.UpdateAsync(session, stoppingToken);
                     }
-                  
+
 
                     _logger.LogInformation("Session processing completed for this cycle.");
                 }

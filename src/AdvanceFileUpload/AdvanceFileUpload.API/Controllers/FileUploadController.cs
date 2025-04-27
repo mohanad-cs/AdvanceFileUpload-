@@ -22,7 +22,7 @@ namespace AdvanceFileUpload.API.Controllers
         {
             return Redirect("/swagger/");
         }
-        [HttpGet(RouteTemplates.Base+"health")]
+        [HttpGet(RouteTemplates.Base + "health")]
         public RedirectResult RedirectToHealthEndpoint()
         {
             return Redirect(RouteTemplates.APIHealthEndPoint);

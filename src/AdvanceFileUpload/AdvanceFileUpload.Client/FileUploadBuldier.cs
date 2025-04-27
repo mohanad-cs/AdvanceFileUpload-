@@ -1,5 +1,4 @@
 ﻿using AdvanceFileUpload.Application.Request;
-using System;
 namespace AdvanceFileUpload.Client
 {
     /// <summary>
@@ -7,10 +6,10 @@ namespace AdvanceFileUpload.Client
     /// </summary>
     public sealed class FileUploadBuilder
     {
-        private  Uri _baseUrl;
-        private string _apiKey= string.Empty;
-        private int _maxConcurrentUploads =4;
-        private int _maxRetriesCount =3;
+        private Uri _baseUrl;
+        private string _apiKey = string.Empty;
+        private int _maxConcurrentUploads = 4;
+        private int _maxRetriesCount = 3;
         private string _tempDirectory = Path.GetTempPath();
         private CompressionOption? _compressionOption;
         private List<string> _excludedCompressionExtensions = new();
@@ -32,7 +31,7 @@ namespace AdvanceFileUpload.Client
             }
             Uri uri = new Uri(baseUri);
             return new FileUploadBuilder(uri);
-           
+
         }
 
         /// <summary>
@@ -168,7 +167,7 @@ namespace AdvanceFileUpload.Client
         /// <returns>The current instance of <see cref="FileUploadBuilder"/>.</returns>
         public FileUploadBuilder WithCompressionOption(Func<CompressionOption> compressionOption)
         {
-            _compressionOption =compressionOption();
+            _compressionOption = compressionOption();
             return this;
         }
         /// <summary>
