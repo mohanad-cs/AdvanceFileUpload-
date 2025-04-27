@@ -67,7 +67,7 @@ app.UseSwaggerUI(c =>
 });
 app.UseMiddleware<APIKeyMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.MapControllers();
 app.MapHub<UploadProcessHub>(RouteTemplates.UploadProcessHub);
 app.MapHealthChecks("/health");
