@@ -10,7 +10,7 @@
         /// <summary>
         /// The configuration section name for Kestrel server options.
         /// </summary>
-        public const string SectionName = "Kestrel";
+        public const string SectionName = "KestrelConfiguration";
         /// <summary>
         /// Gets or sets the dictionary of endpoints for the server.<br></br>
         /// Key represents the endpoint identifier, and value holds the endpoint settings.

@@ -64,7 +64,31 @@ namespace AdvanceFileUpload.API.Middleware
                 await context.Response.WriteAsync("API Key authentication is enabled but no API keys are configured.");
                 return;
             }
-            //TODO: ADD to exclude Swager and favicon.ico
+            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub"))
+            //{
+            //    await _next(context);
+            //    return;
+            //}
+            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub/negotiate"))
+            //{
+            //    await _next(context);
+            //    return;
+            //}
+            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub/streaming"))
+            //{
+            //    await _next(context);
+            //    return;
+            //}
+            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub/streaming/negotiate"))
+            //{
+            //    await _next(context);
+            //    return;
+            //}
+            if (context.Request.Path.StartsWithSegments(""))
+            {
+                await _next(context);
+                return;
+            }
             if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "health"))
             {
                 await _next(context);
