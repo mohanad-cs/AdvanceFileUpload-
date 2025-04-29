@@ -13,7 +13,7 @@
         /// <summary>
         /// Gets or sets the hostname of the RabbitMQ server.
         /// </summary>
-        public required string  HostName { get; set; }
+        public required string HostName { get; set; }
 
         /// <summary>
         /// Gets or sets the port number used to connect to the RabbitMQ server.

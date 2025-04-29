@@ -3,7 +3,7 @@
     /// <summary>
     /// Defines a contract for consuming integration events.
     /// </summary>
-    public interface IIntegrationEventConsumer : IAsyncDisposable ,IDisposable
+    public interface IIntegrationEventConsumer : IAsyncDisposable, IDisposable
     {
         /// <summary>
         /// Consumes an integration event of the specified type.
@@ -12,8 +12,8 @@
         /// <param name="args">The arguments required for consuming the event.</param>
         /// <param name="onMessageReceived">A callback function to handle the received message.</param>
         /// <param name="cancellationToken"></param>
-        Task ConsumeAsync<T>(ConsumingArgs args, Func<T, Task> onMessageReceived, CancellationToken cancellationToken=default) where T : class;
+        Task ConsumeAsync<T>(ConsumingArgs args, Func<T, Task> onMessageReceived, CancellationToken cancellationToken = default) where T : class;
     }
 
-   
+
 }

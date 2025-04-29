@@ -1,8 +1,6 @@
 ﻿using AdvanceFileUpload.Application.Compression;
 using AdvanceFileUpload.Application.FileProcessing;
 using AdvanceFileUpload.Application.Settings;
-using AdvanceFileUpload.Domain;
-using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Domain.Events;
 using AdvanceFileUpload.Integration.Contracts;
 using MediatR;

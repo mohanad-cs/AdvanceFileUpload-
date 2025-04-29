@@ -12,7 +12,6 @@ using AdvanceFileUpload.Application.Hubs;
 using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
-using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Integration.Contracts;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -56,9 +55,9 @@ namespace AdvanceFileUpload.API
             services.Configure<HostOptions>(options =>
             {
                 options.ServicesStartConcurrently = true;
-             
+
             });
-            
+
             services.AddHostedService<SessionStatusCheckerWorker>();
 
             services.AddMediatR(op =>

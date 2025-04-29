@@ -1,8 +1,4 @@
-﻿
-using System.Threading;
-using AdvanceFileUpload.Application;
-using AdvanceFileUpload.Data;
-using Microsoft.Extensions.DependencyInjection;
+﻿using AdvanceFileUpload.Application;
 
 namespace AdvanceFileUpload.API
 {
@@ -47,5 +43,5 @@ namespace AdvanceFileUpload.API
             }
         }
     }
-   
+
 }

@@ -126,7 +126,7 @@
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.KeepAliveTimeout"/>
         /// </summary>
-        public TimeSpan KeepAliveTimeout { get; set; }= TimeSpan.FromSeconds(130);
+        public TimeSpan KeepAliveTimeout { get; set; } = TimeSpan.FromSeconds(130);
 
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.RequestHeadersTimeout"/>
@@ -168,11 +168,11 @@
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MaxRequestHeadersTotalSize"/>
         /// </summary>
-        public int MaxRequestHeadersTotalSize { get; set; }=32 * 1024;
+        public int MaxRequestHeadersTotalSize { get; set; } = 32 * 1024;
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MaxRequestLineSize"/>
         /// </summary>
-        public int MaxRequestLineSize { get; set; }=8 * 1024;
+        public int MaxRequestLineSize { get; set; } = 8 * 1024;
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MaxRequestHeaderCount"/>
         /// </summary>
