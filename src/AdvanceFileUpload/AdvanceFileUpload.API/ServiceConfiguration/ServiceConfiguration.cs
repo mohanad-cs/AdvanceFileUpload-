@@ -12,6 +12,7 @@ using AdvanceFileUpload.Application.Hubs;
 using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
+using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Integration.Contracts;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
@@ -49,16 +50,21 @@ namespace AdvanceFileUpload.API
             services.AddScoped<IUploadManger, UploadManger>();
             services.AddScoped<IUploadProcessNotifier, UploadProcessNotifier>();
             services.AddScoped<IDomainEventPublisher, DomainEventPublisher>();
-            services.AddScoped<IIntegrationEventPublisher, RabbitMQIntegrationEventPublisher>();
-
-            //services.AddScoped<SessionsStatusCheckerService>();
-            //services.AddHostedService<SessionStatusCheckerWorker>();
+            services.AddScoped<IIntegrationEventPublisher, RabbitMQEventPublisher>();
+            services.AddTransient<IPeriodicTimer, DailyPeriodicTimer>();
+            services.AddScoped<SessionsStatusCheckerService>();
+            services.Configure<HostOptions>(options =>
+            {
+                options.ServicesStartConcurrently = true;
+             
+            });
+            
+            services.AddHostedService<SessionStatusCheckerWorker>();
 
             services.AddMediatR(op =>
             {
                 op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
             });
-
             services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
 
         }

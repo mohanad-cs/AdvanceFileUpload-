@@ -9,7 +9,7 @@
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <!-- Define metadata for your NuGet package -->
 	  <PackageId>AdvanceFileUpload.Integration</PackageId>
-	  <Version>1.0.5</Version>
+	  <Version>1.0.6</Version>
 	  <Authors>Mohanad Shamsan;Ahmed Kamel; Emad Qasem</Authors>
 	  <Description>Library for advanced file uploads. Integration</Description>
 	  <PackageTags>file-upload;net8</PackageTags>

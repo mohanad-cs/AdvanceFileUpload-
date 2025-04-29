@@ -215,5 +215,39 @@
             /// </summary>
             public const bool Exclusive = false;
         }
+        /// <summary>
+        /// Constants related to the "Session Field" event.
+        /// </summary>
+        public sealed class SessionFieldConstants
+        {
+            /// <summary>
+            /// The name of the queue for the "Session Field" event.
+            /// </summary>
+            public const string Queue = "Session-Field";
+            /// <summary>
+            /// The routing key for the "Session Field" event.
+            /// </summary>
+            public const string RoutingKey = "Session-Field";
+            /// <summary>
+            /// The exchange name for the "Session Field" event.
+            /// </summary>
+            public const string Exchange = "Session-Field";
+            /// <summary>
+            /// The type of exchange for the "Session Field" event.
+            /// </summary>
+            public const string ExchangeType = "direct";
+            /// <summary>
+            /// Indicates whether the queue is durable for the "Session Field" event.
+            /// </summary>
+            public const bool Durable = true;
+            /// <summary>
+            /// Indicates whether the queue is auto-deleted for the "Session Field" event.
+            /// </summary>
+            public const bool AutoDelete = false;
+            /// <summary>
+            /// Indicates whether the queue is exclusive for the "Session Field" event.
+            /// </summary>
+            public const bool Exclusive = false;
+        }
     }
 }
