@@ -112,13 +112,11 @@ namespace AdvanceFileUpload.Integration.Contracts
         {
             if (_channel != null)
             {
-                await _channel.CloseAsync();
                 await _channel.DisposeAsync();
             }
 
             if (_connection != null)
             {
-                await _connection.CloseAsync();
                 await _connection.DisposeAsync();
             }
 
