@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AdvanceFileUpload.Client" Version="1.0.14" />
+    <PackageReference Include="AdvanceFileUpload.Client" Version="1.0.15" />
     <PackageReference Include="DevExpress.Win.Design" Version="24.1.7" />
   </ItemGroup>
 
