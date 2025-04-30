@@ -59,5 +59,10 @@ namespace AdvanceFileUpload.Application.Compression
         /// </summary>
         /// <param name="extension"></param>
         void AddExcludedExtension(string extension);
+        /// <summary>
+        /// Get a list of file extensions that will be ignored during compression.
+        /// </summary>
+        IReadOnlyList<string> ExcludedExtension { get; }
+
     }
 }

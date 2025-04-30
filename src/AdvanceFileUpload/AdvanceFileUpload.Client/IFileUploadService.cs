@@ -3,8 +3,9 @@
     /// <summary>
     /// Defines the contract for a file upload service.
     /// </summary>
-    public interface IFileUploadService
+    public interface IFileUploadService : IDisposable
     {
+
         /// <summary>
         /// Uploads a file asynchronously.
         /// </summary>
@@ -59,5 +60,9 @@
         /// Gets a value indicating whether the session is completed.
         /// </summary>
         bool IsSessionCompleted { get; }
+        /// <summary>
+        /// Get the list of file extensions that will be ignored during compression.
+        /// </summary>
+        IReadOnlyList<string> CompressionIgnoredExtensions { get;}
     }
 }

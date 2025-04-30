@@ -23,17 +23,23 @@ namespace AdvanceFileUpload.API
 {
     public static class ServiceConfiguration
     {
-        /// <summary>
-        /// Configures the application services.
+
+        ///<summary>
+        /// Configures the application services by setting up core services and rate limiting.
         /// </summary>
-        /// <param name="services">The service collection to add services to.</param>
-        /// <param name="configuration">The application configuration.</param>
+        /// <param name="services">The service collection to which services are added.</param>
+        /// <param name="configuration">The application configuration containing settings.</param>
         public static void ConfigureApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
             ConfigureCoreServices(services, configuration);
             ConfigureRateLimiting(services, configuration);
         }
 
+        /// <summary>
+        /// Configures the core services required for the application.
+        /// </summary>
+        /// <param name="services">The service collection to which services are added.</param>
+        /// <param name="configuration">The application configuration containing settings.</param>
         private static void ConfigureCoreServices(IServiceCollection services, IConfiguration configuration)
         {
             string? connectionString = configuration.GetConnectionString("SessionStorage");
@@ -55,7 +61,6 @@ namespace AdvanceFileUpload.API
             services.Configure<HostOptions>(options =>
             {
                 options.ServicesStartConcurrently = true;
-
             });
 
             services.AddHostedService<SessionStatusCheckerWorker>();
@@ -65,8 +70,13 @@ namespace AdvanceFileUpload.API
                 op.RegisterServicesFromAssemblies(typeof(UploadManger).Assembly);
             });
             services.AddHealthChecks().AddCheck("APIHealth", () => HealthCheckResult.Healthy("A healthy result."));
-
         }
+
+        /// <summary>
+        /// Ensures that the database schema is up-to-date by applying any pending migrations.
+        /// This method should only be used in development environments.
+        /// </summary>
+        /// <param name="app">The application builder used to configure the app's request pipeline.</param>
         public static void EnsureDbMigration(this IApplicationBuilder app)
         {
             using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
@@ -75,6 +85,11 @@ namespace AdvanceFileUpload.API
                 context?.Database.Migrate();
             }
         }
+        /// <summary>
+        /// Configures rate limiting for the application based on API key settings.
+        /// </summary>
+        /// <param name="services">The service collection to which services are added.</param>
+        /// <param name="configuration">The application configuration containing settings.</param>
         private static void ConfigureRateLimiting(IServiceCollection services, IConfiguration configuration)
         {
             ApiKeyOptions? apiKeyOptions = configuration.GetSection(ApiKeyOptions.SectionName).Get<ApiKeyOptions>();
@@ -106,12 +121,15 @@ namespace AdvanceFileUpload.API
                             : CreateRateLimiter("DefaultRateLimiting", apiKeyOptions.DefaultMaxRequestsPerMinute > 0 ? apiKeyOptions.DefaultMaxRequestsPerMinute : 1000);
                     });
                 }
-
-
-
             });
         }
 
+        /// <summary>
+        /// Creates a rate limiter partition for a specific key with a defined request limit per minute.
+        /// </summary>
+        /// <param name="partitionKey">The key used to identify the rate limiter partition.</param>
+        /// <param name="requestsPerMinute">The maximum number of requests allowed per minute.</param>
+        /// <returns>A rate limiter partition configured with the specified settings.</returns>
         private static RateLimitPartition<string> CreateRateLimiter(string partitionKey, int requestsPerMinute)
         {
             return RateLimitPartition.GetSlidingWindowLimiter(partitionKey, _ => new SlidingWindowRateLimiterOptions
@@ -288,7 +306,7 @@ namespace AdvanceFileUpload.API
         /// <summary>
         /// Validate critical configuration values
         /// </summary>
-        static void ValidateConfiguration(KestrelConfiguration config)
+        private static void ValidateConfiguration(KestrelConfiguration config)
         {
             if (config?.Endpoints == null || !config.Endpoints.Any())
             {
@@ -358,7 +376,7 @@ namespace AdvanceFileUpload.API
         /// <summary>
         /// Convert string list to SslProtocols enum
         /// </summary>
-        static SslProtocols GetSslProtocols(List<string> protocols)
+        private static SslProtocols GetSslProtocols(List<string> protocols)
         {
             var result = SslProtocols.None;
             foreach (var protocol in protocols)
@@ -371,7 +389,7 @@ namespace AdvanceFileUpload.API
         /// <summary>
         /// Convert string list to HttpProtocols enum
         /// </summary>
-        static HttpProtocols GetHttpProtocols(List<string> protocols)
+        private static HttpProtocols GetHttpProtocols(List<string> protocols)
         {
             var result = HttpProtocols.None;
             foreach (var protocol in protocols)

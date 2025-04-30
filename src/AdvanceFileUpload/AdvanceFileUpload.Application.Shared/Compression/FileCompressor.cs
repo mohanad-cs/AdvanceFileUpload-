@@ -10,7 +10,7 @@ namespace AdvanceFileUpload.Application.Compression
     public sealed class FileCompressor : IFileCompressor
     {
         // a static list of applicable files extensions that can not be compressed because they are already compressed
-        private static readonly List<string> CompressedExtensions = new List<string>
+        private static readonly List<string> _excludedCompressedExtensions = new List<string>
 {
     // ===== Archive/Compressed Formats =====
     ".zip",      // ZIP Archive (standard compression)
@@ -109,6 +109,8 @@ namespace AdvanceFileUpload.Application.Compression
     ".cbr"       // Comic Book Archive (RAR-based)
 };
         private readonly ILogger<FileCompressor> _logger;
+        ///<inheritdoc/>
+        public IReadOnlyList<string> ExcludedExtension => _excludedCompressedExtensions.AsReadOnly();
         ///<summary>
         /// Initializes a new instance of the <see cref="FileCompressor"/> class.
         /// </summary>
@@ -252,7 +254,7 @@ namespace AdvanceFileUpload.Application.Compression
                 throw new ArgumentException("File path cannot be null or empty.", nameof(filePath));
             }
             string fileExtension = Path.GetExtension(filePath).ToLowerInvariant();
-            if (CompressedExtensions.Contains(fileExtension))
+            if (_excludedCompressedExtensions.Contains(fileExtension))
             {
                 return false;
             }
@@ -271,12 +273,12 @@ namespace AdvanceFileUpload.Application.Compression
                 {
                     extension = "." + extension;
                 }
-                if (CompressedExtensions.Contains(extension))
+                if (_excludedCompressedExtensions.Contains(extension))
                 {
                     _logger.LogWarning($"The extension '{extension}' is already in the excluded list.");
                     return;
                 }
-                CompressedExtensions.Add(extension);
+                _excludedCompressedExtensions.Add(extension);
             }
 
         }
