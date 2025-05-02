@@ -22,7 +22,14 @@ namespace AdvanceFileUpload.Data
             }
             services.AddDbContext<ApploicationDbContext>(options =>
             {
-                options.UseSqlServer(connectionString);
+                options.UseSqlServer(connectionString, (op) =>
+                {
+                    op.EnableRetryOnFailure(
+                        maxRetryCount: 5,
+                        maxRetryDelay: TimeSpan.FromSeconds(5),
+                        null
+                        );
+                });
                 // options.LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
 
 

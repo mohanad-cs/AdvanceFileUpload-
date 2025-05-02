@@ -308,6 +308,7 @@ namespace AdvanceFileUpload.Client
                 {
                     OnUploadProgressChanged(UploadProgressChangedEventArgs.Create(status));
                 });
+                // TODO: Check if connection is Closed before upload chunks.
                 _hubConnection.Reconnected += _hubConnection_Reconnected;
                 _hubConnection.Closed += _hubConnection_Closed;
 
