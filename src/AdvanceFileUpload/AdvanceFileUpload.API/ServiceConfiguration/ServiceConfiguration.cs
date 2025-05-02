@@ -184,11 +184,11 @@ namespace AdvanceFileUpload.API
                 serverOptions.Limits.MaxConcurrentConnections = limits.MaxConcurrentConnections;
                 serverOptions.Limits.MaxConcurrentUpgradedConnections = limits.MaxConcurrentUpgradedConnections;
                 serverOptions.Limits.MaxRequestBodySize = limits.MaxRequestBodySize;
-                serverOptions.Limits.MinRequestBodyDataRate = limits.MinRequestBodyDataRate.HasValue
-                    ? new MinDataRate(bytesPerSecond: limits.MinRequestBodyDataRate.Value, gracePeriod: TimeSpan.FromSeconds(5))
+                serverOptions.Limits.MinRequestBodyDataRate = limits.MinRequestBodyDataRate.HasValue && limits.MinRequestBodyDataRatePeriod.HasValue
+                    ? new MinDataRate(bytesPerSecond: limits.MinRequestBodyDataRate.Value, gracePeriod: limits.MinRequestBodyDataRatePeriod.Value)
                     : null;
-                serverOptions.Limits.MinResponseDataRate = limits.MinResponseDataRate.HasValue
-                    ? new MinDataRate(bytesPerSecond: limits.MinResponseDataRate.Value, gracePeriod: TimeSpan.FromSeconds(5))
+                serverOptions.Limits.MinResponseDataRate = limits.MinResponseDataRate.HasValue && limits.MinResponseDataRatePeriod.HasValue
+                    ? new MinDataRate(bytesPerSecond: limits.MinResponseDataRate.Value, gracePeriod: limits.MinResponseDataRatePeriod.Value)
                     : null;
                 serverOptions.Limits.MaxRequestLineSize = limits.MaxRequestLineSize;
                 serverOptions.Limits.MaxRequestBufferSize = limits.MaxRequestBufferSize;
@@ -216,8 +216,8 @@ namespace AdvanceFileUpload.API
                     httpsOptions.SslProtocols = GetSslProtocols(serverConfiguration.Https.AllowedProtocols);
                     httpsOptions.ClientCertificateMode = Enum.Parse<ClientCertificateMode>(serverConfiguration.Https.ClientCertificateMode);
                     httpsOptions.CheckCertificateRevocation = serverConfiguration.Https.CheckCertificateRevocation;
+                   
                 });
-
                 // ----------------------------------
                 // Endpoint Configuration
                 // ----------------------------------
@@ -271,8 +271,10 @@ namespace AdvanceFileUpload.API
             listenOptions.Protocols = GetHttpProtocols(endpoint.Protocols);
             if (endpoint.Https)
             {
+               
                 listenOptions.UseHttps(httpsOptions =>
                 {
+                  
                     // Certificate Loading Logic
                     if (!string.IsNullOrWhiteSpace(endpoint.Certificate.Path))
                     {

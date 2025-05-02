@@ -38,7 +38,7 @@ namespace AdvanceFileUpload.Samples.WinIntegrationSample
             };
 
             var sessionCreatedConsumer = new RabbitMQConsumer(rabbitMQOptions);
-            sessionCreatedConsumer.Consume<SessionCreatedIntegrationEvent>(new ConsumingArgs()
+            sessionCreatedConsumer.ConsumeAsync<SessionCreatedIntegrationEvent>(new ConsumingArgs()
             {
                 Exchange = IntegrationConstants.SessionCreatedConstants.Exchange,
                 ExchangeType = IntegrationConstants.SessionCreatedConstants.ExchangeType,
@@ -51,7 +51,7 @@ namespace AdvanceFileUpload.Samples.WinIntegrationSample
             }, OnSessionCreated);
 
             var sessionPausedConsumer = new RabbitMQConsumer(rabbitMQOptions);
-            sessionPausedConsumer.Consume<SessionPausedIntegrationEvent>(new ConsumingArgs()
+            sessionPausedConsumer.ConsumeAsync<SessionPausedIntegrationEvent>(new ConsumingArgs()
             {
                 Exchange = IntegrationConstants.SessionPausedConstants.Exchange,
                 ExchangeType = IntegrationConstants.SessionPausedConstants.ExchangeType,
@@ -63,7 +63,7 @@ namespace AdvanceFileUpload.Samples.WinIntegrationSample
 
             }, OnSessionPaused);
             var sessionCancelledConsumer = new RabbitMQConsumer(rabbitMQOptions);
-            sessionCancelledConsumer.Consume<SessionCancelledIntegrationEvent>(new ConsumingArgs()
+            sessionCancelledConsumer.ConsumeAsync<SessionCancelledIntegrationEvent>(new ConsumingArgs()
             {
                 Exchange = IntegrationConstants.SessionCanceledConstants.Exchange,
                 ExchangeType = IntegrationConstants.SessionCanceledConstants.ExchangeType,
@@ -75,7 +75,7 @@ namespace AdvanceFileUpload.Samples.WinIntegrationSample
 
             }, OnSessionCancelled);
             var SessionCompletedConsumer = new RabbitMQConsumer(rabbitMQOptions);
-            SessionCompletedConsumer.Consume<SessionCompletedIntegrationEvent>(new ConsumingArgs()
+            SessionCompletedConsumer.ConsumeAsync<SessionCompletedIntegrationEvent>(new ConsumingArgs()
             {
                 Exchange = IntegrationConstants.SessionCompletedConstants.Exchange,
                 ExchangeType = IntegrationConstants.SessionCompletedConstants.ExchangeType,
@@ -87,7 +87,7 @@ namespace AdvanceFileUpload.Samples.WinIntegrationSample
 
             }, OnSessionCompleted);
             var chunkUploadedConsumer = new RabbitMQConsumer(rabbitMQOptions);
-            chunkUploadedConsumer.Consume<ChunkUploadedIntegrationEvent>(new ConsumingArgs()
+            chunkUploadedConsumer.ConsumeAsync<ChunkUploadedIntegrationEvent>(new ConsumingArgs()
             {
                 Exchange = IntegrationConstants.ChunkUploadedConstants.Exchange,
                 ExchangeType = IntegrationConstants.ChunkUploadedConstants.ExchangeType,

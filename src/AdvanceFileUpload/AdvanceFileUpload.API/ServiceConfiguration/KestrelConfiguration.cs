@@ -152,11 +152,20 @@
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinRequestBodyDataRate"/>
         /// </summary>
         public double? MinRequestBodyDataRate { get; set; } = 240;
-
+        /// <summary>
+        /// The grace period for the minimum request body data rate.<br></br>
+        /// Default is 15 seconds.
+        /// </summary>
+        public TimeSpan? MinRequestBodyDataRatePeriod { get; set; } = TimeSpan.FromSeconds(15);
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MinResponseDataRate"/>
         /// </summary>
         public double? MinResponseDataRate { get; set; } = 240;
+        /// <summary>
+        ///  The grace period for the minimum response data rate.<br></br>
+        ///  Default is 15 seconds.
+        /// </summary>
+        public TimeSpan? MinResponseDataRatePeriod { get; set; } = TimeSpan.FromSeconds(15);
         /// <summary>
         /// <inheritdoc cref="Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerLimits.MaxResponseBufferSize"/>
         /// </summary>

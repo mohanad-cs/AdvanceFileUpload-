@@ -29,7 +29,7 @@ namespace AdvanceFileUpload.Sample.WinForm
         public UploadForm()
         {
             InitializeComponent();
-            txtAPIBaseAdrees.Text = "http://localhost:5021";
+            txtAPIBaseAdrees.Text = "http://103.89.14.244:5003";
             txtAPIKey.Text = "secret";
             btnPause_Resume.Enabled = false;
             btnCancel.Enabled = false;
@@ -195,6 +195,12 @@ namespace AdvanceFileUpload.Sample.WinForm
         {
             memoEdit.Invoke(() =>
             memoEdit.AppendLine($"Session [{e.SessionId}] Paused.\n"));
+            Invoke(() => {
+                btnPause_Resume.Caption = ResumeCaption;
+                btnPause_Resume.ImageOptions.SvgImage = Properties.Resources.PlaybackRateOther;
+                btnCancel.Enabled = true;
+            });
+           
         }
 
         private void _fileUploadService_SessionPausing(object? sender, EventArgs e)

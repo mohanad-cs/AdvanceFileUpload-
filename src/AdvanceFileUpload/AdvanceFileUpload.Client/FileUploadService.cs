@@ -60,23 +60,23 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// The HTTP client used for making API requests.
         /// </summary>
-        private readonly HttpClient? _httpClient;
+        private readonly HttpClient _httpClient;
         /// <summary>
         /// The file processor used for splitting and merging files.
         /// </summary>
-        private readonly IFileProcessor? _fileProcessor;
+        private readonly IFileProcessor _fileProcessor;
         /// <summary>
         /// The file compressor used for compressing and decompressing files.
         /// </summary>
-        private readonly IFileCompressor? _fileCompressor;
+        private readonly IFileCompressor _fileCompressor;
         /// <summary>
         /// The cancellation token source used for canceling asynchronous operations.
         /// </summary>
-        private CancellationTokenSource? _cancellationTokenSource;
+        private CancellationTokenSource _cancellationTokenSource;
         /// <summary>
         /// The options for uploading files.
         /// </summary>
-        private readonly UploadOptions? _uploadOptions;
+        private readonly UploadOptions _uploadOptions;
         /// <summary>
         /// The list of chunks to be uploaded.
         /// </summary>
@@ -100,11 +100,11 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// The semaphore used to limit the number of concurrent uploads.
         /// </summary>
-        private readonly SemaphoreSlim? _semaphore;
+        private readonly SemaphoreSlim _semaphore;
         /// <summary>
         /// The SignalR hub connection used for real-time notifications.
         /// </summary>
-        private readonly HubConnection? _hubConnection;
+        private readonly HubConnection _hubConnection;
         /// <summary>
         /// The size of the original file in bytes.
         /// </summary>
@@ -138,7 +138,7 @@ namespace AdvanceFileUpload.Client
         /// </summary>
         private readonly object _statusLock = new();
         /// <summary>
-        /// The current status of the upload session. Don't use it directly, use the <see cref="_sessionStatus"/> property instead.
+        /// The current status of the upload session.Don't use it directly, use the <see cref="_sessionStatus"/> property instead.
         /// </summary>
         private SessionStatus sessionStatus;
         /// <summary>
@@ -156,7 +156,7 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// The network connection checker used for checking the health of the API.
         /// </summary>
-        private readonly INetworkConnectionChecker? _networkConnectionChecker;
+        private readonly INetworkConnectionChecker _networkConnectionChecker;
         /// <summary>
         /// The time of the last health check.
         /// </summary>
@@ -185,7 +185,7 @@ namespace AdvanceFileUpload.Client
         /// <inheritdoc />
         public bool IsSessionCompleted => _sessionStatus == SessionStatus.Completed;
         ///<inheritdoc/>
-        public IReadOnlyList<string> CompressionIgnoredExtensions => _fileCompressor?.ExcludedExtension?? new List<string>();
+        public IReadOnlyList<string> CompressionIgnoredExtensions => _fileCompressor.ExcludedExtension;
         #endregion
 
         #region Events
@@ -415,7 +415,7 @@ namespace AdvanceFileUpload.Client
                 {
                     _logger.LogInformation("Pausing upload session {SessionId}", _sessionId);
                     OnSessionPausing();
-                    _cancellationTokenSource?.Cancel();
+                    _cancellationTokenSource.Cancel();
                     await ExecuteWithRetryPolicy(() =>
                         _httpClient.PostAsJsonAsync(RouteTemplates.PauseSession,
                             new PauseUploadSessionRequest { SessionId = _sessionId },
@@ -545,7 +545,7 @@ namespace AdvanceFileUpload.Client
 
         private async Task UploadRemainChunks()
         {
-            if (_fileHasBeenCompressed && _fileHasBeenSplit) // if session already been created  check if we have been  compressed and spited the file. if so we then just need to upload remain chunks
+            if (_fileHasBeenSplit) // if session already been created  check if we have been spited the file. if so we then just need to upload remain chunks
             {
                 _logger.LogInformation("Resuming upload session {SessionId}", _sessionId);
                 var statusResponse = await ExecuteWithRetryPolicy(() => _httpClient.GetAsync($"{RouteTemplates.SessionStatus}?sessionId={_sessionId}", _cancellationTokenSource.Token));
@@ -594,7 +594,7 @@ namespace AdvanceFileUpload.Client
         private async Task UploadChunkAsync(string chunkPath, int chunkIndex)
         {
 
-            _cancellationTokenSource?.Token.ThrowIfCancellationRequested();
+            _cancellationTokenSource.Token.ThrowIfCancellationRequested();
             _logger.LogInformation("Uploading chunk {ChunkIndex} for session {SessionId}", chunkIndex, _sessionId);
             var chunkData = await File.ReadAllBytesAsync(chunkPath, _cancellationTokenSource.Token).ConfigureAwait(false);
 
@@ -637,6 +637,9 @@ namespace AdvanceFileUpload.Client
             {
                 _semaphore.Release();
             }
+            //Thread.Sleep(1000);
+            //await UploadChunkAsync(chunkPath, chunkIndex).ConfigureAwait(false);
+
         }
 
         /// <summary>
@@ -720,7 +723,7 @@ namespace AdvanceFileUpload.Client
                     }
                     if (_cachedConnectionStatus == ConnectionStatus.Unhealthy)
                     {
-                        _cancellationTokenSource?.Cancel();
+                        _cancellationTokenSource.Cancel();
                         CreateNewCancellationTokenSource();
                         if (CanPauseSession)
                         {
@@ -731,7 +734,7 @@ namespace AdvanceFileUpload.Client
                     }
                     if (_cachedConnectionStatus == ConnectionStatus.Timeout)
                     {
-                        _cancellationTokenSource?.Cancel();
+                        _cancellationTokenSource.Cancel();
                         CreateNewCancellationTokenSource();
                         if (CanPauseSession)
                         {
@@ -755,8 +758,8 @@ namespace AdvanceFileUpload.Client
         /// <exception cref="OperationCanceledException">Thrown if the operation is canceled.</exception>
         private async Task CompressFile()
         {
-            _cancellationTokenSource?.Token.ThrowIfCancellationRequested();
-            if (_uploadOptions?.CompressionOption != null && _originalFilePath != null)
+            _cancellationTokenSource.Token.ThrowIfCancellationRequested();
+            if (_uploadOptions.CompressionOption != null && _originalFilePath != null)
             {
                 if (_fileCompressor.IsFileApplicableForCompression(_originalFilePath))
                 {
@@ -781,7 +784,7 @@ namespace AdvanceFileUpload.Client
         private async Task SplitFile()
         {
 
-            _cancellationTokenSource?.Token.ThrowIfCancellationRequested();
+            _cancellationTokenSource.Token.ThrowIfCancellationRequested();
             OnFileSplittingStarted();
             string? fileToSplit = _uploadOptions.CompressionOption != null ? _compressedFilePath : _originalFilePath;
 
@@ -800,7 +803,7 @@ namespace AdvanceFileUpload.Client
         }
         private async Task StartUploading()
         {
-            _cancellationTokenSource?.Token.ThrowIfCancellationRequested();
+            _cancellationTokenSource.Token.ThrowIfCancellationRequested();
             _logger.LogInformation("Uploading chunks in parallel.");
             var uploadTasks = _chunksToUpload.Select((chunkPath, index) => UploadChunkWithLimitAsync(chunkPath, index)).ToArray();
             await Task.WhenAll(uploadTasks).ConfigureAwait(false);
@@ -829,7 +832,6 @@ namespace AdvanceFileUpload.Client
                     _logger.LogError("Failed to create upload session.");
                     throw new UploadException("Failed to create upload session");
                 }
-
                 _sessionId = sessionResponse.SessionId;
                 _chunkSize = sessionResponse.MaxChunkSize;
                 _totalChunksToUpload = sessionResponse.TotalChunksToUpload;
@@ -841,7 +843,7 @@ namespace AdvanceFileUpload.Client
         private void HandleException(Exception exception)
         {
             _logger.LogError("An error occurred during the upload process.");
-            _cancellationTokenSource?.Cancel();
+            _cancellationTokenSource.Cancel();
             switch (exception)
             {
                 case UploadException uploadException:
@@ -910,7 +912,6 @@ namespace AdvanceFileUpload.Client
         private void CreateNewCancellationTokenSource()
         {
             _cancellationTokenSource?.Dispose();
-            _cancellationTokenSource = null;
             _cancellationTokenSource = new CancellationTokenSource();
         }
         #region Event Raisers
@@ -1050,10 +1051,9 @@ namespace AdvanceFileUpload.Client
                 _disposed = true;
                 if (disposing)
                 {
-                    _httpClient?.CancelPendingRequests();
-                    _httpClient?.Dispose();
-                    _semaphore?.Dispose();
-                    _hubConnection?.DisposeAsync().AsTask().ConfigureAwait(false).GetAwaiter().GetResult();
+                    _httpClient.Dispose();
+                    _semaphore.Dispose();
+                    _hubConnection.DisposeAsync().AsTask().ConfigureAwait(false).GetAwaiter().GetResult();
                     DeleteTempFiles();
                 }
             }
@@ -1097,5 +1097,3 @@ namespace AdvanceFileUpload.Client
         #endregion
     }
 }
-
-

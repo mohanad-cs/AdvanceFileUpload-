@@ -30,8 +30,10 @@ public sealed class NetworkConnectionChecker : INetworkConnectionChecker
     {
         try
         {
-            var response = await _timeoutPolicy.ExecuteAsync(async token =>
-                await _httpClient.SendAsync(CreateHealthRequest(), token), ct);
+            //TODO: Find a better for health check
+            //var response = await _timeoutPolicy.ExecuteAsync(async token =>
+            //    await _httpClient.SendAsync(CreateHealthRequest(), token), ct);
+            var response =  await _httpClient.SendAsync(CreateHealthRequest(),ct);
 
             return EvaluateResponse(response);
         }
