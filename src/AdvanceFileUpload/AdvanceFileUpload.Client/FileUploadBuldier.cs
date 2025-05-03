@@ -13,6 +13,7 @@ namespace AdvanceFileUpload.Client
         private string _tempDirectory = Path.GetTempPath();
         private CompressionOption? _compressionOption;
         private List<string> _excludedCompressionExtensions = new();
+        private TimeSpan _requestTimeOut = TimeSpan.FromSeconds(30);
         private FileUploadBuilder(Uri baseUri)
         {
             _baseUrl = baseUri;
@@ -212,7 +213,21 @@ namespace AdvanceFileUpload.Client
             _excludedCompressionExtensions.AddRange(extensions);
             return this;
         }
-
+        /// <summary>
+        /// Sets the request timeout for the file upload service.
+        /// </summary>
+        /// <param name="requestTimeOut"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public FileUploadBuilder WithRequestTimeOut(TimeSpan requestTimeOut)
+        {
+            if (requestTimeOut <= TimeSpan.Zero)
+            {
+                throw new ArgumentException("Request timeout must be greater than zero.", nameof(requestTimeOut));
+            }
+            _requestTimeOut = requestTimeOut;
+            return this;
+        }
         /// <summary>
         /// Builds and returns a new instance of <see cref="FileUploadService"/> based on the configured options.
         /// </summary>
@@ -231,7 +246,9 @@ namespace AdvanceFileUpload.Client
                 ExcludedCompressionExtensions = _excludedCompressionExtensions,
                 MaxConcurrentUploads = _maxConcurrentUploads,
                 MaxRetriesCount = _maxRetriesCount,
-                TempDirectory = _tempDirectory
+                TempDirectory = _tempDirectory,
+                RequestTimeOut=_requestTimeOut,
+                
             };
             return new FileUploadService(_baseUrl, uploadOptions);
         }

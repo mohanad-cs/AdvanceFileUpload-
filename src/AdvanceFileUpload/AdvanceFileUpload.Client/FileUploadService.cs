@@ -283,7 +283,7 @@ namespace AdvanceFileUpload.Client
                 _httpClient = new HttpClient()
                 {
                     BaseAddress = apiBaseAddress ?? throw new ArgumentNullException(nameof(apiBaseAddress)),
-                    Timeout = TimeSpan.FromSeconds(15),
+                    Timeout = _uploadOptions.RequestTimeOut,
 
                 };
                 _httpClient.DefaultRequestHeaders.Add("X-APIKEY", uploadOptions.APIKey);

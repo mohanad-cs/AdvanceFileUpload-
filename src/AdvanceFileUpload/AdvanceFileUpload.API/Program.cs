@@ -58,7 +58,7 @@ builder.Services.AddSwaggerGen(options =>
 //{
 //    options.HttpsPort = 443;
 //});
-
+bool x= ThreadPool.SetMinThreads(100, 100);
 var app = builder.Build();
 //app.UseHttpsRedirection();
 // ==============================================

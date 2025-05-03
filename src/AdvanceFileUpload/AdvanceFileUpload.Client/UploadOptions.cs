@@ -41,5 +41,11 @@ namespace AdvanceFileUpload.Client
         /// </summary>
         public required string APIKey { get; set; }
 
+        /// <summary>
+        /// Get or sets the Request Timeout for the chunks uploading.
+        /// Defaults 30 second.
+        /// </summary>
+        public TimeSpan RequestTimeOut { get; set; } = TimeSpan.FromSeconds(30);
+
     }
 }

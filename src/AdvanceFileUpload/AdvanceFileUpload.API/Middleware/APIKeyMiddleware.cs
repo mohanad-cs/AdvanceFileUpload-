@@ -36,67 +36,37 @@ namespace AdvanceFileUpload.API.Middleware
         public async Task InvokeAsync(HttpContext context, IOptionsMonitor<ApiKeyOptions> apiKeyOptions)
         {
             if (context is null)
-            {
                 throw new ArgumentNullException(nameof(context));
-            }
 
-            if (apiKeyOptions is null)
-            {
-                throw new ArgumentNullException(nameof(apiKeyOptions));
-            }
-
-            if (apiKeyOptions.CurrentValue is null)
-            {
+            if (apiKeyOptions?.CurrentValue is null)
                 throw new InvalidOperationException("API Key authentication is not configured!");
-            }
 
-            if (!apiKeyOptions.CurrentValue.EnableAPIKeyAuthentication)
+            var options = apiKeyOptions.CurrentValue;
+
+            if (!options.EnableAPIKeyAuthentication)
             {
                 _logger.LogWarning("API Key authentication is disabled.");
                 await _next(context);
                 return;
             }
 
-            if (apiKeyOptions.CurrentValue.APIKeys.Count == 0)
+            if (options.APIKeys.Count == 0)
             {
                 _logger.LogError("API Key authentication is enabled but no API keys are configured.");
                 context.Response.StatusCode = 500;
                 await context.Response.WriteAsync("API Key authentication is enabled but no API keys are configured.");
                 return;
             }
-            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub"))
-            //{
-            //    await _next(context);
-            //    return;
-            //}
-            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub/negotiate"))
-            //{
-            //    await _next(context);
-            //    return;
-            //}
-            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub/streaming"))
-            //{
-            //    await _next(context);
-            //    return;
-            //}
-            //if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "upload-process-hub/streaming/negotiate"))
-            //{
-            //    await _next(context);
-            //    return;
-            //}
-            if (context.Request.Path.StartsWithSegments(""))
+
+            var path = context.Request.Path;
+            if (path.Equals("") || path.Equals("/") ||
+                path.Equals("/" + RouteTemplates.Base + "health") ||
+                path.Equals(RouteTemplates.APIHealthEndPoint) ||
+                path.Equals("/swagger/index.html"))
             {
-                await _next(context);
-                return;
-            }
-            if (context.Request.Path.StartsWithSegments("/" + RouteTemplates.Base + "health"))
-            {
-                await _next(context);
-                return;
-            }
-            if (context.Request.Path.StartsWithSegments(RouteTemplates.APIHealthEndPoint))
-            {
-                _logger.LogInformation("Health check endpoint accessed.");
+                if (path.Equals(RouteTemplates.APIHealthEndPoint))
+                    _logger.LogInformation("Health check endpoint accessed.");
+
                 await _next(context);
                 return;
             }
@@ -109,7 +79,7 @@ namespace AdvanceFileUpload.API.Middleware
                 return;
             }
 
-            if (!apiKeyOptions.CurrentValue.APIKeys.Any(x => x.Key.Equals(extractedApiKey)))
+            if (!options.APIKeys.Any(x => x.Key.Equals(extractedApiKey, StringComparison.Ordinal)))
             {
                 _logger.LogWarning("Unauthorized client attempted to access the API with an invalid API Key.");
                 context.Response.StatusCode = 401;
