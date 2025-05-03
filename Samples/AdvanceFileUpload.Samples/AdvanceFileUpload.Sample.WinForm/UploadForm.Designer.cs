@@ -38,6 +38,7 @@
             barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            repositoryItemTimeSpanEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit();
             layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             comboBoxCompressionAlgorithm = new DevExpress.XtraEditors.ComboBoxEdit();
             memoEdit = new DevExpress.XtraEditors.MemoEdit();
@@ -49,6 +50,9 @@
             spinMaxConcurrentUploads = new DevExpress.XtraEditors.SpinEdit();
             spinMaxRetriesCount = new DevExpress.XtraEditors.SpinEdit();
             checkEnableCompression = new DevExpress.XtraEditors.CheckEdit();
+            txtAPIBaseAdrees = new DevExpress.XtraEditors.TextEdit();
+            txtAPIKey = new DevExpress.XtraEditors.TextEdit();
+            requestTimeOutEdit = new DevExpress.XtraEditors.TimeSpanEdit();
             Root = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -63,14 +67,14 @@
             layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
+            layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
             layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
             layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(components);
-            txtAPIBaseAdrees = new DevExpress.XtraEditors.TextEdit();
-            layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            txtAPIKey = new DevExpress.XtraEditors.TextEdit();
-            layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemTimeSpanEdit1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).BeginInit();
             layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)comboBoxCompressionAlgorithm.Properties).BeginInit();
@@ -83,6 +87,9 @@
             ((System.ComponentModel.ISupportInitialize)spinMaxConcurrentUploads.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)spinMaxRetriesCount.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)checkEnableCompression.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIBaseAdrees.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIKey.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)requestTimeOutEdit.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Root).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).BeginInit();
@@ -97,12 +104,11 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem11).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem12).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem13).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txtAPIBaseAdrees.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlItem11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)txtAPIKey.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlItem12).BeginInit();
             SuspendLayout();
             // 
             // barManager1
@@ -115,7 +121,8 @@
             barManager1.Form = this;
             barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { btnUpload, btnPause_Resume, btnCancel });
             barManager1.MainMenu = bar2;
-            barManager1.MaxItemId = 3;
+            barManager1.MaxItemId = 4;
+            barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] { repositoryItemTimeSpanEdit1 });
             // 
             // bar2
             // 
@@ -188,6 +195,12 @@
             barDockControlRight.Margin = new Padding(6);
             barDockControlRight.Size = new Size(0, 646);
             // 
+            // repositoryItemTimeSpanEdit1
+            // 
+            repositoryItemTimeSpanEdit1.AutoHeight = false;
+            repositoryItemTimeSpanEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            repositoryItemTimeSpanEdit1.Name = "repositoryItemTimeSpanEdit1";
+            // 
             // layoutControl1
             // 
             layoutControl1.Controls.Add(comboBoxCompressionAlgorithm);
@@ -202,6 +215,7 @@
             layoutControl1.Controls.Add(checkEnableCompression);
             layoutControl1.Controls.Add(txtAPIBaseAdrees);
             layoutControl1.Controls.Add(txtAPIKey);
+            layoutControl1.Controls.Add(requestTimeOutEdit);
             layoutControl1.Dock = DockStyle.Fill;
             layoutControl1.Location = new Point(0, 30);
             layoutControl1.Margin = new Padding(5, 4, 5, 4);
@@ -225,24 +239,24 @@
             // 
             // memoEdit
             // 
-            memoEdit.Location = new Point(24, 384);
+            memoEdit.Location = new Point(24, 410);
             memoEdit.Margin = new Padding(5, 4, 5, 4);
             memoEdit.MenuManager = barManager1;
             memoEdit.Name = "memoEdit";
             memoEdit.Properties.Appearance.Font = new Font("Tahoma", 9F);
             memoEdit.Properties.Appearance.Options.UseFont = true;
-            memoEdit.Size = new Size(1362, 238);
+            memoEdit.Size = new Size(1362, 212);
             memoEdit.StyleController = layoutControl1;
             memoEdit.TabIndex = 10;
             // 
             // progressBarControl
             // 
-            progressBarControl.Location = new Point(196, 148);
+            progressBarControl.Location = new Point(196, 158);
             progressBarControl.Margin = new Padding(5, 4, 5, 4);
             progressBarControl.MenuManager = barManager1;
             progressBarControl.Name = "progressBarControl";
             progressBarControl.Properties.ShowTitle = true;
-            progressBarControl.Size = new Size(569, 47);
+            progressBarControl.Size = new Size(569, 51);
             progressBarControl.StyleController = layoutControl1;
             progressBarControl.TabIndex = 1;
             // 
@@ -258,7 +272,7 @@
             // 
             // txtFileSize
             // 
-            txtFileSize.Location = new Point(196, 98);
+            txtFileSize.Location = new Point(196, 103);
             txtFileSize.Margin = new Padding(5, 4, 5, 4);
             txtFileSize.MenuManager = barManager1;
             txtFileSize.Name = "txtFileSize";
@@ -338,6 +352,38 @@
             checkEnableCompression.StyleController = layoutControl1;
             checkEnableCompression.TabIndex = 4;
             // 
+            // txtAPIBaseAdrees
+            // 
+            txtAPIBaseAdrees.Location = new Point(965, 50);
+            txtAPIBaseAdrees.MenuManager = barManager1;
+            txtAPIBaseAdrees.Name = "txtAPIBaseAdrees";
+            txtAPIBaseAdrees.Size = new Size(421, 22);
+            txtAPIBaseAdrees.StyleController = layoutControl1;
+            txtAPIBaseAdrees.TabIndex = 3;
+            // 
+            // txtAPIKey
+            // 
+            txtAPIKey.Location = new Point(965, 76);
+            txtAPIKey.MenuManager = barManager1;
+            txtAPIKey.Name = "txtAPIKey";
+            txtAPIKey.Size = new Size(421, 22);
+            txtAPIKey.StyleController = layoutControl1;
+            txtAPIKey.TabIndex = 11;
+            // 
+            // requestTimeOutEdit
+            // 
+            requestTimeOutEdit.EditValue = TimeSpan.Parse("00:00:15");
+            requestTimeOutEdit.Location = new Point(965, 334);
+            requestTimeOutEdit.MenuManager = barManager1;
+            requestTimeOutEdit.Name = "requestTimeOutEdit";
+            requestTimeOutEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            requestTimeOutEdit.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
+            requestTimeOutEdit.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            requestTimeOutEdit.Properties.MinValue = TimeSpan.Parse("00:00:15");
+            requestTimeOutEdit.Size = new Size(421, 22);
+            requestTimeOutEdit.StyleController = layoutControl1;
+            requestTimeOutEdit.TabIndex = 12;
+            // 
             // Root
             // 
             Root.AppearanceGroup.Font = new Font("Times New Roman", 9F, FontStyle.Bold);
@@ -356,7 +402,7 @@
             layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem1, layoutControlItem2, layoutControlItem3, emptySpaceItem3 });
             layoutControlGroup1.Location = new Point(0, 0);
             layoutControlGroup1.Name = "layoutControlGroup1";
-            layoutControlGroup1.Size = new Size(769, 334);
+            layoutControlGroup1.Size = new Size(769, 360);
             layoutControlGroup1.Text = "Upload Info";
             // 
             // layoutControlItem1
@@ -365,7 +411,7 @@
             layoutControlItem1.Location = new Point(0, 0);
             layoutControlItem1.MinSize = new Size(244, 40);
             layoutControlItem1.Name = "layoutControlItem1";
-            layoutControlItem1.Size = new Size(745, 48);
+            layoutControlItem1.Size = new Size(745, 53);
             layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem1.Text = "File To Upload";
             layoutControlItem1.TextSize = new Size(160, 18);
@@ -373,10 +419,10 @@
             // layoutControlItem2
             // 
             layoutControlItem2.Control = txtFileSize;
-            layoutControlItem2.Location = new Point(0, 48);
+            layoutControlItem2.Location = new Point(0, 53);
             layoutControlItem2.MinSize = new Size(244, 40);
             layoutControlItem2.Name = "layoutControlItem2";
-            layoutControlItem2.Size = new Size(745, 50);
+            layoutControlItem2.Size = new Size(745, 55);
             layoutControlItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem2.Text = "File Size";
             layoutControlItem2.TextSize = new Size(160, 18);
@@ -384,10 +430,10 @@
             // layoutControlItem3
             // 
             layoutControlItem3.Control = progressBarControl;
-            layoutControlItem3.Location = new Point(0, 98);
+            layoutControlItem3.Location = new Point(0, 108);
             layoutControlItem3.MinSize = new Size(244, 30);
             layoutControlItem3.Name = "layoutControlItem3";
-            layoutControlItem3.Size = new Size(745, 51);
+            layoutControlItem3.Size = new Size(745, 55);
             layoutControlItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             layoutControlItem3.Text = "Progress";
             layoutControlItem3.TextSize = new Size(160, 18);
@@ -395,19 +441,19 @@
             // emptySpaceItem3
             // 
             emptySpaceItem3.AllowHotTrack = false;
-            emptySpaceItem3.Location = new Point(0, 149);
+            emptySpaceItem3.Location = new Point(0, 163);
             emptySpaceItem3.MinSize = new Size(106, 26);
             emptySpaceItem3.Name = "emptySpaceItem3";
-            emptySpaceItem3.Size = new Size(745, 135);
+            emptySpaceItem3.Size = new Size(745, 147);
             emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             emptySpaceItem3.TextSize = new Size(0, 0);
             // 
             // layoutControlGroup2
             // 
-            layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem8, layoutControlItem9, layoutControlItem10, emptySpaceItem1, layoutControlItem11, layoutControlItem12 });
+            layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem5, layoutControlItem6, layoutControlItem7, layoutControlItem8, layoutControlItem9, layoutControlItem10, emptySpaceItem1, layoutControlItem11, layoutControlItem12, layoutControlItem13 });
             layoutControlGroup2.Location = new Point(769, 0);
             layoutControlGroup2.Name = "layoutControlGroup2";
-            layoutControlGroup2.Size = new Size(621, 334);
+            layoutControlGroup2.Size = new Size(621, 360);
             layoutControlGroup2.Text = "Upload Options";
             // 
             // layoutControlItem5
@@ -493,33 +539,6 @@
             emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             emptySpaceItem1.TextSize = new Size(0, 0);
             // 
-            // layoutControlGroup3
-            // 
-            layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem4 });
-            layoutControlGroup3.Location = new Point(0, 334);
-            layoutControlGroup3.Name = "layoutControlGroup3";
-            layoutControlGroup3.Size = new Size(1390, 292);
-            layoutControlGroup3.Text = "Progress Info";
-            // 
-            // layoutControlItem4
-            // 
-            layoutControlItem4.Control = memoEdit;
-            layoutControlItem4.Location = new Point(0, 0);
-            layoutControlItem4.Name = "layoutControlItem4";
-            layoutControlItem4.Size = new Size(1366, 242);
-            layoutControlItem4.Text = "Progress Info";
-            layoutControlItem4.TextSize = new Size(0, 0);
-            layoutControlItem4.TextVisible = false;
-            // 
-            // txtAPIBaseAdrees
-            // 
-            txtAPIBaseAdrees.Location = new Point(965, 50);
-            txtAPIBaseAdrees.MenuManager = barManager1;
-            txtAPIBaseAdrees.Name = "txtAPIBaseAdrees";
-            txtAPIBaseAdrees.Size = new Size(421, 22);
-            txtAPIBaseAdrees.StyleController = layoutControl1;
-            txtAPIBaseAdrees.TabIndex = 3;
-            // 
             // layoutControlItem11
             // 
             layoutControlItem11.Control = txtAPIBaseAdrees;
@@ -529,15 +548,6 @@
             layoutControlItem11.Text = "API Base Address";
             layoutControlItem11.TextSize = new Size(160, 18);
             // 
-            // txtAPIKey
-            // 
-            txtAPIKey.Location = new Point(965, 76);
-            txtAPIKey.MenuManager = barManager1;
-            txtAPIKey.Name = "txtAPIKey";
-            txtAPIKey.Size = new Size(421, 22);
-            txtAPIKey.StyleController = layoutControl1;
-            txtAPIKey.TabIndex = 11;
-            // 
             // layoutControlItem12
             // 
             layoutControlItem12.Control = txtAPIKey;
@@ -546,6 +556,33 @@
             layoutControlItem12.Size = new Size(597, 26);
             layoutControlItem12.Text = "API Key";
             layoutControlItem12.TextSize = new Size(160, 18);
+            // 
+            // layoutControlItem13
+            // 
+            layoutControlItem13.Control = requestTimeOutEdit;
+            layoutControlItem13.Location = new Point(0, 284);
+            layoutControlItem13.Name = "layoutControlItem13";
+            layoutControlItem13.Size = new Size(597, 26);
+            layoutControlItem13.Text = "Request Timeout";
+            layoutControlItem13.TextSize = new Size(160, 18);
+            // 
+            // layoutControlGroup3
+            // 
+            layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] { layoutControlItem4 });
+            layoutControlGroup3.Location = new Point(0, 360);
+            layoutControlGroup3.Name = "layoutControlGroup3";
+            layoutControlGroup3.Size = new Size(1390, 266);
+            layoutControlGroup3.Text = "Progress Info";
+            // 
+            // layoutControlItem4
+            // 
+            layoutControlItem4.Control = memoEdit;
+            layoutControlItem4.Location = new Point(0, 0);
+            layoutControlItem4.Name = "layoutControlItem4";
+            layoutControlItem4.Size = new Size(1366, 216);
+            layoutControlItem4.Text = "Progress Info";
+            layoutControlItem4.TextSize = new Size(0, 0);
+            layoutControlItem4.TextVisible = false;
             // 
             // UploadForm
             // 
@@ -564,6 +601,7 @@
             Name = "UploadForm";
             Text = "Advance File Upload Sample";
             ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)repositoryItemTimeSpanEdit1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControl1).EndInit();
             layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)comboBoxCompressionAlgorithm.Properties).EndInit();
@@ -576,6 +614,9 @@
             ((System.ComponentModel.ISupportInitialize)spinMaxConcurrentUploads.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)spinMaxRetriesCount.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)checkEnableCompression.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIBaseAdrees.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)txtAPIKey.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)requestTimeOutEdit.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)Root).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup1).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem1).EndInit();
@@ -590,15 +631,13 @@
             ((System.ComponentModel.ISupportInitialize)layoutControlItem9).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem10).EndInit();
             ((System.ComponentModel.ISupportInitialize)emptySpaceItem1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem11).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem12).EndInit();
+            ((System.ComponentModel.ISupportInitialize)layoutControlItem13).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlGroup3).EndInit();
             ((System.ComponentModel.ISupportInitialize)layoutControlItem4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txtAPIBaseAdrees.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlItem11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)txtAPIKey.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)layoutControlItem12).EndInit();
             ResumeLayout(false);
             PerformLayout();
-
         }
 
         #endregion
@@ -645,5 +684,8 @@
         private DevExpress.XtraEditors.TextEdit txtAPIBaseAdrees;
         private DevExpress.XtraEditors.TextEdit txtAPIKey;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTimeSpanEdit repositoryItemTimeSpanEdit1;
+        private DevExpress.XtraEditors.TimeSpanEdit requestTimeOutEdit;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
     }
 }

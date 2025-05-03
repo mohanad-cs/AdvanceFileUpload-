@@ -383,7 +383,8 @@ namespace AdvanceFileUpload.Sample.WinForm
                             })
                             .WithTempDirectory(btnTempDir.Text)
                             .WithMaxRetriesCount((int)spinMaxRetriesCount.Value)
-                            .WithMaxConcurrentUploads((int)spinMaxConcurrentUploads.Value);
+                            .WithMaxConcurrentUploads((int)spinMaxConcurrentUploads.Value)
+                            .WithRequestTimeOut(requestTimeOutEdit.TimeSpan);
 
                         _fileUploadService = _fileUploadBuilder.Build();
 
