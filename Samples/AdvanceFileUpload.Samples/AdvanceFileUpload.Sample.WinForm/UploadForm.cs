@@ -91,9 +91,16 @@ namespace AdvanceFileUpload.Sample.WinForm
                 _fileUploadService.UploadError += _fileUploadService_UploadError;
                 _fileUploadService.NetworkError += _fileUploadService_NetworkError;
                 _fileUploadService.AuthenticationError += _fileUploadService_AuthenticationError;
+                _fileUploadService.UploadRetryAttempt += _fileUploadService_UploadRetryAttempt;
             }
 
 
+        }
+
+        private void _fileUploadService_UploadRetryAttempt(object? sender, string e)
+        {
+            memoEdit.Invoke(() =>
+           memoEdit.AppendLine(e + "\n"));
         }
 
         private void _fileUploadService_AuthenticationError(object? sender, string e)
@@ -278,6 +285,8 @@ namespace AdvanceFileUpload.Sample.WinForm
                 _fileUploadService.UploadError -= _fileUploadService_UploadError;
                 _fileUploadService.NetworkError -= _fileUploadService_NetworkError;
                 _fileUploadService.AuthenticationError -= _fileUploadService_AuthenticationError;
+                _fileUploadService.UploadRetryAttempt -= _fileUploadService_UploadRetryAttempt;
+
             }
         }
         private void CheckEnableCompression_EditValueChanged(object? sender, EventArgs e)

@@ -5,6 +5,10 @@ using AdvanceFileUpload.Application.Shared;
 using Microsoft.OpenApi.Models;
 using Serilog;
 var builder = WebApplication.CreateBuilder(args);
+builder.Host.UseWindowsService((op) =>
+{
+    op.ServiceName = "AdvanceFileUploadAPI";
+});
 builder.ConfigureUploadServer(builder.WebHost);
 //===========================================================
 const string logOutPutTempleate = "[{Timestamp:yyyy-MM-dd h:mm:ss tt} {Level:u12}] {Message:lj}{NewLine}{Exception}";
@@ -58,8 +62,23 @@ builder.Services.AddSwaggerGen(options =>
 //{
 //    options.HttpsPort = 443;
 //});
-bool x= ThreadPool.SetMinThreads(100, 100);
+builder.Services.Configure<ThreadPoolOptions>(builder.Configuration.GetSection(ThreadPoolOptions.SectionName));
+var  threadPoolOptions= builder.Configuration.GetSection(ThreadPoolOptions.SectionName).Get<ThreadPoolOptions>();
+bool isThreadPoolBeenSetsSuccessfully = false;
+if (threadPoolOptions != null && threadPoolOptions.MinThreads>0 && threadPoolOptions.MaxThreads>0)
+{
+    isThreadPoolBeenSetsSuccessfully = ThreadPool.SetMinThreads(threadPoolOptions.MinThreads, threadPoolOptions.MaxThreads);
+}
+else
+{
+    isThreadPoolBeenSetsSuccessfully = ThreadPool.SetMinThreads(100, 100);
+}
+
 var app = builder.Build();
+if (!isThreadPoolBeenSetsSuccessfully)
+{
+    app.Logger.LogWarning("ThreadPool settings are not set successfully. Default values will be used.");
+}
 //app.UseHttpsRedirection();
 // ==============================================
 // Application Startup

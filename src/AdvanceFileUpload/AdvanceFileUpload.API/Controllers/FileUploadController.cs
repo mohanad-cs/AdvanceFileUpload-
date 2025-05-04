@@ -91,7 +91,6 @@ namespace AdvanceFileUpload.API.Controllers
         [ProducesResponseType(StatusCodes.Status429TooManyRequests)]
         public async Task<ActionResult<UploadSessionStatusResponse?>> GetUploadSessionStatusAsync([FromQuery] Guid sessionId, CancellationToken cancellationToken)
         {
-
             var response = await _uploadManager.GetUploadSessionStatusAsync(sessionId, cancellationToken);
             if (response == null)
             {
