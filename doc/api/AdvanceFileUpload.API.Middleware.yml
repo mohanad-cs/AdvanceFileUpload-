@@ -4,6 +4,7 @@ items:
   commentId: N:AdvanceFileUpload.API.Middleware
   id: AdvanceFileUpload.API.Middleware
   children:
+  - AdvanceFileUpload.API.Middleware.APIKeyMiddleware
   - AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
   - AdvanceFileUpload.API.Middleware.ExceptionResponse
   langs:
@@ -16,6 +17,12 @@ items:
   assemblies:
   - AdvanceFileUpload.API
 references:
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  commentId: T:AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  href: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html
+  name: APIKeyMiddleware
+  nameWithType: APIKeyMiddleware
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
 - uid: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
   commentId: T:AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
   href: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware.html

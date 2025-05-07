@@ -5,10 +5,13 @@ items:
   id: UploadOptions
   parent: AdvanceFileUpload.Client
   children:
+  - AdvanceFileUpload.Client.UploadOptions.APIKey
   - AdvanceFileUpload.Client.UploadOptions.CompressionOption
+  - AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds
   - AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
   - AdvanceFileUpload.Client.UploadOptions.MaxConcurrentUploads
   - AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+  - AdvanceFileUpload.Client.UploadOptions.RequestTimeOut
   - AdvanceFileUpload.Client.UploadOptions.TempDirectory
   langs:
   - csharp
@@ -201,6 +204,102 @@ items:
       type: System.Int32
     content.vb: Public Property MaxRetriesCount As Integer
   overload: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount*
+- uid: AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds
+  id: DefaultRetryDelayInSeconds
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: DefaultRetryDelayInSeconds
+  nameWithType: UploadOptions.DefaultRetryDelayInSeconds
+  fullName: AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: DefaultRetryDelayInSeconds
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 37
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets the delay between retries in seconds. Default is 5 seconds.
+  example: []
+  syntax:
+    content: public int DefaultRetryDelayInSeconds { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property DefaultRetryDelayInSeconds As Integer
+  overload: AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds*
+- uid: AdvanceFileUpload.Client.UploadOptions.APIKey
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.APIKey
+  id: APIKey
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: APIKey
+  nameWithType: UploadOptions.APIKey
+  fullName: AdvanceFileUpload.Client.UploadOptions.APIKey
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: APIKey
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 41
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Gets or sets the API key for authentication.
+  example: []
+  syntax:
+    content: public required string APIKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property APIKey As String
+  overload: AdvanceFileUpload.Client.UploadOptions.APIKey*
+- uid: AdvanceFileUpload.Client.UploadOptions.RequestTimeOut
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.RequestTimeOut
+  id: RequestTimeOut
+  parent: AdvanceFileUpload.Client.UploadOptions
+  langs:
+  - csharp
+  - vb
+  name: RequestTimeOut
+  nameWithType: UploadOptions.RequestTimeOut
+  fullName: AdvanceFileUpload.Client.UploadOptions.RequestTimeOut
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: RequestTimeOut
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/UploadOptions.cs
+    startLine: 47
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: >-
+    Get or sets the Request Timeout for the chunks uploading.
+
+    Defaults 30 second.
+  example: []
+  syntax:
+    content: public TimeSpan RequestTimeOut { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property RequestTimeOut As TimeSpan
+  overload: AdvanceFileUpload.Client.UploadOptions.RequestTimeOut*
 references:
 - uid: AdvanceFileUpload.Client
   commentId: N:AdvanceFileUpload.Client
@@ -650,3 +749,29 @@ references:
   name: MaxRetriesCount
   nameWithType: UploadOptions.MaxRetriesCount
   fullName: AdvanceFileUpload.Client.UploadOptions.MaxRetriesCount
+- uid: AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_DefaultRetryDelayInSeconds
+  name: DefaultRetryDelayInSeconds
+  nameWithType: UploadOptions.DefaultRetryDelayInSeconds
+  fullName: AdvanceFileUpload.Client.UploadOptions.DefaultRetryDelayInSeconds
+- uid: AdvanceFileUpload.Client.UploadOptions.APIKey*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.APIKey
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_APIKey
+  name: APIKey
+  nameWithType: UploadOptions.APIKey
+  fullName: AdvanceFileUpload.Client.UploadOptions.APIKey
+- uid: AdvanceFileUpload.Client.UploadOptions.RequestTimeOut*
+  commentId: Overload:AdvanceFileUpload.Client.UploadOptions.RequestTimeOut
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_RequestTimeOut
+  name: RequestTimeOut
+  nameWithType: UploadOptions.RequestTimeOut
+  fullName: AdvanceFileUpload.Client.UploadOptions.RequestTimeOut
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan

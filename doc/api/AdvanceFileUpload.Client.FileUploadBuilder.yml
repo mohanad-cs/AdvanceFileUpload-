@@ -1,0 +1,1181 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.FileUploadBuilder
+  commentId: T:AdvanceFileUpload.Client.FileUploadBuilder
+  id: FileUploadBuilder
+  parent: AdvanceFileUpload.Client
+  children:
+  - AdvanceFileUpload.Client.FileUploadBuilder.Build
+  - AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension(System.String)
+  - AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions(System.Collections.Generic.IEnumerable{System.String})
+  - AdvanceFileUpload.Client.FileUploadBuilder.New(System.String)
+  - AdvanceFileUpload.Client.FileUploadBuilder.New(System.String,System.String)
+  - AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri)
+  - AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri,System.String)
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey(System.String)
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(AdvanceFileUpload.Application.Request.CompressionOption)
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(System.Func{AdvanceFileUpload.Application.Request.CompressionOption})
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads(System.Int32)
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount(System.Int32)
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut(System.TimeSpan)
+  - AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory(System.String)
+  langs:
+  - csharp
+  - vb
+  name: FileUploadBuilder
+  nameWithType: FileUploadBuilder
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: FileUploadBuilder
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: A builder class for configuring and creating instances of <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public sealed class FileUploadBuilder
+    content.vb: Public NotInheritable Class FileUploadBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.New(System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.New(System.String)
+  id: New(System.String)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: New(string)
+  nameWithType: FileUploadBuilder.New(string)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.New(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: New
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 26
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Creates a new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref> with the specified base URL.
+  example: []
+  syntax:
+    content: public static FileUploadBuilder New(string baseUri)
+    parameters:
+    - id: baseUri
+      type: System.String
+      description: The base URL for the file upload service.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: A new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function [New](baseUri As String) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.New*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">baseUri</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.New(String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.New(String)
+  name.vb: New(String)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri)
+  id: New(System.Uri)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: New(Uri)
+  nameWithType: FileUploadBuilder.New(Uri)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: New
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 43
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Creates a new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref> with the specified base URL.
+  example: []
+  syntax:
+    content: public static FileUploadBuilder New(Uri baseUrl)
+    parameters:
+    - id: baseUrl
+      type: System.Uri
+      description: The base URL for the file upload service.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: A new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function [New](baseUrl As Uri) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.New*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">baseUrl</code> is null.
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri,System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri,System.String)
+  id: New(System.Uri,System.String)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: New(Uri, string)
+  nameWithType: FileUploadBuilder.New(Uri, string)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri, string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: New
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 60
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Creates a new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref> with the specified base URL and API key.
+  example: []
+  syntax:
+    content: public static FileUploadBuilder New(Uri baseUrl, string apiKey)
+    parameters:
+    - id: baseUrl
+      type: System.Uri
+      description: The base URL for the file upload service.
+    - id: apiKey
+      type: System.String
+      description: The API key to use for authentication.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: A new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function [New](baseUrl As Uri, apiKey As String) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.New*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">baseUrl</code> is null or <code class="paramref">apiKey</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.New(Uri, String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.New(System.Uri, String)
+  name.vb: New(Uri, String)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.New(System.String,System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.New(System.String,System.String)
+  id: New(System.String,System.String)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: New(string, string)
+  nameWithType: FileUploadBuilder.New(string, string)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.New(string, string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: New
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 83
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Creates a new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref> with the specified base URL and API key.
+  example: []
+  syntax:
+    content: public static FileUploadBuilder New(string baseUrl, string apiKey)
+    parameters:
+    - id: baseUrl
+      type: System.String
+      description: The base URL for the file upload service as a string.
+    - id: apiKey
+      type: System.String
+      description: The API key to use for authentication.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: A new instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function [New](baseUrl As String, apiKey As String) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.New*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">baseUrl</code> is null or empty, or if <code class="paramref">apiKey</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.New(String, String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.New(String, String)
+  name.vb: New(String, String)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey(System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey(System.String)
+  id: WithAPIKey(System.String)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithAPIKey(string)
+  nameWithType: FileUploadBuilder.WithAPIKey(string)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithAPIKey
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 105
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the API key for the file upload service.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithAPIKey(string apiKey)
+    parameters:
+    - id: apiKey
+      type: System.String
+      description: The API key to use for authentication.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function WithAPIKey(apiKey As String) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">apiKey</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.WithAPIKey(String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey(String)
+  name.vb: WithAPIKey(String)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads(System.Int32)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads(System.Int32)
+  id: WithMaxConcurrentUploads(System.Int32)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithMaxConcurrentUploads(int)
+  nameWithType: FileUploadBuilder.WithMaxConcurrentUploads(int)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads(int)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithMaxConcurrentUploads
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 121
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the maximum number of concurrent uploads.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithMaxConcurrentUploads(int maxConcurrentUploads)
+    parameters:
+    - id: maxConcurrentUploads
+      type: System.Int32
+      description: The maximum number of concurrent uploads.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function WithMaxConcurrentUploads(maxConcurrentUploads As Integer) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">maxConcurrentUploads</code> is less than or equal to zero.
+  nameWithType.vb: FileUploadBuilder.WithMaxConcurrentUploads(Integer)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads(Integer)
+  name.vb: WithMaxConcurrentUploads(Integer)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount(System.Int32)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount(System.Int32)
+  id: WithMaxRetriesCount(System.Int32)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithMaxRetriesCount(int)
+  nameWithType: FileUploadBuilder.WithMaxRetriesCount(int)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount(int)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithMaxRetriesCount
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 137
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the maximum number of retry attempts for failed uploads.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithMaxRetriesCount(int maxRetriesCount)
+    parameters:
+    - id: maxRetriesCount
+      type: System.Int32
+      description: The maximum number of retry attempts.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function WithMaxRetriesCount(maxRetriesCount As Integer) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">maxRetriesCount</code> is negative.
+  nameWithType.vb: FileUploadBuilder.WithMaxRetriesCount(Integer)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount(Integer)
+  name.vb: WithMaxRetriesCount(Integer)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory(System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory(System.String)
+  id: WithTempDirectory(System.String)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithTempDirectory(string)
+  nameWithType: FileUploadBuilder.WithTempDirectory(string)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithTempDirectory
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 153
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the temporary directory for file uploads.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithTempDirectory(string tempDirectory)
+    parameters:
+    - id: tempDirectory
+      type: System.String
+      description: The path to the temporary directory.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function WithTempDirectory(tempDirectory As String) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">tempDirectory</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.WithTempDirectory(String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory(String)
+  name.vb: WithTempDirectory(String)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(System.Func{AdvanceFileUpload.Application.Request.CompressionOption})
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(System.Func{AdvanceFileUpload.Application.Request.CompressionOption})
+  id: WithCompressionOption(System.Func{AdvanceFileUpload.Application.Request.CompressionOption})
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithCompressionOption(Func<CompressionOption>)
+  nameWithType: FileUploadBuilder.WithCompressionOption(Func<CompressionOption>)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(System.Func<AdvanceFileUpload.Application.Request.CompressionOption>)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithCompressionOption
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 168
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the compression options for the file upload service.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithCompressionOption(Func<CompressionOption> compressionOption)
+    parameters:
+    - id: compressionOption
+      type: System.Func{AdvanceFileUpload.Application.Request.CompressionOption}
+      description: The compression options to use.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function WithCompressionOption(compressionOption As Func(Of CompressionOption)) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption*
+  nameWithType.vb: FileUploadBuilder.WithCompressionOption(Func(Of CompressionOption))
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(System.Func(Of AdvanceFileUpload.Application.Request.CompressionOption))
+  name.vb: WithCompressionOption(Func(Of CompressionOption))
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(AdvanceFileUpload.Application.Request.CompressionOption)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(AdvanceFileUpload.Application.Request.CompressionOption)
+  id: WithCompressionOption(AdvanceFileUpload.Application.Request.CompressionOption)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithCompressionOption(CompressionOption)
+  nameWithType: FileUploadBuilder.WithCompressionOption(CompressionOption)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption(AdvanceFileUpload.Application.Request.CompressionOption)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithCompressionOption
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 178
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the compression options for the file upload service.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithCompressionOption(CompressionOption compressionOption)
+    parameters:
+    - id: compressionOption
+      type: AdvanceFileUpload.Application.Request.CompressionOption
+      description: The compression options to use.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function WithCompressionOption(compressionOption As CompressionOption) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption*
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension(System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension(System.String)
+  id: ExcludeCompressionExtension(System.String)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: ExcludeCompressionExtension(string)
+  nameWithType: FileUploadBuilder.ExcludeCompressionExtension(string)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension(string)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ExcludeCompressionExtension
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 190
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Excludes a specific file extension from compression.
+  example: []
+  syntax:
+    content: public FileUploadBuilder ExcludeCompressionExtension(string extension)
+    parameters:
+    - id: extension
+      type: System.String
+      description: The file extension to exclude.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ExcludeCompressionExtension(extension As String) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">extension</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.ExcludeCompressionExtension(String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension(String)
+  name.vb: ExcludeCompressionExtension(String)
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions(System.Collections.Generic.IEnumerable{System.String})
+  id: ExcludeCompressionExtensions(System.Collections.Generic.IEnumerable{System.String})
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: ExcludeCompressionExtensions(IEnumerable<string>)
+  nameWithType: FileUploadBuilder.ExcludeCompressionExtensions(IEnumerable<string>)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ExcludeCompressionExtensions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 206
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Excludes multiple file extensions from compression.
+  example: []
+  syntax:
+    content: public FileUploadBuilder ExcludeCompressionExtensions(IEnumerable<string> extensions)
+    parameters:
+    - id: extensions
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The collection of file extensions to exclude.
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: The current instance of <xref href="AdvanceFileUpload.Client.FileUploadBuilder" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ExcludeCompressionExtensions(extensions As IEnumerable(Of String)) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">extensions</code> is null or empty.
+  nameWithType.vb: FileUploadBuilder.ExcludeCompressionExtensions(IEnumerable(Of String))
+  fullName.vb: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: ExcludeCompressionExtensions(IEnumerable(Of String))
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut(System.TimeSpan)
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut(System.TimeSpan)
+  id: WithRequestTimeOut(System.TimeSpan)
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: WithRequestTimeOut(TimeSpan)
+  nameWithType: FileUploadBuilder.WithRequestTimeOut(TimeSpan)
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WithRequestTimeOut
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 221
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Sets the request timeout for the file upload service.
+  example: []
+  syntax:
+    content: public FileUploadBuilder WithRequestTimeOut(TimeSpan requestTimeOut)
+    parameters:
+    - id: requestTimeOut
+      type: System.TimeSpan
+      description: ''
+    return:
+      type: AdvanceFileUpload.Client.FileUploadBuilder
+      description: ''
+    content.vb: Public Function WithRequestTimeOut(requestTimeOut As TimeSpan) As FileUploadBuilder
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.Build
+  commentId: M:AdvanceFileUpload.Client.FileUploadBuilder.Build
+  id: Build
+  parent: AdvanceFileUpload.Client.FileUploadBuilder
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: FileUploadBuilder.Build()
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.Build()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Build
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadBuldier.cs
+    startLine: 235
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Builds and returns a new instance of <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> based on the configured options.
+  example: []
+  syntax:
+    content: public FileUploadService Build()
+    return:
+      type: AdvanceFileUpload.Client.FileUploadService
+      description: A new instance of <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Build() As FileUploadService
+  overload: AdvanceFileUpload.Client.FileUploadBuilder.Build*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown if the API key is not set.
+references:
+- uid: AdvanceFileUpload.Client.FileUploadService
+  commentId: T:AdvanceFileUpload.Client.FileUploadService
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.FileUploadService.html
+  name: FileUploadService
+  nameWithType: FileUploadService
+  fullName: AdvanceFileUpload.Client.FileUploadService
+- uid: AdvanceFileUpload.Client
+  commentId: N:AdvanceFileUpload.Client
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client
+  nameWithType: AdvanceFileUpload.Client
+  fullName: AdvanceFileUpload.Client
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Client.FileUploadBuilder
+  commentId: T:AdvanceFileUpload.Client.FileUploadBuilder
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html
+  name: FileUploadBuilder
+  nameWithType: FileUploadBuilder
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.New*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.New
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_New_System_String_
+  name: New
+  nameWithType: FileUploadBuilder.New
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_WithAPIKey_System_String_
+  name: WithAPIKey
+  nameWithType: FileUploadBuilder.WithAPIKey
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithAPIKey
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_WithMaxConcurrentUploads_System_Int32_
+  name: WithMaxConcurrentUploads
+  nameWithType: FileUploadBuilder.WithMaxConcurrentUploads
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxConcurrentUploads
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_WithMaxRetriesCount_System_Int32_
+  name: WithMaxRetriesCount
+  nameWithType: FileUploadBuilder.WithMaxRetriesCount
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithMaxRetriesCount
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_WithTempDirectory_System_String_
+  name: WithTempDirectory
+  nameWithType: FileUploadBuilder.WithTempDirectory
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithTempDirectory
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_WithCompressionOption_System_Func_AdvanceFileUpload_Application_Request_CompressionOption__
+  name: WithCompressionOption
+  nameWithType: FileUploadBuilder.WithCompressionOption
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithCompressionOption
+- uid: System.Func{AdvanceFileUpload.Application.Request.CompressionOption}
+  commentId: T:System.Func{AdvanceFileUpload.Application.Request.CompressionOption}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<CompressionOption>
+  nameWithType: Func<CompressionOption>
+  fullName: System.Func<AdvanceFileUpload.Application.Request.CompressionOption>
+  nameWithType.vb: Func(Of CompressionOption)
+  fullName.vb: System.Func(Of AdvanceFileUpload.Application.Request.CompressionOption)
+  name.vb: Func(Of CompressionOption)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: AdvanceFileUpload.Application.Request.CompressionOption
+    name: CompressionOption
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Application.Request.CompressionOption
+    name: CompressionOption
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: AdvanceFileUpload.Application.Request.CompressionOption
+  commentId: T:AdvanceFileUpload.Application.Request.CompressionOption
+  parent: AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.Application.Request.CompressionOption.html
+  name: CompressionOption
+  nameWithType: CompressionOption
+  fullName: AdvanceFileUpload.Application.Request.CompressionOption
+- uid: AdvanceFileUpload.Application.Request
+  commentId: N:AdvanceFileUpload.Application.Request
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Application.Request
+  nameWithType: AdvanceFileUpload.Application.Request
+  fullName: AdvanceFileUpload.Application.Request
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Application
+    name: Application
+    href: AdvanceFileUpload.Application.html
+  - name: .
+  - uid: AdvanceFileUpload.Application.Request
+    name: Request
+    href: AdvanceFileUpload.Application.Request.html
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_ExcludeCompressionExtension_System_String_
+  name: ExcludeCompressionExtension
+  nameWithType: FileUploadBuilder.ExcludeCompressionExtension
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtension
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_ExcludeCompressionExtensions_System_Collections_Generic_IEnumerable_System_String__
+  name: ExcludeCompressionExtensions
+  nameWithType: FileUploadBuilder.ExcludeCompressionExtensions
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.ExcludeCompressionExtensions
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_WithRequestTimeOut_System_TimeSpan_
+  name: WithRequestTimeOut
+  nameWithType: FileUploadBuilder.WithRequestTimeOut
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.WithRequestTimeOut
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: AdvanceFileUpload.Client.FileUploadBuilder.Build*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadBuilder.Build
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html#AdvanceFileUpload_Client_FileUploadBuilder_Build
+  name: Build
+  nameWithType: FileUploadBuilder.Build
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder.Build

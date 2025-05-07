@@ -11,6 +11,7 @@ items:
   - AdvanceFileUpload.Application.Compression.FileCompressor.CompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,AdvanceFileUpload.Application.Compression.CompressionLevelOption,System.Threading.CancellationToken)
   - AdvanceFileUpload.Application.Compression.FileCompressor.DecompressFileAsync(System.String,System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
   - AdvanceFileUpload.Application.Compression.FileCompressor.DecompressFilesAsync(System.String[],System.String,AdvanceFileUpload.Application.Compression.CompressionAlgorithmOption,System.Threading.CancellationToken)
+  - AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension
   - AdvanceFileUpload.Application.Compression.FileCompressor.IsFileApplicableForCompression(System.String)
   langs:
   - csharp
@@ -46,6 +47,39 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
+- uid: AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension
+  commentId: P:AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension
+  id: ExcludedExtension
+  parent: AdvanceFileUpload.Application.Compression.FileCompressor
+  langs:
+  - csharp
+  - vb
+  name: ExcludedExtension
+  nameWithType: FileCompressor.ExcludedExtension
+  fullName: AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ExcludedExtension
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
+    startLine: 112
+  assemblies:
+  - AdvanceFileUpload.Application.Shared
+  namespace: AdvanceFileUpload.Application.Compression
+  summary: Get a list of file extensions that will be ignored during compression.
+  example: []
+  syntax:
+    content: public IReadOnlyList<string> ExcludedExtension { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public ReadOnly Property ExcludedExtension As IReadOnlyList(Of String)
+  overload: AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension*
+  implements:
+  - AdvanceFileUpload.Application.Compression.IFileCompressor.ExcludedExtension
 - uid: AdvanceFileUpload.Application.Compression.FileCompressor.#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Compression.FileCompressor})
   commentId: M:AdvanceFileUpload.Application.Compression.FileCompressor.#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Compression.FileCompressor})
   id: '#ctor(Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Compression.FileCompressor})'
@@ -64,7 +98,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 116
+    startLine: 118
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -103,7 +137,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompressFileAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 121
+    startLine: 123
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -155,7 +189,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: DecompressFileAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 127
+    startLine: 129
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -204,7 +238,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompressFilesAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 133
+    startLine: 135
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -256,7 +290,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: DecompressFilesAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 152
+    startLine: 154
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -305,7 +339,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsFileApplicableForCompression
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 247
+    startLine: 249
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -345,7 +379,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: AddExcludedExtension
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application.Shared/Compression/FileCompressor.cs
-    startLine: 264
+    startLine: 266
   assemblies:
   - AdvanceFileUpload.Application.Shared
   namespace: AdvanceFileUpload.Application.Compression
@@ -615,6 +649,119 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension*
+  commentId: Overload:AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension
+  href: AdvanceFileUpload.Application.Compression.FileCompressor.html#AdvanceFileUpload_Application_Compression_FileCompressor_ExcludedExtension
+  name: ExcludedExtension
+  nameWithType: FileCompressor.ExcludedExtension
+  fullName: AdvanceFileUpload.Application.Compression.FileCompressor.ExcludedExtension
+- uid: AdvanceFileUpload.Application.Compression.IFileCompressor.ExcludedExtension
+  commentId: P:AdvanceFileUpload.Application.Compression.IFileCompressor.ExcludedExtension
+  parent: AdvanceFileUpload.Application.Compression.IFileCompressor
+  href: AdvanceFileUpload.Application.Compression.IFileCompressor.html#AdvanceFileUpload_Application_Compression_IFileCompressor_ExcludedExtension
+  name: ExcludedExtension
+  nameWithType: IFileCompressor.ExcludedExtension
+  fullName: AdvanceFileUpload.Application.Compression.IFileCompressor.ExcludedExtension
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: AdvanceFileUpload.Application.Compression.FileCompressor
   commentId: T:AdvanceFileUpload.Application.Compression.FileCompressor
   href: AdvanceFileUpload.Application.Compression.FileCompressor.html

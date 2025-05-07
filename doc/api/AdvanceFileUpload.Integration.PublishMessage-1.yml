@@ -1,0 +1,684 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration.PublishMessage`1
+  commentId: T:AdvanceFileUpload.Integration.PublishMessage`1
+  id: PublishMessage`1
+  parent: AdvanceFileUpload.Integration
+  children:
+  - AdvanceFileUpload.Integration.PublishMessage`1.AutoDelete
+  - AdvanceFileUpload.Integration.PublishMessage`1.Durable
+  - AdvanceFileUpload.Integration.PublishMessage`1.Exchange
+  - AdvanceFileUpload.Integration.PublishMessage`1.ExchangeType
+  - AdvanceFileUpload.Integration.PublishMessage`1.Exclusive
+  - AdvanceFileUpload.Integration.PublishMessage`1.Message
+  - AdvanceFileUpload.Integration.PublishMessage`1.Queue
+  - AdvanceFileUpload.Integration.PublishMessage`1.RoutingKey
+  langs:
+  - csharp
+  - vb
+  name: PublishMessage<T>
+  nameWithType: PublishMessage<T>
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: PublishMessage
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Represents a message to be published to a message broker.
+  example: []
+  syntax:
+    content: public class PublishMessage<T>
+    typeParameters:
+    - id: T
+      description: The type of the message payload.
+    content.vb: Public Class PublishMessage(Of T)
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: PublishMessage(Of T)
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T)
+  name.vb: PublishMessage(Of T)
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Message
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.Message
+  id: Message
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: PublishMessage<T>.Message
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Message
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Message
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 11
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Gets or sets the message payload.
+  example: []
+  syntax:
+    content: public required T Message { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property Message As T
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.Message*
+  nameWithType.vb: PublishMessage(Of T).Message
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Message
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Queue
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.Queue
+  id: Queue
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: Queue
+  nameWithType: PublishMessage<T>.Queue
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Queue
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Queue
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 16
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Gets or sets the name of the queue to which the message will be published.
+  example: []
+  syntax:
+    content: public required string Queue { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Queue As String
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.Queue*
+  nameWithType.vb: PublishMessage(Of T).Queue
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Queue
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Exchange
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.Exchange
+  id: Exchange
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: Exchange
+  nameWithType: PublishMessage<T>.Exchange
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Exchange
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Exchange
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 21
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Gets or sets the name of the exchange to which the message will be published.
+  example: []
+  syntax:
+    content: public required string Exchange { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Exchange As String
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.Exchange*
+  nameWithType.vb: PublishMessage(Of T).Exchange
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Exchange
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.ExchangeType
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.ExchangeType
+  id: ExchangeType
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: ExchangeType
+  nameWithType: PublishMessage<T>.ExchangeType
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.ExchangeType
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ExchangeType
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 26
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Gets or sets the type of the exchange (e.g., direct, fanout, topic, headers).
+  example: []
+  syntax:
+    content: public required string ExchangeType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExchangeType As String
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.ExchangeType*
+  nameWithType.vb: PublishMessage(Of T).ExchangeType
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).ExchangeType
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.RoutingKey
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.RoutingKey
+  id: RoutingKey
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: RoutingKey
+  nameWithType: PublishMessage<T>.RoutingKey
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.RoutingKey
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: RoutingKey
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 31
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Gets or sets the routing key used to route the message.
+  example: []
+  syntax:
+    content: public required string RoutingKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RoutingKey As String
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.RoutingKey*
+  nameWithType.vb: PublishMessage(Of T).RoutingKey
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).RoutingKey
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Durable
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.Durable
+  id: Durable
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: Durable
+  nameWithType: PublishMessage<T>.Durable
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Durable
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Durable
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 37
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: >-
+    Gets or sets a value indicating whether the queue is durable.
+
+    Durable queues survive broker restarts.
+  example: []
+  syntax:
+    content: public bool Durable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Durable As Boolean
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.Durable*
+  nameWithType.vb: PublishMessage(Of T).Durable
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Durable
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Exclusive
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.Exclusive
+  id: Exclusive
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: Exclusive
+  nameWithType: PublishMessage<T>.Exclusive
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Exclusive
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Exclusive
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 43
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: >-
+    Gets or sets a value indicating whether the queue is exclusive.
+
+    Exclusive queues can only be accessed by the connection that declared them.
+  example: []
+  syntax:
+    content: public bool Exclusive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Exclusive As Boolean
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.Exclusive*
+  nameWithType.vb: PublishMessage(Of T).Exclusive
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Exclusive
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.AutoDelete
+  commentId: P:AdvanceFileUpload.Integration.PublishMessage`1.AutoDelete
+  id: AutoDelete
+  parent: AdvanceFileUpload.Integration.PublishMessage`1
+  langs:
+  - csharp
+  - vb
+  name: AutoDelete
+  nameWithType: PublishMessage<T>.AutoDelete
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.AutoDelete
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AutoDelete
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/PublishMessage.cs
+    startLine: 49
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: >-
+    Gets or sets a value indicating whether the queue is automatically deleted
+
+    when the last consumer unsubscribes.
+  example: []
+  syntax:
+    content: public bool AutoDelete { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AutoDelete As Boolean
+  overload: AdvanceFileUpload.Integration.PublishMessage`1.AutoDelete*
+  nameWithType.vb: PublishMessage(Of T).AutoDelete
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).AutoDelete
+references:
+- uid: AdvanceFileUpload.Integration
+  commentId: N:AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration
+  nameWithType: AdvanceFileUpload.Integration
+  fullName: AdvanceFileUpload.Integration
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Message*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.Message
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_Message
+  name: Message
+  nameWithType: PublishMessage<T>.Message
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Message
+  nameWithType.vb: PublishMessage(Of T).Message
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Message
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  commentId: '!:T'
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Queue*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.Queue
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_Queue
+  name: Queue
+  nameWithType: PublishMessage<T>.Queue
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Queue
+  nameWithType.vb: PublishMessage(Of T).Queue
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Queue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Exchange*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.Exchange
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_Exchange
+  name: Exchange
+  nameWithType: PublishMessage<T>.Exchange
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Exchange
+  nameWithType.vb: PublishMessage(Of T).Exchange
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Exchange
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.ExchangeType*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.ExchangeType
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_ExchangeType
+  name: ExchangeType
+  nameWithType: PublishMessage<T>.ExchangeType
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.ExchangeType
+  nameWithType.vb: PublishMessage(Of T).ExchangeType
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).ExchangeType
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.RoutingKey*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.RoutingKey
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_RoutingKey
+  name: RoutingKey
+  nameWithType: PublishMessage<T>.RoutingKey
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.RoutingKey
+  nameWithType.vb: PublishMessage(Of T).RoutingKey
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).RoutingKey
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Durable*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.Durable
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_Durable
+  name: Durable
+  nameWithType: PublishMessage<T>.Durable
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Durable
+  nameWithType.vb: PublishMessage(Of T).Durable
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Durable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.Exclusive*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.Exclusive
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_Exclusive
+  name: Exclusive
+  nameWithType: PublishMessage<T>.Exclusive
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.Exclusive
+  nameWithType.vb: PublishMessage(Of T).Exclusive
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).Exclusive
+- uid: AdvanceFileUpload.Integration.PublishMessage`1.AutoDelete*
+  commentId: Overload:AdvanceFileUpload.Integration.PublishMessage`1.AutoDelete
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html#AdvanceFileUpload_Integration_PublishMessage_1_AutoDelete
+  name: AutoDelete
+  nameWithType: PublishMessage<T>.AutoDelete
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>.AutoDelete
+  nameWithType.vb: PublishMessage(Of T).AutoDelete
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T).AutoDelete

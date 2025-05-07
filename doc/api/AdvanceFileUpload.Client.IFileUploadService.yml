@@ -9,6 +9,7 @@ items:
   - AdvanceFileUpload.Client.IFileUploadService.CanPauseSession
   - AdvanceFileUpload.Client.IFileUploadService.CanResumeSession
   - AdvanceFileUpload.Client.IFileUploadService.CancelUploadAsync
+  - AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
   - AdvanceFileUpload.Client.IFileUploadService.IsSessionCanceled
   - AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
   - AdvanceFileUpload.Client.IFileUploadService.IsSessionPaused
@@ -36,8 +37,10 @@ items:
   summary: Defines the contract for a file upload service.
   example: []
   syntax:
-    content: public interface IFileUploadService
-    content.vb: Public Interface IFileUploadService
+    content: 'public interface IFileUploadService : IDisposable'
+    content.vb: Public Interface IFileUploadService Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
 - uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
   commentId: M:AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync(System.String)
   id: UploadFileAsync(System.String)
@@ -56,7 +59,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadFileAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -94,7 +97,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -125,7 +128,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ResumeUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 24
+    startLine: 25
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -156,7 +159,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 30
+    startLine: 31
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -187,7 +190,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CanPauseSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -218,7 +221,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CanCancelSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 40
+    startLine: 41
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -249,7 +252,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CanResumeSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 45
+    startLine: 46
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -280,7 +283,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsSessionPaused
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 50
+    startLine: 51
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -311,7 +314,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsSessionCanceled
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 55
+    startLine: 56
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -342,7 +345,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsSessionCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -355,6 +358,37 @@ items:
       type: System.Boolean
     content.vb: ReadOnly Property IsSessionCompleted As Boolean
   overload: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted*
+- uid: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+  id: CompressionIgnoredExtensions
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CompressionIgnoredExtensions
+  nameWithType: IFileUploadService.CompressionIgnoredExtensions
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionIgnoredExtensions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/IFileUploadService.cs
+    startLine: 65
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Get the list of file extensions that will be ignored during compression.
+  example: []
+  syntax:
+    content: IReadOnlyList<string> CompressionIgnoredExtensions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: ReadOnly Property CompressionIgnoredExtensions As IReadOnlyList(Of String)
+  overload: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions*
 references:
 - uid: AdvanceFileUpload.Client
   commentId: N:AdvanceFileUpload.Client
@@ -378,6 +412,43 @@ references:
   - uid: AdvanceFileUpload.Client
     name: Client
     href: AdvanceFileUpload.Client.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync*
   commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.UploadFileAsync
   href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_UploadFileAsync_System_String_
@@ -403,13 +474,6 @@ references:
   name: Task
   nameWithType: Task
   fullName: System.Threading.Tasks.Task
-- uid: System
-  commentId: N:System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System
-  nameWithType: System
-  fullName: System
 - uid: System.Threading.Tasks
   commentId: N:System.Threading.Tasks
   isExternal: true
@@ -512,3 +576,109 @@ references:
   name: IsSessionCompleted
   nameWithType: IFileUploadService.IsSessionCompleted
   fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+- uid: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions*
+  commentId: Overload:AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CompressionIgnoredExtensions
+  name: CompressionIgnoredExtensions
+  nameWithType: IFileUploadService.CompressionIgnoredExtensions
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

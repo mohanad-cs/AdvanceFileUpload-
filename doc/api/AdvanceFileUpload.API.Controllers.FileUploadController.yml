@@ -11,6 +11,8 @@ items:
   - AdvanceFileUpload.API.Controllers.FileUploadController.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
   - AdvanceFileUpload.API.Controllers.FileUploadController.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
   - AdvanceFileUpload.API.Controllers.FileUploadController.PauseUploadSessionAsync(AdvanceFileUpload.Application.Request.PauseUploadSessionRequest,System.Threading.CancellationToken)
+  - AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint
+  - AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi
   - AdvanceFileUpload.API.Controllers.FileUploadController.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
   langs:
   - csharp
@@ -259,6 +261,104 @@ items:
   nameWithType.vb: FileUploadController.New(IUploadManger)
   fullName.vb: AdvanceFileUpload.API.Controllers.FileUploadController.New(AdvanceFileUpload.Application.IUploadManger)
   name.vb: New(IUploadManger)
+- uid: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi
+  commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi
+  id: RedirectToSwaggerUi
+  parent: AdvanceFileUpload.API.Controllers.FileUploadController
+  langs:
+  - csharp
+  - vb
+  name: RedirectToSwaggerUi()
+  nameWithType: FileUploadController.RedirectToSwaggerUi()
+  fullName: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: RedirectToSwaggerUi
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API.Controllers
+  syntax:
+    content: >-
+      [Route("")]
+
+      [HttpGet]
+
+      [ApiExplorerSettings(IgnoreApi = true)]
+
+      public RedirectResult RedirectToSwaggerUi()
+    return:
+      type: Microsoft.AspNetCore.Mvc.RedirectResult
+    content.vb: >-
+      <Route("")>
+
+      <HttpGet>
+
+      <ApiExplorerSettings(IgnoreApi:=True)>
+
+      Public Function RedirectToSwaggerUi() As RedirectResult
+  overload: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.RouteAttribute
+    ctor: Microsoft.AspNetCore.Mvc.RouteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ''
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor
+    arguments: []
+  - type: Microsoft.AspNetCore.Mvc.ApiExplorerSettingsAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ApiExplorerSettingsAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: IgnoreApi
+      type: System.Boolean
+      value: true
+- uid: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint
+  commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint
+  id: RedirectToHealthEndpoint
+  parent: AdvanceFileUpload.API.Controllers.FileUploadController
+  langs:
+  - csharp
+  - vb
+  name: RedirectToHealthEndpoint()
+  nameWithType: FileUploadController.RedirectToHealthEndpoint()
+  fullName: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: RedirectToHealthEndpoint
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
+    startLine: 24
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API.Controllers
+  syntax:
+    content: >-
+      [HttpGet("api/upload/health")]
+
+      public RedirectResult RedirectToHealthEndpoint()
+    return:
+      type: Microsoft.AspNetCore.Mvc.RedirectResult
+    content.vb: >-
+      <HttpGet("api/upload/health")>
+
+      Public Function RedirectToHealthEndpoint() As RedirectResult
+  overload: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint*
+  attributes:
+  - type: Microsoft.AspNetCore.Mvc.HttpGetAttribute
+    ctor: Microsoft.AspNetCore.Mvc.HttpGetAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: api/upload/health
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
   id: CreateUploadSessionAsync(AdvanceFileUpload.Application.Request.CreateUploadSessionRequest,System.Threading.CancellationToken)
@@ -277,7 +377,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CreateUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
-    startLine: 25
+    startLine: 35
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.Controllers
@@ -290,6 +390,8 @@ items:
       [ProducesResponseType(200)]
 
       [ProducesResponseType(400)]
+
+      [ProducesResponseType(429)]
 
       public Task<ActionResult<CreateUploadSessionResponse>> CreateUploadSessionAsync(CreateUploadSessionRequest request, CancellationToken cancellationToken)
     parameters:
@@ -313,6 +415,8 @@ items:
 
       <ProducesResponseType(400)>
 
+      <ProducesResponseType(429)>
+
       Public Function CreateUploadSessionAsync(request As CreateUploadSessionRequest, cancellationToken As CancellationToken) As Task(Of ActionResult(Of CreateUploadSessionResponse))
   overload: AdvanceFileUpload.API.Controllers.FileUploadController.CreateUploadSessionAsync*
   attributes:
@@ -331,6 +435,11 @@ items:
     arguments:
     - type: System.Int32
       value: 400
+  - type: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 429
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.CompleteUploadSessionAsync(AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.CompleteUploadSessionAsync(AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest,System.Threading.CancellationToken)
   id: CompleteUploadSessionAsync(AdvanceFileUpload.Application.Request.CompleteUploadSessionRequest,System.Threading.CancellationToken)
@@ -349,7 +458,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompleteUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
-    startLine: 40
+    startLine: 51
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.Controllers
@@ -362,6 +471,8 @@ items:
       [ProducesResponseType(200)]
 
       [ProducesResponseType(400)]
+
+      [ProducesResponseType(429)]
 
       public Task<ActionResult<bool>> CompleteUploadSessionAsync(CompleteUploadSessionRequest request, CancellationToken cancellationToken)
     parameters:
@@ -385,6 +496,8 @@ items:
 
       <ProducesResponseType(400)>
 
+      <ProducesResponseType(429)>
+
       Public Function CompleteUploadSessionAsync(request As CompleteUploadSessionRequest, cancellationToken As CancellationToken) As Task(Of ActionResult(Of Boolean))
   overload: AdvanceFileUpload.API.Controllers.FileUploadController.CompleteUploadSessionAsync*
   attributes:
@@ -403,6 +516,11 @@ items:
     arguments:
     - type: System.Int32
       value: 400
+  - type: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 429
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
   id: UploadChunkAsync(AdvanceFileUpload.Application.Request.UploadChunkRequest,System.Threading.CancellationToken)
@@ -421,7 +539,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadChunkAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
-    startLine: 59
+    startLine: 71
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.Controllers
@@ -434,6 +552,8 @@ items:
       [ProducesResponseType(200)]
 
       [ProducesResponseType(400)]
+
+      [ProducesResponseType(429)]
 
       public Task<ActionResult<bool>> UploadChunkAsync(UploadChunkRequest request, CancellationToken cancellationToken)
     parameters:
@@ -457,6 +577,8 @@ items:
 
       <ProducesResponseType(400)>
 
+      <ProducesResponseType(429)>
+
       Public Function UploadChunkAsync(request As UploadChunkRequest, cancellationToken As CancellationToken) As Task(Of ActionResult(Of Boolean))
   overload: AdvanceFileUpload.API.Controllers.FileUploadController.UploadChunkAsync*
   attributes:
@@ -475,6 +597,11 @@ items:
     arguments:
     - type: System.Int32
       value: 400
+  - type: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 429
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
   id: GetUploadSessionStatusAsync(System.Guid,System.Threading.CancellationToken)
@@ -493,7 +620,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: GetUploadSessionStatusAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
-    startLine: 74
+    startLine: 87
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.Controllers
@@ -506,6 +633,8 @@ items:
       [ProducesResponseType(200)]
 
       [ProducesResponseType(404)]
+
+      [ProducesResponseType(429)]
 
       public Task<ActionResult<UploadSessionStatusResponse?>> GetUploadSessionStatusAsync(Guid sessionId, CancellationToken cancellationToken)
     parameters:
@@ -529,6 +658,8 @@ items:
 
       <ProducesResponseType(404)>
 
+      <ProducesResponseType(429)>
+
       Public Function GetUploadSessionStatusAsync(sessionId As Guid, cancellationToken As CancellationToken) As Task(Of ActionResult(Of UploadSessionStatusResponse))
   overload: AdvanceFileUpload.API.Controllers.FileUploadController.GetUploadSessionStatusAsync*
   attributes:
@@ -547,6 +678,11 @@ items:
     arguments:
     - type: System.Int32
       value: 404
+  - type: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 429
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.CancelUploadSessionAsync(AdvanceFileUpload.Application.Request.CancelUploadSessionRequest,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.CancelUploadSessionAsync(AdvanceFileUpload.Application.Request.CancelUploadSessionRequest,System.Threading.CancellationToken)
   id: CancelUploadSessionAsync(AdvanceFileUpload.Application.Request.CancelUploadSessionRequest,System.Threading.CancellationToken)
@@ -565,7 +701,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
-    startLine: 94
+    startLine: 107
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.Controllers
@@ -578,6 +714,8 @@ items:
       [ProducesResponseType(200)]
 
       [ProducesResponseType(400)]
+
+      [ProducesResponseType(429)]
 
       public Task<ActionResult<bool>> CancelUploadSessionAsync(CancelUploadSessionRequest request, CancellationToken cancellationToken)
     parameters:
@@ -601,6 +739,8 @@ items:
 
       <ProducesResponseType(400)>
 
+      <ProducesResponseType(429)>
+
       Public Function CancelUploadSessionAsync(request As CancelUploadSessionRequest, cancellationToken As CancellationToken) As Task(Of ActionResult(Of Boolean))
   overload: AdvanceFileUpload.API.Controllers.FileUploadController.CancelUploadSessionAsync*
   attributes:
@@ -619,6 +759,11 @@ items:
     arguments:
     - type: System.Int32
       value: 400
+  - type: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 429
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.PauseUploadSessionAsync(AdvanceFileUpload.Application.Request.PauseUploadSessionRequest,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.API.Controllers.FileUploadController.PauseUploadSessionAsync(AdvanceFileUpload.Application.Request.PauseUploadSessionRequest,System.Threading.CancellationToken)
   id: PauseUploadSessionAsync(AdvanceFileUpload.Application.Request.PauseUploadSessionRequest,System.Threading.CancellationToken)
@@ -637,7 +782,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseUploadSessionAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Controllers/FileUploadController.cs
-    startLine: 112
+    startLine: 126
   assemblies:
   - AdvanceFileUpload.API
   namespace: AdvanceFileUpload.API.Controllers
@@ -650,6 +795,8 @@ items:
       [ProducesResponseType(200)]
 
       [ProducesResponseType(400)]
+
+      [ProducesResponseType(429)]
 
       public Task<ActionResult<bool>> PauseUploadSessionAsync(PauseUploadSessionRequest request, CancellationToken cancellationToken)
     parameters:
@@ -672,6 +819,8 @@ items:
 
       <ProducesResponseType(400)>
 
+      <ProducesResponseType(429)>
+
       Public Function PauseUploadSessionAsync(request As PauseUploadSessionRequest, cancellationToken As CancellationToken) As Task(Of ActionResult(Of Boolean))
   overload: AdvanceFileUpload.API.Controllers.FileUploadController.PauseUploadSessionAsync*
   attributes:
@@ -690,6 +839,11 @@ items:
     arguments:
     - type: System.Int32
       value: 400
+  - type: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute
+    ctor: Microsoft.AspNetCore.Mvc.ProducesResponseTypeAttribute.#ctor(System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 429
 references:
 - uid: AdvanceFileUpload.API.Controllers
   commentId: N:AdvanceFileUpload.API.Controllers
@@ -9724,6 +9878,26 @@ references:
   - uid: AdvanceFileUpload.Application
     name: Application
     href: AdvanceFileUpload.Application.html
+- uid: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi*
+  commentId: Overload:AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi
+  href: AdvanceFileUpload.API.Controllers.FileUploadController.html#AdvanceFileUpload_API_Controllers_FileUploadController_RedirectToSwaggerUi
+  name: RedirectToSwaggerUi
+  nameWithType: FileUploadController.RedirectToSwaggerUi
+  fullName: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToSwaggerUi
+- uid: Microsoft.AspNetCore.Mvc.RedirectResult
+  commentId: T:Microsoft.AspNetCore.Mvc.RedirectResult
+  parent: Microsoft.AspNetCore.Mvc
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.redirectresult
+  name: RedirectResult
+  nameWithType: RedirectResult
+  fullName: Microsoft.AspNetCore.Mvc.RedirectResult
+- uid: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint*
+  commentId: Overload:AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint
+  href: AdvanceFileUpload.API.Controllers.FileUploadController.html#AdvanceFileUpload_API_Controllers_FileUploadController_RedirectToHealthEndpoint
+  name: RedirectToHealthEndpoint
+  nameWithType: FileUploadController.RedirectToHealthEndpoint
+  fullName: AdvanceFileUpload.API.Controllers.FileUploadController.RedirectToHealthEndpoint
 - uid: AdvanceFileUpload.API.Controllers.FileUploadController.CreateUploadSessionAsync*
   commentId: Overload:AdvanceFileUpload.API.Controllers.FileUploadController.CreateUploadSessionAsync
   href: AdvanceFileUpload.API.Controllers.FileUploadController.html#AdvanceFileUpload_API_Controllers_FileUploadController_CreateUploadSessionAsync_AdvanceFileUpload_Application_Request_CreateUploadSessionRequest_System_Threading_CancellationToken_

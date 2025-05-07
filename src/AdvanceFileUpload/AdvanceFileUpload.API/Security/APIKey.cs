@@ -16,7 +16,7 @@
         /// <summary>
         /// The RateLimit associated with the API key.
         /// </summary>
-        /// <remarks>if <see cref="RateLimit"/> set to <see cref="null"/> then it means there is no rate limit for that client</remarks>
+        /// <remarks>if <see cref="RateLimit"/> set to <see langword="null"/> then it means there is no rate limit for that client</remarks>
         public ClientRateLimit? RateLimit { get; init; }
         // 
     }

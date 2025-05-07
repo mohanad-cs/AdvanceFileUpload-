@@ -1,0 +1,275 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  commentId: T:AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  id: INetworkConnectionChecker
+  parent: AdvanceFileUpload.Client.Helper
+  children:
+  - AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: INetworkConnectionChecker
+  nameWithType: INetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/INetworkConnectionChecker.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: INetworkConnectionChecker
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/INetworkConnectionChecker.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Defines methods to check the health of a network connection.
+  example: []
+  syntax:
+    content: 'public interface INetworkConnectionChecker : IDisposable'
+    content.vb: Public Interface INetworkConnectionChecker Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  id: CheckApiHealthAsync(System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  langs:
+  - csharp
+  - vb
+  name: CheckApiHealthAsync(CancellationToken)
+  nameWithType: INetworkConnectionChecker.CheckApiHealthAsync(CancellationToken)
+  fullName: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/INetworkConnectionChecker.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CheckApiHealthAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/INetworkConnectionChecker.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Checks the health of the API asynchronously.
+  example: []
+  syntax:
+    content: Task<ConnectionStatus> CheckApiHealthAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+      description: A cancellation token that can be used to cancel the operation.
+    return:
+      type: System.Threading.Tasks.Task{AdvanceFileUpload.Client.Helper.ConnectionStatus}
+      description: A task that represents the asynchronous operation. The task result contains the connection status.
+    content.vb: Function CheckApiHealthAsync(ct As CancellationToken = Nothing) As Task(Of ConnectionStatus)
+  overload: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync*
+references:
+- uid: AdvanceFileUpload.Client.Helper
+  commentId: N:AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client.Helper
+  nameWithType: AdvanceFileUpload.Client.Helper
+  fullName: AdvanceFileUpload.Client.Helper
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync
+  href: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_INetworkConnectionChecker_CheckApiHealthAsync_System_Threading_CancellationToken_
+  name: CheckApiHealthAsync
+  nameWithType: INetworkConnectionChecker.CheckApiHealthAsync
+  fullName: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{AdvanceFileUpload.Client.Helper.ConnectionStatus}
+  commentId: T:System.Threading.Tasks.Task{AdvanceFileUpload.Client.Helper.ConnectionStatus}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ConnectionStatus>
+  nameWithType: Task<ConnectionStatus>
+  fullName: System.Threading.Tasks.Task<AdvanceFileUpload.Client.Helper.ConnectionStatus>
+  nameWithType.vb: Task(Of ConnectionStatus)
+  fullName.vb: System.Threading.Tasks.Task(Of AdvanceFileUpload.Client.Helper.ConnectionStatus)
+  name.vb: Task(Of ConnectionStatus)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+    name: ConnectionStatus
+    href: AdvanceFileUpload.Client.Helper.ConnectionStatus.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+    name: ConnectionStatus
+    href: AdvanceFileUpload.Client.Helper.ConnectionStatus.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

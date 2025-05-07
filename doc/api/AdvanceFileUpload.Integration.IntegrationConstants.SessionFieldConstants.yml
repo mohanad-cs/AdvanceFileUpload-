@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  id: IntegrationConstants.SessionFieldConstants
+  parent: AdvanceFileUpload.Integration
+  children:
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.AutoDelete
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Durable
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exchange
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.ExchangeType
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exclusive
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Queue
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.RoutingKey
+  langs:
+  - csharp
+  - vb
+  name: IntegrationConstants.SessionFieldConstants
+  nameWithType: IntegrationConstants.SessionFieldConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SessionFieldConstants
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 220
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Constants related to the "Session Field" event.
+  example: []
+  syntax:
+    content: public sealed class IntegrationConstants.SessionFieldConstants
+    content.vb: Public NotInheritable Class IntegrationConstants.SessionFieldConstants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Queue
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Queue
+  id: Queue
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: Queue
+  nameWithType: IntegrationConstants.SessionFieldConstants.Queue
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Queue
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Queue
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 225
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: The name of the queue for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const string Queue = "Session-Field"
+    return:
+      type: System.String
+    content.vb: Public Const Queue As String = "Session-Field"
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.RoutingKey
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.RoutingKey
+  id: RoutingKey
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: RoutingKey
+  nameWithType: IntegrationConstants.SessionFieldConstants.RoutingKey
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.RoutingKey
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: RoutingKey
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 229
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: The routing key for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const string RoutingKey = "Session-Field"
+    return:
+      type: System.String
+    content.vb: Public Const RoutingKey As String = "Session-Field"
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exchange
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exchange
+  id: Exchange
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: Exchange
+  nameWithType: IntegrationConstants.SessionFieldConstants.Exchange
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exchange
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Exchange
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 233
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: The exchange name for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const string Exchange = "Session-Field"
+    return:
+      type: System.String
+    content.vb: Public Const Exchange As String = "Session-Field"
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.ExchangeType
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.ExchangeType
+  id: ExchangeType
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: ExchangeType
+  nameWithType: IntegrationConstants.SessionFieldConstants.ExchangeType
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.ExchangeType
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ExchangeType
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 237
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: The type of exchange for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const string ExchangeType = "direct"
+    return:
+      type: System.String
+    content.vb: Public Const ExchangeType As String = "direct"
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Durable
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Durable
+  id: Durable
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: Durable
+  nameWithType: IntegrationConstants.SessionFieldConstants.Durable
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Durable
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Durable
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 241
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Indicates whether the queue is durable for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const bool Durable = true
+    return:
+      type: System.Boolean
+    content.vb: Public Const Durable As Boolean = True
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.AutoDelete
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.AutoDelete
+  id: AutoDelete
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: AutoDelete
+  nameWithType: IntegrationConstants.SessionFieldConstants.AutoDelete
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.AutoDelete
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AutoDelete
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 245
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Indicates whether the queue is auto-deleted for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const bool AutoDelete = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const AutoDelete As Boolean = False
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exclusive
+  commentId: F:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exclusive
+  id: Exclusive
+  parent: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  langs:
+  - csharp
+  - vb
+  name: Exclusive
+  nameWithType: IntegrationConstants.SessionFieldConstants.Exclusive
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.Exclusive
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Exclusive
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IntegrationConstants.cs
+    startLine: 249
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Indicates whether the queue is exclusive for the "Session Field" event.
+  example: []
+  syntax:
+    content: public const bool Exclusive = false
+    return:
+      type: System.Boolean
+    content.vb: Public Const Exclusive As Boolean = False
+references:
+- uid: AdvanceFileUpload.Integration
+  commentId: N:AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration
+  nameWithType: AdvanceFileUpload.Integration
+  fullName: AdvanceFileUpload.Integration
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

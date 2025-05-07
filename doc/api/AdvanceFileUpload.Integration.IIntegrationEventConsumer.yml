@@ -1,0 +1,338 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  commentId: T:AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  id: IIntegrationEventConsumer
+  parent: AdvanceFileUpload.Integration
+  children:
+  - AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync``1(AdvanceFileUpload.Integration.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IIntegrationEventConsumer
+  nameWithType: IIntegrationEventConsumer
+  fullName: AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IIntegrationEventConsumer
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Defines a contract for consuming integration events.
+  example: []
+  syntax:
+    content: 'public interface IIntegrationEventConsumer : IAsyncDisposable, IDisposable'
+    content.vb: Public Interface IIntegrationEventConsumer Inherits IAsyncDisposable, IDisposable
+  inheritedMembers:
+  - System.IAsyncDisposable.DisposeAsync
+  - System.IDisposable.Dispose
+- uid: AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync``1(AdvanceFileUpload.Integration.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync``1(AdvanceFileUpload.Integration.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  id: ConsumeAsync``1(AdvanceFileUpload.Integration.ConsumingArgs,System.Func{``0,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  langs:
+  - csharp
+  - vb
+  name: ConsumeAsync<T>(ConsumingArgs, Func<T, Task>, CancellationToken)
+  nameWithType: IIntegrationEventConsumer.ConsumeAsync<T>(ConsumingArgs, Func<T, Task>, CancellationToken)
+  fullName: AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync<T>(AdvanceFileUpload.Integration.ConsumingArgs, System.Func<T, System.Threading.Tasks.Task>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ConsumeAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Integration.Contracts/IIntegrationEventConsumer.cs
+    startLine: 14
+  assemblies:
+  - AdvanceFileUpload.Integration
+  namespace: AdvanceFileUpload.Integration
+  summary: Consumes an integration event of the specified type.
+  example: []
+  syntax:
+    content: 'Task ConsumeAsync<T>(ConsumingArgs args, Func<T, Task> onMessageReceived, CancellationToken cancellationToken = default) where T : class'
+    parameters:
+    - id: args
+      type: AdvanceFileUpload.Integration.ConsumingArgs
+      description: The arguments required for consuming the event.
+    - id: onMessageReceived
+      type: System.Func{{T},System.Threading.Tasks.Task}
+      description: A callback function to handle the received message.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: ''
+    typeParameters:
+    - id: T
+      description: The type of the event to consume.
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function ConsumeAsync(Of T As Class)(args As ConsumingArgs, onMessageReceived As Func(Of T, Task), cancellationToken As CancellationToken = Nothing) As Task
+  overload: AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync*
+  nameWithType.vb: IIntegrationEventConsumer.ConsumeAsync(Of T)(ConsumingArgs, Func(Of T, Task), CancellationToken)
+  fullName.vb: AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync(Of T)(AdvanceFileUpload.Integration.ConsumingArgs, System.Func(Of T, System.Threading.Tasks.Task), System.Threading.CancellationToken)
+  name.vb: ConsumeAsync(Of T)(ConsumingArgs, Func(Of T, Task), CancellationToken)
+references:
+- uid: AdvanceFileUpload.Integration
+  commentId: N:AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration
+  nameWithType: AdvanceFileUpload.Integration
+  fullName: AdvanceFileUpload.Integration
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+- uid: System.IAsyncDisposable.DisposeAsync
+  commentId: M:System.IAsyncDisposable.DisposeAsync
+  parent: System.IAsyncDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  name: DisposeAsync()
+  nameWithType: IAsyncDisposable.DisposeAsync()
+  fullName: System.IAsyncDisposable.DisposeAsync()
+  spec.csharp:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  - name: (
+  - name: )
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync*
+  commentId: Overload:AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync
+  href: AdvanceFileUpload.Integration.IIntegrationEventConsumer.html#AdvanceFileUpload_Integration_IIntegrationEventConsumer_ConsumeAsync__1_AdvanceFileUpload_Integration_ConsumingArgs_System_Func___0_System_Threading_Tasks_Task__System_Threading_CancellationToken_
+  name: ConsumeAsync
+  nameWithType: IIntegrationEventConsumer.ConsumeAsync
+  fullName: AdvanceFileUpload.Integration.IIntegrationEventConsumer.ConsumeAsync
+- uid: AdvanceFileUpload.Integration.ConsumingArgs
+  commentId: T:AdvanceFileUpload.Integration.ConsumingArgs
+  parent: AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.Integration.ConsumingArgs.html
+  name: ConsumingArgs
+  nameWithType: ConsumingArgs
+  fullName: AdvanceFileUpload.Integration.ConsumingArgs
+- uid: System.Func{{T},System.Threading.Tasks.Task}
+  commentId: T:System.Func{``0,System.Threading.Tasks.Task}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, Task>
+  nameWithType: Func<T, Task>
+  fullName: System.Func<T, System.Threading.Tasks.Task>
+  nameWithType.vb: Func(Of T, Task)
+  fullName.vb: System.Func(Of T, System.Threading.Tasks.Task)
+  name.vb: Func(Of T, Task)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.Threading.Tasks.Task
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

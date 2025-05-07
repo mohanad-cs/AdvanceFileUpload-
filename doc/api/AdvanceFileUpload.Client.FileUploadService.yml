@@ -6,11 +6,13 @@ items:
   parent: AdvanceFileUpload.Client
   children:
   - AdvanceFileUpload.Client.FileUploadService.#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)
+  - AdvanceFileUpload.Client.FileUploadService.AuthenticationError
   - AdvanceFileUpload.Client.FileUploadService.CanCancelSession
   - AdvanceFileUpload.Client.FileUploadService.CanPauseSession
   - AdvanceFileUpload.Client.FileUploadService.CanResumeSession
   - AdvanceFileUpload.Client.FileUploadService.CancelUploadAsync
   - AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  - AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
   - AdvanceFileUpload.Client.FileUploadService.Dispose
   - AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
   - AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
@@ -34,6 +36,7 @@ items:
   - AdvanceFileUpload.Client.FileUploadService.UploadError
   - AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
   - AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  - AdvanceFileUpload.Client.FileUploadService.UploadRetryAttempt
   langs:
   - csharp
   - vb
@@ -48,14 +51,45 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileUploadService
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 19
+    startLine: 57
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
-  summary: Provides functionality to upload files with support for compression, chunking, and session management.
+  summary: Provides functionality to upload files with support for compression, chunking, session management, and real-time progress tracking.
   remarks: >-
-    Note that the <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> have been build to process a single upload request.<br />
-        if you want to upload multiple files at the same time, you need to create a new instance of the <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> for each file.
+    <p>The <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> handles complete file upload lifecycle including:</p>
+
+    <ul><li>File compression using configurable algorithms</li><li>Chunked uploads with configurable chunk sizes</li><li>Automatic retries with exponential backoff</li><li>Network health monitoring</li><li>Real-time progress updates via SignalR</li><li>Pause/resume capabilities</li></ul>
+
+    <p>
+      <strong>Event Usage Pattern:</strong>
+    </p>
+
+    <ul><li>Subscribe to lifecycle events (<xref href="AdvanceFileUpload.Client.FileUploadService.SessionCreated" data-throw-if-not-resolved="false"></xref>, <xref href="AdvanceFileUpload.Client.FileUploadService.SessionCompleted" data-throw-if-not-resolved="false"></xref>) for session tracking</li><li>Use <xref href="AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged" data-throw-if-not-resolved="false"></xref> for real-time progress updates</li><li>Handle <xref href="AdvanceFileUpload.Client.FileUploadService.ChunkUploaded" data-throw-if-not-resolved="false"></xref> for per-chunk tracking</li><li>Listen to error events (<xref href="AdvanceFileUpload.Client.FileUploadService.UploadError" data-throw-if-not-resolved="false"></xref>, <xref href="AdvanceFileUpload.Client.FileUploadService.NetworkError" data-throw-if-not-resolved="false"></xref>) for error handling</li><li>Use pause/resume events (<xref href="AdvanceFileUpload.Client.FileUploadService.SessionPaused" data-throw-if-not-resolved="false"></xref>, <xref href="AdvanceFileUpload.Client.FileUploadService.SessionResumed" data-throw-if-not-resolved="false"></xref>) for UI state management</li></ul>
+
+    <p>
+      <strong>Typical Event Sequence:</strong>
+    </p>
+
+    <ol><li>
+        <xref href="AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted" data-throw-if-not-resolved="false"></xref>
+      </li><li>
+        <xref href="AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted" data-throw-if-not-resolved="false"></xref>
+      </li><li>
+        <xref href="AdvanceFileUpload.Client.FileUploadService.SessionCreated" data-throw-if-not-resolved="false"></xref>
+      </li><li>
+        <xref href="AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted" data-throw-if-not-resolved="false"></xref>
+      </li><li>
+        <xref href="AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted" data-throw-if-not-resolved="false"></xref>
+      </li><li>Multiple <xref href="AdvanceFileUpload.Client.FileUploadService.ChunkUploaded" data-throw-if-not-resolved="false"></xref> events</li><li>
+        <xref href="AdvanceFileUpload.Client.FileUploadService.SessionCompleted" data-throw-if-not-resolved="false"></xref>
+      </li></ol>
+    <p>
+      <strong>Important Notes:</strong>
+    </p>
+
+    <ul><li>Subscribe to events before calling <xref href="AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)" data-throw-if-not-resolved="false"></xref> to ensure proper event capture</li><li>Use <xref href="AdvanceFileUpload.Client.FileUploadService.Dispose" data-throw-if-not-resolved="false"></xref> when upload session is completed to clean up temporary files</li><li>Service instances are single-use - if you want to upload multiple files in parallel, you need to create a new instance of the <xref href="AdvanceFileUpload.Client.FileUploadService" data-throw-if-not-resolved="false"></xref> for each file.</li><li>Network connectivity is automatically monitored with <xref href="AdvanceFileUpload.Client.FileUploadService.NetworkError" data-throw-if-not-resolved="false"></xref> reporting</li><li>The service will Ignore compression for already compressed file extensions. You can get the already compressed file extensions by using the <xref href="AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions" data-throw-if-not-resolved="false"></xref><br />
+        you can add your own extensions to the list of ignored extensions by using the <xref href="AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions" data-throw-if-not-resolved="false"></xref> property in the <xref href="AdvanceFileUpload.Client.UploadOptions" data-throw-if-not-resolved="false"></xref> class.</li></ul>
   example: []
   syntax:
     content: 'public sealed class FileUploadService : IFileUploadService, IDisposable'
@@ -90,7 +124,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CanPauseSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 138
+    startLine: 176
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -123,7 +157,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CanCancelSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 140
+    startLine: 178
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -156,7 +190,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CanResumeSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 142
+    startLine: 180
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -189,7 +223,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsSessionPaused
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 144
+    startLine: 182
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -222,7 +256,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsSessionCanceled
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 146
+    startLine: 184
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -255,7 +289,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsSessionCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 148
+    startLine: 186
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -270,6 +304,39 @@ items:
   overload: AdvanceFileUpload.Client.FileUploadService.IsSessionCompleted*
   implements:
   - AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+- uid: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+  id: CompressionIgnoredExtensions
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: CompressionIgnoredExtensions
+  nameWithType: FileUploadService.CompressionIgnoredExtensions
+  fullName: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CompressionIgnoredExtensions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 188
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Get the list of file extensions that will be ignored during compression.
+  example: []
+  syntax:
+    content: public IReadOnlyList<string> CompressionIgnoredExtensions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public ReadOnly Property CompressionIgnoredExtensions As IReadOnlyList(Of String)
+  overload: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions*
+  implements:
+  - AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
 - uid: AdvanceFileUpload.Client.FileUploadService.SessionCreated
   commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCreated
   id: SessionCreated
@@ -288,7 +355,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionCreated
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 155
+    startLine: 195
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -317,7 +384,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ChunkUploaded
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 159
+    startLine: 199
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -346,7 +413,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 163
+    startLine: 203
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -375,7 +442,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionCanceled
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 167
+    startLine: 207
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -404,7 +471,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionPaused
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 171
+    startLine: 211
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -433,7 +500,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionResumed
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 175
+    startLine: 215
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -462,7 +529,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadProgressChanged
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 179
+    startLine: 219
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -491,7 +558,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadError
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 183
+    startLine: 223
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -520,7 +587,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: NetworkError
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 187
+    startLine: 227
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -549,7 +616,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileSplittingStarted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 191
+    startLine: 231
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -578,7 +645,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileSplittingCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 195
+    startLine: 235
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -607,7 +674,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileCompressionStarted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 199
+    startLine: 239
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -636,7 +703,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileCompressionCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 203
+    startLine: 243
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -665,7 +732,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionPausing
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 207
+    startLine: 247
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -694,7 +761,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionResuming
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 211
+    startLine: 251
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -723,7 +790,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionCanceling
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 215
+    startLine: 255
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -752,7 +819,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionCompleting
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 219
+    startLine: 259
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -763,6 +830,62 @@ items:
     return:
       type: System.EventHandler
     content.vb: Public Event SessionCompleting As EventHandler
+- uid: AdvanceFileUpload.Client.FileUploadService.AuthenticationError
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.AuthenticationError
+  id: AuthenticationError
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: AuthenticationError
+  nameWithType: FileUploadService.AuthenticationError
+  fullName: AdvanceFileUpload.Client.FileUploadService.AuthenticationError
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: AuthenticationError
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 263
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  summary: Occurs when an authentication error happens.
+  example: []
+  syntax:
+    content: public event EventHandler<string>? AuthenticationError
+    return:
+      type: System.EventHandler{System.String}
+    content.vb: Public Event AuthenticationError As EventHandler(Of String)
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadRetryAttempt
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.UploadRetryAttempt
+  id: UploadRetryAttempt
+  parent: AdvanceFileUpload.Client.FileUploadService
+  langs:
+  - csharp
+  - vb
+  name: UploadRetryAttempt
+  nameWithType: FileUploadService.UploadRetryAttempt
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadRetryAttempt
+  type: Event
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: UploadRetryAttempt
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
+    startLine: 264
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client
+  syntax:
+    content: public event EventHandler<string>? UploadRetryAttempt
+    return:
+      type: System.EventHandler{System.String}
+    content.vb: Public Event UploadRetryAttempt As EventHandler(Of String)
 - uid: AdvanceFileUpload.Client.FileUploadService.#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)
   commentId: M:AdvanceFileUpload.Client.FileUploadService.#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)
   id: '#ctor(System.Uri,AdvanceFileUpload.Client.UploadOptions)'
@@ -781,7 +904,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 231
+    startLine: 277
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -823,7 +946,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadFileAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 296
+    startLine: 373
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -868,7 +991,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 336
+    startLine: 412
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -901,7 +1024,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ResumeUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 366
+    startLine: 436
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -934,7 +1057,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 414
+    startLine: 484
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -967,7 +1090,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Dispose
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 965
+    startLine: 1065
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -982,10 +1105,150 @@ items:
 references:
 - uid: AdvanceFileUpload.Client.FileUploadService
   commentId: T:AdvanceFileUpload.Client.FileUploadService
+  parent: AdvanceFileUpload.Client
   href: AdvanceFileUpload.Client.FileUploadService.html
   name: FileUploadService
   nameWithType: FileUploadService
   fullName: AdvanceFileUpload.Client.FileUploadService
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCreated
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCreated
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_SessionCreated
+  name: SessionCreated
+  nameWithType: FileUploadService.SessionCreated
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCreated
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_SessionCompleted
+  name: SessionCompleted
+  nameWithType: FileUploadService.SessionCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionCompleted
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_UploadProgressChanged
+  name: UploadProgressChanged
+  nameWithType: FileUploadService.UploadProgressChanged
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadProgressChanged
+- uid: AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_ChunkUploaded
+  name: ChunkUploaded
+  nameWithType: FileUploadService.ChunkUploaded
+  fullName: AdvanceFileUpload.Client.FileUploadService.ChunkUploaded
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadError
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.UploadError
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_UploadError
+  name: UploadError
+  nameWithType: FileUploadService.UploadError
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadError
+- uid: AdvanceFileUpload.Client.FileUploadService.NetworkError
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.NetworkError
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_NetworkError
+  name: NetworkError
+  nameWithType: FileUploadService.NetworkError
+  fullName: AdvanceFileUpload.Client.FileUploadService.NetworkError
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionPaused
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionPaused
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_SessionPaused
+  name: SessionPaused
+  nameWithType: FileUploadService.SessionPaused
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionPaused
+- uid: AdvanceFileUpload.Client.FileUploadService.SessionResumed
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionResumed
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_SessionResumed
+  name: SessionResumed
+  nameWithType: FileUploadService.SessionResumed
+  fullName: AdvanceFileUpload.Client.FileUploadService.SessionResumed
+- uid: AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_FileCompressionStarted
+  name: FileCompressionStarted
+  nameWithType: FileUploadService.FileCompressionStarted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileCompressionStarted
+- uid: AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_FileCompressionCompleted
+  name: FileCompressionCompleted
+  nameWithType: FileUploadService.FileCompressionCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileCompressionCompleted
+- uid: AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_FileSplittingStarted
+  name: FileSplittingStarted
+  nameWithType: FileUploadService.FileSplittingStarted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileSplittingStarted
+- uid: AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+  commentId: E:AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_FileSplittingCompleted
+  name: FileSplittingCompleted
+  nameWithType: FileUploadService.FileSplittingCompleted
+  fullName: AdvanceFileUpload.Client.FileUploadService.FileSplittingCompleted
+- uid: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+  isExternal: true
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_UploadFileAsync_System_String_
+  name: UploadFileAsync(string)
+  nameWithType: FileUploadService.UploadFileAsync(string)
+  fullName: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(string)
+  nameWithType.vb: FileUploadService.UploadFileAsync(String)
+  fullName.vb: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(String)
+  name.vb: UploadFileAsync(String)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+    name: UploadFileAsync
+    href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_UploadFileAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.FileUploadService.UploadFileAsync(System.String)
+    name: UploadFileAsync
+    href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_UploadFileAsync_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: AdvanceFileUpload.Client.FileUploadService.Dispose
+  commentId: M:AdvanceFileUpload.Client.FileUploadService.Dispose
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_Dispose
+  name: Dispose()
+  nameWithType: FileUploadService.Dispose()
+  fullName: AdvanceFileUpload.Client.FileUploadService.Dispose()
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.FileUploadService.Dispose
+    name: Dispose
+    href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.FileUploadService.Dispose
+    name: Dispose
+    href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_Dispose
+  - name: (
+  - name: )
+- uid: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+  commentId: P:AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_CompressionIgnoredExtensions
+  name: CompressionIgnoredExtensions
+  nameWithType: FileUploadService.CompressionIgnoredExtensions
+  fullName: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+- uid: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  commentId: P:AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+  href: AdvanceFileUpload.Client.UploadOptions.html#AdvanceFileUpload_Client_UploadOptions_ExcludedCompressionExtensions
+  name: ExcludedCompressionExtensions
+  nameWithType: UploadOptions.ExcludedCompressionExtensions
+  fullName: AdvanceFileUpload.Client.UploadOptions.ExcludedCompressionExtensions
+- uid: AdvanceFileUpload.Client.UploadOptions
+  commentId: T:AdvanceFileUpload.Client.UploadOptions
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.UploadOptions.html
+  name: UploadOptions
+  nameWithType: UploadOptions
+  fullName: AdvanceFileUpload.Client.UploadOptions
 - uid: AdvanceFileUpload.Client
   commentId: N:AdvanceFileUpload.Client
   href: AdvanceFileUpload.html
@@ -1325,6 +1588,119 @@ references:
   name: IsSessionCompleted
   nameWithType: IFileUploadService.IsSessionCompleted
   fullName: AdvanceFileUpload.Client.IFileUploadService.IsSessionCompleted
+- uid: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions*
+  commentId: Overload:AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+  href: AdvanceFileUpload.Client.FileUploadService.html#AdvanceFileUpload_Client_FileUploadService_CompressionIgnoredExtensions
+  name: CompressionIgnoredExtensions
+  nameWithType: FileUploadService.CompressionIgnoredExtensions
+  fullName: AdvanceFileUpload.Client.FileUploadService.CompressionIgnoredExtensions
+- uid: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+  commentId: P:AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+  parent: AdvanceFileUpload.Client.IFileUploadService
+  href: AdvanceFileUpload.Client.IFileUploadService.html#AdvanceFileUpload_Client_IFileUploadService_CompressionIgnoredExtensions
+  name: CompressionIgnoredExtensions
+  nameWithType: IFileUploadService.CompressionIgnoredExtensions
+  fullName: AdvanceFileUpload.Client.IFileUploadService.CompressionIgnoredExtensions
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
 - uid: System.EventHandler{AdvanceFileUpload.Client.SessionCreatedEventArgs}
   commentId: T:System.EventHandler{AdvanceFileUpload.Client.SessionCreatedEventArgs}
   parent: System
@@ -1651,13 +2027,6 @@ references:
   name: Uri
   nameWithType: Uri
   fullName: System.Uri
-- uid: AdvanceFileUpload.Client.UploadOptions
-  commentId: T:AdvanceFileUpload.Client.UploadOptions
-  parent: AdvanceFileUpload.Client
-  href: AdvanceFileUpload.Client.UploadOptions.html
-  name: UploadOptions
-  nameWithType: UploadOptions
-  fullName: AdvanceFileUpload.Client.UploadOptions
 - uid: AdvanceFileUpload.Client.UploadException
   commentId: T:AdvanceFileUpload.Client.UploadException
   href: AdvanceFileUpload.Client.UploadException.html

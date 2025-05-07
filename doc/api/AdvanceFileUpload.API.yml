@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API
+  commentId: N:AdvanceFileUpload.API
+  id: AdvanceFileUpload.API
+  children:
+  - AdvanceFileUpload.API.CertificateSettings
+  - AdvanceFileUpload.API.DailyPeriodicTimer
+  - AdvanceFileUpload.API.EndpointSettings
+  - AdvanceFileUpload.API.IPeriodicTimer
+  - AdvanceFileUpload.API.KestrelConfiguration
+  - AdvanceFileUpload.API.KestrelHttp2Settings
+  - AdvanceFileUpload.API.KestrelHttp3Settings
+  - AdvanceFileUpload.API.KestrelHttpsSettings
+  - AdvanceFileUpload.API.KestrelLimits
+  - AdvanceFileUpload.API.ServiceConfiguration
+  - AdvanceFileUpload.API.SessionStatusCheckerWorker
+  - AdvanceFileUpload.API.ThreadPoolOptions
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.API
+  nameWithType: AdvanceFileUpload.API
+  fullName: AdvanceFileUpload.API
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.API
+references:
+- uid: AdvanceFileUpload.API.IPeriodicTimer
+  commentId: T:AdvanceFileUpload.API.IPeriodicTimer
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.IPeriodicTimer.html
+  name: IPeriodicTimer
+  nameWithType: IPeriodicTimer
+  fullName: AdvanceFileUpload.API.IPeriodicTimer
+- uid: AdvanceFileUpload.API.DailyPeriodicTimer
+  commentId: T:AdvanceFileUpload.API.DailyPeriodicTimer
+  href: AdvanceFileUpload.API.DailyPeriodicTimer.html
+  name: DailyPeriodicTimer
+  nameWithType: DailyPeriodicTimer
+  fullName: AdvanceFileUpload.API.DailyPeriodicTimer
+- uid: AdvanceFileUpload.API.KestrelConfiguration
+  commentId: T:AdvanceFileUpload.API.KestrelConfiguration
+  href: AdvanceFileUpload.API.KestrelConfiguration.html
+  name: KestrelConfiguration
+  nameWithType: KestrelConfiguration
+  fullName: AdvanceFileUpload.API.KestrelConfiguration
+- uid: AdvanceFileUpload.API.EndpointSettings
+  commentId: T:AdvanceFileUpload.API.EndpointSettings
+  href: AdvanceFileUpload.API.EndpointSettings.html
+  name: EndpointSettings
+  nameWithType: EndpointSettings
+  fullName: AdvanceFileUpload.API.EndpointSettings
+- uid: AdvanceFileUpload.API.CertificateSettings
+  commentId: T:AdvanceFileUpload.API.CertificateSettings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.CertificateSettings.html
+  name: CertificateSettings
+  nameWithType: CertificateSettings
+  fullName: AdvanceFileUpload.API.CertificateSettings
+- uid: AdvanceFileUpload.API.KestrelLimits
+  commentId: T:AdvanceFileUpload.API.KestrelLimits
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelLimits.html
+  name: KestrelLimits
+  nameWithType: KestrelLimits
+  fullName: AdvanceFileUpload.API.KestrelLimits
+- uid: AdvanceFileUpload.API.KestrelHttpsSettings
+  commentId: T:AdvanceFileUpload.API.KestrelHttpsSettings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelHttpsSettings.html
+  name: KestrelHttpsSettings
+  nameWithType: KestrelHttpsSettings
+  fullName: AdvanceFileUpload.API.KestrelHttpsSettings
+- uid: AdvanceFileUpload.API.KestrelHttp2Settings
+  commentId: T:AdvanceFileUpload.API.KestrelHttp2Settings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelHttp2Settings.html
+  name: KestrelHttp2Settings
+  nameWithType: KestrelHttp2Settings
+  fullName: AdvanceFileUpload.API.KestrelHttp2Settings
+- uid: AdvanceFileUpload.API.KestrelHttp3Settings
+  commentId: T:AdvanceFileUpload.API.KestrelHttp3Settings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelHttp3Settings.html
+  name: KestrelHttp3Settings
+  nameWithType: KestrelHttp3Settings
+  fullName: AdvanceFileUpload.API.KestrelHttp3Settings
+- uid: AdvanceFileUpload.API.ServiceConfiguration
+  commentId: T:AdvanceFileUpload.API.ServiceConfiguration
+  href: AdvanceFileUpload.API.ServiceConfiguration.html
+  name: ServiceConfiguration
+  nameWithType: ServiceConfiguration
+  fullName: AdvanceFileUpload.API.ServiceConfiguration
+- uid: AdvanceFileUpload.API.ThreadPoolOptions
+  commentId: T:AdvanceFileUpload.API.ThreadPoolOptions
+  href: AdvanceFileUpload.API.ThreadPoolOptions.html
+  name: ThreadPoolOptions
+  nameWithType: ThreadPoolOptions
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions
+- uid: AdvanceFileUpload.API.SessionStatusCheckerWorker
+  commentId: T:AdvanceFileUpload.API.SessionStatusCheckerWorker
+  href: AdvanceFileUpload.API.SessionStatusCheckerWorker.html
+  name: SessionStatusCheckerWorker
+  nameWithType: SessionStatusCheckerWorker
+  fullName: AdvanceFileUpload.API.SessionStatusCheckerWorker
+- uid: AdvanceFileUpload.API
+  commentId: N:AdvanceFileUpload.API
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API
+  nameWithType: AdvanceFileUpload.API
+  fullName: AdvanceFileUpload.API
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html

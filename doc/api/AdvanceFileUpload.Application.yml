@@ -5,6 +5,7 @@ items:
   id: AdvanceFileUpload.Application
   children:
   - AdvanceFileUpload.Application.IUploadManger
+  - AdvanceFileUpload.Application.SessionsStatusCheckerService
   - AdvanceFileUpload.Application.UploadManger
   langs:
   - csharp
@@ -23,6 +24,12 @@ references:
   name: IUploadManger
   nameWithType: IUploadManger
   fullName: AdvanceFileUpload.Application.IUploadManger
+- uid: AdvanceFileUpload.Application.SessionsStatusCheckerService
+  commentId: T:AdvanceFileUpload.Application.SessionsStatusCheckerService
+  href: AdvanceFileUpload.Application.SessionsStatusCheckerService.html
+  name: SessionsStatusCheckerService
+  nameWithType: SessionsStatusCheckerService
+  fullName: AdvanceFileUpload.Application.SessionsStatusCheckerService
 - uid: AdvanceFileUpload.Application.UploadManger
   commentId: T:AdvanceFileUpload.Application.UploadManger
   href: AdvanceFileUpload.Application.UploadManger.html

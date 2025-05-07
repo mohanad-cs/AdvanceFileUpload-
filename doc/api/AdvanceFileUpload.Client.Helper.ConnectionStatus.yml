@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  commentId: T:AdvanceFileUpload.Client.Helper.ConnectionStatus
+  id: ConnectionStatus
+  parent: AdvanceFileUpload.Client.Helper
+  children:
+  - AdvanceFileUpload.Client.Helper.ConnectionStatus.Degraded
+  - AdvanceFileUpload.Client.Helper.ConnectionStatus.Healthy
+  - AdvanceFileUpload.Client.Helper.ConnectionStatus.Timeout
+  - AdvanceFileUpload.Client.Helper.ConnectionStatus.Unhealthy
+  langs:
+  - csharp
+  - vb
+  name: ConnectionStatus
+  nameWithType: ConnectionStatus
+  fullName: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  type: Enum
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ConnectionStatus
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Represents the status of a connection.
+  example: []
+  syntax:
+    content: public enum ConnectionStatus
+    content.vb: Public Enum ConnectionStatus
+- uid: AdvanceFileUpload.Client.Helper.ConnectionStatus.Healthy
+  commentId: F:AdvanceFileUpload.Client.Helper.ConnectionStatus.Healthy
+  id: Healthy
+  parent: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  langs:
+  - csharp
+  - vb
+  name: Healthy
+  nameWithType: ConnectionStatus.Healthy
+  fullName: AdvanceFileUpload.Client.Helper.ConnectionStatus.Healthy
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Healthy
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+    startLine: 10
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: The connection is healthy.
+  example: []
+  syntax:
+    content: Healthy = 0
+    return:
+      type: AdvanceFileUpload.Client.Helper.ConnectionStatus
+- uid: AdvanceFileUpload.Client.Helper.ConnectionStatus.Unhealthy
+  commentId: F:AdvanceFileUpload.Client.Helper.ConnectionStatus.Unhealthy
+  id: Unhealthy
+  parent: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  langs:
+  - csharp
+  - vb
+  name: Unhealthy
+  nameWithType: ConnectionStatus.Unhealthy
+  fullName: AdvanceFileUpload.Client.Helper.ConnectionStatus.Unhealthy
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Unhealthy
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+    startLine: 15
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: The connection is unhealthy.
+  example: []
+  syntax:
+    content: Unhealthy = 1
+    return:
+      type: AdvanceFileUpload.Client.Helper.ConnectionStatus
+- uid: AdvanceFileUpload.Client.Helper.ConnectionStatus.Degraded
+  commentId: F:AdvanceFileUpload.Client.Helper.ConnectionStatus.Degraded
+  id: Degraded
+  parent: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  langs:
+  - csharp
+  - vb
+  name: Degraded
+  nameWithType: ConnectionStatus.Degraded
+  fullName: AdvanceFileUpload.Client.Helper.ConnectionStatus.Degraded
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Degraded
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+    startLine: 20
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: The connection is degraded.
+  example: []
+  syntax:
+    content: Degraded = 2
+    return:
+      type: AdvanceFileUpload.Client.Helper.ConnectionStatus
+- uid: AdvanceFileUpload.Client.Helper.ConnectionStatus.Timeout
+  commentId: F:AdvanceFileUpload.Client.Helper.ConnectionStatus.Timeout
+  id: Timeout
+  parent: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: ConnectionStatus.Timeout
+  fullName: AdvanceFileUpload.Client.Helper.ConnectionStatus.Timeout
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Timeout
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/ConnectionStatus.cs
+    startLine: 25
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: The connection has timed out.
+  example: []
+  syntax:
+    content: Timeout = 3
+    return:
+      type: AdvanceFileUpload.Client.Helper.ConnectionStatus
+references:
+- uid: AdvanceFileUpload.Client.Helper
+  commentId: N:AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client.Helper
+  nameWithType: AdvanceFileUpload.Client.Helper
+  fullName: AdvanceFileUpload.Client.Helper
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+- uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+  commentId: T:AdvanceFileUpload.Client.Helper.ConnectionStatus
+  parent: AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.Client.Helper.ConnectionStatus.html
+  name: ConnectionStatus
+  nameWithType: ConnectionStatus
+  fullName: AdvanceFileUpload.Client.Helper.ConnectionStatus

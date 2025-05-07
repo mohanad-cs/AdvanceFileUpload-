@@ -1,0 +1,704 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  commentId: T:AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  id: APIKeyMiddleware
+  parent: AdvanceFileUpload.API.Middleware
+  children:
+  - AdvanceFileUpload.API.Middleware.APIKeyMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware})
+  - AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions})
+  langs:
+  - csharp
+  - vb
+  name: APIKeyMiddleware
+  nameWithType: APIKeyMiddleware
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/Middleware/APIKeyMiddleware.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: APIKeyMiddleware
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Middleware/APIKeyMiddleware.cs
+    startLine: 9
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API.Middleware
+  summary: Middleware to handle API Key authentication for incoming HTTP requests.
+  example: []
+  syntax:
+    content: public sealed class APIKeyMiddleware
+    content.vb: Public NotInheritable Class APIKeyMiddleware
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware})
+  commentId: M:AdvanceFileUpload.API.Middleware.APIKeyMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware})
+  id: '#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware})'
+  parent: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  langs:
+  - csharp
+  - vb
+  name: APIKeyMiddleware(RequestDelegate, ILogger<APIKeyMiddleware>)
+  nameWithType: APIKeyMiddleware.APIKeyMiddleware(RequestDelegate, ILogger<APIKeyMiddleware>)
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.APIKeyMiddleware(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.API.Middleware.APIKeyMiddleware>)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/Middleware/APIKeyMiddleware.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Middleware/APIKeyMiddleware.cs
+    startLine: 21
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API.Middleware
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.API.Middleware.APIKeyMiddleware" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public APIKeyMiddleware(RequestDelegate next, ILogger<APIKeyMiddleware> logger)
+    parameters:
+    - id: next
+      type: Microsoft.AspNetCore.Http.RequestDelegate
+      description: The next middleware in the pipeline.
+    - id: logger
+      type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware}
+      description: The logger instance for logging information.
+    content.vb: Public Sub New([next] As RequestDelegate, logger As ILogger(Of APIKeyMiddleware))
+  overload: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">next</code> or <code class="paramref">logger</code> is null.
+  nameWithType.vb: APIKeyMiddleware.New(RequestDelegate, ILogger(Of APIKeyMiddleware))
+  fullName.vb: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.New(Microsoft.AspNetCore.Http.RequestDelegate, Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.API.Middleware.APIKeyMiddleware))
+  name.vb: New(RequestDelegate, ILogger(Of APIKeyMiddleware))
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions})
+  commentId: M:AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions})
+  id: InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions})
+  parent: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  langs:
+  - csharp
+  - vb
+  name: InvokeAsync(HttpContext, IOptionsMonitor<ApiKeyOptions>)
+  nameWithType: APIKeyMiddleware.InvokeAsync(HttpContext, IOptionsMonitor<ApiKeyOptions>)
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext, Microsoft.Extensions.Options.IOptionsMonitor<AdvanceFileUpload.API.Security.ApiKeyOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/Middleware/APIKeyMiddleware.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: InvokeAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/Middleware/APIKeyMiddleware.cs
+    startLine: 35
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API.Middleware
+  summary: Middleware invocation method to process the HTTP request.
+  example: []
+  syntax:
+    content: public Task InvokeAsync(HttpContext context, IOptionsMonitor<ApiKeyOptions> apiKeyOptions)
+    parameters:
+    - id: context
+      type: Microsoft.AspNetCore.Http.HttpContext
+      description: The HTTP context of the current request.
+    - id: apiKeyOptions
+      type: Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions}
+      description: The API key options configuration.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function InvokeAsync(context As HttpContext, apiKeyOptions As IOptionsMonitor(Of ApiKeyOptions)) As Task
+  overload: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">context</code> or <code class="paramref">apiKeyOptions</code> is null.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when API key authentication is not properly configured.
+  nameWithType.vb: APIKeyMiddleware.InvokeAsync(HttpContext, IOptionsMonitor(Of ApiKeyOptions))
+  fullName.vb: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext, Microsoft.Extensions.Options.IOptionsMonitor(Of AdvanceFileUpload.API.Security.ApiKeyOptions))
+  name.vb: InvokeAsync(HttpContext, IOptionsMonitor(Of ApiKeyOptions))
+references:
+- uid: AdvanceFileUpload.API.Middleware
+  commentId: N:AdvanceFileUpload.API.Middleware
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API.Middleware
+  nameWithType: AdvanceFileUpload.API.Middleware
+  fullName: AdvanceFileUpload.API.Middleware
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  - name: .
+  - uid: AdvanceFileUpload.API.Middleware
+    name: Middleware
+    href: AdvanceFileUpload.API.Middleware.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  - name: .
+  - uid: AdvanceFileUpload.API.Middleware
+    name: Middleware
+    href: AdvanceFileUpload.API.Middleware.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  commentId: T:AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+  href: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html
+  name: APIKeyMiddleware
+  nameWithType: APIKeyMiddleware
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.#ctor*
+  commentId: Overload:AdvanceFileUpload.API.Middleware.APIKeyMiddleware.#ctor
+  href: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html#AdvanceFileUpload_API_Middleware_APIKeyMiddleware__ctor_Microsoft_AspNetCore_Http_RequestDelegate_Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_API_Middleware_APIKeyMiddleware__
+  name: APIKeyMiddleware
+  nameWithType: APIKeyMiddleware.APIKeyMiddleware
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.APIKeyMiddleware
+  nameWithType.vb: APIKeyMiddleware.New
+  fullName.vb: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Http.RequestDelegate
+  commentId: T:Microsoft.AspNetCore.Http.RequestDelegate
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.requestdelegate
+  name: RequestDelegate
+  nameWithType: RequestDelegate
+  fullName: Microsoft.AspNetCore.Http.RequestDelegate
+- uid: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware}
+  commentId: T:Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.APIKeyMiddleware}
+  parent: Microsoft.Extensions.Logging
+  definition: Microsoft.Extensions.Logging.ILogger`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<APIKeyMiddleware>
+  nameWithType: ILogger<APIKeyMiddleware>
+  fullName: Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.API.Middleware.APIKeyMiddleware>
+  nameWithType.vb: ILogger(Of APIKeyMiddleware)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.API.Middleware.APIKeyMiddleware)
+  name.vb: ILogger(Of APIKeyMiddleware)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+    name: APIKeyMiddleware
+    href: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+    name: APIKeyMiddleware
+    href: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html
+  - name: )
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http
+- uid: Microsoft.Extensions.Logging.ILogger`1
+  commentId: T:Microsoft.Extensions.Logging.ILogger`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  name: ILogger<TCategoryName>
+  nameWithType: ILogger<TCategoryName>
+  fullName: Microsoft.Extensions.Logging.ILogger<TCategoryName>
+  nameWithType.vb: ILogger(Of TCategoryName)
+  fullName.vb: Microsoft.Extensions.Logging.ILogger(Of TCategoryName)
+  name.vb: ILogger(Of TCategoryName)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: <
+  - name: TCategoryName
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Logging.ILogger`1
+    name: ILogger
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCategoryName
+  - name: )
+- uid: Microsoft.Extensions.Logging
+  commentId: N:Microsoft.Extensions.Logging
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Logging
+  nameWithType: Microsoft.Extensions.Logging
+  fullName: Microsoft.Extensions.Logging
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Logging
+    name: Logging
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.logging
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync*
+  commentId: Overload:AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync
+  href: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html#AdvanceFileUpload_API_Middleware_APIKeyMiddleware_InvokeAsync_Microsoft_AspNetCore_Http_HttpContext_Microsoft_Extensions_Options_IOptionsMonitor_AdvanceFileUpload_API_Security_ApiKeyOptions__
+  name: InvokeAsync
+  nameWithType: APIKeyMiddleware.InvokeAsync
+  fullName: AdvanceFileUpload.API.Middleware.APIKeyMiddleware.InvokeAsync
+- uid: Microsoft.AspNetCore.Http.HttpContext
+  commentId: T:Microsoft.AspNetCore.Http.HttpContext
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext
+  name: HttpContext
+  nameWithType: HttpContext
+  fullName: Microsoft.AspNetCore.Http.HttpContext
+- uid: Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptionsMonitor{AdvanceFileUpload.API.Security.ApiKeyOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptionsMonitor`1
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+  name: IOptionsMonitor<ApiKeyOptions>
+  nameWithType: IOptionsMonitor<ApiKeyOptions>
+  fullName: Microsoft.Extensions.Options.IOptionsMonitor<AdvanceFileUpload.API.Security.ApiKeyOptions>
+  nameWithType.vb: IOptionsMonitor(Of ApiKeyOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptionsMonitor(Of AdvanceFileUpload.API.Security.ApiKeyOptions)
+  name.vb: IOptionsMonitor(Of ApiKeyOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptionsMonitor`1
+    name: IOptionsMonitor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+  - name: <
+  - uid: AdvanceFileUpload.API.Security.ApiKeyOptions
+    name: ApiKeyOptions
+    href: AdvanceFileUpload.API.Security.ApiKeyOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptionsMonitor`1
+    name: IOptionsMonitor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.API.Security.ApiKeyOptions
+    name: ApiKeyOptions
+    href: AdvanceFileUpload.API.Security.ApiKeyOptions.html
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: Microsoft.Extensions.Options.IOptionsMonitor`1
+  commentId: T:Microsoft.Extensions.Options.IOptionsMonitor`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+  name: IOptionsMonitor<TOptions>
+  nameWithType: IOptionsMonitor<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptionsMonitor<TOptions>
+  nameWithType.vb: IOptionsMonitor(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptionsMonitor(Of TOptions)
+  name.vb: IOptionsMonitor(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptionsMonitor`1
+    name: IOptionsMonitor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+  - name: <
+  - name: TOptions
+  - name: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptionsMonitor`1
+    name: IOptionsMonitor
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options.ioptionsmonitor-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TOptions
+  - name: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Options
+    name: Options
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

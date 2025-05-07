@@ -28,8 +28,8 @@ items:
   summary: Middleware to handle exceptions globally.
   example: []
   syntax:
-    content: public class ExceptionHandlingMiddleware
-    content.vb: Public Class ExceptionHandlingMiddleware
+    content: public sealed class ExceptionHandlingMiddleware
+    content.vb: Public NotInheritable Class ExceptionHandlingMiddleware
   inheritance:
   - System.Object
   inheritedMembers:
@@ -37,7 +37,6 @@ items:
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
   - System.Object.GetType
-  - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
 - uid: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware})
@@ -279,30 +278,6 @@ references:
     name: GetType
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.object.gettype
-  - name: (
-  - name: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  name: MemberwiseClone()
-  nameWithType: object.MemberwiseClone()
-  fullName: object.MemberwiseClone()
-  nameWithType.vb: Object.MemberwiseClone()
-  fullName.vb: Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
   - name: (
   - name: )
 - uid: System.Object.ReferenceEquals(System.Object,System.Object)

@@ -1,0 +1,315 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.IPeriodicTimer
+  commentId: T:AdvanceFileUpload.API.IPeriodicTimer
+  id: IPeriodicTimer
+  parent: AdvanceFileUpload.API
+  children:
+  - AdvanceFileUpload.API.IPeriodicTimer.Period
+  - AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IPeriodicTimer
+  nameWithType: IPeriodicTimer
+  fullName: AdvanceFileUpload.API.IPeriodicTimer
+  type: Interface
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/IPeriodicTimer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IPeriodicTimer
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/IPeriodicTimer.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Represents a timer that provides periodic ticks for executing tasks.
+  example: []
+  syntax:
+    content: 'public interface IPeriodicTimer : IDisposable'
+    content.vb: Public Interface IPeriodicTimer Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)
+  id: WaitForNextTickAsync(System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.API.IPeriodicTimer
+  langs:
+  - csharp
+  - vb
+  name: WaitForNextTickAsync(CancellationToken)
+  nameWithType: IPeriodicTimer.WaitForNextTickAsync(CancellationToken)
+  fullName: AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/IPeriodicTimer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: WaitForNextTickAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/IPeriodicTimer.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Waits asynchronously for the next tick of the timer.
+  example: []
+  syntax:
+    content: ValueTask<bool> WaitForNextTickAsync(CancellationToken cancellationToken = default)
+    parameters:
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
+    return:
+      type: System.Threading.Tasks.ValueTask{System.Boolean}
+      description: A task that resolves to <code>true</code> if the timer ticked, or <code>false</code> if the wait was canceled.
+    content.vb: Function WaitForNextTickAsync(cancellationToken As CancellationToken = Nothing) As ValueTask(Of Boolean)
+  overload: AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync*
+- uid: AdvanceFileUpload.API.IPeriodicTimer.Period
+  commentId: P:AdvanceFileUpload.API.IPeriodicTimer.Period
+  id: Period
+  parent: AdvanceFileUpload.API.IPeriodicTimer
+  langs:
+  - csharp
+  - vb
+  name: Period
+  nameWithType: IPeriodicTimer.Period
+  fullName: AdvanceFileUpload.API.IPeriodicTimer.Period
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/IPeriodicTimer.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Period
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/IPeriodicTimer.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Gets the period of the timer.
+  example: []
+  syntax:
+    content: TimeSpan Period { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: ReadOnly Property Period As TimeSpan
+  overload: AdvanceFileUpload.API.IPeriodicTimer.Period*
+references:
+- uid: AdvanceFileUpload.API
+  commentId: N:AdvanceFileUpload.API
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API
+  nameWithType: AdvanceFileUpload.API
+  fullName: AdvanceFileUpload.API
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync*
+  commentId: Overload:AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync
+  href: AdvanceFileUpload.API.IPeriodicTimer.html#AdvanceFileUpload_API_IPeriodicTimer_WaitForNextTickAsync_System_Threading_CancellationToken_
+  name: WaitForNextTickAsync
+  nameWithType: IPeriodicTimer.WaitForNextTickAsync
+  fullName: AdvanceFileUpload.API.IPeriodicTimer.WaitForNextTickAsync
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.ValueTask{System.Boolean}
+  commentId: T:System.Threading.Tasks.ValueTask{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.ValueTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<bool>
+  nameWithType: ValueTask<bool>
+  fullName: System.Threading.Tasks.ValueTask<bool>
+  nameWithType.vb: ValueTask(Of Boolean)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of Boolean)
+  name.vb: ValueTask(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.API.IPeriodicTimer.Period*
+  commentId: Overload:AdvanceFileUpload.API.IPeriodicTimer.Period
+  href: AdvanceFileUpload.API.IPeriodicTimer.html#AdvanceFileUpload_API_IPeriodicTimer_Period
+  name: Period
+  nameWithType: IPeriodicTimer.Period
+  fullName: AdvanceFileUpload.API.IPeriodicTimer.Period
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan

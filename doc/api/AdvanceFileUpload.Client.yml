@@ -5,12 +5,9 @@ items:
   id: AdvanceFileUpload.Client
   children:
   - AdvanceFileUpload.Client.ChunkUploadedEventArgs
-  - AdvanceFileUpload.Client.ConnectionStatus
+  - AdvanceFileUpload.Client.FileUploadBuilder
   - AdvanceFileUpload.Client.FileUploadService
   - AdvanceFileUpload.Client.IFileUploadService
-  - AdvanceFileUpload.Client.INetworkConnectionChecker
-  - AdvanceFileUpload.Client.NetworkCheckOptions
-  - AdvanceFileUpload.Client.NetworkConnectionChecker
   - AdvanceFileUpload.Client.SessionCanceledEventArgs
   - AdvanceFileUpload.Client.SessionCompletedEventArgs
   - AdvanceFileUpload.Client.SessionCreatedEventArgs
@@ -29,13 +26,6 @@ items:
   assemblies:
   - AdvanceFileUpload.Client
 references:
-- uid: AdvanceFileUpload.Client.ConnectionStatus
-  commentId: T:AdvanceFileUpload.Client.ConnectionStatus
-  parent: AdvanceFileUpload.Client
-  href: AdvanceFileUpload.Client.ConnectionStatus.html
-  name: ConnectionStatus
-  nameWithType: ConnectionStatus
-  fullName: AdvanceFileUpload.Client.ConnectionStatus
 - uid: AdvanceFileUpload.Client.ChunkUploadedEventArgs
   commentId: T:AdvanceFileUpload.Client.ChunkUploadedEventArgs
   href: AdvanceFileUpload.Client.ChunkUploadedEventArgs.html
@@ -80,8 +70,16 @@ references:
   name: UploadProgressChangedEventArgs
   nameWithType: UploadProgressChangedEventArgs
   fullName: AdvanceFileUpload.Client.UploadProgressChangedEventArgs
+- uid: AdvanceFileUpload.Client.FileUploadBuilder
+  commentId: T:AdvanceFileUpload.Client.FileUploadBuilder
+  parent: AdvanceFileUpload.Client
+  href: AdvanceFileUpload.Client.FileUploadBuilder.html
+  name: FileUploadBuilder
+  nameWithType: FileUploadBuilder
+  fullName: AdvanceFileUpload.Client.FileUploadBuilder
 - uid: AdvanceFileUpload.Client.FileUploadService
   commentId: T:AdvanceFileUpload.Client.FileUploadService
+  parent: AdvanceFileUpload.Client
   href: AdvanceFileUpload.Client.FileUploadService.html
   name: FileUploadService
   nameWithType: FileUploadService
@@ -93,26 +91,6 @@ references:
   name: IFileUploadService
   nameWithType: IFileUploadService
   fullName: AdvanceFileUpload.Client.IFileUploadService
-- uid: AdvanceFileUpload.Client.INetworkConnectionChecker
-  commentId: T:AdvanceFileUpload.Client.INetworkConnectionChecker
-  parent: AdvanceFileUpload.Client
-  href: AdvanceFileUpload.Client.INetworkConnectionChecker.html
-  name: INetworkConnectionChecker
-  nameWithType: INetworkConnectionChecker
-  fullName: AdvanceFileUpload.Client.INetworkConnectionChecker
-- uid: AdvanceFileUpload.Client.NetworkCheckOptions
-  commentId: T:AdvanceFileUpload.Client.NetworkCheckOptions
-  parent: AdvanceFileUpload.Client
-  href: AdvanceFileUpload.Client.NetworkCheckOptions.html
-  name: NetworkCheckOptions
-  nameWithType: NetworkCheckOptions
-  fullName: AdvanceFileUpload.Client.NetworkCheckOptions
-- uid: AdvanceFileUpload.Client.NetworkConnectionChecker
-  commentId: T:AdvanceFileUpload.Client.NetworkConnectionChecker
-  href: AdvanceFileUpload.Client.NetworkConnectionChecker.html
-  name: NetworkConnectionChecker
-  nameWithType: NetworkConnectionChecker
-  fullName: AdvanceFileUpload.Client.NetworkConnectionChecker
 - uid: AdvanceFileUpload.Client.UploadException
   commentId: T:AdvanceFileUpload.Client.UploadException
   href: AdvanceFileUpload.Client.UploadException.html

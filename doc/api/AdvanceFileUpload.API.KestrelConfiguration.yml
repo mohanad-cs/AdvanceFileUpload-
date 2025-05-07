@@ -1,0 +1,681 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.KestrelConfiguration
+  commentId: T:AdvanceFileUpload.API.KestrelConfiguration
+  id: KestrelConfiguration
+  parent: AdvanceFileUpload.API
+  children:
+  - AdvanceFileUpload.API.KestrelConfiguration.Endpoints
+  - AdvanceFileUpload.API.KestrelConfiguration.Http2
+  - AdvanceFileUpload.API.KestrelConfiguration.Http3
+  - AdvanceFileUpload.API.KestrelConfiguration.Https
+  - AdvanceFileUpload.API.KestrelConfiguration.Limits
+  - AdvanceFileUpload.API.KestrelConfiguration.SectionName
+  langs:
+  - csharp
+  - vb
+  name: KestrelConfiguration
+  nameWithType: KestrelConfiguration
+  fullName: AdvanceFileUpload.API.KestrelConfiguration
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: KestrelConfiguration
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 7
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: >-
+    Represents the configurable settings for the Kestrel web server.<br />
+
+    Includes endpoint definitions, connection limits, HTTPS defaults, and HTTP/2 and HTTP/3 specific configurations.
+  example: []
+  syntax:
+    content: public class KestrelConfiguration
+    content.vb: Public Class KestrelConfiguration
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.API.KestrelConfiguration.SectionName
+  commentId: F:AdvanceFileUpload.API.KestrelConfiguration.SectionName
+  id: SectionName
+  parent: AdvanceFileUpload.API.KestrelConfiguration
+  langs:
+  - csharp
+  - vb
+  name: SectionName
+  nameWithType: KestrelConfiguration.SectionName
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.SectionName
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SectionName
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 12
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: The configuration section name for Kestrel server options.
+  example: []
+  syntax:
+    content: public const string SectionName = "KestrelConfiguration"
+    return:
+      type: System.String
+    content.vb: Public Const SectionName As String = "KestrelConfiguration"
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Endpoints
+  commentId: P:AdvanceFileUpload.API.KestrelConfiguration.Endpoints
+  id: Endpoints
+  parent: AdvanceFileUpload.API.KestrelConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Endpoints
+  nameWithType: KestrelConfiguration.Endpoints
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Endpoints
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Endpoints
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 17
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: >-
+    Gets or sets the dictionary of endpoints for the server.<br />
+
+    Key represents the endpoint identifier, and value holds the endpoint settings.
+  example: []
+  syntax:
+    content: public Dictionary<string, EndpointSettings> Endpoints { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,AdvanceFileUpload.API.EndpointSettings}
+    content.vb: Public Property Endpoints As Dictionary(Of String, EndpointSettings)
+  overload: AdvanceFileUpload.API.KestrelConfiguration.Endpoints*
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Limits
+  commentId: P:AdvanceFileUpload.API.KestrelConfiguration.Limits
+  id: Limits
+  parent: AdvanceFileUpload.API.KestrelConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Limits
+  nameWithType: KestrelConfiguration.Limits
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Limits
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Limits
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 22
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Gets or sets the server-wide connection and request limits.
+  example: []
+  syntax:
+    content: public KestrelLimits Limits { get; set; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.API.KestrelLimits
+    content.vb: Public Property Limits As KestrelLimits
+  overload: AdvanceFileUpload.API.KestrelConfiguration.Limits*
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Https
+  commentId: P:AdvanceFileUpload.API.KestrelConfiguration.Https
+  id: Https
+  parent: AdvanceFileUpload.API.KestrelConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Https
+  nameWithType: KestrelConfiguration.Https
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Https
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Https
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 27
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Gets or sets the global HTTPS configuration defaults.
+  example: []
+  syntax:
+    content: public KestrelHttpsSettings Https { get; set; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.API.KestrelHttpsSettings
+    content.vb: Public Property Https As KestrelHttpsSettings
+  overload: AdvanceFileUpload.API.KestrelConfiguration.Https*
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Http2
+  commentId: P:AdvanceFileUpload.API.KestrelConfiguration.Http2
+  id: Http2
+  parent: AdvanceFileUpload.API.KestrelConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Http2
+  nameWithType: KestrelConfiguration.Http2
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Http2
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Http2
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 32
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Gets or sets the HTTP/2 specific configuration settings.
+  example: []
+  syntax:
+    content: public KestrelHttp2Settings Http2 { get; set; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.API.KestrelHttp2Settings
+    content.vb: Public Property Http2 As KestrelHttp2Settings
+  overload: AdvanceFileUpload.API.KestrelConfiguration.Http2*
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Http3
+  commentId: P:AdvanceFileUpload.API.KestrelConfiguration.Http3
+  id: Http3
+  parent: AdvanceFileUpload.API.KestrelConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Http3
+  nameWithType: KestrelConfiguration.Http3
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Http3
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Http3
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/KestrelConfiguration.cs
+    startLine: 37
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Gets or sets the HTTP/3 specific configuration settings.
+  example: []
+  syntax:
+    content: public KestrelHttp3Settings Http3 { get; set; }
+    parameters: []
+    return:
+      type: AdvanceFileUpload.API.KestrelHttp3Settings
+    content.vb: Public Property Http3 As KestrelHttp3Settings
+  overload: AdvanceFileUpload.API.KestrelConfiguration.Http3*
+references:
+- uid: AdvanceFileUpload.API
+  commentId: N:AdvanceFileUpload.API
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API
+  nameWithType: AdvanceFileUpload.API
+  fullName: AdvanceFileUpload.API
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Endpoints*
+  commentId: Overload:AdvanceFileUpload.API.KestrelConfiguration.Endpoints
+  href: AdvanceFileUpload.API.KestrelConfiguration.html#AdvanceFileUpload_API_KestrelConfiguration_Endpoints
+  name: Endpoints
+  nameWithType: KestrelConfiguration.Endpoints
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Endpoints
+- uid: System.Collections.Generic.Dictionary{System.String,AdvanceFileUpload.API.EndpointSettings}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,AdvanceFileUpload.API.EndpointSettings}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, EndpointSettings>
+  nameWithType: Dictionary<string, EndpointSettings>
+  fullName: System.Collections.Generic.Dictionary<string, AdvanceFileUpload.API.EndpointSettings>
+  nameWithType.vb: Dictionary(Of String, EndpointSettings)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, AdvanceFileUpload.API.EndpointSettings)
+  name.vb: Dictionary(Of String, EndpointSettings)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AdvanceFileUpload.API.EndpointSettings
+    name: EndpointSettings
+    href: AdvanceFileUpload.API.EndpointSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: AdvanceFileUpload.API.EndpointSettings
+    name: EndpointSettings
+    href: AdvanceFileUpload.API.EndpointSettings.html
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Limits*
+  commentId: Overload:AdvanceFileUpload.API.KestrelConfiguration.Limits
+  href: AdvanceFileUpload.API.KestrelConfiguration.html#AdvanceFileUpload_API_KestrelConfiguration_Limits
+  name: Limits
+  nameWithType: KestrelConfiguration.Limits
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Limits
+- uid: AdvanceFileUpload.API.KestrelLimits
+  commentId: T:AdvanceFileUpload.API.KestrelLimits
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelLimits.html
+  name: KestrelLimits
+  nameWithType: KestrelLimits
+  fullName: AdvanceFileUpload.API.KestrelLimits
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Https*
+  commentId: Overload:AdvanceFileUpload.API.KestrelConfiguration.Https
+  href: AdvanceFileUpload.API.KestrelConfiguration.html#AdvanceFileUpload_API_KestrelConfiguration_Https
+  name: Https
+  nameWithType: KestrelConfiguration.Https
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Https
+- uid: AdvanceFileUpload.API.KestrelHttpsSettings
+  commentId: T:AdvanceFileUpload.API.KestrelHttpsSettings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelHttpsSettings.html
+  name: KestrelHttpsSettings
+  nameWithType: KestrelHttpsSettings
+  fullName: AdvanceFileUpload.API.KestrelHttpsSettings
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Http2*
+  commentId: Overload:AdvanceFileUpload.API.KestrelConfiguration.Http2
+  href: AdvanceFileUpload.API.KestrelConfiguration.html#AdvanceFileUpload_API_KestrelConfiguration_Http2
+  name: Http2
+  nameWithType: KestrelConfiguration.Http2
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Http2
+- uid: AdvanceFileUpload.API.KestrelHttp2Settings
+  commentId: T:AdvanceFileUpload.API.KestrelHttp2Settings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelHttp2Settings.html
+  name: KestrelHttp2Settings
+  nameWithType: KestrelHttp2Settings
+  fullName: AdvanceFileUpload.API.KestrelHttp2Settings
+- uid: AdvanceFileUpload.API.KestrelConfiguration.Http3*
+  commentId: Overload:AdvanceFileUpload.API.KestrelConfiguration.Http3
+  href: AdvanceFileUpload.API.KestrelConfiguration.html#AdvanceFileUpload_API_KestrelConfiguration_Http3
+  name: Http3
+  nameWithType: KestrelConfiguration.Http3
+  fullName: AdvanceFileUpload.API.KestrelConfiguration.Http3
+- uid: AdvanceFileUpload.API.KestrelHttp3Settings
+  commentId: T:AdvanceFileUpload.API.KestrelHttp3Settings
+  parent: AdvanceFileUpload.API
+  href: AdvanceFileUpload.API.KestrelHttp3Settings.html
+  name: KestrelHttp3Settings
+  nameWithType: KestrelHttp3Settings
+  fullName: AdvanceFileUpload.API.KestrelHttp3Settings

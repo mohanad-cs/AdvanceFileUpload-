@@ -63,14 +63,7 @@ namespace AdvanceFileUpload.Integration
             }
         }
 
-        /// <inheritdoc/>
-        /// <summary>
-        /// Publishes an integration event message to RabbitMQ.
-        /// </summary>
-        /// <typeparam name="T">The type of the message payload.</typeparam>
-        /// <param name="message">The message to be published, including metadata such as queue, exchange, and routing details.</param>
-        /// <param name="cancellationToken">A token to monitor for cancellation requests.</param>
-        /// <returns>A task that represents the asynchronous publish operation.</returns>
+        ///<inheritdoc/>
         /// <exception cref="BrokerUnreachableException">Thrown when the RabbitMQ broker is unreachable.</exception>
         /// <exception cref="Exception">Thrown when an error occurs during message publishing.</exception>
         public async Task PublishAsync<T>(PublishMessage<T> message, CancellationToken cancellationToken = default) where T : class

@@ -1,0 +1,327 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Integration
+  commentId: N:AdvanceFileUpload.Integration
+  id: AdvanceFileUpload.Integration
+  children:
+  - AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent
+  - AdvanceFileUpload.Integration.ConsumingArgs
+  - AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  - AdvanceFileUpload.Integration.IIntegrationEventPublisher
+  - AdvanceFileUpload.Integration.IntegrationConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
+  - AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
+  - AdvanceFileUpload.Integration.PublishMessage`1
+  - AdvanceFileUpload.Integration.RabbitMQConsumer
+  - AdvanceFileUpload.Integration.RabbitMQEventPublisher
+  - AdvanceFileUpload.Integration.RabbitMQOptions
+  - AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent
+  - AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent
+  - AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent
+  - AdvanceFileUpload.Integration.SessionFieldIntegrationEvent
+  - AdvanceFileUpload.Integration.SessionPausedIntegrationEvent
+  - AdvanceFileUpload.Integration.SessionResumedIntegrationEvent
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.Integration
+  nameWithType: AdvanceFileUpload.Integration
+  fullName: AdvanceFileUpload.Integration
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.Integration
+references:
+- uid: AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent
+  href: AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent.html
+  name: ChunkUploadedIntegrationEvent
+  nameWithType: ChunkUploadedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  commentId: T:AdvanceFileUpload.Integration.IIntegrationEventConsumer
+  parent: AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.Integration.IIntegrationEventConsumer.html
+  name: IIntegrationEventConsumer
+  nameWithType: IIntegrationEventConsumer
+  fullName: AdvanceFileUpload.Integration.IIntegrationEventConsumer
+- uid: AdvanceFileUpload.Integration.IIntegrationEventPublisher
+  commentId: T:AdvanceFileUpload.Integration.IIntegrationEventPublisher
+  parent: AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.Integration.IIntegrationEventPublisher.html
+  name: IIntegrationEventPublisher
+  nameWithType: IIntegrationEventPublisher
+  fullName: AdvanceFileUpload.Integration.IIntegrationEventPublisher
+- uid: AdvanceFileUpload.Integration.IntegrationConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants
+  nameWithType: IntegrationConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.SessionCreatedConstants
+  nameWithType: IntegrationConstants.SessionCreatedConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
+    name: SessionCreatedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
+    name: SessionCreatedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants.html
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.SessionCanceledConstants
+  nameWithType: IntegrationConstants.SessionCanceledConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
+    name: SessionCanceledConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
+    name: SessionCanceledConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants.html
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.SessionCompletedConstants
+  nameWithType: IntegrationConstants.SessionCompletedConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
+    name: SessionCompletedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
+    name: SessionCompletedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants.html
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.ChunkUploadedConstants
+  nameWithType: IntegrationConstants.ChunkUploadedConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
+    name: ChunkUploadedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
+    name: ChunkUploadedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants.html
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.SessionPausedConstants
+  nameWithType: IntegrationConstants.SessionPausedConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
+    name: SessionPausedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
+    name: SessionPausedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants.html
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.SessionResumedConstants
+  nameWithType: IntegrationConstants.SessionResumedConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
+    name: SessionResumedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
+    name: SessionResumedConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants.html
+- uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  commentId: T:AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  name: IntegrationConstants.SessionFieldConstants
+  nameWithType: IntegrationConstants.SessionFieldConstants
+  fullName: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+    name: SessionFieldConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.html
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
+    name: IntegrationConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+    name: SessionFieldConstants
+    href: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.html
+- uid: AdvanceFileUpload.Integration.PublishMessage`1
+  commentId: T:AdvanceFileUpload.Integration.PublishMessage`1
+  href: AdvanceFileUpload.Integration.PublishMessage-1.html
+  name: PublishMessage<T>
+  nameWithType: PublishMessage<T>
+  fullName: AdvanceFileUpload.Integration.PublishMessage<T>
+  nameWithType.vb: PublishMessage(Of T)
+  fullName.vb: AdvanceFileUpload.Integration.PublishMessage(Of T)
+  name.vb: PublishMessage(Of T)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Integration.PublishMessage`1
+    name: PublishMessage
+    href: AdvanceFileUpload.Integration.PublishMessage-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: AdvanceFileUpload.Integration.PublishMessage`1
+    name: PublishMessage
+    href: AdvanceFileUpload.Integration.PublishMessage-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: AdvanceFileUpload.Integration.RabbitMQConsumer
+  commentId: T:AdvanceFileUpload.Integration.RabbitMQConsumer
+  href: AdvanceFileUpload.Integration.RabbitMQConsumer.html
+  name: RabbitMQConsumer
+  nameWithType: RabbitMQConsumer
+  fullName: AdvanceFileUpload.Integration.RabbitMQConsumer
+- uid: AdvanceFileUpload.Integration.ConsumingArgs
+  commentId: T:AdvanceFileUpload.Integration.ConsumingArgs
+  parent: AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.Integration.ConsumingArgs.html
+  name: ConsumingArgs
+  nameWithType: ConsumingArgs
+  fullName: AdvanceFileUpload.Integration.ConsumingArgs
+- uid: AdvanceFileUpload.Integration.RabbitMQEventPublisher
+  commentId: T:AdvanceFileUpload.Integration.RabbitMQEventPublisher
+  href: AdvanceFileUpload.Integration.RabbitMQEventPublisher.html
+  name: RabbitMQEventPublisher
+  nameWithType: RabbitMQEventPublisher
+  fullName: AdvanceFileUpload.Integration.RabbitMQEventPublisher
+- uid: AdvanceFileUpload.Integration.RabbitMQOptions
+  commentId: T:AdvanceFileUpload.Integration.RabbitMQOptions
+  parent: AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.Integration.RabbitMQOptions.html
+  name: RabbitMQOptions
+  nameWithType: RabbitMQOptions
+  fullName: AdvanceFileUpload.Integration.RabbitMQOptions
+- uid: AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent
+  href: AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent.html
+  name: SessionCancelledIntegrationEvent
+  nameWithType: SessionCancelledIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent
+- uid: AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent
+  href: AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent.html
+  name: SessionCompletedIntegrationEvent
+  nameWithType: SessionCompletedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent
+  href: AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent.html
+  name: SessionCreatedIntegrationEvent
+  nameWithType: SessionCreatedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.SessionFieldIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.SessionFieldIntegrationEvent
+  href: AdvanceFileUpload.Integration.SessionFieldIntegrationEvent.html
+  name: SessionFieldIntegrationEvent
+  nameWithType: SessionFieldIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.SessionFieldIntegrationEvent
+- uid: AdvanceFileUpload.Integration.SessionPausedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.SessionPausedIntegrationEvent
+  href: AdvanceFileUpload.Integration.SessionPausedIntegrationEvent.html
+  name: SessionPausedIntegrationEvent
+  nameWithType: SessionPausedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.SessionPausedIntegrationEvent
+- uid: AdvanceFileUpload.Integration.SessionResumedIntegrationEvent
+  commentId: T:AdvanceFileUpload.Integration.SessionResumedIntegrationEvent
+  href: AdvanceFileUpload.Integration.SessionResumedIntegrationEvent.html
+  name: SessionResumedIntegrationEvent
+  nameWithType: SessionResumedIntegrationEvent
+  fullName: AdvanceFileUpload.Integration.SessionResumedIntegrationEvent
+- uid: AdvanceFileUpload.Integration
+  commentId: N:AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Integration
+  nameWithType: AdvanceFileUpload.Integration
+  fullName: AdvanceFileUpload.Integration
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Integration
+    name: Integration
+    href: AdvanceFileUpload.Integration.html

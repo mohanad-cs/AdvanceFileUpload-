@@ -5,7 +5,7 @@ items:
   id: FileUploadSessionCanceledEventHandler
   parent: AdvanceFileUpload.Application.EventHandling
   children:
-  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})
   - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent,System.Threading.CancellationToken)
   langs:
   - csharp
@@ -21,10 +21,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileUploadSessionCanceledEventHandler
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCanceledEventHandler.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.EventHandling
+  summary: Handles the <xref href="AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent" data-throw-if-not-resolved="false"></xref> to perform necessary actions when a file upload session is canceled.
+  example: []
   syntax:
     content: 'public sealed class FileUploadSessionCanceledEventHandler : INotificationHandler<FileUploadSessionCanceledEvent>'
     content.vb: Public NotInheritable Class FileUploadSessionCanceledEventHandler Implements INotificationHandler(Of FileUploadSessionCanceledEvent)
@@ -39,16 +41,16 @@ items:
   - System.Object.GetType
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})
-  commentId: M:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})
-  id: '#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})'
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})
+  commentId: M:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})
+  id: '#ctor(Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting},AdvanceFileUpload.Integration.IIntegrationEventPublisher,AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession},Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler})'
   parent: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
   langs:
   - csharp
   - vb
   name: FileUploadSessionCanceledEventHandler(IOptions<UploadSetting>, IIntegrationEventPublisher, IRepository<FileUploadSession>, ILogger<FileUploadSessionCreatedEventHandler>)
   nameWithType: FileUploadSessionCanceledEventHandler.FileUploadSessionCanceledEventHandler(IOptions<UploadSetting>, IIntegrationEventPublisher, IRepository<FileUploadSession>, ILogger<FileUploadSessionCreatedEventHandler>)
-  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.FileUploadSessionCanceledEventHandler(Microsoft.Extensions.Options.IOptions<AdvanceFileUpload.Application.Settings.UploadSetting>, AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher, AdvanceFileUpload.Domain.Core.IRepository<AdvanceFileUpload.Domain.FileUploadSession>, Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler>)
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.FileUploadSessionCanceledEventHandler(Microsoft.Extensions.Options.IOptions<AdvanceFileUpload.Application.Settings.UploadSetting>, AdvanceFileUpload.Integration.IIntegrationEventPublisher, AdvanceFileUpload.Domain.Core.IRepository<AdvanceFileUpload.Domain.FileUploadSession>, Microsoft.Extensions.Logging.ILogger<AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler>)
   type: Constructor
   source:
     remote:
@@ -57,25 +59,35 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCanceledEventHandler.cs
-    startLine: 18
+    startLine: 29
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.EventHandling
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: public FileUploadSessionCanceledEventHandler(IOptions<UploadSetting> uploadSetting, IIntegrationEventPublisher integrationEventPublisher, IRepository<FileUploadSession> fileUploadSessionRepository, ILogger<FileUploadSessionCreatedEventHandler> logger)
     parameters:
     - id: uploadSetting
       type: Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting}
+      description: The upload settings.
     - id: integrationEventPublisher
-      type: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+      type: AdvanceFileUpload.Integration.IIntegrationEventPublisher
+      description: The integration event publisher.
     - id: fileUploadSessionRepository
       type: AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
+      description: The repository for file upload sessions.
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler}
+      description: The logger instance.
     content.vb: Public Sub New(uploadSetting As IOptions(Of UploadSetting), integrationEventPublisher As IIntegrationEventPublisher, fileUploadSessionRepository As IRepository(Of FileUploadSession), logger As ILogger(Of FileUploadSessionCreatedEventHandler))
   overload: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when any of the parameters are null.
   nameWithType.vb: FileUploadSessionCanceledEventHandler.New(IOptions(Of UploadSetting), IIntegrationEventPublisher, IRepository(Of FileUploadSession), ILogger(Of FileUploadSessionCreatedEventHandler))
-  fullName.vb: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.New(Microsoft.Extensions.Options.IOptions(Of AdvanceFileUpload.Application.Settings.UploadSetting), AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher, AdvanceFileUpload.Domain.Core.IRepository(Of AdvanceFileUpload.Domain.FileUploadSession), Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler))
+  fullName.vb: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.New(Microsoft.Extensions.Options.IOptions(Of AdvanceFileUpload.Application.Settings.UploadSetting), AdvanceFileUpload.Integration.IIntegrationEventPublisher, AdvanceFileUpload.Domain.Core.IRepository(Of AdvanceFileUpload.Domain.FileUploadSession), Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler))
   name.vb: New(IOptions(Of UploadSetting), IIntegrationEventPublisher, IRepository(Of FileUploadSession), ILogger(Of FileUploadSessionCreatedEventHandler))
 - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent,System.Threading.CancellationToken)
   commentId: M:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent,System.Threading.CancellationToken)
@@ -95,28 +107,36 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Handle
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/FileUploadSessionCanceledEventHandler.cs
-    startLine: 28
+    startLine: 47
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.EventHandling
-  summary: Handles a notification
+  summary: Handles the <xref href="AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent" data-throw-if-not-resolved="false"></xref> by deleting associated chunk files and publishing an integration event if enabled.
   example: []
   syntax:
     content: public Task Handle(FileUploadSessionCanceledEvent notification, CancellationToken cancellationToken)
     parameters:
     - id: notification
       type: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
-      description: The notification
+      description: The event notification containing the file upload session details.
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: Cancellation token
+      description: The cancellation token.
     return:
       type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
     content.vb: Public Function Handle(notification As FileUploadSessionCanceledEvent, cancellationToken As CancellationToken) As Task
   overload: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.Handle*
   implements:
   - MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent}.Handle(AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent,System.Threading.CancellationToken)
 references:
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
+  parent: AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent.html
+  name: FileUploadSessionCanceledEvent
+  nameWithType: FileUploadSessionCanceledEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
 - uid: AdvanceFileUpload.Application.EventHandling
   commentId: N:AdvanceFileUpload.Application.EventHandling
   href: AdvanceFileUpload.html
@@ -381,6 +401,36 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: AdvanceFileUpload.Domain.Events
+  commentId: N:AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Events
+  nameWithType: AdvanceFileUpload.Domain.Events
+  fullName: AdvanceFileUpload.Domain.Events
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -419,9 +469,22 @@ references:
   name: MediatR
   nameWithType: MediatR
   fullName: MediatR
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.html
+  name: FileUploadSessionCanceledEventHandler
+  nameWithType: FileUploadSessionCanceledEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor*
   commentId: Overload:AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.#ctor
-  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.html#AdvanceFileUpload_Application_EventHandling_FileUploadSessionCanceledEventHandler__ctor_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__AdvanceFileUpload_Integration_Contracts_IIntegrationEventPublisher_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_EventHandling_FileUploadSessionCreatedEventHandler__
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.html#AdvanceFileUpload_Application_EventHandling_FileUploadSessionCanceledEventHandler__ctor_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__AdvanceFileUpload_Integration_IIntegrationEventPublisher_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_EventHandling_FileUploadSessionCreatedEventHandler__
   name: FileUploadSessionCanceledEventHandler
   nameWithType: FileUploadSessionCanceledEventHandler.FileUploadSessionCanceledEventHandler
   fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler.FileUploadSessionCanceledEventHandler
@@ -461,13 +524,13 @@ references:
     name: UploadSetting
     href: AdvanceFileUpload.Application.Settings.UploadSetting.html
   - name: )
-- uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
-  commentId: T:AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
-  parent: AdvanceFileUpload.Integration.Contracts
-  href: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher.html
+- uid: AdvanceFileUpload.Integration.IIntegrationEventPublisher
+  commentId: T:AdvanceFileUpload.Integration.IIntegrationEventPublisher
+  parent: AdvanceFileUpload.Integration
+  href: AdvanceFileUpload.Integration.IIntegrationEventPublisher.html
   name: IIntegrationEventPublisher
   nameWithType: IIntegrationEventPublisher
-  fullName: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  fullName: AdvanceFileUpload.Integration.IIntegrationEventPublisher
 - uid: AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
   commentId: T:AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
   parent: AdvanceFileUpload.Domain.Core
@@ -592,12 +655,12 @@ references:
     name: Options
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.options
-- uid: AdvanceFileUpload.Integration.Contracts
-  commentId: N:AdvanceFileUpload.Integration.Contracts
+- uid: AdvanceFileUpload.Integration
+  commentId: N:AdvanceFileUpload.Integration
   href: AdvanceFileUpload.html
-  name: AdvanceFileUpload.Integration.Contracts
-  nameWithType: AdvanceFileUpload.Integration.Contracts
-  fullName: AdvanceFileUpload.Integration.Contracts
+  name: AdvanceFileUpload.Integration
+  nameWithType: AdvanceFileUpload.Integration
+  fullName: AdvanceFileUpload.Integration
   spec.csharp:
   - uid: AdvanceFileUpload
     name: AdvanceFileUpload
@@ -606,10 +669,6 @@ references:
   - uid: AdvanceFileUpload.Integration
     name: Integration
     href: AdvanceFileUpload.Integration.html
-  - name: .
-  - uid: AdvanceFileUpload.Integration.Contracts
-    name: Contracts
-    href: AdvanceFileUpload.Integration.Contracts.html
   spec.vb:
   - uid: AdvanceFileUpload
     name: AdvanceFileUpload
@@ -618,10 +677,6 @@ references:
   - uid: AdvanceFileUpload.Integration
     name: Integration
     href: AdvanceFileUpload.Integration.html
-  - name: .
-  - uid: AdvanceFileUpload.Integration.Contracts
-    name: Contracts
-    href: AdvanceFileUpload.Integration.Contracts.html
 - uid: AdvanceFileUpload.Domain.Core.IRepository`1
   commentId: T:AdvanceFileUpload.Domain.Core.IRepository`1
   href: AdvanceFileUpload.Domain.Core.IRepository-1.html
@@ -786,13 +841,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
-  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
-  parent: AdvanceFileUpload.Domain.Events
-  href: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent.html
-  name: FileUploadSessionCanceledEvent
-  nameWithType: FileUploadSessionCanceledEvent
-  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
 - uid: System.Threading.CancellationToken
   commentId: T:System.Threading.CancellationToken
   parent: System.Threading
@@ -844,36 +892,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: AdvanceFileUpload.Domain.Events
-  commentId: N:AdvanceFileUpload.Domain.Events
-  href: AdvanceFileUpload.html
-  name: AdvanceFileUpload.Domain.Events
-  nameWithType: AdvanceFileUpload.Domain.Events
-  fullName: AdvanceFileUpload.Domain.Events
-  spec.csharp:
-  - uid: AdvanceFileUpload
-    name: AdvanceFileUpload
-    href: AdvanceFileUpload.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain
-    name: Domain
-    href: AdvanceFileUpload.Domain.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain.Events
-    name: Events
-    href: AdvanceFileUpload.Domain.Events.html
-  spec.vb:
-  - uid: AdvanceFileUpload
-    name: AdvanceFileUpload
-    href: AdvanceFileUpload.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain
-    name: Domain
-    href: AdvanceFileUpload.Domain.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain.Events
-    name: Events
-    href: AdvanceFileUpload.Domain.Events.html
 - uid: System.Threading
   commentId: N:System.Threading
   isExternal: true

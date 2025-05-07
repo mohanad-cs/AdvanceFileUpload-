@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  commentId: T:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  id: NetworkConnectionChecker
+  parent: AdvanceFileUpload.Client.Helper
+  children:
+  - AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.#ctor(AdvanceFileUpload.Client.Helper.NetworkCheckOptions)
+  - AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  - AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose
+  langs:
+  - csharp
+  - vb
+  name: NetworkConnectionChecker
+  nameWithType: NetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: NetworkConnectionChecker
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+    startLine: 8
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Checks the health of a network connection by sending HTTP requests to a specified endpoint.
+  example: []
+  syntax:
+    content: 'public sealed class NetworkConnectionChecker : INetworkConnectionChecker, IDisposable'
+    content.vb: Public NotInheritable Class NetworkConnectionChecker Implements INetworkConnectionChecker, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.#ctor(AdvanceFileUpload.Client.Helper.NetworkCheckOptions)
+  commentId: M:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.#ctor(AdvanceFileUpload.Client.Helper.NetworkCheckOptions)
+  id: '#ctor(AdvanceFileUpload.Client.Helper.NetworkCheckOptions)'
+  parent: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  langs:
+  - csharp
+  - vb
+  name: NetworkConnectionChecker(NetworkCheckOptions)
+  nameWithType: NetworkConnectionChecker.NetworkConnectionChecker(NetworkCheckOptions)
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.NetworkConnectionChecker(AdvanceFileUpload.Client.Helper.NetworkCheckOptions)
+  type: Constructor
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: .ctor
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+    startLine: 18
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Client.Helper.NetworkConnectionChecker" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public NetworkConnectionChecker(NetworkCheckOptions networkCheckOptions)
+    parameters:
+    - id: networkCheckOptions
+      type: AdvanceFileUpload.Client.Helper.NetworkCheckOptions
+      description: The options for configuring the network check.
+    content.vb: Public Sub New(networkCheckOptions As NetworkCheckOptions)
+  overload: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.#ctor*
+  nameWithType.vb: NetworkConnectionChecker.New(NetworkCheckOptions)
+  fullName.vb: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.New(AdvanceFileUpload.Client.Helper.NetworkCheckOptions)
+  name.vb: New(NetworkCheckOptions)
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  id: CheckApiHealthAsync(System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  langs:
+  - csharp
+  - vb
+  name: CheckApiHealthAsync(CancellationToken)
+  nameWithType: NetworkConnectionChecker.CheckApiHealthAsync(CancellationToken)
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: CheckApiHealthAsync
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+    startLine: 28
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Checks the health of the API asynchronously.
+  example: []
+  syntax:
+    content: public Task<ConnectionStatus> CheckApiHealthAsync(CancellationToken ct = default)
+    parameters:
+    - id: ct
+      type: System.Threading.CancellationToken
+      description: A cancellation token that can be used to cancel the operation.
+    return:
+      type: System.Threading.Tasks.Task{AdvanceFileUpload.Client.Helper.ConnectionStatus}
+      description: A task that represents the asynchronous operation. The task result contains the connection status.
+    content.vb: Public Function CheckApiHealthAsync(ct As CancellationToken = Nothing) As Task(Of ConnectionStatus)
+  overload: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync*
+  implements:
+  - AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose
+  commentId: M:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose
+  id: Dispose
+  parent: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: NetworkConnectionChecker.Dispose()
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: Dispose
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/Helper/NetworkConnectionChecker.cs
+    startLine: 78
+  assemblies:
+  - AdvanceFileUpload.Client
+  namespace: AdvanceFileUpload.Client.Helper
+  summary: Disposes the HTTP client.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+references:
+- uid: AdvanceFileUpload.Client.Helper
+  commentId: N:AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Client.Helper
+  nameWithType: AdvanceFileUpload.Client.Helper
+  fullName: AdvanceFileUpload.Client.Helper
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Client
+    name: Client
+    href: AdvanceFileUpload.Client.html
+  - name: .
+  - uid: AdvanceFileUpload.Client.Helper
+    name: Helper
+    href: AdvanceFileUpload.Client.Helper.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  commentId: T:AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  parent: AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.html
+  name: INetworkConnectionChecker
+  nameWithType: INetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  commentId: T:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+  href: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.html
+  name: NetworkConnectionChecker
+  nameWithType: NetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.#ctor*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.#ctor
+  href: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_NetworkConnectionChecker__ctor_AdvanceFileUpload_Client_Helper_NetworkCheckOptions_
+  name: NetworkConnectionChecker
+  nameWithType: NetworkConnectionChecker.NetworkConnectionChecker
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.NetworkConnectionChecker
+  nameWithType.vb: NetworkConnectionChecker.New
+  fullName.vb: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.New
+  name.vb: New
+- uid: AdvanceFileUpload.Client.Helper.NetworkCheckOptions
+  commentId: T:AdvanceFileUpload.Client.Helper.NetworkCheckOptions
+  parent: AdvanceFileUpload.Client.Helper
+  href: AdvanceFileUpload.Client.Helper.NetworkCheckOptions.html
+  name: NetworkCheckOptions
+  nameWithType: NetworkCheckOptions
+  fullName: AdvanceFileUpload.Client.Helper.NetworkCheckOptions
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync
+  href: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_NetworkConnectionChecker_CheckApiHealthAsync_System_Threading_CancellationToken_
+  name: CheckApiHealthAsync
+  nameWithType: NetworkConnectionChecker.CheckApiHealthAsync
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.CheckApiHealthAsync
+- uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  commentId: M:AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  parent: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+  isExternal: true
+  href: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_INetworkConnectionChecker_CheckApiHealthAsync_System_Threading_CancellationToken_
+  name: CheckApiHealthAsync(CancellationToken)
+  nameWithType: INetworkConnectionChecker.CheckApiHealthAsync(CancellationToken)
+  fullName: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+    name: CheckApiHealthAsync
+    href: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_INetworkConnectionChecker_CheckApiHealthAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.CheckApiHealthAsync(System.Threading.CancellationToken)
+    name: CheckApiHealthAsync
+    href: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_INetworkConnectionChecker_CheckApiHealthAsync_System_Threading_CancellationToken_
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task{AdvanceFileUpload.Client.Helper.ConnectionStatus}
+  commentId: T:System.Threading.Tasks.Task{AdvanceFileUpload.Client.Helper.ConnectionStatus}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ConnectionStatus>
+  nameWithType: Task<ConnectionStatus>
+  fullName: System.Threading.Tasks.Task<AdvanceFileUpload.Client.Helper.ConnectionStatus>
+  nameWithType.vb: Task(Of ConnectionStatus)
+  fullName.vb: System.Threading.Tasks.Task(Of AdvanceFileUpload.Client.Helper.ConnectionStatus)
+  name.vb: Task(Of ConnectionStatus)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+    name: ConnectionStatus
+    href: AdvanceFileUpload.Client.Helper.ConnectionStatus.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+    name: ConnectionStatus
+    href: AdvanceFileUpload.Client.Helper.ConnectionStatus.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose*
+  commentId: Overload:AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose
+  href: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.html#AdvanceFileUpload_Client_Helper_NetworkConnectionChecker_Dispose
+  name: Dispose
+  nameWithType: NetworkConnectionChecker.Dispose
+  fullName: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

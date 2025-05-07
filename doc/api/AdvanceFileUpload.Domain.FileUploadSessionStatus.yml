@@ -192,11 +192,18 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Failed
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSessionStatus.cs
-    startLine: 30
+    startLine: 40
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
   summary: The file upload session has failed.
+  remarks: >-
+    Note that the session will be determinate as <xref href="AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed" data-throw-if-not-resolved="false"></xref> if this conditions are met:
+        <ol><li>
+        if the session is not <xref href="AdvanceFileUpload.Domain.FileUploadSessionStatus.Completed" data-throw-if-not-resolved="false"></xref> or <xref href="AdvanceFileUpload.Domain.FileUploadSessionStatus.Canceled" data-throw-if-not-resolved="false"></xref> . After 48h the session will be determinate as <xref href="AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed" data-throw-if-not-resolved="false"></xref>.
+        </li><li>
+        if the session status is <xref href="AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete" data-throw-if-not-resolved="false"></xref> and the session has been waiting for 48h to be completed.
+        </li></ol>
   example: []
   syntax:
     content: Failed = 6
@@ -232,3 +239,27 @@ references:
   name: FileUploadSessionStatus
   nameWithType: FileUploadSessionStatus
   fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
+  commentId: F:AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html#AdvanceFileUpload_Domain_FileUploadSessionStatus_Failed
+  name: Failed
+  nameWithType: FileUploadSessionStatus.Failed
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Completed
+  commentId: F:AdvanceFileUpload.Domain.FileUploadSessionStatus.Completed
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html#AdvanceFileUpload_Domain_FileUploadSessionStatus_Completed
+  name: Completed
+  nameWithType: FileUploadSessionStatus.Completed
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus.Completed
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Canceled
+  commentId: F:AdvanceFileUpload.Domain.FileUploadSessionStatus.Canceled
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html#AdvanceFileUpload_Domain_FileUploadSessionStatus_Canceled
+  name: Canceled
+  nameWithType: FileUploadSessionStatus.Canceled
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus.Canceled
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete
+  commentId: F:AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html#AdvanceFileUpload_Domain_FileUploadSessionStatus_PendingToComplete
+  name: PendingToComplete
+  nameWithType: FileUploadSessionStatus.PendingToComplete
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus.PendingToComplete

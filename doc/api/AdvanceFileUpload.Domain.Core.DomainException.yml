@@ -33,11 +33,6 @@ items:
   inheritance:
   - System.Object
   - System.Exception
-  derivedClasses:
-  - AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-  - AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
-  - AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
-  - AdvanceFileUpload.Domain.Exceptions.PauseFileUploadException
   implements:
   - System.Runtime.Serialization.ISerializable
   inheritedMembers:
@@ -544,7 +539,6 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
 - uid: AdvanceFileUpload.Domain.Core.DomainException
   commentId: T:AdvanceFileUpload.Domain.Core.DomainException
-  parent: AdvanceFileUpload.Domain.Core
   href: AdvanceFileUpload.Domain.Core.DomainException.html
   name: DomainException
   nameWithType: DomainException

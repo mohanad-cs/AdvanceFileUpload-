@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.Security
+  commentId: N:AdvanceFileUpload.API.Security
+  id: AdvanceFileUpload.API.Security
+  children:
+  - AdvanceFileUpload.API.Security.APIKey
+  - AdvanceFileUpload.API.Security.ApiKeyOptions
+  - AdvanceFileUpload.API.Security.ClientRateLimit
+  langs:
+  - csharp
+  - vb
+  name: AdvanceFileUpload.API.Security
+  nameWithType: AdvanceFileUpload.API.Security
+  fullName: AdvanceFileUpload.API.Security
+  type: Namespace
+  assemblies:
+  - AdvanceFileUpload.API
+references:
+- uid: AdvanceFileUpload.API.Security.APIKey
+  commentId: T:AdvanceFileUpload.API.Security.APIKey
+  href: AdvanceFileUpload.API.Security.APIKey.html
+  name: APIKey
+  nameWithType: APIKey
+  fullName: AdvanceFileUpload.API.Security.APIKey
+- uid: AdvanceFileUpload.API.Security.ApiKeyOptions
+  commentId: T:AdvanceFileUpload.API.Security.ApiKeyOptions
+  href: AdvanceFileUpload.API.Security.ApiKeyOptions.html
+  name: ApiKeyOptions
+  nameWithType: ApiKeyOptions
+  fullName: AdvanceFileUpload.API.Security.ApiKeyOptions
+- uid: AdvanceFileUpload.API.Security.ClientRateLimit
+  commentId: T:AdvanceFileUpload.API.Security.ClientRateLimit
+  parent: AdvanceFileUpload.API.Security
+  href: AdvanceFileUpload.API.Security.ClientRateLimit.html
+  name: ClientRateLimit
+  nameWithType: ClientRateLimit
+  fullName: AdvanceFileUpload.API.Security.ClientRateLimit
+- uid: AdvanceFileUpload.API.Security
+  commentId: N:AdvanceFileUpload.API.Security
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API.Security
+  nameWithType: AdvanceFileUpload.API.Security
+  fullName: AdvanceFileUpload.API.Security
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  - name: .
+  - uid: AdvanceFileUpload.API.Security
+    name: Security
+    href: AdvanceFileUpload.API.Security.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  - name: .
+  - uid: AdvanceFileUpload.API.Security
+    name: Security
+    href: AdvanceFileUpload.API.Security.html

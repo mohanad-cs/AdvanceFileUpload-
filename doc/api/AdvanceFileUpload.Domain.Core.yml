@@ -30,7 +30,6 @@ references:
   fullName: AdvanceFileUpload.Domain.Core.DomainEventBase
 - uid: AdvanceFileUpload.Domain.Core.DomainException
   commentId: T:AdvanceFileUpload.Domain.Core.DomainException
-  parent: AdvanceFileUpload.Domain.Core
   href: AdvanceFileUpload.Domain.Core.DomainException.html
   name: DomainException
   nameWithType: DomainException

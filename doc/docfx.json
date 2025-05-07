@@ -7,6 +7,11 @@
           "src": "../src",
           "files": [
             "**/*.csproj"
+          ],
+          "exclude":[
+            "**/AdvanceFileUpload.Domain.Test.csproj",
+            "**/AdvanceFileUpload.Client.Test.csproj",
+            "**/AdvanceFileUpload.Benchmark.csproj"
           ]
         }
       ],

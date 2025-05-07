@@ -12,6 +12,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.CertificateSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.CertificateSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.API.Controllers.FileUploadController.yml",
       "output": {
         ".html": {
@@ -26,6 +36,96 @@
       "output": {
         ".html": {
           "relative_path": "api/AdvanceFileUpload.API.Controllers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.DailyPeriodicTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.DailyPeriodicTimer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.EndpointSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.EndpointSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.IPeriodicTimer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.IPeriodicTimer.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.KestrelConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.KestrelConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.KestrelHttp2Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.KestrelHttp2Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.KestrelHttp3Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.KestrelHttp3Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.KestrelHttpsSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.KestrelHttpsSettings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.KestrelLimits.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.KestrelLimits.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.Middleware.APIKeyMiddleware.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.Middleware.APIKeyMiddleware.html"
         }
       },
       "version": ""
@@ -62,10 +162,40 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration.yml",
+      "source_relative_path": "api/AdvanceFileUpload.API.Security.APIKey.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration.html"
+          "relative_path": "api/AdvanceFileUpload.API.Security.APIKey.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.Security.ApiKeyOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.Security.ApiKeyOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.Security.ClientRateLimit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.Security.ClientRateLimit.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.Security.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.Security.html"
         }
       },
       "version": ""
@@ -76,6 +206,36 @@
       "output": {
         ".html": {
           "relative_path": "api/AdvanceFileUpload.API.ServiceConfiguration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.SessionStatusCheckerWorker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.SessionStatusCheckerWorker.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.ThreadPoolOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.ThreadPoolOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.API.html"
         }
       },
       "version": ""
@@ -132,36 +292,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Core.ICommand-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Core.ICommand-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Core.IQuery-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Core.IQuery-1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Core.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Core.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.yml",
       "output": {
         ".html": {
@@ -212,10 +342,20 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler.html"
+          "relative_path": "api/AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler.html"
         }
       },
       "version": ""
@@ -226,26 +366,6 @@
       "output": {
         ".html": {
           "relative_path": "api/AdvanceFileUpload.Application.EventHandling.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Exception.ApplicationException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Exception.ApplicationException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Exception.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Exception.html"
         }
       },
       "version": ""
@@ -462,6 +582,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Application.SessionsStatusCheckerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Application.SessionsStatusCheckerService.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Application.Settings.IUploadSetting.yml",
       "output": {
         ".html": {
@@ -492,120 +622,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.ChunkValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.ChunkValidator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionRequest.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.CreateUploadSessionResponse.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.FileOperationService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.FileOperationService.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.FileValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.FileValidator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.IChunkValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.IChunkValidator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.IFileOperationService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.IFileOperationService.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.IFileValidator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.IFileValidator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Application.Shared.RouteTemplates.yml",
       "output": {
         ".html": {
           "relative_path": "api/AdvanceFileUpload.Application.Shared.RouteTemplates.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.UploadChunkRequest.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.UploadSessionStatusResponse.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Application.Shared.UploadStatus.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Application.Shared.UploadStatus.html"
         }
       },
       "version": ""
@@ -712,106 +732,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter2.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter2.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter3.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter3.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter4.FileSplitter5.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter4.FileSplitter5.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter4.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitter4.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterBenchmarks.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterOptimized.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterOptimized.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterOriginal.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterOriginal.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterWithConcurrency.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.FileSplitterWithConcurrency.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Benchmark.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Benchmark.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Client.ChunkUploadedEventArgs.yml",
       "output": {
         ".html": {
@@ -822,10 +742,10 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.ConnectionStatus.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Client.FileUploadBuilder.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.ConnectionStatus.html"
+          "relative_path": "api/AdvanceFileUpload.Client.FileUploadBuilder.html"
         }
       },
       "version": ""
@@ -842,40 +762,40 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.FileLogger.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.ConnectionStatus.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.Helper.FileLogger.html"
+          "relative_path": "api/AdvanceFileUpload.Client.Helper.ConnectionStatus.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.FileLoggerExtensions.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.Helper.FileLoggerExtensions.html"
+          "relative_path": "api/AdvanceFileUpload.Client.Helper.INetworkConnectionChecker.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.FileLoggerProvider.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.NetworkCheckOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.Helper.FileLoggerProvider.html"
+          "relative_path": "api/AdvanceFileUpload.Client.Helper.NetworkCheckOptions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.LoggerFactoryHelper.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.Helper.LoggerFactoryHelper.html"
+          "relative_path": "api/AdvanceFileUpload.Client.Helper.NetworkConnectionChecker.html"
         }
       },
       "version": ""
@@ -896,36 +816,6 @@
       "output": {
         ".html": {
           "relative_path": "api/AdvanceFileUpload.Client.IFileUploadService.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.INetworkConnectionChecker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.INetworkConnectionChecker.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.NetworkCheckOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.NetworkCheckOptions.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Client.NetworkConnectionChecker.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Client.NetworkConnectionChecker.html"
         }
       },
       "version": ""
@@ -1262,6 +1152,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent.yml",
       "output": {
         ".html": {
@@ -1276,106 +1176,6 @@
       "output": {
         ".html": {
           "relative_path": "api/AdvanceFileUpload.Domain.Events.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.CancelationFileUploadException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exception.CancelationFileUploadException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.ChunkUploadingException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exception.ChunkUploadingException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.CompletingFileUploadException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exception.CompletingFileUploadException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.PauseFileUploadException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exception.PauseFileUploadException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exception.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exception.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exceptions.PauseFileUploadException.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exceptions.PauseFileUploadException.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Exceptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Exceptions.html"
         }
       },
       "version": ""
@@ -1422,86 +1222,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.ChunkValidatorTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.ChunkValidatorTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.FileCompressorTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.FileCompressorTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.FileProcessorTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.FileProcessorTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.FileUploadSessionTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.FileUploadSessionTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.FileValidatorTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.FileValidatorTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.UploadMangerTests.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.UploadMangerTests.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Domain.Test.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/AdvanceFileUpload.Domain.Test.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/AdvanceFileUpload.Domain.yml",
       "output": {
         ".html": {
@@ -1512,210 +1232,230 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.ConsumingArgs.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.ConsumingArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.ConsumingArgs.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.ConsumingArgs.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IIntegrationEventConsumer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IIntegrationEventConsumer.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IIntegrationEventPublisher.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IIntegrationEventPublisher.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.IntegrationConstants.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.PublishMessage-1.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.PublishMessage-1.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.IntegrationConstants.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.PublishMessage-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.PublishMessage-1.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.RabbitMQConsumer.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.RabbitMQConsumer.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.RabbitMQOptions.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.RabbitMQEventPublisher.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.RabbitMQOptions.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.RabbitMQEventPublisher.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.RabbitMQOptions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.RabbitMQOptions.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.SessionFieldIntegrationEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.SessionFieldIntegrationEvent.html"
         }
       },
       "version": ""
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/AdvanceFileUpload.Integration.Contracts.yml",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.SessionPausedIntegrationEvent.yml",
       "output": {
         ".html": {
-          "relative_path": "api/AdvanceFileUpload.Integration.Contracts.html"
+          "relative_path": "api/AdvanceFileUpload.Integration.SessionPausedIntegrationEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.SessionResumedIntegrationEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Integration.SessionResumedIntegrationEvent.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdvanceFileUpload.Integration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdvanceFileUpload.Integration.html"
         }
       },
       "version": ""

@@ -22,6 +22,8 @@ items:
   - AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
   - AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
   - AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
+  - AdvanceFileUpload.Domain.FileUploadSession.IsFailed
+  - AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed
   - AdvanceFileUpload.Domain.FileUploadSession.MaxChunkSize
   - AdvanceFileUpload.Domain.FileUploadSession.PauseSession
   - AdvanceFileUpload.Domain.FileUploadSession.ProgressPercentage
@@ -48,7 +50,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileUploadSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 10
+    startLine: 9
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -92,7 +94,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileName
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 17
+    startLine: 16
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -123,7 +125,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileExtension
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 22
+    startLine: 21
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -154,7 +156,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompressionAlgorithm
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 27
+    startLine: 26
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -185,7 +187,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompressionLevel
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 31
+    startLine: 30
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -216,7 +218,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SavingDirectory
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 36
+    startLine: 35
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -247,7 +249,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: FileSize
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 41
+    startLine: 40
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -278,7 +280,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompressedFileSize
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 49
+    startLine: 48
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -313,7 +315,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Status
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 54
+    startLine: 53
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -344,7 +346,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadDate
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 59
+    startLine: 58
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -375,7 +377,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionStartDate
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 64
+    startLine: 63
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -406,7 +408,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SessionEndDate
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 69
+    startLine: 68
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -437,7 +439,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: MaxChunkSize
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 74
+    startLine: 73
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -468,7 +470,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: TotalChunksToUpload
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 79
+    startLine: 78
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -499,7 +501,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: TotalUploadedChunks
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 84
+    startLine: 83
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -530,7 +532,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ProgressPercentage
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 89
+    startLine: 88
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -561,7 +563,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UseCompression
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 103
+    startLine: 102
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -592,7 +594,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CurrentHubConnectionId
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 107
+    startLine: 106
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -623,7 +625,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Version
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 111
+    startLine: 110
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -654,7 +656,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ChunkFiles
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 116
+    startLine: 115
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -685,7 +687,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 128
+    startLine: 127
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -756,8 +758,8 @@ items:
     content.vb: Public Sub AddChunk(chunkIndex As Integer, chunkPath As String)
   overload: AdvanceFileUpload.Domain.FileUploadSession.AddChunk*
   exceptions:
-  - type: AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
-    commentId: T:AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
+  - type: AdvanceFileUpload.Domain.Core.DomainException
+    commentId: T:AdvanceFileUpload.Domain.Core.DomainException
     description: >-
       Thrown when the chunk cannot be added due to one of the following reasons:
 
@@ -927,6 +929,37 @@ items:
       description: <code>true</code> if the session is canceled; otherwise, <code>false</code>.
     content.vb: Public Function IsCanceled() As Boolean
   overload: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled*
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsFailed
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsFailed
+  id: IsFailed
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: IsFailed()
+  nameWithType: FileUploadSession.IsFailed()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsFailed()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsFailed
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 308
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Determines whether the file upload session is failed.
+  example: []
+  syntax:
+    content: public bool IsFailed()
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the session status is Failed; otherwise, <code>false</code>.
+    content.vb: Public Function IsFailed() As Boolean
+  overload: AdvanceFileUpload.Domain.FileUploadSession.IsFailed*
 - uid: AdvanceFileUpload.Domain.FileUploadSession.CancelSession
   commentId: M:AdvanceFileUpload.Domain.FileUploadSession.CancelSession
   id: CancelSession
@@ -945,7 +978,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 311
+    startLine: 318
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -956,9 +989,9 @@ items:
     content.vb: Public Sub CancelSession()
   overload: AdvanceFileUpload.Domain.FileUploadSession.CancelSession*
   exceptions:
-  - type: AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-    commentId: T:AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-    description: Thrown when the session cannot be canceled because it is already completed.
+  - type: AdvanceFileUpload.Domain.Core.DomainException
+    commentId: T:AdvanceFileUpload.Domain.Core.DomainException
+    description: Thrown when the session cannot be canceled because it is already completed or failed.
 - uid: AdvanceFileUpload.Domain.FileUploadSession.PauseSession
   commentId: M:AdvanceFileUpload.Domain.FileUploadSession.PauseSession
   id: PauseSession
@@ -977,7 +1010,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 328
+    startLine: 339
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -988,9 +1021,9 @@ items:
     content.vb: Public Sub PauseSession()
   overload: AdvanceFileUpload.Domain.FileUploadSession.PauseSession*
   exceptions:
-  - type: AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-    commentId: T:AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-    description: Thrown when the session cannot be paused because it is already completed or canceled.
+  - type: AdvanceFileUpload.Domain.Core.DomainException
+    commentId: T:AdvanceFileUpload.Domain.Core.DomainException
+    description: Thrown when the session cannot be paused because it is already completed, canceled  or failed.
 - uid: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
   commentId: M:AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
   id: CompleteSession
@@ -1009,7 +1042,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompleteSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 354
+    startLine: 370
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -1020,12 +1053,51 @@ items:
     content.vb: Public Sub CompleteSession()
   overload: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession*
   exceptions:
-  - type: AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
-    commentId: T:AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
+  - type: AdvanceFileUpload.Domain.Core.DomainException
+    commentId: T:AdvanceFileUpload.Domain.Core.DomainException
     description: >-
       Thrown when the session cannot be completed due to one of the following reasons:
 
-      <ul><li>The session is already completed.</li><li>The session is canceled.</li><li>Not all chunks have been uploaded.</li></ul>
+      <ul><li>The session is already completed.</li><li>The session is canceled.</li><li>The session is failed.</li><li>Not all chunks have been uploaded.</li></ul>
+- uid: AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed
+  id: MarkAsFailed
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: MarkAsFailed()
+  nameWithType: FileUploadSession.MarkAsFailed()
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed()
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MarkAsFailed
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 407
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Marks the file upload session as failed.
+  remarks: >-
+    This method updates the status of the session to <xref href="AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed" data-throw-if-not-resolved="false"></xref> and sets the <xref href="AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate" data-throw-if-not-resolved="false"></xref> to the current date and time.
+
+    It also raises a <xref href="AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent" data-throw-if-not-resolved="false"></xref> to notify that the session has been failed.
+  example: []
+  syntax:
+    content: public void MarkAsFailed()
+    content.vb: Public Sub MarkAsFailed()
+  overload: AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed*
+  exceptions:
+  - type: AdvanceFileUpload.Domain.Core.DomainException
+    commentId: T:AdvanceFileUpload.Domain.Core.DomainException
+    description: >-
+      Thrown when the session cannot be marked as failed due to one of the following reasons:
+
+      <ul><li>The session is already completed.</li><li>The session is canceled.</li></ul>
 references:
 - uid: AdvanceFileUpload.Domain
   commentId: N:AdvanceFileUpload.Domain
@@ -1841,12 +1913,12 @@ references:
   nameWithType.vb: FileUploadSession.New
   fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.New
   name.vb: New
-- uid: AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
-  commentId: T:AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
-  href: AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException.html
-  name: ChunkUploadingException
-  nameWithType: ChunkUploadingException
-  fullName: AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
+- uid: AdvanceFileUpload.Domain.Core.DomainException
+  commentId: T:AdvanceFileUpload.Domain.Core.DomainException
+  href: AdvanceFileUpload.Domain.Core.DomainException.html
+  name: DomainException
+  nameWithType: DomainException
+  fullName: AdvanceFileUpload.Domain.Core.DomainException
 - uid: AdvanceFileUpload.Domain.FileUploadSession.AddChunk*
   commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.AddChunk
   href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_AddChunk_System_Int32_System_String_
@@ -1946,12 +2018,12 @@ references:
   name: IsCanceled
   nameWithType: FileUploadSession.IsCanceled
   fullName: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
-- uid: AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-  commentId: T:AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-  href: AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException.html
-  name: CancelationFileUploadException
-  nameWithType: CancelationFileUploadException
-  fullName: AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsFailed*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsFailed
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsFailed
+  name: IsFailed
+  nameWithType: FileUploadSession.IsFailed
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsFailed
 - uid: AdvanceFileUpload.Domain.FileUploadSession.CancelSession*
   commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.CancelSession
   href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_CancelSession
@@ -1964,15 +2036,64 @@ references:
   name: PauseSession
   nameWithType: FileUploadSession.PauseSession
   fullName: AdvanceFileUpload.Domain.FileUploadSession.PauseSession
-- uid: AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
-  commentId: T:AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
-  href: AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException.html
-  name: CompletingFileUploadException
-  nameWithType: CompletingFileUploadException
-  fullName: AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
 - uid: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession*
   commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
   href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_CompleteSession
   name: CompleteSession
   nameWithType: FileUploadSession.CompleteSession
   fullName: AdvanceFileUpload.Domain.FileUploadSession.CompleteSession
+- uid: AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
+  commentId: F:AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
+  href: AdvanceFileUpload.Domain.FileUploadSessionStatus.html#AdvanceFileUpload_Domain_FileUploadSessionStatus_Failed
+  name: Failed
+  nameWithType: FileUploadSessionStatus.Failed
+  fullName: AdvanceFileUpload.Domain.FileUploadSessionStatus.Failed
+- uid: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  commentId: P:AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_SessionEndDate
+  name: SessionEndDate
+  nameWithType: FileUploadSession.SessionEndDate
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.SessionEndDate
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
+  parent: AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent.html
+  name: FileUploadSessionFailedEvent
+  nameWithType: FileUploadSessionFailedEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
+- uid: AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_MarkAsFailed
+  name: MarkAsFailed
+  nameWithType: FileUploadSession.MarkAsFailed
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.MarkAsFailed
+- uid: AdvanceFileUpload.Domain.Events
+  commentId: N:AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Events
+  nameWithType: AdvanceFileUpload.Domain.Events
+  fullName: AdvanceFileUpload.Domain.Events
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html

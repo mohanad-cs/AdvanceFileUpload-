@@ -1,0 +1,395 @@
+### YamlMime:ManagedReference
+items:
+- uid: AdvanceFileUpload.API.ThreadPoolOptions
+  commentId: T:AdvanceFileUpload.API.ThreadPoolOptions
+  id: ThreadPoolOptions
+  parent: AdvanceFileUpload.API
+  children:
+  - AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads
+  - AdvanceFileUpload.API.ThreadPoolOptions.MinThreads
+  - AdvanceFileUpload.API.ThreadPoolOptions.SectionName
+  langs:
+  - csharp
+  - vb
+  name: ThreadPoolOptions
+  nameWithType: ThreadPoolOptions
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ThreadPoolOptions
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+    startLine: 2
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  syntax:
+    content: public sealed class ThreadPoolOptions
+    content.vb: Public NotInheritable Class ThreadPoolOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.API.ThreadPoolOptions.SectionName
+  commentId: F:AdvanceFileUpload.API.ThreadPoolOptions.SectionName
+  id: SectionName
+  parent: AdvanceFileUpload.API.ThreadPoolOptions
+  langs:
+  - csharp
+  - vb
+  name: SectionName
+  nameWithType: ThreadPoolOptions.SectionName
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions.SectionName
+  type: Field
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: SectionName
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+    startLine: 4
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  syntax:
+    content: public const string SectionName = "ThreadPoolOptions"
+    return:
+      type: System.String
+    content.vb: Public Const SectionName As String = "ThreadPoolOptions"
+- uid: AdvanceFileUpload.API.ThreadPoolOptions.MinThreads
+  commentId: P:AdvanceFileUpload.API.ThreadPoolOptions.MinThreads
+  id: MinThreads
+  parent: AdvanceFileUpload.API.ThreadPoolOptions
+  langs:
+  - csharp
+  - vb
+  name: MinThreads
+  nameWithType: ThreadPoolOptions.MinThreads
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions.MinThreads
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MinThreads
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+    startLine: 5
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  syntax:
+    content: public int MinThreads { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MinThreads As Integer
+  overload: AdvanceFileUpload.API.ThreadPoolOptions.MinThreads*
+- uid: AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads
+  commentId: P:AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads
+  id: MaxThreads
+  parent: AdvanceFileUpload.API.ThreadPoolOptions
+  langs:
+  - csharp
+  - vb
+  name: MaxThreads
+  nameWithType: ThreadPoolOptions.MaxThreads
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads
+  type: Property
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: MaxThreads
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ThreadPoolOptions.cs
+    startLine: 6
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  syntax:
+    content: public int MaxThreads { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxThreads As Integer
+  overload: AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads*
+references:
+- uid: AdvanceFileUpload.API
+  commentId: N:AdvanceFileUpload.API
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API
+  nameWithType: AdvanceFileUpload.API
+  fullName: AdvanceFileUpload.API
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: AdvanceFileUpload.API.ThreadPoolOptions.MinThreads*
+  commentId: Overload:AdvanceFileUpload.API.ThreadPoolOptions.MinThreads
+  href: AdvanceFileUpload.API.ThreadPoolOptions.html#AdvanceFileUpload_API_ThreadPoolOptions_MinThreads
+  name: MinThreads
+  nameWithType: ThreadPoolOptions.MinThreads
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions.MinThreads
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads*
+  commentId: Overload:AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads
+  href: AdvanceFileUpload.API.ThreadPoolOptions.html#AdvanceFileUpload_API_ThreadPoolOptions_MaxThreads
+  name: MaxThreads
+  nameWithType: ThreadPoolOptions.MaxThreads
+  fullName: AdvanceFileUpload.API.ThreadPoolOptions.MaxThreads

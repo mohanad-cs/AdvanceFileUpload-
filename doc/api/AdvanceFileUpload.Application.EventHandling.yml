@@ -9,7 +9,8 @@ items:
   - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCanceledEventHandler
   - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCompletedEventHandler
   - AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
-  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler
+  - AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler
   langs:
   - csharp
   - vb
@@ -50,9 +51,15 @@ references:
   name: FileUploadSessionCreatedEventHandler
   nameWithType: FileUploadSessionCreatedEventHandler
   fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
-- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
-  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
-  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler.html
-  name: FileUploadSessionPusedEventHandler
-  nameWithType: FileUploadSessionPusedEventHandler
-  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler.html
+  name: FileUploadSessionFieldEventHandler
+  nameWithType: FileUploadSessionFieldEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler
+- uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler.html
+  name: FileUploadSessionPausedEventHandler
+  nameWithType: FileUploadSessionPausedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler

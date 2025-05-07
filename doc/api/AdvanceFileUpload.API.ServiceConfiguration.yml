@@ -1,23 +1,673 @@
 ### YamlMime:ManagedReference
 items:
 - uid: AdvanceFileUpload.API.ServiceConfiguration
-  commentId: N:AdvanceFileUpload.API.ServiceConfiguration
-  id: AdvanceFileUpload.API.ServiceConfiguration
+  commentId: T:AdvanceFileUpload.API.ServiceConfiguration
+  id: ServiceConfiguration
+  parent: AdvanceFileUpload.API
   children:
-  - AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
+  - AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  - AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer(Microsoft.Extensions.Hosting.IHostApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostBuilder)
+  - AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder)
   langs:
   - csharp
   - vb
-  name: AdvanceFileUpload.API.ServiceConfiguration
-  nameWithType: AdvanceFileUpload.API.ServiceConfiguration
-  fullName: AdvanceFileUpload.API.ServiceConfiguration
-  type: Namespace
-  assemblies:
-  - AdvanceFileUpload.API
-references:
-- uid: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
-  commentId: T:AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
-  href: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration.html
   name: ServiceConfiguration
   nameWithType: ServiceConfiguration
-  fullName: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
+  fullName: AdvanceFileUpload.API.ServiceConfiguration
+  type: Class
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ServiceConfiguration
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+    startLine: 23
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  syntax:
+    content: public static class ServiceConfiguration
+    content.vb: Public Module ServiceConfiguration
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  commentId: M:AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  id: ConfigureApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)
+  isExtensionMethod: true
+  parent: AdvanceFileUpload.API.ServiceConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ConfigureApplicationServices(IServiceCollection, IConfiguration)
+  nameWithType: ServiceConfiguration.ConfigureApplicationServices(IServiceCollection, IConfiguration)
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices(Microsoft.Extensions.DependencyInjection.IServiceCollection, Microsoft.Extensions.Configuration.IConfiguration)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ConfigureApplicationServices
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+    startLine: 31
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Configures the application services by setting up core services and rate limiting.
+  example: []
+  syntax:
+    content: public static void ConfigureApplicationServices(this IServiceCollection services, IConfiguration configuration)
+    parameters:
+    - id: services
+      type: Microsoft.Extensions.DependencyInjection.IServiceCollection
+      description: The service collection to which services are added.
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+      description: The application configuration containing settings.
+    content.vb: Public Shared Sub ConfigureApplicationServices(services As IServiceCollection, configuration As IConfiguration)
+  overload: AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices*
+- uid: AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  commentId: M:AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  id: EnsureDbMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  isExtensionMethod: true
+  parent: AdvanceFileUpload.API.ServiceConfiguration
+  langs:
+  - csharp
+  - vb
+  name: EnsureDbMigration(IApplicationBuilder)
+  nameWithType: ServiceConfiguration.EnsureDbMigration(IApplicationBuilder)
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration(Microsoft.AspNetCore.Builder.IApplicationBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: EnsureDbMigration
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+    startLine: 79
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: >-
+    Ensures that the database schema is up-to-date by applying any pending migrations.
+
+    This method should only be used in development environments.
+  example: []
+  syntax:
+    content: public static void EnsureDbMigration(this IApplicationBuilder app)
+    parameters:
+    - id: app
+      type: Microsoft.AspNetCore.Builder.IApplicationBuilder
+      description: The application builder used to configure the app's request pipeline.
+    content.vb: Public Shared Sub EnsureDbMigration(app As IApplicationBuilder)
+  overload: AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration*
+- uid: AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer(Microsoft.Extensions.Hosting.IHostApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostBuilder)
+  commentId: M:AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer(Microsoft.Extensions.Hosting.IHostApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostBuilder)
+  id: ConfigureUploadServer(Microsoft.Extensions.Hosting.IHostApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostBuilder)
+  isExtensionMethod: true
+  parent: AdvanceFileUpload.API.ServiceConfiguration
+  langs:
+  - csharp
+  - vb
+  name: ConfigureUploadServer(IHostApplicationBuilder, IWebHostBuilder)
+  nameWithType: ServiceConfiguration.ConfigureUploadServer(IHostApplicationBuilder, IWebHostBuilder)
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer(Microsoft.Extensions.Hosting.IHostApplicationBuilder, Microsoft.AspNetCore.Hosting.IWebHostBuilder)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: ConfigureUploadServer
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.API/ServiceConfiguration/ServiceConfiguration.cs
+    startLine: 151
+  assemblies:
+  - AdvanceFileUpload.API
+  namespace: AdvanceFileUpload.API
+  summary: Configures the upload server using Kestrel.
+  example: []
+  syntax:
+    content: public static void ConfigureUploadServer(this IHostApplicationBuilder builder, IWebHostBuilder webHost)
+    parameters:
+    - id: builder
+      type: Microsoft.Extensions.Hosting.IHostApplicationBuilder
+      description: ''
+    - id: webHost
+      type: Microsoft.AspNetCore.Hosting.IWebHostBuilder
+      description: ''
+    content.vb: Public Shared Sub ConfigureUploadServer(builder As IHostApplicationBuilder, webHost As IWebHostBuilder)
+  overload: AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: ''
+references:
+- uid: AdvanceFileUpload.API
+  commentId: N:AdvanceFileUpload.API
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.API
+  nameWithType: AdvanceFileUpload.API
+  fullName: AdvanceFileUpload.API
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.API
+    name: API
+    href: AdvanceFileUpload.API.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices*
+  commentId: Overload:AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices
+  href: AdvanceFileUpload.API.ServiceConfiguration.html#AdvanceFileUpload_API_ServiceConfiguration_ConfigureApplicationServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_Configuration_IConfiguration_
+  name: ConfigureApplicationServices
+  nameWithType: ServiceConfiguration.ConfigureApplicationServices
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.ConfigureApplicationServices
+- uid: Microsoft.Extensions.DependencyInjection.IServiceCollection
+  commentId: T:Microsoft.Extensions.DependencyInjection.IServiceCollection
+  parent: Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: Microsoft.Extensions.DependencyInjection.IServiceCollection
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: Microsoft.Extensions.DependencyInjection
+  commentId: N:Microsoft.Extensions.DependencyInjection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.DependencyInjection
+  nameWithType: Microsoft.Extensions.DependencyInjection
+  fullName: Microsoft.Extensions.DependencyInjection
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.DependencyInjection
+    name: DependencyInjection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Configuration
+    name: Configuration
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.configuration
+- uid: AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration*
+  commentId: Overload:AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration
+  href: AdvanceFileUpload.API.ServiceConfiguration.html#AdvanceFileUpload_API_ServiceConfiguration_EnsureDbMigration_Microsoft_AspNetCore_Builder_IApplicationBuilder_
+  name: EnsureDbMigration
+  nameWithType: ServiceConfiguration.EnsureDbMigration
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.EnsureDbMigration
+- uid: Microsoft.AspNetCore.Builder.IApplicationBuilder
+  commentId: T:Microsoft.AspNetCore.Builder.IApplicationBuilder
+  parent: Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.iapplicationbuilder
+  name: IApplicationBuilder
+  nameWithType: IApplicationBuilder
+  fullName: Microsoft.AspNetCore.Builder.IApplicationBuilder
+- uid: Microsoft.AspNetCore.Builder
+  commentId: N:Microsoft.AspNetCore.Builder
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Builder
+  nameWithType: Microsoft.AspNetCore.Builder
+  fullName: Microsoft.AspNetCore.Builder
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Builder
+    name: Builder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.builder
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer*
+  commentId: Overload:AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer
+  href: AdvanceFileUpload.API.ServiceConfiguration.html#AdvanceFileUpload_API_ServiceConfiguration_ConfigureUploadServer_Microsoft_Extensions_Hosting_IHostApplicationBuilder_Microsoft_AspNetCore_Hosting_IWebHostBuilder_
+  name: ConfigureUploadServer
+  nameWithType: ServiceConfiguration.ConfigureUploadServer
+  fullName: AdvanceFileUpload.API.ServiceConfiguration.ConfigureUploadServer
+- uid: Microsoft.Extensions.Hosting.IHostApplicationBuilder
+  commentId: T:Microsoft.Extensions.Hosting.IHostApplicationBuilder
+  parent: Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting.ihostapplicationbuilder
+  name: IHostApplicationBuilder
+  nameWithType: IHostApplicationBuilder
+  fullName: Microsoft.Extensions.Hosting.IHostApplicationBuilder
+- uid: Microsoft.AspNetCore.Hosting.IWebHostBuilder
+  commentId: T:Microsoft.AspNetCore.Hosting.IWebHostBuilder
+  parent: Microsoft.AspNetCore.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.hosting.iwebhostbuilder
+  name: IWebHostBuilder
+  nameWithType: IWebHostBuilder
+  fullName: Microsoft.AspNetCore.Hosting.IWebHostBuilder
+- uid: Microsoft.Extensions.Hosting
+  commentId: N:Microsoft.Extensions.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.Extensions.Hosting
+  nameWithType: Microsoft.Extensions.Hosting
+  fullName: Microsoft.Extensions.Hosting
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.Extensions
+    name: Extensions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions
+  - name: .
+  - uid: Microsoft.Extensions.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.extensions.hosting
+- uid: Microsoft.AspNetCore.Hosting
+  commentId: N:Microsoft.AspNetCore.Hosting
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Hosting
+  nameWithType: Microsoft.AspNetCore.Hosting
+  fullName: Microsoft.AspNetCore.Hosting
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.hosting
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Hosting
+    name: Hosting
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.hosting

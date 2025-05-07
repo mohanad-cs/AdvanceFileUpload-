@@ -8,6 +8,7 @@ items:
   - AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
   - AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
   - AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+  - AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
   - AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
   langs:
   - csharp
@@ -47,6 +48,13 @@ references:
   name: FileUploadSessionCreatedEvent
   nameWithType: FileUploadSessionCreatedEvent
   fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+- uid: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
+  parent: AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent.html
+  name: FileUploadSessionFailedEvent
+  nameWithType: FileUploadSessionFailedEvent
+  fullName: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
 - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
   commentId: T:AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
   parent: AdvanceFileUpload.Domain.Events

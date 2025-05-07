@@ -38,6 +38,7 @@ items:
   - AdvanceFileUpload.Domain.Events.FileUploadSessionCanceledEvent
   - AdvanceFileUpload.Domain.Events.FileUploadSessionCompletedEvent
   - AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
+  - AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
   - AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
   implements:
   - AdvanceFileUpload.Domain.Core.IDomainEvent

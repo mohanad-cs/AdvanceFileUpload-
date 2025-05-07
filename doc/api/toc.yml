@@ -1,5 +1,45 @@
 ### YamlMime:TableOfContent
 items:
+- uid: AdvanceFileUpload.API
+  name: AdvanceFileUpload.API
+  type: Namespace
+  items:
+  - uid: AdvanceFileUpload.API.CertificateSettings
+    name: CertificateSettings
+    type: Class
+  - uid: AdvanceFileUpload.API.DailyPeriodicTimer
+    name: DailyPeriodicTimer
+    type: Class
+  - uid: AdvanceFileUpload.API.EndpointSettings
+    name: EndpointSettings
+    type: Class
+  - uid: AdvanceFileUpload.API.IPeriodicTimer
+    name: IPeriodicTimer
+    type: Interface
+  - uid: AdvanceFileUpload.API.KestrelConfiguration
+    name: KestrelConfiguration
+    type: Class
+  - uid: AdvanceFileUpload.API.KestrelHttp2Settings
+    name: KestrelHttp2Settings
+    type: Class
+  - uid: AdvanceFileUpload.API.KestrelHttp3Settings
+    name: KestrelHttp3Settings
+    type: Class
+  - uid: AdvanceFileUpload.API.KestrelHttpsSettings
+    name: KestrelHttpsSettings
+    type: Class
+  - uid: AdvanceFileUpload.API.KestrelLimits
+    name: KestrelLimits
+    type: Class
+  - uid: AdvanceFileUpload.API.ServiceConfiguration
+    name: ServiceConfiguration
+    type: Class
+  - uid: AdvanceFileUpload.API.SessionStatusCheckerWorker
+    name: SessionStatusCheckerWorker
+    type: Class
+  - uid: AdvanceFileUpload.API.ThreadPoolOptions
+    name: ThreadPoolOptions
+    type: Class
 - uid: AdvanceFileUpload.API.Controllers
   name: AdvanceFileUpload.API.Controllers
   type: Namespace
@@ -11,18 +51,27 @@ items:
   name: AdvanceFileUpload.API.Middleware
   type: Namespace
   items:
+  - uid: AdvanceFileUpload.API.Middleware.APIKeyMiddleware
+    name: APIKeyMiddleware
+    type: Class
   - uid: AdvanceFileUpload.API.Middleware.ExceptionHandlingMiddleware
     name: ExceptionHandlingMiddleware
     type: Class
   - uid: AdvanceFileUpload.API.Middleware.ExceptionResponse
     name: ExceptionResponse
     type: Class
-- uid: AdvanceFileUpload.API.ServiceConfiguration
-  name: AdvanceFileUpload.API.ServiceConfiguration
+- uid: AdvanceFileUpload.API.Security
+  name: AdvanceFileUpload.API.Security
   type: Namespace
   items:
-  - uid: AdvanceFileUpload.API.ServiceConfiguration.ServiceConfiguration
-    name: ServiceConfiguration
+  - uid: AdvanceFileUpload.API.Security.APIKey
+    name: APIKey
+    type: Class
+  - uid: AdvanceFileUpload.API.Security.ApiKeyOptions
+    name: ApiKeyOptions
+    type: Class
+  - uid: AdvanceFileUpload.API.Security.ClientRateLimit
+    name: ClientRateLimit
     type: Class
 - uid: AdvanceFileUpload.Application
   name: AdvanceFileUpload.Application
@@ -31,6 +80,9 @@ items:
   - uid: AdvanceFileUpload.Application.IUploadManger
     name: IUploadManger
     type: Interface
+  - uid: AdvanceFileUpload.Application.SessionsStatusCheckerService
+    name: SessionsStatusCheckerService
+    type: Class
   - uid: AdvanceFileUpload.Application.UploadManger
     name: UploadManger
     type: Class
@@ -69,8 +121,11 @@ items:
   - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionCreatedEventHandler
     name: FileUploadSessionCreatedEventHandler
     type: Class
-  - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPusedEventHandler
-    name: FileUploadSessionPusedEventHandler
+  - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionFieldEventHandler
+    name: FileUploadSessionFieldEventHandler
+    type: Class
+  - uid: AdvanceFileUpload.Application.EventHandling.FileUploadSessionPausedEventHandler
+    name: FileUploadSessionPausedEventHandler
     type: Class
 - uid: AdvanceFileUpload.Application.FileProcessing
   name: AdvanceFileUpload.Application.FileProcessing
@@ -175,37 +230,6 @@ items:
   - uid: AdvanceFileUpload.Application.Validators.IFileValidator
     name: IFileValidator
     type: Interface
-- uid: AdvanceFileUpload.Benchmark
-  name: AdvanceFileUpload.Benchmark
-  type: Namespace
-  items:
-  - uid: AdvanceFileUpload.Benchmark.FileSplitter
-    name: FileSplitter
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitter2
-    name: FileSplitter2
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitter3
-    name: FileSplitter3
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitter4
-    name: FileSplitter4
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitter4.FileSplitter5
-    name: FileSplitter4.FileSplitter5
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitterBenchmarks
-    name: FileSplitterBenchmarks
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitterOptimized
-    name: FileSplitterOptimized
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitterOriginal
-    name: FileSplitterOriginal
-    type: Class
-  - uid: AdvanceFileUpload.Benchmark.FileSplitterWithConcurrency
-    name: FileSplitterWithConcurrency
-    type: Class
 - uid: AdvanceFileUpload.Client
   name: AdvanceFileUpload.Client
   type: Namespace
@@ -213,24 +237,15 @@ items:
   - uid: AdvanceFileUpload.Client.ChunkUploadedEventArgs
     name: ChunkUploadedEventArgs
     type: Class
-  - uid: AdvanceFileUpload.Client.ConnectionStatus
-    name: ConnectionStatus
-    type: Enum
+  - uid: AdvanceFileUpload.Client.FileUploadBuilder
+    name: FileUploadBuilder
+    type: Class
   - uid: AdvanceFileUpload.Client.FileUploadService
     name: FileUploadService
     type: Class
   - uid: AdvanceFileUpload.Client.IFileUploadService
     name: IFileUploadService
     type: Interface
-  - uid: AdvanceFileUpload.Client.INetworkConnectionChecker
-    name: INetworkConnectionChecker
-    type: Interface
-  - uid: AdvanceFileUpload.Client.NetworkCheckOptions
-    name: NetworkCheckOptions
-    type: Class
-  - uid: AdvanceFileUpload.Client.NetworkConnectionChecker
-    name: NetworkConnectionChecker
-    type: Class
   - uid: AdvanceFileUpload.Client.SessionCanceledEventArgs
     name: SessionCanceledEventArgs
     type: Class
@@ -259,17 +274,17 @@ items:
   name: AdvanceFileUpload.Client.Helper
   type: Namespace
   items:
-  - uid: AdvanceFileUpload.Client.Helper.FileLogger
-    name: FileLogger
+  - uid: AdvanceFileUpload.Client.Helper.ConnectionStatus
+    name: ConnectionStatus
+    type: Enum
+  - uid: AdvanceFileUpload.Client.Helper.INetworkConnectionChecker
+    name: INetworkConnectionChecker
+    type: Interface
+  - uid: AdvanceFileUpload.Client.Helper.NetworkCheckOptions
+    name: NetworkCheckOptions
     type: Class
-  - uid: AdvanceFileUpload.Client.Helper.FileLoggerExtensions
-    name: FileLoggerExtensions
-    type: Class
-  - uid: AdvanceFileUpload.Client.Helper.FileLoggerProvider
-    name: FileLoggerProvider
-    type: Class
-  - uid: AdvanceFileUpload.Client.Helper.LoggerFactoryHelper
-    name: LoggerFactoryHelper
+  - uid: AdvanceFileUpload.Client.Helper.NetworkConnectionChecker
+    name: NetworkConnectionChecker
     type: Class
 - uid: AdvanceFileUpload.Data
   name: AdvanceFileUpload.Data
@@ -360,24 +375,11 @@ items:
   - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionCreatedEvent
     name: FileUploadSessionCreatedEvent
     type: Class
+  - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionFailedEvent
+    name: FileUploadSessionFailedEvent
+    type: Class
   - uid: AdvanceFileUpload.Domain.Events.FileUploadSessionPausedEvent
     name: FileUploadSessionPausedEvent
-    type: Class
-- uid: AdvanceFileUpload.Domain.Exceptions
-  name: AdvanceFileUpload.Domain.Exceptions
-  type: Namespace
-  items:
-  - uid: AdvanceFileUpload.Domain.Exceptions.CancelationFileUploadException
-    name: CancelationFileUploadException
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Exceptions.ChunkUploadingException
-    name: ChunkUploadingException
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Exceptions.CompletingFileUploadException
-    name: CompletingFileUploadException
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Exceptions.PauseFileUploadException
-    name: PauseFileUploadException
     type: Class
 - uid: AdvanceFileUpload.Domain.Extensions
   name: AdvanceFileUpload.Domain.Extensions
@@ -386,93 +388,74 @@ items:
   - uid: AdvanceFileUpload.Domain.Extensions.DateTmeExtensions
     name: DateTmeExtensions
     type: Class
-- uid: AdvanceFileUpload.Domain.Test
-  name: AdvanceFileUpload.Domain.Test
+- uid: AdvanceFileUpload.Integration
+  name: AdvanceFileUpload.Integration
   type: Namespace
   items:
-  - uid: AdvanceFileUpload.Domain.Test.ChunkValidatorTests
-    name: ChunkValidatorTests
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Test.FileCompressionValidatorTests
-    name: FileCompressionValidatorTests
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Test.FileCompressorTests
-    name: FileCompressorTests
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Test.FileProcessorTests
-    name: FileProcessorTests
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Test.FileUploadSessionTests
-    name: FileUploadSessionTests
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Test.FileValidatorTests
-    name: FileValidatorTests
-    type: Class
-  - uid: AdvanceFileUpload.Domain.Test.UploadMangerTests
-    name: UploadMangerTests
-    type: Class
-- uid: AdvanceFileUpload.Integration.Contracts
-  name: AdvanceFileUpload.Integration.Contracts
-  type: Namespace
-  items:
-  - uid: AdvanceFileUpload.Integration.Contracts.ChunkUploadedIntegrationEvent
+  - uid: AdvanceFileUpload.Integration.ChunkUploadedIntegrationEvent
     name: ChunkUploadedIntegrationEvent
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.ConsumingArgs
+  - uid: AdvanceFileUpload.Integration.ConsumingArgs
     name: ConsumingArgs
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventConsumer
+  - uid: AdvanceFileUpload.Integration.IIntegrationEventConsumer
     name: IIntegrationEventConsumer
     type: Interface
-  - uid: AdvanceFileUpload.Integration.Contracts.IIntegrationEventPublisher
+  - uid: AdvanceFileUpload.Integration.IIntegrationEventPublisher
     name: IIntegrationEventPublisher
     type: Interface
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants
     name: IntegrationConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.ChunkUploadedConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.ChunkUploadedConstants
     name: IntegrationConstants.ChunkUploadedConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCanceledConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCanceledConstants
     name: IntegrationConstants.SessionCanceledConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCompletedConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCompletedConstants
     name: IntegrationConstants.SessionCompletedConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionCreatedConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionCreatedConstants
     name: IntegrationConstants.SessionCreatedConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionPausedConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionFieldConstants
+    name: IntegrationConstants.SessionFieldConstants
+    type: Class
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionPausedConstants
     name: IntegrationConstants.SessionPausedConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.IntegrationConstants.SessionResumedConstants
+  - uid: AdvanceFileUpload.Integration.IntegrationConstants.SessionResumedConstants
     name: IntegrationConstants.SessionResumedConstants
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.PublishMessage`1
+  - uid: AdvanceFileUpload.Integration.PublishMessage`1
     name: PublishMessage<T>
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.RabbitMQConsumer
+  - uid: AdvanceFileUpload.Integration.RabbitMQConsumer
     name: RabbitMQConsumer
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.RabbitMQIntegrationEventPublisher
-    name: RabbitMQIntegrationEventPublisher
+  - uid: AdvanceFileUpload.Integration.RabbitMQEventPublisher
+    name: RabbitMQEventPublisher
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.RabbitMQOptions
+  - uid: AdvanceFileUpload.Integration.RabbitMQOptions
     name: RabbitMQOptions
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.SessionCancelledIntegrationEvent
+  - uid: AdvanceFileUpload.Integration.SessionCancelledIntegrationEvent
     name: SessionCancelledIntegrationEvent
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.SessionCompletedIntegrationEvent
+  - uid: AdvanceFileUpload.Integration.SessionCompletedIntegrationEvent
     name: SessionCompletedIntegrationEvent
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.SessionCreatedIntegrationEvent
+  - uid: AdvanceFileUpload.Integration.SessionCreatedIntegrationEvent
     name: SessionCreatedIntegrationEvent
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.SessionPausedIntegrationEvent
+  - uid: AdvanceFileUpload.Integration.SessionFieldIntegrationEvent
+    name: SessionFieldIntegrationEvent
+    type: Class
+  - uid: AdvanceFileUpload.Integration.SessionPausedIntegrationEvent
     name: SessionPausedIntegrationEvent
     type: Class
-  - uid: AdvanceFileUpload.Integration.Contracts.SessionResumedIntegrationEvent
+  - uid: AdvanceFileUpload.Integration.SessionResumedIntegrationEvent
     name: SessionResumedIntegrationEvent
     type: Class
 memberLayout: SamePage
