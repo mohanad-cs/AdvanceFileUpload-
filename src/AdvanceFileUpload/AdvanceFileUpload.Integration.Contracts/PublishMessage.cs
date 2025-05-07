@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Integration.Contracts
+﻿namespace AdvanceFileUpload.Integration
 {
     /// <summary>
     /// Represents a message to be published to a message broker.

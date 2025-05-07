@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Exceptions;
 
-namespace AdvanceFileUpload.Integration.Contracts
+namespace AdvanceFileUpload.Integration
 {
     /// <summary>
     /// A publisher for RabbitMQ integration events, implementing the <see cref="IIntegrationEventPublisher"/> interface.

@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Integration.Contracts
+﻿namespace AdvanceFileUpload.Integration
 {
     /// <summary>
     /// Event triggered when a session is Field.

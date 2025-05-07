@@ -5,14 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <!-- Define metadata for your NuGet package -->
 	  <PackageId>AdvanceFileUpload.Application.Shared</PackageId>
-	  <Version>1.0.2</Version>
-	  <Authors>Mohanad Shamsan;Ahmed Kamel; Emad Qasem</Authors>
-	  <Description>Library for Shared Componets of advanced file uploads.</Description>
-	  <PackageTags>file-upload;net8</PackageTags>
-	  <PackageOutputPath>D:\University\AdvanceFileUpload-\NuGetPackage</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

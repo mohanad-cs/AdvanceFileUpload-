@@ -1,5 +1,5 @@
 ﻿
-namespace AdvanceFileUpload.Integration.Contracts
+namespace AdvanceFileUpload.Integration
 {
     /// <summary>
     /// Defines a contract for publishing integration events to a message broker or event bus.

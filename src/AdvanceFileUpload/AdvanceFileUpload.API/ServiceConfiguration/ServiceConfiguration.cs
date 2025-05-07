@@ -13,7 +13,7 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Data;
 using AdvanceFileUpload.Domain.Core;
-using AdvanceFileUpload.Integration.Contracts;
+using AdvanceFileUpload.Integration;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.AspNetCore.Server.Kestrel.Https;
 using Microsoft.EntityFrameworkCore;

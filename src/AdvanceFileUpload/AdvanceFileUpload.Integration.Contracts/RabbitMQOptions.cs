@@ -1,4 +1,4 @@
-﻿namespace AdvanceFileUpload.Integration.Contracts
+﻿namespace AdvanceFileUpload.Integration
 {
     /// <summary>
     /// Represents the configuration options for connecting to a RabbitMQ server.

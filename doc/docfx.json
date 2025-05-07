@@ -34,11 +34,12 @@
     "output": "_site",
     "template": [
       "default",
-      "modern"
+      "modern",
+      "templates/material"
     ],
     "globalMetadata": {
-      "_appName": "Uploading File API",
-      "_appTitle": "Uploading File API",
+      "_appName": "Advance File Uploading API",
+      "_appTitle": "Advance File Uploading API",
       "_enableSearch": true,
       "pdf": false
     }

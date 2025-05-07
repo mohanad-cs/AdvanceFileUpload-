@@ -2,7 +2,7 @@
 using System.Text.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-namespace AdvanceFileUpload.Integration.Contracts
+namespace AdvanceFileUpload.Integration
 {
     /// <summary>
     /// Represents a RabbitMQ consumer for handling integration events.

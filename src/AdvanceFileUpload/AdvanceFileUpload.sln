@@ -28,7 +28,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Client.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Benchmark", "AdvanceFileUpload.Benchmark\AdvanceFileUpload.Benchmark.csproj", "{03418B12-53F3-40E9-B6A8-64AE99BC5556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Integration.Contracts", "AdvanceFileUpload.Integration.Contracts\AdvanceFileUpload.Integration.Contracts.csproj", "{3E4E697E-D3C9-4C14-B836-05268217F5FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvanceFileUpload.Integration", "AdvanceFileUpload.Integration.Contracts\AdvanceFileUpload.Integration.csproj", "{3E4E697E-D3C9-4C14-B836-05268217F5FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

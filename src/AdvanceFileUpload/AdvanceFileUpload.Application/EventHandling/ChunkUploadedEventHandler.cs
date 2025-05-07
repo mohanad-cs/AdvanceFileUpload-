@@ -4,7 +4,7 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Domain;
 using AdvanceFileUpload.Domain.Core;
 using AdvanceFileUpload.Domain.Events;
-using AdvanceFileUpload.Integration.Contracts;
+using AdvanceFileUpload.Integration;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;

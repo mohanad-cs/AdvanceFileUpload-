@@ -6,19 +6,6 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Behaviors\**" />
-    <Compile Remove="Commands\**" />
-    <Compile Remove="EventsHandler\**" />
-    <EmbeddedResource Remove="Behaviors\**" />
-    <EmbeddedResource Remove="Commands\**" />
-    <EmbeddedResource Remove="EventsHandler\**" />
-    <None Remove="Behaviors\**" />
-    <None Remove="Commands\**" />
-    <None Remove="EventsHandler\**" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="MediatR" Version="12.5.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.2.0" />
@@ -29,7 +16,7 @@
     <ProjectReference Include="..\AdvanceFileUpload.Application.Shared\AdvanceFileUpload.Application.Shared.csproj" />
     <ProjectReference Include="..\AdvanceFileUpload.Data\AdvanceFileUpload.Data.csproj" />
     <ProjectReference Include="..\AdvanceFileUpload.Domain\AdvanceFileUpload.Domain.csproj" />
-    <ProjectReference Include="..\AdvanceFileUpload.Integration.Contracts\AdvanceFileUpload.Integration.Contracts.csproj" />
+    <ProjectReference Include="..\AdvanceFileUpload.Integration.Contracts\AdvanceFileUpload.Integration.csproj" />
   </ItemGroup>
 
 </Project>
