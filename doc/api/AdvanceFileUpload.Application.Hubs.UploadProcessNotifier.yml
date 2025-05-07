@@ -21,10 +21,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadProcessNotifier
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Notifies clients about the progress of an upload session.
+  example: []
   syntax:
     content: 'public class UploadProcessNotifier : IUploadProcessNotifier'
     content.vb: Public Class UploadProcessNotifier Implements IUploadProcessNotifier
@@ -58,19 +60,27 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
-    startLine: 10
+    startLine: 20
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Application.Hubs.UploadProcessNotifier" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: public UploadProcessNotifier(IHubContext<UploadProcessHub> hubContext, ILogger<UploadProcessNotifier> logger)
     parameters:
     - id: hubContext
       type: Microsoft.AspNetCore.SignalR.IHubContext{AdvanceFileUpload.Application.Hubs.UploadProcessHub}
+      description: The SignalR hub context used to send notifications to clients.
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.Hubs.UploadProcessNotifier}
+      description: The logger used for logging information and warnings.
     content.vb: Public Sub New(hubContext As IHubContext(Of UploadProcessHub), logger As ILogger(Of UploadProcessNotifier))
   overload: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when <code class="paramref">hubContext</code> or <code class="paramref">logger</code> is null.
   nameWithType.vb: UploadProcessNotifier.New(IHubContext(Of UploadProcessHub), ILogger(Of UploadProcessNotifier))
   fullName.vb: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.New(Microsoft.AspNetCore.SignalR.IHubContext(Of AdvanceFileUpload.Application.Hubs.UploadProcessHub), Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.Hubs.UploadProcessNotifier))
   name.vb: New(IHubContext(Of UploadProcessHub), ILogger(Of UploadProcessNotifier))
@@ -92,22 +102,27 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: NotifyUploadProgressAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessNotifier.cs
-    startLine: 15
+    startLine: 27
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Sends a notification to a specific client about the progress of an upload session.
   example: []
   syntax:
     content: public Task NotifyUploadProgressAsync(string? connectionId, UploadSessionStatusNotification uploadSessionStatusNotification, CancellationToken cancellationToken = default)
     parameters:
     - id: connectionId
       type: System.String
+      description: The unique identifier of the client connection.
     - id: uploadSessionStatusNotification
       type: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+      description: The status notification of the upload session.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
     return:
       type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
     content.vb: Public Function NotifyUploadProgressAsync(connectionId As String, uploadSessionStatusNotification As UploadSessionStatusNotification, cancellationToken As CancellationToken = Nothing) As Task
   overload: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.NotifyUploadProgressAsync*
   implements:
@@ -390,6 +405,19 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  commentId: T:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+  href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html
+  name: UploadProcessNotifier
+  nameWithType: UploadProcessNotifier
+  fullName: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor*
   commentId: Overload:AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.#ctor
   href: AdvanceFileUpload.Application.Hubs.UploadProcessNotifier.html#AdvanceFileUpload_Application_Hubs_UploadProcessNotifier__ctor_Microsoft_AspNetCore_SignalR_IHubContext_AdvanceFileUpload_Application_Hubs_UploadProcessHub__Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_Hubs_UploadProcessNotifier__

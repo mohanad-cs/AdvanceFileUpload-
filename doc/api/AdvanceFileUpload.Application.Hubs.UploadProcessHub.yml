@@ -21,10 +21,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadProcessHub
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessHub.cs
-    startLine: 5
+    startLine: 9
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Represents a SignalR hub for managing upload process notifications.
+  example: []
   syntax:
     content: 'public class UploadProcessHub : Hub, IDisposable'
     content.vb: Public Class UploadProcessHub Inherits Hub Implements IDisposable
@@ -66,11 +68,11 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: MethodName
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessHub.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
-  summary: The name of the method that receives upload process notifications.
+  summary: The name of the method used to send upload process notifications to clients.
   example: []
   syntax:
     content: public const string MethodName = "ReceiveUploadProcessNotification"
@@ -95,22 +97,28 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: SendUploadProcessNotificationAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/UploadProcessHub.cs
-    startLine: 11
+    startLine: 23
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Sends an upload process notification to a specific client.
+  example: []
   syntax:
-    content: public Task SendUploadProcessNotificationAsync(string connectionId, UploadSessionStatusNotification uploadSessionStatusNotification, CancellationToken cancellationToken)
+    content: public Task SendUploadProcessNotificationAsync(string connectionId, UploadSessionStatusNotification uploadSessionStatusNotification, CancellationToken cancellationToken = default)
     parameters:
     - id: connectionId
       type: System.String
+      description: The connection ID of the client to send the notification to.
     - id: uploadSessionStatusNotification
       type: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+      description: The upload session status notification to send.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
     return:
       type: System.Threading.Tasks.Task
-    content.vb: Public Function SendUploadProcessNotificationAsync(connectionId As String, uploadSessionStatusNotification As UploadSessionStatusNotification, cancellationToken As CancellationToken) As Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function SendUploadProcessNotificationAsync(connectionId As String, uploadSessionStatusNotification As UploadSessionStatusNotification, cancellationToken As CancellationToken = Nothing) As Task
   overload: AdvanceFileUpload.Application.Hubs.UploadProcessHub.SendUploadProcessNotificationAsync*
   nameWithType.vb: UploadProcessHub.SendUploadProcessNotificationAsync(String, UploadSessionStatusNotification, CancellationToken)
   fullName.vb: AdvanceFileUpload.Application.Hubs.UploadProcessHub.SendUploadProcessNotificationAsync(String, AdvanceFileUpload.Application.Response.UploadSessionStatusNotification, System.Threading.CancellationToken)

@@ -262,6 +262,9 @@ namespace AdvanceFileUpload.Client
         /// Occurs when an authentication error happens.
         /// </summary>
         public event EventHandler<string>? AuthenticationError;
+        /// <summary>
+        /// Occurs when a retry attempt is made during the upload process.
+        /// </summary>
         public event EventHandler<string>? UploadRetryAttempt;
 
         #endregion Events
@@ -916,7 +919,7 @@ namespace AdvanceFileUpload.Client
         private void HandleCancellation([CallerMemberName] string name="")
         {
             _cancellationTokenSource.Cancel();
-            UploadRetryAttempt?.Invoke(this, $"Upload has been canceled Caller {name}");
+           // UploadRetryAttempt?.Invoke(this, $"Upload has been canceled Caller {name}");
         }
         #region Event Raisers
         /// <summary>

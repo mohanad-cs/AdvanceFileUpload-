@@ -877,10 +877,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadRetryAttempt
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 264
+    startLine: 267
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
+  summary: Occurs when a retry attempt is made during the upload process.
+  example: []
   syntax:
     content: public event EventHandler<string>? UploadRetryAttempt
     return:
@@ -904,7 +906,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 277
+    startLine: 280
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -946,7 +948,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: UploadFileAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 373
+    startLine: 376
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -991,7 +993,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 412
+    startLine: 415
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -1024,7 +1026,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ResumeUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 436
+    startLine: 439
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -1057,7 +1059,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelUploadAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 484
+    startLine: 487
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client
@@ -1090,7 +1092,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Dispose
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Client/FileUploadService.cs
-    startLine: 1065
+    startLine: 1068
   assemblies:
   - AdvanceFileUpload.Client
   namespace: AdvanceFileUpload.Client

@@ -20,10 +20,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IUploadProcessNotifier
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/IUploadProsecssNotifier.cs
-    startLine: 4
+    startLine: 8
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Interface for notifying clients about the progress of an upload session.
+  example: []
   syntax:
     content: public interface IUploadProcessNotifier
     content.vb: Public Interface IUploadProcessNotifier
@@ -45,21 +47,27 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: NotifyUploadProgressAsync
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/Hubs/IUploadProsecssNotifier.cs
-    startLine: 6
+    startLine: 17
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.Hubs
+  summary: Sends a notification to a specific client about the progress of an upload session.
+  example: []
   syntax:
     content: Task NotifyUploadProgressAsync(string? connectionId, UploadSessionStatusNotification uploadSessionStatusNotification, CancellationToken cancellationToken = default)
     parameters:
     - id: connectionId
       type: System.String
+      description: The unique identifier of the client connection.
     - id: uploadSessionStatusNotification
       type: AdvanceFileUpload.Application.Response.UploadSessionStatusNotification
+      description: The status notification of the upload session.
     - id: cancellationToken
       type: System.Threading.CancellationToken
+      description: A token to monitor for cancellation requests.
     return:
       type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
     content.vb: Function NotifyUploadProgressAsync(connectionId As String, uploadSessionStatusNotification As UploadSessionStatusNotification, cancellationToken As CancellationToken = Nothing) As Task
   overload: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier.NotifyUploadProgressAsync*
   nameWithType.vb: IUploadProcessNotifier.NotifyUploadProgressAsync(String, UploadSessionStatusNotification, CancellationToken)

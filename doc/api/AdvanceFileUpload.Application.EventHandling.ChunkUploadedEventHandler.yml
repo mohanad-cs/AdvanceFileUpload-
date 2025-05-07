@@ -21,10 +21,12 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: ChunkUploadedEventHandler
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/ChunkUploadedEventHandler.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.EventHandling
+  summary: Handles the <xref href="AdvanceFileUpload.Domain.Events.ChunkUploadedEvent" data-throw-if-not-resolved="false"></xref> notification. and publishes integration events if enabled in the settings.<br />
+  example: []
   syntax:
     content: 'public sealed class ChunkUploadedEventHandler : INotificationHandler<ChunkUploadedEvent>'
     content.vb: Public NotInheritable Class ChunkUploadedEventHandler Implements INotificationHandler(Of ChunkUploadedEvent)
@@ -57,25 +59,36 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: .ctor
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/ChunkUploadedEventHandler.cs
-    startLine: 21
+    startLine: 34
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.EventHandling
+  summary: Initializes a new instance of the <xref href="AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler" data-throw-if-not-resolved="false"></xref> class.
+  example: []
   syntax:
     content: public ChunkUploadedEventHandler(IRepository<FileUploadSession> fileUploadSessionRepository, IUploadProcessNotifier uploadProcessNotifier, IIntegrationEventPublisher integrationEventPublisher, IOptions<UploadSetting> uploadSetting, ILogger<ChunkUploadedEventHandler> logger)
     parameters:
     - id: fileUploadSessionRepository
       type: AdvanceFileUpload.Domain.Core.IRepository{AdvanceFileUpload.Domain.FileUploadSession}
+      description: The repository for managing file upload sessions.
     - id: uploadProcessNotifier
       type: AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier
+      description: The notifier for upload progress updates.
     - id: integrationEventPublisher
       type: AdvanceFileUpload.Integration.IIntegrationEventPublisher
+      description: The publisher for integration events.
     - id: uploadSetting
       type: Microsoft.Extensions.Options.IOptions{AdvanceFileUpload.Application.Settings.UploadSetting}
+      description: The upload settings configuration.
     - id: logger
       type: Microsoft.Extensions.Logging.ILogger{AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler}
+      description: The logger for logging information and warnings.
     content.vb: Public Sub New(fileUploadSessionRepository As IRepository(Of FileUploadSession), uploadProcessNotifier As IUploadProcessNotifier, integrationEventPublisher As IIntegrationEventPublisher, uploadSetting As IOptions(Of UploadSetting), logger As ILogger(Of ChunkUploadedEventHandler))
   overload: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when any of the dependencies are null.
   nameWithType.vb: ChunkUploadedEventHandler.New(IRepository(Of FileUploadSession), IUploadProcessNotifier, IIntegrationEventPublisher, IOptions(Of UploadSetting), ILogger(Of ChunkUploadedEventHandler))
   fullName.vb: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.New(AdvanceFileUpload.Domain.Core.IRepository(Of AdvanceFileUpload.Domain.FileUploadSession), AdvanceFileUpload.Application.Hubs.IUploadProcessNotifier, AdvanceFileUpload.Integration.IIntegrationEventPublisher, Microsoft.Extensions.Options.IOptions(Of AdvanceFileUpload.Application.Settings.UploadSetting), Microsoft.Extensions.Logging.ILogger(Of AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler))
   name.vb: New(IRepository(Of FileUploadSession), IUploadProcessNotifier, IIntegrationEventPublisher, IOptions(Of UploadSetting), ILogger(Of ChunkUploadedEventHandler))
@@ -97,28 +110,40 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: Handle
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Application/EventHandling/ChunkUploadedEventHandler.cs
-    startLine: 29
+    startLine: 55
   assemblies:
   - AdvanceFileUpload.Application
   namespace: AdvanceFileUpload.Application.EventHandling
-  summary: Handles a notification
+  summary: Handles the <xref href="AdvanceFileUpload.Domain.Events.ChunkUploadedEvent" data-throw-if-not-resolved="false"></xref> notification.
   example: []
   syntax:
     content: public Task Handle(ChunkUploadedEvent notification, CancellationToken cancellationToken)
     parameters:
     - id: notification
       type: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
-      description: The notification
+      description: The event notification containing details of the uploaded chunk.
     - id: cancellationToken
       type: System.Threading.CancellationToken
-      description: Cancellation token
+      description: A token to monitor for cancellation requests.
     return:
       type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
     content.vb: Public Function Handle(notification As ChunkUploadedEvent, cancellationToken As CancellationToken) As Task
   overload: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.Handle*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the notification is null.
   implements:
   - MediatR.INotificationHandler{AdvanceFileUpload.Domain.Events.ChunkUploadedEvent}.Handle(AdvanceFileUpload.Domain.Events.ChunkUploadedEvent,System.Threading.CancellationToken)
 references:
+- uid: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+  commentId: T:AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
+  parent: AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent.html
+  name: ChunkUploadedEvent
+  nameWithType: ChunkUploadedEvent
+  fullName: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
 - uid: AdvanceFileUpload.Application.EventHandling
   commentId: N:AdvanceFileUpload.Application.EventHandling
   href: AdvanceFileUpload.html
@@ -383,6 +408,36 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.object.tostring
   - name: (
   - name: )
+- uid: AdvanceFileUpload.Domain.Events
+  commentId: N:AdvanceFileUpload.Domain.Events
+  href: AdvanceFileUpload.html
+  name: AdvanceFileUpload.Domain.Events
+  nameWithType: AdvanceFileUpload.Domain.Events
+  fullName: AdvanceFileUpload.Domain.Events
+  spec.csharp:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
+  spec.vb:
+  - uid: AdvanceFileUpload
+    name: AdvanceFileUpload
+    href: AdvanceFileUpload.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain
+    name: Domain
+    href: AdvanceFileUpload.Domain.html
+  - name: .
+  - uid: AdvanceFileUpload.Domain.Events
+    name: Events
+    href: AdvanceFileUpload.Domain.Events.html
 - uid: System
   commentId: N:System
   isExternal: true
@@ -421,6 +476,19 @@ references:
   name: MediatR
   nameWithType: MediatR
   fullName: MediatR
+- uid: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+  commentId: T:AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+  href: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.html
+  name: ChunkUploadedEventHandler
+  nameWithType: ChunkUploadedEventHandler
+  fullName: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.#ctor*
   commentId: Overload:AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.#ctor
   href: AdvanceFileUpload.Application.EventHandling.ChunkUploadedEventHandler.html#AdvanceFileUpload_Application_EventHandling_ChunkUploadedEventHandler__ctor_AdvanceFileUpload_Domain_Core_IRepository_AdvanceFileUpload_Domain_FileUploadSession__AdvanceFileUpload_Application_Hubs_IUploadProcessNotifier_AdvanceFileUpload_Integration_IIntegrationEventPublisher_Microsoft_Extensions_Options_IOptions_AdvanceFileUpload_Application_Settings_UploadSetting__Microsoft_Extensions_Logging_ILogger_AdvanceFileUpload_Application_EventHandling_ChunkUploadedEventHandler__
@@ -817,13 +885,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
-  commentId: T:AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
-  parent: AdvanceFileUpload.Domain.Events
-  href: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent.html
-  name: ChunkUploadedEvent
-  nameWithType: ChunkUploadedEvent
-  fullName: AdvanceFileUpload.Domain.Events.ChunkUploadedEvent
 - uid: System.Threading.CancellationToken
   commentId: T:System.Threading.CancellationToken
   parent: System.Threading
@@ -875,36 +936,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
   - name: )
-- uid: AdvanceFileUpload.Domain.Events
-  commentId: N:AdvanceFileUpload.Domain.Events
-  href: AdvanceFileUpload.html
-  name: AdvanceFileUpload.Domain.Events
-  nameWithType: AdvanceFileUpload.Domain.Events
-  fullName: AdvanceFileUpload.Domain.Events
-  spec.csharp:
-  - uid: AdvanceFileUpload
-    name: AdvanceFileUpload
-    href: AdvanceFileUpload.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain
-    name: Domain
-    href: AdvanceFileUpload.Domain.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain.Events
-    name: Events
-    href: AdvanceFileUpload.Domain.Events.html
-  spec.vb:
-  - uid: AdvanceFileUpload
-    name: AdvanceFileUpload
-    href: AdvanceFileUpload.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain
-    name: Domain
-    href: AdvanceFileUpload.Domain.html
-  - name: .
-  - uid: AdvanceFileUpload.Domain.Events
-    name: Events
-    href: AdvanceFileUpload.Domain.Events.html
 - uid: System.Threading
   commentId: N:System.Threading
   isExternal: true
