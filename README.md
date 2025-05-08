@@ -6,12 +6,13 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
 
 - **chunk Uploading**: Split large files into smaller chunks for easier processing and storage.
 - **Parallel Processing**: Supports configurable parallelism for faster chunk processing.
+- **Compression Support**: Configurable file compression to reduce upload size.Supported algorithms: GZip, Brotli, Deflate.
 - **Real Time Notfication**: using SgnalR to notify of Uploading Process.
-- **Integration Supports**: Supporting Integration with other systems via RabbitMQ.
-- **Retry Mechanism**: Automatic retries with exponential backoff for failed uploads.
-- **Compression Support**: Configurable file compression to reduce upload size.
+- **Retry Mechanism**: Automatically retries failed uploads with exponential backoff.
 - **Pause/Resume**: Allows pausing and resuming uploads for better user control.
 - **Health Monitoring**: Monitors API health and handles degraded or unhealthy states gracefully.
+- **Integration Supports**: Supporting Integration with other systems via RabbitMQ.
+
 
 ## GetStarted
 ### Prerequisites
@@ -25,7 +26,7 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
 2. **Configure the Server**  
    Follow these steps to configure the server:
 
-   - **Database Configuration**:  
+   - **Database Configuration** (Required):  
      Update the connection string in the `appsettings.json` file under the `SessionStorage` section.  
      Example:
       ```json
@@ -35,7 +36,7 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
       }
       }
      ```
-   - **Upload Settings**:  
+   - **Upload Settings** (Required):  
      Configure the upload settings in the `appsettings.json` file under the `UploadSetting` section.  
      Example:
     ```json
@@ -51,8 +52,8 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
      }
      }
     ```
-     - **Rate Limiting**:  
-   Configure rate limiting in the `appsettings.json` file under the `ApiKeyOptions` section.  
+     - **API Keys and Rate Limiting** (Required):  
+   Configure the API keys and API rate limiting in the `appsettings.json` file under the `ApiKeyOptions` section.  
    Example:
     ```json
       {
@@ -88,7 +89,7 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
    }
    ```
 
-  - **Kestrel Server Configuration** (Optional):  
+  - **Kestrel Server Configuration** (Required):  
   Configure Kestrel Server settings in the `appsettings.json` file under the `KestrelConfiguration` section.  
    Example: 
    ```json
@@ -144,6 +145,7 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
    See [KestrelConfiguration](http://103.89.14.244:8080/api/AdvanceFileUpload.API.KestrelConfiguration.html) For More information.
 
 ### Make The First Upload
+ Install The AdvanceFileUpload.Client NuGet package.
 1. **Setup the Client**  
    Create a new instance of the `FileUploadService` in your client application:
    ```C#
@@ -176,6 +178,20 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
 
 ## Sample
 You Can Try our Winform Sample
-## Documentation
 
-For API refrence And documentation see [Documentation](103.89.14.244:8080)
+
+---
+### Troubleshooting
+
+- **Health Check Fails**:  
+  Ensure the database and RabbitMQ are running and properly configured.
+
+- **Upload Fails**:  
+  Check the server logs for detailed error messages.
+
+- **Rate Limiting**:  
+  If you encounter `429 Too Many Requests`, adjust the rate-limiting settings in the `appsettings.json` file.
+
+---
+
+For more details, refer to the [documentation](103.89.14.244:8080).
