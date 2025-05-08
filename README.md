@@ -149,7 +149,18 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
 1. **Setup the Client**  
    Create a new instance of the `FileUploadService` in your client application:
    ```C#
-   var uploadOptions = new UploadOptions { TempDirectory = "D:\Temp", MaxConcurrentUploads = 4, MaxRetriesCount = 3, CompressionOption = new CompressionOption { Algorithm = CompressionAlgorithmOption.GZip, Level = CompressionLevelOption.Optimal }, APIKey = "your_api_key" };
+   var uploadOptions = new UploadOptions 
+   { 
+    APIKey = "your_api_key",
+    TempDirectory = "D:\Temp", 
+    MaxConcurrentUploads = 4,
+    MaxRetriesCount = 3, 
+    CompressionOption = new CompressionOption
+     {
+         Algorithm = CompressionAlgorithmOption.GZip,
+          Level = CompressionLevelOption.Optimal 
+     }
+    };
    var fileUploadService = new FileUploadService(new Uri("http://yourServerIp:5021"), uploadOptions);
    ```
  2. **Subscribe to Events**  
@@ -179,6 +190,7 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
 ## Sample
 You Can Try our Winform Sample
 
+## Integration with The File Upload API
 
 ---
 ### Troubleshooting
@@ -193,5 +205,5 @@ You Can Try our Winform Sample
   If you encounter `429 Too Many Requests`, adjust the rate-limiting settings in the `appsettings.json` file.
 
 ---
-
-For more details, refer to the [documentation](103.89.14.244:8080).
+### Documentation
+For more details, refer to the [Documentation](103.89.14.244:8080).
