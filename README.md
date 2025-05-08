@@ -206,4 +206,4 @@ You Can Try our Winform Sample
 
 ---
 ### Documentation
-For more details, refer to the [Documentation](103.89.14.244:8080).
+For more details, refer to the [Documentation](http://103.89.14.244:8080).
