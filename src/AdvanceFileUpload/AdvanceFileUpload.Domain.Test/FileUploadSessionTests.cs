@@ -5,36 +5,36 @@ namespace AdvanceFileUpload.Domain.Test
 {
     public class FileUploadSessionTests
     {
-        private const string _testFilePath = @"..\TestFiles\testFile.Pdf";
-        private const string _tempDirectory = @"..\Temp\";
-        private string _fileName = Path.GetFileName(_testFilePath);
-        private long _fileSize = new FileInfo(_testFilePath).Length;
-        private long _maxChunkSize = 256 * 1024; // 256 KB
 
+        public FileUploadSessionTests()
+        {
+            TestsUtility.InsureTestDataCreated();
+        }
         [Fact]
         public void Constructor_ShouldInitializeProperties()
         {
             // Arrange
             // Act
-            var session = new FileUploadSession(_fileName, _tempDirectory, _fileSize, null, _maxChunkSize);
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, null, TestsUtility._maxChunkSize);
 
 
             // Assert
-            Assert.Equal(_fileName, session.FileName);
-            Assert.Equal(_tempDirectory, session.SavingDirectory);
-            Assert.Equal(_fileSize, session.FileSize);
-            Assert.Equal(_maxChunkSize, session.MaxChunkSize);
+            Assert.Equal(TestsUtility._fileName, session.FileName);
+            Assert.Equal(TestsUtility._tempDirectory, session.SavingDirectory);
+            Assert.Equal(TestsUtility._fileSize, session.FileSize);
+            Assert.Equal(TestsUtility._maxChunkSize, session.MaxChunkSize);
             Assert.Equal(FileUploadSessionStatus.InProgress, session.Status);
-            Assert.NotNull(session.SessionStartDate);
+            Assert.True(session.SessionStartDate != default);
+            Assert.Null(session.SessionEndDate);
         }
 
         [Fact]
         public void AddChunk_ShouldAddChunk()
         {
             // Arrange
-            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, null, _maxChunkSize);
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, new FileInfo(TestsUtility._pdfTestFilePath).Length, null, TestsUtility._maxChunkSize);
             int chunkIndex = 0;
-            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
+            string chunkPath = TestsUtility._testChunkPath;
 
             // Act
             session.AddChunk(chunkIndex, chunkPath);
@@ -49,27 +49,27 @@ namespace AdvanceFileUpload.Domain.Test
         public void AddChunk_ShouldThrowException_WhenSessionIsCompleted()
         {
             // Arrange
-            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, null, _maxChunkSize);
-            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
-            for (int i = 0; i < session.TotalChunksToUpload; i++)
-            {
-                session.AddChunk(i, chunkPath);
-            }
+            //var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, new FileInfo(TestsUtility._pdfTestFilePath).Length, null, TestsUtility._maxChunkSize);
+            string chunkPath = Path.Combine(TestsUtility._tempDirectory, "chunk0.Pdf");
+            //for (int i = 0; i < session.TotalChunksToUpload; i++)
+            //{
+            //    session.AddChunk(i, chunkPath);
+            //}
+            //session.CompleteSession();
+            var session = TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
             session.CompleteSession();
-
             // Act & Assert
-            Assert.Throws<DomainException>(() => session.AddChunk(0, Path.Combine(_tempDirectory, chunkPath)));
+            Assert.Throws<DomainException>(() => session.AddChunk(0, TestsUtility._testChunkPath));
         }
 
         [Fact]
         public void GetRemainChunks_ShouldReturnRemainingChunks()
         {
             // Arrange
-            long chunkSize = _maxChunkSize; // 256 KB
-            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(_testFilePath).Length / chunkSize);
-            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, null, chunkSize);
-            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
-            session.AddChunk(0, Path.Combine(_tempDirectory, chunkPath));
+            long chunkSize = TestsUtility._maxChunkSize; // 256 KB
+            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(TestsUtility._pdfTestFilePath).Length / chunkSize);
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, new FileInfo(TestsUtility._pdfTestFilePath).Length, null, chunkSize);
+            session.AddChunk(0, TestsUtility._testChunkPath);
             int expectedRemainingChunks = expectedChunks - 1;
             // Act
             var remainChunks = session.GetRemainChunks();
@@ -87,7 +87,7 @@ namespace AdvanceFileUpload.Domain.Test
         public void CancelSession_ShouldUpdateStatus()
         {
             // Arrange
-            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, null, _maxChunkSize);
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, new FileInfo(TestsUtility._pdfTestFilePath).Length, null, TestsUtility._maxChunkSize);
 
             // Act
             session.CancelSession();
@@ -101,7 +101,7 @@ namespace AdvanceFileUpload.Domain.Test
         public void PauseSession_ShouldUpdateStatus()
         {
             // Arrange
-            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, null, _maxChunkSize);
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, new FileInfo(TestsUtility._pdfTestFilePath).Length, null, TestsUtility._maxChunkSize);
 
             // Act
             session.PauseSession();
@@ -115,21 +115,135 @@ namespace AdvanceFileUpload.Domain.Test
         public void CompleteSession_ShouldUpdateStatus()
         {
             // Arrange
-            string chunkPath = Path.Combine(_tempDirectory, "chunk0.Pdf");
-            long chunkSize = _maxChunkSize; // 256 KB
-            int expectedChunks = (int)Math.Ceiling((double)new FileInfo(_testFilePath).Length / chunkSize);
-            var session = new FileUploadSession(_fileName, _tempDirectory, new FileInfo(_testFilePath).Length, null, chunkSize);
-            for (int i = 0; i < expectedChunks; i++)
-            {
-                session.AddChunk(i, Path.Combine(_tempDirectory, chunkPath));
-
-            }
+            var session = TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
             // Act
             session.CompleteSession();
 
             // Assert
             Assert.Equal(FileUploadSessionStatus.Completed, session.Status);
+            Assert.True(session.IsCompleted());
             Assert.NotNull(session.SessionEndDate);
+        }
+
+        [Fact]
+        public void MarkAsFailed_ShouldUpdateStatusToFailed()
+        {
+            // Arrange
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, null, TestsUtility._maxChunkSize);
+
+            // Act
+            session.MarkAsFailed();
+
+            // Assert
+            Assert.Equal(FileUploadSessionStatus.Failed, session.Status);
+            Assert.True(session.IsFailed());
+            Assert.NotNull(session.SessionEndDate);
+        }
+
+        [Fact]
+        public void MarkAsFailed_ShouldThrowException_WhenSessionIsCompleted()
+        {
+            // Arrange
+            var session = TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
+            session.CompleteSession();
+
+            // Act & Assert
+            Assert.Throws<DomainException>(() => session.MarkAsFailed());
+        }
+
+        [Fact]
+        public void MarkAsFailed_ShouldThrowException_WhenSessionIsCanceled()
+        {
+            // Arrange
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, null, TestsUtility._maxChunkSize);
+            session.CancelSession();
+
+            // Act & Assert
+            Assert.Throws<DomainException>(() => session.MarkAsFailed());
+        }
+
+
+
+
+
+        [Fact]
+        public void IsAllChunkUploaded_ShouldReturnTrue_WhenAllChunksAreUploaded()
+        {
+            // Arrange
+            var session = TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
+
+
+            // Act
+            var allChunksUploaded = session.IsAllChunkUploaded();
+
+            // Assert
+            Assert.True(allChunksUploaded);
+        }
+
+        [Fact]
+        public void IsAllChunkUploaded_ShouldReturnFalse_WhenNotAllChunksAreUploaded()
+        {
+            // Arrange
+            var session = TestsUtility.GetFileUploadSessionWithRemainingChunks();
+            // Act
+            var allChunksUploaded = session.IsAllChunkUploaded();
+
+            // Assert
+            Assert.False(allChunksUploaded);
+        }
+
+        [Fact]
+        public void IsChunkUploaded_ShouldReturnTrue_WhenChunkIsUploaded()
+        {
+            // Arrange
+            var session = TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
+            int lastChunkIndex = session.TotalChunksToUpload - 1;
+            // Act
+            var isChunkUploaded = session.IsChunkUploaded(0);
+            var isLastChunkUploaded = session.IsChunkUploaded(lastChunkIndex);
+
+            // Assert
+            Assert.True(isChunkUploaded);
+            Assert.True(isLastChunkUploaded);
+        }
+
+        [Fact]
+        public void IsChunkUploaded_ShouldReturnFalse_WhenChunkIsNotUploaded()
+        {
+            // Arrange
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, null, TestsUtility._maxChunkSize);
+
+            // Act
+            var isChunkUploaded = session.IsChunkUploaded(0);
+
+            // Assert
+            Assert.False(isChunkUploaded);
+        }
+
+        [Fact]
+        public void UseCompression_ShouldReturnTrue_WhenCompressionIsEnabled()
+        {
+            // Arrange
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, 1000, TestsUtility._maxChunkSize, CompressionAlgorithm.GZip, CompressionLevel.Optimal);
+
+            // Act
+            var useCompression = session.UseCompression;
+
+            // Assert
+            Assert.True(useCompression);
+        }
+
+        [Fact]
+        public void UseCompression_ShouldReturnFalse_WhenCompressionIsNotEnabled()
+        {
+            // Arrange
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, null, TestsUtility._maxChunkSize);
+
+            // Act
+            var useCompression = session.UseCompression;
+
+            // Assert
+            Assert.False(useCompression);
         }
     }
 

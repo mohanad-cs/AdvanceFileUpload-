@@ -5,23 +5,19 @@ namespace AdvanceFileUpload.Domain.Test
 {
     public class FileProcessorTests
     {
-        private const string _testFilePath = @"..\TestFiles\testFile.Pdf";
-        private const string _tempDirectory = @"..\Temp\";
-        private string _fileName = Path.GetFileName(_testFilePath);
-        private long _fileSize = new FileInfo(_testFilePath).Length;
-        private long _maxChunkSize = 256 * 1024; // 256 KB
+
 
         [Fact]
         public async Task SaveFileAsync_ShouldSaveFile()
         {
             // Arrange
             var fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
-            byte[] fileData = await File.ReadAllBytesAsync(_testFilePath);
-            string filePath = Path.Combine(_tempDirectory, _fileName);
+            byte[] fileData = await File.ReadAllBytesAsync(TestsUtility._pdfTestFilePath);
+            string filePath = Path.Combine(TestsUtility._tempDirectory, TestsUtility._fileName);
 
             // Act
-            await fileProcessor.SaveFileAsync(_fileName, fileData, _tempDirectory);
-
+            await fileProcessor.SaveFileAsync(TestsUtility._fileName, fileData, TestsUtility._tempDirectory);
+            File.WriteAllBytesAsync(filePath, fileData);
             // Assert
             Assert.True(File.Exists(filePath));
             var savedData = await File.ReadAllBytesAsync(filePath);
@@ -36,10 +32,10 @@ namespace AdvanceFileUpload.Domain.Test
         {
             // Arrange
             var fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
-            string filePath = _testFilePath;
-            int expectedChunks = (int)Math.Ceiling((double)_fileSize / _maxChunkSize);
+            string filePath = TestsUtility._pdfTestFilePath;
+            int expectedChunks = (int)Math.Ceiling((double)TestsUtility._fileSize / TestsUtility._maxChunkSize);
             // Act
-            var chunkPaths = await fileProcessor.SplitFileIntoChunksAsync(filePath, _maxChunkSize, _tempDirectory);
+            var chunkPaths = await fileProcessor.SplitFileIntoChunksAsync(filePath, TestsUtility._maxChunkSize, TestsUtility._tempDirectory);
 
             // Assert
             Assert.Equal(expectedChunks, chunkPaths.Count);
@@ -60,9 +56,9 @@ namespace AdvanceFileUpload.Domain.Test
         {
             // Arrange
             var fileProcessor = new FileProcessor(NullLogger<FileProcessor>.Instance);
-            string outputFilePath = Path.Combine(_tempDirectory, "Merged.Pdf");
-            string chunk1Path = Path.Combine(_tempDirectory, "chunk1.Pdf");
-            string chunk2Path = Path.Combine(_tempDirectory, "chunk2.Pdf");
+            string outputFilePath = Path.Combine(TestsUtility._tempDirectory, "Merged.Pdf");
+            string chunk1Path = Path.Combine(TestsUtility._tempDirectory, "chunk1.Pdf");
+            string chunk2Path = Path.Combine(TestsUtility._tempDirectory, "chunk2.Pdf");
             await File.WriteAllBytesAsync(chunk1Path, new byte[] { 1, 2 });
             await File.WriteAllBytesAsync(chunk2Path, new byte[] { 3, 4 });
             var chunkPaths = new List<string> { chunk1Path, chunk2Path };

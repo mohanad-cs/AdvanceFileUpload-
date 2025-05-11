@@ -217,6 +217,10 @@ namespace AdvanceFileUpload.Domain
         /// </exception>
         public void AddChunk(int chunkIndex, string chunkPath)
         {
+            if (!IsChunkInRange(chunkIndex))
+            {
+                throw new DomainException($"The chunk index {chunkIndex} is out of range. It should be between 0 and {TotalChunksToUpload - 1}.");
+            }
             if (IsCompleted())
             {
                 throw new DomainException("The Upload Session already Completed");
@@ -269,7 +273,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Determines whether all chunks have been uploaded.
         /// </summary>
-        /// <returns><c>true</c> if all chunks have been uploaded; otherwise, <c>false</c>.</returns>
+        /// <returns><see langword="true"/> if all chunks have been uploaded; otherwise, <see langword="false"/>.</returns>
         public bool IsAllChunkUploaded()
         {
             return TotalChunksToUpload == TotalUploadedChunks;
@@ -279,7 +283,7 @@ namespace AdvanceFileUpload.Domain
         /// Determines whether a specific chunk has been uploaded.
         /// </summary>
         /// <param name="chunkIndex">The index of the chunk.</param>
-        /// <returns><c>true</c> if the chunk has been uploaded; otherwise, <c>false</c>.</returns>
+        /// <returns><see langword="true"/> if the chunk has been uploaded; otherwise, <see langword="false"/>.</returns>
         public bool IsChunkUploaded(int chunkIndex)
         {
             return _chunkFiles.Any(c => c.ChunkIndex == chunkIndex);
@@ -288,7 +292,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Determines whether the file upload session is completed.
         /// </summary>
-        /// <returns><c>true</c> if the session is completed; otherwise, <c>false</c>.</returns>
+        /// <returns><see langword="true"/> if the session is completed; otherwise, <see langword="false"/>.</returns>
         public bool IsCompleted()
         {
             return Status == FileUploadSessionStatus.Completed;
@@ -297,7 +301,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         /// Determines whether the file upload session is canceled.
         /// </summary>
-        /// <returns><c>true</c> if the session is canceled; otherwise, <c>false</c>.</returns>
+        /// <returns><see langword="true"/> if the session is canceled; otherwise, <see langword="false"/>.</returns>
         public bool IsCanceled()
         {
             return Status == FileUploadSessionStatus.Canceled;
@@ -305,7 +309,7 @@ namespace AdvanceFileUpload.Domain
         /// <summary>
         ///  Determines whether the file upload session is failed.
         /// </summary>
-        /// <returns><c>true</c> if the session status is Failed; otherwise, <c>false</c>.</returns>
+        /// <returns><see langword="true"/> if the session status is Failed; otherwise, <see langword="false"/>.</returns>
         public bool IsFailed()
         {
             return Status == FileUploadSessionStatus.Failed;
@@ -422,6 +426,19 @@ namespace AdvanceFileUpload.Domain
             Status = FileUploadSessionStatus.Failed;
             SessionEndDate = DateTime.Now;
             this.AddDomainEvent(new FileUploadSessionFailedEvent(this));
+        }
+
+
+        ///<summary>
+        /// Determines whether the specified chunk index is within the valid range of chunks for the file upload session.
+        /// </summary>
+        /// <param name="chunkIndex">The index of the chunk to check.</param>
+        /// <returns>
+        /// <see langword="true"/> if the chunk index is within the valid range (0 to <see cref="TotalChunksToUpload"/> - 1); otherwise, <see langword="false"/>.
+        /// </returns>
+        public bool IsChunkInRange(int chunkIndex)
+        {
+            return chunkIndex >= 0 && chunkIndex < TotalChunksToUpload;
         }
     }
 }

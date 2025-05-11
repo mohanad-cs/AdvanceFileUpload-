@@ -9,7 +9,6 @@ namespace AdvanceFileUpload.Domain.Test
     {
         private readonly Mock<ILogger<FileCompressor>> _loggerMock;
         private readonly FileCompressor _fileCompressor;
-        private const string _tempDirectory = @"..\Temp\";
 
         public FileCompressorTests()
         {
@@ -21,13 +20,13 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CompressFileAsync_ShouldCompressFile()
         {
             // Arrange
-            string inputFilePath = Path.Combine(_tempDirectory, "test.txt");
-            string outputDirectory = _tempDirectory;
+            string inputFilePath = Path.Combine(TestsUtility._tempDirectory, "test.txt");
+            string outputDirectory = TestsUtility._tempDirectory;
             var compressionAlgorithm = CompressionAlgorithmOption.Brotli;
             var compressionLevel = CompressionLevelOption.Optimal;
 
             // Create a test file
-            await File.WriteAllTextAsync(inputFilePath, GenerateRandomText(1024 * 1024 * 2));
+            await File.WriteAllTextAsync(inputFilePath, TestsUtility.GenerateRandomText(1024 * 1024 * 2));
 
             // Act
             await _fileCompressor.CompressFileAsync(inputFilePath, outputDirectory, compressionAlgorithm, compressionLevel);
@@ -45,13 +44,13 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task DecompressFileAsync_ShouldDecompressFile()
         {
             // Arrange
-            string inputFilePath = Path.Combine(_tempDirectory, "test.txt");
-            string outputDirectory = _tempDirectory;
+            string inputFilePath = Path.Combine(TestsUtility._tempDirectory, "test.txt");
+            string outputDirectory = TestsUtility._tempDirectory;
             var compressionAlgorithm = CompressionAlgorithmOption.GZip;
             var compressionLevel = CompressionLevelOption.Optimal;
 
             // Create a test file and compress it
-            await File.WriteAllTextAsync(inputFilePath, GenerateRandomText(1024 * 1024 * 2));
+            await File.WriteAllTextAsync(inputFilePath, TestsUtility.GenerateRandomText(1024 * 1024 * 2));
             await _fileCompressor.CompressFileAsync(inputFilePath, outputDirectory, compressionAlgorithm, compressionLevel);
 
             string compressedFilePath = Path.Combine(outputDirectory, "test.txt.gz");
@@ -72,14 +71,14 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CompressFilesAsync_ShouldCompressMultipleFiles()
         {
             // Arrange
-            string[] inputFilePaths = { Path.Combine(_tempDirectory, "test1.txt"), Path.Combine(_tempDirectory, "test2.txt") };
-            string outputDirectory = _tempDirectory;
+            string[] inputFilePaths = { Path.Combine(TestsUtility._tempDirectory, "test1.txt"), Path.Combine(TestsUtility._tempDirectory, "test2.txt") };
+            string outputDirectory = TestsUtility._tempDirectory;
             var compressionAlgorithm = CompressionAlgorithmOption.GZip;
             var compressionLevel = CompressionLevelOption.Optimal;
 
             // Create test files
-            await File.WriteAllTextAsync(inputFilePaths[0], GenerateRandomText(1024 * 1024 * 2));
-            await File.WriteAllTextAsync(inputFilePaths[1], GenerateRandomText(1024 * 1024 * 2));
+            await File.WriteAllTextAsync(inputFilePaths[0], TestsUtility.GenerateRandomText(1024 * 1024 * 2));
+            await File.WriteAllTextAsync(inputFilePaths[1], TestsUtility.GenerateRandomText(1024 * 1024 * 2));
 
             // Act
             await _fileCompressor.CompressFilesAsync(inputFilePaths, outputDirectory, compressionAlgorithm, compressionLevel);
@@ -100,14 +99,14 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task DecompressFilesAsync_ShouldDecompressMultipleFiles()
         {
             // Arrange
-            string[] inputFilePaths = { Path.Combine(_tempDirectory, "test1.txt"), Path.Combine(_tempDirectory, "test2.txt") };
-            string outputDirectory = _tempDirectory;
+            string[] inputFilePaths = { Path.Combine(TestsUtility._tempDirectory, "test1.txt"), Path.Combine(TestsUtility._tempDirectory, "test2.txt") };
+            string outputDirectory = TestsUtility._tempDirectory;
             var compressionAlgorithm = CompressionAlgorithmOption.GZip;
             var compressionLevel = CompressionLevelOption.Optimal;
 
             // Create test files and compress them
-            await File.WriteAllTextAsync(inputFilePaths[0], GenerateRandomText(1024 * 1024 * 2));
-            await File.WriteAllTextAsync(inputFilePaths[1], GenerateRandomText(1024 * 1024 * 2));
+            await File.WriteAllTextAsync(inputFilePaths[0], TestsUtility.GenerateRandomText(1024 * 1024 * 2));
+            await File.WriteAllTextAsync(inputFilePaths[1], TestsUtility.GenerateRandomText(1024 * 1024 * 2));
             await _fileCompressor.CompressFilesAsync(inputFilePaths, outputDirectory, compressionAlgorithm, compressionLevel);
 
             string[] compressedFilePaths = {
@@ -130,24 +129,6 @@ namespace AdvanceFileUpload.Domain.Test
                 File.Delete(Path.Combine(outputDirectory, Path.GetFileName(filePath)));
             }
         }
-        static string GenerateRandomText(int size)
-        {
-            // Define the characters to use for generating random text
-            string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{};':\",./<>? ";
-
-            // Create a StringBuilder to store the random text
-            StringBuilder randomText = new StringBuilder(size);
-
-            // Random number generator
-            Random random = new Random();
-
-            // Generate random text
-            for (int i = 0; i < size; i++)
-            {
-                randomText.Append(characters[random.Next(characters.Length)]);
-            }
-
-            return randomText.ToString();
-        }
+       
     }
 }

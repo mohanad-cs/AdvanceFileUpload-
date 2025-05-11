@@ -7,6 +7,7 @@ using AdvanceFileUpload.Application.Settings;
 using AdvanceFileUpload.Application.Validators;
 using AdvanceFileUpload.Domain.Core;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Moq;
 
@@ -14,37 +15,34 @@ namespace AdvanceFileUpload.Domain.Test
 {
     public class UploadMangerTests
     {
-        private const string _testFilePath = @"..\TestFiles\testFile.Pdf";
-        private const string _tempDirectory = "..\\Temp\\";
-        private string _fileName = Path.GetFileName(_testFilePath);
-        private long _fileSize = new FileInfo(_testFilePath).Length;
-        private long _maxChunkSize = 256 * 1024; // 256 KB
+
 
         private readonly Mock<IRepository<FileUploadSession>> _repositoryMock;
         private readonly Mock<IDomainEventPublisher> _domainEventPublisherMock;
         private readonly Mock<FileValidator> _fileValidatorMock;
         private readonly Mock<ChunkValidator> _chunkValidatorMock;
-        private readonly Mock<FileProcessor> _fileProcessorMock;
-        private readonly Mock<FileCompressor> _fileCompressorMock;
+        private readonly FileProcessor _fileProcessorMock;
+        private readonly FileCompressor _fileCompressorMock;
         private readonly Mock<ILogger<UploadManger>> _loggerMock;
         private readonly IOptions<UploadSetting> _uploadSetting;
 
         public UploadMangerTests()
         {
+            TestsUtility.InsureTestDataCreated();
             _repositoryMock = new Mock<IRepository<FileUploadSession>>();
             _domainEventPublisherMock = new Mock<IDomainEventPublisher>();
             _fileValidatorMock = new Mock<FileValidator>();
             _chunkValidatorMock = new Mock<ChunkValidator>();
-            _fileProcessorMock = new Mock<FileProcessor>();
+            _fileProcessorMock = new FileProcessor(NullLogger<FileProcessor>.Instance);
             _loggerMock = new Mock<ILogger<UploadManger>>();
-            _fileCompressorMock = new Mock<FileCompressor>();
+            _fileCompressorMock = new FileCompressor(NullLogger<FileCompressor>.Instance);
             _uploadSetting = Options.Create(new UploadSetting
             {
-                SavingDirectory = _tempDirectory,
+                SavingDirectory = TestsUtility._tempDirectory,
                 MaxFileSize = 1024 * 1024 * 10,
                 AllowedExtensions = new[] { ".pdf" },
                 MaxChunkSize = 1024 * 1024,
-                TempDirectory = _tempDirectory
+                TempDirectory = TestsUtility._tempDirectory
             });
         }
 
@@ -58,14 +56,14 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileValidatorMock.Object,
                 _chunkValidatorMock.Object,
                 _uploadSetting,
-                _fileProcessorMock.Object,
-                _fileCompressorMock.Object,
+                _fileProcessorMock,
+                _fileCompressorMock,
                 _loggerMock.Object);
 
             var request = new CreateUploadSessionRequest
             {
-                FileName = _fileName,
-                FileSize = _fileSize,
+                FileName = TestsUtility._fileName,
+                FileSize = TestsUtility._fileSize,
                 FileExtension = ".pdf",
                 CompressedFileSize = null,
 
@@ -85,7 +83,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CompleteUploadSessionAsync_ShouldCompleteSession()
         {
             // Arrange
-            var session = GetValidAllChunkUploadedNotCompletedFileUploadSession();
+            var session =TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
             var uploadManager = new UploadManger(
@@ -94,8 +92,8 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileValidatorMock.Object,
                 _chunkValidatorMock.Object,
                 _uploadSetting,
-                _fileProcessorMock.Object,
-                _fileCompressorMock.Object,
+                _fileProcessorMock,
+                _fileCompressorMock,
                 _loggerMock.Object);
 
             // Act
@@ -110,7 +108,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task UploadChunkAsync_ShouldUploadChunk()
         {
             // Arrange
-            var session = new FileUploadSession(_fileName, _tempDirectory, _fileSize, null, 256 * 1024);
+            var session = new FileUploadSession(TestsUtility._fileName, TestsUtility._tempDirectory, TestsUtility._fileSize, null, 256 * 1024);
             var request = new UploadChunkRequest
             {
                 SessionId = session.Id,
@@ -129,8 +127,8 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileValidatorMock.Object,
                 _chunkValidatorMock.Object,
                 _uploadSetting,
-                _fileProcessorMock.Object,
-                _fileCompressorMock.Object,
+                _fileProcessorMock,
+                _fileCompressorMock,
                 _loggerMock.Object);
 
 
@@ -148,7 +146,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task GetUploadSessionStatusAsync_ShouldReturnStatus()
         {
             // Arrange
-            var session = GetValidAllChunkUploadedNotCompletedFileUploadSession();
+            var session = TestsUtility.GetValidAllChunkUploadedNotCompletedFileUploadSession();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
@@ -158,8 +156,8 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileValidatorMock.Object,
                 _chunkValidatorMock.Object,
                 _uploadSetting,
-                _fileProcessorMock.Object,
-                _fileCompressorMock.Object,
+                _fileProcessorMock,
+                _fileCompressorMock,
                 _loggerMock.Object);
 
             // Act
@@ -178,7 +176,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task CancelUploadSessionAsync_ShouldCancelSession()
         {
             // Arrange
-            var session = GetFileUploadSessionWithRemainingChunks();
+            var session = TestsUtility.GetFileUploadSessionWithRemainingChunks();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
@@ -188,8 +186,8 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileValidatorMock.Object,
                 _chunkValidatorMock.Object,
                 _uploadSetting,
-                _fileProcessorMock.Object,
-                _fileCompressorMock.Object,
+                _fileProcessorMock,
+                _fileCompressorMock,
                 _loggerMock.Object);
 
             // Act
@@ -204,7 +202,7 @@ namespace AdvanceFileUpload.Domain.Test
         public async Task PauseUploadSessionAsync_ShouldPauseSession()
         {
             // Arrange
-            var session = GetFileUploadSessionWithRemainingChunks();
+            var session = TestsUtility.GetFileUploadSessionWithRemainingChunks();
             _repositoryMock.Setup(r => r.GetByIdAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(session);
 
@@ -214,8 +212,8 @@ namespace AdvanceFileUpload.Domain.Test
                 _fileValidatorMock.Object,
                 _chunkValidatorMock.Object,
                 _uploadSetting,
-                _fileProcessorMock.Object,
-                _fileCompressorMock.Object,
+                _fileProcessorMock,
+                _fileCompressorMock,
                 _loggerMock.Object);
 
             // Act
@@ -227,24 +225,7 @@ namespace AdvanceFileUpload.Domain.Test
         }
 
 
-        private FileUploadSession GetValidAllChunkUploadedNotCompletedFileUploadSession()
-        {
-            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, null, _maxChunkSize);
-            for (int i = 0; i < fileUploadSession.TotalChunksToUpload; i++)
-            {
-                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.chunk"));
-            }
-            return fileUploadSession;
-        }
-        private FileUploadSession GetFileUploadSessionWithRemainingChunks()
-        {
-            FileUploadSession fileUploadSession = new FileUploadSession(_fileName, _tempDirectory, _fileSize, null, _maxChunkSize);
-            for (int i = 0; i < fileUploadSession.TotalChunksToUpload - 1; i++)
-            {
-                fileUploadSession.AddChunk(i, Path.Combine(_tempDirectory, "chunk0.chunk"));
-            }
-            return fileUploadSession;
-        }
+       
     }
 
 }

@@ -14,7 +14,7 @@ namespace AdvanceFileUpload.Benchmark
          .MediumRun
          .WithLaunchCount(1)
          .WithToolchain(InProcessNoEmitToolchain.Instance));
-            BenchmarkRunner.Run<FileSplitterBenchmarks>(config);
+            BenchmarkRunner.Run<FileSavingBenchMark>(config);
         }
     }
 }

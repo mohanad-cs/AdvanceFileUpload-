@@ -7,7 +7,7 @@ namespace AdvanceFileUpload.Application.Compression
     /// <summary>
     /// Provides methods for compressing and decompressing files using various algorithms.
     /// </summary>
-    public sealed class FileCompressor : IFileCompressor
+    public class FileCompressor : IFileCompressor
     {
         // a static list of applicable files extensions that can not be compressed because they are already compressed
         private static readonly List<string> _excludedCompressedExtensions = new List<string>

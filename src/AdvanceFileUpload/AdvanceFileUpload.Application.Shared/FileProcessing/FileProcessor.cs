@@ -236,8 +236,8 @@ namespace AdvanceFileUpload.Application.FileProcessing
 
             stopwatch.Stop();
             var fileInfo = new FileInfo(outputFilePath);
-            _logger.LogInformation("Chunks Merging completed at {Time} | Size: {Size} bytes | Duration: {ElapsedMilliseconds} ms",
-                DateTime.UtcNow, fileInfo.Length, stopwatch.ElapsedMilliseconds);
+            _logger.LogInformation("Merging of ({chunksCount}) Chunks  completed at {Time} | Size: {Size} bytes | Duration: {ElapsedMilliseconds} ms",
+                chunkPaths.Count,DateTime.UtcNow, fileInfo.Length, stopwatch.ElapsedMilliseconds);
         }
     }
 }

@@ -29,6 +29,7 @@
 
   <ItemGroup>
     <Folder Include="Temp\" />
+    <Folder Include="TestFiles\" />
   </ItemGroup>
 
 </Project>
