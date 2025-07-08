@@ -7,6 +7,9 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
 	  <!-- Define metadata for your NuGet package -->
 	  <PackageId>AdvanceFileUpload.Application.Shared</PackageId>
+	  <Version>1.0.0</Version>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <PackageOutputPath>D:\University\AdvanceFileUpload-\NuGetPackage</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
