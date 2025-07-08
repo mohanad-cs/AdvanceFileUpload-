@@ -142,7 +142,7 @@ AdvanceFileUpload is solution designed to handle efficient file Uploading. The p
     }
    }
    ```
-   See [KestrelConfiguration](http://103.89.14.244:8080/api/AdvanceFileUpload.API.KestrelConfiguration.html) For More information.
+   See [KestrelConfiguration](http://185.227.109.88:80/api/AdvanceFileUpload.API.KestrelConfiguration.html) For More information.
 
 ### Make The First Upload
  Install The AdvanceFileUpload.Client NuGet package.
@@ -206,4 +206,4 @@ You Can Try our Winform Sample
 
 ---
 ### Documentation
-For more details, refer to the [Documentation](http://103.89.14.244:8080).
+For more details, refer to the [Documentation](http://185.227.109.88:80).
