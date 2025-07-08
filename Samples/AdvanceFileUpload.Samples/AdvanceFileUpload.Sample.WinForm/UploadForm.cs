@@ -249,11 +249,23 @@ namespace AdvanceFileUpload.Sample.WinForm
             memoEdit.Invoke(() => memoEdit.AppendLine("File splitting started.\n"));
         }
 
-        private void _fileUploadService_FileCompressionCompleted(object? sender, EventArgs e)
+        private void _fileUploadService_FileCompressionCompleted(object? sender, FileCompressionCompletedEventArg e)
         {
 
 
             memoEdit.Invoke(() => memoEdit.AppendLine("File compression completed.\n"));
+            if (e.CompressedFileSize > 0)
+            {
+                memoEdit.Invoke(() => memoEdit.AppendLine($"Original file size: {GetFileSize(e.OriginalFileSize)}\n"));
+                memoEdit.Invoke(() => memoEdit.AppendLine($"Compressed file size: {GetFileSize(e.CompressedFileSize)}\n"));
+                long deference = e.OriginalFileSize - e.CompressedFileSize;
+                memoEdit.Invoke(() => memoEdit.AppendLine($"Deference in size: {GetFileSize(deference)}\n"));
+            }
+            else
+            {
+                memoEdit.Invoke(() => memoEdit.AppendLine("No compression was applied.\n"));
+            }
+
 
         }
 
@@ -487,6 +499,7 @@ namespace AdvanceFileUpload.Sample.WinForm
 
             return $"{size:0.##} {sizes[i]}";
         }
+
     }
 
 
