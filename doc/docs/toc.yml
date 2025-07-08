@@ -1,4 +1,20 @@
 - name: Introduction
   href: introduction.md
-- name: Getting Started
-  href: getting-started.md
+- name: Architecture Overview
+  href: Architecture-Overview.md
+- name: Understanding the FileUpload Process
+  href: Understanding-the-FileUpload-Process.md
+- name: FileUpload Lifecycle
+  href: FileUpload-Lifecycle.md
+- name: Prerequisites
+  href: Prerequisites.md
+- name: Server Installation and Setup
+  href: Server-Installation-and-Setup.md
+- name: Configuration Settings
+  href: Configuration-Settings.md
+- name: How to Use the Client SDK
+  href: How-to-Use-the-Client-SDK.md
+- name: Hosting as a Windows Service
+  href: Hosting-as-a-Windows-Service.md
+- name: Frequently Asked Questions
+  href: Frequently-Asked-Questions.md

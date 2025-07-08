@@ -85,8 +85,23 @@
         </div>
 
         <article data-uid="">
-<h1 id="introduction">Introduction</h1>
+<h1 id="introduction"><strong>Introduction</strong></h1>
 
+<p>Welcome to the developer documentation for the Advance Chunk File Upload API. This document provides a high-level overview of the project, its purpose, core functionality, and intended audience.</p>
+<h2 id="what-is-the-advance-chunk-file-upload-api"><strong>What is the Advance Chunk File Upload API?</strong></h2>
+<p>The Advance Chunk File Upload API is a robust, backend solution designed to handle large file uploads efficiently and reliably. It addresses the common challenges of traditional file transfer methods, such as network interruptions, server timeouts, and bandwidth limitations.</p>
+<p>Built with .NET 8, the system provides a modern, scalable, and cross-platform compatible API that can be integrated into a wide range of web applications.</p>
+<h2 id="core-functionality"><strong>Core Functionality</strong></h2>
+<p>The API is built around several key features that ensure a resilient and user-friendly upload experience:</p>
+<ul>
+<li><strong>Chunking</strong>: Large files are broken down into smaller, manageable chunks. If an upload fails, only the failed chunk needs to be re-sent, not the entire file.</li>
+<li><strong>Resumable Uploads</strong>: Uploads can be paused and resumed at any time, even after network disconnections or browser closures. The system maintains the state of each upload session, allowing clients to continue from where they left off.</li>
+<li><strong>Optional Compression</strong>: To save bandwidth and reduce transfer times, the API supports optional file compression using algorithms like GZip, Deflate, and Brotli.</li>
+<li><strong>Event-Driven Architecture</strong>: The system uses an event-driven model to decouple components and allow for real-time integration with external services (e.g., notifying a processing service upon upload completion).</li>
+<li><strong>Real-Time Progress Tracking</strong>: Clients can receive real-time progress updates via SignalR, enabling a transparent and engaging user experience.</li>
+</ul>
+<h2 id="intended-audience"><strong>Intended Audience</strong></h2>
+<p>This documentation is intended for software developers and DevOps engineers who need to integrate a powerful file upload system into their applications. The API is designed to be developer-friendly, with a client SDK that abstracts away the complexities of the upload lifecycle.</p>
 
 </article>
 

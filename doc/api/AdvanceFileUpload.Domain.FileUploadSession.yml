@@ -20,6 +20,7 @@ items:
   - AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks
   - AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded
   - AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
+  - AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(System.Int32)
   - AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
   - AdvanceFileUpload.Domain.FileUploadSession.IsCompleted
   - AdvanceFileUpload.Domain.FileUploadSession.IsFailed
@@ -785,7 +786,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: GetRemainChunks
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 255
+    startLine: 259
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -816,7 +817,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsAllChunkUploaded
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 272
+    startLine: 276
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -826,7 +827,7 @@ items:
     content: public bool IsAllChunkUploaded()
     return:
       type: System.Boolean
-      description: <code>true</code> if all chunks have been uploaded; otherwise, <code>false</code>.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if all chunks have been uploaded; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function IsAllChunkUploaded() As Boolean
   overload: AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded*
 - uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
@@ -847,7 +848,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsChunkUploaded
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 282
+    startLine: 286
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -861,7 +862,7 @@ items:
       description: The index of the chunk.
     return:
       type: System.Boolean
-      description: <code>true</code> if the chunk has been uploaded; otherwise, <code>false</code>.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the chunk has been uploaded; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function IsChunkUploaded(chunkIndex As Integer) As Boolean
   overload: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded*
   nameWithType.vb: FileUploadSession.IsChunkUploaded(Integer)
@@ -885,7 +886,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsCompleted
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 291
+    startLine: 295
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -895,7 +896,7 @@ items:
     content: public bool IsCompleted()
     return:
       type: System.Boolean
-      description: <code>true</code> if the session is completed; otherwise, <code>false</code>.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the session is completed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function IsCompleted() As Boolean
   overload: AdvanceFileUpload.Domain.FileUploadSession.IsCompleted*
 - uid: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
@@ -916,7 +917,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsCanceled
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 300
+    startLine: 304
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -926,7 +927,7 @@ items:
     content: public bool IsCanceled()
     return:
       type: System.Boolean
-      description: <code>true</code> if the session is canceled; otherwise, <code>false</code>.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the session is canceled; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function IsCanceled() As Boolean
   overload: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled*
 - uid: AdvanceFileUpload.Domain.FileUploadSession.IsFailed
@@ -947,7 +948,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: IsFailed
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 308
+    startLine: 312
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -957,7 +958,7 @@ items:
     content: public bool IsFailed()
     return:
       type: System.Boolean
-      description: <code>true</code> if the session status is Failed; otherwise, <code>false</code>.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the session status is Failed; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function IsFailed() As Boolean
   overload: AdvanceFileUpload.Domain.FileUploadSession.IsFailed*
 - uid: AdvanceFileUpload.Domain.FileUploadSession.CancelSession
@@ -978,7 +979,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CancelSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 318
+    startLine: 322
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -1010,7 +1011,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: PauseSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 339
+    startLine: 343
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -1042,7 +1043,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: CompleteSession
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 370
+    startLine: 374
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -1077,7 +1078,7 @@ items:
       repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
     id: MarkAsFailed
     path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
-    startLine: 407
+    startLine: 411
   assemblies:
   - AdvanceFileUpload.Domain
   namespace: AdvanceFileUpload.Domain
@@ -1098,6 +1099,44 @@ items:
       Thrown when the session cannot be marked as failed due to one of the following reasons:
 
       <ul><li>The session is already completed.</li><li>The session is canceled.</li></ul>
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(System.Int32)
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(System.Int32)
+  id: IsChunkInRange(System.Int32)
+  parent: AdvanceFileUpload.Domain.FileUploadSession
+  langs:
+  - csharp
+  - vb
+  name: IsChunkInRange(int)
+  nameWithType: FileUploadSession.IsChunkInRange(int)
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(int)
+  type: Method
+  source:
+    remote:
+      path: src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+      branch: main
+      repo: https://github.com/mohanad-cs/AdvanceFileUpload-.git
+    id: IsChunkInRange
+    path: ../src/AdvanceFileUpload/AdvanceFileUpload.Domain/FileUploadAggregate/FileUploadSession.cs
+    startLine: 438
+  assemblies:
+  - AdvanceFileUpload.Domain
+  namespace: AdvanceFileUpload.Domain
+  summary: Determines whether the specified chunk index is within the valid range of chunks for the file upload session.
+  example: []
+  syntax:
+    content: public bool IsChunkInRange(int chunkIndex)
+    parameters:
+    - id: chunkIndex
+      type: System.Int32
+      description: The index of the chunk to check.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the chunk index is within the valid range (0 to <xref href="AdvanceFileUpload.Domain.FileUploadSession.TotalChunksToUpload" data-throw-if-not-resolved="false"></xref> - 1); otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function IsChunkInRange(chunkIndex As Integer) As Boolean
+  overload: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange*
+  nameWithType.vb: FileUploadSession.IsChunkInRange(Integer)
+  fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(Integer)
+  name.vb: IsChunkInRange(Integer)
 references:
 - uid: AdvanceFileUpload.Domain
   commentId: N:AdvanceFileUpload.Domain
@@ -2097,3 +2136,9 @@ references:
   - uid: AdvanceFileUpload.Domain.Events
     name: Events
     href: AdvanceFileUpload.Domain.Events.html
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange*
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange
+  href: AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsChunkInRange_System_Int32_
+  name: IsChunkInRange
+  nameWithType: FileUploadSession.IsChunkInRange
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange

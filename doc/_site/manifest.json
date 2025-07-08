@@ -1475,10 +1475,90 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/getting-started.md",
+      "source_relative_path": "docs/Architecture-Overview.md",
       "output": {
         ".html": {
-          "relative_path": "docs/getting-started.html"
+          "relative_path": "docs/Architecture-Overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Configuration-Settings.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Configuration-Settings.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/FileUpload-Lifecycle.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/FileUpload-Lifecycle.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Frequently-Asked-Questions.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Frequently-Asked-Questions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Hosting-as-a-Windows-Service.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Hosting-as-a-Windows-Service.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/How-to-Use-the-Client-SDK.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/How-to-Use-the-Client-SDK.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Prerequisites.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Prerequisites.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Server-Installation-and-Setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Server-Installation-and-Setup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/Understanding-the-FileUpload-Process.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/Understanding-the-FileUpload-Process.html"
         }
       },
       "version": ""
@@ -1502,6 +1582,36 @@
         },
         ".json": {
           "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/State Transitions.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/State Transitions.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/System Arc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/System Arc.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/UploadLifeCycle.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/UploadLifeCycle.png"
         }
       },
       "version": ""

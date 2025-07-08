@@ -6422,6 +6422,22 @@ references:
   isSpec: "True"
   fullName: AdvanceFileUpload.Domain.FileUploadSession.IsCanceled
   nameWithType: FileUploadSession.IsCanceled
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(System.Int32)
+  name: IsChunkInRange(int)
+  href: api/AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsChunkInRange_System_Int32_
+  commentId: M:AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(System.Int32)
+  name.vb: IsChunkInRange(Integer)
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(int)
+  fullName.vb: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(Integer)
+  nameWithType: FileUploadSession.IsChunkInRange(int)
+  nameWithType.vb: FileUploadSession.IsChunkInRange(Integer)
+- uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange*
+  name: IsChunkInRange
+  href: api/AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsChunkInRange_
+  commentId: Overload:AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange
+  nameWithType: FileUploadSession.IsChunkInRange
 - uid: AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)
   name: IsChunkUploaded(int)
   href: api/AdvanceFileUpload.Domain.FileUploadSession.html#AdvanceFileUpload_Domain_FileUploadSession_IsChunkUploaded_System_Int32_

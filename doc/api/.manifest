@@ -561,6 +561,7 @@
   "AdvanceFileUpload.Domain.FileUploadSession.GetRemainChunks": "AdvanceFileUpload.Domain.FileUploadSession.yml",
   "AdvanceFileUpload.Domain.FileUploadSession.IsAllChunkUploaded": "AdvanceFileUpload.Domain.FileUploadSession.yml",
   "AdvanceFileUpload.Domain.FileUploadSession.IsCanceled": "AdvanceFileUpload.Domain.FileUploadSession.yml",
+  "AdvanceFileUpload.Domain.FileUploadSession.IsChunkInRange(System.Int32)": "AdvanceFileUpload.Domain.FileUploadSession.yml",
   "AdvanceFileUpload.Domain.FileUploadSession.IsChunkUploaded(System.Int32)": "AdvanceFileUpload.Domain.FileUploadSession.yml",
   "AdvanceFileUpload.Domain.FileUploadSession.IsCompleted": "AdvanceFileUpload.Domain.FileUploadSession.yml",
   "AdvanceFileUpload.Domain.FileUploadSession.IsFailed": "AdvanceFileUpload.Domain.FileUploadSession.yml",

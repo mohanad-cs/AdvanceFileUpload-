@@ -75,7 +75,7 @@ items:
       description: A token to monitor for cancellation requests.
     return:
       type: System.Threading.Tasks.ValueTask{System.Boolean}
-      description: A task that resolves to <code>true</code> if the timer ticked, or <code>false</code> if the wait was canceled.
+      description: A task that resolves to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the timer ticked, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> if the wait was canceled.
     content.vb: Public Function WaitForNextTickAsync(cancellationToken As CancellationToken = Nothing) As ValueTask(Of Boolean)
   overload: AdvanceFileUpload.API.DailyPeriodicTimer.WaitForNextTickAsync*
   implements:
