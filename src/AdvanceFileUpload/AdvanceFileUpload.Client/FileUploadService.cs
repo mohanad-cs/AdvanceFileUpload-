@@ -241,7 +241,7 @@ namespace AdvanceFileUpload.Client
         /// <summary>
         /// Occurs when the file compression process completes.
         /// </summary>
-        public event EventHandler? FileCompressionCompleted;
+        public event EventHandler<FileCompressionCompletedEventArg>? FileCompressionCompleted;
         /// <summary>
         /// Occurs when the upload session is pausing.
         /// </summary>
@@ -1022,7 +1022,7 @@ namespace AdvanceFileUpload.Client
         private void OnFileCompressionCompleted()
         {
             _fileHasBeenCompressed = true;
-            FileCompressionCompleted?.Invoke(this, EventArgs.Empty);
+            FileCompressionCompleted?.Invoke(this, new FileCompressionCompletedEventArg(_originalFileSize,_compressedFileSize!.Value));
         }
         /// <summary>
         /// Raises the <see cref="UploadError"/> event.
