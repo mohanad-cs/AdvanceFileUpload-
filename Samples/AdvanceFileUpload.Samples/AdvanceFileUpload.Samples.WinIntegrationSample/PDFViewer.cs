@@ -134,7 +134,7 @@ namespace AdvanceFileUpload.Samples.WinIntegrationSample
             }
             else
             {
-                MessageBox.Show("File is not a PDF");
+                memoEdit1.Invoke(() => { memoEdit1.AppendLine("File is not a PDF"); });
             }
             await Task.CompletedTask;
         }
