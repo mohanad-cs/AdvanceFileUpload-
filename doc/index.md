@@ -1,7 +1,8 @@
 ---
 _layout: landing
 ---
-# Welcome to the Advanced Chunk File Upload API Documentation
+# Advanced File Upload API
+**Welcome to the Advanced Chunk File Upload API Documentation**
 
 Efficient, Reliable, and Scalable Large File Upload Handling for Modern Applications
 

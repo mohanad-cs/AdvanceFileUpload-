@@ -2,7 +2,7 @@
 
 The Advance Chunk File Upload API is configured primarily through the appsettings.json file. This document explains the available settings and how they affect the application's behavior.
 
-## **UploadSetting**
+## **UploadSetting** (Required)
 
 This section controls the core file upload parameters.
 
@@ -19,7 +19,7 @@ This section controls the core file upload parameters.
 **Example:**
 ```json
 "UploadSetting": {  
-  "AllowedExtensions": \[ ".jpg", ".png", ".pdf", ".mp4" \],  
+  "AllowedExtensions": [ ".jpg", ".png", ".pdf", ".mp4" ],  
   "MaxFileSize": 1073741824,  
   "MaxChunkSize": 2097152,  
   "SavingDirectory": "D:\\\\Temp\\\\Savedir",  
@@ -28,7 +28,7 @@ This section controls the core file upload parameters.
   "EnableIntegrationEventPublishing": true  
 }
 ```
-## **APIKeyOptions**
+## **APIKeyOptions** (Required)
 
 This section manages client authentication and rate limiting.
 
@@ -39,7 +39,7 @@ This section manages client authentication and rate limiting.
 | DefaultMaxRequestsPerMinute | int | The rate limit applied to clients with a valid key that does not have a specific RateLimit defined. | 1000 |
 | ApiKeys | APIKey\[\] | An array of client API key configurations. | \[\] |
 
-### **APIKey Object**
+### **APIKey Object** 
 
 | Key | Type | Description |
 | :---- | :---- | :---- |
@@ -53,16 +53,16 @@ This section manages client authentication and rate limiting.
   "EnableAPIKeyAuthentication": true,  
   "EnableRateLimiting": true,  
   "DefaultMaxRequestsPerMinute": 1000,  
-  "ApiKeys": \[  
+  "ApiKeys": [  
     {  
       "ClientId": "ClientA",  
       "Key": "secret-key-for-client-a",  
       "RateLimit": { "RequestsPerMinute": 2000 }  
     }  
-  \]  
+  ]  
 }
 ```
-## **ConnectionStrings**
+## **ConnectionStrings** (Required)
 
 This section contains the database connection strings.
 
@@ -70,7 +70,7 @@ This section contains the database connection strings.
 | :---- | :---- |
 | SessionStorage | The connection string for the SQL Server database used to store upload session data. |
 
-## **RabbitMQOptions**
+## **RabbitMQOptions** (Optional)
 
 This section is used to configure the connection to the RabbitMQ message broker.
 
@@ -81,6 +81,57 @@ This section is used to configure the connection to the RabbitMQ message broker.
 | Password | string | The password for connecting to RabbitMQ. | guest |
 | Port | int | The port number for the RabbitMQ server. | 5672 |
 
-## **Environment Variables**
-
-For production environments, it is strongly recommended to use environment variables or a secure secret management tool (like Azure Key Vault) for sensitive settings such as ConnectionStrings and APIKeyOptions. .NET's configuration system will automatically override appsettings.json values with environment variables that match the configuration path (e.g., ConnectionStrings\_\_SessionStorage).
+## **Kestrel Server Configuration** (Required) 
+  Configure Kestrel Server settings in the `appsettings.json` file under the `KestrelConfiguration` section.  
+   Example: 
+   ```json
+   {
+     "KestrelConfiguration": {
+        "Endpoints": {
+            "PublicHttp": {
+                "Ip": "Your server IP",
+                "Port": 5003,
+                "Https": false, //  true or false. If true, the endpoint will use HTTPS.
+                "Protocols": [ "Http1", "Http2" ], //  Options include "Http1", "Http2" "Http3".
+                "SslProtocols": [ "Default"],
+                "Certificate": {
+                    "Subject": "CN=localhosttest",
+                    "Store": "Root",
+                    "Location": "LocalMachine" // "LocalMachine" or "CurrentUser".
+                }
+            }
+        }
+    },
+    "Limits": {
+        "KeepAliveTimeout": "00:02:00", // 5m
+        "RequestHeadersTimeout": "00:02:00", // 3m
+        "MaxConcurrentConnections": 10000,
+        "MaxConcurrentUpgradedConnections": 500, //100,
+        "MaxRequestBodySize": 30000000, // 28.6MB
+        "MinRequestBodyDataRate": null, // 240byte/MinRequestBodyDataRatePeriod
+        "MinRequestBodyDataRatePeriod": "00:00:15", // 15s
+        "MinResponseDataRate": null, // 240byte/ MinResponseDataRatePeriod
+        "MinResponseDataRatePeriod": "00:00:15",
+        "MaxRequestLineSize": 81234543, //8192, // 8KB
+        "MaxRequestBufferSize": null, //1048576, // 1MB
+        "MaxResponseBufferSize": null, // 65536, // 64KB
+        "MaxRequestHeadersTotalSize": 32768, // 32KB
+        "MaxRequestHeadersCount": 100, // 100 headers
+        "AllowSynchronousIO": false
+    },
+    "Https": {
+        "CheckCertificateRevocation": true,
+        "ClientCertificateMode": "AllowCertificate", //  Options include "NoCertificate", "AllowCertificate", and "RequireCertificate".
+        "AllowedProtocols": [ "Default", "Tls12", "Tls13", "Ssl2" ] // "None", "Ssl2", "Ssl3", "Tls","Default","Tls11","Tls12", "Tls13"
+    },
+    "Http2": {
+        "MaxStreamsPerConnection": 100,
+        "HeaderTableSize": 4096, // 4KIB
+        "MaxFrameSize": 16384 // 16KIB   Min:16384 Max: 16777215
+    },
+    "Http3": {
+        "Enable": false
+    }
+   }
+   ```
+   See [Kestrel Configuration](http://185.227.109.88:80/api/AdvanceFileUpload.API.KestrelConfiguration.html) For More information.

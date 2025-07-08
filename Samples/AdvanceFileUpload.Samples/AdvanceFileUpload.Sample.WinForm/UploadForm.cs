@@ -29,8 +29,10 @@ namespace AdvanceFileUpload.Sample.WinForm
         public UploadForm()
         {
             InitializeComponent();
-            txtAPIBaseAdrees.Text = "http://103.89.14.244:5003";
+            txtAPIBaseAdrees.Text = "http://185.227.109.88:5124";
             txtAPIKey.Text = "secret";
+            spinMaxConcurrentUploads.EditValue = 4;
+            spinMaxRetriesCount.EditValue = 3;
             btnPause_Resume.Enabled = false;
             btnCancel.Enabled = false;
             btnCancel.Caption = CancelCaption;
@@ -49,7 +51,7 @@ namespace AdvanceFileUpload.Sample.WinForm
             memoEdit.AppendLine("You can pause, resume, or cancel the upload process.\n");
             memoEdit.ReadOnly = true;
             memoEdit.Properties.UseReadOnlyAppearance = false;
-
+            memoEdit.Font = new Font(memoEdit.Font.FontFamily, 14, memoEdit.Font.Style);
             txtFilePath.EditValue = "Select a file to upload";
             txtFilePath.Properties.UseReadOnlyAppearance = false;
             txtFileSize.Properties.UseReadOnlyAppearance = false;

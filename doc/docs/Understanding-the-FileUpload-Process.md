@@ -5,7 +5,8 @@ This document explains the end-to-end lifecycle of a file upload within the syst
 The process is a coordinated effort between the client SDK and the server-side API, involving session management, chunking, and merging.
 
 ## **File Upload Lifecycle**
-
+![](../images/UploadLifeCycle.png)
+____
 1. **Initiation (Client SDK)**  
    * A developer using the client SDK calls `fileUploadService.UploadFileAsync("path/to/file")`.  
    * If compression is enabled and applicable, the SDK first compresses the file into a temporary location.  
@@ -40,3 +41,21 @@ The process is a coordinated effort between the client SDK and the server-side A
    * Once the final file is successfully created, all the temporary chunk files for the session are deleted.  
 8. **Completion Notification**  
    * An optional SessionCompletedIntegrationEvent can be published to a RabbitMQ message bus, notifying external systems that a new file is ready for processing.
+_____
+
+## **Upload Session State Transitions**
+![](../images/State%20Transitions.png)
+_____
+The FileUploadSession is managed by a state machine that governs its lifecycle. Understanding these states is key to understanding how the API handles different scenarios like pausing, resuming, and failures.
+
+**InProgress**: This is the default state after a session is created. In this state, the server is actively accepting chunk uploads from the client.
+
+**Paused**: The client can explicitly move the session to this state by calling PauseUploadAsync(). No chunks will be accepted, but the session's temporary data is preserved on the server, ready to be resumed.
+
+**PendingToComplete**: The session automatically transitions to this state once the server has received the final expected chunk. It signifies that the server is now waiting for the client to send the final complete-session request to finalize the file.
+
+**Completed**: A terminal state indicating that the client has confirmed completion, and the server has successfully merged all chunks into the final file. The temporary data has been cleaned up.
+
+**Canceled**: A terminal state reached when the client explicitly cancels the upload. All temporary chunk files associated with the session are deleted.
+
+**Failed**: A terminal state indicating that the upload could not be completed. This can happen if the session is abandoned for an extended period (e.g., > 48 hours) and is cleaned up by a background service, or if an unrecoverable error occurs during the merging process.

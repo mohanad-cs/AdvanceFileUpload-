@@ -51,6 +51,9 @@ The server's behavior is primarily controlled by the appsettings.json file, loca
      ]  
    }
 ```
+>[!TIP]
+>For more setting Configuration details see [Configuration Setting Article](../docs/Configuration-Settings.html)
+
 ## **3\. Run the API Server**
 
 Once configured, you can launch the server from the root of the AdvanceFileUpload.API project. On its first run, Entity Framework Core migrations will automatically execute, creating the necessary database schema (FileUploadSessions and ChunkFiles tables) if it doesn't already exist.
@@ -58,7 +61,7 @@ Once configured, you can launch the server from the root of the AdvanceFileUploa
 cd AdvanceFileUpload.API  
 dotnet run
 
-You should see console output indicating that the Kestrel server has started and is now listening for requests, by default at http://localhost:5124.
+You should see console output indicating that the Kestrel server has started and is now listening for requests, by default at `http://localhost:5124`.
 
 ## **4\. Using the Client SDK**
 
@@ -89,7 +92,7 @@ The AdvanceFileUpload.Client library provides the easiest and most reliable way 
    };
 
    fileUploadService.SessionCompleted += (s, e) => {  
-       Console.WriteLine($"Upload complete\! Session ID: {e.SessionId}");  
+       Console.WriteLine($"Upload completed Session ID: {e.SessionId}");  
    };
 
    fileUploadService.UploadError += (s, e) => {  

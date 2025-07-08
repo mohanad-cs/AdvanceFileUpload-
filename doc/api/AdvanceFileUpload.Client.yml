@@ -5,6 +5,7 @@ items:
   id: AdvanceFileUpload.Client
   children:
   - AdvanceFileUpload.Client.ChunkUploadedEventArgs
+  - AdvanceFileUpload.Client.FileCompressionCompletedEventArg
   - AdvanceFileUpload.Client.FileUploadBuilder
   - AdvanceFileUpload.Client.FileUploadService
   - AdvanceFileUpload.Client.IFileUploadService
@@ -32,6 +33,12 @@ references:
   name: ChunkUploadedEventArgs
   nameWithType: ChunkUploadedEventArgs
   fullName: AdvanceFileUpload.Client.ChunkUploadedEventArgs
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+  commentId: T:AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+  href: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html
+  name: FileCompressionCompletedEventArg
+  nameWithType: FileCompressionCompletedEventArg
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
 - uid: AdvanceFileUpload.Client.SessionCanceledEventArgs
   commentId: T:AdvanceFileUpload.Client.SessionCanceledEventArgs
   href: AdvanceFileUpload.Client.SessionCanceledEventArgs.html

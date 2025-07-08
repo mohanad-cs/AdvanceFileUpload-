@@ -710,10 +710,10 @@ items:
   summary: Occurs when the file compression process completes.
   example: []
   syntax:
-    content: public event EventHandler? FileCompressionCompleted
+    content: public event EventHandler<FileCompressionCompletedEventArg>? FileCompressionCompleted
     return:
-      type: System.EventHandler
-    content.vb: Public Event FileCompressionCompleted As EventHandler
+      type: System.EventHandler{AdvanceFileUpload.Client.FileCompressionCompletedEventArg}
+    content.vb: Public Event FileCompressionCompleted As EventHandler(Of FileCompressionCompletedEventArg)
 - uid: AdvanceFileUpload.Client.FileUploadService.SessionPausing
   commentId: E:AdvanceFileUpload.Client.FileUploadService.SessionPausing
   id: SessionPausing
@@ -2005,6 +2005,39 @@ references:
   name: EventHandler
   nameWithType: EventHandler
   fullName: System.EventHandler
+- uid: System.EventHandler{AdvanceFileUpload.Client.FileCompressionCompletedEventArg}
+  commentId: T:System.EventHandler{AdvanceFileUpload.Client.FileCompressionCompletedEventArg}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<FileCompressionCompletedEventArg>
+  nameWithType: EventHandler<FileCompressionCompletedEventArg>
+  fullName: System.EventHandler<AdvanceFileUpload.Client.FileCompressionCompletedEventArg>
+  nameWithType.vb: EventHandler(Of FileCompressionCompletedEventArg)
+  fullName.vb: System.EventHandler(Of AdvanceFileUpload.Client.FileCompressionCompletedEventArg)
+  name.vb: EventHandler(Of FileCompressionCompletedEventArg)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+    name: FileCompressionCompletedEventArg
+    href: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+    name: FileCompressionCompletedEventArg
+    href: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html
+  - name: )
 - uid: System.ArgumentNullException
   commentId: T:System.ArgumentNullException
   isExternal: true

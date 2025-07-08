@@ -237,6 +237,9 @@ items:
   - uid: AdvanceFileUpload.Client.ChunkUploadedEventArgs
     name: ChunkUploadedEventArgs
     type: Class
+  - uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+    name: FileCompressionCompletedEventArg
+    type: Class
   - uid: AdvanceFileUpload.Client.FileUploadBuilder
     name: FileUploadBuilder
     type: Class

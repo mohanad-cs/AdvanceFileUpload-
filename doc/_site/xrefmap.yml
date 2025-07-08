@@ -3503,6 +3503,57 @@ references:
   isSpec: "True"
   fullName: AdvanceFileUpload.Client.ChunkUploadedEventArgs.SessionId
   nameWithType: ChunkUploadedEventArgs.SessionId
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+  name: FileCompressionCompletedEventArg
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html
+  commentId: T:AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg
+  nameWithType: FileCompressionCompletedEventArg
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.#ctor(System.Int64,System.Int64)
+  name: FileCompressionCompletedEventArg(long, long)
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html#AdvanceFileUpload_Client_FileCompressionCompletedEventArg__ctor_System_Int64_System_Int64_
+  commentId: M:AdvanceFileUpload.Client.FileCompressionCompletedEventArg.#ctor(System.Int64,System.Int64)
+  name.vb: New(Long, Long)
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.FileCompressionCompletedEventArg(long, long)
+  fullName.vb: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.New(Long, Long)
+  nameWithType: FileCompressionCompletedEventArg.FileCompressionCompletedEventArg(long, long)
+  nameWithType.vb: FileCompressionCompletedEventArg.New(Long, Long)
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.#ctor*
+  name: FileCompressionCompletedEventArg
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html#AdvanceFileUpload_Client_FileCompressionCompletedEventArg__ctor_
+  commentId: Overload:AdvanceFileUpload.Client.FileCompressionCompletedEventArg.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.FileCompressionCompletedEventArg
+  fullName.vb: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.New
+  nameWithType: FileCompressionCompletedEventArg.FileCompressionCompletedEventArg
+  nameWithType.vb: FileCompressionCompletedEventArg.New
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.CompressedFileSize
+  name: CompressedFileSize
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html#AdvanceFileUpload_Client_FileCompressionCompletedEventArg_CompressedFileSize
+  commentId: P:AdvanceFileUpload.Client.FileCompressionCompletedEventArg.CompressedFileSize
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.CompressedFileSize
+  nameWithType: FileCompressionCompletedEventArg.CompressedFileSize
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.CompressedFileSize*
+  name: CompressedFileSize
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html#AdvanceFileUpload_Client_FileCompressionCompletedEventArg_CompressedFileSize_
+  commentId: Overload:AdvanceFileUpload.Client.FileCompressionCompletedEventArg.CompressedFileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.CompressedFileSize
+  nameWithType: FileCompressionCompletedEventArg.CompressedFileSize
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.OriginalFileSize
+  name: OriginalFileSize
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html#AdvanceFileUpload_Client_FileCompressionCompletedEventArg_OriginalFileSize
+  commentId: P:AdvanceFileUpload.Client.FileCompressionCompletedEventArg.OriginalFileSize
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.OriginalFileSize
+  nameWithType: FileCompressionCompletedEventArg.OriginalFileSize
+- uid: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.OriginalFileSize*
+  name: OriginalFileSize
+  href: api/AdvanceFileUpload.Client.FileCompressionCompletedEventArg.html#AdvanceFileUpload_Client_FileCompressionCompletedEventArg_OriginalFileSize_
+  commentId: Overload:AdvanceFileUpload.Client.FileCompressionCompletedEventArg.OriginalFileSize
+  isSpec: "True"
+  fullName: AdvanceFileUpload.Client.FileCompressionCompletedEventArg.OriginalFileSize
+  nameWithType: FileCompressionCompletedEventArg.OriginalFileSize
 - uid: AdvanceFileUpload.Client.FileUploadBuilder
   name: FileUploadBuilder
   href: api/AdvanceFileUpload.Client.FileUploadBuilder.html

@@ -4,8 +4,6 @@
   href: Architecture-Overview.md
 - name: Understanding the FileUpload Process
   href: Understanding-the-FileUpload-Process.md
-- name: FileUpload Lifecycle
-  href: FileUpload-Lifecycle.md
 - name: Prerequisites
   href: Prerequisites.md
 - name: Server Installation and Setup
