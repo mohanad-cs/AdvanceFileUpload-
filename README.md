@@ -46,15 +46,15 @@ To help you onboard quickly, our documentation includes:
 - 🏗 API Reference
 
 Jump into the docs or explore the code:
-- [Introduction](../AdvanceFileUpload-/doc/docs/introduction.md)
-- [Architecture Overview](../AdvanceFileUpload-/doc/docs/Architecture-Overview.md)
-- [Understanding the FileUpload Process](../AdvanceFileUpload-/doc/docs/Understanding-the-FileUpload-Process.md)
-- [Prerequisites](../AdvanceFileUpload-/doc/docs/Prerequisites.md)
-- [Server Installation and Setup](../AdvanceFileUpload-/doc/docs/Server-Installation-and-Setup.md)
-- [Configuration Settings](../AdvanceFileUpload-/doc/docs/Configuration-Settings.md)
-- [How to Use the Client SDK](../AdvanceFileUpload-/doc/docs/How-to-Use-the-Client-SDK.md)
-- [Hosting as a Windows Service](../AdvanceFileUpload-/doc/docs/Hosting-as-a-Windows-Service.md)
-- [Frequently Asked Questions FAQ](../AdvanceFileUpload-/doc/docs/Frequently-Asked-Questions.md)
+- [Introduction](./doc/docs/introduction.md)
+- [Architecture Overview](./doc/docs/Architecture-Overview.md)
+- [Understanding the FileUpload Process](./doc/docs/Understanding-the-FileUpload-Process.md)
+- [Prerequisites](./doc/docs/Prerequisites.md)
+- [Server Installation and Setup](./doc/docs/Server-Installation-and-Setup.md)
+- [Configuration Settings](./doc/docs/Configuration-Settings.md)
+- [How to Use the Client SDK](./doc/docs/How-to-Use-the-Client-SDK.md)
+- [Hosting as a Windows Service](./doc/docs/Hosting-as-a-Windows-Service.md)
+- [Frequently Asked Questions FAQ](./doc/docs/Frequently-Asked-Questions.md)
 
 
 
@@ -63,7 +63,7 @@ Jump into the docs or explore the code:
 
 ## 📞 Need Help?
 If you encounter issues or have suggestions, feel free to:
-- Browse the [FAQ](../AdvanceFileUpload-/doc/docs/Frequently-Asked-Questions.md)
+- Browse the [FAQ](./doc/docs/Frequently-Asked-Questions.md)
 
 Let's build efficient and resilient file upload systems—together!
 
