@@ -1,209 +1,69 @@
-# AdvanceFileUpload
 
-AdvanceFileUpload is solution designed to handle efficient file Uploading. The project leverages modern asynchronous and parallel programming techniques to optimize performance, minimize memory usage, and ensure scalability.
+# Advanced File Upload API
+**Welcome to the Advanced Chunk File Upload API**
 
-## Features
+Efficient, Reliable, and Scalable Large File Upload Handling for Modern Applications
 
-- **chunk Uploading**: Split large files into smaller chunks for easier processing and storage.
+---
+
+## 🚀 What is the Advanced Chunk File Upload API?
+The **Advanced Chunk File Upload API** is a powerful and extensible backend service designed to simplify the process of uploading large files in distributed systems. Built with fault tolerance, resumability, and real-time progress tracking in mind, it helps you overcome limitations of traditional file uploads.
+
+Whether you're building a cloud storage platform, video sharing service, backup tool, or enterprise-grade file management system—this API gives you the performance, flexibility, and reliability you need.
+
+---
+
+## 🧰 Core Features
+- **Chunked Uploads**: Upload files in multiple smaller parts
 - **Parallel Processing**: Supports configurable parallelism for faster chunk processing.
-- **Compression Support**: Configurable file compression to reduce upload size.Supported algorithms: GZip, Brotli, Deflate.
-- **Real Time Notfication**: using SgnalR to notify of Uploading Process.
-- **Retry Mechanism**: Automatically retries failed uploads with exponential backoff.
-- **Pause/Resume**: Allows pausing and resuming uploads for better user control.
-- **Health Monitoring**: Monitors API health and handles degraded or unhealthy states gracefully.
+- **Resumable Sessions**: Resume uploads after network interruptions
+- **Compression Support**: Built-in support for GZip, Brotli, and Deflate
+- **Pause / Resume**: Allows pausing and resuming uploads for better user control
+- **Progress Tracking**: Monitor real-time upload progress via session state
+- **Windows Service Deployment**: Run reliably as a background Windows service
 - **Integration Supports**: Supporting Integration with other systems via RabbitMQ.
 
+---
 
-## GetStarted
-### Prerequisites
-- [ASP.NET Core 8 Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)
-- A configured SQL Server database for session storage.
-- RabbitMQ for integration event publishing (optional).
-### Server Installation
-1. **Download the Latest API Server Release**  
-   Download the latest release of the API server from [API Release](#).
-
-2. **Configure the Server**  
-   Follow these steps to configure the server:
-
-   - **Database Configuration** (Required):  
-     Update the connection string in the `appsettings.json` file under the `SessionStorage` section.  
-     Example:
-      ```json
-      {
-      "ConnectionStrings": {
-      "SessionStorage": "Server=localhost;Database=FileUploadDB;User Id=sa;Password=your_password;"
-      }
-      }
-     ```
-   - **Upload Settings** (Required):  
-     Configure the upload settings in the `appsettings.json` file under the `UploadSetting` section.  
-     Example:
-    ```json
-      {
-   "UploadSetting": {
-     "AllowedExtensions": [".jpg", ".png", ".pdf", ".mp4"],
-     "MaxChunkSize": 10485760,
-     "MaxFileSize": 1073741824,
-     "SavingDirectory": "C:\\Uploads",
-     "TempDirectory": "C:\\Temp",
-     "EnableCompression": true,
-     "EnableIntegrationEventPublishing": true
-     }
-     }
-    ```
-     - **API Keys and Rate Limiting** (Required):  
-   Configure the API keys and API rate limiting in the `appsettings.json` file under the `ApiKeyOptions` section.  
-   Example:
-    ```json
-      {
-    "ApiKeyOptions": {
-     "EnableRateLimiting": true,
-     "EnableAPIKeyAuthentication": true,
-     "DefaultMaxRequestsPerMinute": 1000,
-     "APIKeys": [
-       {
-         "Key": "your_api_key",
-         "ClientId": "client_1",
-         "RateLimit": {
-           "RequestsPerMinute": 500
-         }
-       }
-     ]
-      }
-     }
-    ```
-     - **RabbitMQ Configuration** (Optional):  
-   If you want to enable integration event publishing, configure RabbitMQ settings in the `appsettings.json` file under the `RabbitMQOptions` section.  
-   Example:
-   ```json
-   {
-        "RabbitMQOptions": {
-        "HostName": "localhost",
-        "UserName": "guest",
-        "Password": "guest",
-        "Port": 5672,
-        "VirtualHost": "/",
-        "UseSSL": false
-    },
-   }
-   ```
-
-  - **Kestrel Server Configuration** (Required):  
-  Configure Kestrel Server settings in the `appsettings.json` file under the `KestrelConfiguration` section.  
-   Example: 
-   ```json
-   {
-     "KestrelConfiguration": {
-        "Endpoints": {
-            "PublicHttp": {
-                "Ip": "Your server IP",
-                "Port": 5003,
-                "Https": false, //  true or false. If true, the endpoint will use HTTPS.
-                "Protocols": [ "Http1", "Http2" ], //  Options include "Http1", "Http2" "Http3".
-                "SslProtocols": [ "Default"],
-                "Certificate": {
-                    "Subject": "CN=localhosttest",
-                    "Store": "Root",
-                    "Location": "LocalMachine" // "LocalMachine" or "CurrentUser".
-                }
-            }
-        }
-    },
-    "Limits": {
-        "KeepAliveTimeout": "00:02:00", // 5m
-        "RequestHeadersTimeout": "00:02:00", // 3m
-        "MaxConcurrentConnections": 10000,
-        "MaxConcurrentUpgradedConnections": 500, //100,
-        "MaxRequestBodySize": 30000000, // 28.6MB
-        "MinRequestBodyDataRate": null, // 240byte/MinRequestBodyDataRatePeriod
-        "MinRequestBodyDataRatePeriod": "00:00:15", // 15s
-        "MinResponseDataRate": null, // 240byte/ MinResponseDataRatePeriod
-        "MinResponseDataRatePeriod": "00:00:15",
-        "MaxRequestLineSize": 81234543, //8192, // 8KB
-        "MaxRequestBufferSize": null, //1048576, // 1MB
-        "MaxResponseBufferSize": null, // 65536, // 64KB
-        "MaxRequestHeadersTotalSize": 32768, // 32KB
-        "MaxRequestHeadersCount": 100, // 100 headers
-        "AllowSynchronousIO": false
-    },
-    "Https": {
-        "CheckCertificateRevocation": true,
-        "ClientCertificateMode": "AllowCertificate", //  Options include "NoCertificate", "AllowCertificate", and "RequireCertificate".
-        "AllowedProtocols": [ "Default", "Tls12", "Tls13", "Ssl2" ] // "None", "Ssl2", "Ssl3", "Tls","Default","Tls11","Tls12", "Tls13"
-    },
-    "Http2": {
-        "MaxStreamsPerConnection": 100,
-        "HeaderTableSize": 4096, // 4KIB
-        "MaxFrameSize": 16384 // 16KIB   Min:16384 Max: 16777215
-    },
-    "Http3": {
-        "Enable": false
-    }
-   }
-   ```
-   See [KestrelConfiguration](http://185.227.109.88:80/api/AdvanceFileUpload.API.KestrelConfiguration.html) For More information.
-
-### Make The First Upload
- Install The AdvanceFileUpload.Client NuGet package.
-1. **Setup the Client**  
-   Create a new instance of the `FileUploadService` in your client application:
-   ```C#
-   var uploadOptions = new UploadOptions 
-   { 
-    APIKey = "your_api_key",
-    TempDirectory = "D:\Temp", 
-    MaxConcurrentUploads = 4,
-    MaxRetriesCount = 3, 
-    CompressionOption = new CompressionOption
-     {
-         Algorithm = CompressionAlgorithmOption.GZip,
-          Level = CompressionLevelOption.Optimal 
-     }
-    };
-   var fileUploadService = new FileUploadService(new Uri("http://yourServerIp:5021"), uploadOptions);
-   ```
- 2. **Subscribe to Events**  
-   Subscribe to lifecycle events for real-time updates:
-   ```C#
-   fileUploadService.SessionCreated += (sender, e) => { Console.WriteLine($"Session Created: {e.SessionId}, Total Chunks: {e.TotalChunksToUpload}"); };
-   fileUploadService.UploadProgressChanged += (sender, e) => { Console.WriteLine($"Progress: {e.ProgressPercentage}%"); };
-   fileUploadService.SessionCompleted += (sender, e) => { Console.WriteLine($"Upload Completed: {e.FileName}"); };
-   fileUploadService.UploadErroe+= (sender, e) => { Console.WriteLine($"Upload Error: {e}"); };
-   ```
-   3. **Upload a File**  
-   Call the `UploadFileAsync` method to start uploading:
-   ```C#
-    await fileUploadService.UploadFileAsync("D:\Temp\largefile.mp4");
-   ```
-   4. **Pause/Resume/Cancel**  
-   Use the following methods to control the upload:
-   ```C#
-   // Pause
-   await fileUploadService.PauseUploadAsync();
-   // Resume
-    await fileUploadService.ResumeUploadAsync();
-    // Cancel
-    await fileUploadService.CancelUploadAsync(); 
-   ```
-
-## Sample
-You Can Try our Winform Sample
-
-## Integration with The File Upload API
+## 👨‍💻 Who Should Use This?
+This API is ideal for:
+- Backend developers building upload workflows
+- DevOps engineers deploying file infrastructure
+- Teams migrating legacy upload functionality to modern, scalable solutions
 
 ---
-### Troubleshooting
 
-- **Health Check Fails**:  
-  Ensure the database and RabbitMQ are running and properly configured.
+## 📚 Get Started
+To help you onboard quickly, our documentation includes:
+- ✅ Introduction
+- ⚙️ Server Setup Instructions
+- 🔧 Configuration Options
+- ✅ How to use Client SDK
+- 🏗 Architecture Overview
+- 🧪 Troubleshooting & FAQ
+- 📈 Upload Lifecycle
+- 🖥 Hosting as Windows Service
+- 🏗 API Reference
 
-- **Upload Fails**:  
-  Check the server logs for detailed error messages.
+Jump into the docs or explore the code:
+- [Introduction](../AdvanceFileUpload-/doc/docs/introduction.md)
+- [Architecture Overview](../AdvanceFileUpload-/doc/docs/Architecture-Overview.md)
+- [Understanding the FileUpload Process](../AdvanceFileUpload-/doc/docs/Understanding-the-FileUpload-Process.md)
+- [Prerequisites](../AdvanceFileUpload-/doc/docs/Prerequisites.md)
+- [Server Installation and Setup](../AdvanceFileUpload-/doc/docs/Server-Installation-and-Setup.md)
+- [Configuration Settings](../AdvanceFileUpload-/doc/docs/Configuration-Settings.md)
+- [How to Use the Client SDK](../AdvanceFileUpload-/doc/docs/How-to-Use-the-Client-SDK.md)
+- [Hosting as a Windows Service](../AdvanceFileUpload-/doc/docs/Hosting-as-a-Windows-Service.md)
+- [Frequently Asked Questions FAQ](../AdvanceFileUpload-/doc/docs/Frequently-Asked-Questions.md)
 
-- **Rate Limiting**:  
-  If you encounter `429 Too Many Requests`, adjust the rate-limiting settings in the `appsettings.json` file.
+
+
 
 ---
-### Documentation
-For more details, refer to the [Documentation](http://185.227.109.88:80).
+
+## 📞 Need Help?
+If you encounter issues or have suggestions, feel free to:
+- Browse the [FAQ](../AdvanceFileUpload-/doc/docs/Frequently-Asked-Questions.md)
+
+Let's build efficient and resilient file upload systems—together!
+
